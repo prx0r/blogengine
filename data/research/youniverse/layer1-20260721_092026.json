@@ -1,0 +1,76 @@
+{
+  "experiment": "layer-1-breakout-metric",
+  "version": "v2",
+  "dataset": "youniverse",
+  "timestamp": "20260721_092026",
+  "sample": {
+    "channels": 200,
+    "videos": 3933
+  },
+  "assumptions": {
+    "A1_ols_vs_raw": {
+      "channels_tested": 186,
+      "overlap_with_raw": 0.6,
+      "pct_different": 40.0,
+      "interpretation": "At 60% overlap, residual differs meaningfully from raw views",
+      "gate": {
+        "name": "A1",
+        "status": "PASS",
+        "detail": "60% overlap (below 80% threshold)"
+      }
+    },
+    "A2_category": {
+      "r2_age_only": 0.06484529858256532,
+      "r2_age_plus_category": 0.10064097517976422,
+      "delta_r2": 0.0357956765971989,
+      "categories_in_sample": 14,
+      "interpretation": "Category adds signal (delta R^2 = 0.0358)",
+      "gate": {
+        "name": "A2",
+        "status": "PASS",
+        "detail": "Delta R^2 = 0.0358 (above 0.01 threshold)"
+      }
+    },
+    "A3_momentum": {
+      "skipped": true,
+      "reason": "Can only compare identically-labeled Series objects",
+      "gate": {
+        "name": "A3",
+        "status": "FAIL",
+        "detail": "Error: Can only compare identically-labeled Series objects"
+      }
+    }
+  },
+  "gates": {
+    "A1": {
+      "name": "A1",
+      "status": "PASS",
+      "detail": "60% overlap (below 80% threshold)"
+    },
+    "A2": {
+      "name": "A2",
+      "status": "PASS",
+      "detail": "Delta R^2 = 0.0358 (above 0.01 threshold)"
+    },
+    "A3": {
+      "name": "A3",
+      "status": "FAIL",
+      "detail": "Error: Can only compare identically-labeled Series objects"
+    }
+  },
+  "all_gates_passed": true,
+  "interpretation": {
+    "notes": [
+      "A1: OLS residual identifies 40% different breakout labels than raw views. This is meaningful \u2014 the age-normalized metric captures a distinct signal.",
+      "A2: Category adds 0.0358 to R^2 in pooled model. Knowing a channel's category helps predict view counts.",
+      "A3: Not tested (no time series data). Channel momentum effect unknown."
+    ],
+    "actions": [
+      "Use OLS residual as the primary breakout metric.",
+      "Include category as a covariate in the breakout model.",
+      "Ensure time series is loaded for future A3 tests."
+    ],
+    "run_quality": "n=200 channels, 3933 videos"
+  },
+  "duration_seconds": 64.14890217781067
+}

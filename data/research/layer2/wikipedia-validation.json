@@ -1,0 +1,113 @@
+{
+  "experiment": "wikipedia-z-score-validation",
+  "date": "2026-07-21",
+  "method": {
+    "api": "Wikimedia Pageview API",
+    "terms": [
+      "Kali",
+      "Bhairava",
+      "Chinnamasta",
+      "Kaula",
+      "Tantra",
+      "Abhinavagupta",
+      "Kashmir_Shaivism",
+      "Kundalini",
+      "Chakra",
+      "Aghori",
+      "Mahavidya",
+      "Bagalamukhi",
+      "Dhumavati",
+      "Tantraloka",
+      "Nyasa_(ritual)",
+      "Vamachara",
+      "Panchamakara",
+      "Kapalika",
+      "Yogini",
+      "Siddha"
+    ],
+    "zScoreFormula": "weekly_z = (current_week_avg - previous_week_avg) / previous_week_std",
+    "windowDays": 90,
+    "weekComparison": "4-week rolling, pairwise consecutive weeks",
+    "correlationMethod": "Spearman rank correlation",
+    "threshold": 0.2
+  },
+  "results": {
+    "termsChecked": 20,
+    "termsWithData": 13,
+    "termsRateLimited": 7,
+    "matchedForCorrelation": 11,
+    "spearmanR": 0.0273,
+    "threshold": 0.2,
+    "conclusion": "FAIL",
+    "interpretation": "Wikipedia pageview velocity does not correlate with YouTube gap scores for tantra topics (r=0.027, n=11). Wikipedia curiosity is not a valid independent signal for predicting YouTube supply gaps."
+  },
+  "terms": [
+    {
+      "term": "Kundalini",
+      "zScore": -0.382,
+      "gapScore": 0.43,
+      "matchedQuery": "kundalini tantra awakening"
+    },
+    {
+      "term": "Chakra",
+      "zScore": 0.052,
+      "gapScore": 0.57,
+      "matchedQuery": "chakra tantra explained"
+    },
+    {
+      "term": "Mahavidya",
+      "zScore": 0.807,
+      "gapScore": 0.29,
+      "matchedQuery": "ten mahavidyas explained"
+    },
+    {
+      "term": "Tantraloka",
+      "zScore": -0.104,
+      "gapScore": 0.18,
+      "matchedQuery": "tantraloka abhinavagupta explained"
+    },
+    {
+      "term": "Nyasa",
+      "zScore": 0.754,
+      "gapScore": 0.07,
+      "matchedQuery": "nyasa tantric ritual"
+    },
+    {
+      "term": "Vamachara",
+      "zScore": -0.407,
+      "gapScore": 0.29,
+      "matchedQuery": "vamachara left hand path"
+    },
+    {
+      "term": "Panchamakara",
+      "zScore": 0.249,
+      "gapScore": 0.9,
+      "matchedQuery": "pancha makara five ms"
+    },
+    {
+      "term": "Kapalika",
+      "zScore": -1.211,
+      "gapScore": 0.36,
+      "matchedQuery": "cremation ground tantra"
+    },
+    {
+      "term": "Yogini",
+      "zScore": 0.009,
+      "gapScore": 0.38,
+      "matchedQuery": "yogini temples history"
+    },
+    {
+      "term": "Siddha",
+      "zScore": -0.491,
+      "gapScore": 0.11,
+      "matchedQuery": "siddha tradition tantra"
+    },
+    {
+      "term": "Kaula",
+      "zScore": 0.343,
+      "gapScore": 0.36,
+      "matchedQuery": "kaula tantra history"
+    }
+  ],
+  "recommendation": "Skip Wikipedia as a signal. Use Google Trends instead, or drop the external validation and use gap scores alone."
+}

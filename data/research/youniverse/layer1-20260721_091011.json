@@ -1,0 +1,57 @@
+{
+  "experiment": "layer-1-breakout-metric",
+  "dataset": "youniverse",
+  "timestamp": "20260721_091011",
+  "sample": {
+    "channels": 100,
+    "videos": 1958
+  },
+  "assumptions": {
+    "A01_ols_vs_raw": {
+      "channels_tested": 90,
+      "mean_r_squared": 0.11920084500584649,
+      "mean_overlap_with_raw": 0.8406018518518518,
+      "signal_difference_pct": 15.939814814814824,
+      "conclusion": "OLS residual largely agrees with raw views \u2014 may not add value",
+      "gate_A01": {
+        "name": "A01",
+        "status": "FAIL",
+        "detail": "OLS residual and raw views overlap at 0.84, below 0.8 threshold \u2014 residual adds signal"
+      }
+    },
+    "A02_format_class": {
+      "channels_tested": 0,
+      "mean_delta_r2": 0.0,
+      "improvement_pct": 0.0,
+      "conclusion": "Format class does not add meaningful signal",
+      "gate_A02": {
+        "name": "A02",
+        "status": "FAIL",
+        "detail": "Category added 0.0000 to R^2, below 0.01 threshold"
+      }
+    },
+    "A03_momentum": {
+      "skipped": true,
+      "reason": "A1 did not pass"
+    }
+  },
+  "gates": {
+    "A01": {
+      "name": "A01",
+      "status": "FAIL",
+      "detail": "OLS residual and raw views overlap at 0.84, below 0.8 threshold \u2014 residual adds signal"
+    },
+    "A02": {
+      "name": "A02",
+      "status": "FAIL",
+      "detail": "Category added 0.0000 to R^2, below 0.01 threshold"
+    },
+    "A03": {
+      "name": "A03",
+      "status": "FAIL",
+      "detail": "Skipped \u2014 A1 prerequisite not met"
+    }
+  },
+  "all_gates_passed": false,
+  "duration_seconds": 21.368391036987305
+}
