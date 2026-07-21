@@ -77,20 +77,24 @@ Avoid: Numbers in titles, generic practices (meditation/divination), uncategoriz
 
 ## Channel 4: Intelligent Others
 
-**Tagline:** The frontier where science meets the unexplained
-**Vibe:** Skeptical but open, evidence-driven, cinematic
+**Tagline:** The universe is stranger than we imagine
+**Vibe:** Mind-expanding, speculative but grounded, cinematic
 
 | Content Pillar | Example Titles | Data Signal |
 |---------------|----------------|-------------|
-| Neuroscience of Mysticism | "What Happens to Your Brain During Meditation" | Science content, proven format |
-| Paranormal Science | "The Science of Near-Death Experiences" | High-interest topic |
-| Psychedelic Research | "How Psychedelics Unlock the Mystical Experience" | Growing mainstream interest |
-| Weird Phenomena | "The Physics of Telepathy" | Curiosity-driven content |
-| Consciousness Studies | "Is Consciousness Fundamental? The Science Says Maybe" | Academic + popular interest |
+| Platonic Biology | "Michael Levin: The Body Is Not What You Think" | Untested — first-mover advantage |
+| Bioelectricity & Morphogenesis | "How Cells Talk: The Secret Language of Life" | Growing academic interest |
+| Astrobiology | "Are Aliens Already Here? A Scientific Look" | Perennial high-interest |
+| AI Consciousness | "Will AI Become Conscious?" | Massive mainstream audience |
+| Weird Biology | "The Planarian That Refuses to Die" | Curiosity-driven, viral potential |
+| Information Theory & Life | "Is The Universe a Computation?" | Academic + popular crossover |
 
-**Bridge function:** This channel can produce crossover videos that feed into Ochema ("The Neuroscience of Why Sigils Work") and Tantra Files ("What Brain Scans Reveal About Kundalini").
+**Bridge function:** Science layer that feeds all channels:
+- "The Bioelectric Field: A Scientific Model for Prana" → Tantra Files crossover
+- "Information Theory of Magic: Why Sigils Work" → Ochema crossover
+- "Michael Levin and the Platonic View of Life" → Contemplative crossover (neoplatonism bridge)
 
-**First video:** "The Neuroscience of Mystical Experience"
+**First video:** "Michael Levin: The Biologist Who Discovered That Bodies Are Not What You Think"
 
 ---
 
