@@ -1,6 +1,34 @@
 # Farm Franchise — Practical Implementation Spec
 
+## Critical Risk: Human Voiceover Is the Real Bottleneck
+
+Every video across every farm passes through one person recording audio. That is a single-threaded human constraint under a design modeled as parallel self-replicating organisms.
+
+**The arithmetic:** 2 hours of finished voiceover per week, videos average 15 minutes = 8 videos/month across ALL farms combined. Adding farms does not increase output — it increases competition for recording time. The Opportunity Exchange should bid for your time, not compute budget.
+
+**Pipeline change:** No TTS step. Script-approved enters WAIT_FOR_VOICEOVER stage. You record. Audio uploads. Then beat timing, visual assembly, and pacing are timed against your actual recorded waveform, not a pre-planned duration.
+
+**Scaling constraint acknowledged:** More farms = more scripts queued for your voice, not more output. The foundry model is valid for research and discovery but output is capped by human bandwidth.
+
+---
+
+## Critical Risk: YouTube Inauthentic Content Enforcement
+
+YouTube’s July 2025 “inauthentic content” policy specifically targets formulaic, mass-produced template channels. In January 2026, 16 channels were demonetized in one sweep — $10M annual revenue, 4.7B lifetime views — explicitly for mass-produced/templated/easily-repeatable content.
+
+**Mitigations:**
+- Human voiceover, not TTS — strongest signal a reviewer sees. Real voice = creator identity.
+- One channel, not a network — no multi-channel operation sharing production DNA across accounts.
+- No auto-publish — every video requires human approval before going live.
+- Script variation enforced — the 8-beat format is structural, not templated prose. Each topic demands different research, sources, and narrative framing.
+
+**What this means for farm replication:** Multiple farms sharing identical hook structures, title patterns, and thumbnail compositions is exactly the signature this policy targets. The genome must be abstract enough that each farm’s output is visually and structurally distinct.
+
+---
+
 ## The Model
+
+A franchise is one content channel.## The Model
 
 A franchise is one content channel. The franchisor (you) owns the platform. Each franchisee (farm) is an independent operating unit that can be cloned, monitored, and eventually retired without affecting the others.
 

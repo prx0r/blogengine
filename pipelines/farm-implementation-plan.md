@@ -399,11 +399,15 @@ Step 3: FACT_CHECK gate (every claim must have a source, gates F01-F04)
 Step 4: WAIT_FOR_APPROVAL (human reviews research pack + sources)
 Step 5: generate_treatment -> AI Gateway ($0.02)
 Step 6: write_script -> AI Gateway + validation gates ($0.05)
-Step 7: generate_audio -> Deepgram Aura 2 ($0.40 per 15 min)
+Step 7: WAIT_FOR_VOICEOVER (human records audio. Real bottleneck for all farms.)
+         Dashboard shows script with recording interface. Beat timing happens AFTER
+         audio exists — waveform drives pacing, not pre-planned duration.
 Step 8: create_thumbnail -> deterministic composition ($0)
 Step 9: push_render_job -> Queue -> VPS FFmpeg -> R2
 Step 10: WAIT_FOR_RENDER
-Step 11: publish -> YouTube API (1,600 quota), requires approval
+Step 11: publish -> YouTube API (1,600 quota), requires approval. 
+         Publishing autonomy: NEVER for historical/religious claims content.
+         This is a permanently closed question, not a design tradeoff.
 ```
 
 Each step idempotent: `video_id + step_name + input_hash + version`.
