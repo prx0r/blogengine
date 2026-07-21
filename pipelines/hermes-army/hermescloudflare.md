@@ -4,6 +4,66 @@ Hermes becomes the **orchestrator**. Each capability becomes a specialist Worker
 
 ---
 
+## 0. Storage Strategy — Moving Off Disk
+
+Current disk problem: 75GB total, 61GB used, 11GB free. The blog project alone is 14GB (excluding node_modules). Cloudflare replaces local storage for everything except running code.
+
+### What moves where
+
+| Current Location | Size | Moves To | Cloudflare Service | Cost |
+|-----------------|------|----------|-------------------|------|
+| `library/` (PDFs) | 1.3 GB | R2 bucket `assets/library/` | R2 Standard | ~$0.02/month |
+| `content/sources/` (source texts) | 1.3 GB | R2 bucket `assets/sources/` | R2 Standard | ~$0.02/month |
+| `public/art/` (images) | ~200 MB | R2 + Images | R2 + Images (optimized serving) | ~$0 |
+| `public/audio/` (TTS) | ~50 MB | R2 + Stream | R2 + Stream (streaming delivery) | ~$0 |
+| `public/thumbnails/` | ~30 MB | R2 + Images | R2 + Images (auto-generated sizes) | ~$0 |
+| `scholars/`, `science/` (papers) | ~280 MB | R2 bucket `assets/papers/` | R2 Standard | ~$0 |
+| `public/videos/` | ~20 MB | Stream | Stream (HLS adaptive) | ~$0 |
+| `node_modules/` | 886 MB | Pruned / cached | Keep minimal, CI rebuilds | N/A |
+| `.next/` | ~500 MB | Removed | Build on deploy, cached in CI | N/A |
+
+### Total disk reclaimed: ~4.5 GB (from 14 GB project → ~9 GB)
+### Total Cloudflare storage cost: ~$0.04/month
+
+### Migration Strategy
+
+1. **R2 bucket structure:**
+   ```
+   assets-blog/
+   ├── library/          ← All PDFs, ebooks
+   ├── sources/          ← Source texts by tradition
+   ├── papers/           ← Scholar PDFs
+   ├── art/              ← Public domain art images
+   ├── audio/            ← Generated TTS audio
+   ├── thumbnails/       ← Video thumbnails
+   └── videos/           ← Final rendered videos
+   ```
+
+2. **Access pattern:**
+   - All assets served via Workers proxy (custom domain → R2)
+   - Images served via Cloudflare Images (automatic WebP/AVIF, responsive sizes)
+   - Audio/video served via Stream (HLS adaptive bitrate, no egress)
+   - No direct R2 URL exposure — Workers add auth, caching, transformation
+
+3. **Code changes:**
+   - Replace `fs.readFile()` calls with `R2.get()` via Workers binding
+   - The blog site already runs on Cloudflare Workers (via OpenNext)
+   - Add R2 binding to `wrangler.jsonc`, use `context.env.ASSETS_BUCKET.get(key)`
+   - For local dev: fallback to local filesystem when R2 binding is unavailable
+
+4. **Why not D1 for files:**
+   - D1 maxes at 10 GB per database, not designed for binary blobs
+   - R2 is purpose-built for objects with S3 compatibility
+   - R2 has zero egress fees — serving files to users costs nothing
+
+5. **What stays local:**
+   - Source code (small, ~50 MB)
+   - Small JSON data files in `data/`, `content/glossary/`, `content/works/`
+   - Configuration files
+   - Git history
+
+---
+
 ## 1. Available AI Models on Workers AI
 
 ### Vision (Thumbnail Analysis)
