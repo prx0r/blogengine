@@ -1,0 +1,38 @@
+{
+  "proposal_1_translation_gap": {
+    "status": "not_started",
+    "depends_on": "comments_data",
+    "notes": "Waiting for comments Parquet in R2"
+  },
+  "proposal_2_recurring_questions": {
+    "status": "ready_to_run",
+    "depends_on": "submissions_data",
+    "notes": "Data in R2. Requires DuckDB query + clustering + Google Trends"
+  },
+  "proposal_3_controversy_engagement": {
+    "status": "not_started",
+    "depends_on": "comments_data + stance_extraction",
+    "notes": "Waiting for comments data; stance extraction pipeline needed"
+  },
+  "proposal_4_gateway_entities": {
+    "status": "not_started",
+    "depends_on": "clickstream_data_processed",
+    "notes": "Clickstream data exists in R2 but needs processing into gateway graph"
+  },
+  "proposal_5_narrative_frames": {
+    "status": "not_started",
+    "depends_on": "submissions_data + manual_review",
+    "notes": "Data available, but needs 50-frame manual review gate"
+  },
+  "proposal_6_source_authority": {
+    "status": "not_started",
+    "depends_on": "comments_data",
+    "notes": "Waiting for comments Parquet in R2"
+  },
+  "proposal_7_language_drift": {
+    "status": "ready_to_run",
+    "depends_on": "submissions_data",
+    "notes": "Data in R2. Same embedding pass as Proposal 2"
+  },
+  "last_updated": "2026-07-21T15:00:00Z"
+}
