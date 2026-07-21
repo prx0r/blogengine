@@ -1,571 +1,401 @@
-# Cloudflare OS — Development Plan
+# Hermes Army — Full Architecture Spec
 
-## Architecture: One Platform, Many Farms
-
-```
-Cloudflare OS (shared platform)
-│
-├── Farm: tantra (your channel)
-│   ├── D1: feature_store, gap_maps, metrics
-│   ├── R2: assets, raw_datasets, outputs
-│   ├── Queue: pipeline_stages
-│   ├── Workflows: content_production
-│   ├── Cron: daily_research, weekly_gap_map
-│   └── Workers: api_endpoints
-│
-├── Farm: {next_niche} (cloned from template)
-│   └── (same structure, different D1 + R2)
-│
-├── Hermes (orchestrator)
-│   ├── Routes commands to correct farm
-│   ├── Human approval gates
-│   └── Cross-farm analytics
-│
-└── Shared Services
-    ├── AI Gateway (LLM caching, fallback)
-    ├── R2 SQL + Data Catalog (research datasets)
-    └── Stream (video delivery)
-```
+Hermes is the **cognitive controller**. Cloudflare Workflows own the durable state machine. The system has 4 deployable Workers + 1 external render service.
 
 ---
 
-## Phase 1: Foundation (Week 1)
+## 0. Storage Strategy — Moving Off Disk
 
-### 1a: Project Template
+### What moves where
 
-Create `farm-template/` — a reusable Workers project skeleton:
+| Location | Size | Moves To | Cost |
+|----------|------|----------|------|
+| `library/` (PDFs) | 1.3 GB | R2 `assets/library/` | ~$0.02/month |
+| `content/sources/` | 1.3 GB | R2 `assets/sources/` | ~$0.02/month |
+| `public/art/` | ~200 MB | R2 (originals) + Images (transformations, free tier: 5k transformations) | ~$0 |
+| `public/audio/` | ~50 MB | R2 direct (not Stream — Stream is $5/1000 min stored) | ~$0 |
+| `scholars/`, `science/` | ~280 MB | R2 `assets/papers/` | ~$0 |
+| Research datasets | ~40 GB | R2 `research-datasets/` | ~$0.45/month |
 
-```
-farm-template/
-├── wrangler.jsonc          ← D1, R2, Queue, AI bindings
-├── src/
-│   ├── index.ts             ← Request router
-│   ├── cron/
-│   │   ├── daily-research.ts    ← Channel harvest + gap scan
-│   │   └── weekly-gap-map.ts    ← Update opportunity rankings
-│   ├── workflows/
-│   │   ├── produce-video.ts     ← Full video production Workflow
-│   │   └── research-topic.ts    ← Gap-to-treatment Workflow
-│   ├── workers/
-│   │   ├── api.ts               ← REST API for Hermes
-│   │   ├── thumbnails.ts        ← LLaVA analysis + FLUX generation
-│   │   ├── scripts.ts           ← LLM script writing with gates
-│   │   └── audio.ts             ← Deepgram TTS
-│   ├── d1/
-│   │   └── schema.sql           ← Feature store tables
-│   └── lib/
-│       ├── youtube.ts           ← YouTube API client
-│       ├── models.ts            ← Data types
-│       └── gates.ts             ← Verification gate checking
-├── package.json
-├── tsconfig.json
-└── vitest.config.ts
-```
+**Total reclaimed: ~4.5 GB disk. Total R2 cost: ~$0.50/month.**
 
-**Key:** Everything is parameterized by `FARM_ID` — farm name, D1 binding, R2 bucket, Queue name. Cloning a farm is one command.
+### Asset Manifest
 
-### 1b: Worker Bindings (wrangler.jsonc)
-
-```jsonc
-{
-  "name": "farm-{farm_id}",
-  "main": "src/index.ts",
-  "d1_databases": [
-    { "binding": "FEATURE_STORE", "database_name": "farm-{farm_id}-fs", "database_id": "..." },
-    { "binding": "GAP_MAP", "database_name": "farm-{farm_id}-gaps", "database_id": "..." }
-  ],
-  "r2_buckets": [
-    { "binding": "ASSETS", "bucket_name": "farm-{farm_id}-assets" },
-    { "binding": "OUTPUTS", "bucket_name": "farm-{farm_id}-outputs" }
-  ],
-  "queues": {
-    "producers": [{ "binding": "QUEUE", "queue": "farm-{farm_id}-pipeline" }],
-    "consumers": [{ "queue": "farm-{farm_id}-pipeline", "max_batch_size": 1 }]
-  },
-  "ai": { "binding": "AI" },
-  "triggers": { "crons": ["0 6 * * *"] }
-}
-```
-
-### 1c: D1 Schema (feature store)
+Every asset tracked in D1:
 
 ```sql
--- Core tables, shared across all farms
-CREATE TABLE channels (
-  channel_id TEXT PRIMARY KEY,
-  farm_id TEXT,
-  name TEXT,
-  subscriber_count INTEGER,
-  video_count INTEGER,
-  competitor_type TEXT,  -- direct, audience, format
-  region_visibility TEXT,
-  added_date DATE
+CREATE TABLE assets (
+  asset_id TEXT PRIMARY KEY,
+  r2_key TEXT NOT NULL,
+  sha256 TEXT NOT NULL,
+  media_type TEXT NOT NULL,
+  source_url TEXT,
+  license TEXT,
+  attribution TEXT,
+  rights_status TEXT,
+  derived_from TEXT,
+  created_at TEXT NOT NULL
 );
+```
 
-CREATE TABLE videos (
-  video_id TEXT,
-  channel_id TEXT,
-  farm_id TEXT,
-  snapshot_date DATE,
-  published_at DATE,
-  title TEXT,
-  duration_seconds INTEGER,
-  view_count INTEGER,
-  like_count INTEGER,
-  comment_count INTEGER,
-  breakout_score FLOAT,
-  is_breakout BOOLEAN,
-  -- title features
-  title_length INTEGER,
-  has_question BOOLEAN,
-  has_colon BOOLEAN,
-  power_word_count INTEGER,
-  -- thumbnail features (LLaVA classified)
-  thumbnail_composition TEXT,
-  thumbnail_warmth TEXT,
-  thumbnail_has_face BOOLEAN,
-  thumbnail_expression TEXT,
-  -- market features
-  gap_score FLOAT,
-  language_lag_score FLOAT,
-  PRIMARY KEY (video_id, snapshot_date)
-);
+### Audio Delivery
 
-CREATE TABLE gap_map (
-  query TEXT,
-  farm_id TEXT,
-  snapshot_date DATE,
-  topic_cluster TEXT,
-  gap_score FLOAT,
-  language_lag_score FLOAT,
-  in_channel_count INTEGER,
-  us_channel_count INTEGER,
-  uk_channel_count INTEGER,
-  PRIMARY KEY (query, snapshot_date)
-);
+Serve from R2 directly via Workers with HTTP range support. Not Stream. Stream is for full video hosting at $5/1000 min stored — inappropriate for narration files.
 
-CREATE TABLE hypotheses (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  farm_id TEXT,
-  hypothesis TEXT,
-  status TEXT,  -- pending, confirmed, rejected
-  videos_tested INTEGER,
-  evidence TEXT,
-  created_date DATE,
-  last_updated DATE
-);
+### Image Strategy
 
-CREATE TABLE api_usage (
-  date DATE,
-  farm_id TEXT,
-  endpoint TEXT,
-  calls INTEGER,
-  bucket TEXT,
-  remaining INTEGER,
-  PRIMARY KEY (date, endpoint)
-);
+Store originals only in R2. Use Cloudflare Images transformations for delivery (free tier: 5k transformations/month). Do not duplicate into Cloudflare Images storage.
+
+---
+
+## 1. Available AI Models on Workers AI
+
+### Vision (Thumbnail Analysis)
+
+| Model | Cost | Use |
+|-------|------|-----|
+| LLaVA 1.5 7B | ~500 neurons/image | Full VLM analysis (use sparingly) |
+| DETR ResNet-50 | ~100 neurons/image | Object/face counting |
+| ResNet-50 | ~50 neurons/image | Broad classification |
+
+**Cascade approach (do not run LLaVA on everything):**
+
+```
+All thumbnails → cheap metrics (dimensions, brightness, contrast, OCR, face count)
+     │
+     ▼
+Top opportunities or uncertain → LLaVA VLM analysis
+```
+
+900 LLaVA analyses × 500 neurons = 450,000 neurons. At $0.011/1k = **$4.95**, not $0.005. The cascade cuts this by ~80%.
+
+### Image Generation (Thumbnails)
+
+**Do not generate full thumbnails with FLUX.** Your brand edge is authentic historical artwork + deterministic typography. Use FLUX only for:
+
+- Missing backgrounds
+- Concept sketches  
+- Texture extensions
+- Optional hero reconstructions
+
+Then compose the actual thumbnail with code or a template system. Image models are unreliable at typography and undermine historical credibility.
+
+| Model | Cost | Use |
+|-------|------|-----|
+| FLUX.1 Schnell | 4.8 neurons/512×512 tile | Background/concept only |
+| SDXL Base 1.0 | Variable | Style transfer |
+
+### Audio (Narration)
+
+| Model | Cost | Use |
+|-------|------|-----|
+| Deepgram Aura 2 | $0.03/1000 chars | Narration with emotional range |
+
+A 15-min script (~13,500 chars) costs **~$0.405**, not $0.01/min. Four videos/week = ~$1.60/month.
+
+### Video Generation (Clips)
+
+Third-party models via AI Gateway, NOT Workers AI neurons.
+
+| Model | Billing | Use |
+|-------|---------|-----|
+| MiniMax Hailuo 2.3 | Provider price + 5% Unified Billing fee | Hero clips only |
+| Google Veo 3 | Provider price | Higher quality |
+
+**Budget rule:**
+```
+MAX_GENERATED_CLIPS=5
+MAX_VIDEO_GENERATION_COST_USD=3.00
+```
+
+For a 15-min video: 3-6 hero clips + 20-40 public domain images + diagrams + cropped manuscript details. Not 30 generated clips — that increases cost, visual inconsistency, and makes the channel look like an AI slideshow.
+
+---
+
+## 2. AI Gateway — LLM Cost Control
+
+| Feature | Benefit |
+|---------|---------|
+| Cache | Deterministic requests (thumbnail classification, hook taxonomy) cache with TTL. Script generation does NOT cache. |
+| Fallback | DeepSeek → Workers AI Llama 4 |
+| BYOK | DeepSeek key in Secrets Store |
+| Cost tracking | Per-pipeline-stage attribution |
+
+Cache key:
+```
+sha256(model_version + taxonomy_version + prompt_version + input_asset_hash)
 ```
 
 ---
 
-## Phase 2: Daily Research Pipeline (Week 2)
+## 3. Workflows — Durable Execution (Not Hermes)
 
-### 2a: Channel Harvest Worker
+Hermes is the **cognitive controller**, not the durable state machine.
 
-```typescript
-// src/cron/daily-research.ts
-export default {
-  async scheduled(event, env, ctx) {
-    const farmId = env.FARM_ID;
-    
-    // 1. Pull new uploads from CHANNEL_IDS
-    for (const channelId of CHANNEL_IDS) {
-      const uploads = await fetchChannelUploads(channelId, env.YOUTUBE_API_KEY);
-      await storeVideos(uploads, farmId, env.FEATURE_STORE);
-    }
-    
-    // 2. Compute breakout scores (age-band normalized)
-    await computeBreakoutScores(farmId, env.FEATURE_STORE);
-    
-    // 3. Classify thumbnails via Workers AI (LLaVA)
-    const unclassified = await getUnclassifiedThumbnails(env.FEATURE_STORE);
-    for (const video of unclassified) {
-      const result = await env.AI.run("@cf/llava-hf/llava-1.5-7b", {
-        image: [await fetch(video.thumbnail_url).then(r => r.arrayBuffer())],
-        prompt: "Classify this thumbnail: composition type, color warmth, face expression, style, brightness"
-      });
-      await updateThumbnailFeatures(video.video_id, result, env.FEATURE_STORE);
-    }
-    
-    // 4. Update gap map
-    await updateGapMap(farmId, env.FEATURE_STORE, env.YOUTUBE_API_KEY);
-    
-    // 5. Push high-opportunity topics to pipeline queue
-    const opportunities = await findHighOpportunityTopics(env.FEATURE_STORE);
-    for (const topic of opportunities) {
-      await env.QUEUE.send({ type: "new_topic", topic });
-    }
-  }
-};
+```
+Hermes: "Produce topic X using packet Y"
+                │
+                ▼
+Video Workflow: durable execution (owns state, retries, persistence)
+                │
+       ┌────────┴────────┐
+       ▼                 ▼
+Cloudflare tasks    External compute (VPS)
 ```
 
-### 2b: Queue Consumer — Research Topic Workflow
+Hermes: chooses topics, interprets research, requests approval, updates priors.
+Workflows: persist completed steps, retry failures, wait for human approval, track idempotency.
 
-```typescript
-// src/workflows/research-topic.ts
-export class ResearchTopicWorkflow extends WorkflowEntrypoint {
-  async run(event, step) {
-    const { topic } = event.payload;
-    let gapData, treatment;
-    
-    // Step 1: Analyze gap
-    gapData = await step.do("analyze gap", async () => {
-      return await analyzeGap(topic, this.env);
-    }, { retries: { limit: 3 } });
-    
-    // Step 2: Generate treatment
-    treatment = await step.do("generate treatment", async () => {
-      return await generateTreatment(gapData, this.env);
-    }, { retries: { limit: 2 } });
-    
-    // Step 3: Human approval checkpoint
-    await step.do("wait for approval", async () => {
-      return await step.waitForApproval({
-        email: "producer@farm",
-        message: `Review treatment for: ${topic}`,
-        data: treatment
-      });
-    });
-    
-    // Step 4: Push to production queue
-    await step.do("queue production", async () => {
-      await this.env.QUEUE.send({ type: "produce_treatment", treatment });
-    });
-  }
-}
+### Workflow Steps
+
+Each step uses an idempotency key:
 ```
+video_id + step_name + input_hash + version
+```
+
+```
+Step 1:  research_gap → gap_data (D1 query, ~0 neurons)
+Step 2:  generate_treatment → treatment (AI Gateway → DeepSeek)
+Step 3:  WAIT_FOR_APPROVAL (treatment review)
+Step 4:  write_script → script (AI Gateway → DeepSeek, gate-validated)
+Step 5:  generate_audio → audio_url (Workers AI: Deepgram Aura 2)
+Step 6:  create_thumbnail → thumbnail_url (deterministic composition, optional FLUX for backgrounds)
+Step 7:  push_render_job → job_id (to external_jobs Queue)
+Step 8:  WAIT_FOR_RENDER (poll queue or webhook)
+Step 9:  publish → youtube_id (YouTube Data API, requires approval)
+```
+
+### Limits
+
+- Step CPU: 5 min max (configured upward)
+- Step result size: 1 MiB max (return R2 references, not media data)
+- Steps may be retried → must be idempotent
 
 ---
 
-## Phase 3: Content Production (Week 3)
+## 4. Queues — Simplified
 
-### 3a: Produce Video Workflow
+**Two queues, not five.**
 
-```typescript
-// src/workflows/produce-video.ts
-export class ProduceVideoWorkflow extends WorkflowEntrypoint {
-  async run(event, step) {
-    const { treatment } = event.payload;
-    let script, audio, thumbnails, clips;
-    
-    // Step 1: Write script
-    script = await step.do("write script", async () => {
-      return await writeScript(treatment, this.env);
-    }, { retries: { limit: 3, backoff: "exponential" } });
-    
-    // Step 2: Validate script gates
-    await step.do("validate script", async () => {
-      const gates = checkScriptGates(script);
-      if (!gates.allPass) throw new Error(`Script gate failed: ${gates.failures}`);
-    });
-    
-    // Step 3: Generate audio
-    audio = await step.do("generate audio", async () => {
-      return await generateAudio(script, this.env);
-    }, { timeout: "5 minutes" });
-    
-    // Step 4: Generate thumbnails (3 variants)
-    thumbnails = await step.do("generate thumbnails", async () => {
-      const results = [];
-      for (const variant of treatment.thumbnailPrompts) {
-        const image = await this.env.AI.run("@cf/black-forest-labs/flux-1-schnell", {
-          prompt: variant,
-          steps: 4
-        });
-        const url = await uploadToR2(image, this.env.OUTPUTS);
-        results.push(url);
-      }
-      return results;
-    });
-    
-    // Step 5: Generate video clips
-    clips = await step.do("generate clips", async () => {
-      const results = [];
-      for (const beat of treatment.beats.slice(0, 3)) {  // Start with 3 clips
-        const video = await this.env.AI.run("@hf/thebloke/minimax-hailuo-2-3-gguf", {
-          prompt: beat.visualPrompt,
-          duration: 5
-        });
-        const url = await uploadToR2(video, this.env.OUTPUTS);
-        results.push(url);
-      }
-      return results;
-    });
-    
-    // Step 6: Compile final video
-    const videoUrl = await step.do("compile video", async () => {
-      return await compileVideo(audio, clips, thumbnails[0]);
-    }, { timeout: "10 minutes" });
-    
-    // Step 7: Publish to YouTube
-    await step.do("publish", async () => {
-      return await publishToYouTube(videoUrl, treatment.title, this.env);
-    });
-    
-    // Step 8: Post-release setup
-    await step.do("post release", async () => {
-      await saveHypothesis(treatment, this.env.FEATURE_STORE);
-      await startSnapshotTracking(videoUrl, this.env.FEATURE_STORE);
-    });
-  }
-}
+```
+research_ingest  ← Research cron pushes new opportunities
+external_jobs    ← VPS render worker pulls jobs
+dead_letter      ← Failed messages for human review
 ```
 
-### 3b: YouTube Upload Worker
+Queues are only needed across compute boundaries (Cloudflare → VPS). Within Cloudflare, Workflows handle state.
 
-```typescript
-// src/workers/publish.ts
-// Uses videos.insert endpoint (100/day bucket)
-export async function publishToYouTube(videoUrl, title, env) {
-  const form = new FormData();
-  form.append("part", "snippet,status");
-  form.append("snippet", JSON.stringify({
-    title,
-    description: generateDescription(title),
-    tags: generateTags(title),
-    categoryId: "27"  // Education
-  }));
-  form.append("status", JSON.stringify({
-    privacyStatus: "public"
-  }));
-  
-  // Stream video from R2 to YouTube
-  const videoBlob = await env.OUTPUTS.get(videoUrl);
-  form.append("video", videoBlob);
-  
-  const res = await fetch("https://www.googleapis.com/upload/youtube/v3/videos", {
-    method: "POST",
-    headers: { Authorization: `Bearer ${await getYouTubeAuthToken()}` },
-    body: form
-  });
-  
-  // Start native A/B test for titles
-  await startABTest(res.id, treatment.titleVariants);
-  
-  // Log API usage
-  await logAPIUsage("videos.insert", 1, env.FEATURE_STORE);
-}
 ```
+research_ingest
+  → Workflow: produce_video
+    → pushes to external_jobs (only when VPS FFmpeg render needed)
+    → external render → uploads back to R2
+    → Workflow continues → publish
+```
+
+### Queue Config
+
+- Retention: 4 days (default paid)
+- At-least-once delivery → consumers must deduplicate
+- Dead Letter Queue: 3 retries then manual review
 
 ---
 
-## Phase 4: Hermes Integration (Week 4)
+## 5. R2 + Data Catalog + R2 SQL
 
-### 4a: Hermes API Client
+### Research Dataset Storage
 
-Hermes calls Workers via fetch(), not by running skills locally:
-
-```typescript
-// In Hermes: hermes/plugins/cloudflare-farm/client.ts
-class CloudflareFarmClient {
-  constructor(private readonly farmUrl: string) {}
-  
-  async dailyResearch(): Promise<GapReport> {
-    return fetch(`${this.farmUrl}/cron/daily-research`, { method: "POST" });
-  }
-  
-  async proposeTopic(topic: string): Promise<Treatment> {
-    return fetch(`${this.farmUrl}/api/propose`, {
-      method: "POST",
-      body: JSON.stringify({ topic })
-    });
-  }
-  
-  async getGapMap(): Promise<GapMapEntry[]> {
-    return fetch(`${this.farmUrl}/api/gap-map`);
-  }
-  
-  async getFeatureStore(query: string): Promise<any> {
-    return fetch(`${this.farmUrl}/d1/query`, {
-      method: "POST",
-      body: JSON.stringify({ query })
-    });
-  }
-  
-  async approveTreatment(treatmentId: string): Promise<void> {
-    return fetch(`${this.farmUrl}/api/approve/${treatmentId}`, { method: "POST" });
-  }
-}
+```
+research-datasets/
+├── youniverse/
+│   ├── df_channels_en.tsv.gz
+│   ├── df_timeseries_en.csv.gz
+│   └── yt_metadata_helper.feather
+├── global-trending/
+├── comments/
+├── crossref/
+├── citations/
+└── derived/
 ```
 
-### 4b: Hermes Orchestration Commands
+### Partition Strategy
 
-```typescript
-// Hermes routes commands to the correct farm
-const farms = {
-  tantra: new CloudflareFarmClient("https://farm-tantra.workers.dev"),
-  // next_niche: new CloudflareFarmClient("https://farm-next.workers.dev"),
-};
+Partition by: dataset > year > month > country > category
 
-// Research
-await farms.tantra.dailyResearch();
-const gaps = await farms.tantra.getGapMap();
+Daily jobs read only recent partitions. Full historical rebuilds run weekly/monthly.
 
-// Production
-const treatment = await farms.tantra.proposeTopic("Chinnamasta goddess meaning");
-// Hermes pauses here for human review
-await farms.tantra.approveTreatment(treatment.id);
-// Workflow kicks off automatically after approval
+### R2 SQL Budget
 
-// Analytics
-const results = await farms.tantra.getFeatureStore(
-  "SELECT * FROM hypotheses WHERE status = 'confirmed'"
-);
-```
+R2 SQL: 10 GB scanned free/month, then $0.0025/compressed GB scanned. A full 40 GB scan daily would be ~$3/month. Wasteful. Partition and scan only what's needed.
+
+### Start Without Data Catalog
+
+Upload as ordinary partitioned Parquet + DuckDB. Add R2 Data Catalog only when you need table evolution, SQL sharing, or multiple engines. DuckDB reads Parquet from R2 directly.
 
 ---
 
-## Phase 5: Farm Cloning (Week 5)
+## 6. Deployable Components
 
-### 5a: Farm Creation Script
+Only 4 Workers + 1 external service:
+
+### 1. Control Worker
+- Hermes API endpoints
+- Routes commands to correct farm
+- Human approval gates
+- Cross-farm analytics
+
+### 2. Research Worker
+- Daily channel harvest (Cron trigger)
+- Breakout score computation
+- Thumbnail cascade analysis
+- Gap map updates
+
+### 3. Video Workflow
+- Full production pipeline (8-step Workflow)
+- Durable execution with idempotency
+- Media asset management
+
+### 4. Analytics Worker
+- Daily YouTube snapshot (views, likes, comments)
+- Hypothesis table updates
+- Pattern database maintenance
+
+### 5. External Render Service (VPS)
+- FFmpeg video compilation
+- FableCut render API calls
+- Reads assets from R2, writes output back
+- Pulls jobs from `external_jobs` Queue
+
+---
+
+## 7. Browser Run — QA Only, Not Rendering
+
+Browser Run (10 hours free/month on Workers Paid) is for:
+
+- Opening FableCut editor
+- Taking screenshots of timeline
+- Running UI tests
+- Previewing keyframes
+- Human intervention
+
+**Not** for final video rendering. Client-side FFmpeg/WebCodecs may hit browser limits. Use:
+
+```
+Browser Run: populate timeline, capture preview frames, UI validation
+VPS Render: FFmpeg compilation, FableCut render
+```
+
+### Gold Standard QA
+
+Do not ask "are these frames the same scene" (different videos = different scenes).
+
+Evaluate a style rubric:
+
+- Caption readable at mobile size
+- Subject not cropped
+- Safe margins respected
+- Visual matches narration
+- No visible generation defects
+- No unsupported factual reconstruction
+- Historical/artistic consistency
+- Limited focal competition
+
+Use deterministic checks for: black frames, clipping, resolution, caption safe area, audio silence, loudness, missing assets, duration mismatch.
+
+Use vision models for semantic QA only after passing all deterministic checks.
+
+---
+
+## 8. Publishing
+
+### YouTube Upload Cost
+
+`videos.insert` costs **1,600 units** (not 100). With 10,000/day quota = ~6 uploads/day. Log every call.
+
+### A/B Testing
+
+No public API for native Test & Compare. Treat A/B test initiation as a YouTube Studio manual step unless Google exposes an endpoint. The API supports single-video metadata updates and thumbnail setting.
+
+### Publish Gate
+
+```
+rendered → qa_passed → WAITING_FOR_PUBLISH_APPROVAL → published
+```
+
+Never auto-publish without human review, especially historical/religious claims.
+
+### Exposed Endpoints
+
+Domain operations, not generic D1/R2:
+
+```
+GET  /topics/:id/evidence
+POST /videos/:id/commission
+POST /videos/:id/approve-script
+POST /videos/:id/approve-publish
+GET  /jobs/:id
+```
+
+Use Worker service bindings internally (not public HTTP).
+
+---
+
+## 9. Revised Cost
+
+### Stable Control Plane (monthly)
+
+| Service | Cost |
+|---------|------|
+| Workers Paid | $5.00 |
+| R2 (~40 GB) | ~$0.45 |
+| Images (5k transforms) | $0 (free tier) |
+| D1, Queues, Vectorize | Included in Workers Paid |
+| Browser Run (10 hrs) | $0 (included) |
+| Workers AI (research inference) | ~$1.50 (cascade reduces from $5 to ~$1) |
+| **Base platform** | **~$6.95/month** |
+
+### Per-Video Production
+
+| Task | Cost |
+|------|------|
+| Script/treatment LLM | ~$0.05 (DeepSeek via AI Gateway) |
+| Aura 2 narration (15 min) | ~$0.40 |
+| Thumbnail composition | ~$0 (deterministic code) |
+| Optional FLUX background | ~$0.0001 |
+| VPS render time | ~$0 (existing Hetzner) |
+| Generated video clips | **Unknown — provider priced** |
+| **Per video (no clips)** | **~$0.45** |
+| **Per video (with 5 clips)** | **~$0.45 + provider cost** |
+
+### Total Honest Budget
+
+> **$7–$11/month without extensive generated video, plus separately capped video-generation budget (~$3/video max).**
+
+Previous estimate of $13.70 is accidentally close to the right number, but allocated to wrong things: Browser Run and Stream were overestimated, TTS and third-party video were underestimated.
+
+---
+
+## 10. Farm Template
 
 ```bash
-# One command to create a new farm
+# One command to clone a farm
 ./scripts/create-farm.sh tantra2
 
-# What it does:
-# 1. cp -r farm-template/ farms/tantra2/
-# 2. Replace {farm_id} with tantra2 in wrangler.jsonc
-# 3. Create D1 databases: tantra2-fs, tantra2-gaps
-# 4. Create R2 buckets: tantra2-assets, tantra2-outputs
-# 5. Create Queue: tantra2-pipeline
-# 6. npm install
-# 7. wrangler deploy
+# Creates:
+# - farms/tantra2/ from template
+# - D1 databases: tantra2-fs, tantra2-gaps
+# - R2 buckets: tantra2-assets, tantra2-outputs
+# - Queue: tantra2-pipeline
+# - Deploys with wrangler
 ```
 
-### 5b: Farm Config
+Each farm is parameterized by `FARM_ID`. Workers Paid plan covers all farms — only storage scales.
 
-```jsonc
-// farms/tantra2/wrangler.jsonc
-{
-  "name": "farm-tantra2",
-  "d1_databases": [
-    { "binding": "FEATURE_STORE", "database_name": "farm-tantra2-fs" },
-    { "binding": "GAP_MAP", "database_name": "farm-tantra2-gaps" }
-  ],
-  "r2_buckets": [
-    { "binding": "ASSETS", "bucket_name": "farm-tantra2-assets" },
-    { "binding": "OUTPUTS", "bucket_name": "farm-tantra2-outputs" }
-  ],
-  "queues": {
-    "producers": [{ "binding": "QUEUE", "queue": "farm-tantra2-pipeline" }],
-    "consumers": [{ "queue": "farm-tantra2-pipeline", "max_batch_size": 1 }]
-  },
-  "vars": {
-    "FARM_ID": "tantra2",
-    "YOUTUBE_API_KEY": "@youtube-api-key",
-    "CHANNEL_IDS": "[]",
-    "TOPIC_CLUSTERS": "[]"
-  }
-}
-```
+### Cost Per Additional Farm
 
-### 5c: Cross-Farm Analytics
-
-```typescript
-// Hermes can compare farms
-async function compareFarms() {
-  const results = {};
-  for (const [name, farm] of Object.entries(farms)) {
-    results[name] = await farm.getFeatureStore(`
-      SELECT farm_id, COUNT(*) as total_videos,
-             AVG(breakout_score) as avg_breakout,
-             COUNT(CASE WHEN is_breakout THEN 1 END) as breakout_count
-      FROM videos
-      WHERE snapshot_date > date('now', '-30 days')
-    `);
-  }
-  return results;
-}
-```
-
----
-
-## Phase 6: Migration from Hetzner to Cloudflare (Ongoing)
-
-### Migrate Storage
-
-| Step | Task | Cloudflare Service | Status |
-|------|------|-------------------|--------|
-| 1 | Upload library/ PDFs to R2 | R2 bucket `assets/library/` | ⬜ |
-| 2 | Upload content/sources/ to R2 | R2 bucket `assets/sources/` | ⬜ |
-| 3 | Upload public/art/ to R2 + Images | R2 + Images | ⬜ |
-| 4 | Upload public/audio/ to Stream | Stream | ⬜ |
-| 5 | Migrate D1 from local SQLite | D1 (import schema + data) | ⬜ |
-| 6 | Update Workers bindings | wrangler.jsonc | ⬜ |
-
-### Migrate Pipes
-
-| Step | Task | Cloudflare Service | Status |
-|------|------|-------------------|--------|
-| 1 | Daily research scan | Cron + Worker | ⬜ |
-| 2 | Thumbnail analysis | Workers AI (LLaVA) | ⬜ |
-| 3 | Hook classification | AI Gateway + DeepSeek | ⬜ |
-| 4 | Video production | Workflows | ⬜ |
-| 5 | Script writing with gates | AI Gateway + Workers | ⬜ |
-| 6 | Audio generation | Workers AI (Deepgram) | ⬜ |
-| 7 | Thumbnail generation | Workers AI (FLUX) | ⬜ |
-| 8 | Clip generation | Workers AI (MiniMax/Veo) | ⬜ |
-| 9 | YouTube upload | Workers + YouTube API | ⬜ |
-| 10 | Post-release tracking | Cron + D1 | ⬜ |
-
----
-
-## Cost Projection for 1 Farm
-
-| Service | Usage | Monthly Cost |
-|---------|-------|-------------|
-| Workers Paid | 10M requests | $5.00 |
-| D1 (feature store + gap map) | 5GB storage | $0 |
-| R2 (assets + outputs) | 10GB storage | $0 (free tier) |
-| Workers AI | 50k neurons/day | ~$1.50 |
-| AI Gateway | Included with Workers | $0 |
-| Queues | 10k messages/month | $0 |
-| Workflows | 4 videos/month × 10 steps | ~$0 |
-| Cron Triggers | 2/day | $0 |
-| Stream | 2 videos/month | ~$0.10 |
-| Browser Rendering | 1hr/month | ~$5.00 |
-| **Total per farm** | | **~$11.60/month** |
-
-Cost for N farms scales linearly on storage (R2 + D1) but compute (Workers) is shared — one Workers Paid plan covers all farms.
-
----
-
-## File Structure After Migration
-
-```
-cloudflare-os/
-├── farm-template/          ← Reusable farm skeleton
-│   ├── src/
-│   ├── wrangler.jsonc
-│   └── package.json
-├── farms/                  ← Deployed farm instances
-│   ├── tantra/
-│   │   ├── wrangler.jsonc  ← {farm_id} replaced
-│   │   └── .env            ← Farm-specific secrets
-│   └── {next_niche}/
-├── hermes/                 ← Orchestrator (stays local)
-│   ├── plugins/
-│   │   └── cloudflare-farm/
-│   └── skills/
-│       └── manage-farms/
-├── scripts/
-│   ├── create-farm.sh      ← Clone farm-template
-│   └── deploy-all.sh       ← Deploy all farms
-└── docs/
-    └── farm-operations.md
-```
-
-## Summary
-
-The tantra channel is Farm 1. The template lets you spin up Farm 2 (next niche) in about an hour: set `CHANNEL_IDS`, `TOPIC_CLUSTERS`, and `FARM_ID`, then deploy. Hermes manages all farms from one interface, routing commands to the right Worker endpoints. Total infrastructure cost for the first farm is ~$12/month, and each additional farm adds ~$2/month for storage.
+| Service | Cost |
+|---------|------|
+| D1 (5 GB) | $0 (included) |
+| R2 (10 GB) | $0 (free tier) |
+| Queues | $0 |
+| **Per farm** | **~$0 + proportional compute** |
