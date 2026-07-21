@@ -1,103 +1,165 @@
-# Channel Profiles — Brand Architecture
+# Channel Profiles — 5-Channel Architecture
 
-## Tantra Files
+## 1. Tantra Files
 
 **Vibe:** Vibrant, warm, scholarly awe
 **Tagline:** The forgotten wisdom of Kashmir Shaivism
 **Audience:** Spiritual seekers, yoga practitioners, philosophy enthusiasts
-**Content filter:** Tantra, Kashmir Shaivism, yogis, deities, sacred texts, mantra
 
 | Element | Style |
 |---------|-------|
-| **Color palette** | Deep saffron, gold, indigo, warm earth tones |
+| **Color palette** | Deep saffron (#CC6600), gold (#FFD700), indigo, warm earth |
 | **Thumbnail style** | Illustrated deity/yogi + 2-3 word text overlay, warm tones |
-| **Writing style** | Awe-informed, narrative, figure-led. "Who was..." format |
-| **Duration** | 15-20 min |
+| **Thumbnail text** | 2-3 words, serif font (EB Garamond) |
+| **Writing style** | Awe-informed, narrative, figure-led |
 | **Voice tone** | Warm, reverent, knowledgeable |
+| **Duration** | 15-20 min |
+| **Output** | 3-4/month |
 | **Title formula** | "Who was [Figure]?" / "The [Forgotten/Secret] [X] Of [Tradition]" |
-| **Proven data** | Biography (+1.5x), Kashmir Shaivism (+1.2x), Figures (43%) |
-| **Keywords to use** | forgotten, secret, ancient, mysterious, wisdom, teachings |
-| **Keywords to avoid** | beginner, 101, guide (too generic) |
+| **Proven keywords** | kundalini (62%), devi (36%), mantra (37%), shiva (35%), tantra (37%) |
+| **Best framing** | forgotten (2.0x), secret (1.4x) |
+| **Avoid** | numbers, meditation, chakras, awakening |
 
-**Content goes here:** Abhinavagupta, Lakshmanjoo, Anandamayi Ma, Sri Vidya, Tantric Buddhism, Tibetan Book of Dead, Vajrayana, Kundalini
+**Content fits:** Abhinavagupta, Lakshmanjoo, Anandamayi Ma, Sri Vidya, Tantric Buddhism, Tibetan Book of Dead, Vajrayana, Kundalini, Mantra, Devi worship
 
-**Content does NOT go here:** Western grimoires, chaos magic, Zen, Nanavira, Christian mysticism, Dante, alchemy poems
+**Does NOT fit:** Western grimoires, Zen, Nanavira, Christian mysticism, quantum physics, Nyaya logic
+
+**First video:** "Who was Abhinavagupta? The Forgotten Genius of Kashmir Shaivism"
 
 ---
 
-## Ochema
+## 2. Ochema
 
 **Vibe:** Technical, sharp, precise, underground
 **Tagline:** The science and practice of occult technology
 **Audience:** Intellectuals, occult practitioners, philosophy nerds, programmers
-**Content filter:** Grimoires, sigils, ceremonial magic, Zen, Nanavira, esoteric philosophy
 
 | Element | Style |
 |---------|-------|
-| **Color palette** | Black, deep purple, electric blue, silver |
+| **Color palette** | Black (#1A1A2E), deep purple, electric blue (#00D4FF), silver |
 | **Thumbnail style** | Dark background, sharp typography, technical diagrams, occult symbols |
-| **Writing style** | Analytical, precise, intellectual. "How/Why" format. |
-| **Duration** | 15-25 min |
+| **Thumbnail text** | 1-3 words, sans-serif (Inter), bold |
+| **Writing style** | Analytical, precise, intellectual |
 | **Voice tone** | Measured, authoritative, slightly dry |
+| **Duration** | 15-25 min |
+| **Output** | 3-4/month |
 | **Title formula** | "How [Practice] Works" / "The Science of [Topic]" / "What [Thinker] Really Said" |
-| **Proven data** | Chaos Magic (+2.4x), Sigils (+1.9x), Theurgy (+1.5x), Who was (+1.9x) |
-| **Keywords to use** | forbidden, revealed, science, psychology, origins, explained |
-| **Keywords to avoid** | beginner, easy, simple (audience wants depth) |
+| **Best framing** | forbidden (1.9x), revealed, science, origins |
+| **Avoid** | beginner, easy, simple |
 
-**Content goes here:** Key of Solomon, Enochian, Chaos Magic, Goetia, Nanavira, Huang Po, Zen, Baudrillard, Lacan, Neoplatonism, Theurgy, advanced astrology
+**Content fits:** Key of Solomon, Enochian, Chaos Magic, Goetia, Theurgy, Sigils, Alchemy texts, Kabbalah, Ceremonial Magic, Astrology
 
-**Content does NOT go here:** Deity worship, devotional content, Christian mysticism, poetry
+**Does NOT fit:** Deity worship, devotional content, poetry, Christian mysticism
+
+**First video:** "The Key of Solomon: A Scientific Analysis"
 
 ---
 
-## Contemplative (Angelim / The Crimson Angel)
+## 3. Angeliz (contemplative)
 
 **Vibe:** Dreamy, poetic, atmospheric, visionary
-**Tagline:** Exploring the imaginal realm
-**Audience:** Artists, poets, mystics, Jungians, seekers
-**Content filter:** Angels, Dante, alchemy poetry, Christian mystics, Corbin, Steiner, Blake, visionary art
+**Tagline:** The beauty of the imaginal realm
+**Audience:** Artists, poets, mystics, Jungians, seekers of beauty
 
 | Element | Style |
 |---------|-------|
-| **Color palette** | Crimson, gold, cream, soft blue, rose |
-| **Thumbnail style** | Ethereal artwork, religious iconography, 1-3 word poetic text overlay |
-| **Writing style** | Poetic, evocative, contemplative. "The [X] of the [Y]" format. |
-| **Duration** | 12-18 min |
+| **Color palette** | Crimson (#8B0000), gold, cream (#FFE4B5), rose, soft blue |
+| **Thumbnail style** | Ethereal artwork, religious iconography, 1-2 word poetic text overlay |
+| **Thumbnail text** | 1-2 words, script + serif combination |
+| **Writing style** | Poetic, evocative, contemplative |
 | **Voice tone** | Soft, atmospheric, slightly breathy |
-| **Title formula** | "The [X] of the [Y]" / "Who was [Mystic]?" / "[Poetic Phrase]" |
-| **Keywords to use** | angel, celestial, divine, soul, light, dark, vision, imaginal, mystic |
-| **Keywords to avoid** | explained, guide, science, psychology (too clinical) |
+| **Duration** | 12-18 min |
+| **Output** | 2-3/month |
+| **Title formula** | "The [X] of the [Y]" / "Who was [Mystic]?" / [Poetic phrase] |
+| **Best framing** | mysterious (1.4x), dark (1.5x), celestial (70%) |
+| **Avoid** | explained, guide, science, psychology |
 
-**Content goes here:** Angels, Pseudo-Dionysius, Dante, Meister Eckhart, John of the Cross, William Blake, Henry Corbin, Rudolf Steiner, alchemy as poetry, Sufi poets, visionary art
+**Content fits:** Angels, Pseudo-Dionysius, Dante, Meister Eckhart, John of the Cross, William Blake, Henry Corbin, Rudolf Steiner, Sufi poets (Rumi, Ibn Arabi), visionary art, alchemy as poetry, daimons, imagination, beauty
 
-**Content does NOT go here:** Sigil instructions, demon summoning, technical philosophy, tantra rituals
+**Does NOT fit:** Sigil instructions, demon summoning, technical philosophy, tantra rituals, logic
+
+**First video:** "The Celestial Hierarchy: Who are the Angels?"
 
 ---
 
-## Channel Splits — Content Filter
+## 4. Pramāṇa (logic / Sanskrit)
 
-| Topic | Goes To | Why |
-|-------|---------|-----|
-| Abhinavagupta biography | Tantra Files | Vibrant tradition, figure-led |
-| Key of Solomon deep-dive | Ochema | Technical grimoire |
-| Angels / Celestial hierarchy | Contemplative | Dreamy, imaginal |
-| Vajrayana Buddhism | Tantra Files | Vibrant, tantric |
-| Nanavira philosophy | Ochema | Technical intellectual |
-| Dante's Divine Comedy | Contemplative | Poetic, allegorical |
-| Alchemy (as practice) | Ochema | Technical |
-| Alchemy (as poetry/art) | Contemplative | Depends on framing |
-| Zen / Huang Po | Ochema | Sharp, minimal |
-| Kundalini | Tantra Files | Tantric practice |
-| Sigil magic | Ochema | Technical occult |
-| Neoplatonism | Ochema | Technical philosophy |
-| Sufi poetry | Contemplative | Poetic mysticism |
-| Tibetan Book of Dead | Tantra Files | Tantric Buddhism |
-| William Blake | Contemplative | Visionary art |
+**Vibe:** Minimal, precise, crystalline, high-signal
+**Tagline:** Truth through logic — Indian epistemology
+**Audience:** Philosophy students, intellectuals, Sanskritists, rationalists
 
-## Color & Style Reference
+| Element | Style |
+|---------|-------|
+| **Color palette** | White (#FFFFFF), charcoal (#333333), gold accent, minimal |
+| **Thumbnail style** | White background, clean typography, Sanskrit script accent, diagram |
+| **Thumbnail text** | 1-2 words in Devanagari + English, ultra-minimal |
+| **Writing style** | Dry, precise, rigorous, step-by-step logical exposition |
+| **Voice tone** | Flat, clear, unhurried — like a logic professor |
+| **Duration** | 8-15 min (shorter — dense content needs less time) |
+| **Output** | 2/month (density over volume) |
+| **Title formula** | "[Sanskrit Term] — [One-line definition]" / "What [Philosopher] Actually Argued" |
+| **Format inspiration** | Manim-style animated logic diagrams |
+| **Keywords** | logic, proof, reasoning, inference, perception, testimony |
+| **Avoid** | emotion, narrative, everything non-rigorous |
 
-| Channel | Dominant Color | Accent | Font | Thumbnail Texture |
-|---------|---------------|--------|------|-------------------|
-| Tantra Files | #CC6600 (saffron) | #FFD700 (gold) | Serif (EB Garamond) | Paper/texture overlay |
-| Ochema | #1A1A2E (dark blue) | #00D4FF (cyan) | Sans-serif (Inter) | Clean, sharp gradients |
-| Contemplative | #8B0000 (crimson) | #FFE4B5 (cream) | Script + Serif | Soft glow, atmospheric |
+**Content fits:** Nanavira, Nyaya Sutras, Tarka-Sangraha, Buddhist logic, Mimamsa, Sanskrit epistemology, valid inference, perception theory, Nanananda
+
+**Does NOT fit:** Anything devotional, narrative storytelling, practice guides
+
+**First video:** "Pramāṇa — What Makes Knowledge Valid?"
+
+---
+
+## 5. Intelligent Others
+
+**Vibe:** Mind-expanding, speculative but grounded, cinematic
+**Tagline:** The universe is stranger than we imagine
+**Audience:** Science enthusiasts, futurists, consciousness researchers
+
+| Element | Style |
+|---------|-------|
+| **Color palette** | Deep space blue (#0A0A2E), neon green (#00FF88), white |
+| **Thumbnail style** | Cinematic science imagery, bold typography, cosmic themes |
+| **Thumbnail text** | 1-3 words, futuristic sans-serif |
+| **Writing style** | Speculative but grounded, evidence-led |
+| **Voice tone** | Curious, precise, wonder-infused |
+| **Duration** | 15-20 min |
+| **Output** | 2-3/month |
+| **Title formula** | "[Scientist]: [Provocative Claim]" / "Is [Topic] Real?" / "The Science of [Topic]" |
+| **Keywords** | consciousness, AI, alien, biology, evolution, information, quantum |
+| **Avoid** | mysticism, occult, ungrounded speculation |
+
+**Content fits:** Michael Levin, Bernardo Kastrup, Roger Penrose, Karl Friston, AI consciousness, astrobiology, bioelectricity, free energy principle, panpsychism
+
+**Does NOT fit:** Tantra, occult practice, Christian mysticism, logic proofs
+
+**First video:** "Michael Levin: The Biologist Who Discovered That Bodies Are Not What You Think"
+
+---
+
+## RO Coverage by Channel
+
+| Channel | Clean Fit | Ambiguous | Best First Video |
+|---------|-----------|-----------|------------------|
+| Tantra Files | 48 ROs | — | Who was Abhinavagupta? |
+| Ochema | 38 ROs | — | Key of Solomon Analysis |
+| Angeliz | 33 ROs | — | The Celestial Hierarchy |
+| Pramāṇa | 15 ROs | — | Pramāṇa: What is Valid Knowledge? |
+| Intelligent Others | 10 ROs | — | Michael Levin Biography |
+
+**Remaining 66 ROs** (alchemy texts, literature, quantum physics) split across:
+- Alchemy texts → **Ochema** (technical framing)
+- Literature → **Angelim** (imaginal/mythic framing) or **Tantra Files** (narrative framing)
+- Quantum/physics → **Intelligent Others**
+- Classical philosophy → **Pramāṇa**
+
+---
+
+## Cross-Channel Crossover Map
+
+```
+Tantra Files ←→ Angeliz (shared neoplatonism, mysticism)
+Ochema ←→ Intelligent Others (science of magic, bioelectricity)
+Pramāṇa ←→ Ochema (shared logic, western esoteric logic)
+Angelim ←→ Intelligent Others (consciousness, panpsychism)
+```
