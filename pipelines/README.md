@@ -45,3 +45,68 @@ After running all four pipelines, we have:
 - **Regional similarity baseline** (expected search overlap between IN and US/UK, so future gap scores have a null hypothesis)
 
 This replaces the need to burn API quota on method validation. Only then do we run small live YouTube checks.
+
+---
+
+## Academic Signal Stack — Cross-Referencing
+
+Alongside YouTube data, we measure academic interest in topics. This feeds the **opportunity score**: a topic with rising academic publication volume + strong YouTube gap = high confidence.
+
+### Provider Architecture
+
+Replace any single-API dependency with a provider interface:
+
+```
+AcademicProvider (protocol)
+  ├── Crossref         → publication volume and growth (required)
+  ├── Semantic Scholar → citations, abstracts, semantic neighbours (optional enrichment)
+  ├── OpenCitations    → citation graph fallback (required)
+  ├── arXiv            → emerging science signal (science-adjacent topics only)
+  ├── Europe PMC       → neuroscience, consciousness, bioelectricity (domain-specific)
+  ├── CORE             → full-text enrichment (top-ranked opportunities only)
+  └── DataCite         → datasets, software, theses (supplementary)
+```
+
+### Fallback Chain
+
+1. **Crossref** — default source. 180M records, polite pool with `mailto`. Get publication counts by year, growth rate, author diversity.
+2. **OpenCitations** — citation graph. 180 req/min/IP, bulk dumps available.
+3. **Semantic Scholar** — citation counts, abstracts, SPECTER embeddings, related papers. Cache everything.
+4. **arXiv** — consciousness science, active inference, bioelectricity (not humanities).
+5. **Europe PMC** — neuroscience, meditation research, altered states (33M+ life-science publications).
+6. **CORE** — open-access full text (rate-limited, use only for top candidates).
+
+### Score
+
+```
+academic_signal = 0.40 × publication_growth
+               + 0.25 × citation_growth
+               + 0.20 × independent_author_diversity
+               + 0.15 × recent_influential_work
+```
+
+Where:
+
+| Component | Source | Measure |
+|-----------|--------|---------|
+| publication_growth | Crossref | papers last 3y / papers previous 3y |
+| citation_growth | Semantic Scholar / OpenCitations | citations last 3y / citations previous 3y |
+| independent_author_diversity | Crossref | unique authors in last 3y |
+| recent_influential_work | Semantic Scholar | papers in top citation percentile last 2y |
+
+### Example Request
+
+```python
+params = {
+    "query.bibliographic": "Kashmir Shaivism tantra",
+    "filter": "from-pub-date:2023-01-01,until-pub-date:2026-12-31",
+    "rows": 0,
+    "mailto": "your-email@example.com",
+}
+```
+
+`rows=0` returns only the result count — no paper metadata needed for the momentum score.
+
+### Why Not OpenAlex
+
+OpenAlex was the original plan but is replaceable by Crossref + OpenCitations, which together cover publication metadata and citation graphs with better rate limits and bulk access. Semantic Scholar adds abstracts and embeddings when needed. This stack is more robust and removes a single-point-of-failure dependency.
