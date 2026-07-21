@@ -1,0 +1,21 @@
+{
+  "name": "farm-{FARM_ID}",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "db:migrate": "wrangler d1 execute {FARM_ID}-db --file=src/d1/schema.sql",
+    "db:query": "wrangler d1 execute {FARM_ID}-db --command=",
+    "research:daily": "curl -X POST https://farm-{FARM_ID}.workers.dev/__cron/daily-research",
+    "research:gap-map": "curl https://farm-{FARM_ID}.workers.dev/api/research/gap-map",
+    "factory:propose": "curl -X POST https://farm-{FARM_ID}.workers.dev/api/factory/produce -H 'Content-Type: application/json' -d '{\"topic\": \"$1\"}'"
+  },
+  "dependencies": {
+    "cloudflare:workers": "^1.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "wrangler": "^4.0.0"
+  }
+}

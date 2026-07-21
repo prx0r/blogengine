@@ -6,9 +6,8 @@
     { "binding": "DB", "database_name": "farm-{FARM_ID}-db", "database_id": "" }
   ],
   "r2_buckets": [
-    { "binding": "SOURCES", "bucket_name": "farm-{FARM_ID}-sources" },
     { "binding": "ASSETS", "bucket_name": "farm-{FARM_ID}-assets" },
-    { "binding": "OUTPUTS", "bucket_name": "farm-{FARM_ID}-outputs" }
+    { "binding": "GLOBAL_LIBRARY", "bucket_name": "content-genome" }
   ],
   "queues": {
     "producers": [
@@ -38,8 +37,6 @@
     ]
   },
   "workflows": [
-    { "name": "produce-video", "binding": "PRODUCE_VIDEO", "class_name": "ProduceVideoWorkflow" },
-    { "name": "backfill-ros", "binding": "BACKFILL_ROS", "class_name": "BackfillROsWorkflow" },
-    { "name": "validate-all", "binding": "VALIDATE_ALL", "class_name": "ValidateAllWorkflow" }
+    { "name": "produce-video", "binding": "PRODUCE_VIDEO", "class_name": "ProduceVideoWorkflow" }
   ]
 }
