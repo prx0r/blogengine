@@ -62,6 +62,7 @@ export interface DiscoverMarketOptions {
   baselineWindow?: number;
   now?: Date;
   discoveryLenses?: DiscoveryLens[];
+  channelIds?: string[];
 }
 
 function parseCount(value?: string): number | null {
@@ -200,10 +201,24 @@ export class YouTubeDataClient {
     const maxResultsPerQuery = options.maxResultsPerQuery ?? 20;
     const maxReferences = options.maxReferences ?? 12;
     const baselineWindow = options.baselineWindow ?? 12;
+    const cleanChannels = [...new Set(options.channelIds ?? [])].slice(0, 20);
     const cleanQueries = [...new Set(queries.map((query) => query.trim()).filter(Boolean))].slice(0, 6);
-    if (cleanQueries.length === 0) throw new Error("At least one market search query is required.");
+    if (cleanQueries.length === 0 && cleanChannels.length === 0) throw new Error("At least one market search query or channel ID is required.");
 
     const discoveredBy = new Map<string, Set<string>>();
+
+    for (const channelId of cleanChannels) {
+      const channelMap = await this.channels([channelId]);
+      const uploadsId = channelMap.get(channelId)?.contentDetails?.relatedPlaylists?.uploads;
+      if (!uploadsId) continue;
+      const ids = await this.uploadIds(uploadsId, 50);
+      for (const videoId of ids) {
+        const found = discoveredBy.get(videoId) ?? new Set<string>();
+        found.add(`channel:${channelId}`);
+        discoveredBy.set(videoId, found);
+      }
+    }
+
     for (const query of cleanQueries) {
       const videoIds = await this.search(query, { regionCode, publishedAfter, order, maxResultsPerQuery });
       for (const videoId of videoIds) {
@@ -292,11 +307,18 @@ export class YouTubeDataClient {
       region_code: regionCode,
       published_after: publishedAfter,
       search_queries: cleanQueries,
-      discovery_lenses: options.discoveryLenses ?? cleanQueries.map((query) => ({
-        query,
-        lens: "literal" as const,
-        reason: "Deterministic or manually supplied search query.",
-      })),
+      discovery_lenses: [
+        ...(options.discoveryLenses ?? cleanQueries.map((query) => ({
+          query,
+          lens: "literal" as const,
+          reason: "Deterministic or manually supplied search query.",
+        }))),
+        ...cleanChannels.map((channelId) => ({
+          query: `channel:${channelId}`,
+          lens: "channel" as const,
+          reason: "Known channel harvested for market analysis.",
+        })),
+      ],
       search_order: order,
       references: references.slice(0, maxReferences),
       own_channel_evidence: [],

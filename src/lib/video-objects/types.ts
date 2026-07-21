@@ -86,7 +86,7 @@ export interface BreakoutReference {
 
 export interface DiscoveryLens {
   query: string;
-  lens: "literal" | "human_question" | "historical_case" | "mechanism" | "adjacent_audience" | "misconception";
+  lens: "literal" | "human_question" | "historical_case" | "mechanism" | "adjacent_audience" | "misconception" | "channel";
   reason: string;
 }
 

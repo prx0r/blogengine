@@ -1,6 +1,10 @@
 import { YouTubeDataClient } from "../src/lib/video-objects/youtube-data";
 import type { MarketSnapshot } from "../src/lib/video-objects/types";
 
+const CHANNEL_IDS: string[] = [
+  "UC0SL9zVE00Inywpip5dbnmQ", // @Adhyatmiksutra-f9w
+];
+
 interface ThemeQuery {
   theme: string;
   queries: string[];
@@ -218,6 +222,7 @@ async function main(): Promise<void> {
       maxResultsPerQuery: 10,
       maxReferences: 15,
       now: new Date(),
+      channelIds: CHANNEL_IDS,
     });
 
     const breakouts = snapshot.references.filter((r) => r.breakout.is_breakout);
