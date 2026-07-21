@@ -2,7 +2,36 @@
 
 ## Architecture
 
-Three components: a Worker API, a D1 database, and a dashboard UI. Hermes doesn't change — it still calls HTTPS endpoints on farm Workers directly, same as its existing astrology API calls.
+Three systems, not one:
+
+1. **Farm control plane** (what this doc designs) — production pipeline approvals. Approve treatment, approve script. This is our Worker + D1. Hermes talks to it via HTTPS (same pattern as existing astrology API calls).
+
+2. **TryPost** (self-hosted, AGPL) — cross-platform publishing, scheduling, analytics. Handles YouTube/Instagram/TikTok/Twitter distribution. Hermes talks to it via MCP (native tool calls, no custom REST layer needed). TryPost has per-platform queues (TikTok delays don't block YouTube), race-safe token refresh for short-lived API tokens, and YouTube Analytics built in.
+
+3. **n8n** (optional glue) — connect farm output to TryPost if needed. Farm finishes a render → webhook fires → n8n pushes to TryPost → TryPost schedules to platforms.
+
+The farm control plane handles gates that TryPost can't: "approve this treatment before scripting," "approve this script before recording." TryPost handles gates it's built for: "approve this post before publishing to TikTok." Different layers, different concerns.
+
+## Hermes Integration
+
+Hermes already calls HTTPS endpoints on farm Workers. It now also calls TryPost's MCP server directly:
+
+| Pattern | Example | Mechanism |
+|---------|---------|-----------|
+| Propose topic to farm | POST /api/factory/produce | HTTPS (existing pattern) |
+| Check pipeline status | GET /api/factory/status | HTTPS (existing pattern) |
+| Check analytics | MCP tool call to TryPost | MCP plugin (new, but zero REST code) |
+| Schedule publish | MCP tool call to TryPost | MCP plugin (new, but zero REST code) |
+
+The MCP integration is the key advantage of TryPost over BrightBean — Hermes can draft, schedule, and publish as tool calls. No REST wrapper to build or maintain.
+
+## What This Replaces
+
+The publishing, scheduling, analytics, and token-refresh layer that we would have had to build custom. TryPost handles per-platform token management, queue isolation, and unified analytics out of the box.
+
+## What This Does NOT Replace
+
+The farm control plane still handles: production pipeline state tracking, treatment/script/publish approval gates, workflow instance monitoring, signed command delivery to farm Workers, heartbeat monitoring.
 
 ## Data Flow
 
