@@ -1,47 +1,70 @@
-# Research Report: Breakout Metric Validation (A1-A3)
+# Research Report: Breakout Metric Differentiation (A1-A3)
 
-## Experiment Design
+**Status:** Preliminary analysis — not a completed validation.
+**Recommendation:** Use the residual metric provisionally alongside simpler baselines while collecting video-level data that can support a proper validation.
 
-**Objective:** Determine whether an OLS residual breakout metric (`log views ~ log age`) identifies meaningfully different breakout labels than raw view counts, and whether format class or channel momentum affect the comparison.
+---
 
-**Dataset:** YouNiverse (136,470 English-language YouTube channels, 72,924,794 videos, crawled 2019-10). All channels have ≥10k subscribers and ≥10 videos.
+## What This Analysis Actually Tests
 
-**Sample:** 500 channels randomly selected from the full corpus, ~30 videos each = 14,432 videos. Filtered to channels with ≥20 videos for per-channel regression (469 of 500 qualified).
+The question is not "which metric is better?" — we cannot answer that with this dataset. The question is: **does an age-normalized residual produce materially different rankings from raw cumulative views?** If yes, it's worth investigating further. If no, there's nothing to pursue.
 
-**Method:**
+---
 
-A1 — For each channel, fit:
+## A1: OLS Residual vs Raw Views
+
+### Method
+
+For each channel with ≥20 videos, fit:
+
 ```
 log(view_count) ~ log(age_days + 1)
 ```
-Compute residual = actual - predicted. Label top quartile by residual as "breakout." Compare overlap with top quartile by raw view count. If overlap < 80%, the residual captures different information. Hypothesis: residual identifies breakouts that raw views miss (young, high-performing videos) while demoting old videos coasting on accumulated views.
 
-A2 — Pooled model across all channels:
-```
-Model A: log_views ~ log_age
-Model B: log_views ~ log_age + category (one-hot encoded)
-```
-Compare R². If delta > 0.01, category adds meaningful signal.
+Compute residual = actual - predicted. Label top quartile by residual. Compare overlap with top quartile by raw view count.
 
-A3 — For each channel with ≥20 videos: compute age-normalized residual, label top quartile, regress residual against quarterly subscriber growth, subtract growth trend, re-label top quartile, count label flips. If >15% flip, momentum stripping is necessary.
-
-## Results
-
-### A1: OLS Residual vs Raw Views
+### Results
 
 | Metric | Value |
 |--------|-------|
 | Channels tested | 469 |
-| Mean R² per channel (age→views) | 0.12 |
-| Overlap (residual-top with raw-top) | 0.56 |
-| Labels that differ | 44% |
-| Gate | PASS (< 80% overlap threshold) |
+| Mean per-channel R² (age→views) | 0.12 |
+| Overlap (residual top-quartile with raw top-quartile) | 0.56 |
+| Fraction of residual-selected videos NOT in raw top-quartile | 44% |
+| Jaccard similarity | 0.39 |
+| Total binary label agreement | 78% |
+| Gate | PASS (overlap < 0.80 threshold) |
 
-The 44% disagreement means nearly half of what the residual calls a "breakout" is not in the top quartile by raw views, and vice versa. This is driven by: (a) young videos with high velocity ranked low by raw views because they haven't accumulated yet, and (b) old videos with high total views but flat or declining trajectory ranked low by residual because they're performing as age predicts.
+44% of videos the residual calls "breakout" are not in the raw-view top quartile. Conversely, 44% of raw-view selections are not in the residual top quartile. Because both methods label 25% of videos positive, the fraction of ALL videos that receive different labels is approximately 22%.
 
-**Convergence note:** At n=100 channels, overlap was 0.84 (16% diff). At n=500, overlap was 0.56 (44% diff). The result did not stabilize at small n. The per-channel OLS is inherently noisy (fit on ~30 points), and that noise only averages out across many channels.
+**Interpretation:** The age-normalized residual produces substantially different rankings from raw views. This is a measure of **difference**, not a measure of **validity**. We have not shown that either ranking identifies genuinely better breakout candidates.
 
-### A2: Category as Covariate
+### What This Does NOT Establish
+
+- That the residual identifies "young high-velocity videos" or "old declining videos." YouNiverse has one cumulative view count per video at crawl time — we cannot measure velocity or trajectory.
+- That the residual is more predictive of future performance than raw views.
+- That the residual is "better" by any external criterion.
+
+### What We Actually Know
+
+The residual ranking is non-equivalent to the raw-view ranking. That's it. It's a promising heuristic worth testing against real outcomes (future view growth, human review, performance on our own channel).
+
+---
+
+## A2: Category as a Predictor
+
+### Method
+
+Pooled regression across all channels (not within-channel):
+
+```
+Model A: log_views ~ log_age
+Model B: log_views ~ log_age + category (one-hot encoded YouTube category)
+```
+
+Compare R².
+
+### Results
 
 | Metric | Value |
 |--------|-------|
@@ -49,48 +72,82 @@ The 44% disagreement means nearly half of what the residual calls a "breakout" i
 | R² (age + category) | 0.0579 |
 | Delta R² | 0.0174 |
 | Categories in sample | 15 |
-| Gate | PASS (> 0.01 threshold) |
+| Gate | PASS (delta R² > 0.01 threshold) |
 
-Category explains an additional 1.7% of view-count variance beyond age alone. This is modest but consistent across categories. The pooled test (across channels, not within) is the correct design — channels rarely change category, so a within-channel test would always return null.
+### Critical Caveat
 
-### A3: Channel Momentum Stripping
+**This test is between-channel, not within-channel.** The per-channel OLS in A1 already absorbs every channel-constant characteristic (including category) into the channel-specific intercept. Adding category to a per-channel model changes nothing because category doesn't vary within a channel.
+
+The pooled model's R² increase may reflect differences in average channel size, maturity, or audience across categories — not that category improves breakout identification.
+
+Additionally, YouTube category is not "format class." Lecture, documentary, podcast, interview, and vlog require a separate taxonomy. This test does not answer whether format affects breakout behavior.
+
+**Decision:** Do not add category to the within-channel breakout model based on this test. If category is to be tested, it must be in a within-channel framework using a proper format taxonomy, with channel-level fixed effects and held-out validation.
+
+---
+
+## A3: Channel Momentum Stripping
+
+### Method
+
+For each channel: compute age-normalized residual, label top quartile, regress residual against quarterly subscriber growth, subtract growth trend, re-label, count label flips.
+
+### Results
 
 | Metric | Value |
 |--------|-------|
 | Videos tested | 3,933 |
 | Labels that flipped | 0 (0.0%) |
-| Gate | Informative only |
 
-Subscriber growth had zero effect on breakout label assignment in this sample. This does not mean momentum never matters — the YouNiverse population consists entirely of mature channels (>10k subs, >10 videos) with relatively stable growth. The effect may be different for small, rapidly growing channels, or for the early phase of a channel's lifecycle.
+### Why This Result Is Suspicious
 
-## Interpretation
+Zero flips across 3,933 videos is unusual. Before concluding "momentum doesn't matter," several possibilities must be excluded:
 
-The breakout metric works. The OLS residual identifies 44% different breakout labels than raw views. This is not marginal — it's a substantial reframing of what "breakout" means. The age-normalized metric is catching videos that are young but high-performing (which raw views would miss because they haven't accumulated), and demoting old videos that coast on accumulated views.
+1. **Subscriber growth was constant within quartile computation units** — subtracting a channel-level constant mathematically preserves within-channel ranking.
+2. **Growth values were mostly zero or missing** — the merge between video data and time series may have failed silently.
+3. **Concurrent growth causes outcome leakage** — subscriber growth measured AFTER a video's publication may be partly caused by the video itself. Removing it strips away signal, not noise.
+4. **The quartile boundary is arbitrary** — 0% of labels crossed the 75th percentile boundary, but continuous residuals may have moved substantially without crossing.
 
-Category adds a small but real improvement. Include it as a covariate.
+**Decision:** Do not conclude momentum is irrelevant. Audit the implementation, use only lagged (pre-publication) subscriber growth, and test at multiple thresholds. Retain momentum as an experimental feature until properly tested.
 
-Momentum stripping can be skipped for mature channels. Re-test on own data if the farm tracks small, growing channels.
+---
 
-## Implications for the Pipeline
+## Limitations Across All Experiments
 
-| Decision | Evidence | Action |
-|----------|----------|--------|
-| Use OLS residual | 44% label difference at n=500 | Primary breakout metric |
-| Include category | Delta R² = 0.017 | Covariate in model |
-| Skip momentum | 0% flips for mature channels | Drop from pipeline, re-test on own data |
-| Minimum sample | Result unstable at n=100, converged at n=500 | Always validate with ≥500 channels |
+| Limitation | Impact |
+|------------|--------|
+| **No external outcome measure** | We cannot say which metric is "better" — only that they differ |
+| **Single cumulative view count per video** | Cannot measure velocity, trajectory, or decay |
+| **YouNiverse is not representative of all YouTube** | Only English channels >10k subs, biased toward highly ranked channels, ends 2019 |
+| **Small per-channel samples (~30 videos)** | OLS slopes are unstable; extreme videos can pull the regression toward themselves |
+| **Top-quartile labeling forces 25% breakout rate** | Every channel gets breakouts even if all videos perform similarly |
+| **Sample size convergence not established** | The 16%→44% jump between n=100 and n=500 shows instability, not convergence |
+| **Category test is between-channel, not within-channel** | Does not justify adding category to a per-channel model |
 
-## What This Enables
+---
 
-With the metric validated, the research pipeline can now:
-- Compute breakout scores from channel uploads on a daily basis
-- Rank topics by breakout density (which topics produce the most outliers)
-- Feed those scores into the opportunity formula
-- Test whether the opportunity formula predicts actual video performance (once production starts)
+## Current Best Interpretation
 
-## Limitations
+The age-normalized residual produces materially different rankings from raw cumulative views. It is **promising enough for prospective validation** — meaning: use it provisionally alongside simpler baselines (views/day, age-bin percentiles) while collecting video-level data that can support a proper validation against future outcomes.
 
-- YouNiverse data ends October 2019. The metric is validated on historical English-language content. Current tantra content may have different accumulation dynamics.
-- The 44% difference is a population average. Individual channels vary widely in how much the residual differs from raw views (the per-channel R² ranged from ~0 to ~0.4).
-- Category data is YouTube's own classification, which may be noisy or inconsistent. A finer-grained format taxonomy (lecture vs documentary vs podcast) might add more signal.
-- Momentum was tested using subscriber growth. Other momentum signals (upload frequency change, format change, topic drift) were not tested.
+What we need before calling this "validated":
+
+- Comparison against an external outcome (future view growth, human-reviewed breakout examples)
+- Leave-one-out residuals (not ordinary in-sample)
+- Bootstrap uncertainty on overlap and flip rates
+- Repeated subsampling to establish minimum sample size
+- Comparison with at least views/day and age-percentile baselines
+- A3 audit with lagged momentum, multiple thresholds, continuous movement
+- Validation on contemporary data from the actual tantra channel population
+
+---
+
+## Pipeline Decision (Provisional)
+
+| Component | Decision | Confidence |
+|-----------|----------|------------|
+| OLS residual | Use provisionally alongside views/day baseline | Medium — promising but unvalidated |
+| Category | Do not include | Low — A2 test was confounded |
+| Momentum | Retain as experimental feature | Low — A3 needs audit |
+| Minimum sample | Not established | N/A |
+| Breakout label | Use continuous residual score, not quartile | High — forced 25% rate is artificial |
