@@ -393,19 +393,31 @@ This separates the sourcing concern (Research Pack) from the narrative concern (
 ### Stage 3: Content Production (Workflows)
 
 ```
+The script now outputs speaker-tagged dialogue: HOST and AI-COHOST lines.
+This cuts recording load (human speaks only HOST lines), strengthens authenticity
+(human reacting live to AI's explanations), and fixes the "templated" feel
+(the HOST/AI rhythm varies naturally per video regardless of underlying structure).
+
 Step 1: research_gap(topic_id) -> D1 query
 Step 2: build_research_pack -> sourced claims with exact locators
 Step 3: FACT_CHECK gate (every claim must have a source, gates F01-F04)
 Step 4: WAIT_FOR_APPROVAL (human reviews research pack + sources)
-Step 5: generate_treatment -> AI Gateway ($0.02)
-Step 6: write_script -> AI Gateway + validation gates ($0.05)
-Step 7: WAIT_FOR_VOICEOVER (human records audio. Real bottleneck for all farms.)
-         Dashboard shows script with recording interface. Beat timing happens AFTER
-         audio exists — waveform drives pacing, not pre-planned duration.
-Step 8: create_thumbnail -> deterministic composition ($0)
-Step 9: push_render_job -> Queue -> VPS FFmpeg -> R2
-Step 10: WAIT_FOR_RENDER
-Step 11: publish -> YouTube API (1,600 quota), requires approval. 
+Step 5: generate_treatment -> AI Gateway, outputs speaker-tagged structure ($0.02)
+Step 6: write_script -> AI Gateway, outputs HOST/AI-COHOST dialogue ($0.05)
+         Validation gates: every AI-COHOST line has a source, HOST lines are
+         natural reactions/pacing/dumb-questions — not exposition.
+         Disclosure: "altered or synthetic content" checkbox flagged for publish step.
+Step 7: WAIT_FOR_VOICEOVER (human records HOST lines only. Dashboard shows
+         only your lines with gaps for AI responses. Beat timing happens AFTER
+         audio exists — waveform drives pacing, not pre-planned duration.)
+Step 8: generate_ai_audio -> TTS for AI-COHOST lines only (Deepgram Aura 2,
+         ~$0.20 per 15-min video instead of $0.40 — half the lines)
+Step 9: interleave_audio -> merge HOST recording + AI audio into timeline track
+Step 10: create_thumbnail -> deterministic composition ($0)
+Step 11: push_render_job -> Queue -> VPS FFmpeg -> R2
+Step 12: WAIT_FOR_RENDER
+Step 13: publish -> YouTube API (1,600 quota), requires approval.
+         "Altered or synthetic" checkbox MUST be checked if any AI-COHOST lines used.
          Publishing autonomy: NEVER for historical/religious claims content.
          This is a permanently closed question, not a design tradeoff.
 ```
