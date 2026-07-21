@@ -1,8 +1,96 @@
 # Handover — YouTube Intelligence & Content Pipeline
 
-## Project State (2026-07-21)
+## For the New Agent: Read This First
 
-Research hypothesis: Indian creators validate topics that haven't been narrativized for Western audiences. The opportunity is cultural translation — not SEO gap detection. The system is a **self-replicating media foundry**: one farm per channel, Cloudflare-native, with a human host + AI co-host format.
+This project has ~50+ spec files, ~15 research experiments, and ~10 operational documents. You don't need to read all of them. Here's what matters in order:
+
+**1. `buildthreads.md`** (5 min) — The decision map. Seven possible directions, which are critical vs nice-to-have, and my recommendation.
+
+**2. `pipelines/control-plane-design.md`** (10 min) — The current architecture: three systems (farm control plane + TryPost + farm Workers), how Hermes connects, what's uncertain.
+
+**3. `farm-template/` docs** (10 min) — `01-SETUP.md`, `02-RESEARCH.md`, `03-PRODUCTION.md`. The deployable farm template. This is the thing that actually runs.
+
+**4. `operations/research-schema.md`** (10 min) — How to run an experiment properly. Machine-validatable manifests, tier system, pre-registration, evidence state.
+
+**5. `data/research/youniverse/research-report-a1-a3.md`** (10 min) — The corrected A1-A3 report. Example of honest research documentation: distinguishes "difference" from "validity," documents rival explanations, explicitly states what the test does NOT prove.
+
+**6. `operations/research-inventory.md`** (5 min) — Complete list of all 41 designed experiments, 7 completed, 33 not started.
+
+Skip everything else until you need it. The `hermes/` directory is background context, `docs/` are API references, `youtubemaster*.md` are strategic thinking — all valuable but not blocking.
+
+## Current State
+
+**What works:** Layer 1 (YouNiverse breakout metric) validated as promising but not confirmed — A1-A3 are "differentiated, not validated." Layer 2 (API tests) partially complete — gap pattern confirmed (16/30 queries), Wikipedia skipped (r=0.027), daily search collection running. 6 datasets in R2. Credential cleanup done.
+
+**What's built but untested:** `farm-template/` has a complete Worker, D1 schema, create-farm script, and docs. Never deployed. The YouTube API client in `src/lib/` doesn't exist — it's stubs.
+
+**What's designed but not built:** Control plane (5 D1 tables, 10 API endpoints, 3 dashboard views), Reddit extraction (30 subreddits, stream-filter, signal taxonomy — code exists in guide but not run), Blueprint intelligence datasets (Upworthy, Clickstream, museum assets — download guides exist but not executed).
+
+**What's decided but not started:** TryPost self-hosting (AGPL, MCP-native, replaces the cross-platform publishing layer we would have built). Docker is configured on the volume (46 GB free) and ready.
+
+**The critical path to a running system:** Write the YouTube API client → deploy `farm-template/` → daily research runs → first video produced. Everything else is speculative until that video exists.
+
+## Architecture (Current)
+
+```
+HERMES (orchestrator on VPS)
+  ├── HTTPS → Farm Workers (propose topics, check status)
+  └── MCP    → TryPost (schedule publish, pull analytics)
+
+FARM WORKER (Cloudflare, per channel)
+  ├── Own D1 (research data, hypotheses)
+  ├── Own R2 (assets, outputs)
+  ├── Own Queues (pipeline, render)
+  └── Reports to control plane (pipeline state)
+
+CONTROL PLANE (Cloudflare) — pipeline approvals only
+  ├── 5 D1 tables (farms, workflow_instances, pipeline_events, approval_gates, control_commands)
+  └── Dashboard with 3 views (approval inbox, farm grid, farm detail)
+
+TRYPOST (self-hosted Docker) — cross-platform publishing
+  ├── YouTube, Instagram, TikTok, etc.
+  ├── Per-platform queues, token refresh
+  └── Hermes talks via MCP (not REST)
+```
+
+## Key Decisions Made
+
+| Decision | Rationale |
+|----------|-----------|
+| TryPost over BrightBean | TryPost has native MCP server — Hermes calls it as tool calls, no custom REST layer |
+| Farm Worker → TryPost direct API, not n8n | One conditional trigger doesn't justify a fourth system |
+| Control plane separated from TryPost | Different concerns: production pipeline approvals vs. publishing analytics. Different auth models |
+| Per-farm secrets, not shared token | Compromise of one farm doesn't compromise all |
+| Artifact hash on approval gates | Approve exact version, not mutable pointer |
+| Appprove / Revise / Terminate (3-way) | Revision doesn't kill the workflow |
+| Handoff must be event-driven, not bucket-watching | Bucket-watcher can't distinguish approved from in-progress |
+| Within-channel breakout analysis | Controls for audience size — cross-channel compares 10k-sub to 5M-sub |
+| OLS residual metric | 44% label difference from raw views at n=500 — but NOT validated against an external outcome |
+| Weighted sum with clamp | Multiplicative score dies if any input is near-zero |
+| Fixed 8-beat format | Variable-order breaks Workflow idempotency. Revisit only with real retention data |
+| Human voiceover, no TTS for host | Strongest signal against YouTube's inauthentic content policy |
+| Never auto-publish historical/religious claims | Permanent rule, not a design tradeoff |
+
+## Open Threads (Things We Know We Don't Know)
+
+| Thread | When It Resolves | What's at Stake |
+|--------|-----------------|-----------------|
+| Does gap score predict video performance? | After 10+ published videos | The entire opportunity formula |
+| Does the co-host format retain viewers? | After first published video | The recording format |
+| Is one voiceover session/week realistic? | After first month of production | The scaling model |
+| Does TryPost support per-workspace API keys? | When we self-host it | Isolation model |
+| Does TryPost's S3 storage work with R2? | When we test it | Storage architecture |
+| Daily vs weekly gap computation | ~13 days remaining on collection | Research cadence |
+| Does the 8-beat format feel templated? | After audience retention data | Content structure |
+| Should research packs become full ROs? | Around video 10-15 | Knowledge management |
+
+## The Advice
+
+The single most important thing: **deploy the farm and produce one video.** Nothing else validates the architecture. Everything else (control plane, dashboard, TryPost, blueprint datasets) is spec work that stays speculative until the first video is published and you can see whether the gap score means anything when real audience data flows back.
+
+If you want to produce immediately useful output without deploying: **run the Upworthy title analysis.** 32k headline A/B tests, causal evidence, ~2 hours of work, improves every video the farm will ever produce. The data is not downloaded yet — start with `operations/blueprint-datasets-download.md`.
+
+## Project State (2026-07-21)
 
 ---
 
