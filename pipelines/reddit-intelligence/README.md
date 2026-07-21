@@ -39,7 +39,50 @@ This pipeline is Tier 2: it calibrates topic opportunity scores and provides tra
 
 ---
 
-## Data Extraction (Stream-Filtered, Not Full Download)
+## Actual Dataset Schema
+
+Verified by querying a sample row from each dataset. All timestamps are Unix UTC.
+
+### Submissions (`fddemarco/pushshift-reddit`)
+
+| Field | Type | Example | Notes |
+|-------|------|---------|-------|
+| `author` | str | `doopercooper` | Reddit username |
+| `created_utc` | int | `1325462399` | Unix timestamp (use `datetime.utcfromtimestamp()`) |
+| `id` | str | `nz3g9` | Submission ID |
+| `num_comments` | int | `24` | Comment count |
+| `score` | int | `82` | upvotes - downvotes |
+| `selftext` | str | `...` | Post body (may be empty for link posts) |
+| `subreddit` | str | `videos` | Subreddit name (no /r/ prefix) |
+| `subreddit_id` | str | `t5_2qh1e` | Reddit internal ID |
+| `title` | str | `guy chases after...` | Post title |
+
+### Comments (`fddemarco/pushshift-reddit-comments`)
+
+| Field | Type | Example | Notes |
+|-------|------|---------|-------|
+| `author` | str | `goishin` | Reddit username |
+| `body` | str | `isn ' t this against...` | Comment text (note: spaces around apostrophes are a known Pushshift artifact) |
+| `controversiality` | int | `0` | 0 or 1. Flagged when upvote ratio < ~0.5. **Key signal for disagreement detection.** |
+| `created_utc` | int | `1325376000` | Unix timestamp |
+| `id` | str | `c3ctzsj` | Comment ID |
+| `link_id` | str | `t3_nxrpq` | Parent submission ID (prefix `t3_` — strip to match submission `id`) |
+| `score` | int | `5` | upvotes - downvotes |
+| `subreddit` | str | `news` | Subreddit name |
+| `subreddit_id` | str | `t5_2qh3l` | Reddit internal ID |
+
+### Signal Fields Available
+
+| Signal | Where | How to Use |
+|--------|-------|------------|
+| **Score** (upvotes - downvotes) | Both | Community agreement proxy. High-score comment = accepted answer. |
+| **Controversiality** (0/1) | Comments only | Active disagreement. Flagged by Reddit when upvote ratio is near 50%. |
+| **Comment count** | Submissions | Engagement depth with the question. |
+| **Timestamp** | Both | Track topic persistence across years. |
+| **Body / Title** | Both | Raw text for NLP. Note: Pushshift text has spaces around apostrophes (`isn ' t`) — clean before embedding. |
+| **Link to parent** | Comments | `link_id` ties comment to its parent submission. Strip `t3_` prefix to match on submission `id`. |
+
+### Data Extraction (Stream-Filtered, Not Full Download)
 
 **Do not download the 292 GB Pushshift dump.** Stream-filter by subreddit using HuggingFace datasets library:
 
@@ -77,44 +120,43 @@ Filtered output: ~5 GB for submissions, ~10 GB for comments. Uploads to R2.
 
 ## Object Model
 
-### Per Submission
+### Per Submission (maps directly to Pushshift fields)
 
 ```yaml
 subreddit: "KashmirShaivism"
 subreddit_role: specialist          # specialist | practitioner | mass_spiritual | testimonial | critical
 post_type: question                  # question | experience | argument | resource_request | recommendation
-created_utc: 2018-03-15
+created_utc: 1325462399             # Unix timestamp — convert to date for yearly aggregation
 title: "Why does Abhinavagupta say the world is real but Maya is also real?"
 selftext: "I'm confused about how... "
-explicit_question: "How can the world be both real and Maya?"
-underlying_need: reconcile_contradiction  # reconcile | understand | verify | apply
-topic_cluster: abhinavagupta_ontology
-has_experience_claim: false
-has_textual_claim: true
-num_comments: 12
-score: 45
+explicit_question: "How can the world be both real and Maya?"  # extracted from title/body
+score: 45                            # upvotes - downvotes. Raw community agreement.
+num_comments: 12                     # engagement depth
+id: "nz3g9"                          # used to join with comments via link_id
 ```
 
-### Per Comment
+### Per Comment (maps directly to Pushshift fields)
 
 ```yaml
 subreddit: "KashmirShaivism"
 comment_type: top_level | reply_deep
 parent_type: question | experience | argument
-sentiment: explanatory | corrective | skeptical | devotional
-source_mentions: ["Tantraloka", "Pratyabhijna"]
+body: "In Kashmir Shaivism, Maya is not illusion but..."
+score: 23                            # upvotes - downvotes. Accepted answer if high.
+controversiality: 0                   # 0 or 1. 1 = active disagreement (key signal).
+link_id: "t3_nxrpq"                  # parent submission — strip t3_ to match
+id: "c3ctzsj"                        # comment ID
+source_mentions: ["Tantraloka", "Pratyabhijna"]  # extracted from body
 teacher_mentions: ["Abhinavagupta"]
 book_mentions: []
 practice_mentions: []
-upvotes: 23
-depth: 1           # 0 = top-level, 1 = reply to top, etc.
-controversial: false  # upvote ratio < 0.5
+depth: 1                              # 0 = top-level, 1 = reply, etc. Determined from reply chains.
 ```
 
-### Per Thread (Derived)
+### Per Thread (Derived — joins submission + comments)
 
 ```yaml
-thread_id: "abc123"
+thread_id: "t3_nxrpq"
 subreddit: "KashmirShaivism"
 question: "How can the world be both real and Maya?"
 best_answer: "Abhinavagupta distinguishes empirical reality from ultimate..."
@@ -122,6 +164,8 @@ consensus: "Most responses cite Svatantrya as the resolution"
 dissent: "A minority argues this is a later interpolation"
 unresolved_confusion: "The term 'Maya' is used differently by different commentators"
 recommended_sources: ["Ksemaraja", "Tantraloka Chapter 6"]
+top_comment_score: 47                # highest score among comments
+controversial_thread: false           # True if any comment has controversiality=1
 ```
 
 ---
