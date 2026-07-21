@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Studio Dashboard</title>
+<style>
+:root{--bg:#0D1117;--surface:#161B22;--border:#30363D;--text:#C9D1D9;--dim:#8B949E;--accent:#58A6FF;--green:#3FB950;--gold:#D29922;--cyan:#00D4FF}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Inter,-apple-system,sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5;height:100vh;display:flex;flex-direction:column}
+.nav{display:flex;background:var(--surface);border-bottom:1px solid var(--border);padding:0;flex-shrink:0}
+.nav a{padding:12px 18px;color:var(--dim);text-decoration:none;border-bottom:2px solid transparent;font-size:13px;cursor:pointer}
+.nav a:hover,.nav a.active{color:var(--text);border-bottom-color:var(--accent)}
+.nav a.fc{color:var(--cyan);font-weight:600}
+.content{flex:1;display:flex;overflow:hidden}
+.page{display:none;flex:1;overflow-y:auto;padding:16px}
+.page.active{display:block}
+
+/* Stats */
+.stat-row{display:flex;gap:10px;margin-bottom:12px;flex-wrap:wrap}
+.stat-card{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:12px 16px;min-width:140px}
+.stat-card .lbl{font-size:11px;color:var(--dim)}
+.stat-card .val{font-size:20px;font-weight:600;color:#fff;margin-top:2px}
+.stat-card .sub{font-size:11px;color:var(--dim);margin-top:2px}
+
+/* Cards */
+.card{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:14px;margin-bottom:8px}
+.card h3{font-size:14px;margin-bottom:4px}
+.card .m{font-size:12px;color:var(--dim)}
+
+/* Grid */
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:900px){.grid-2{grid-template-columns:1fr}}
+
+/* Badges */
+.badge{display:inline-block;padding:2px 7px;border-radius:4px;font-size:11px;background:rgba(88,166,255,0.12);color:var(--accent)}
+.badge.green{background:rgba(63,185,80,0.12);color:var(--green)}
+.badge.yellow{background:rgba(210,153,34,0.12);color:var(--gold)}
+.badge.grey{background:rgba(139,148,158,0.12);color:var(--dim)}
+.badge.cyan{background:rgba(0,212,255,0.12);color:var(--cyan)}
+
+/* Buttons */
+button{background:var(--surface);border:1px solid var(--border);color:var(--text);padding:7px 14px;border-radius:5px;font-size:13px;cursor:pointer}
+button:hover{background:var(--border)}
+button.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+button.fc{background:#003545;color:var(--cyan);border-color:var(--cyan)}
+
+/* Pipeline */
+.pdot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:4px}
+.pdot.done{background:var(--green)}
+.pdot.wait{background:var(--dim)}
+
+/* Beat bar */
+.beat-list{margin-top:8px}
+.beat{display:flex;align-items:center;padding:4px 0;font-size:12px;border-bottom:1px solid rgba(48,54,61,0.5)}
+.beat .t{color:var(--dim);width:80px;flex-shrink:0}
+.beat .r{color:var(--accent);width:100px;flex-shrink:0;font-size:11px}
+.beat .n{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bar{height:4px;border-radius:3px;background:var(--border);margin:2px 0 6px}
+.bar .f{height:100%;border-radius:3px;background:var(--accent);width:0%}
+
+.flex{display:flex;gap:8px;align-items:center}
+.wrap{flex-wrap:wrap}
+.mt-8{margin-top:8px}
+.mb-8{margin-bottom:8px}
+.gap-4{gap:4px}
+.text-sm{font-size:12px}
+.text-dim{color:var(--dim)}
+.w-full{width:100%}
+
+/* Quick entry */
+.quick-bar{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:10px;margin-bottom:12px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.quick-bar input{background:var(--bg);border:1px solid var(--border);border-radius:4px;padding:6px 10px;color:var(--text);font-size:13px;flex:1;min-width:200px}
+.quick-bar .score{font-size:20px;font-weight:700;min-width:60px;text-align:center}
+.quick-bar .det{margin-left:auto}
+</style>
+</head>
+<body>
+
+<div class="nav">
+  <a class="fc active" onclick="showPage('fablecut')">⚡ Editor</a>
+  <a onclick="showPage('blueprints')">Blueprints</a>
+  <a onclick="showPage('channels')">Channels</a>
+  <a onclick="showPage('analytics')">Analytics</a>
+</div>
+
+<div class="content">
+
+<!-- FABLECUT CENTRIC -->
+<div id="page-fablecut" class="page active">
+  <div class="stat-row" id="fc-status"></div>
+
+  <div class="quick-bar">
+    <span style="font-weight:600;font-size:13px">🎬 Title Quick Score</span>
+    <input id="qs-input" placeholder="Enter a video title..." onkeyup="quickScore(event)">
+    <div class="score" id="qs-score">—</div>
+    <div class="det text-sm text-dim" id="qs-detail"></div>
+  </div>
+
+  <div class="grid-2">
+    <div>
+      <div class="flex mb-8 wrap">
+        <h2 style="font-size:16px;flex:1">Beat Explorer</h2>
+        <select id="bp-fc" style="background:var(--bg);border:1px solid var(--border);color:var(--text);padding:4px 8px;border-radius:4px;font-size:12px"></select>
+        <button class="fc" onclick="fcLoadBlueprint()" style="font-size:12px;padding:4px 10px">Load</button>
+        <button class="primary" onclick="fcGenerate()" style="font-size:12px;padding:4px 10px">Generate</button>
+      </div>
+      <div id="fc-beats" class="beat-list"></div>
+    </div>
+    <div>
+      <h2 style="font-size:16px;margin-bottom:8px">Timeline</h2>
+      <div id="fc-timeline" class="card">
+        <p class="text-dim">Load a blueprint to preview timeline...</p>
+      </div>
+      <div id="fc-project" class="card" style="margin-top:8px"></div>
+    </div>
+  </div>
+</div>
+
+<!-- BLUEPRINTS -->
+<div id="page-blueprints" class="page">
+  <h2 style="font-size:16px;margin-bottom:8px">All Blueprints</h2>
+  <div id="bp-list"></div>
+</div>
+
+<!-- CHANNELS -->
+<div id="page-channels" class="page">
+  <h2 style="font-size:16px;margin-bottom:8px">Channel Benchmarks</h2>
+  <div id="ch-list" class="grid-2"></div>
+</div>
+
+<!-- ANALYTICS -->
+<div id="page-analytics" class="page">
+  <div class="stat-row" id="an-stats"></div>
+  <h2 style="font-size:16px;margin-bottom:8px">Top Performers</h2>
+  <div class="grid-2" id="an-top"></div>
+</div>
+
+</div>
+
+<script>
+let _bps = [];
+
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('page-'+id).classList.add('active');
+  document.querySelectorAll('.nav a').forEach(a=>a.classList.remove('active'));
+  document.querySelector(`.nav a[onclick*="${id}"]`).classList.add('active');
+  if (id==='fablecut') fcInit();
+  if (id==='blueprints') bpLoad();
+  if (id==='channels') chLoad();
+  if (id==='analytics') anLoad();
+}
+
+async function api(p){try{const r=await fetch(p);return await r.json()}catch(e){return{error:e.message}}}
+
+// ── QUICK SCORE ──
+let _qsTimer=null;
+function quickScore(e){
+  clearTimeout(_qsTimer);
+  _qsTimer=setTimeout(async()=>{
+    const v=document.getElementById('qs-input').value.trim();
+    if(!v){document.getElementById('qs-score').textContent='—';return}
+    const d=await api('/api/predict?title='+encodeURIComponent(v));
+    document.getElementById('qs-score').textContent=d.pattern_score? (d.pattern_score*100).toFixed(0)+'%' : d.error||'?';
+    document.getElementById('qs-detail').textContent=d.pattern_score? `baseline ${(d.baseline_rate*100).toFixed(0)}% | AUC ${d.holdout_auc}` : '';
+  },400)
+}
+
+// ── FABLECUT ──
+async function fcInit(){
+  const s=await api('/api/fablecut/status');
+  document.getElementById('fc-status').innerHTML=
+    `<div class="stat-card"><div class="lbl">FableCut</div><div class="val" style="color:${s.status==='running'?'var(--green)':'var(--red)'}">${s.status}</div><div class="sub">port 7777</div></div>`+
+    `<div class="stat-card"><div class="lbl">Access</div><div class="val" style="font-size:14px">localhost:7777</div><div class="sub">SSH tunnel required</div></div>`;
+
+  const bps=await api('/api/blueprints');
+  _bps=bps.blueprints||[];
+  const sel=document.getElementById('bp-fc');
+  sel.innerHTML=_bps.map(b=>`<option value="${b.id}">${b.id}: ${b.title.slice(0,40)}</option>`).join('');
+  fcLoadBlueprint();
+
+  // Project status
+  const pj=await api('/api/fablecut/project');
+  if(pj.name){
+    document.getElementById('fc-project').innerHTML=
+      `<div class="flex"><span style="font-weight:600">${pj.name}</span>
+      <span class="badge">${(pj.media||[]).length} media</span>
+      <span class="badge green">${(pj.clips||[]).length} clips</span></div>`;
+  }
+}
+
+async function fcLoadBlueprint(){
+  const id=document.getElementById('bp-fc').value;
+  const bp=_bps.find(b=>b.id===id);
+  if(!bp)return;
+  const det=await api(`/api/blueprints/${id}`);
+  const el=document.getElementById('fc-beats');
+  if(!det.beats){el.innerHTML='<p class="text-dim">No beat data in this blueprint.</p>';return}
+  el.innerHTML=det.beats.map(b=>
+    `<div class="beat"><span class="t">${b.start}${b.end?'-'+b.end:''}</span><span class="r">${b.role}</span><span class="n">${b.title}</span></div>`
+  ).join('');
+  // Timeline bar
+  const beats=det.beats;
+  const total=beats.length;
+  document.getElementById('fc-timeline').innerHTML=
+    `<div class="bar"><div class="f" style="width:100%"></div></div>
+    <div class="flex gap-4 wrap">${beats.map((b,i)=>`<span class="badge" style="font-size:10px">${b.role}</span>`).join('')}</div>
+    <div class="text-sm text-dim mt-8">${total} beats · ${det.runtime} min · ${det.channel}</div>`;
+}
+
+async function fcGenerate(){
+  const id=document.getElementById('bp-fc').value;
+  const r=await fetch(`/api/generate/${id}`,{method:'POST'});
+  const d=await r.json();
+  fcInit();
+  alert('Generated: '+(d.output||d.error||'OK'));
+}
+
+// ── BLUEPRINTS ──
+async function bpLoad(){
+  const bps=await api('/api/blueprints');
+  const el=document.getElementById('bp-list');
+  el.innerHTML=(bps.blueprints||[]).map(b=>{
+    const p=b.pipeline||{};
+    return `<div class="card">
+      <div class="flex wrap gap-4"><h3>${b.id}: ${b.title}</h3><span class="badge cyan">${b.channel}</span></div>
+      <div class="m">${b.beats} beats · ${b.runtime} min</div>
+      <div class="flex gap-4 text-sm mt-8">
+        <span class="pdot ${p.beat_map?'done':'wait'}"></span>beat-map
+        <span class="pdot ${p.fablecut_project?'done':'wait'}"></span>FableCut
+        <span class="pdot ${p.media_dir?'done':'wait'}"></span>media
+      </div>
+    </div>`
+  }).join('');
+}
+
+// ── CHANNELS ──
+async function chLoad(){
+  const d=await api('/api/channels');
+  const el=document.getElementById('ch-list');
+  el.innerHTML=(d.channels||[]).map(c=>`
+    <div class="card"><h3>${c.name}</h3>
+    <div class="m">${(c.subs/1000).toFixed(1)}k subs · ${c.analyzed} videos</div>
+    <div class="flex gap-4 mt-8">
+      <span class="badge green">${(c.breakout_rate*100).toFixed(0)}% brk</span>
+      <span class="text-sm text-dim">${c.median_views.toLocaleString()} median</span>
+    </div></div>
+  `).join('');
+}
+
+// ── ANALYTICS ──
+async function anLoad(){
+  const s=await api('/api/status');
+  document.getElementById('an-stats').innerHTML=
+    `<div class="stat-card"><div class="lbl">Channels</div><div class="val">${s.channels_analyzed||0}</div></div>
+    <div class="stat-card"><div class="lbl">Blueprints</div><div class="val">${s.blueprints||0}</div></div>`;
+  const ch=await api('/api/channels');
+  const top=(ch.channels||[]).slice(0,6);
+  document.getElementById('an-top').innerHTML=top.map(c=>`
+    <div class="card"><h3>${c.name}</h3>
+    <div class="flex gap-4 mt-8">
+      <div class="stat-card" style="flex:1;padding:8px"><div class="lbl">Median</div><div class="val" style="font-size:16px">${c.median_views.toLocaleString()}</div></div>
+      <div class="stat-card" style="flex:1;padding:8px"><div class="lbl">Brk%</div><div class="val" style="font-size:16px">${(c.breakout_rate*100).toFixed(0)}%</div></div>
+    </div></div>
+  `).join('');
+}
+
+// Init
+fcInit();
+</script>
+</body>
+</html>
