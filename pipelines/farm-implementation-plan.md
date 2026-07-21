@@ -87,7 +87,64 @@ All uploads from last 12 months per channel (full population). If >100 in window
 
 ---
 
-## Data Sources
+## Falsifiable Assumptions (Three Layers)
+
+### Layer 1: Structural — Testable with YouNiverse this week
+
+| # | Assumption | Falsified If | Test | Priority |
+|---|-----------|-------------|------|----------|
+| 1 | Within-channel OLS residual predicts breakout better than cross-channel raw views | Residual has no predictive power for future performance; channel size dominates | Regress day-28 views on OLS residual vs raw views. Compare R^2. | Do first |
+| 2 | Adding format_class to OLS improves over age-only | Delta R^2 from adding format_class < 0.01 | Nested regression on YouNiverse | Do first |
+| 3 | Channel momentum must be stripped; >15% of top-quartile labels flip after correction | <15% of breakout labels change after removing calendar-time trend | Compare label assignments before/after; threshold set at 15% | Do first |
+
+### Layer 2: Data Source — Testable with API quota
+
+| # | Assumption | Falsified If | Test | Priority |
+|---|-----------|-------------|------|----------|
+| 4 | Weekly rolling gap score is stable enough (API noise < signal) | Spearman r < 0.3 between week-over-week gap scores for same queries | Collect 2 weeks of daily searches (672 calls, free quota), compute week-over-week rank correlation | Parallel with Layer 1 |
+| 5 | Wikipedia pageview velocity (rate of change, not raw level) correlates with YouTube gap scores | Spearman r < 0.2 between pageview z-score and gap score for 20 topics | Compute week-over-week pageview delta (free API), correlate with gap map scores | Parallel with Layer 1 |
+| 6 | The 54 IN-only channels from Stage 1 are real, not API artifacts | Jaccard similarity < 0.5 when re-running the same 30 queries | Re-run Stage 1 test; compare channel lists | Parallel with Layer 1 |
+
+### Layer 3: Causal — Only testable with own production. All three draw from the same n=10 sample and must be designed as one experiment.
+
+**Critical constraint:** Assumptions 7, 8, and 9 all depend on the same first ~10 videos. They are not three independent tests — they are one underpowered test wearing three hats. Poor packaging could make gap score look useless (reject 7) when the real cause is 9. Fix: design the first 10 videos as a single structured experiment, not three incidental hopes.
+
+**First 10 video experiment design:**
+
+- Pick 10 topics spanning high and low gap scores (tests Assumption 7)
+- Hold packaging quality consistently good across all 10 (removes confound on 7, gives baseline for 9)
+- Use fixed 8-beat format on all 10 (already decided; treat 8 as "where in the beat structure does retention drop," not "beat vs no-beat" — no contrast group exists)
+- Run YouTube native Test & Compare on 2-3 of the 10 to isolate Assumption 9
+
+| # | Assumption | Falsified If | Caveat |
+|---|-----------|-------------|--------|
+| 7 | High gap score + high replication predicts above-baseline performance on our channel | Top 5 gap topics all perform below channel median at 28 days | **Confounded by Assumption 9** — poor packaging could produce false rejection. Mitigation: hold packaging consistent across all 10. |
+| 8 | The 8-beat structure drives retention | Retention curves show uniform drop-off regardless of beat placement; no change at beat boundaries | No control group (videos without 8-beat structure exist only later). Test is "where in the beats does retention drop," not "does the structure work at all." |
+| 9 | Packaging (title+thumbnail) is a lever we can tune | Native A/B test shows no CTR difference across 3 variants for same video | **Likely underpowered** — brand-new channel may not get enough impressions for the test to resolve. A null result means "inconclusive, need more traffic," not "packaging doesn't matter." Do not read absence of evidence as evidence of absence. |
+| 10 | Historical corpus priors transfer to our channel | Our own first 10 videos systematically disagree with historical corpus direction | **n=10 is a coin flip against n=10,000.** Don't treat as binary agree/disagree. Bayesian framing: own small sample updates the historical prior, doesn't overturn it. Need n=30-50 of own videos before a disagreement is worth trusting over the corpus. |
+
+### Execution Order
+
+```
+WEEK 1: Layer 1 (YouNiverse — already in R2)
+  Validate breakout metric before writing pipeline code.
+  If Assumptions 1-3 fail, everything downstream needs rework.
+
+WEEK 1-2: Layer 2 (API quota — parallel, doesn't block)
+  Assumption 4 resolves daily-vs-weekly with data.
+  Assumption 5 validates Wikipedia as signal.
+  Assumption 6 checks whether Stage 1 data was real.
+
+WEEK 2-4: Build pipeline (after Layer 1 confirmed)
+  Research pipeline, Workers, D1 schema, farm template.
+
+WEEK 4-14: Layer 3 (own production — slowest, most expensive)
+  First 10 videos designed as one experiment.
+  Bayesian update on historical priors, not binary confirmation.
+  Native A/B tests on 2-3 videos (flagged as likely underpowered).
+```
+
+This order guarantees that the most expensive layer (own production) rests on validated foundations. If Layers 1 or 2 fail, we learn that before spending weeks on pipeline code or video production.---
 
 ### Primary: YouTube Data API v3
 
@@ -413,6 +470,8 @@ Every stage has binary gates. All must pass before advancing.
 
 | Stage | Gates | Key Checks |
 |-------|-------|------------|
+| Layer 1 | A01-A03 | OLS residual beats raw views (delta R^2 > 0), format_class adds signal, momentum strips >15% of labels |
+| Layer 2 | B01-B04 | Weekly gap Spearman > 0.3, Wikipedia z-score correlates, Stage 1 replicates at Jaccard > 0.5, API logged |
 | Stage 0 | V01-V05 | All queries returned, gap_score computed, API logged, schema valid |
 | Stage 1 | V06-V10 | Channels pass criteria, 20-40 count, metadata fetched |
 | Stage 2 | V11-V15 | Uploads fetched, OLS residual computed, momentum stripped, full sample |
@@ -429,6 +488,16 @@ F01: Every historical claim has a traceable primary or academic secondary source
 F02: Claims marked with certainty level (confirmed / consensus / traditional / disputed)
 F03: No core factual claim lacks a source
 F04: Sources verified against Crossref / Semantic Scholar / Wikipedia references
+```
+
+### First 10 Video Experiment Design Gates
+
+```
+E01: Topics span both high and low gap scores (tests Assumption 7 cleanly)
+E02: Packaging quality held consistent across all 10 (removes confound on 7)
+E03: Fixed 8-beat format on all 10 (Assumption 8: measure retention at beat boundaries)
+E04: Native A/B test run on 2-3 videos (Assumption 9: flagged as likely underpowered)
+E05: Bayesian framing, not binary (Assumption 10: n=10 cannot overturn n=10,000 corpus)
 ```
 
 ---
