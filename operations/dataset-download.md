@@ -22,7 +22,7 @@ Regional Audit is not publicly downloadable — requires emailing authors. Skip 
 
 ### Hetzner Volume Setup (Required — all 3 datasets)
 
-The server only has ~18 GB free. You need to add a Hetzner Cloud Volume.
+The server only has ~18 GB free. All datasets go on a separate volume.
 
 **Step 1: Create the volume in Hetzner Cloud Console**
 
@@ -33,33 +33,33 @@ The server only has ~18 GB free. You need to add a Hetzner Cloud Volume.
 5. Set:
    - **Name**: `datasets`
    - **Size**: 50 GB (minimum to fit all 3 datasets with room)
-   - **Filesystem**: no need to set (will format in terminal)
-   - **Attach to**: select your server `debz`
+   - **Filesystem**: ext4 (Hetzner will auto-format)
+   - **Attach to**: select your server (e.g. `debz`)
 6. Click **Create & Attach**
 
-**Step 2: Format and mount the volume**
+**Step 2: Note the mount point**
 
-SSH into the server and run:
+Hetzner auto-mounts volumes to `/mnt/HC_Volume_<volume-id>/`. Check:
 
 ```bash
-# Find the new disk (likely /dev/sdb)
-lsblk
+lsblk | grep -v loop | grep -v sr0
+# Look for the 50G device — it will be mounted already
 
-# Format as ext4 (one-time)
+df -h | grep HC_Volume
+# Shows the exact mount path, e.g. /mnt/HC_Volume_106423434 with ~47 GB available
+
+export DATA_DIR="/mnt/HC_Volume_106423434/raw"
+mkdir -p $DATA_DIR
+```
+
+If not auto-mounted, format and mount manually:
+```bash
 mkfs.ext4 /dev/sdb
-
-# Create mount point
 mkdir -p /mnt/data
-
-# Mount it
 mount /dev/sdb /mnt/data
-
-# Add to fstab for auto-mount on reboot
 echo '/dev/sdb /mnt/data ext4 defaults 0 0' >> /etc/fstab
-
-# Verify
-df -h /mnt/data
-# Expected: 50 GB available
+export DATA_DIR="/mnt/data/raw"
+mkdir -p $DATA_DIR
 ```
 
 ### Cloudflare R2 Setup
@@ -323,17 +323,20 @@ For Parquet files only (Data Catalog requires columnar formats). YouNiverse `.fe
 
 ## Cleaning Up
 
-After all files are verified in R2, the mounted volume can be unmounted and the Hetzner volume can be deleted from the console to save €2/month.
+After all files are verified in R2, the volume can be deleted from Hetzner console to save ~€2/month.
 
 ```bash
-# Unmount
+# Unmount (if manually mounted)
 umount /mnt/data
 
-# Remove from fstab (edit /etc/fstab and remove the line)
-nano /etc/fstab  # or vim
+# Remove from fstab (if you added it manually — Hetzner auto-mount handles itself)
+nano /etc/fstab  # remove the line you added
 
 # Then delete volume from Hetzner Cloud Console
 # Volumes → datasets → Delete
+
+# The raw directory on disk can be removed anytime (R2 is the permanent copy)
+rm -rf /mnt/HC_Volume_106423434/raw
 ```
 
 ---
