@@ -1,0 +1,432 @@
+{
+  "name": "Who was Abhinavagupta? A Day in the Life",
+  "width": 1280,
+  "height": 720,
+  "fps": 25,
+  "background": "#1a0a00",
+  "revision": 1,
+  "media": [
+    {
+      "id": "m_seg-01",
+      "name": "seg-01.mp3",
+      "kind": "audio",
+      "src": "/media/seg-01.mp3",
+      "duration": 80
+    },
+    {
+      "id": "m_art_01",
+      "name": "art_01.jpg",
+      "kind": "image",
+      "src": "/media/art_01.jpg",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "m_seg-02",
+      "name": "seg-02.mp3",
+      "kind": "audio",
+      "src": "/media/seg-02.mp3",
+      "duration": 80
+    },
+    {
+      "id": "m_art_02",
+      "name": "art_02.jpg",
+      "kind": "image",
+      "src": "/media/art_02.jpg",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "m_seg-03",
+      "name": "seg-03.mp3",
+      "kind": "audio",
+      "src": "/media/seg-03.mp3",
+      "duration": 80
+    },
+    {
+      "id": "m_art_03",
+      "name": "art_03.jpg",
+      "kind": "image",
+      "src": "/media/art_03.jpg",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "m_seg-04",
+      "name": "seg-04.mp3",
+      "kind": "audio",
+      "src": "/media/seg-04.mp3",
+      "duration": 80
+    },
+    {
+      "id": "m_art_04",
+      "name": "art_04.jpg",
+      "kind": "image",
+      "src": "/media/art_04.jpg",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "m_seg-05",
+      "name": "seg-05.mp3",
+      "kind": "audio",
+      "src": "/media/seg-05.mp3",
+      "duration": 80
+    },
+    {
+      "id": "m_art_05",
+      "name": "art_05.jpg",
+      "kind": "image",
+      "src": "/media/art_05.jpg",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "m_seg-06",
+      "name": "seg-06.mp3",
+      "kind": "audio",
+      "src": "/media/seg-06.mp3",
+      "duration": 80
+    },
+    {
+      "id": "m_art_06",
+      "name": "art_06.jpg",
+      "kind": "image",
+      "src": "/media/art_06.jpg",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "m_seg-07",
+      "name": "seg-07.mp3",
+      "kind": "audio",
+      "src": "/media/seg-07.mp3",
+      "duration": 80
+    },
+    {
+      "id": "m_art_07",
+      "name": "art_07.jpg",
+      "kind": "image",
+      "src": "/media/art_07.jpg",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "m_seg-08",
+      "name": "seg-08.mp3",
+      "kind": "audio",
+      "src": "/media/seg-08.mp3",
+      "duration": 80
+    },
+    {
+      "id": "m_art_08",
+      "name": "art_08.jpg",
+      "kind": "image",
+      "src": "/media/art_08.jpg",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "m_seg-09",
+      "name": "seg-09.mp3",
+      "kind": "audio",
+      "src": "/media/seg-09.mp3",
+      "duration": 80
+    },
+    {
+      "id": "m_art_09",
+      "name": "art_09.jpg",
+      "kind": "image",
+      "src": "/media/art_09.jpg",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "m_seg-10",
+      "name": "seg-10.mp3",
+      "kind": "audio",
+      "src": "/media/seg-10.mp3",
+      "duration": 80
+    },
+    {
+      "id": "m_art_10",
+      "name": "art_10.jpg",
+      "kind": "image",
+      "src": "/media/art_10.jpg",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "m_seg-11",
+      "name": "seg-11.mp3",
+      "kind": "audio",
+      "src": "/media/seg-11.mp3",
+      "duration": 80
+    },
+    {
+      "id": "m_art_11",
+      "name": "art_11.jpg",
+      "kind": "image",
+      "src": "/media/art_11.jpg",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "m_seg-12",
+      "name": "seg-12.mp3",
+      "kind": "audio",
+      "src": "/media/seg-12.mp3",
+      "duration": 80
+    },
+    {
+      "id": "m_art_12",
+      "name": "art_12.jpg",
+      "kind": "image",
+      "src": "/media/art_12.jpg",
+      "width": 1280,
+      "height": 720
+    }
+  ],
+  "clips": [
+    {
+      "id": "c_a1_1",
+      "mediaId": "m_seg-01",
+      "track": "A1",
+      "start": 0,
+      "duration": 80
+    },
+    {
+      "id": "c_v1_1",
+      "mediaId": "m_art_01",
+      "track": "V1",
+      "start": 0,
+      "duration": 80,
+      "effects": [
+        {
+          "type": "filter",
+          "name": "golden-imaginal"
+        }
+      ]
+    },
+    {
+      "id": "c_a1_2",
+      "mediaId": "m_seg-02",
+      "track": "A1",
+      "start": 80,
+      "duration": 80
+    },
+    {
+      "id": "c_v1_2",
+      "mediaId": "m_art_02",
+      "track": "V1",
+      "start": 80,
+      "duration": 80,
+      "effects": [
+        {
+          "type": "filter",
+          "name": "golden-imaginal"
+        }
+      ]
+    },
+    {
+      "id": "c_a1_3",
+      "mediaId": "m_seg-03",
+      "track": "A1",
+      "start": 160,
+      "duration": 80
+    },
+    {
+      "id": "c_v1_3",
+      "mediaId": "m_art_03",
+      "track": "V1",
+      "start": 160,
+      "duration": 80,
+      "effects": [
+        {
+          "type": "filter",
+          "name": "golden-imaginal"
+        }
+      ]
+    },
+    {
+      "id": "c_a1_4",
+      "mediaId": "m_seg-04",
+      "track": "A1",
+      "start": 240,
+      "duration": 80
+    },
+    {
+      "id": "c_v1_4",
+      "mediaId": "m_art_04",
+      "track": "V1",
+      "start": 240,
+      "duration": 80,
+      "effects": [
+        {
+          "type": "filter",
+          "name": "golden-imaginal"
+        }
+      ]
+    },
+    {
+      "id": "c_a1_5",
+      "mediaId": "m_seg-05",
+      "track": "A1",
+      "start": 320,
+      "duration": 80
+    },
+    {
+      "id": "c_v1_5",
+      "mediaId": "m_art_05",
+      "track": "V1",
+      "start": 320,
+      "duration": 80,
+      "effects": [
+        {
+          "type": "filter",
+          "name": "golden-imaginal"
+        }
+      ]
+    },
+    {
+      "id": "c_a1_6",
+      "mediaId": "m_seg-06",
+      "track": "A1",
+      "start": 400,
+      "duration": 80
+    },
+    {
+      "id": "c_v1_6",
+      "mediaId": "m_art_06",
+      "track": "V1",
+      "start": 400,
+      "duration": 80,
+      "effects": [
+        {
+          "type": "filter",
+          "name": "golden-imaginal"
+        }
+      ]
+    },
+    {
+      "id": "c_a1_7",
+      "mediaId": "m_seg-07",
+      "track": "A1",
+      "start": 480,
+      "duration": 80
+    },
+    {
+      "id": "c_v1_7",
+      "mediaId": "m_art_07",
+      "track": "V1",
+      "start": 480,
+      "duration": 80,
+      "effects": [
+        {
+          "type": "filter",
+          "name": "golden-imaginal"
+        }
+      ]
+    },
+    {
+      "id": "c_a1_8",
+      "mediaId": "m_seg-08",
+      "track": "A1",
+      "start": 560,
+      "duration": 80
+    },
+    {
+      "id": "c_v1_8",
+      "mediaId": "m_art_08",
+      "track": "V1",
+      "start": 560,
+      "duration": 80,
+      "effects": [
+        {
+          "type": "filter",
+          "name": "golden-imaginal"
+        }
+      ]
+    },
+    {
+      "id": "c_a1_9",
+      "mediaId": "m_seg-09",
+      "track": "A1",
+      "start": 640,
+      "duration": 80
+    },
+    {
+      "id": "c_v1_9",
+      "mediaId": "m_art_09",
+      "track": "V1",
+      "start": 640,
+      "duration": 80,
+      "effects": [
+        {
+          "type": "filter",
+          "name": "golden-imaginal"
+        }
+      ]
+    },
+    {
+      "id": "c_a1_10",
+      "mediaId": "m_seg-10",
+      "track": "A1",
+      "start": 720,
+      "duration": 80
+    },
+    {
+      "id": "c_v1_10",
+      "mediaId": "m_art_10",
+      "track": "V1",
+      "start": 720,
+      "duration": 80,
+      "effects": [
+        {
+          "type": "filter",
+          "name": "golden-imaginal"
+        }
+      ]
+    },
+    {
+      "id": "c_a1_11",
+      "mediaId": "m_seg-11",
+      "track": "A1",
+      "start": 800,
+      "duration": 80
+    },
+    {
+      "id": "c_v1_11",
+      "mediaId": "m_art_11",
+      "track": "V1",
+      "start": 800,
+      "duration": 80,
+      "effects": [
+        {
+          "type": "filter",
+          "name": "golden-imaginal"
+        }
+      ]
+    },
+    {
+      "id": "c_a1_12",
+      "mediaId": "m_seg-12",
+      "track": "A1",
+      "start": 880,
+      "duration": 80
+    },
+    {
+      "id": "c_v1_12",
+      "mediaId": "m_art_12",
+      "track": "V1",
+      "start": 880,
+      "duration": 80,
+      "effects": [
+        {
+          "type": "filter",
+          "name": "golden-imaginal"
+        }
+      ]
+    }
+  ]
+}
