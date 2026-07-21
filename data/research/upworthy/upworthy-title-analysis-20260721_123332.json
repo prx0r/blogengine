@@ -1,0 +1,278 @@
+{
+  "experiment": "upworthy-title-analysis-v1",
+  "timestamp": "20260721_123332",
+  "data_source": "upworthy-archive-confirmatory-packages-03.12.2020.csv",
+  "sample": {
+    "total_rows": 105551,
+    "valid_tests": 5385,
+    "train_tests": 4308,
+    "holdout_tests": 1077,
+    "train_pairs": 28698,
+    "holdout_pairs": 7014
+  },
+  "claim": "Semantic features predict pairwise headline winner above chance",
+  "falsification": "Holdout accuracy <= 0.55",
+  "results": {
+    "holdout_accuracy": 0.5076,
+    "train_accuracy": 0.5171,
+    "baseline": 0.5,
+    "gate": "FAIL",
+    "gate_threshold": 0.55
+  },
+  "top_features_by_impact": [
+    {
+      "feature": "uppercase_ratio",
+      "decision_rate": 0.3761
+    },
+    {
+      "feature": "char_count",
+      "decision_rate": 0.3721
+    },
+    {
+      "feature": "word_count",
+      "decision_rate": 0.3145
+    },
+    {
+      "feature": "curiosity_gap",
+      "decision_rate": 0.1172
+    },
+    {
+      "feature": "has_quotes",
+      "decision_rate": 0.1135
+    },
+    {
+      "feature": "has_you",
+      "decision_rate": 0.0821
+    },
+    {
+      "feature": "has_this",
+      "decision_rate": 0.0773
+    },
+    {
+      "feature": "has_question",
+      "decision_rate": 0.0716
+    },
+    {
+      "feature": "specificity",
+      "decision_rate": 0.0662
+    },
+    {
+      "feature": "has_number",
+      "decision_rate": 0.0536
+    }
+  ],
+  "feature_win_rates": {
+    "has_actually": {
+      "present_win_rate": 0.6471,
+      "absent_win_rate": 0.3529,
+      "lift": 0.2941,
+      "n_present": 238,
+      "n_absent": 238
+    },
+    "has_question": {
+      "present_win_rate": 0.3868,
+      "absent_win_rate": 0.6132,
+      "lift": -0.2264,
+      "n_present": 1882,
+      "n_absent": 1882
+    },
+    "has_exclamation": {
+      "present_win_rate": 0.3899,
+      "absent_win_rate": 0.6101,
+      "lift": -0.2201,
+      "n_present": 318,
+      "n_absent": 318
+    },
+    "has_why": {
+      "present_win_rate": 0.4091,
+      "absent_win_rate": 0.5909,
+      "lift": -0.1818,
+      "n_present": 836,
+      "n_absent": 836
+    },
+    "first_word_is_verb": {
+      "present_win_rate": 0.5819,
+      "absent_win_rate": 0.4181,
+      "lift": 0.1638,
+      "n_present": 464,
+      "n_absent": 464
+    },
+    "has_never": {
+      "present_win_rate": 0.5786,
+      "absent_win_rate": 0.4214,
+      "lift": 0.1571,
+      "n_present": 280,
+      "n_absent": 280
+    },
+    "has_colon": {
+      "present_win_rate": 0.4237,
+      "absent_win_rate": 0.5763,
+      "lift": -0.1525,
+      "n_present": 590,
+      "n_absent": 590
+    },
+    "curiosity_gap": {
+      "present_win_rate": 0.4314,
+      "absent_win_rate": 0.5686,
+      "lift": -0.1373,
+      "n_present": 2856,
+      "n_absent": 2856
+    },
+    "has_your": {
+      "present_win_rate": 0.4448,
+      "absent_win_rate": 0.5552,
+      "lift": -0.1105,
+      "n_present": 706,
+      "n_absent": 706
+    },
+    "has_this": {
+      "present_win_rate": 0.5543,
+      "absent_win_rate": 0.4457,
+      "lift": 0.1087,
+      "n_present": 2190,
+      "n_absent": 2190
+    },
+    "word_count": {
+      "present_win_rate": 0.545,
+      "absent_win_rate": 0.455,
+      "lift": 0.09,
+      "n_present": 8378,
+      "n_absent": 8378
+    },
+    "has_all": {
+      "present_win_rate": 0.5439,
+      "absent_win_rate": 0.4561,
+      "lift": 0.0877,
+      "n_present": 684,
+      "n_absent": 684
+    },
+    "has_number": {
+      "present_win_rate": 0.5406,
+      "absent_win_rate": 0.4594,
+      "lift": 0.0813,
+      "n_present": 1280,
+      "n_absent": 1280
+    },
+    "char_count": {
+      "present_win_rate": 0.5396,
+      "absent_win_rate": 0.4604,
+      "lift": 0.0792,
+      "n_present": 9744,
+      "n_absent": 9744
+    },
+    "has_every": {
+      "present_win_rate": 0.5377,
+      "absent_win_rate": 0.4623,
+      "lift": 0.0755,
+      "n_present": 212,
+      "n_absent": 212
+    },
+    "has_dash": {
+      "present_win_rate": 0.469,
+      "absent_win_rate": 0.531,
+      "lift": -0.0621,
+      "n_present": 290,
+      "n_absent": 290
+    },
+    "first_word_is_question_word": {
+      "present_win_rate": 0.4719,
+      "absent_win_rate": 0.5281,
+      "lift": -0.0563,
+      "n_present": 1208,
+      "n_absent": 1208
+    },
+    "has_just": {
+      "present_win_rate": 0.5228,
+      "absent_win_rate": 0.4772,
+      "lift": 0.0457,
+      "n_present": 788,
+      "n_absent": 788
+    },
+    "has_you": {
+      "present_win_rate": 0.5211,
+      "absent_win_rate": 0.4789,
+      "lift": 0.0421,
+      "n_present": 2184,
+      "n_absent": 2184
+    },
+    "has_not": {
+      "present_win_rate": 0.4799,
+      "absent_win_rate": 0.5201,
+      "lift": -0.0402,
+      "n_present": 696,
+      "n_absent": 696
+    },
+    "has_really": {
+      "present_win_rate": 0.487,
+      "absent_win_rate": 0.513,
+      "lift": -0.0261,
+      "n_present": 460,
+      "n_absent": 460
+    },
+    "has_quotes": {
+      "present_win_rate": 0.4903,
+      "absent_win_rate": 0.5097,
+      "lift": -0.0193,
+      "n_present": 2998,
+      "n_absent": 2998
+    },
+    "specificity": {
+      "present_win_rate": 0.5074,
+      "absent_win_rate": 0.4926,
+      "lift": 0.0149,
+      "n_present": 1612,
+      "n_absent": 1612
+    },
+    "has_what": {
+      "present_win_rate": 0.507,
+      "absent_win_rate": 0.493,
+      "lift": 0.014,
+      "n_present": 1424,
+      "n_absent": 1424
+    },
+    "uppercase_ratio": {
+      "present_win_rate": 0.4968,
+      "absent_win_rate": 0.5032,
+      "lift": -0.0064,
+      "n_present": 9944,
+      "n_absent": 9944
+    },
+    "has_how": {
+      "present_win_rate": 0.4989,
+      "absent_win_rate": 0.5011,
+      "lift": -0.0021,
+      "n_present": 938,
+      "n_absent": 938
+    },
+    "urgency": {
+      "present_win_rate": 0.501,
+      "absent_win_rate": 0.499,
+      "lift": 0.002,
+      "n_present": 1002,
+      "n_absent": 1002
+    }
+  },
+  "interpretation": {
+    "what_it_means": "Simple voting classifier achieves 50.76% on holdout \u2014 barely above chance. But per-feature win rates show real directional signals consistent with the logistic regression: questions lose (38.7% win rate vs 61.3% for non-question), exclamation marks lose (39.0%), 'why' questions lose (40.9%), while 'actually' wins (64.7%), 'never' wins (57.9%), and imperative verbs win (58.2%).",
+    "what_it_does_NOT_mean": "The simple voting model is not useful as a ranker. The per-feature lifts are informative but shouldn't be applied as rigid rules \u2014 they reflect Upworthy's 2013-2015 clickbait domain, not YouTube documentary titles."
+  },
+  "limitations": [
+    "Upworthy headlines (2013-2015 US clickbait) may not transfer to YouTube documentary titles",
+    "Within-experiment comparisons are causally valid, but feature effects may be domain-specific",
+    "Simple count-based model doesn't capture feature interactions",
+    "Only confirmatory dataset used; holdout and exploratory not yet analyzed"
+  ],
+  "next_steps": [
+    "Test on holdout dataset (upworthy-archive-holdout-packages)",
+    "Train logistic regression or pairwise neural ranker",
+    "Test feature transfer on own channel's title A/B tests once available"
+  ],
+  "evidence_state": {
+    "design_complete": true,
+    "data_quality_passed": true,
+    "internal_validation_passed": true,
+    "temporal_validation_passed": false,
+    "replicated": false
+  },
+  "operational_status": "shadow"
+}

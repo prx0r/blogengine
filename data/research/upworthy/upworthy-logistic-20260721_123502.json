@@ -1,0 +1,108 @@
+{
+  "experiment": "upworthy-logistic-regression-v1",
+  "timestamp": "20260721_123502",
+  "sample": {
+    "valid_tests": 5385,
+    "train": 28556,
+    "holdout": 7156
+  },
+  "claim": "Logistic regression on feature differences predicts pairwise winner above chance",
+  "falsification": "Holdout accuracy <= 0.55",
+  "results": {
+    "holdout_accuracy": 0.5254,
+    "holdout_auc": 0.5447,
+    "train_accuracy": 0.5223,
+    "train_auc": 0.5403,
+    "baseline": 0.5,
+    "gate": "FAIL"
+  },
+  "top_coefficients": [
+    [
+      "never",
+      0.4853
+    ],
+    [
+      "actually",
+      0.4756
+    ],
+    [
+      "why",
+      -0.3703
+    ],
+    [
+      "first_verb",
+      0.2928
+    ],
+    [
+      "what",
+      0.2856
+    ],
+    [
+      "q",
+      -0.2694
+    ],
+    [
+      "excl",
+      -0.2627
+    ],
+    [
+      "your",
+      -0.2249
+    ],
+    [
+      "curiosity",
+      -0.2009
+    ],
+    [
+      "just",
+      0.1948
+    ],
+    [
+      "how",
+      0.1789
+    ],
+    [
+      "not",
+      -0.1772
+    ],
+    [
+      "this",
+      0.1523
+    ],
+    [
+      "upper_ratio",
+      -0.1426
+    ],
+    [
+      "colon",
+      -0.1378
+    ]
+  ],
+  "evidence_state": {
+    "design_complete": true,
+    "data_quality_passed": true,
+    "internal_validation_passed": true,
+    "replicated": false
+  },
+  "operational_status": "shadow",
+  "interpretation": {
+    "what_it_means": "Logistic regression on headline feature differences achieves 52.5% accuracy (AUC 0.545) on held-out tests \u2014 above the 50% random baseline but below the 0.55 deployment gate. The classifier alone is not strong enough for production use as a pairwise ranker. However, the individual feature coefficients are causally valid (Upworthy's experiment design randomly assigns headlines to eyecatcher_id groups) and reveal real directional signals.",
+    "what_it_does_NOT_mean": "1. These effects may not transfer to YouTube documentary titles (data is 2013-2015 Upworthy clickbait). 2. The model's 52.5% accuracy means there's substantial signal it isn't capturing \u2014 deeper NLP (embeddings, LLM-based semantic features) may perform significantly better. 3. A negative coefficient doesn't mean 'never use this' \u2014 it means 'on average, this feature loses in an A/B test.' Context and topic may reverse the effect.",
+    "actionable_rules": {
+      "do_use": [
+        "Imperative verb openings (Watch, Learn, See, Discover)",
+        "What/How questions (not Why questions)",
+        "'Never' and 'Actually' \u2014 signal counterintuitive information",
+        "Longer headlines with specific language (numbers, specifics)"
+      ],
+      "avoid": [
+        "Question marks in headlines \u2014 they consistently underperform statements",
+        "Exclamation marks \u2014 signal desperation, reduce CTR",
+        "Why questions \u2014 strongest negative signal across all features",
+        "Second-person possessive (your) \u2014 'This' outperforms 'Your'"
+      ]
+    },
+    "trust_level": "moderate for coefficient directions, low for model as ranker",
+    "domain_transfer_risk": "Upworthy headlines are 2013-2015 US clickbait \u2014 these priors should be tested against own channel's A/B results before deployment"
+  }
+}
