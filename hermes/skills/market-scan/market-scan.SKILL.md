@@ -21,22 +21,38 @@ YouTube niche analysis engine. Finds channels and videos in a given niche, score
 
 ## How It Works
 
-1. **Discovery phase** — search seed queries OR use provided channel IDs/handles. This is the expensive step (100 quota per search). Best to reuse known channels after the first run.
-2. **Harvest phase** — pull up to 1 year of uploads via playlistItems endpoint (1 quota/call, cheap). This gives us all video IDs for each channel.
+1. **Discovery phase** — search seed queries OR use provided channel IDs/handles. Search is expensive (bottleneck). Channels as seeds is cheap.
+2. **Harvest phase** — pull up to 50 recent uploads via playlistItems endpoint (1 quota/call, cheap). This gives us all video IDs for each channel.
 3. **Stats phase** — batch video stats (views, likes, duration, publish date) at 50 per call (1 quota/call).
 4. **Analysis phase** — compute outlier scores (views ÷ channel median), title features (length, question marks, colons, all-caps), and fetch transcripts for top outliers.
 5. **Output** — structured data identifying what's overperforming and why.
 
-## Quota Budget
+## Quota Budget (YouTube Data API v3)
 
-| Operation | Cost | Budget for 10,000/day |
-|-----------|------|----------------------|
-| search.list | 100/call | ~90 searches |
-| channels.list | 1/call (batch 50) | 10,000 batches |
-| videos.list | 1/call (batch 50) | 10,000 batches |
-| playlistItems.list | 1/call | 10,000 calls |
+From [Google's docs](https://developers.google.com/youtube/v3/determine_quota_cost):
 
-**Strategy:** Use searches sparingly. Harvest channel IDs from the first run, then hardcode them for future runs.
+| Bucket | Limit | Operations |
+|--------|-------|------------|
+| **search.list** | **100 calls/day** (separate bucket) | Each search call costs 1 from this bucket |
+| **General pool** | **10,000 units/day** | All other endpoints share this |
+| **videos.insert** | **100 calls/day** (separate bucket) | Not used by scanner |
+
+### Per-operation costs (from general pool):
+
+| Operation | Cost | Batches |
+|-----------|------|---------|
+| `channels.list` | 1 unit | 50 IDs per call |
+| `videos.list` | 1 unit | 50 IDs per call |
+| `playlistItems.list` | 1 unit | 50 items per call |
+
+### Strategy: Channels as Seeds (Cheap)
+
+The bottleneck is **search.list** — only 100 calls/day. Strategy:
+
+1. **First run** (or adding new niches): Use search queries. Each query = 1 search call.
+2. **Subsequent runs**: Populate `CHANNEL_IDS` in `scripts/market-landscape.ts`. This bypasses search entirely — just 2 units per channel (1 `channels.list` + 1 `playlistItems.list`).
+
+Known channels cost ~2 units each to harvest. With 10,000/day general pool, you can scan 5,000 channels daily without touching search quota.
 
 ## File Locations
 
@@ -44,6 +60,9 @@ YouTube niche analysis engine. Finds channels and videos in a given niche, score
 Script:        /root/projects/blog/scripts/market-landscape.ts
 Client library: /root/projects/blog/src/lib/video-objects/youtube-data.ts
 Env config:    /root/projects/blog/.env.local  (YOUTUBE_API_KEY)
+Raw data:      /root/projects/blog/content/video-objects/market-landscape.json
+Report:        /root/projects/blog/content/video-objects/market-landscape-report.md
+Market data:   /root/projects/blog/data/market/
 ```
 
 ## Existing Market Data
@@ -67,22 +86,19 @@ The most recent scan (19 Jul 2026) found:
 
 **Spanish market signal:** "Los Significados Sagrados en la Odisea" hit 106,986 views/day from a Spanish channel — highest velocity in the scan.
 
-Full report at `content/video-objects/market-landscape-report.md`.
-Raw data at `content/video-objects/market-landscape.json`.
-
 ## Usage
 
-### Quick scan with known channels (cheap — no search quota):
+### Quick scan (default 12 themes):
 
 ```
 npm run video:landscape
 ```
 
-This runs the standard 12-theme scan defined in `scripts/market-landscape.ts`. It searches 4 queries per theme (48 total searches = 4800 quota). For repeat runs, add channel IDs to the `CHANNEL_IDS` array to skip searches entirely.
+Runs the standard 12-theme scan defined in `scripts/market-landscape.ts`. 
+- With `CHANNEL_IDS` populated: ~0 search calls, ~2 units per channel
+- Without `CHANNEL_IDS`: 48 search calls (4 per theme), ~1,800 quota
 
 ### Custom region scan:
-
-Uncomment region codes in `scripts/market-by-region.ts` and run:
 
 ```
 npx tsx scripts/market-by-region.ts
@@ -92,7 +108,25 @@ Supported regions: ES, MX, AR, CO, CL, IN, US.
 
 ### Adding new channels:
 
-Find a channel's ID via their YouTube page URL (the `UC...` part) and add it to `CHANNEL_IDS`. This skips search entirely and goes straight to harvest.
+1. Get the channel ID from YouTube (the `UC...` part in the About page)
+2. Add it to `CHANNEL_IDS` array in `scripts/market-landscape.ts`
+3. Next scan includes their recent 50 uploads in the breakout analysis
+4. Cost: 2 units per channel (negligible)
+
+### Targeting Indian creators making English content:
+
+Many channels discovered in Tier 1 (Tantra, Buddhist Philosophy) are Indian-language dominant. To find Indian creators making similar content IN English:
+
+1. Search queries already use `relevanceLanguage: "en"` + `regionCode: "US"`
+2. For focused analysis, add specific Indian English-language channels to `CHANNEL_IDS`
+3. Run `market-by-region.ts` with `regionCode: "IN"` to see what's trending in India
+
+## Quota Tracking
+
+| Date | Searches Used | General Used | Notes |
+|------|--------------|--------------|-------|
+| 2026-07-19 | 48 | ~1,800 | First full 12-theme scan |
+| 2026-07-21 | 0 | ~2 | Added @Adhyatmiksutra-f9w as known channel |
 
 ## Prompt Template
 
