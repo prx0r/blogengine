@@ -13,20 +13,31 @@ for f in sorted(DATA_DIR.glob("analysis_*.json")):
     with open(f) as fh:
         ch = json.load(fh)
     for v in ch["videos"]:
+        v["_channel"] = ch["channel"]
         all_videos.append(v)
 
 overall_brk = sum(1 for v in all_videos if v.get("is_breakout")) / len(all_videos)
 overall_views = np.median([v["views"] for v in all_videos])
 
 def scan(keywords, label, niche_group):
-    hits = [(v["title"], v["views"], v["is_breakout"], v.get("duration_min", 0), v.get("video_id", ""))
+    hits = [(v["title"], v["views"], v["is_breakout"], v.get("duration_min", 0), v.get("video_id", ""), v.get("_channel", v.get("channel", "")))
             for v in all_videos if any(kw.lower() in v.get("title","").lower() for kw in keywords)]
     if len(hits) < 2:
         return None
     brk = sum(1 for h in hits if h[2])
     rate = brk / len(hits)
     views_arr = [h[1] for h in hits]
-    return {
+
+    # Channel-control: exclude dominant channel
+    ch_counts = defaultdict(int)
+    for h in hits:
+        ch_counts[h[5]] += 1
+    dominant_ch = max(ch_counts, key=ch_counts.get)
+    dominant_pct = ch_counts[dominant_ch] / len(hits)
+    hits_rest = [h for h in hits if h[5] != dominant_ch]
+    rate_rest = sum(1 for h in hits_rest if h[2]) / len(hits_rest) if len(hits_rest) >= 2 else None
+
+    result = {
         "niche": label,
         "group": niche_group,
         "keywords": keywords[:5],
@@ -39,6 +50,16 @@ def scan(keywords, label, niche_group):
         "max_views": max(h[1] for h in hits),
         "top_titles": [{"title": h[0][:70], "views": h[1], "breakout": h[2]} for h in sorted(hits, key=lambda x: -x[1])[:3]],
     }
+
+    # Add channel-control diagnostic if one channel dominates
+    if dominant_pct > 0.3:
+        result["channel_skew_warning"] = f"{dominant_pct:.0%} from {dominant_ch}"
+        if rate_rest is not None:
+            result["breakout_rate_excl_dominant"] = round(rate_rest, 3)
+            result["skew_impact"] = round(rate - rate_rest, 3)
+            result["skewed"] = abs(rate - rate_rest) > 0.08
+
+    return result
 
 results = []
 niches = [

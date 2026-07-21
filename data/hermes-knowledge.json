@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "generated": "2026-07-21",
+  "purpose": "Machine-readable knowledge base for Hermes agent to query when making content decisions.",
+  "query_hints": "Hermes can read this file to understand what data is available. Each section has a 'query' field explaining how to use it.",
+
+  "channel_analysis": {
+    "description": "Per-channel breakdown of 149 channels with full video metadata.",
+    "location": "data/research/layer2/analysis_{channel_name}.json",
+    "format": {
+      "per_file": ["channel", "subs", "median_views", "breakout_rate", "output_per_month"],
+      "per_video": ["video_id", "title", "views", "duration_min", "is_breakout", "like_ratio", "published"]
+    },
+    "total_channels": 149,
+    "total_videos": 19290,
+    "query": "python3 -c \"import json; d=json.load(open('data/research/layer2/analysis_{channel}.json')); print(d['median_views'])\""
+  },
+
+  "title_patterns": {
+    "description": "Breakout-rate deltas for title features, from XGBoost model on 15,735 videos.",
+    "model_auc": 0.747,
+    "features": {
+      "has_number": {"importance": 0.169, "direction": "negative", "note": "Most predictive feature. Titles with numbers underperform by ~9%."},
+      "duration_min": {"importance": 0.135, "sweet_spot": "15-20 minutes"},
+      "channel_subs": {"importance": 0.134, "note": "Larger channels have higher breakout probability"},
+      "starts_what": {"importance": 0.118, "direction": "positive", "note": "What is X? format works across channel sizes"},
+      "has_colon": {"importance": 0.086, "direction": "neutral"},
+      "starts_the": {"importance": 0.086, "direction": "positive", "note": "'The [X] Of [Y]' formula"},
+      "starts_how": {"importance": 0.073, "direction": "positive"},
+      "starts_why": {"importance": 0.071, "direction": "positive", "note": "'Why' starts outperform 'What' and 'How'"},
+      "word_count": {"importance": 0.067, "direction": "negative", "note": "Keep titles under 7 words"},
+      "has_question": {"importance": 0.061, "direction": "channel_dependent", "note": "Works for 100k+ subs, hurts smaller channels"}
+    },
+    "query": "python3 scripts/engines/predict_views.py \"Your Title Here\""
+  },
+
+  "framing_words": {
+    "description": "Emotional framing words ranked by breakout rate lift.",
+    "data": [
+      {"word": "bizarre", "lift": 2.6, "count": 11, "note": "Highest lift, rare. Use sparingly."},
+      {"word": "forgotten", "lift": 2.0, "count": 41, "note": "Strong for biography framing."},
+      {"word": "forbidden", "lift": 1.9, "count": 34, "note": "Works for taboo/esoteric topics."},
+      {"word": "dark", "lift": 1.5, "count": 79, "note": "Broad appeal, consistent."},
+      {"word": "mysterious", "lift": 1.4, "count": 41, "note": "Curiosity gap."},
+      {"word": "secret", "lift": 1.4, "count": 174, "note": "Most used, still effective."},
+      {"word": "hidden", "lift": 0.9, "count": 133, "note": "Underperforms 'secret'."},
+      {"word": "power", "lift": 0.9, "count": 125, "note": "Overused, weak."},
+      {"word": "wisdom", "lift": 0.8, "count": 128, "note": "Vague, avoid."}
+    ],
+    "query": "grep framing_words data/research/layer2/findings-summary.md"
+  },
+
+  "phrases": {
+    "description": "Phrase comparisons for title crafting.",
+    "data": [
+      {"phrase": "\"Who was [Figure]?\"", "lift": 1.9, "count": 23, "note": "Best biography format."},
+      {"phrase": "\"The Ancient [X] Of [Y]\"", "lift": 1.8, "count": 45, "note": "Better than 'Secret'."},
+      {"phrase": "\"The Life of [Figure]\"", "lift": 1.6, "count": 32, "note": "Solid biography format."},
+      {"phrase": "\"The Bizarre Life of [Figure]\"", "lift": 2.5, "count": 11, "note": "Best biography variant."},
+      {"phrase": "\"History of [Topic]\"", "lift": 1.5, "count": 193, "note": "Reliable broad format."},
+      {"phrase": "\"[Topic]: The [X] Never Told\"", "lift": 2.0, "count": 8, "note": "Curiosity gap, small sample."},
+      {"phrase": "\"What is [Topic]?\"", "lift": 1.1, "count": 436, "note": "Weakest question format, but safe."},
+      {"phrase": "\"[Number] [Things]\"", "lift": 0.6, "count": 28, "note": "Listicles underperform here."}
+    ]
+  },
+
+  "topics": {
+    "description": "Breakout rates by topic category, with channel-control applied.",
+    "highest_lift": ["Biography (1.5x)", "Neoplatonism (1.3x)", "Kashmir Shaivism (1.2x)", "Death/Afterlife (1.4x)", "Nietzsche (1.5x)"],
+    "tantra_keywords_channel_controlled": [
+      {"keyword": "sanskrit", "raw_rate": 0.68, "controlled_rate": 0.17, "skewed": true, "inflated_by": "TheSanskritChannel"},
+      {"keyword": "kashmir", "raw_rate": 0.34, "controlled_rate": 0.17, "skewed": true, "inflated_by": "LakshmanjooAcademy"},
+      {"keyword": "kundalini", "raw_rate": 0.55, "controlled_rate": 0.62, "skewed": false, "note": "Genuine, robust signal"},
+      {"keyword": "devi", "raw_rate": 0.40, "controlled_rate": 0.36, "skewed": false},
+      {"keyword": "mantra", "raw_rate": 0.37, "controlled_rate": 0.37, "skewed": false},
+      {"keyword": "tantra", "raw_rate": 0.32, "controlled_rate": 0.37, "skewed": false},
+      {"keyword": "shiva", "raw_rate": 0.30, "controlled_rate": 0.35, "skewed": false},
+      {"keyword": "bhairava", "raw_rate": 0.19, "controlled_rate": 0.20, "skewed": false, "note": "Genuinely weak"}
+    ],
+    "niche_file": "data/research/layer2/niche-breakout-rates.json",
+    "query": "python3 scripts/engines/topic_taxonomy.py"
+  },
+
+  "niche_breakout_rates": {
+    "description": "80+ sub-niches across 8 categories, with channel-control skew warnings.",
+    "location": "data/research/layer2/niche-breakout-rates.json",
+    "best_performers": [
+      {"niche": "Key of Solomon", "breakout": 0.86, "group": "grimoires", "count": 7},
+      {"niche": "Celestial Hierarchy", "breakout": 0.67, "group": "theurgy", "count": 6},
+      {"niche": "Hermetic Order of Golden Dawn", "breakout": 0.67, "group": "other_esoteric", "count": 9},
+      {"niche": "Lesser Key of Solomon", "breakout": 0.60, "group": "grimoires", "count": 10},
+      {"niche": "Demiurge / World Soul", "breakout": 0.54, "group": "neoplatonism", "count": 13},
+      {"niche": "Sigils / Seals", "breakout": 0.48, "group": "spells", "count": 23},
+      {"niche": "Angels / Angelic", "breakout": 0.46, "group": "theurgy", "count": 59},
+      {"niche": "Sufism / Islamic Mysticism", "breakout": 0.44, "group": "mysticism", "count": 39},
+      {"niche": "Freemasonry", "breakout": 0.40, "group": "other_esoteric", "count": 48},
+      {"niche": "Theurgy (general)", "breakout": 0.38, "group": "theurgy", "count": 26}
+    ]
+  },
+
+  "content_rules": {
+    "description": "Production rules derived from all analyses.",
+    "rules": [
+      {"rule": "No numbers in titles", "evidence": "XGBoost #1 feature (0.169), direction negative"},
+      {"rule": "15-20 minute duration", "evidence": "Consistent sweet spot across all channel sizes"},
+      {"rule": "Biography format first", "evidence": "1.5x lift across 317 videos, proven format"},
+      {"rule": "Lead with figure name or specific text", "evidence": "Specific texts/figures outperform generic topics 3:1"},
+      {"rule": "Use 'bizarre', 'forgotten', or 'forbidden' framing", "evidence": "2.0-2.6x lift for emotional framing"},
+      {"rule": "Avoid: meditation, chakras, awakening", "evidence": "Saturated, 0.4-0.8x lift"},
+      {"rule": "3-4 videos/month", "evidence": "Higher frequency doesn't correlate with higher views"},
+      {"rule": "Questions work after 100k subs, not before", "evidence": "Small channels: -6.2% with questions. Mega: +5.9%"}
+    ]
+  },
+
+  "channel_blueprint": {
+    "description": "Per-channel brand profile for content production.",
+    "location": "operations/channel-profiles.md",
+    "channels": {
+      "Tantra Files": {
+        "tagline": "The forgotten wisdom of Kashmir Shaivism",
+        "palette": "saffron/gold",
+        "duration": "15-20 min",
+        "output": "3-4/month",
+        "first_video": "Who was Abhinavagupta? The Forgotten Genius of Kashmir Shaivism",
+        "proven_topics": ["biography (1.5x)", "Kashmir Shaivism (1.2x)", "kundalini (62%)", "devi (36%)", "mantra (37%)", "shiva (35%)"]
+      },
+      "Ochema": {
+        "tagline": "The science and practice of occult technology",
+        "palette": "dark/cyan",
+        "first_video": "The Key of Solomon: A Scientific Analysis",
+        "proven_topics": ["Key of Solomon (86%)", "Angels (46%)", "Sigils (48%)", "Chaos Magic (62%)", "Theurgy (38%)"]
+      },
+      "Contemplative": {
+        "tagline": "Exploring the imaginal realm",
+        "palette": "crimson/cream",
+        "proven_topics": ["Angels (46%)", "Sufism (44%)", "Mystic biographies"],
+        "unproven": "Corbin, Steiner — no data, first-mover risk"
+      }
+    }
+  },
+
+  "model_endpoints": {
+    "description": "ML models available for Hermes to call.",
+    "title_pattern_scorer": {
+      "location": "scripts/engines/predict_views.py",
+      "type": "XGBoost + CLIP",
+      "auc": 0.747,
+      "usage": "python3 scripts/engines/predict_views.py \"Your Title\"",
+      "note": "Returns in-sample pattern score. Not validated on held-out channels."
+    },
+    "headline_engine_v2": {
+      "location": "scripts/engines/headline_score.py",
+      "usage": "python3 scripts/engines/headline_score.py \"Your Title\"",
+      "note": "Recalibrated with YouTube coefficients. +0.235 correlation."
+    },
+    "topic_taxonomy": {
+      "location": "scripts/engines/topic_taxonomy.py",
+      "usage": "python3 scripts/engines/topic_taxonomy.py",
+      "note": "Classifies titles into 22+ categories."
+    },
+    "niche_deep_dive": {
+      "location": "scripts/engines/niche_deep_dive.py",
+      "usage": "python3 scripts/engines/niche_deep_dive.py",
+      "note": "80+ sub-niches with channel-control skew detection."
+    }
+  }
+}
