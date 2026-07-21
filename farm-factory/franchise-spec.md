@@ -84,7 +84,8 @@ VPS
 │   ├── Container: farm-tantra
 │   │   ├── --env FARM_ID=tantra
 │   │   ├── --env YOUTUBE_API_KEY=...
-│   │   ├── --env R2_BUCKET=farm-tantra-assets
+│   │   ├── --env R2_GLOBAL_TOKEN=ro-token  (read-only on "content-genome" bucket)
+│   │   ├── --env R2_FARM_TOKEN=rw-token    (read+write on "farm-tantra-assets" bucket ONLY)
 │   │   ├── --volume /data/farms/tantra:/farm
 │   │   ├── --memory 1g --cpus 0.5
 │   │   └── hermes-base
@@ -286,6 +287,43 @@ DEEPGRAM_API_KEY=...
 CONTROL_PLANE_URL=https://dashboard.workers.dev
 CONTROL_PLANE_TOKEN=...
 ```
+
+---
+
+---
+
+## Global R2 Credential Architecture
+
+Every farm receives two separate R2 tokens with different permissions. This is how 10 farms share a global library without any single farm being able to corrupt it.
+
+```
+Global R2 bucket: "content-genome"     ← read-only for ALL farms
+  ├── research-corpus/
+  ├── public-domain-art/
+  ├── genome-patterns/
+  ├── hook-library/
+  └── fablecut-templates/
+
+Farm R2 bucket: "farm-tantra-assets"   ← read+write for ONE farm only
+  ├── outputs/
+  ├── audio/
+  ├── thumbnails/
+  └── temp/
+
+Farm R2 bucket: "farm-frontier-assets"  ← read+write for ONE farm only
+  └── ...
+```
+
+The farm container's env vars carry two tokens:
+
+```
+R2_GLOBAL_TOKEN=abc...    ← created with READ permission on "content-genome" only
+R2_FARM_TOKEN=def...      ← created with READ+WRITE+DELETE on "farm-tantra-assets" only
+```
+
+A bug in farm-tantra's Worker that iterates all buckets and deletes everything can only reach its own "farm-tantra-assets" bucket. The "content-genome" bucket rejects delete operations because the token doesn't have that permission. This is enforced by Cloudflare's IAM, not by code convention.
+
+The local VPS volume (`/data/farms/{farm_id}/`) holds only temp files, cache, and Hermes state — never copies of shared data. The global R2 is read on demand via the binding at near-zero latency within Cloudflare's network.
 
 ---
 
