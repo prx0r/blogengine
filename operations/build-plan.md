@@ -37,7 +37,9 @@ Everything depends on the Global R2 existing first. It's the simplest build and 
 | `farm-factory/farm-template/src/lib/trends.ts` | Google Trends | interest_over_time for topic terms, geo-filtered to US+GB |
 | `farm-factory/farm-template/src/lib/wikipedia.ts` | Wikipedia pageviews | pageview velocity z-score for deity/text/figure names |
 
-These are the last code gaps. Once they exist, the farm Worker can execute the full research pipeline.
+**Update (Layer 2 complete): Wikipedia velocity showed zero signal (r = 0.027). Skip this client entirely. Gap scores alone are sufficient. The Wikipedia client is not needed.**
+
+The YouTube and Google Trends clients are the last code gaps. Once they exist, the farm Worker can execute the full research pipeline.
 
 ### 1c. Build the farm Worker
 

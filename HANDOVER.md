@@ -96,9 +96,13 @@ Cloudflare replaces almost all GCP services. The $300 GCP credit is best spent o
 
 ### Completed
 
-- **Dataset download**: All 3 datasets downloaded to R2. YouNiverse (544 MB + 10.1 GB), YTCommentVerse (10.8 GB SQLite DB), Global Trending (26.4 GB tarball). Full verification at `operations/dataset-download.md` with actual timings, issues log, and 8/9 verification gates passed.
-- **Credentials removed**: All hardcoded API keys purged from 12 files (scripts, routes, docs). `.env.local` untracked. `.env.example` added.
-- **3 spec fixes applied**: YouNiverse URL file extension corrected (`.csv.gz` → `.tsv.gz`), URLs updated (`/record/` → `/records/`), R2 layout verified against reality.
+- **Layer 1 (YouNiverse)**: A1 PASS (44% label difference), A2 PASS (delta R² = 0.017), A3 informative (0% flips for mature channels). Research log at `data/research/youniverse/README.md`.
+- **Layer 2 (API tests)**: 
+  - Task 1 (A6): Gap pattern is real — 16/30 queries ≥ 0.30 with fixed script. Weekly cadence adopted.
+  - Task 3 (A5): Wikipedia velocity is noise — r = 0.027. Skipped entirely. Gap scores alone are sufficient.
+  - Task 2 (A4): Daily search collection running via cron at 00:05 UTC. 14-day data accumulating.
+- **Dataset download**: All 3 datasets downloaded to R2. YouNiverse (544 MB + 10.1 GB), YTCommentVerse (10.8 GB SQLite DB), Global Trending (26.4 GB tarball). Full verification at `operations/dataset-download.md`.
+- **Credentials removed**: All hardcoded API keys purged from 12 files.
 
 ### Built (Hypothetical — `farm-factory/`)
 
