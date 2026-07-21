@@ -54,6 +54,18 @@ The bottleneck is **search.list** — only 100 calls/day. Strategy:
 
 Known channels cost ~2 units each to harvest. With 10,000/day general pool, you can scan 5,000 channels daily without touching search quota.
 
+## Quota Tracking
+
+| Date | Searches Used | General Used | Notes |
+|------|--------------|--------------|-------|
+| 2026-07-19 | 48 | ~1,800 | First full 12-theme scan |
+| 2026-07-21 | 0 | ~2 | Added @Adhyatmiksutra-f9w as known channel |
+
+## References
+
+- Full daily pipeline spec: `/root/projects/blog/intelligence-pipeline.md`
+- Google Cloud API docs: https://developers.google.com/youtube/v3/determine_quota_cost
+
 ## File Locations
 
 ```
@@ -120,13 +132,6 @@ Many channels discovered in Tier 1 (Tantra, Buddhist Philosophy) are Indian-lang
 1. Search queries already use `relevanceLanguage: "en"` + `regionCode: "US"`
 2. For focused analysis, add specific Indian English-language channels to `CHANNEL_IDS`
 3. Run `market-by-region.ts` with `regionCode: "IN"` to see what's trending in India
-
-## Quota Tracking
-
-| Date | Searches Used | General Used | Notes |
-|------|--------------|--------------|-------|
-| 2026-07-19 | 48 | ~1,800 | First full 12-theme scan |
-| 2026-07-21 | 0 | ~2 | Added @Adhyatmiksutra-f9w as known channel |
 
 ## Prompt Template
 
