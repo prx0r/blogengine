@@ -34,7 +34,8 @@ Per-farm R2 bucket (scoped credentials, read++write on own bucket only)
 | Work | Result | Key Files |
 |------|--------|-----------|
 | Dataset download | YouNiverse, YTCommentVerse, Global Trending in R2 | `operations/dataset-download.md` |
-| Layer 1: breakout metric | A1 PASS (44% diff), A2 PASS (delta R²=0.017), A3 informative | `data/research/youniverse/README.md`, `scripts/layer1-youniverse-test.py` |
+| Layer 1: breakout metric | A1 PASS (44% diff), A2 PASS (delta R²=0.017), A3 informative. Peer-reviewable report available. | `data/research/youniverse/research-report-a1-a3.md`, `data/research/youniverse/README.md`, `scripts/layer1-youniverse-test.py` |
+| Standardized research workflow | Repeatable experiment pattern with troubleshooting logic | `operations/research-workflow.md` |
 | Layer 2 Task 1: gap verification | 16/30 queries ≥ 0.30 gap — pattern real, weekly cadence | `data/reports/underserved-claim-test-2026-07-21.json` |
 | Layer 2 Task 3: Wikipedia | r=0.027 — zero signal, skipped permanently | `data/research/layer2/wikipedia-validation.json`, `scripts/wikipedia-validation.mjs` |
 | Layer 2 Task 2: daily search | Cron running 00:05 UTC, 14-day collection in progress | `scripts/daily-search-collection.mjs`, `scripts/run-daily-search.sh` |
