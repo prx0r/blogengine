@@ -1,5 +1,16 @@
 # Channel Growth Algorithm — Master Spec
 
+> **API Reference Docs:** `docs/api-ref/` contains the official YouTube Data API documentation:
+> - Quota: `docs/api-ref/quota-calculator.md`
+> - search.list: `docs/api-ref/search-list.md`
+> - videos.list: `docs/api-ref/videos-list.md`
+> - channels.list: `docs/api-ref/channels-list.md`
+> - playlistItems.list: `docs/api-ref/playlistitems-list.md`
+> - commentThreads.list: `docs/api-ref/commentthreads-list.md`
+> - captions.list: `docs/api-ref/captions-list.md`
+> - Video resource: `docs/api-ref/video-resource.md`
+> - Channel resource: `docs/api-ref/channel-resource.md`
+
 Machine-readable source document for AI execution. Every stage has binary gates. All gates in a stage must pass before advancing.
 
 ## Pipeline Overview

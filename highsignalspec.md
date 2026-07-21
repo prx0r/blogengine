@@ -2,6 +2,8 @@
 
 > **Pipeline reference:** See `data/README.md` for standardized methodology, verification gates, API tracking, and output schema. Every data report produced by this pipeline follows the format specified there.
 >
+> **API Reference Docs:** `docs/api-ref/` contains the official YouTube Data API documentation for all endpoints used in this pipeline.
+>
 > **Quick start:** `npm run data:underserved-test` (Stage 1), then `python3 scripts/validate-data-report.py data/reports/<report>.json`
 
 ## Methodology — Within-Niche Breakout Analysis

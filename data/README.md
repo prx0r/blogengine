@@ -1,5 +1,15 @@
 # YouTube Intelligence Data Pipeline
 
+> **API Reference Docs:** See `docs/api-ref/` for official YouTube Data API documentation:
+> - Quota costs & limits: `docs/api-ref/quota-calculator.md`
+> - search.list: `docs/api-ref/search-list.md`
+> - videos.list: `docs/api-ref/videos-list.md`
+> - channels.list: `docs/api-ref/channels-list.md`
+> - playlistItems.list: `docs/api-ref/playlistitems-list.md`
+> - commentThreads.list: `docs/api-ref/commentthreads-list.md`
+> - Video resource schema: `docs/api-ref/video-resource.md`
+> - Channel resource schema: `docs/api-ref/channel-resource.md`
+
 Standardized methodology for gathering, verifying, and publishing YouTube market intelligence data. Every report follows this spec so results are machine-readable, comparable across time, and auditable.
 
 ## Pipeline Stages
