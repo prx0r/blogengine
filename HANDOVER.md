@@ -2,178 +2,186 @@
 
 ## Project State (2026-07-21)
 
-This project builds a YouTube market intelligence system plus an automated content factory for English-language tantra documentary channels. Research hypothesis: Indian creators validate topics that haven't been narrativized for Western audiences — the opportunity is cultural translation, not SEO gap detection.
+Research hypothesis: Indian creators validate topics that haven't been narrativized for Western audiences. The opportunity is cultural translation — not SEO gap detection. The system is a **self-replicating media foundry**: one farm per channel, Cloudflare-native, with a human host + AI co-host format.
 
 ---
 
 ## Architecture
 
 ```
-Hermes (cognitive controller)
-  │  chooses topics, requests approval, updates priors
+Human (you) — records HOST lines, approves treatments, approves publish
+  │
+  ▼
+Hermes (cognitive controller) — chooses topics, requests approval, updates strategy
+  │
   ▼
 Cloudflare Workers + Workflows (durable execution)
-  │
-  ├── Research Pipeline → D1 feature store + gap map
-  ├── Content Pipeline → R2 assets → YouTube upload
-  └── Analytics Pipeline → hypothesis tracking + metrics
+  ├── Research Pipeline → D1 gap map + feature store
+  ├── Content Pipeline → HOST/AI-COHOST script → voiceover → TTS → render → YouTube
+  └── Analytics Pipeline → hypothesis tracking + genome feedback
+
+Global content-genome R2 (read-only for all farms)
+Global control plane D1 (metadata only — never content)
+Per-farm R2 bucket (scoped credentials, read++write on own bucket only)
 ```
 
-Cloudflare replaces almost all GCP services. The $300 GCP credit is best spent on BigQuery (dataset analysis) + Cloud Run (FFmpeg rendering).
-
 ---
 
-## Key Files
+## Completed Work
 
-### Strategy & Research
+### Data & Validation
+
+| Work | Result | Key Files |
+|------|--------|-----------|
+| Dataset download | YouNiverse, YTCommentVerse, Global Trending in R2 | `operations/dataset-download.md` |
+| Layer 1: breakout metric | A1 PASS (44% diff), A2 PASS (delta R²=0.017), A3 informative | `data/research/youniverse/README.md`, `scripts/layer1-youniverse-test.py` |
+| Layer 2 Task 1: gap verification | 16/30 queries ≥ 0.30 gap — pattern real, weekly cadence | `data/reports/underserved-claim-test-2026-07-21.json` |
+| Layer 2 Task 3: Wikipedia | r=0.027 — zero signal, skipped permanently | `data/research/layer2/wikipedia-validation.json`, `scripts/wikipedia-validation.mjs` |
+| Layer 2 Task 2: daily search | Cron running 00:05 UTC, 14-day collection in progress | `scripts/daily-search-collection.mjs`, `scripts/run-daily-search.sh` |
+| Credential cleanup | Hardcoded keys purged from 12 files, .env.example added | — |
+
+### Spec & Architecture
+
+| Work | Key File | What It Contains |
+|------|----------|------------------|
+| Farm implementation plan | `pipelines/farm-implementation-plan.md` | Full 5-stage pipeline, falsifiable assumptions, co-host format, verification gates |
+| Franchise spec | `farm-factory/franchise-spec.md` | VPS layout, Docker containers, R2 credential architecture, farm-manifest.yaml |
+| Dashboard spec | `farm-factory/dashboard/dashboard-spec.md` | Control plane D1 schema, approval inbox, cross-farm view, interrupt controls |
+| The Loom | `pipelines/the-loom.md` | Visionary architecture: discovery engine → farm foundry → genome → evolution |
+| Build plan | `operations/build-plan.md` | 6 sprints, dependency chain, concrete file-by-file actions |
+| Object model | `farm-factory/docs/OBJECT-MODEL.md` | RO, PO, HO, Essay, Storyboard, Video schemas |
+| R2 dataset reference | `pipelines/r2-dataset-reference.md` | Schema, access commands, limitations for all datasets |
+| R2 credential architecture | `farm-factory/franchise-spec.md` §Global R2 | Read-only global token + read-write farm token, zero-trust isolation |
+| Co-host format | `pipelines/farm-implementation-plan.md` §Stage 3 | HOST/AI-COHOST dialogue, recording view, interleaved audio |
+
+### Hermes Integration
 
 | File | Purpose |
 |------|---------|
-| `intelligence-pipeline.md` | Full experimental design: within-channel breakout analysis, gap maps, feature store schema |
-| `highsignalspec.md` | Technical spec: breakout metrics, feature extraction, model design |
-| `channel-growth-algorithm.md` | Machine-readable algorithm with 8 stages, binary verification gates, formulas |
-| `youtubemaster.md` | YouTube growth guide: Reddit research synthesis, channel strategy |
-| `youtubemaster2.md` | Revised thesis: cultural translation engine, open datasets, cross-language transfer |
-| `brainstormcontent.md` | Dark Tantra content strategy with 8 pillars + tiered priority |
-| `hermes/AGENTS.md` | Hermes agent context and project orientation |
+| `pipelines/hermes-army/hermescloudflare.md` | Full Cloudflare architecture with costs and farm template |
+| `hermes/AGENTS.md` | Hermes agent context |
 | `hermes/SOUL.md` | Hermes personality: "the librarian, not the author" |
 
-### Pipeline Specs
+---
 
-| File | Purpose |
-|------|---------|
-| `data/README.md` | Standardized data methodology, verification gates, API tracking |
-| `pipelines/README.md` | Cross-dataset analysis overview (YouNiverse, Global Trending, YTCommentVerse, Regional Audit) + Academic signal stack |
-| `pipelines/youniverse/README.md` | YouNiverse dataset spec: breakout metric validation, 8 research questions |
-| `pipelines/global-trending/README.md` | Global Trending spec: cross-country diffusion, IN→US lag |
-| `pipelines/yt30m-comments/README.md` | YTCommentVerse spec: comment intent taxonomy, language distribution |
-| `pipelines/regional-audit/README.md` | Regional audit spec: overlap metrics baseline (dataset not publicly available) |
-| `pipelines/hermes-army/hermescloudflare.md` | Full Cloudflare architecture: Workers, R2, D1, Workflows, Queues, AI Gateway, costs |
+## Currently Running
 
-### Operations
-
-| File | Purpose |
-|------|---------|
-| `operations/dataset-download.md` | Download 3 research datasets to Hetzner volume → R2. For agent execution. |
-
-### Source Code
-
-| File | Purpose |
-|------|---------|
-| `scripts/test-underserved-claim.mjs` | Stage 1: underserved claim test (v1.1.0 — fixed gap_score, publishedAfter, audio verification) |
-| `scripts/validate-data-report.py` | Schema validation for standardized data reports |
-| `scripts/market-landscape.ts` | YouTube market scan script (12 themes, search + channel harvest) |
-| `src/lib/video-objects/youtube-data.ts` | YouTube API client with discoverMarket, channel harvest, audio verification |
-
-### Data
-
-| File | Purpose |
-|------|---------|
-| `data/reports/underserved-claim-test-2026-07-21.json` | Stage 1 report: 30 queries, 3 regions, gap scores, audio verification |
-| `data/api-usage-log.csv` | Cumulative YouTube API usage tracking |
-| `data/SCHEMA.json` | Schema for validating data reports |
-| `data/underserved-claim-test.json` | Raw first-run data (deprecated — use reports/ for standardized) |
-
-### Reference Docs
-
-| Directory | Contents |
-|-----------|----------|
-| `docs/api-ref/` | YouTube Data API v3 — 9 endpoint references (search, videos, channels, playlistItems, commentThreads, captions, video resource, channel resource, quota) |
-| `docs/cloudflare-ref/` | Cloudflare docs — R2, D1, R2 SQL, Workers, full platform index (56MB) |
+| Process | What | Duration |
+|---------|------|----------|
+| Daily search collection | 16 queries × 3 regions at 00:05 UTC | 14 days from 2026-07-21 |
+| Dataset volume | 50GB Hetzner volume mounted, 6.8 GB free | — |
 
 ---
 
-## Current Status
+## Not Started (Priority Order)
 
-### Completed
-
-- **Stage 1 test**: 30 queries × 3 regions (IN, US, GB), 54 IN-only channels found, 24/30 queries show gap ≥0.30
-- **Architecture spec**: Complete Cloudflare OS design with farm template, Hermes as orchestrator
-- **Architecture review applied**: Fixed neuron math, pricing, queue topology, breakout metric, publish gates, storage strategy
-- **Content strategy**: 8 pillars for dark tantra, tiered priority, repeatable format
-- **Academic stack**: Replaced OpenAlex with Crossref + Semantic Scholar + OpenCitations fallback chain
-- **Reference docs**: YouTube API and Cloudflare docs imported
-
-### Completed
-
-- **Layer 1 (YouNiverse)**: A1 PASS (44% label difference), A2 PASS (delta R² = 0.017), A3 informative (0% flips for mature channels). Research log at `data/research/youniverse/README.md`.
-- **Layer 2 (API tests)**: 
-  - Task 1 (A6): Gap pattern is real — 16/30 queries ≥ 0.30 with fixed script. Weekly cadence adopted.
-  - Task 3 (A5): Wikipedia velocity is noise — r = 0.027. Skipped entirely. Gap scores alone are sufficient.
-  - Task 2 (A4): Daily search collection running via cron at 00:05 UTC. 14-day data accumulating.
-- **Dataset download**: All 3 datasets downloaded to R2. YouNiverse (544 MB + 10.1 GB), YTCommentVerse (10.8 GB SQLite DB), Global Trending (26.4 GB tarball). Full verification at `operations/dataset-download.md`.
-- **Credentials removed**: All hardcoded API keys purged from 12 files.
-
-### Built (Hypothetical — `farm-factory/`)
-
-Complete Cloudflare factory system at `farm-factory/`, isolated from running code, content-agnostic for any niche:
-
-| File | Lines | Purpose |
-|------|-------|---------|
-| `farm-factory/farm-template/wrangler.jsonc` | 42 | D1, R2, Queue, AI, Cron, Workflow bindings — parameterized by FARM_ID |
-| `farm-factory/farm-template/src/d1/schema.sql` | 204 | 14 tables: works, research_objects, passages, philosopher_objects, hypothesis_objects, essays, storyboards, video_objects, channels, gap_map, feature_store, hypothesis_results, api_usage, fact_checks |
-| `farm-factory/farm-template/src/index.ts` | 555 | Full Worker: CRUD for all objects, research endpoints, factory endpoints, analytics, cron handlers, ProduceVideoWorkflow (14 steps with idempotency) |
-| `farm-factory/hermes-conductor/src/index.ts` | 204 | Central orchestrator: farm registry, command routing, cross-farm analytics |
-| `farm-factory/scripts/create-farm.sh` | 78 | One-command farm creation: template copy, D1/R2/Queue provisioning, channel insert, deploy |
-| `farm-factory/docs/ARCHITECTURE.md` | 48 | System overview diagram |
-| `farm-factory/docs/OBJECT-MODEL.md` | 184 | RO, PO, HO, Essay, Storyboard, Video schemas |
-| `farm-factory/docs/PIPELINE.md` | 142 | Factory 5-stage, RO families, essay 3-pass, signal flow, cron |
-| `farm-factory/docs/FARM-LIFECYCLE.md` | 149 | Farm creation, operation, CLI examples, costs |
-| **Total** | **1,402 lines in 9 files, 128K** | |
-
-### Not Started
-
-- Daily research pipeline (Workers + Cron) — Worker code exists in farm-factory but needs YouTube/Google Trends/Wikipedia API clients written in `lib/`
-- Content production Workflows — Workflow definition exists, actual AI Gateway integration pending
-- Hermes → Workers API integration — Conductor Worker exists, needs Hermes plugin to call it
-- Disk migration (R2 storage replacement)
-- Google Cloud credit allocation (BigQuery + Cloud Run recommended)
+| # | What | Why It's Blocked |
+|---|------|-----------------|
+| 1 | Global R2 `content-genome` bucket | No code — just create in dashboard + upload existing art library |
+| 2 | YouTube API client (`lib/youtube.ts`) | Doesn't exist yet. Needed before farm Worker can run |
+| 3 | Google Trends client (`lib/trends.ts`) | Doesn't exist yet. Needed for western_demand signal |
+| 4 | Farm Worker deployment (tantra) | After API clients exist. Depends on #1-#3 |
+| 5 | First video through full pipeline | Depends on #4 running and producing research data |
+| 6 | Control plane D1 + dashboard | Can build in parallel with #1-#3 |
+| 7 | Docker infrastructure | Not needed until Worker pipeline is proven |
+| 8 | RO/PO full schema | First 5 videos use flat research packs, not versioned ROs |
 
 ---
 
-## How to Run
+## Key Decisions (with Rationale)
+
+| Decision | Rationale |
+|----------|-----------|
+| Within-channel breakout | Controls for audience size. Cross-channel compares 10k-sub to 5M-sub. |
+| OLS residual metric | `log(views) ~ log(age)`, residual = breakout. 44% different labels from raw views. |
+| Weighted sum with clamp | Multiplicative score dies if any input is near-zero. Clamp [0.1, 1] ensures one bad input doesn't kill the score. |
+| Co-host format (HOST/AI-COHOST) | Cuts recording load (you voice only HOST lines). Strengthens authenticity signal. Varies rhythm per video naturally. |
+| No TTS for host | You record your own lines. This is the single strongest signal against YouTube's inauthentic content policy. |
+| Never auto-publish | Historical/religious claims. Closed decision, not a design tradeoff. |
+| Wikipedia skipped | r = 0.027 at n=11. Zero signal. Gap scores alone are sufficient. |
+| Per-farm scoped R2 tokens | Read-only global + read-write own bucket. Cloudflare IAM enforces isolation, not code. |
+| Weekly gap computation | Daily deltas in a slow niche = noise. Rolling 7-day window filters jitter. |
+
+---
+
+## Open Threads & Unresolved Questions
+
+These are conversations we started but haven't settled. Each is worth exploring when relevant data exists.
+
+**1. Does gap score actually predict video performance?**
+The entire opportunity formula rests on this. Layer 1 validated that the *metric* works (OLS residual captures different signal). But the causal claim — "topics with high gap scores will perform above channel baseline when we produce them" — can't be tested until we have 10+ published videos. That's the single most important unknown.
+
+**2. How much of the 44% label difference from A1 is signal vs noise?**
+At n=500 we got 44%. At n=100 we got 16%. The result converged as sample size increased, suggesting it's real. But the within-channel OLS is noisy (fit on ~30 points per channel), and some of that 44% difference could be overfitting. Cross-validation on held-out channels would tell us.
+
+**3. Does the co-host format actually retain viewers?**
+The format is designed to fix authenticity, templating, and recording-bottleneck problems. But we don't know if audiences like it. The 8-beat structure with two voices might feel more natural or might feel gimmicky. Only retention curves from real videos will answer this.
+
+**4. Is one voiceover session per week realistic at scale?**
+The arithmetic says 2 hours/week = 8 videos/month across ALL farms. But that assumes consistent output. Realistically, some weeks you'll record 30 minutes, some weeks 4 hours. The bottleneck isn't a line — it's a probability distribution. Worth tracking actual recording throughput once production starts.
+
+**5. The genome propagation risk: will shared patterns across farms trigger YouTube enforcement?**
+Multiple farms using similar hook structures, title patterns, and thumbnail compositions is the exact signature YouTube's inauthentic content policy targets. The genome is supposed to be abstract enough that each farm's output looks distinct. But "abstract enough" is a hypothesis, not a design spec. We'll know when a second farm exists and produces visually similar work to the first.
+
+**6. When does the daily-vs-weekly decision get made with confidence?**
+The 14-day collection will give us Spearman r on week-over-week gap scores. If r > 0.3, weekly is fine. If r < 0.3, we need to rethink. Data incoming in ~12 days.
+
+**7. Should the research pack become a full RO with versioning, or stay flat?**
+The first 5 videos don't need versioned ROs. But as the source library grows, tracking which RO version a video used becomes important for attribution and fact-check updates. The inflection point is probably around video 10-15.
+
+**8. Is the 8-beat format actually flexible enough to avoid feeling templated?**
+The co-host format adds variation per video. But the underlying structure (hook → context → evidence → escalation → return) is fixed. At what n does a viewer notice every video follows the same arc? Only audience retention data can answer.
+
+---
+
+## Running the Research Pipeline
 
 ```bash
-# Stage 1 test (requires YouTube API quota — 100 search calls/day)
+# Layer 1 breakout validation (YouNiverse, ~70s)
+python3 scripts/layer1-youniverse-test.py
+
+# Stage 1 underserved test (YouTube API, 90 search calls)
 npm run data:underserved-test
+python3 scripts/validate-data-report.py data/reports/underserved-claim-test-*.json
 
-# Validate output against schema
-python3 scripts/validate-data-report.py data/reports/underserved-claim-test-YYYY-MM-DD.json
+# Wikipedia validation (free API, ~30s)
+node scripts/wikipedia-validation.mjs
 
-# Market scan (12 themes, 48 search calls)
-npm run video:landscape
-
-# Type check
-npm run typecheck
-
-# Deploy blog
-npm run cf:deploy
+# Daily search collection (cron — runs automatically at 00:05 UTC)
+node scripts/daily-search-collection.mjs
 ```
 
 ## API Usage
 
 - YouTube search.list: 100 calls/day (separate bucket)
 - YouTube general pool: 10,000 units/day
-- Track usage in `data/api-usage-log.csv`
-- Stage 1 test uses 90 search calls + ~27 videos.list calls
+- Track usage: `data/api-usage-log.csv`
+- Daily search collection: 48 calls/day (16 queries × 3 regions)
 
-## Key Decisions Made
+---
 
-| Decision | Rationale |
-|----------|-----------|
-| Cloudflare over GCP for core stack | No egress fees, Workers cheaper for serverless, AI Gateway cheaper for inference, D1 simpler than Cloud SQL. GCP only for BigQuery (data warehouse) + Cloud Run (FFmpeg). |
-| Within-channel breakout analysis | Controls for channel size, audience, production style. Across-channel comparison is noisy (comparing 10k-sub channel to 5M-sub channel measures audience, not content). |
-| OLS residual breakout | `log(views) ~ log(age_days)` per channel, residual = breakout score. Uses all data points, handles non-linear accumulation. Age-banding as fallback for <20 video channels. |
-| Momentum stripping | Two-stage residual: age-normalize first, then regress against calendar time. Breakout labels reflect content quality, not channel growth. |
-| Cultural translation engine > SEO gap detector | The real opportunity is narrative framing, not search keywords. Western audiences search for "Why this goddess cuts off her own head" not "Chinnamasta sadhana." |
-| Hermes as cognitive controller | Hermes chooses topics and requests approval. Workflows own durable state and retries. Never auto-publish historical/religious claims without review. |
-| 2 queues not 5 | Workflows handle state within Cloudflare. Queues only needed across compute boundaries (Cloudflare → VPS render). |
-| Deterministic thumbnails > FLUX generation | Brand edge is authentic historical artwork + crisp typography. AI-generated thumbnails undermine credibility. FLUX only for backgrounds/concepts. |
-| Weighted sum with clamp for opportunity score | Multiplicative score collapses from one noisy input. Weighted sum with clamp [0.1, 1] prevents any single estimate from zeroing the score. |
-| Wikipedia pageview velocity over academic signal | arXiv/Crossref skew STEM. For religious studies, Wikipedia pageview velocity on deity/text/figure names is a better independent proxy. |
-| Hypothesis testing against historical corpus | Own production at 1 video/week is too slow. Test hypotheses against thousands of other channels' videos; use own output for confirmation. |
-| Fact-check gate before production | Every historical claim needs a traceable source before script writing, not first caught at final QA. |
+## File Index
 
-## Contact
+### Strategy (root level)
+`intelligence-pipeline.md`, `highsignalspec.md`, `channel-growth-algorithm.md`, `youtubemaster.md`, `youtubemaster2.md`, `brainstormcontent.md`
 
-All work in `/root/projects/blog/`. Git remote: `https://github.com/prx0r/blogengine.git` (branch: main). Server: Hetzner Cloud VM `debz` (75GB disk, 50GB volume attached for datasets).
+### Pipeline Specs
+`pipelines/README.md`, `pipelines/farm-implementation-plan.md`, `pipelines/the-loom.md`, `pipelines/r2-dataset-reference.md`, `pipelines/hermes-army/hermescloudflare.md`, `pipelines/youniverse/`, `pipelines/global-trending/`, `pipelines/yt30m-comments/`, `pipelines/regional-audit/`
+
+### Farm Factory (hypothetical Workers code)
+`farm-factory/farm-template/`, `farm-factory/hermes-conductor/`, `farm-factory/dashboard/dashboard-spec.md`, `farm-factory/franchise-spec.md`, `farm-factory/docs/`, `farm-factory/scripts/`
+
+### Data
+`data/research/youniverse/` (Layer 1 outputs), `data/research/layer2/` (Layer 2 outputs + daily collection), `data/reports/` (standardized JSON reports), `data/api-usage-log.csv`
+
+### Operations
+`operations/dataset-download.md`, `operations/layer1-handover.md`, `operations/build-plan.md`
+
+### Scripts
+`scripts/layer1-youniverse-test.py`, `scripts/test-underserved-claim.mjs`, `scripts/validate-data-report.py`, `scripts/wikipedia-validation.mjs`, `scripts/daily-search-collection.mjs`, `scripts/run-daily-search.sh`, `scripts/market-landscape.ts`
+
+### Reference Docs
+`docs/api-ref/` (YouTube API), `docs/cloudflare-ref/` (Cloudflare API)
+
+### Hermes
+`hermes/AGENTS.md`, `hermes/SOUL.md`, `hermes/skills/`, `hermes/notes/`
