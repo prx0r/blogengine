@@ -8,7 +8,7 @@ Three systems, not one:
 
 2. **TryPost** (self-hosted, AGPL) — cross-platform publishing, scheduling, analytics. Handles YouTube/Instagram/TikTok/Twitter distribution. Hermes talks to it via MCP (native tool calls, no custom REST layer needed). TryPost has per-platform queues (TikTok delays don't block YouTube), race-safe token refresh for short-lived API tokens, and YouTube Analytics built in.
 
-3. **n8n** (optional glue) — connect farm output to TryPost if needed. Farm finishes a render → webhook fires → n8n pushes to TryPost → TryPost schedules to platforms.
+3. **Farm Worker → TryPost direct API call** — no n8n. A single event ("publish approved") triggers a direct POST from the farm Worker to TryPost's API. Adding a fourth system (n8n) for one conditional trigger is not justified. Revisit only if the handoff logic actually grows multiple branches.
 
 The farm control plane handles gates that TryPost can't: "approve this treatment before scripting," "approve this script before recording." TryPost handles gates it's built for: "approve this post before publishing to TikTok." Different layers, different concerns.
 
@@ -257,6 +257,20 @@ D1_DATABASE_ID=
 CONTROL_PLANE_URL=https://control-plane.workers.dev
 CONTROL_PLANE_SECRET=      # PER-FARM secret, not shared
 ```
+
+## Open Questions (Verify Before Building)
+
+**1. TryPost R2 compatibility.** Must test whether TryPost's S3-compatible storage actually works with R2 (no ACLs, different multipart upload, path-style vs virtual-hosted). If R2 doesn't work, that's an extra cost and integration point.
+
+**2. TryPost credential scoping.** Does TryPost support per-workspace API keys, or is there one global admin key? If it's one global key, every farm Worker holding it breaks the isolation principle. A bug in Channel A could delete Channel B's scheduled posts. Must verify before wiring farm Workers to call it directly.
+
+**3. YouTube Analytics depth.** TryPost's analytics are a supplement, not a replacement. Our research pipeline's core metric (breakout score) needs retention, CTR, and traffic source data from YouTube's Analytics API (OAuth). TryPost may not expose these depths. Assume the farm needs its own YouTube Analytics API access regardless of TryPost.
+
+**4. Handoff must be approval-event-driven.** The farm-to-TryPost push must be triggered by the publish approval action itself, never by a bucket-watcher. A polling-based "watch output bucket and sync anything new" shortcut can't distinguish approved content from work-in-progress. Structural, not by convention.
+
+**5. Minimal table for Telegram fallback.** Even in the minimal version (no control plane, just Telegram), keep one `pending_approvals` table (farm_id, artifact_type, artifact_ref, status). Prevents duplicate approvals from missed or re-sent Telegram messages causing Hermes to double-trigger script generation. Small, cheap, prevents a real idempotency bug.
+
+**6. FableCut + voiceover location.** Recording and editing happen inside the farm Worker's domain, before the publish approval event. The farm produces the finished video, stores it in its own R2, then requests publish approval. Only after approval does it hand off to TryPost.
 
 ## Key Changes from V1
 
