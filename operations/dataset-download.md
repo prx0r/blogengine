@@ -1,5 +1,12 @@
 # Dataset Download to R2 — Operations Spec
 
+> **⚠️ CRITICAL: NEVER COMMIT CREDENTIALS TO GIT**
+> All AWS/R2 credentials, API tokens, and secret keys in this file are placeholders.
+> Set them as environment variables each session. Never save them in any file tracked by git.
+> If you push credentials to any remote (GitHub, Cloudflare, etc.), they must be revoked immediately.
+> The `.env` and `.env.local` files are in `.gitignore` — if you add credentials to any other file,
+> verify it is also gitignored before committing.
+
 ## Objective
 
 Download all four research datasets to the Hetzner server, then upload to Cloudflare R2 for permanent storage and querying via R2 SQL / Data Catalog.

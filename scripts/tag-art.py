@@ -22,10 +22,12 @@ ALCHEMY_DIR = os.path.join(ROOT, "content", "sources", "occult", "alchemy", "emb
 
 # OpenCode API config
 # Try Cloudflare Workers AI first (free), fall back to opencode (paid)
-CF_ACCOUNT = "954612afb5a97bb15dddcdc70176813d"
-CF_TOKEN = "cfat_309y30W1HmOKdlsTc7HuhVM87LxR6IOIZVrCToTf835eb229"
+CF_ACCOUNT = os.environ.get("CF_ACCOUNT_ID")
+CF_TOKEN = os.environ.get("CF_API_TOKEN")
 
-API_KEY = os.environ.get("VIDEO_LLM_API_KEY", "sk-SDjjQ8NtTdpM2OmWl3GXDrPlhcQiLvZln60mSVVcJQ3rkg7trYHQoLKshcKSeg0Y")
+API_KEY = os.environ.get("VIDEO_LLM_API_KEY")
+if not API_KEY:
+    raise ValueError("Set VIDEO_LLM_API_KEY environment variable")
 BASE_URL = "https://opencode.ai/zen/go/v1"
 VISION_MODEL_OPENCODE = "mimo-v2-omni"
 VISION_MODEL_CF = "@cf/meta/llama-3.2-11b-vision-instruct"

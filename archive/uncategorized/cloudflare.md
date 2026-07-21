@@ -26,5 +26,5 @@ S3 API Endpoint:   https://954612afb5a97bb15dddcdc70176813d.r2.cloudflarestorage
 
 ```bash
 curl -X GET "https://api.cloudflare.com/client/v4/accounts/954612afb5a97bb15dddcdc70176813d/tokens/verify" \
-  -H "Authorization: Bearer cfat_vrWKpKmq95LWSi0cwxoJWGZvZczwBvCqorUv4cmAa7224a63"
+  -H "Authorization: Bearer <cf-api-token>"
 ```

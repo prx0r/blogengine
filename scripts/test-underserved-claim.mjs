@@ -21,7 +21,8 @@
 import fs from "node:fs";
 import path from "node:path";
 
-const API_KEY = "AIzaSyAoXdXRD1K3A2nIOQLVBDYgo257zqQXy3I";
+const API_KEY = process.env.YOUTUBE_API_KEY;
+if (!API_KEY) throw new Error("Set YOUTUBE_API_KEY environment variable");
 const REGIONS = ["IN", "US", "GB"];
 const MAX_RESULTS = 15;
 const TIME_WINDOW_MONTHS = 12;

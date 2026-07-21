@@ -5,10 +5,8 @@
  *   node scripts/upload-to-r2.mjs          # upload all audio + pdfs
  *   node scripts/upload-to-r2.mjs --dry-run # preview only
  *
- * R2 credentials from cloudflare.md:
- *   Access Key: 1d1b45c9c4c8ef8c9581a03164ad44b3
- *   Secret Key: fb3603a48c47650abaa287bfb6bfad843f05b2f8775d08df66785bd3385982cf
- *   Endpoint:   https://954612afb5a97bb15dddcdc70176813d.r2.cloudflarestorage.com
+ * Requires env vars:
+ *   R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY, R2_ENDPOINT, CLOUDFLARE_API_TOKEN, ACCOUNT_ID
  */
 
 import fs from "fs";
@@ -18,15 +16,19 @@ import crypto from "crypto";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 
-const R2_ENDPOINT = "https://954612afb5a97bb15dddcdc70176813d.r2.cloudflarestorage.com";
+const R2_ENDPOINT = process.env.R2_ENDPOINT;
 const R2_BUCKET = "atlas-sources";
-const R2_PUBLIC_URL = "https://pub-954612afb5a97bb15dddcdc70176813d.r2.dev";
+const R2_PUBLIC_URL = process.env.R2_PUBLIC_URL;
 
-const ACCESS_KEY = "1d1b45c9c4c8ef8c9581a03164ad44b3";
-const SECRET_KEY = "fb3603a48c47650abaa287bfb6bfad843f05b2f8775d08df66785bd3385982cf";
+const ACCESS_KEY = process.env.R2_ACCESS_KEY_ID;
+const SECRET_KEY = process.env.R2_SECRET_ACCESS_KEY;
 
-const ACCOUNT_ID = "954612afb5a97bb15dddcdc70176813d";
-const CF_TOKEN = "cfat_309y30W1HmOKdlsTc7HuhVM87LxR6IOIZVrCToTf835eb229";
+const ACCOUNT_ID = process.env.ACCOUNT_ID;
+const CF_TOKEN = process.env.CLOUDFLARE_API_TOKEN;
+
+if (!ACCESS_KEY || !SECRET_KEY || !R2_ENDPOINT) {
+  throw new Error("Set R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY, and R2_ENDPOINT env vars");
+}
 
 function sha256(str) {
   return crypto.createHash("sha256").update(str).digest("hex");

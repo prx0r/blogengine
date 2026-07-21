@@ -221,7 +221,7 @@ Returns recent channel activity. Partially deprecated (bulletins removed). Still
 
 ### Existing Keys
 
-- YouTube API key: from .env.local (AIzaSyAoXdXRD1K3A2nIOQLVBDYgo257zqQXy3I)
+- YouTube API key: from .env.local (set via YOUTUBE_API_KEY env var)
 - DeepSeek key: from .env.local (VIDEO_LLM_API_KEY) — text + vision capable
 - Cloudflare API token: from .env.local
 

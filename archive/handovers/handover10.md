@@ -84,8 +84,8 @@ For unassigned essays, the top CLIP recommendation is used. The filename (e.g., 
 ## 4. Cloudflare AI Vision Pipeline — PENDING LICENSE ACCEPTANCE
 
 ### What's wired up
-- **Account ID:** `954612afb5a97bb15dddcdc70176813d`
-- **API Token:** `cfat_309y30W1HmOKdlsTc7HuhVM87LxR6IOIZVrCToTf835eb229`
+- **Account ID:** `<account-id-from-cloudflare-dashboard>`
+- **API Token:** `<cf-api-token-from-cloudflare-dashboard>`
 - **Vectorize binding:** `ATLAS_VECTORIZE` (index: `atlas-global`)
 - **Wrangler config:** Vectorize already configured in `wrangler.jsonc` and `wrangler.toml`
 
