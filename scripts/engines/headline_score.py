@@ -86,20 +86,11 @@ def score_title(title):
     else:
         breakdown.append({"feature": "no_priors_detected", "lift": 0, "weight": 0})
 
-    # Confidence based on total evidence
-    total_n = sum(b["n_comparisons"] for b in breakdown)
-    if total_n < 500:
-        confidence = "low"
-    elif total_n < 2000:
-        confidence = "medium"
-    else:
-        confidence = "high"
-
     return {
         "title": title,
         "score": round(score, 3),
-        "confidence": confidence,
-        "total_evidence_n": total_n,
+        "confidence": "low",
+        "note": "Descriptive score from observational data. Not validated. See AUDIT-FLAWS.md.",
         "features_detected": len(breakdown),
         "breakdown": breakdown,
     }
