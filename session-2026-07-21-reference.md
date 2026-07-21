@@ -266,18 +266,84 @@ Comprehensive response to external review. 13 critical fixes.
 
 ---
 
+## Context I Wish I Had At The Start
+
+I spent most of this session misunderstanding the actual system. Here's what I got wrong and what's actually true.
+
+### What I Got Wrong
+
+| I Thought | Actually True |
+|-----------|---------------|
+| 173 ROs are "structural skeletons with placeholder passages" | 152/159 ROs have real extracted text (verse references, page numbers). Only 8 have brackets. 1,268 total passages. |
+| 0 essays have audio | 126 of 1,797 essays have audio. It works. |
+| The essays are "our content" | Most are existing scholarly works (Ficino, Iamblichus, Corbin) formatted as JSON. Hermes compiles and catalogues; it does not write original claims. |
+| The system is mostly spec | Hermes gateway runs live as a systemd service. 20+ skills are loaded as Telegram slash commands. Acquisition pipeline works. Publishing pipeline (Type B) works. |
+| The bottleneck is everything is broken | The bottleneck is RO→essay linkage (never built), audio batch (126/1797 done), and video production (0 published). The extraction and compilation work is largely done. |
+| Vision doc is a forward plan for a system we don't have | The vision doc is one layer of a much larger existing system. Hermes already does research compilation. The vision doc extends it into YouTube content production. |
+
+### What Actually Exists
+
+**Live system:**
+- Hermes v0.18.2 agent (systemd service, Telegram gateway, 325MB RAM)
+- 20+ skills loaded as slash commands (acquisition, publishing, video, astrology, research)
+- FableCut MCP server running
+- Cloudflare Workers site deployed at `re-rendering-atlas.tradesprior.workers.dev`
+- Astrology engine (deterministic, D1-backed)
+- Market scan skill monitoring 75 YouTube channels
+
+**Content library:**
+- 1,917 works (catalogued sources)
+- 180 ROs with 1,268 real body passages, 326 source references
+- 9 RO families represented
+- 1,797 essays (JSON), 126 with audio
+- 56 video plans, 12 with thumbnails, 1 with storyboard+voiceover, 0 published
+- ~2,000 source texts, 30+ art objects, 76 concepts
+
+**Pipeline (source → Work → RO → Essay → Audio → Video):**
+- Acquisition: working (DOI resolution, OA download, Work JSON creation)
+- RO construction: done for 180 topics (real passages extracted)
+- RO→Essay linkage: **never built** — essays are from a pre-RO blueprints pipeline
+- Audio generation: script exists, 126/1797 done
+- Video pipeline: 1 storyboard, 0 published
+
+**Unbuilt new objects:**
+- CO (Comparison Object): synthesises across 2+ parent ROs. 2 exist in draft.
+- PO (Philosopher Object): deep profile of a thinker. 1 exists (Abhinavagupta).
+- HO (Hypothesis Object): links signal detection → content production. 0 exist.
+
+### Where To Look
+
+| If you want... | Read |
+|----------------|------|
+| Hermes project context | `hermes/AGENTS.md` |
+| Hermes personality/constraints | `hermes/SOUL.md` |
+| Full pipeline spec | `hermes/notes/hermesspec1.md` |
+| RO schema | `hermes/docs/ro-schema-spec.md` |
+| Content data model | `content/schemas/complete-data-model.md` |
+| Factory pipeline skill | `hermes/skills/core/factory-pipeline/SKILL.md` |
+| Video pipeline skill | `hermes/skills/video/publish-video-fablecut/SKILL.md` |
+| Factory state | `content/_factory-index.json` |
+| Pipeline queue | `content/_pipeline-queue.json` |
+| Vision architecture | `operations/vision-hermes-engine.md` |
+| Reddit intelligence | `pipelines/reddit-intelligence/` (3 files) |
+| Upworthy title analysis | `data/research/upworthy/` |
+| Research inventory | `operations/research-inventory.md` |
+| Agent unwritten rules | `operations/agent-guide.md` |
+
 ## Key Principles Established This Session
 
 1. **Find over build** — one clear finding > ten architecture documents
 2. **Null results are valuable** — Wikipedia r=0.027 saved real work
 3. **When stuck, run an experiment** — don't design a system to determine X, test X directly
-4. **Separate topic value from packaging potential** — a title model doesn't change audience demand
-5. **Security is P0** — read-only by default, scoped credentials, immutable logs
-6. **Four ledgers before models** — prevent feedback loop, maintain organism memory
-7. **Evidence types are not interchangeable** — Upworthy ≠ historical claim support
-8. **Clamp is lies** — missing evidence is not weak positive evidence
-9. **The experiment is the unit** — pair rows are not independent observations
-10. **Domain transfer is never free** — Upworthy priors are starting guesses, not rules
+4. **Verify claims from agents before repeating them** — I was wrong about ROs being skeletons because I didn't check myself
+5. **Separate topic value from packaging potential** — a title model doesn't change audience demand
+6. **Security is P0** — read-only by default, scoped credentials, immutable logs
+7. **Four ledgers before models** — prevent feedback loop, maintain organism memory
+8. **Evidence types are not interchangeable** — Upworthy ≠ historical claim support
+9. **Clamp is lies** — missing evidence is not weak positive evidence
+10. **The experiment is the unit** — pair rows are not independent observations
+11. **Domain transfer is never free** — Upworthy priors are starting guesses, not rules
+12. **Reddit is a map, not a truth engine** — community-endorsed ≠ factually correct
 
 ---
 
