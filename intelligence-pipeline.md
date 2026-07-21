@@ -106,8 +106,82 @@ The topic lifecycle signal alone is worth it — you'll see "Theurgy" trend 2-3 
 | **Document AI** | 1,000 pages/month | Parse PDFs in library/ for structured extraction. |
 | **Looker Studio** | Free | Dashboard showing daily breakout trends, channel growth, topic lifecycle visualizations. |
 
-### First Steps (zero config, immediate)
+---
 
-1. Enable Natural Language API → run comment corpus through entity extraction weekly
-2. Enable Translation API → batch-translate Indian channel descriptions to find hidden English content
-3. Set up Cloud Scheduler + Function for daily scan automation
+## $300 Credit Backlog Sprint
+
+Don't wait 30 days to build signals. Use the $300 for a massive initial data retrieval.
+
+### Constraints
+- **YouTube Data API**: 100 searches/day, 10,000 general units/day — quota resets daily, **cannot** be accelerated with credits. But over 90 days: 9,000 searches + 900,000 general units available.
+- **GCP services**: $300 pays for all the below with room to spare.
+
+### Week 1: Foundation
+
+| Day | YouTube API (daily) | GCP Credits |
+|-----|--------------------|-------------|
+| 1-7 | Run full 100-search scan daily with varied queries to maximize niche coverage. Harvest ALL results into `data/raw/` daily. | **Natural Language API** (~$50): Batch-entity-extract all 1,795 existing essays + 108 source texts → build a topic map of YOUR content. Compare against what's trending externally. |
+
+**Outcome:** You know exactly what topics you've covered vs. what's breaking out.
+
+### Week 2: Language Bridge
+
+| Day | YouTube API | GCP Credits |
+|-----|------------|-------------|
+| 8-14 | Dedicate 50 searches/day to IN region with varied Indian languages (hi, ta, te, bn, ml). Collect ALL channel descriptions + video titles. | **Translation API** (~$100): Translate every Indian-language title and description collected. Build a corpus of "what Indian creators are making in local languages that maps to English gaps." |
+
+**Outcome:** You know every Indian channel making Tantra/Shaivism content regardless of language.
+
+### Week 3: Visual Intelligence
+
+| Day | YouTube API | GCP Credits |
+|-----|------------|-------------|
+| 15-21 | Harvest thumbnails from all breakout videos discovered so far. Pull their channel banners and avatar images too. | **Vision API** (~$75): Analyze 50,000 thumbnails for: text detected, color palette, composition type (talking head/text overlay/illustration), object detection. Also run thumbnail analysis on YOUR public/art/ collection for searchability. |
+
+**Outcome:** Know exactly what thumbnail styles correlate with breakout by niche.
+
+### Week 4: Infrastructure + Automation
+
+| Day | YouTube API | GCP Credits |
+|-----|------------|-------------|
+| 22-28 | Daily scans continue. By now you have ~28 days of velocity data on each niche. | **BigQuery** (~$25): Set up the data warehouse, import all daily scan data from weeks 1-3. **Cloud Scheduler + Cloud Functions** (~$0): Automate the daily scan. **Looker Studio** ($0): Build a live dashboard. |
+
+**Outcome:** Fully automated daily pipeline with dashboard.
+
+### Remaining credits (~$50)
+- Vertex AI training run: train a breakout prediction classifier
+- Speech-to-Text: transcribe top 10 competitor videos for content analysis
+- Document AI: parse a few rare PDFs
+
+### Total Cost: ~$300 (exactly the trial)
+
+| Service | Spend |
+|---------|-------|
+| Natural Language API | $50 |
+| Translation API | $100 |
+| Vision API | $75 |
+| BigQuery | $25 |
+| Cloud Functions + Scheduler | ~$0 |
+| Looker Studio | $0 |
+| Vertex AI / Speech-to-Text / Document AI | ~$50 |
+| **Total** | **~$300** |
+
+### What You Have After 28 Days
+
+| Asset | Volume | Confidence |
+|-------|--------|------------|
+| Topic Lifecycles | 28 daily snapshots | Medium — can see 4-week trends |
+| Channel Database | 5,000+ channels | High — every niche, every language |
+| IN↔US Gap Map | 5,600+ query comparisons | High — know exactly what's missing |
+| Title Pattern ML | 140,000+ titles | High — robust pattern detection |
+| Thumbnail Intelligence | 50,000 images analyzed | High — know winning visual formulas |
+| Comment Corpus | 1,400+ breakout threads | Medium — enough for entity mining |
+| Language Bridge | All Indian-lang channels | High — know every player |
+
+### Automation (Day 29+)
+
+After week 4, the daily cost drops to ~$0:
+- YouTube quota is free (always)
+- Cloud Function for daily scan is under free tier
+- BigQuery storage for 1 year of daily data is ~$10
+- Natural Language API stay within free 5k units/month for ongoing analysis
