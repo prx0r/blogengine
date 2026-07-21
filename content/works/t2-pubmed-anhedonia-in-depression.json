@@ -1,0 +1,49 @@
+{
+  "work_id": "work:t2-pubmed-anhedonia-in-depression",
+  "schema_version": 2,
+  "title": "[Anhedonia in depression].",
+  "authors": [
+    {
+      "name": "Gaillard R"
+    },
+    {
+      "name": "Gourion D"
+    },
+    {
+      "name": "Llorca PM"
+    }
+  ],
+  "publication": {
+    "year": 2013,
+    "journal": "Encephale",
+    "source": "PubMed/MEDLINE",
+    "language": "en"
+  },
+  "identifiers": {
+    "pmid": "23937895",
+    "doi": "10.1016/j.encep.2013.07.001"
+  },
+  "topics": [
+    "phase-5-water-pleasure",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "assets": {
+    "pdf_path": null,
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/23937895/",
+    "abstract": "Anhedonia, or markedly diminished interest or pleasure, is a hallmark symptom of major depression, schizophrenia, and other neuropsychiatric disorders. The term \"anhedonia\" was introduced by the French psychologist Ribot in 1896 to describe the counterpart to analgesia in his patients, for which \"it was impossible to find the least pleasure\". Over the last decades, the clinical definition of anhedonia has remained relatively unchanged, but recently, behavioral neurosciences have significantly ch"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_alt17_acquisition",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 5,
+    "phase_name": "Water/Pleasure",
+    "bridge_rationale": "Bridge paper score=10.5: links Water/Pleasure concept to mechanistic neuroscience"
+  },
+  "evaluation": "Score 10: Excellent bridge signal",
+  "tier": 2
+}

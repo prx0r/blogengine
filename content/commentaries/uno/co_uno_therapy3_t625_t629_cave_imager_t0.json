@@ -1,0 +1,56 @@
+{
+  "co_id": "co:uno_therapy3_t625_t629_cave_imager_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3_t625_t629_cave_imagery_alliance",
+  "turn_index": 0,
+  "lineage": "Therapeutic",
+  "student_state": "distant_abstraction",
+  "behavior_tags": [
+    "vagueness"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_03",
+    "function_name": "UM_03",
+    "mechanism_shape": "NONE",
+    "teaching_actions": [
+      "corrects_euphemism",
+      "challenges_goal"
+    ],
+    "traps_avoided": [
+      "vagueness"
+    ],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.35,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_02",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "'Dark cave alone'—metaphor for isolation/depression. Teacher accepts metaphor rather than translating to abstract terms. Working within their image. This validates felt experience through imagery. Metaphor often expresses what words can't.",
+  "accumulated_insight": "T1: Student describes feeling in dark cave alone. Teacher validates imagery: 'That's a powerful image of isolation.' Uses image to explore feeling. Predicting surface_emotion as metaphor deepens.",
+  "abstract_pattern": "",
+  "visible_response": "Actually, you just said you have an easy time rejecting people and pushing them away.\nIs that the optimal level of functioning you are looking for?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

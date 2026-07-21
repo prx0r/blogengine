@@ -1,0 +1,57 @@
+{
+  "co_id": "co:uno_gorgias_ep020_final_choice_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gorgias_ep020_final_choice",
+  "turn_index": 0,
+  "lineage": "Socratic",
+  "student_state": "seeking_clarity",
+  "behavior_tags": [
+    "requests_clarification"
+  ],
+  "pedagogy": {
+    "phase": "SELF-MAKING",
+    "function_id": "SM_04",
+    "function_name": "SM_04",
+    "mechanism_shape": "COMPARISON_CONTRAST",
+    "teaching_actions": [
+      "asserts_existential_truth"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.62,
+      "attunement": 0.8,
+      "style": 0.5,
+      "depth": 0.38,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_03",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_02",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "Name the fork plainly and ask for their choice. Expect a deeper question or a stall; if they stall, narrow the choice again to force ownership.",
+  "accumulated_insight": "T1: Student asks ?And what is it you want from me, then???seeking_clarity via requests_clarification. They understand a demand is coming; they want the criterion. The comparison_contrast/SM_04 move sets the fork: indulge desires freely or choose the just life. Pattern: clarification request ? threshold setup. Confidence medium because explicit forks often draw a follow-up question or hesitation.",
+  "abstract_pattern": "",
+  "visible_response": "Better ignored while doing right than praised while corrupting my soul.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:proclus-elements",
+    "ro:platonism-decoded",
+    "ro:chaldean-oracles"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

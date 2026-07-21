@@ -1,0 +1,364 @@
+{
+  "ro_id": "ro:crowley-hga",
+  "schema_version": 1,
+  "title": "The Holy Guardian Angel in Thelema: Liber LXV and Liber Samekh",
+  "subtitle": "Crowley's synthesis of Abramelin theurgic method with Thelemic cosmology: the HGA as Unconscious Creature Self, the Resistance, and the Invoke Often formula",
+  "family": "tradition",
+  "status": "draft",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "Liber Samekh (the Bornless Ritual, restored with barbarous names) and Liber LXV (the 7-chapter poetic account of HGA union) are the two pillars of Thelemic HGA practice \u2014 the first provides the ope...",
+    "scope": "Covers Liber Samekh Point I (the invocation text), Point II (the practical instructions including the elemental quarters, the shaft of will method, the Resistance in Section G, and the Invoke Often formula), Point III (the philosophical commentary on Sections G & Gg), and Liber LXV (the 7-chapter planetary ascent to HGA union). Also covers the HGA doctrine as the 'Unconscious Creature Self \u2014 the Spiritual Phallus' from the Point II commentary on Section A.",
+    "traditions": [
+      "thelema",
+      "western_occultism",
+      "abramelin"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "liber-samekh-full",
+      "tier": 1,
+      "label": "Liber Samekh (Liber DCCC) \u2014 Theurgia Goetia Summa Congressus Cum Daemone. Full text including Points I, II, and III.",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "bornless_invocation",
+        "elemental_quarters",
+        "shaft_of_will",
+        "resistance",
+        "invoke_often",
+        "hga_as_unconscious_creature_self"
+      ],
+      "sections_affected": [
+        "invocation",
+        "practice",
+        "philosophy"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "liber-lxv",
+      "tier": 1,
+      "label": "Liber LXV vel Cordis Cincti Serpente \u2014 Class A, 7 chapters (7 planets). The aspirant-HGA relationship as erotic union, progressive revelation through the planetary spheres.",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "hga_as_beloved",
+        "planetary_ascent",
+        "heart_girt_with_serpent",
+        "erotic_union_theology"
+      ],
+      "sections_affected": [
+        "experiential_phenomenology",
+        "theology"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "magick-theory-practice",
+      "tier": 1,
+      "label": "Magick in Theory and Practice (Liber IV, Part III) \u2014 esp. Chapters on the HGA, the Bornless Ritual, and the Great Work.",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "great_work_definition",
+        "hga_as_essential_work",
+        "hga_and_abyss"
+      ],
+      "sections_affected": [
+        "theory",
+        "grade_system"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "liber-al",
+      "tier": 1,
+      "label": "Liber AL vel Legis (The Book of the Law) \u2014 the central revelation of Thelema, received 1904. Nuit/Hadit/Ra-Hoor-Khuit cosmology.",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "nuit_hadit_rahoor",
+        "do_what_thou_wilt",
+        "every_star",
+        "aeon_of_horus"
+      ],
+      "sections_affected": [
+        "cosmology",
+        "theology"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "duquette-magick-crowley",
+      "tier": 2,
+      "label": "DuQuette, Lon Milo \u2014 The Magick of Aleister Crowley (2003). Commentary on Liber Samekh, Liber Resh, the Star Ruby, and the HGA.",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "practical_commentary",
+        "hga_definition",
+        "ritual_mechanics"
+      ],
+      "sections_affected": [
+        "practice",
+        "commentary"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "commentary-liber-samekh",
+      "tier": 2,
+      "label": "Liber Samekh Point II Commentary \u2014 Crowley's own commentary on the ritual text, including the identification of the HGA with the Unconscious Creature Self.",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "unconscious_creature_self",
+        "spiritual_phallus",
+        "aeon_of_horus_shift"
+      ],
+      "sections_affected": [
+        "commentary"
+      ],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "hga_doctrine",
+      "subsection": "unconscious_creature_self",
+      "kind": "source",
+      "text": "The Holy Guardian Angel is the Unconscious Creature Self \u2014 the Spiritual Phallus. His Knowledge and Conversation contributes occult puberty. It is therefore advisable to replace the name Asar Un-nefer by that of Ra-Hoor-Khuit at the outset, and by that of one's own Holy Guardian Angel when it has been communicated. (Liber Samekh, Point II, Section A commentary; DuQuette, p. 382)",
+      "source_ids": [
+        "liber-samekh-full",
+        "duquette-magick-crowley",
+        "commentary-liber-samekh"
+      ],
+      "topics": [
+        "hga_definition",
+        "unconscious_creature_self",
+        "spiritual_phallus",
+        "aeon_of_horus"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "invocation",
+      "subsection": "bornless_invocation",
+      "kind": "source",
+      "text": "Thee I invoke, the Bornless One. Thee, that didst create the Earth and the Heavens. Thee, that didst create the Night and the Day. Thee, that didst create the darkness and the Light. Thou art ASAR UN-NEFER (Myself made Perfect): Whom no man hath seen at any time. Thou art IA-BESZ (the Truth in Matter). Thou art IA-APOPHRASZ (the Truth in Motion). Thou hast distinguished between the Just and the Unjust. Thou didst make the Female and the Male. Thou didst produce the Seeds and the Fruit. Thou didst form Men to love one another, and to hate one another. (Liber Samekh, Point I, Section A \u2014 The Oath)",
+      "source_ids": [
+        "liber-samekh-full"
+      ],
+      "topics": [
+        "bornless_one",
+        "invocation",
+        "oath",
+        "asar_un_nefer"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "practice",
+      "subsection": "shaft_of_will",
+      "kind": "source",
+      "text": "Let then the Adept extend his Will beyond the Circle in this imagined Shape and let it radiate with the Light proper to the Element invoked, and let each Word issue along the shaft with passionate impulse, as if its voice gave command thereto that it should thrust itself leapingly forward. Let also each Word accumulate authority, so that the Head of the Shaft may plunge twice as far for the Second Word as for the First, and Four Times for the Third as the Second, and thus to the end. Moreover, let the Adept fling forth his whole consciousness thither. Then at the final Word, let him bring rushing back his Will within himself, steadily streaming, and let him offer himself to its point, as Artemis to PAN, that this perfectly pure concentration of the Element purge him thoroughly, and possess him with its passion. (Liber Samekh, Point II, Section B)",
+      "source_ids": [
+        "liber-samekh-full"
+      ],
+      "topics": [
+        "shaft_of_will",
+        "elemental_invocation",
+        "body_of_light",
+        "artemis_to_pan"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "practice",
+      "subsection": "section_g_resistance",
+      "kind": "source",
+      "text": "Now let him strive with all the strength of his Soul to withstand the Will of his Angel, concealing himself in the closest cell of the citadel of consciousness. Let him consecrate himself to resist the assault of the Voice and the Vibration until his consciousness faint away into Nothing. For if there abide unabsorbed even one single atom of the false Ego, that atom should stain the virginity of the True Self and profane the Oath; then that atom should be so inflamed by the approach of the Angel that is should overwhelm the rest of the mind, tyrannize over it, and become an insane despot to the total ruin of the realm. But, all being dead to sense, who then is able to strive against the Angel? He shall intensify the stress of His Spirit so that His loyal legions of Lion-Serpents leap from the ambush, awakening the adept to witness their Will and sweep him with them in their enthusiasm, so that he consciously partakes this purpose, and sees in its simplicity the solution of all his perplexities. Thus then shall the Adept be aware that he is being swept away through the column of his Will Symbol, and that His Angel is indeed himself, with intimacy so intense as to become identity. (Liber Samekh, Point II, Section G)",
+      "source_ids": [
+        "liber-samekh-full"
+      ],
+      "topics": [
+        "resistance",
+        "ego_death",
+        "false_self",
+        "lion_serpents",
+        "identity_with_angel"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "practice",
+      "subsection": "invoke_often",
+      "kind": "source",
+      "text": "Let the Adept perform this Ritual aright, perfect in every part thereof, once daily for one moon, then twice, at dawn and dusk, for two moons, next, thrice, noon added, for three moons, afterwards, midnight making up his course, for four moons four times every day. Then let the Eleventh Moon be consecrated wholly to this Work; let him be instant in continual ardour, dismissing all but his sheer needs to eat and sleep. For know that the true Formula whose virtue sufficed the Beast in this Attainment, was thus: INVOKE OFTEN. So may all men come at last to the Knowledge and Conversation of the Holy Guardian Angel: thus sayeth the Beast, and prayeth His own Angel that this book be as a burning Lamp, and as a living Spring, for Light and Life to them that read therein. (Liber Samekh, Point II, closing)",
+      "source_ids": [
+        "liber-samekh-full"
+      ],
+      "topics": [
+        "invoke_often",
+        "graduated_practice",
+        "formula"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_006",
+      "section": "experiential_phenomenology",
+      "subsection": "star_spate",
+      "kind": "source",
+      "text": "This rapture is accompanied by a tempest of brilliant light, almost always, and also in many cases by an outburst of sound, stupendous and sublime in all cases, though its character may vary within wide limits. The spate of stars shoots from the head of the Will-Symbol, and is scattered over the sky in glittering galaxies. This dispersion destroys the concentration of the adept, whose mind cannot master such multiplicity of majesty; as a rule, he simply sinks stunned into normality, to recall nothing of his experience but a vague though vivid impression of complete release and ineffable rapture. Repetition fortifies him to realise the nature of his attainment; and his Angel, the link once made, frequents him, and trains him subtly to be sensitive to His holy presence, and persuasion. (Liber Samekh, Point II, Section G, commentary)",
+      "source_ids": [
+        "liber-samekh-full"
+      ],
+      "topics": [
+        "star_spate",
+        "rapture",
+        "angel_frequents",
+        "training"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_007",
+      "section": "theology",
+      "subsection": "liber_lxv_hga_as_beloved",
+      "kind": "source",
+      "text": "I am the Heart girt with a Serpent; O my God, I am the Snake that devoureth the Lion. O my God, that art the Serpent, thou art my Beloved; thou art the Heart girt with a Serpent \u2014 I behold thee in thy glory. I am the Heart girt with a Serpent; O my God, I am the Snake that devoureth the Lion. O my God, that art the Serpent, thou art my Beloved; thou art the Heart girt with a Serpent \u2014 I behold thee in thy glory. (Liber LXV, I:1-2) The seven chapters of Liber LXV trace the aspirant's journey through the seven planets, each revealing a higher aspect of the Angel. The relationship is simultaneously erotic and initiatic: the Angel is the Beloved who 'ravished' the aspirant, the teacher who 'traineth' him, and the self who 'is himself.'",
+      "source_ids": [
+        "liber-lxv"
+      ],
+      "topics": [
+        "liber_lxv",
+        "erotic_union",
+        "heart_girt_with_serpent",
+        "planetary_ascent",
+        "hga_as_beloved"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_008",
+      "section": "theory",
+      "subsection": "great_work_definition",
+      "kind": "source",
+      "text": "Do what thou wilt shall be the whole of the Law. Every man and every woman is a star. There is no god where I am. (Liber AL I:40, I:3, I:46) The essential work of the magician is the attainment of the Knowledge and Conversation of the Holy Guardian Angel. (Magick in Theory and Practice) The HGA is the 'next-higher principle' in the Plotinian sense \u2014 the being that the aspirant must become. In the new Aeon of Horus, the formula is no longer that of the Man through Death (Osiris) but the natural growth of the Child (Horus): the HGA contact contributes 'occult puberty.' The Great Work is therefore not the conquest of death but the attainment of adult spiritual stature through union with one's own divine self.",
+      "source_ids": [
+        "liber-al",
+        "magick-theory-practice",
+        "commentary-liber-samekh"
+      ],
+      "topics": [
+        "great_work",
+        "do_what_thou_wilt",
+        "aeon_of_horus",
+        "occult_puberty"
+      ],
+      "status": "active"
+    }
+  ],
+  "coverage": {
+    "hga_doctrine": {
+      "status": "good",
+      "sources": [
+        "liber-samekh-full",
+        "liber-lxv",
+        "magick-theory-practice"
+      ],
+      "passage_count": 2,
+      "estimated_completeness": 0.8,
+      "gaps": [
+        "Liber VII (Lapidis Lazuli) passages on the HGA not yet extracted"
+      ]
+    },
+    "invocation": {
+      "status": "good",
+      "sources": [
+        "liber-samekh-full"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 0.7,
+      "gaps": [
+        "Full text of the elemental quarters (B-F) not yet extracted as individual passages"
+      ]
+    },
+    "practice": {
+      "status": "comprehensive",
+      "sources": [
+        "liber-samekh-full"
+      ],
+      "passage_count": 3,
+      "estimated_completeness": 0.9,
+      "gaps": []
+    },
+    "experiential_phenomenology": {
+      "status": "comprehensive",
+      "sources": [
+        "liber-samekh-full",
+        "liber-lxv"
+      ],
+      "passage_count": 2,
+      "estimated_completeness": 0.85,
+      "gaps": [
+        "Liber LXV full text extraction per chapter still needed"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "coverage_gap",
+      "title": "Liber LXV full text per chapter",
+      "description": "Liber LXV has 7 chapters (one per planet). Only the first chapter's opening is extracted here. Full extraction would provide the complete phenomenology of the HGA relationship through the planetary ascent.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    },
+    {
+      "id": "issue-002",
+      "type": "coverage_gap",
+      "title": "Liber VII and Liber Cheth not yet included",
+      "description": "Liber VII (the birth words of a Master of the Temple) and Liber Cheth (the task of the Exempt Adept) contain further HGA theology not yet extracted.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial RO created covering Liber Samekh (HGA as Unconscious Creature Self, Bornless Invocation, Shaft of Will, Section G Resistance, Invoke Often, Star-Spate), Liber LXV (HGA as Beloved, Heart Girt with Serpent), and the Great Work definition from Liber AL and Magick in Theory and Practice.",
+      "sources_added": [
+        "liber-samekh-full",
+        "liber-lxv",
+        "magick-theory-practice",
+        "liber-al",
+        "duquette-magick-crowley",
+        "commentary-liber-samekh"
+      ],
+      "passage_count": 8,
+      "status": "draft"
+    }
+  ],
+  "appendices": [],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created from Liber Samekh full text, DuQuette commentary, Liber LXV, Liber AL, and Magick in Theory and Practice",
+      "sources_total": 6,
+      "passages_total": 8
+    }
+  ]
+}

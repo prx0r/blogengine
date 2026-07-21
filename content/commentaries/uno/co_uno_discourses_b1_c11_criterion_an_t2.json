@@ -1,0 +1,57 @@
+{
+  "co_id": "co:uno_discourses_b1_c11_criterion_an_t2",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "discourses_b1_c11_criterion_analogy",
+  "turn_index": 2,
+  "lineage": "Realist",
+  "student_state": "following_logic",
+  "behavior_tags": [
+    "simple_compliance"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_03",
+    "function_name": "RM_03",
+    "mechanism_shape": "COMPARISON_CONTRAST",
+    "teaching_actions": [
+      "transfers_analogy"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.35,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_02",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "request_clarification",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "'The sight' and 'The touch' are easy. 'What criterion for good/bad' is hard because there's no obvious sense organ. They'll probably say 'I do not know.' That's the right answer—ethics requires something beyond sensation. The existential stakes question ('is ignorance here a small harm?') will land harder after they've admitted ignorance. Setup almost complete.",
+  "accumulated_insight": "T3: Pattern established: criterion→domain (sight→color, touch→temperature). Now the transfer to ethics. They're compliant but not yet thinking. The 'I do not know' is the goal—it's honest and creates the opening.",
+  "abstract_pattern": "",
+  "visible_response": "And if about hot and cold, and hard and soft, what criterion?\n\nWell then, since we are inquiring about things which are according to nature, and those which are done rightly or not rightly, what kind of criterion do you think that we should employ?",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:kybalion",
+    "ro:grimoires-decoded",
+    "ro:hermes-proof-system"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

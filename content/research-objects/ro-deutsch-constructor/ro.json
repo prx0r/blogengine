@@ -1,0 +1,102 @@
+{
+  "ro_id": "ro:deutsch-constructor",
+  "schema_version": 1,
+  "title": "David Deutsch \u2014 Constructor Theory and Quantum Computation (Collected)",
+  "subtitle": "5 papers on constructor theory, the fabric of reality, and the quantum theory of computation \u2014 the constraint space grounding",
+  "family": "thinker-topic",
+  "status": "stub",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "Constructor theory expresses physical laws exclusively as which transformations are possible vs impossible \u2014 the formal grounding of the constraint space (S, C, A) and the basis for understanding w...",
+    "scope": "Covers constructor theory, quantum computation, the fabric of reality, and the Church-Turing principle.",
+    "traditions": [
+      "physics",
+      "constructor-theory",
+      "quantum-computation"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "deutsch-collected",
+      "tier": 1,
+      "label": "David Deutsch \u2014 Collected Papers. 5 PDFs in /root/projects/blog/library/science/authors/deutsch/.",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "constructor_theory",
+        "quantum_turing",
+        "counterfactuals",
+        "fabric_of_reality"
+      ],
+      "sections_affected": [
+        "theory"
+      ],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "theory",
+      "subsection": "constructor_theory_as_constraint_space",
+      "kind": "synthesis",
+      "text": "Constructor theory replaces dynamical laws with counterfactual principles: certain tasks are possible, others are impossible. The constructor is a physical system that can perform a task repeatedly. The 'possible/impossible' partition IS the constraint relation C. The set of all constructors IS the attractor set A. This is the most fundamental grounding available for the (S, C, A) framework \u2014 Deutsch has formalized the structure of the constraint space at the level of physical law.",
+      "source_ids": [
+        "deutsch-collected"
+      ],
+      "topics": [
+        "constructor_theory",
+        "constraint_space",
+        "possibility",
+        "impossibility"
+      ],
+      "status": "active"
+    }
+  ],
+  "coverage": {
+    "theory": {
+      "status": "minimal",
+      "sources": [
+        "deutsch-collected"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 0.2,
+      "gaps": [
+        "Full extraction of all 5 papers needed"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "coverage_gap",
+      "title": "Full extraction needed",
+      "description": "5 papers collected.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial RO.",
+      "sources_added": [
+        "deutsch-collected"
+      ],
+      "passage_count": 1,
+      "status": "draft"
+    }
+  ],
+  "appendices": [],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created.",
+      "sources_total": 1,
+      "passages_total": 1
+    }
+  ]
+}

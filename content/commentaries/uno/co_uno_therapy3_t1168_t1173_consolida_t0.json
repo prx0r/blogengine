@@ -1,0 +1,54 @@
+{
+  "co_id": "co:uno_therapy3_t1168_t1173_consolida_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3_t1168_t1173_consolidation_rage_anxiety_distinction",
+  "turn_index": 0,
+  "lineage": "Therapeutic",
+  "student_state": "receptive_learning",
+  "behavior_tags": [
+    "cognitive_alignment"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_02",
+    "function_name": "RM_02",
+    "mechanism_shape": "CAUSAL_CHAIN",
+    "teaching_actions": [
+      "locates_pathology",
+      "defines_causality"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.15,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.35,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_01",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_02",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "They're mixing rage and anxiety. Teacher separates: rage is the REAL feeling about what happened, anxiety is what you feel when you defend against rage. This is signal vs defense distinction. Rage = appropriate response to abuse. Anxiety = body's way of blocking rage. Hypothesis: once they distinguish, they'll ask how to tell difference or what to do with rage. The distinction gives them diagnostic tool.",
+  "accumulated_insight": "T1: Student conflates rage and anxiety - experiencing them as same. Teacher distinguishes: rage = primary feeling about abuse, anxiety = defense against rage. Uses comparison_contrast to separate signal (rage) from defense (anxiety). Predicting ask_deeper_question because distinctions typically produce questions about which is which.",
+  "abstract_pattern": "",
+  "visible_response": "Your problem is not that you were enraged. Your problem was that, when you felt this enraged, it aroused tremendous anxiety.",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

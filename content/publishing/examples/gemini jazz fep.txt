@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Free Energy Principle: A Jazzy Harmony</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.77/Tone.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow: hidden;
+            background: #0d0c1d; /* Deep blue-black */
+        }
+        canvas {
+            display: block;
+            background: transparent;
+        }
+        #container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #canvas-wrapper {
+            position: relative;
+            width: 95%;
+            max-width: 1200px;
+            aspect-ratio: 16/9;
+            box-shadow: 0 0 50px rgba(255, 215, 0, 0.25);
+            border-radius: 1rem;
+            overflow: hidden;
+            background: radial-gradient(ellipse at center, #16213e 0%, #0d0c1d 70%);
+        }
+        #mainCanvas {
+            width: 100%;
+            height: 100%;
+        }
+        #subtitles {
+            position: absolute;
+            bottom: 5%;
+            left: 5%;
+            right: 5%;
+            color: #eee2cc;
+            font-size: 1.8vw;
+            text-align: center;
+            background: rgba(13, 12, 29, 0.85);
+            padding: 12px 24px;
+            border-radius: 12px;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            backdrop-filter: blur(10px);
+        }
+        @media (max-width: 768px) { #subtitles { font-size: 2.8vw; } }
+        @media (max-width: 480px) { #subtitles { font-size: 3.8vw; } }
+        #equation {
+            position: absolute;
+            top: 3%;
+            left: 3%;
+            color: #ffd700;
+            font-size: 1.6vw;
+            font-family: 'Courier New', monospace;
+            background: rgba(13, 12, 29, 0.9);
+            padding: 10px 16px;
+            border-radius: 8px;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            border: 1px solid #ffd700;
+        }
+        @media (max-width: 768px) { #equation { font-size: 2.4vw; } }
+        #harmony-meter {
+            position: absolute;
+            top: 3%;
+            right: 3%;
+            color: #ffd700;
+            font-size: 1.4vw;
+            font-weight: bold;
+            background: rgba(13, 12, 29, 0.9);
+            padding: 12px 18px;
+            border-radius: 8px;
+            border: 1px solid #ffd700;
+            text-align: center;
+        }
+        .harmony-bar {
+            width: 80px;
+            height: 8px;
+            background: #333;
+            border-radius: 4px;
+            margin: 6px 0;
+            overflow: hidden;
+        }
+        .harmony-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #ff4757 0%, #ffa726 50%, #4caf50 100%);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+        #replayButton {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 1rem 2rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #0d0c1d;
+            background: linear-gradient(45deg, #ffd700, #ffab00);
+            border: none;
+            border-radius: 0.75rem;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(255, 215, 0, 0.4);
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+        }
+        #replayButton:hover {
+            transform: translate(-50%, -50%) scale(1.05);
+            box-shadow: 0 6px 25px rgba(255, 215, 0, 0.6);
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="canvas-wrapper">
+            <canvas id="mainCanvas"></canvas>
+            <div id="subtitles"></div>
+            <div id="equation"></div>
+            <div id="harmony-meter">
+                <div>Groove Level</div>
+                <div class="harmony-bar">
+                    <div class="harmony-fill" id="harmonyFill"></div>
+                </div>
+                <div>F = <span id="fValue">1.00</span></div>
+            </div>
+            <button id="replayButton">Find the Groove</button>
+        </div>
+    </div>
+    <script>
+        const canvas = document.getElementById('mainCanvas');
+        const ctx = canvas.getContext('2d');
+        const subtitlesEl = document.getElementById('subtitles');
+        const equationEl = document.getElementById('equation');
+        const replayButton = document.getElementById('replayButton');
+        const wrapper = document.getElementById('canvas-wrapper');
+        const fValueSpan = document.getElementById('fValue');
+        const harmonyFill = document.getElementById('harmonyFill');
+        
+        let width, height;
+        let chaosShards = [];
+        let saxNotes = [];
+        let bassPulses = [];
+        let piano = { keys: [] };
+        let brain = { x: 0, y: 0, facets: [], understanding: 0 };
+        
+        let audioReady = false;
+        let pianoSynth, bassSynth, saxSynth;
+        let lastChordTime = 0;
+
+        const AUTUMN_LEAVES = [
+            { name: "Cm7", chord: ["C4", "Eb4", "G4", "Bb4"], bass: "C2", sax: "G4", keys: [2,5,8,11] },
+            { name: "F7", chord: ["F4", "A4", "C5", "Eb5"], bass: "F2", sax: "F4", keys: [7,10,13,16] },
+            { name: "Bbmaj7", chord: ["Bb3", "D4", "F4", "A4"], bass: "Bb1", sax: "D4", keys:[0,3,7,10] },
+            { name: "Ebmaj7", chord: ["Eb4", "G4", "Bb4", "D5"], bass: "Eb2", sax: "C5", keys:[5,8,11,14] },
+            { name: "Am7b5", chord: ["A3", "C4", "Eb4", "G4"], bass: "A1", sax: "G4", keys:[10,13,16,19] },
+            { name: "D7", chord: ["D4", "F#4", "A4", "C5"], bass: "D2", sax: "F#4", keys:[3,6,10,13] },
+            { name: "Gm", chord: ["G3", "Bb3", "D4"], bass: "G1", sax: "D4", keys:[8,11,15] }
+        ];
+        const ALL_NOTES = ['C3', 'D3', 'E3', 'F3', 'G3', 'A3', 'B3', 'C4', 'D4', 'E4', 'F4', 'G4', 'A4', 'B4', 'C5'];
+
+        let animationState = {
+            startTime: 0,
+            currentTime: 0,
+            isRunning: false,
+            progressionIndex: 0,
+            lastEventTime: 0
+        };
+
+        const DURATION = 80000;
+        
+        const NARRATION = [
+            { t: 1, text: "A jazz trio starts to play... but something's not right." },
+            { t: 6, text: "Dissonant sounds, missed cues. The band is lost, full of surprise." },
+            { t: 12, text: "This chaos is high 'Free Energy' - their internal models don't match." },
+            { t: 18, text: "But the bassist finds a steady rhythm... a pattern emerges." },
+            { t: 24, text: "The musicians start predicting each other, building a shared model." },
+            { t: 31, text: "Each correct chord, each resolved melody, lowers the Free Energy." },
+            { t: 38, text: "Their perception sharpens, anticipating the next change." },
+            { t: 45, text: "Their actions align, a conversation between instruments." },
+            { t: 52, text: "The groove locks in. Chaos transforms into the swing of jazz." },
+            { t: 60, text: "Perfect prediction, perfect harmony. Free Energy is minimized." },
+            { t: 68, text: "This is a system finding its order, just like the brain, every moment." },
+            { t: 75, text: "From dissonance to resolution, through the Free Energy Principle." }
+        ];
+
+        function easeInOutCubic(t) { return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; }
+        
+        class ChaosShard {
+            constructor(x, y) {
+                this.x = x; this.y = y; this.vx = (Math.random() - 0.5) * 6; this.vy = (Math.random() - 0.5) * 6;
+                this.size = Math.random() * 15 + 5; this.angle = Math.random() * Math.PI * 2;
+                this.rotationSpeed = (Math.random() - 0.5) * 0.1;
+                this.hue = 0 + Math.random() * 40; this.life = 1.0;
+            }
+            update() {
+                this.x += this.vx; this.y += this.vy; this.angle += this.rotationSpeed; this.life -= 0.01;
+                if (this.x < 0 || this.x > width) this.vx *= -1; if (this.y < 0 || this.y > height) this.vy *= -1;
+            }
+            draw() {
+                ctx.save(); ctx.translate(this.x, this.y); ctx.rotate(this.angle);
+                ctx.strokeStyle = `hsla(${this.hue}, 100%, 60%, ${this.life})`;
+                ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(0, -this.size);
+                for (let i = 1; i <= 5; i++) { ctx.lineTo(this.size * Math.sin(i * Math.PI * 2 / 5), -this.size * Math.cos(i * Math.PI * 2 / 5)); }
+                ctx.closePath(); ctx.stroke(); ctx.restore();
+            }
+        }
+        
+        class SaxNote {
+             constructor(x, y) {
+                this.x = x; this.y = y; this.history = [{x:x, y:y}];
+                this.vx = (Math.random() - 0.5) * 4; this.vy = -2 - Math.random()*2;
+                this.life = 1.0; this.hue = 45;
+            }
+            update(harmonyLevel) {
+                this.x += this.vx; this.y += this.vy;
+                this.vx += (Math.random() - 0.5) * (1-harmonyLevel);
+                this.vy *= 0.99;
+                this.history.push({x:this.x, y:this.y});
+                if(this.history.length > 20) this.history.shift();
+                this.life -= 0.01;
+            }
+            draw(harmonyLevel) {
+                ctx.save();
+                ctx.lineWidth = 2 + harmonyLevel * 4;
+                ctx.lineCap = "round";
+                const gradient = ctx.createLinearGradient(this.history[0].x, this.history[0].y, this.x, this.y);
+                gradient.addColorStop(0, `hsla(${this.hue}, 100%, 70%, 0)`);
+                gradient.addColorStop(1, `hsla(${this.hue}, 100%, 70%, ${this.life})`);
+                ctx.strokeStyle = gradient;
+                ctx.shadowBlur = 15; ctx.shadowColor = `hsla(${this.hue}, 100%, 70%, 0.5)`;
+                ctx.beginPath();
+                ctx.moveTo(this.history[0].x, this.history[0].y);
+                for (let i = 1; i < this.history.length; i++) {
+                    ctx.lineTo(this.history[i].x, this.history[i].y);
+                }
+                ctx.stroke(); ctx.restore();
+            }
+        }
+
+        class BassPulse {
+            constructor() {
+                this.x = Math.random() * width; this.y = height;
+                this.radius = 0; this.maxRadius = width * 0.1;
+                this.opacity = 1.0; this.hue = 260 + Math.random() * 40; // Deep purples
+            }
+             update() {
+                this.radius += 1.5; this.opacity = 1 - (this.radius / this.maxRadius);
+            }
+            draw() {
+                if(this.opacity <= 0) return;
+                ctx.save();
+                const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.radius);
+                gradient.addColorStop(0, `hsla(${this.hue}, 90%, 70%, ${this.opacity * 0.5})`);
+                gradient.addColorStop(1, `hsla(${this.hue}, 90%, 70%, 0)`);
+                ctx.fillStyle = gradient;
+                ctx.beginPath(); ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2); ctx.fill();
+                ctx.restore();
+            }
+        }
+
+        function setupPiano() {
+            piano.keys = [];
+            const whiteKeyCount = 21;
+            const whiteKeyWidth = width * 0.95 / whiteKeyCount;
+            const blackKeyWidth = whiteKeyWidth * 0.6;
+            const blackKeyHeight = height * 0.12;
+            const startX = width * 0.025;
+
+            for (let i = 0; i < whiteKeyCount; i++) {
+                piano.keys.push({type: 'white', x: startX + i * whiteKeyWidth, width: whiteKeyWidth, pressed: false, glow: 0});
+            }
+            const blackKeyPattern = [1, 1, 0, 1, 1, 1, 0];
+            for (let i = 0; i < whiteKeyCount - 1; i++) {
+                if (blackKeyPattern[i % 7] === 1 || blackKeyPattern[i % 7] === 1) {
+                     piano.keys.push({type: 'black', x: startX + (i + 1) * whiteKeyWidth - blackKeyWidth/2, width: blackKeyWidth, height: blackKeyHeight, pressed: false, glow: 0});
+                }
+            }
+            piano.keys.sort((a,b) => a.type === 'black' ? 1 : -1);
+        }
+
+        function drawPiano(harmonyLevel) {
+            const keyHeight = height * 0.2; const keyY = height - keyHeight;
+            piano.keys.forEach((key) => {
+                ctx.save();
+                const jitterX = (1 - harmonyLevel) * (Math.random() - 0.5) * 3;
+                if (key.type === 'white') {
+                    ctx.fillStyle = key.pressed ? '#fff' : '#ddd';
+                    ctx.fillRect(key.x + jitterX, keyY, key.width - 1, keyHeight);
+                    if (key.glow > 0) {
+                        ctx.fillStyle = `hsla(45, 100%, 80%, ${key.glow * 0.7})`;
+                        ctx.fillRect(key.x + jitterX, keyY, key.width - 1, keyHeight);
+                    }
+                } else { // Black keys
+                    ctx.fillStyle = key.pressed ? '#555' : '#222';
+                    ctx.fillRect(key.x + jitterX, keyY, key.width, key.height);
+                    if (key.glow > 0) {
+                        ctx.fillStyle = `hsla(45, 100%, 60%, ${key.glow})`;
+                        ctx.fillRect(key.x + jitterX, keyY, key.width, key.height);
+                    }
+                }
+                key.glow = Math.max(0, key.glow - 0.05);
+                ctx.restore();
+            });
+        }
+
+        function setupBrain() {
+             brain.facets = [];
+            for (let i = 0; i < 20; i++) {
+                brain.facets.push({
+                    angle: Math.random() * Math.PI * 2,
+                    radius: Math.random() * (width * 0.08),
+                    speed: (Math.random() - 0.5) * 0.01
+                });
+            }
+        }
+        function drawBrain(harmonyLevel) {
+            brain.x = width * 0.5; brain.y = height * 0.3;
+            const baseRadius = width * 0.08;
+            ctx.save();
+            ctx.translate(brain.x, brain.y);
+            brain.facets.forEach(facet => {
+                const alignment = easeInOutCubic(harmonyLevel);
+                const currentAngle = facet.angle * (1 - alignment);
+                facet.angle += facet.speed * (1-alignment);
+
+                const x1 = Math.cos(currentAngle) * facet.radius;
+                const y1 = Math.sin(currentAngle) * facet.radius;
+                const x2 = Math.cos(currentAngle + 0.5) * (facet.radius + (1-alignment) * 10);
+                const y2 = Math.sin(currentAngle + 0.5) * (facet.radius + (1-alignment) * 10);
+                
+                ctx.strokeStyle = `hsla(45, 100%, ${60 + alignment * 30}%, ${0.2 + alignment * 0.8})`;
+                ctx.lineWidth = 1 + alignment * 2;
+                ctx.beginPath(); ctx.moveTo(x1, y1); ctx.lineTo(x2, y2); ctx.stroke();
+            });
+            ctx.restore();
+        }
+       
+        function playSounds(chordData, isHarmonic, harmonyLevel) {
+            if (!audioReady) return;
+            const now = Tone.now();
+            if (now - lastChordTime < 0.1) return;
+            lastChordTime = now;
+            
+            if (isHarmonic) {
+                pianoSynth.triggerAttackRelease(chordData.chord, "1n");
+                if (harmonyLevel > 0.3) {
+                    bassSynth.triggerAttackRelease(chordData.bass, "2n", now, harmonyLevel * 0.8);
+                }
+                if (harmonyLevel > 0.6) {
+                    saxSynth.triggerAttackRelease(chordData.sax, "1n", now, harmonyLevel * 0.6);
+                }
+            } else {
+                pianoSynth.triggerAttackRelease(chordData.chord, "8n", now, 0.5);
+            }
+        }
+
+        function update(time) {
+            if (!animationState.isRunning) return;
+            animationState.currentTime = time - animationState.startTime;
+            const progress = Math.min(animationState.currentTime / DURATION, 1);
+            
+            ctx.clearRect(0, 0, width, height);
+            
+            piano.keys.forEach(key => key.pressed = false);
+            
+            let harmonyLevel = 0; let freeEnergy = 1.0;
+            
+            const playAction = (getChordData, isHarmonic) => {
+                const chordData = getChordData();
+                playSounds(chordData, isHarmonic, harmonyLevel);
+                
+                (chordData.keys || []).forEach(keyIndex => {
+                    const key = piano.keys[keyIndex];
+                    if(key){ key.pressed = true; key.glow = 1.0; }
+                });
+                
+                const avgKeyX = (chordData.keys || []).reduce((sum, ki) => sum + (piano.keys[ki]?.x || 0), 0) / (chordData.keys?.length || 1);
+                
+                if (isHarmonic) {
+                    if (harmonyLevel > 0.3) bassPulses.push(new BassPulse());
+                    if (harmonyLevel > 0.6) saxNotes.push(new SaxNote(avgKeyX, height * 0.7));
+                } else {
+                    for (let i = 0; i < 3; i++) { chaosShards.push(new ChaosShard(avgKeyX, height * 0.5)); }
+                }
+            };
+            
+            let phaseStart, phaseDuration, baseHarmony, harmonyGain, equationText, timeInterval;
+            
+            if (progress < 0.25) {
+                phaseStart = 0; phaseDuration = 0.25; baseHarmony = 0; harmonyGain = 0;
+                equationText = `F = Max Surprise`; timeInterval = 500;
+                if (animationState.currentTime - animationState.lastEventTime > timeInterval) {
+                     playAction(() => {
+                        const chord = [ALL_NOTES[Math.floor(Math.random()*ALL_NOTES.length)], ALL_NOTES[Math.floor(Math.random()*ALL_NOTES.length)]];
+                        const keys = chord.map(() => Math.floor(Math.random()*piano.keys.length));
+                        return {chord, keys};
+                    }, false);
+                    animationState.lastEventTime = animationState.currentTime;
+                }
+            } else if (progress < 0.55) {
+                phaseStart = 0.25; phaseDuration = 0.3; baseHarmony = 0; harmonyGain = 0.4;
+                equationText = `F = Prediction Error`; timeInterval = 2000;
+                 if (animationState.currentTime - animationState.lastEventTime > timeInterval) {
+                     if (Math.random() < 0.7) {
+                        playAction(() => AUTUMN_LEAVES[animationState.progressionIndex % AUTUMN_LEAVES.length], true);
+                        animationState.progressionIndex++;
+                    } else {
+                         playAction(() => {
+                            const chord = [ALL_NOTES[Math.floor(Math.random()*ALL_NOTES.length)]];
+                            return {chord, keys: [Math.floor(Math.random()*piano.keys.length)]};
+                        }, false);
+                    }
+                    animationState.lastEventTime = animationState.currentTime;
+                }
+            } else {
+                 if(progress < 0.85){
+                    phaseStart = 0.55; phaseDuration = 0.3; baseHarmony = 0.4; harmonyGain = 0.5;
+                    equationText = `∂F/∂(μ,a) ≈ 0`; timeInterval = 2000;
+                } else {
+                    phaseStart = 0.85; phaseDuration = 0.15; baseHarmony = 0.9; harmonyGain = 0.1;
+                    equationText = `F ≈ 0`; timeInterval = 1500;
+                }
+                 if (animationState.currentTime - animationState.lastEventTime > timeInterval) {
+                     playAction(() => AUTUMN_LEAVES[animationState.progressionIndex % AUTUMN_LEAVES.length], true);
+                     animationState.progressionIndex++;
+                     animationState.lastEventTime = animationState.currentTime;
+                }
+            }
+            
+            const phaseProgress = easeInOutCubic((progress - phaseStart) / phaseDuration);
+            harmonyLevel = baseHarmony + phaseProgress * harmonyGain; freeEnergy = 1.0 - harmonyLevel;
+            brain.understanding = harmonyLevel;
+            equationEl.innerHTML = equationText;
+            if(progress > 0.25) equationEl.style.opacity = 1; else equationEl.style.opacity = phaseProgress;
+
+            if (progress >= 1) {
+                animationState.isRunning = false; replayButton.style.opacity = 1; replayButton.style.visibility = 'visible';
+                equationEl.style.opacity = 0.5;
+            }
+            
+            chaosShards = chaosShards.filter(s => { s.update(); s.draw(); return s.life > 0; });
+            saxNotes = saxNotes.filter(n => { n.update(harmonyLevel); n.draw(harmonyLevel); return n.life > 0; });
+            bassPulses = bassPulses.filter(p => { p.update(); p.draw(); return p.opacity > 0; });
+            
+            drawBrain(harmonyLevel); drawPiano(harmonyLevel);
+            
+            fValueSpan.textContent = freeEnergy.toFixed(2);
+            harmonyFill.style.width = (harmonyLevel * 100) + '%';
+            
+            let currentNarration = "";
+            for (let i = NARRATION.length - 1; i >= 0; i--) {
+                if (animationState.currentTime >= NARRATION[i].t * 1000) { currentNarration = NARRATION[i].text; break; }
+            }
+            if (subtitlesEl.innerText !== currentNarration) {
+                subtitlesEl.style.opacity = 0;
+                setTimeout(() => {
+                    subtitlesEl.innerText = currentNarration;
+                    subtitlesEl.style.opacity = 1;
+                }, 250);
+            }
+            if (progress >= 1) { subtitlesEl.style.opacity = 0; }
+            requestAnimationFrame(update);
+        }
+
+        function setup() {
+            const rect = wrapper.getBoundingClientRect(); width = rect.width; height = rect.height;
+            canvas.width = width; canvas.height = height; setupPiano(); setupBrain();
+            chaosShards = []; saxNotes = []; bassPulses = []; brain.understanding = 0;
+            animationState.progressionIndex = 0; animationState.lastEventTime = 0;
+        }
+
+        function startAnimation() {
+            if (!audioReady) {
+                Tone.start();
+                pianoSynth = new Tone.PolySynth(Tone.FMSynth, {
+                    harmonicity: 5, modulationIndex: 10,
+                    envelope: { attack: 0.01, decay: 0.4, sustain: 0.1, release: 1.4 },
+                    modulationEnvelope: { attack: 0.02, decay: 0.2, sustain: 0, release: 0.8 }
+                }).toDestination();
+                pianoSynth.volume.value = -8;
+
+                bassSynth = new Tone.MonoSynth({
+                    oscillator: { type: "fmsquare", harmonicity: 0.5 },
+                    envelope: { attack: 0.01, decay: 0.1, sustain: 0.4, release: 0.8 },
+                    filterEnvelope: { attack: 0.01, decay: 0.1, sustain: 0.2, release: 1, baseFrequency: 100, octaves: 4 }
+                }).toDestination();
+                bassSynth.volume.value = -4;
+
+                saxSynth = new Tone.FMSynth({
+                    harmonicity: 1.5, modulationIndex: 20,
+                    envelope: { attack: 0.1, decay: 0.2, sustain: 0.3, release: 0.8 },
+                    modulationEnvelope: { attack: 0.05, decay: 0.2, sustain: 0.1, release: 0.5 }
+                }).toDestination();
+                saxSynth.volume.value = -6;
+
+                audioReady = true;
+            }
+            setup();
+            animationState.startTime = performance.now(); animationState.isRunning = true;
+            subtitlesEl.style.opacity = 0; equationEl.style.opacity = 0;
+            replayButton.style.opacity = 0; replayButton.style.visibility = 'hidden';
+            requestAnimationFrame(update);
+        }
+
+        replayButton.addEventListener('click', startAnimation);
+        window.addEventListener('resize', () => { if (animationState.isRunning) startAnimation(); else setup(); });
+                
+        window.onload = () => {
+            setup();
+            replayButton.style.opacity = 1;
+            replayButton.style.visibility = 'visible';
+            subtitlesEl.innerText = "Click to experience the journey from dissonance to groove.";
+            subtitlesEl.style.opacity = 1;
+        };
+    </script>
+</body>
+</html>

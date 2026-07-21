@@ -1,0 +1,57 @@
+{
+  "co_id": "co:uno_meno_t131_t136_anytus_triggere_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "meno_t131_t136_anytus_triggered_sophist_hatred",
+  "turn_index": 0,
+  "lineage": "Socratic",
+  "student_state": "defensive_rationalization",
+  "behavior_tags": [
+    "pushes_back"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_01",
+    "function_name": "UM_01",
+    "mechanism_shape": "ABSTRACT_TO_CONCRETE",
+    "teaching_actions": [
+      "checks_for_direct_experience"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.5,
+      "depth": 0.62,
+      "meta_mode": 0.75,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_03",
+      "meta_mode_discrete": "MM_02"
+    },
+    "predicted_impact": "resist_intellectually",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "meno_t131_t136_anytus_triggered_sophist_hatred T1: Using abstract_to_concrete_check/UM_01 with intensity=PR_03, intimacy=IN_02, attunement=AT_02 on 'No, and I do not need to know'. Response shows pushing back to defend a stance; expecting resist_intellectually next. If not, lower PR and re-anchor the hinge.",
+  "accumulated_insight": "T1: Student says 'No, and I do not need to know them to know what they are.'?pushing back to defend a stance (defensive_rationalization) via pushes_back. Focus: No, and I do not need to know. The abstract_to_concrete_check/UM_01 move applies shift their frame: standard function application. Pattern: resist_intellectually. Confidence medium.",
+  "abstract_pattern": "",
+  "visible_response": "Yet you have never met any of them nor spoken to any of them?",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:proclus-elements",
+    "ro:platonism-decoded",
+    "ro:chaldean-oracles"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

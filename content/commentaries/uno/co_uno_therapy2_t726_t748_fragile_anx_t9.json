@@ -1,0 +1,52 @@
+{
+  "co_id": "co:uno_therapy2_t726_t748_fragile_anx_t9",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy2_t726_t748_fragile_anxiety_regulation",
+  "turn_index": 9,
+  "lineage": "Therapeutic",
+  "student_state": "unknown",
+  "behavior_tags": [],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_02",
+    "function_name": "RM_02",
+    "mechanism_shape": "SYSTEM_DYNAMICS",
+    "teaching_actions": [
+      "summarizes_symptoms",
+      "links_to_underlying_affect"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.62,
+      "attunement": 0.8,
+      "style": 0.65,
+      "depth": 0.38,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_03",
+      "style_discrete": "LS_04",
+      "depth_discrete": "PD_02",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "no_clear_effect",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "Turn 10: 'I think it is clear, but people do tell me that I seem slow.'. Student now in unknown. Continuing with system_dynamics approach. Building on previous turn's foundation.",
+  "accumulated_insight": "T10: Student: 'I think it is clear, but people do tell me that I seem slow.'. Shift from unknown to unknown. Teacher applies system_dynamics mechanism with summarizes symptoms, links to underlying affect. Mid-episode progression in REMAKING phase.",
+  "abstract_pattern": "",
+  "visible_response": "We see that you are very anxious. You have anxiety in your stomach, blurred vision, ringing ears, and difficulty forming your thoughts. All this is anxiety, and it has to do with coming here to see me today. So there must be a lot of feeling underneath that is triggering all this anxiety.",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

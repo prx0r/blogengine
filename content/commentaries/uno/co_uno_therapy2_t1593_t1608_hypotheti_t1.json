@@ -1,0 +1,53 @@
+{
+  "co_id": "co:uno_therapy2_t1593_t1608_hypotheti_t1",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy2_t1593_t1608_hypothetical_speech",
+  "turn_index": 1,
+  "lineage": "Therapeutic",
+  "student_state": "evasive",
+  "behavior_tags": [
+    "non_commitment"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_01",
+    "function_name": "UM_01",
+    "mechanism_shape": "NONE",
+    "teaching_actions": [
+      "repeats_binary"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.15,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_01",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "no_clear_effect",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "Turn 2: 'It could be.'. Student now in evasive. Continuing with none approach. Building on previous turn's foundation.",
+  "accumulated_insight": "T2: Student: 'It could be.'. Shift from hesitant to evasive. Teacher applies none mechanism with repeats binary. Mid-episode progression in UNMAKING phase.",
+  "abstract_pattern": "",
+  "visible_response": "Again you say “could be.”\nEither it is the problem you want me to help you with or it isn’t.",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

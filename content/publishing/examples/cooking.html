@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AV Engine - Expressive Demonstration</title>
+    <!-- Imports for Three.js and post-processing addons -->
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.150.1/examples/jsm/"
+        }
+    }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
+    <style>
+        body { margin: 0; overflow: hidden; background: #000; font-family: 'Inter', sans-serif; color: white; }
+        canvas { display: block; }
+        #controls { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); z-index: 100; }
+        #debug { position: absolute; top: 1rem; left: 1rem; background: rgba(0,0,0,0.4); backdrop-filter: blur(5px); padding: 0.5rem 1rem; border-radius: 8px; font-size: 0.8rem; border: 1px solid rgba(255,255,255,0.1); }
+        button { background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); color: white; padding: 1rem 2.5rem; border-radius: 30px; cursor: pointer; font-size: 1rem; font-weight: 500; transition: all 0.2s ease; backdrop-filter: blur(10px); }
+        button:hover { background: rgba(255, 255, 255, 0.2); transform: translateY(-2px); }
+    </style>
+</head>
+<body>
+    <div id="debug">
+        <div>Kick: <span id="kickValue">0.00</span></div>
+        <div>Hats: <span id="hatsValue">0.00</span></div>
+        <div>Synth: <span id="synthValue">0.00</span></div>
+    </div>
+    <div id="controls">
+        <button id="playButton">▶ Experience</button>
+    </div>
+
+    <script type="module" id="enhanced-engine-script">
+        // This is a simplified stub of the full engine for demonstration.
+        // In a real project, this would be in its own file.
+        const EnhancedUniversalVisualMusicEngine = class EnhancedUniversalVisualMusicEngine {
+            constructor() {
+                this.emotionalSpace = { visualToEmotion: (vs) => ({ valence: (vs.color_brightness * 2) - 1, arousal: (vs.movement_speed - 1) * 0.5 }) };
+            }
+            translateVisualToMusical(visualState) {
+                return {
+                    metadata: {
+                        title: "Enhanced Visual-Music Translation",
+                        style: visualState.movement_speed > 1.2 ? 'Agitated' : 'Calm',
+                        emotionalTag: this.classifyEmotion(this.emotionalSpace.visualToEmotion(visualState)),
+                        chaosLevel: visualState.chaos_level.toFixed(2),
+                        fractalDepth: Math.round(visualState.intensity * 5)
+                    },
+                    harmony: {
+                        chord: `Complex chord based on chaos=${visualState.chaos_level.toFixed(2)}`,
+                        spectralContent: `Generated with inharmonicity from alignment=${visualState.geometric_alignment.toFixed(2)}`
+                    },
+                    rhythm: {
+                        pattern: `Granular rhythm based on density=${visualState.particle_density.toFixed(2)}`
+                    },
+                    emotional: this.emotionalSpace.visualToEmotion(visualState)
+                };
+            }
+            classifyEmotion({valence, arousal}) {
+                if(arousal > 0) return valence > 0 ? "Excitement" : "Distress";
+                return valence > 0 ? "Contentment" : "Sadness";
+            }
+        };
+        window.EnhancedUniversalVisualMusicEngine = EnhancedUniversalVisualMusicEngine;
+    </script>
+
+    <script type="module">
+        // Import Three.js and addons
+        import * as THREE from 'three';
+        import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
+        import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
+        import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
+
+        // A simple simplex noise implementation to avoid external dependencies
+        const SimplexNoise = new function() {
+            // ... (Simplex noise implementation code)
+            const F2 = 0.5 * (Math.sqrt(3.0) - 1.0), G2 = (3.0 - Math.sqrt(3.0)) / 6.0;
+            const grad3 = [[1,1,0],[-1,1,0],[1,-1,0],[-1,-1,0],[1,0,1],[-1,0,1],[1,0,-1],[-1,0,-1],[0,1,1],[0,-1,1],[0,1,-1],[0,-1,-1]];
+            const p = new Uint8Array(256);
+            for(let i=0; i<256; i++) p[i] = i;
+            let n;
+            for(let i=255; i>0; i--) { n = Math.floor((i+1)*Math.random()); const t = p[i]; p[i] = p[n]; p[n] = t; }
+            const perm = new Uint8Array(512);
+            for(let i=0; i<512; i++) perm[i] = p[i & 255];
+            this.noise = function(xin, yin, zin) {
+                let n0, n1, n2; let s = (xin+yin+zin) * (1/3);
+                let i = Math.floor(xin+s), j = Math.floor(yin+s), k = Math.floor(zin+s);
+                let t = (i+j+k) * (1/6);
+                let x0 = xin-i+t, y0 = yin-j+t, z0 = zin-k+t;
+                let i1, j1, k1, i2, j2, k2;
+                if(x0>=y0) { if(y0>=z0) { i1=1; j1=0; k1=0; i2=1; j2=1; k2=0; } else if(x0>=z0) { i1=1; j1=0; k1=0; i2=1; j2=0; k2=1; } else { i1=0; j1=0; k1=1; i2=1; j2=0; k2=1; } }
+                else { if(y0<z0) { i1=0; j1=0; k1=1; i2=0; j2=1; k2=1; } else if(x0<z0) { i1=0; j1=1; k1=0; i2=0; j2=1; k2=1; } else { i1=0; j1=1; k1=0; i2=1; j2=1; k2=0; } }
+                let x1 = x0 - i1 + (1/6), y1 = y0 - j1 + (1/6), z1 = z0 - k1 + (1/6);
+                let x2 = x0 - i2 + (2/6), y2 = y0 - j2 + (2/6), z2 = z0 - k2 + (2/6);
+                let x3 = x0 - 1 + 0.5, y3 = y0 - 1 + 0.5, z3 = z0 - 1 + 0.5;
+                let ii = i & 255, jj = j & 255, kk = k & 255;
+                let gi0 = perm[ii+perm[jj+perm[kk]]] % 12, gi1 = perm[ii+i1+perm[jj+j1+perm[kk+k1]]] % 12, gi2 = perm[ii+i2+perm[jj+j2+perm[kk+k2]]] % 12, gi3 = perm[ii+1+perm[jj+1+perm[kk+1]]] % 12;
+                let t0 = 0.6 - x0*x0 - y0*y0 - z0*z0; if(t0<0) n0 = 0; else { t0 *= t0; n0 = t0 * t0 * (grad3[gi0][0]*x0 + grad3[gi0][1]*y0 + grad3[gi0][2]*z0); }
+                let t1 = 0.6 - x1*x1 - y1*y1 - z1*z1; if(t1<0) n1 = 0; else { t1 *= t1; n1 = t1 * t1 * (grad3[gi1][0]*x1 + grad3[gi1][1]*y1 + grad3[gi1][2]*z1); }
+                let t2 = 0.6 - x2*x2 - y2*y2 - z2*z2; if(t2<0) n2 = 0; else { t2 *= t2; n2 = t2 * t2 * (grad3[gi2][0]*x2 + grad3[gi2][1]*y2 + grad3[gi2][2]*z2); }
+                return 32 * (n0 + n1 + n2);
+            };
+        };
+
+
+        const AudioAnalysisEngine = {
+            analyserNode: null, frequencyData: null, kick: null, hats: null, arp: null,
+            initialize() { /* ... unchanged ... */
+                const audioContext = Tone.getContext().rawContext;
+                this.analyserNode = audioContext.createAnalyser();
+                this.analyserNode.fftSize = 512;
+                this.frequencyData = new Uint8Array(this.analyserNode.frequencyBinCount);
+                Tone.getDestination().connect(this.analyserNode);
+                this.kick = new Tone.MembraneSynth({ pitchDecay: 0.05, octaves: 10, oscillator: { type: "sine" }, envelope: { attack: 0.001, decay: 0.4, sustain: 0.01, release: 1.4, attackCurve: "exponential" } }).toDestination();
+                this.hats = new Tone.MetalSynth({ frequency: 200, envelope: { attack: 0.001, decay: 1, release: 0.2 }, harmonicity: 5.1, modulationIndex: 32, resonance: 4000, octaves: 1.5 }).toDestination();
+                this.hats.volume.value = -15;
+                const synthFilter = new Tone.AutoFilter("4n").toDestination().start();
+                this.arp = new Tone.DuoSynth({ vibratoAmount: 0.5, vibratoRate: 5, harmonicity: 1.5, voice0: { oscillator: { type: "triangle" }, envelope: { attack: 0.05, decay: 0.1, sustain: 0.3, release: 1 } }, voice1: { oscillator: { type: "sine" }, envelope: { attack: 0.05, decay: 0.1, sustain: 0.3, release: 1 } } }).connect(synthFilter);
+                this.arp.volume.value = -10;
+            },
+            start() { /* ... unchanged ... */
+                new Tone.Loop(time => { this.kick.triggerAttackRelease("C1", "8n", time); }, "4n").start(0);
+                new Tone.Loop(time => { this.hats.triggerAttackRelease("C6", "16n", time, 0.5); }, "8n").start("8n");
+                const notes = ["C3", "E3", "G3", "B3", "C4", "E4", "G4", "B4"];
+                new Tone.Sequence((time, note) => { this.arp.triggerAttackRelease(note, "16n", time); }, notes, "16n").start(0);
+                Tone.Transport.bpm.value = 120;
+                Tone.Transport.start();
+            },
+            stop() { /* ... unchanged ... */
+                Tone.Transport.stop();
+                Tone.Transport.cancel();
+            }
+        };
+
+        const VisualRenderer = {
+            scene: null, camera: null, renderer: null, blob: null, particles: null,
+            composer: null, clock: new THREE.Clock(),
+            
+            initialize(container) {
+                this.scene = new THREE.Scene();
+                this.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+                this.camera.position.z = 4;
+                this.renderer = new THREE.WebGLRenderer({ antialias: true });
+                this.renderer.setSize(window.innerWidth, window.innerHeight);
+                this.renderer.setClearColor(0x05050a); // Dark blue-ish background
+                container.appendChild(this.renderer.domElement);
+                
+                // Organic Blob
+                const blobGeom = new THREE.SphereGeometry(1, 128, 128);
+                blobGeom.setAttribute('originalPosition', blobGeom.attributes.position.clone());
+                const mat = new THREE.MeshStandardMaterial({ color: 0xffffff, emissive: 0x000000, metalness: 0.1, roughness: 0.2, flatShading: false });
+                this.blob = new THREE.Mesh(blobGeom, mat);
+                this.scene.add(this.blob);
+
+                // Nebula Particle System
+                this.initParticles();
+                
+                // Lighting
+                this.scene.add(new THREE.AmbientLight(0xffffff, 0.2));
+                const pointLight = new THREE.PointLight(0xccddff, 0.8);
+                pointLight.position.set(5, 5, 5);
+                this.scene.add(pointLight);
+
+                // Post-processing (Bloom for glow)
+                const renderPass = new RenderPass(this.scene, this.camera);
+                const bloomPass = new UnrealBloomPass(new THREE.Vector2(window.innerWidth, window.innerHeight), 1.5, 0.4, 0.85);
+                bloomPass.threshold = 0.1;
+                bloomPass.strength = 1.5;
+                bloomPass.radius = 0.8;
+                this.composer = new EffectComposer(this.renderer);
+                this.composer.addPass(renderPass);
+                this.composer.addPass(bloomPass);
+
+                window.addEventListener('resize', this.onWindowResize.bind(this));
+            },
+            
+            initParticles() {
+                const particleCount = 5000;
+                const positions = new Float32Array(particleCount * 3);
+                const colors = new Float32Array(particleCount * 3);
+                const velocities = new Float32Array(particleCount * 3);
+                const color = new THREE.Color();
+
+                for(let i = 0; i < particleCount; i++) {
+                    const i3 = i * 3;
+                    const vertex = new THREE.Vector3().randomDirection().multiplyScalar(1.5 + Math.random() * 2);
+                    positions[i3] = vertex.x;
+                    positions[i3+1] = vertex.y;
+                    positions[i3+2] = vertex.z;
+                    
+                    velocities[i3] = 0;
+                    velocities[i3+1] = 0;
+                    velocities[i3+2] = 0;
+                    
+                    color.setHSL(0.5 + Math.random() * 0.2, 1.0, 0.5);
+                    colors[i3] = color.r;
+                    colors[i3+1] = color.g;
+                    colors[i3+2] = color.b;
+                }
+                const particleGeom = new THREE.BufferGeometry();
+                particleGeom.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+                particleGeom.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+                particleGeom.setAttribute('velocity', new THREE.BufferAttribute(velocities, 3));
+                const particleMat = new THREE.PointsMaterial({ size: 0.02, vertexColors: true, blending: THREE.AdditiveBlending, transparent: true, opacity: 0.5, sizeAttenuation: true });
+                this.particles = new THREE.Points(particleGeom, particleMat);
+                this.scene.add(this.particles);
+            },
+
+            onWindowResize() { /* ... unchanged ... */
+                const width = window.innerWidth;
+                const height = window.innerHeight;
+                this.camera.aspect = width / height;
+                this.camera.updateProjectionMatrix();
+                this.renderer.setSize(width, height);
+                this.composer.setSize(width, height);
+            },
+            
+            update(features) {
+                const time = this.clock.getElapsedTime();
+                
+                // 1. Update Blob Geometry
+                const pos = this.blob.geometry.attributes.position;
+                const originalPos = this.blob.geometry.attributes.originalPosition;
+                const noiseTime = time * (0.2 + features.synth * 0.5);
+                const noiseStrength = 0.1 + features.synth * 0.4;
+                const jitter = features.hats * 0.02;
+
+                for (let i = 0; i < pos.count; i++) {
+                    const p = new THREE.Vector3(originalPos.getX(i), originalPos.getY(i), originalPos.getZ(i));
+                    const noise = SimplexNoise.noise(p.x * 2 + noiseTime, p.y * 2 + noiseTime, p.z * 2 + noiseTime);
+                    p.addScaledVector(p.clone().normalize(), noiseStrength * noise);
+                    p.add(new THREE.Vector3(
+                        (Math.random() - 0.5) * jitter,
+                        (Math.random() - 0.5) * jitter,
+                        (Math.random() - 0.5) * jitter
+                    ));
+                    pos.setXYZ(i, p.x, p.y, p.z);
+                }
+                pos.needsUpdate = true;
+                this.blob.geometry.computeVertexNormals();
+
+                // 2. Update Blob Material
+                this.blob.material.color.setHSL(0.6 + (features.synth * 0.3), 0.8, 0.5);
+                this.blob.material.emissive.setHSL(0.6 + (features.synth * 0.3), 0.8, features.hats * 0.4);
+
+                // 3. Update Particles
+                const particlePos = this.particles.geometry.attributes.position;
+                const particleVels = this.particles.geometry.attributes.velocity;
+                const kickForce = features.kick * 0.01;
+                
+                for(let i = 0; i < particlePos.count; i++) {
+                    const i3 = i * 3;
+                    const p = new THREE.Vector3(particlePos.getX(i), particlePos.getY(i), particlePos.getZ(i));
+                    // Add kick force
+                    particleVels.array[i3] += p.x * kickForce;
+                    particleVels.array[i3+1] += p.y * kickForce;
+                    particleVels.array[i3+2] += p.z * kickForce;
+
+                    // Apply velocity and damping
+                    particlePos.array[i3] += particleVels.array[i3];
+                    particlePos.array[i3+1] += particleVels.array[i3+1];
+                    particlePos.array[i3+2] += particleVels.array[i3+2];
+                    particleVels.array[i3] *= 0.96; // damping
+                    particleVels.array[i3+1] *= 0.96;
+                    particleVels.array[i3+2] *= 0.96;
+
+                    // Gravity towards center
+                    p.normalize().multiplyScalar(-0.0005);
+                    particleVels.array[i3] += p.x;
+                    particleVels.array[i3+1] += p.y;
+                    particleVels.array[i3+2] += p.z;
+                }
+                particlePos.needsUpdate = true;
+                this.particles.material.opacity = 0.2 + features.kick * 0.6;
+                
+                // 4. Update Camera
+                this.camera.position.x = Math.sin(time * 0.1) * 0.5;
+                this.camera.position.y = Math.cos(time * 0.1) * 0.5;
+                this.camera.lookAt(this.scene.position);
+                this.camera.position.x += (Math.random() - 0.5) * features.kick * 0.1;
+            },
+
+            render() {
+                this.composer.render();
+            }
+        };
+
+        //========================================================================
+        // 3. THE MASTER BRIDGE ENGINE
+        //========================================================================
+        const MasterEngine = {
+            isAudioPlaying: false,
+            audioFeatures: { kick: 0, hats: 0, synth: 0 },
+            
+            initialize(audio, visuals, theory, container) {
+                this.audio = audio;
+                this.visuals = visuals;
+                this.theory = theory;
+                this.audio.initialize();
+                this.visuals.initialize(container);
+                this.animate();
+            },
+
+            start() { Tone.start().then(() => { this.isAudioPlaying = true; this.audio.start(); }); },
+            stop() { this.isAudioPlaying = false; this.audio.stop(); },
+
+            analyzeAndMap() {
+                // Step 1: Analyze audio
+                this.audio.analyserNode.getByteFrequencyData(this.audio.frequencyData);
+                const data = this.audio.frequencyData;
+                const nyquist = Tone.getContext().rawContext.sampleRate / 2;
+                const getAvg = (start, end) => {
+                    const s = Math.round(start / nyquist * data.length);
+                    const e = Math.round(end / nyquist * data.length);
+                    let sum = 0; for(let i = s; i < e; i++) sum += data[i];
+                    return (sum / (e - s)) / 255.0;
+                }
+                this.audioFeatures.kick = getAvg(50, 150);
+                this.audioFeatures.hats = getAvg(5000, 10000);
+                this.audioFeatures.synth = getAvg(200, 2000);
+                
+                // Step 2: Pass features to the Visual Renderer
+                this.visuals.update(this.audioFeatures);
+
+                // Step 3: THE BRIDGE - Create visualState and generate theory score
+                const visualState = {
+                    movement_speed: 1.0 + this.audioFeatures.synth,
+                    color_brightness: 0.5 + (this.audioFeatures.hats * 2.0),
+                    particle_density: this.audioFeatures.kick,
+                    chaos_level: this.audioFeatures.synth,
+                    geometric_alignment: 1.0 - this.audioFeatures.kick,
+                    intensity: this.audioFeatures.kick
+                };
+                const enhancedScore = this.theory.translateVisualToMusical(visualState);
+                
+                // Step 4: Log the results
+                console.clear();
+                console.log("--- Enhanced Score Generated ---");
+                console.log(enhancedScore);
+
+                // Update debug display
+                document.getElementById('kickValue').textContent = this.audioFeatures.kick.toFixed(2);
+                document.getElementById('hatsValue').textContent = this.audioFeatures.hats.toFixed(2);
+                document.getElementById('synthValue').textContent = this.audioFeatures.synth.toFixed(2);
+            },
+
+            animate() {
+                requestAnimationFrame(() => this.animate());
+                if (this.isAudioPlaying) {
+                    this.analyzeAndMap();
+                }
+                this.visuals.render();
+            }
+        };
+
+        //========================================================================
+        // INITIALIZE AND RUN THE MASTER ENGINE
+        //========================================================================
+        const engine = MasterEngine;
+        engine.initialize(AudioAnalysisEngine, VisualRenderer, new window.EnhancedUniversalVisualMusicEngine(), document.body);
+
+        const playButton = document.getElementById('playButton');
+        playButton.addEventListener('click', () => {
+            if (!engine.isAudioPlaying) {
+                playButton.textContent = '■';
+                engine.start();
+            } else {
+                playButton.textContent = '▶ Experience';
+                engine.stop();
+            }
+        });
+    </script>
+</body>
+</html>

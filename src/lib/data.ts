@@ -1,0 +1,1434 @@
+import { ElementData, ElementId } from './types';
+
+export const ELEMENT_IDS: ElementId[] = ['fire', 'water', 'air', 'earth', 'spirit'];
+
+export const VISIBLE_ELEMENTS: ElementId[] = ['fire', 'water', 'air', 'earth'];
+
+export const ELEMENTS: Record<ElementId, ElementData> = {
+  fire: {
+    id: 'fire',
+    name: 'Fire',
+    symbol: '\uD83D\uDD02',
+    symbolSvg: '/symbols/fire.svg',
+    color: '#dc2626',
+    bgGradient: 'from-red-950 via-red-900 to-orange-950',
+    borderColor: 'border-red-500/40',
+    tagline: 'Will \u2014 the power to initiate, transform, and destroy.',
+    description:
+      'Fire is the element of will, intention, and transformation. It is the spark that begins all action, the flame that purifies, and the heat that forges. In the soul mirror, Fire reveals where your will is clean, where it distorts, and where it is absent.',
+    tabs: [
+      {
+        id: 'nature',
+        label: 'Nature',
+        content: {
+          overview: `Fire is the first element \u2014 the primordial spark. In the hermetic tradition, Fire corresponds to the aspect of Will: the power to initiate, to transform, and to destroy.
+
+Fire is not merely anger or passion. It is the capacity to act. To begin. To choose. To cut. To commit.
+
+When purified, Fire is:
+Clean conviction without rigidity
+Courage without recklessness
+Discipline without self-violence
+Initiation without burnout
+Protection without aggression
+
+When distorted, Fire becomes:
+Impatience, grandiosity, force
+Self-criticism as a whip
+Intensity mistaken for truth
+Starting without finishing
+Burning out instead of sustaining
+
+When absent, Fire shows as:
+Analysis paralysis
+Waiting for permission
+Comfort-seeking over action
+Collapse into passivity
+Research replacing practice
+
+The measure of Fire is not how intensely you feel or understand the path \u2014 it is the clean action you complete.`,
+          keyQuestions: [
+            'Where do I naturally initiate?',
+            'Where do I show courage?',
+            'Where do I protect boundaries?',
+            'Where do I act before I have full certainty?',
+            'Where do I feel clean conviction?',
+            'Where have I sacrificed comfort for something higher?',
+            'Where do I become more alive through effort?',
+            'Where do I force?',
+            'Where do I become impatient?',
+            'Where do I want instant mastery?',
+            'Where do I despise weakness in myself or others?',
+            'Where do I become grandiose?',
+            'Where do I start too much?',
+            'Where do I burn out?',
+            'Where do I confuse intensity with truth?',
+            'Where do I avoid action?',
+            'Where do I wait for permission?',
+            'Where do I collapse into passivity?',
+            'Where do I know what to do but do not do it?',
+            'Where do I choose comfort over will?',
+            'Where do I hide behind research?',
+            'Where do I fail to say no?',
+            'Where do I fail to say yes?',
+          ],
+        },
+      },
+      {
+        id: 'positive',
+        label: '+',
+        content: {
+          overview: `Positive Fire is will that serves life \u2014 clean conviction, courage, protection, initiation without force. It is the Fire that builds, defends, and transforms without burning what should remain.
+
+The key question: Where does my will act cleanly?`,
+          entries: [
+            {
+              title: 'Sudden conviction for practice',
+              incident: 'I got a sudden surge of conviction that I need a real ritual practice.',
+              expression: 'Enthusiasm, intensity, desire to begin, sense of destiny.',
+              bodyFeel: 'Heat in chest, alertness, urgency.',
+              result: 'I wrote notes and felt alive.',
+              purifiedQuality: 'Initiation \u2014 the spark that begins a real path.',
+            },
+            {
+              title: 'Protecting a boundary',
+              incident: 'Someone asked for my time when I was already drained, and I said no clearly without guilt.',
+              expression: 'Clean refusal, no apology, no over-explanation.',
+              bodyFeel: 'Steady chest, grounded, clear throat.',
+              result: 'I preserved energy for what matters.',
+              purifiedQuality: 'Sovereignty \u2014 will as protector of the self.',
+            },
+            {
+              title: 'Acting before full certainty',
+              incident: 'I felt unsure about the LBRP but decided to do one simple round anyway rather than research more.',
+              expression: 'Imperfect action over perfect inaction.',
+              bodyFeel: 'Slight fear in belly, but forward momentum.',
+              result: 'I completed the practice and learned more than if I had waited.',
+              purifiedQuality: 'Courage \u2014 will that acts despite uncertainty.',
+            },
+            {
+              title: 'Sacrifice for something higher',
+              incident: 'I chose to wake up earlier for practice instead of sleeping in, even though it was uncomfortable.',
+              expression: 'Discipline, prioritization of the path.',
+              bodyFeel: 'Heaviness at first, then clarity after beginning.',
+              result: 'The practice happened, and the rest of the day had more direction.',
+              purifiedQuality: 'Devotion \u2014 will that serves the sacred.',
+            },
+            {
+              title: 'Clean confrontation',
+              incident: 'I addressed a misunderstanding directly instead of avoiding it or gossiping.',
+              expression: 'Honest speech without blame.',
+              bodyFeel: 'Heat in chest but contained, not explosive.',
+              result: 'The issue resolved cleanly, no residue.',
+              purifiedQuality: 'Righteousness \u2014 will that serves truth without cruelty.',
+            },
+          ],
+        },
+      },
+      {
+        id: 'negative',
+        label: '\u2212',
+        content: {
+          overview: `Negative Fire is will that distorts \u2014 impatience, grandiosity, force, self-criticism, intensity without wisdom. It burns what should grow and consumes what should be preserved.
+
+The key question: Where does my will harm instead of serve?`,
+          entries: [
+            {
+              title: 'Frustration over imperfect knowledge',
+              incident: 'I got frustrated because I could not find the perfect version of the LBRP.',
+              expression: 'Impatience, irritation, wanting certainty now.',
+              bodyFeel: 'Pressure in head and chest, agitation, fast scrolling.',
+              result: 'No practice. More tension.',
+              hiddenNeed: 'I wanted command before apprenticeship.',
+              purifiedCounterpart: 'Patient will \u2014 do the simple version once.',
+            },
+            {
+              title: 'Impatient spiritual ambition',
+              incident: 'I wanted to understand the entire magical system in one night and felt angry at the slow pace.',
+              expression: 'Grandiose wanting, contempt for gradual progress.',
+              bodyFeel: 'Tightness in chest, racing thoughts, heat in face.',
+              result: 'Frustration, giving up on practice entirely.',
+              hiddenNeed: 'Desire for mastery without apprenticeship.',
+              purifiedCounterpart: 'Apprenticeship \u2014 patience, exact repetition, one step at a time.',
+            },
+            {
+              title: 'Self-criticism after collapse',
+              incident: 'When I failed to practice, Fire turned against me as self-attack.',
+              expression: 'Harsh inner voice, shame, self-contempt.',
+              bodyFeel: 'Burning in stomach, tight jaw, slumped posture.',
+              result: 'More avoidance, deeper collapse.',
+              hiddenNeed: 'I wanted to be perfect, so failure became intolerable.',
+              purifiedCounterpart: 'Correction without self-burning \u2014 clean adjustment, no drama.',
+            },
+            {
+              title: 'Starting too many systems',
+              incident: 'I began three different practices in one week and completed none.',
+              expression: 'Scattered ignition, enthusiasm without follow-through.',
+              bodyFeel: 'Buzzy energy, shallow breath, mental excitement.',
+              result: 'Half-started rituals, notes everywhere, nothing consistent.',
+              hiddenNeed: 'I wanted the reward of having started without the cost of completing.',
+              purifiedCounterpart: 'Concentrated will \u2014 one practice, completed daily.',
+            },
+            {
+              title: 'Confusing intensity with truth',
+              incident: 'I read something that excited me emotionally and immediately believed it was profound wisdom.',
+              expression: 'Emotional heat mistaken for spiritual insight.',
+              bodyFeel: 'Flush of excitement, fast heartbeat, wide eyes.',
+              result: 'I built ideas on emotional charge rather than discernment.',
+              hiddenNeed: 'I wanted the feeling of revelation more than real understanding.',
+              purifiedCounterpart: 'Discerning Fire \u2014 heat tempered by feeling and discernment.',
+            },
+          ],
+        },
+      },
+      {
+        id: 'weak',
+        label: 'Weak',
+        content: {
+          overview: `Weak Fire is where will is absent \u2014 where action is needed but avoided, where the spark fails to ignite. This may be one of the most important categories, because the issue may not be "too much Fire" but bursts of Fire with poor Earth containment, then Fire collapses.
+
+The key question: Where do I fail to act?`,
+          entries: [
+            {
+              title: 'Research replacing practice',
+              incident: 'I knew I should do 10 minutes of practice before bed but watched videos instead.',
+              actionAvoided: 'Standing up and beginning.',
+              replacedFire: 'Water fog + Air curiosity + Earth inertia.',
+              cost: 'Lost the ritual window and slept later.',
+              fireCorrection: 'Stand up immediately after the thought "practice now."',
+            },
+            {
+              title: 'Looking for more instructions',
+              incident: 'Before LBRP, I spent 45 minutes looking for more instructions because I felt uncertain about doing it wrong.',
+              actionAvoided: 'Doing the ritual once, imperfectly.',
+              replacedFire: 'Air over-analysis, Earth uncertainty.',
+              cost: '45 minutes wasted, no practice done.',
+              fireCorrection: 'Do the ritual once before researching.',
+            },
+            {
+              title: 'Comfort over practice',
+              incident: 'I felt tired after work and chose to lie down for a minute \u2014 the whole evening dissolved.',
+              actionAvoided: 'Keeping the small vow to practice.',
+              replacedFire: 'Water inertia, Earth comfort-seeking.',
+              cost: 'Another day without practice, weakened trust in myself.',
+              fireCorrection: 'Do the minimum \u2014 even 2 minutes of practice keeps the vow.',
+            },
+            {
+              title: 'Waiting for perfect conditions',
+              incident: 'I wanted to start the soul mirror but felt I needed a clean desk, proper journal, and quiet time first.',
+              actionAvoided: 'Writing one entry in any condition.',
+              replacedFire: 'Air perfectionism, Earth inertia.',
+              cost: 'Two weeks without starting.',
+              fireCorrection: 'Write one line on a napkin. Begin anywhere.',
+            },
+            {
+              title: 'Permission-seeking',
+              incident: 'I had an intuitive hit about what practice to do but waited for a teacher to confirm it.',
+              actionAvoided: 'Trusting my own inner authority.',
+              replacedFire: 'Air doubt, Water insecurity.',
+              cost: 'Delayed growth, dependence on external validation.',
+              fireCorrection: 'Act on inner conviction when it is clean, then adjust after.',
+            },
+          ],
+        },
+      },
+      {
+        id: 'archetypes',
+        label: 'Archetypes',
+        content: {
+          overview: `Archetypes are the universal patterns through which Fire expresses itself in the human soul. They are not roles to play but lenses to understand your relationship with will, power, and action.
+
+Use archetypes only after you have collected scenes. Otherwise it becomes fantasy. Archetypes reveal the myth behind the pattern.`,
+          archetypes: [
+            {
+              name: 'The Warrior',
+              description: 'Clean fighting force. The capacity to act with courage, protect boundaries, and fight for what matters without cruelty. Distorted, becomes the Bully.',
+              symbol: '\u2694\uFE0F',
+            },
+            {
+              name: 'The King',
+              description: 'Sovereign command. The capacity to rule your own life with authority and responsibility. Distorted, becomes the Tyrant or the Weak King.',
+              symbol: '\uD83D\uDC51',
+            },
+            {
+              name: 'The Blacksmith',
+              description: 'Patient transformation through heat and repetition. The forge of discipline. Distorted, becomes the Grinder, burning out through joyless repetition.',
+              symbol: '\uD83D\uDD28',
+            },
+            {
+              name: 'The Dragon',
+              description: 'Raw primal Fire. Intensity, power, the untamed will. Distorted, becomes the Hoarder. The question: do you ride it, repress it, or get possessed by it?',
+              symbol: '\uD83D\uDC09',
+            },
+            {
+              name: 'The Prophet',
+              description: 'Fire as vision and conviction. Speaking truth with authority. Distorted, becomes the Fanatic \u2014 heat without wisdom, certainty without humility.',
+              symbol: '\uD83D\uDD25',
+            },
+          ],
+          archetypeProfiles: [
+            {
+              relateTo: 'The Spark / Prophet \u2014 intense insight, ignition, revelation.',
+              fear: 'The Tyrant \u2014 I fear becoming domineering or controlling through my will.',
+              distortion: 'The Fanatic / Arsonist \u2014 wants everything now, burns through structures.',
+              cultivate: 'The Warrior-Monk \u2014 clean vow, clean action, no drama.',
+            },
+          ],
+          vows: [
+            { text: 'When I decide to practice, I stand up before researching.' },
+            { text: 'I complete one round of LBRP badly rather than reading about perfect LBRP.' },
+            { text: 'I do not turn failed practice into self-attack. I correct and continue.' },
+            { text: 'My Fire is measured by completed action, not intensity of inspiration.' },
+            { text: 'When I feel uncertain, I do the minimum action before seeking more input.' },
+            { text: 'I protect my practice time as a sacred boundary.' },
+          ],
+          compoundElements: [
+            {
+              name: 'Fire + Air',
+              positive: 'Clear command, inspired teaching, decisive thinking, sharp ritual speech, precise intention.',
+              negative: 'Argumentative intensity, over-theorised ambition, mental agitation, grand systems with no grounding.',
+              note: '"I need the perfect theory before practice" \u2014 Fire-Air distortion. Fire wants mastery. Air wants total understanding. Earth is missing.',
+            },
+            {
+              name: 'Fire + Water',
+              positive: 'Devotion, courage from love, passionate prayer, active imagination with force, heroic compassion.',
+              negative: 'Melodrama, spiritual longing becoming obsession, anger mixed with hurt, fantasy of being chosen.',
+              note: 'Charged dreams or visions could be noble Fire-Water if integrated, or distorted Fire-Water if they become intoxication.',
+            },
+            {
+              name: 'Fire + Earth',
+              positive: 'Discipline, training, ritual repetition, physical courage, building the altar, doing the practice daily.',
+              negative: 'Rigidity, harsh self-discipline, stubbornness, forcing the body, burnout through grind.',
+              note: '"I do the LBRP every day whether or not it feels magical" \u2014 this is Fire + Earth.',
+            },
+          ],
+        },
+      },
+    ],
+  },
+  water: {
+    id: 'water',
+    name: 'Water',
+    symbol: '\uD83D\uDD04',
+    symbolSvg: '/symbols/water.svg',
+    color: '#2563eb',
+    bgGradient: 'from-blue-950 via-blue-900 to-indigo-950',
+    borderColor: 'border-blue-500/40',
+    tagline: 'Receptivity \u2014 feeling, dream, image, and the depth of the soul.',
+    description:
+      'Water is the element of feeling, receptivity, and the unconscious. It is fluidity, cohesion, memory, dream, emotion, reflection, attraction, dissolution, intimacy, mood, devotion, and image. Water governs the image-bearing, feeling-bearing, receptive psyche.',
+    tabs: [
+      {
+        id: 'nature',
+        label: 'Nature',
+        content: {
+          overview: `Water is receptivity becoming depth.
+
+It is fluidity, cohesion, memory, dream, feeling, reflection, attraction, dissolution, intimacy, mood, devotion, and image.
+
+Fire says "I will." Air says "I understand." Water says "I feel."
+
+Water does not force. Water receives. Water does not cut. Water surrounds. Water does not argue. Water absorbs, reflects, remembers, and transforms from within.
+
+Its primal movement is downward and inward. Fire rises. Water sinks. Air circulates. Earth holds.
+
+Hermetic meaning
+
+In Hermeticism, Water is the magnetic principle. It draws, receives, binds, reflects, cools, and contains. Where Fire radiates outward, Water pulls inward. Fire is the spark; Water is the chalice. Fire is the wand; Water is the cup.
+
+Water is linked with the Moon, the astral field, dreams, images, emotions, receptivity, the subconscious, memory, the womb, the mirror, the chalice, the west, twilight.
+
+In ritual, Water gives the ability to receive impressions without instantly forcing them into intellect or action. This is crucial for scrying, dream work, active imagination, devotion, angelic contact, mediumistic sensitivity, symbolic vision, and emotional purification.
+
+Alchemical meaning
+
+Alchemically, Water is solution. It dissolves fixed forms. The alchemical maxim is "dissolve and coagulate." Water is the solve side: it loosens, melts, softens, breaks down rigidity, returns forms to the undifferentiated matrix.
+
+Psychologically, Water dissolves defensiveness, rigidity, false certainty, dry intellect, emotional armour, fixed identity, and pride. Tears can be alchemical. Grief softens. Devotion melts the heart. Dreams dissolve waking certainties.
+
+Positive Water dissolves what must soften. Negative Water dissolves your spine.
+
+Psychic function
+
+Water is the faculty of feeling, bonding, receiving, dreaming, remembering, imagining, empathising, longing, devoting, mourning, softening, surrendering, mirroring, intuiting, and being moved.
+
+Water asks: "What does this mean to my heart?" "What am I feeling?" "What image arises?" "What am I longing for?" "What am I attached to?" "What do I need to grieve?" "What wants to be received?"
+
+Water gives depth. Air can name a symbol; Water lets the symbol become alive. Fire can call an angel; Water can receive the angelic atmosphere. Earth can build the altar; Water consecrates it through feeling.
+
+Body-feel of Water
+
+Water may feel like: softness in the chest, heaviness in the belly, tears behind the eyes, melting, sinking, coolness, tenderness, longing, nostalgia, mood, dreaminess, subtle atmosphere, emotional waves, pull toward someone or something, pull away from harshness, desire to lie down, desire to be held, desire to merge, desire to listen.
+
+Balanced Water: "I can feel this fully and remain present."
+Distorted Water: "I am being pulled under."
+Weak Water: "I cannot feel, receive, or soften."
+
+Water imagery
+
+A dark lake under moonlight, a chalice, a womb, rain on stone, a river through a forest, a deep well, a mirror, mist over fields, the sea at night, a cave pool, tears, dew on grass, a silver bowl, a submerged temple, a moon reflected in water, a veiled priestess, a mermaid, a sleeping serpent beneath a lake, a black ocean full of stars.
+
+The key Water image: a still lake reflecting the moon without distortion. That is purified Water. Not a swamp. Not a flood. Not dry stone. A still, deep, reflective, receptive lake.`,
+        },
+      },
+      {
+        id: 'positive',
+        label: '+',
+        content: {
+          overview: `Positive Water is deep receptivity with a centre. It appears as empathy, compassion, devotion, tenderness, emotional honesty, intuition, dream access, active imagination, symbolic sensitivity, forgiveness, grief, love, patience, surrender, reverence, mystical longing, capacity to listen, capacity to be moved, capacity to receive beauty and images, capacity to bond without clinging, to feel without collapsing, to soften without becoming weak.
+
+Positive Water says: "I can receive without losing myself." This is the Water needed for scrying \u2014 not passive dreamy fog, but receptive, lucid, feeling-based perception.
+
+Positive Water is the clear lake: deep enough to reflect the moon, still enough not to distort it.`,
+          entries: [
+            {
+              title: 'Listening deeply without needing to respond',
+              incident: 'Someone shared something difficult and I just listened, without fixing, advising, or analysing.',
+              expression: 'Pure receptivity, compassionate presence.',
+              bodyFeel: 'Soft chest, stillness, warmth.',
+              result: 'They felt heard. I felt connected.',
+              purifiedQuality: 'Compassionate presence \u2014 Water as the chalice that holds without clinging.',
+            },
+            {
+              title: 'Grief that clarified',
+              incident: 'I let myself cry about something I had been minimising, and afterward felt lighter and more truthful.',
+              expression: 'Tears as alchemical solution, softening rigidity.',
+              bodyFeel: 'Heavy chest, tears, then release and openness.',
+              result: 'I could see the situation more clearly.',
+              purifiedQuality: 'Grief as purification \u2014 Water dissolving what no longer serves.',
+            },
+            {
+              title: 'Receiving an image in stillness',
+              incident: 'During quiet contemplation, an image arose spontaneously and felt charged with meaning.',
+              expression: 'Active imagination, symbolic receptivity.',
+              bodyFeel: 'Still body, soft focus, subtle atmosphere.',
+              result: 'I recorded the image and it informed my practice.',
+              purifiedQuality: 'Imaginal receptivity \u2014 Water receiving without forcing.',
+            },
+            {
+              title: 'Devotion turned into action',
+              incident: 'I felt genuine longing for contact with the sacred, and instead of just feeling it, I lit incense and sat in practice.',
+              expression: 'Devotion becoming ritual.',
+              bodyFeel: 'Warm chest, slight tears, focused longing.',
+              result: 'The practice felt alive and connected.',
+              purifiedQuality: 'Devotional action \u2014 Water flowing into Fire and Earth.',
+            },
+            {
+              title: 'Tenderness without collapse',
+              incident: 'I held tenderness for someone without trying to fix them or merge with their pain.',
+              expression: 'Boundaried compassion.',
+              bodyFeel: 'Soft but centred, heart open, spine upright.',
+              result: 'I could care without losing myself.',
+              purifiedQuality: 'Sovereign tenderness \u2014 Water with a clear vessel.',
+            },
+          ],
+        },
+      },
+      {
+        id: 'negative',
+        label: '\u2212',
+        content: {
+          overview: `Negative Water is feeling without centre. It appears as moodiness, self-pity, resentment, dependency, passive fantasy, victim identity, emotional fog, nostalgia addiction, melancholy addiction, being seduced by images, being ruled by longing, emotional manipulation, romanticising suffering, wanting to be saved, wanting to merge, confusing intensity with truth, confusing dreaminess with spirituality, confusing sadness with depth, confusing longing with calling, confusing receptivity with passivity.
+
+Negative Water says: "Because I feel it deeply, it must be true."
+
+This is a huge trap in occult work. A vision can feel profound and still be mostly your own emotional weather. A dream image can be meaningful and still not be literal. A longing for angels or astral worlds can be genuine, but it can also be an escape from Earth.
+
+Negative Water turns practice into atmosphere. It loves the mood of magic more than the discipline of magic.`,
+          entries: [
+            {
+              title: 'Drowsiness replacing practice',
+              incident: 'At night I felt drowsy and drawn to dream work, but instead I watched videos and drifted.',
+              expression: 'Dreaminess, passivity, longing without container.',
+              bodyFeel: 'Heavy eyes, soft chest, body wanting to lie down.',
+              result: 'The imaginal current became passive consumption.',
+              purifiedCounterpart: 'My Water needs a chalice: active imagination with a notebook, not passive drifting.',
+            },
+            {
+              title: 'Longing for contact without discipline',
+              incident: 'I felt a strong longing for angelic or daimonic contact, but did nothing to prepare or practice.',
+              expression: 'Magical hunger without vessel.',
+              bodyFeel: 'Chest ache, inward pull, dreamy attention.',
+              result: 'It opened genuine aspiration but risked fantasy.',
+              hiddenNeed: 'I wanted connection without work.',
+              purifiedCounterpart: 'Longing must become devotion plus record.',
+            },
+            {
+              title: 'Absorbing someone else\u2019s mood',
+              incident: 'Someone\u2019s tone affected me and changed my whole mood without my choosing it.',
+              expression: 'Emotional absorption, boundary loss.',
+              bodyFeel: 'Chest contraction, belly heaviness, inward collapse.',
+              result: 'I absorbed the atmosphere instead of observing it.',
+              hiddenNeed: 'I wanted to belong or merge.',
+              purifiedCounterpart: 'I can feel the field without becoming it.',
+            },
+            {
+              title: 'Romanticising suffering',
+              incident: 'I stayed in a familiar sad mood because it felt meaningful and depthful.',
+              expression: 'Melancholy addiction, confusing sadness with depth.',
+              bodyFeel: 'Heavy but familiar, poetic atmosphere.',
+              result: 'Nothing changed. The mood became identity.',
+              hiddenNeed: 'I wanted to feel special through suffering.',
+              purifiedCounterpart: 'Sadness is weather, not identity.',
+            },
+            {
+              title: 'Fantasy replacing relationship',
+              incident: 'I imagined a deep connection with someone instead of actually connecting.',
+              expression: 'Fantasy as substitute for real intimacy.',
+              bodyFeel: 'Warm dreaminess, slight dissociation.',
+              result: 'The fantasy was satisfying; the real relationship remained untouched.',
+              hiddenNeed: 'I wanted connection without vulnerability.',
+              purifiedCounterpart: 'One real step toward connection is worth hours of fantasy.',
+            },
+          ],
+        },
+      },
+      {
+        id: 'weak',
+        label: 'Weak',
+        content: {
+          overview: `Too little Water appears as dryness, numbness, emotional flatness, inability to receive, inability to cry, lack of devotion, lack of empathy, lack of imagination, fear of vulnerability, fear of surrender, harsh self-control, sterile intellectualism, mechanical ritual, over-analysis of feeling, inability to be moved, inability to bond, inability to trust images, inability to let the body soften.
+
+Weak Water says: "Feeling is dangerous."
+
+In ritual, weak Water shows up as saying the words but feeling nothing, visualising but not entering atmosphere, analysing every impression, being unable to surrender into image, keeping everything in the head, fear of being overwhelmed, no devotional warmth, dry mechanical repetition.
+
+Weak Water is not strength. It is often defended sensitivity.`,
+          entries: [
+            {
+              title: 'Dry mechanical practice',
+              incident: 'I went through the motions of a ritual but felt nothing \u2014 no atmosphere, no devotion, no presence.',
+              actionAvoided: 'Letting the ritual affect me.',
+              replacedFire: 'Intellectual checking, dry repetition.',
+              cost: 'The rite felt hollow.',
+              fireCorrection: 'Pause. Breathe. Let one word or image resonate before continuing.',
+            },
+            {
+              title: 'Inability to cry',
+              incident: 'Something genuinely sad happened and I knew I felt it, but the tears would not come.',
+              actionAvoided: 'Surrendering to grief.',
+              replacedFire: 'Chest tightness, holding pattern.',
+              cost: 'The feeling stayed lodged in the body.',
+              fireCorrection: 'Give the feeling space and time without forcing.',
+            },
+            {
+              title: 'Over-analysis of a dream',
+              incident: 'I had a vivid dream and immediately dissected its meaning instead of staying with its atmosphere.',
+              actionAvoided: 'Receiving the dream image first.',
+              replacedFire: 'Air dissection before Water reception.',
+              cost: 'The living image became a dead symbol.',
+              fireCorrection: 'Record the image. Feel it. Analyse later.',
+            },
+            {
+              title: 'Fear of softness',
+              incident: 'Someone showed me genuine tenderness and I tensed up, changed the subject.',
+              actionAvoided: 'Receiving care.',
+              replacedFire: 'Deflection, humour, intellectual shift.',
+              cost: 'The moment of connection passed.',
+              fireCorrection: 'Let one word of tenderness land before responding.',
+            },
+            {
+              title: 'No devotional warmth',
+              incident: 'I approached the altar like a task on a checklist, with no heart presence.',
+              actionAvoided: 'Bringing feeling to the practice.',
+              replacedFire: 'Earth routine without Water.',
+              cost: 'The altar became a desk.',
+              fireCorrection: 'Light one candle and pause before any words.',
+            },
+          ],
+        },
+      },
+      {
+        id: 'archetypes',
+        label: 'Archetypes',
+        content: {
+          overview: `Water archetypes are the universal patterns through which the receptive, feeling, and imaginal principle expresses itself.
+
+Use archetypes only after you have collected scenes. Otherwise it becomes fantasy.`,
+          archetypes: [
+            {
+              name: 'The Priestess',
+              description: 'She receives the hidden. She listens before speaking. She guards the threshold between conscious and unconscious. Where do I receive subtle impressions without forcing them?',
+              symbol: '\uD83C\uDF19',
+            },
+            {
+              name: 'The Oracle',
+              description: 'Lets images, dreams, and symbols speak through her, but does not confuse herself with them. Can I receive an image and record it without inflating it?',
+              symbol: '\uD83D\uDD2E',
+            },
+            {
+              name: 'The Healer',
+              description: 'Feels pain without becoming pain. Where can I be tender without collapsing?',
+              symbol: '\uD83D\uDC8A',
+            },
+            {
+              name: 'The Mystic Lover',
+              description: 'Devotion, longing, surrender, and love directed toward the divine. What does my heart worship when it is clean?',
+              symbol: '\uD83D\uDC9C',
+            },
+            {
+              name: 'The Dreamer',
+              description: 'Enters images, dreams, temples, and imaginal spaces. Do I dream actively, or do I drift passively?',
+              symbol: '\uD83D\uDCAD',
+            },
+            {
+              name: 'The Siren',
+              description: 'Negative. Beautiful, seductive, enchanting, but pulls the soul away from land. What images or moods seduce me away from action?',
+              symbol: '\uD83E\uDDDC',
+            },
+            {
+              name: 'The Drowning Child',
+              description: 'Negative. Overwhelmed, helpless, wanting rescue. Where do I become helpless instead of receptive?',
+              symbol: '\uD83C\uDF2A\uFE0F',
+            },
+            {
+              name: 'The Victim',
+              description: 'Negative. Turns pain into identity. Where do I use woundedness to avoid responsibility?',
+              symbol: '\uD83D\uDC94',
+            },
+            {
+              name: 'The Melancholic Ghost',
+              description: 'Negative. Lives in longing, memory, lost possibilities, and beautiful sadness. Where do I mistake melancholy for depth?',
+              symbol: '\uD83D\uDC7B',
+            },
+            {
+              name: 'The Dry Priest',
+              description: 'Weak. Has ritual but no tenderness. Where has my practice become technique without heart?',
+              symbol: '\uD83E\uDEB4',
+            },
+            {
+              name: 'The Frozen Lake',
+              description: 'Weak. Feeling exists but cannot move. Where am I emotionally frozen?',
+              symbol: '\u2744\uFE0F',
+            },
+            {
+              name: 'The Empty Chalice',
+              description: 'Weak. The vessel is there, but nothing is received. Where do I struggle to receive love, beauty, help, or inspiration?',
+              symbol: '\u26FE\uFE0F',
+            },
+          ],
+          archetypeProfiles: [
+            {
+              relateTo: 'The Dreamer / Mystic Lover \u2014 drawn to images, invisible contact, devotion, symbolic atmosphere.',
+              fear: 'The Drowning Child \u2014 overwhelmed, needy, helpless, too emotionally exposed.',
+              distortion: 'The Siren-Enchanted Sleeper \u2014 seduced by mood, videos, fantasy, drowsiness, passive imaginal drift.',
+              cultivate: 'The Clear Lake / Chalice \u2014 still, receptive, bounded, reflective, able to hold images cleanly.',
+            },
+          ],
+          vows: [
+            { text: 'My Water receives but does not drown.' },
+            { text: 'I feel before I interpret.' },
+            { text: 'I do not confuse dreaminess with practice.' },
+            { text: 'I record images instead of drifting in them.' },
+            { text: 'I let longing become devotion.' },
+            { text: 'I let devotion become action.' },
+            { text: 'I treat mood as weather, not identity.' },
+            { text: 'I can feel the field without becoming the field.' },
+            { text: 'I make my heart a chalice, not a swamp.' },
+            { text: 'I return every vision to the notebook and the body.' },
+          ],
+          compoundElements: [
+            {
+              name: 'Fire + Water',
+              positive: 'Devotional courage, passionate prayer, active imagination with will, love that acts, anger purified into protection, mystical longing turned into vow.',
+              negative: 'Melodrama, obsession, hurt anger, fantasy of being chosen, emotional intensity mistaken for divine truth, spiritual romance.',
+              note: 'Does this feeling lead to noble action, or just more intensity?',
+            },
+            {
+              name: 'Air + Water',
+              positive: 'Active imagination, scrying, dream analysis, naming emotions, poetry, subtle symbolic understanding, compassionate insight.',
+              negative: 'Fantasy spirals, beautiful but untested associations, occult moodboarding, explaining feelings instead of feeling them.',
+              note: 'Can I name the image clearly without being seduced by it?',
+            },
+            {
+              name: 'Earth + Water',
+              positive: 'Evening ritual, dream journal, altar care, slow breathing, healthy sleep rhythm, devotion made habitual, emotional regulation.',
+              negative: 'Comfort addiction, sleepy passivity, sentimental stagnation, lying down and drifting.',
+              note: 'Does this soothe me into practice or soothe me away from practice?',
+            },
+          ],
+        },
+      },
+    ],
+  },
+  air: {
+    id: 'air',
+    name: 'Air',
+    symbol: '\uD83D\uDD01',
+    symbolSvg: '/symbols/air.svg',
+    color: '#d97706',
+    bgGradient: 'from-amber-950 via-yellow-900 to-orange-950',
+    borderColor: 'border-amber-500/40',
+    tagline: 'Movement \u2014 the mediating element of breath, thought, and relation.',
+    description:
+      'Air is the mediating element: the equilibrating principle between Fire and Water. It is intellect, movement, breath, lightness, mediation, and communication. In soul-mirror work, Air governs clarity, discernment, flexibility \u2014 but also indecision, distraction, and scatteredness.',
+    tabs: [
+      {
+        id: 'nature',
+        label: 'Nature',
+        content: {
+          overview: `Air is movement through space.
+
+It is breath, wind, vibration, speech, thought, distance, relation, pattern, perspective, symbol, rhythm, and transmission.
+
+Fire burns. Water receives. Earth holds. Air moves between.
+
+Air is the element of the interval: the gap that lets one thing relate to another without becoming it. Air says: "I see the relation." It is the power of separation-with-connection. Too much separation becomes detachment. Too much connection becomes mental entanglement. Balanced Air gives space, clarity, breath, humour, intelligence, and proportion.
+
+Hermetic meaning
+
+In Hermetic practice, Air is the principle of breath, spiritus (subtle movement), intellect, word, vibration, mediation, imagination becoming language, and the power to name, distinguish, and relate. Air corresponds to the mental faculty in Bardon-style soul mirror work. Fire is will/impulse, Water is emotion/feeling, Earth is stability/form, and Air is intellect, clarity, indecision, and mobility.
+
+Air is what allows the magician to form a concept, speak a word, hold an image lightly, analyse without drowning, and move between worlds without being swallowed by them.
+
+Alchemical meaning
+
+Alchemically, Air is the volatile principle. It is what rises: vapour, smoke, sublimation, distillation, fragrance, spirit released from matter. In the lab-image: Fire heats, Water dissolves, Earth remains as body/residue, and Air rises as vapour, scent, spirit, subtle form.
+
+Psychologically: Air is the capacity to extract meaning from experience. You live something dense, emotional, confusing, bodily. Air rises from it and says: "This is the pattern. This is what it means. This is how it relates."
+
+Positive Air is sublimation into understanding. Negative Air is evaporation away from life. Air can refine experience into wisdom, or float away from embodiment entirely.
+
+Psychic function
+
+Air is the faculty of thinking, naming, speaking, comparing, symbolising, interpreting, questioning, communicating, distancing, translating, relating, abstracting, making maps, and seeing patterns.
+
+Air asks: "What is this?" "How does this relate?" "What is the structure?" "What is the meaning?" "Can I see this from another angle?"
+
+Air gives perspective. It allows you to step back from Fire's urgency, Water's mood, and Earth's heaviness. But Air can also become the perfect hiding place, because thinking about life can replace living it.
+
+Body-feel of Air
+
+Air may feel like: movement in the chest, breath awareness, lightness in the head, widening around the temples, quick mental linking, restless eyes, verbal pressure, buzzing in the nervous system, desire to speak, desire to search, desire to compare, feeling "above" the situation, dissociation upward, sudden clarity, sudden spaciousness.
+
+Balanced Air: "There is space around this. I can see clearly."
+Distorted Air: "I am floating, spinning, thinking, searching, but not landing."
+Weak Air: "I cannot name what is happening."
+
+Air imagery
+
+Wind over a mountain, a clear blue sky, a bird circling above a valley, incense smoke rising, a feather, a bell tone, a flute, a breath, a white sword, a wing, clouds moving across the moon, a messenger crossing worlds, an open window, a library with wind moving through it, a compass, a map, a spiral of smoke, a whisper, a hawk, a raven, a silver tongue, a clear mirror held at a distance.
+
+The key Air image: the open sky that lets all things appear without clinging to them.`,
+        },
+      },
+      {
+        id: 'positive',
+        label: '+',
+        content: {
+          overview: `Positive Air is clear intelligence. It appears as clarity, discernment, humour, perspective, honesty of thought, good questions, symbolic intelligence, precise speech, listening, adaptability, flexible thinking, discrimination, curiosity, study, translation, mediation, proportion, lightness, the ability to pause, the ability to reframe, the ability to see both sides, and the ability to name an inner state accurately.
+
+Positive Air does not merely think. It clarifies. Positive Air says: "Let me see this cleanly." It is the clear sky after weather. It does not deny Fire, Water, or Earth. It gives them room.
+
+Positive Air is what lets you say: "This is anger, but I am not only anger." "This is sadness, but I can observe it." "This is a body habit, but I can name it." "This is spiritual excitement, but I can distinguish insight from inflation."
+
+In magical work, positive Air is essential because ritual depends on precision of thought, word, image, direction, and symbolic relation. LBRP is very Air-heavy in this sense: visualisation, pronunciation, spatial orientation, symbolic ordering, and the mental act of establishing a clear field.`,
+          entries: [
+            {
+              title: 'Seeing the pattern without judgement',
+              incident: 'I noticed I was procrastinating on practice and instead of self-attacking, I observed the pattern with curiosity.',
+              expression: 'Clean observation, humour, perspective.',
+              bodyFeel: 'Spacious head, calm chest.',
+              result: 'I understood the mechanism and adjusted without shame.',
+              purifiedQuality: 'Clear seeing \u2014 Air as compassionate discernment.',
+            },
+            {
+              title: 'Naming an inner state accurately',
+              incident: 'I felt a wave of unease and instead of spiralling, I named it: "This is anticipation, not fear."',
+              expression: 'Precise naming, discernment.',
+              bodyFeel: 'Relief in throat, breath deepening.',
+              result: 'The feeling became manageable and I could proceed.',
+              purifiedQuality: 'Right naming \u2014 Air as truthful speech to the self.',
+            },
+            {
+              title: 'Precise study before practice',
+              incident: 'I read one page of Bardon and then immediately applied the exercise.',
+              expression: 'Focused study, clear boundary.',
+              bodyFeel: 'Alert but calm, head clear.',
+              result: 'The practice was informed but not replaced by theory.',
+              purifiedQuality: 'Studious discernment \u2014 Air serving Earth.',
+            },
+            {
+              title: 'Speaking one clean sentence',
+              incident: 'In a difficult conversation, I said what I needed to say without over-explaining.',
+              expression: 'Simple, direct, grounded speech.',
+              bodyFeel: 'Throat open, chest steady.',
+              result: 'The message landed cleanly.',
+              purifiedQuality: 'True speech \u2014 Air as honest transmission.',
+            },
+            {
+              title: 'Using humour to free a tense moment',
+              incident: 'A ritual felt stiff and I made a light joke that broke the tension without breaking the circle.',
+              expression: 'Levity, perspective, proportion.',
+              bodyFeel: 'Light chest, smile, breath flowing.',
+              result: 'The practice continued with ease.',
+              purifiedQuality: 'Air as the liberating perspective.',
+            },
+          ],
+        },
+      },
+      {
+        id: 'negative',
+        label: '\u2212',
+        content: {
+          overview: `Negative Air is mind without incarnation. It appears as overthinking, indecision, distraction, scattered attention, endless research, tab-hoarding, talking instead of doing, theorising instead of practising, clever evasion, irony, sarcasm, cynicism, intellectual pride, spiritual comparison, lack of focus, unstable attention, gossip, nervous chatter, detached analysis, using concepts to avoid feeling, using questions to avoid commitment, jumping systems before digesting one, and mistaking explanation for transformation.
+
+Negative Air says: "Once I understand everything, then I will begin."
+
+This is one of the main traps. When Air is unpurified, it becomes the infinite pre-practice machine. It keeps asking: "What is the best version?" "What did Rowe say?" "What did Bardon say?" "What did the forum say?" "How does this map onto Buddhism, Jung, Enochian, Levin, Campbell?"
+
+All of that can be good Air. But when it prevents one clean embodied act, it has become Air against Earth and Air stealing Fire.`,
+          entries: [
+            {
+              title: 'Endless research before practice',
+              incident: 'Before practising LBRP, I read several different versions and searched commentary because I felt unsure about doing it wrong.',
+              expression: 'Air seeking clarity but distorting into infinite preparation.',
+              bodyFeel: 'Head active, eyes scanning, chest restless, body still.',
+              result: 'More knowledge, no practice.',
+              purifiedCounterpart: 'My Air must serve practice, not replace it.',
+            },
+            {
+              title: 'Using questions to avoid commitment',
+              incident: 'I had a clear intuition about what to practice but asked "but what about X system?" to delay.',
+              expression: 'Clever evasion through comparison.',
+              bodyFeel: 'Mental buzzing, slight chest tightness.',
+              result: 'Another day without practice.',
+              hiddenNeed: 'I wanted certainty before trust.',
+              purifiedCounterpart: 'Trust the inner impulse. Act first, then adjust.',
+            },
+            {
+              title: 'Theory replacing embodiment',
+              incident: 'I built a detailed model of how the elements interact in my psyche and felt I had "done" the work.',
+              expression: 'Mistaking mapping for transformation.',
+              bodyFeel: 'Head expanded, slight dizziness, body forgotten.',
+              result: 'I understood more but changed nothing.',
+              hiddenNeed: 'I wanted the reward of understanding without the cost of practice.',
+              purifiedCounterpart: 'Every model must produce one practice instruction.',
+            },
+            {
+              title: 'Scattered attention across systems',
+              incident: 'I researched Bardon, Enochian, Buddhism, and Jung in one evening, retaining fragments of each.',
+              expression: 'Mental restlessness, spiritual browsing.',
+              bodyFeel: 'Buzzy head, tired eyes, shallow breath.',
+              result: 'Fragmented understanding, no depth in any one path.',
+              hiddenNeed: 'I wanted the feeling of progress without the discipline of focus.',
+              purifiedCounterpart: 'One system, one practice, one log.',
+            },
+            {
+              title: 'Cynicism as defence',
+              incident: 'When someone shared something sincere about their practice, I mentally critiqued it.',
+              expression: 'Intellectual superiority disguised as discernment.',
+              bodyFeel: 'Tight jaw, slight coldness in chest.',
+              result: 'Disconnection from the other person and from my own sincerity.',
+              hiddenNeed: 'I wanted to feel advanced.',
+              purifiedCounterpart: 'Open Air receives before it judges.',
+            },
+          ],
+        },
+      },
+      {
+        id: 'weak',
+        label: 'Weak',
+        content: {
+          overview: `Too little Air appears as confusion, poor articulation, inability to explain yourself, inability to reflect, inability to name feelings, inability to distinguish motives, being swallowed by moods, being driven by impulse, taking symbols literally, lack of humour, lack of perspective, rigid belief, mental fog, inability to make a plan, inability to compare options, inability to see alternatives, and being trapped inside the immediate feeling.
+
+Weak Air says: "I cannot get distance from this." It is not stupidity. It is lack of space.
+
+In ritual, weak Air shows up as forgetting structure, blurry visualisation, unclear pronunciation, not knowing what you are doing or why, getting lost in atmosphere, and being unable to record results.
+
+You may have strong abstract Air but sometimes weak interpersonal Air \u2014 speaking in groups, articulating under pressure, saying the simple sentence, naming what you feel in real time, communicating boundaries without overexplaining, staying mentally clear when emotionally activated.`,
+          entries: [
+            {
+              title: 'Losing words under pressure',
+              incident: 'In conversation, I knew what I meant but could not say it simply.',
+              actionAvoided: 'Direct speech and authentic expression.',
+              replacedFire: 'Internal pressure, tight throat, blank mind.',
+              cost: 'I felt unseen and frustrated.',
+              fireCorrection: 'Take one breath, say one sentence, then pause.',
+            },
+            {
+              title: 'Being swallowed by a mood',
+              incident: 'A wave of sadness hit and I lost all perspective, unable to name what was happening.',
+              actionAvoided: 'Observing the feeling with distance.',
+              replacedFire: 'Water flooding, no Air to create space.',
+              cost: 'Hours lost in the feeling before I remembered to name it.',
+              fireCorrection: 'Name the feeling in one word as soon as it arises.',
+            },
+            {
+              title: 'Mental fog after overstimulation',
+              incident: 'After too much screen time and information, I could not formulate a single clear thought.',
+              actionAvoided: 'Resting or grounding before continuing.',
+              replacedFire: 'Buzzy static, mental exhaustion.',
+              cost: 'The evening was lost to fog.',
+              fireCorrection: 'Stop input. Breathe. Name where you are.',
+            },
+            {
+              title: 'Inability to ask the obvious question',
+              incident: 'I was confused about a ritual step but did not ask the simple question, assuming I should already know.',
+              actionAvoided: 'Clean inquiry.',
+              replacedFire: 'Pride mixed with fear of looking foolish.',
+              cost: 'Continued confusion, wasted time.',
+              fireCorrection: 'The simple question is always allowed.',
+            },
+            {
+              title: 'Taking symbols literally',
+              incident: 'I read a vivid symbolic description in a ritual text and became stuck trying to interpret it factually.',
+              actionAvoided: 'Holding the image lightly.',
+              replacedFire: 'Literal-mindedness, loss of symbolic fluidity.',
+              cost: 'Lost the imaginal charge of the symbol.',
+              fireCorrection: 'Let the symbol work on you before you analyse it.',
+            },
+          ],
+        },
+      },
+      {
+        id: 'archetypes',
+        label: 'Archetypes',
+        content: {
+          overview: `Air archetypes are the universal patterns through which the mediating, intellectual, and communicative principle expresses itself.
+
+Use archetypes only after you have collected scenes. Otherwise it becomes fantasy.`,
+          archetypes: [
+            {
+              name: 'The Magician',
+              description: 'The symbolic operator: one who knows correspondences, names, gestures, words, and the relation between above and below. Where do I translate invisible experience into conscious form?',
+              symbol: '\u2728',
+            },
+            {
+              name: 'The Messenger',
+              description: 'Hermes/Mercury as carrier between realms. Air moves between gods, humans, dreams, language, signs, and meanings. What messages pass through me, and do I deliver them cleanly?',
+              symbol: '\uD83D\uDCE8',
+            },
+            {
+              name: 'The Scribe',
+              description: 'The recorder of signs, dreams, rituals, correspondences, and results. Do I write clearly enough that my future self can actually learn?',
+              symbol: '\uD83D\uDCDD',
+            },
+            {
+              name: 'The Philosopher',
+              description: 'The one who seeks structure, principle, logos, reason. Does my thinking clarify life or replace life?',
+              symbol: '\uD83E\uDDE0',
+            },
+            {
+              name: 'The Hawk / Bird',
+              description: 'The one who sees from above. Can I rise high enough to see the pattern without abandoning the ground?',
+              symbol: '\uD83E\uDD85',
+            },
+            {
+              name: 'The Poet',
+              description: 'The one who gives subtle experience exact language. Can I name the atmosphere without drowning in it?',
+              symbol: '\uD83D\uDCDD',
+            },
+            {
+              name: 'The Trickster',
+              description: 'Negative Air. Clever, evasive, ironic, slippery, impossible to pin down. Where do I use cleverness to avoid sincerity?',
+              symbol: '\uD83D\uDC7E',
+            },
+            {
+              name: 'The Eternal Student',
+              description: 'Negative Air. Always preparing, never initiating. Where am I using study to avoid apprenticeship?',
+              symbol: '\uD83D\uDCDA',
+            },
+            {
+              name: 'The Mad Theorist',
+              description: 'Negative Air. Makes giant models that do not touch body, practice, or consequence. Where does my system-building become disembodied?',
+              symbol: '\uD83C\uDF10',
+            },
+          ],
+          archetypeProfiles: [
+            {
+              relateTo: 'The Philosopher-Magician \u2014 pattern-maker, system-builder, connector of traditions.',
+              fear: 'The Empty Talker \u2014 someone whose words do not incarnate.',
+              distortion: 'The Mad Theorist / Eternal Student \u2014 always building the perfect map before practice.',
+              cultivate: 'The Scribe-Magician \u2014 exact words, exact notes, exact ritual structure.',
+            },
+          ],
+          vows: [
+            { text: 'My Air serves practice.' },
+            { text: 'I do not research before completing the minimum action.' },
+            { text: 'I turn confusion into one clear sentence.' },
+            { text: 'I speak simply before I explain deeply.' },
+            { text: 'I use theory to clarify life, not escape life.' },
+            { text: 'I record the result of practice before seeking new material.' },
+            { text: 'I breathe before speaking.' },
+            { text: 'I let thoughts pass like wind, but I write down the true message.' },
+          ],
+          compoundElements: [
+            {
+              name: 'Fire + Air',
+              positive: 'Decisive speech, magical command, inspired teaching, sharp insight, clean ritual vibration, cutting through confusion.',
+              negative: 'Argumentativeness, intellectual aggression, spiritual grand theory, impatience disguised as clarity, using words as weapons.',
+              note: 'Where does my mind become a sword, and do I wield it cleanly?',
+            },
+            {
+              name: 'Water + Air',
+              positive: 'Active imagination, scrying, dream interpretation, emotional articulation, poetic insight, compassionate understanding.',
+              negative: 'Fantasy spirals, beautiful but untested associations, vague occult atmosphere, mistaking symbolic resonance for truth.',
+              note: 'Can I give feeling a true name without turning it into fantasy?',
+            },
+            {
+              name: 'Earth + Air',
+              positive: 'Notebooks, ritual records, diagrams, manuals, schedules, clear practice systems, disciplined study.',
+              negative: 'Over-planning, bureaucratic magic, dead taxonomies, hoarding notes, building systems that never breathe.',
+              note: 'Does this structure help Air land, or does it trap life in categories?',
+            },
+          ],
+        },
+      },
+    ],
+  },
+  earth: {
+    id: 'earth',
+    name: 'Earth',
+    symbol: '\uD83D\uDD03',
+    symbolSvg: '/symbols/earth.svg',
+    color: '#16a34a',
+    bgGradient: 'from-green-950 via-emerald-900 to-teal-950',
+    borderColor: 'border-green-500/40',
+    tagline: 'Body \u2014 the element that makes the whole path real.',
+    description:
+      'Earth is the element of body, habit, repetition, form, limitation, structure, consequence, and incarnation. Fire ignites. Air understands. Water receives. Earth embodies. Without Earth, LBRP stays theatrical, Bardon stays theoretical, and active imagination becomes mood.',
+    tabs: [
+      {
+        id: 'nature',
+        label: 'Nature',
+        content: {
+          overview: `Earth is force become form.
+
+It is density, gravity, weight, substance, boundary, body, bone, soil, stone, matter, habit, memory, rhythm, limitation, patience, and consequence.
+
+Fire rises. Air moves. Water sinks. Earth holds.
+
+Earth says: "I am here."
+
+Earth is the element by which anything becomes actual. A vow becomes Earth when it is repeated. A ritual becomes Earth when it is done in the same place. A dream becomes Earth when it is written down. A theory becomes Earth when it changes behaviour. A magical system becomes Earth when it has a notebook, schedule, altar, body, and consequences.
+
+Earth is the element of incarnation. It is not glamorous. It is not fast. It does not care how inspired you are. Earth asks: "Did you do it?"
+
+Hermetic meaning
+
+In Hermeticism, Earth is the principle of form, body, matter, manifestation, stability, boundary, concretion, limitation, practice, memory, habit, the vessel, the temple, the altar, and the body as magical instrument.
+
+If Fire is the wand, Air the sword, and Water the cup, Earth is the pentacle: the consecrated surface where spiritual force becomes usable in the material world.
+
+Earth is not "low." It is the seal. Without Earth, the higher forces leak away. Earth is what allows the magician to say: "This is not merely an experience. This has been incorporated into my life."
+
+Alchemical meaning
+
+Alchemically, Earth is the fixed body, the residue, the salt, the vessel, the coagulated form. Fire heats. Water dissolves. Air volatilises. Earth fixes.
+
+Psychologically: Fire gives ignition. Water dissolves emotional hardness. Air extracts meaning. Earth fixes the insight into life. Earth asks: "What has changed in your actual life?" Not "What did you understand?" Not "What did you feel?" But "What do you now do differently?"
+
+Psychic function
+
+Earth is the faculty of embodiment, stability, discipline, patience, routine, order, craft, memory, habit, boundary, realism, responsibility, completion, containment, manifestation, practicality, endurance.
+
+Earth is what lets you keep a ritual diary, clean your room, eat properly, sleep properly, repeat practice, finish projects, hold a vow, maintain posture, build an altar, print texts, respect limits, track results, and do one boring thing daily.
+
+Earth is the container. Without Earth, Fire burns out, Air scatters, and Water floods.
+
+Body-feel of Earth
+
+Earth may feel like: feet on floor, weight in the legs, solidity in the bones, slow breath, settled belly, posture, heaviness, density, stillness, contact with the ground, muscle tone, routine, physical fatigue, resistance, inertia, stubbornness, safety, containment.
+
+Balanced Earth: "I am stable, present, and able to hold this."
+Distorted Earth: "I am heavy, stuck, dull, and unable to move."
+Weak Earth: "I cannot hold anything long enough for it to become real."
+
+Earth imagery
+
+A mountain, a cave, a stone altar, a clay vessel, bones, roots, soil, a monastery wall, a temple foundation, a black cube, a field after rain, an old tree, a tortoise, a bull, a sealed book, a buried seed, a standing body, a garden bed, a hearthstone, a fortress, a grave, a womb of stone.
+
+The key Earth image: the stone altar that receives the flame, the cup, and the word. Earth is the altar. It does not perform the ritual. It allows the ritual to happen.
+
+Earth in your life
+
+For you, Earth is probably the element that decides whether all of this becomes a real path or stays as brilliant occult-metaphysical weather.
+
+Your Earth appears positively when you write notes, make templates, print texts, create a practice structure, eat simple grounding food, physically go to monasteries or courses, do repeated meditation, care about notebooks and routines, want a proper ceremonial practice rather than vague occultism, and try to make things operational.
+
+Your Earth distorts or weakens when you get tired and collapse into videos, research instead of practising, make a huge system but do not repeat the simple act, lack a fixed evening protocol, want the perfect setup before beginning, let mood decide practice, do not log the result, or move too quickly to the next source.
+
+The key issue: you do not need less Fire, Air, or Water. You need Earth strong enough to contain them. Earth is the chalice for Water. Earth is the forge for Fire. Earth is the notebook for Air. Earth is the temple for the whole operation.
+
+The three Earths
+
+Dead Earth: "I am stuck. I cannot be bothered. I will do it tomorrow. I am too tired. Nothing changes." This Earth is inertia.
+
+Weak Earth: "I have insights but no routine. I have longing but no vessel. I have theories but no practice log. I have will but no repetition." This Earth cannot hold the work.
+
+Noble Earth: "I do the minimum. I record the result. I keep the space. I respect the body. I return tomorrow. I build slowly. I make the invisible visible." This Earth is the temple foundation.
+
+The real Earth instruction
+
+For Fire: act. For Air: name. For Water: receive. For Earth: repeat.
+
+Not forever. Not perfectly. Not heroically. Just enough that the inner work has a body.
+
+Your central Earth sentence: "My Earth is noble when it becomes a living temple for practice. My Earth is distorted when it becomes inertia, preparation, or comfort." Or even sharper: "My Earth must turn insight into repeated form."`,
+        },
+      },
+      {
+        id: 'positive',
+        label: '+',
+        content: {
+          overview: `Positive Earth is living form. It appears as discipline, reliability, patience, groundedness, cleanliness, routine, practicality, craftsmanship, record-keeping, physical care, financial care, food rhythm, sleep rhythm, humility, realism, endurance, finishing, consistency, respect for limits, stable practice, quiet strength, not needing drama, and doing the boring minimum.
+
+Positive Earth says: "I make this real."
+
+It is the monk who sits every morning. The craftsman who sharpens the tool. The gardener who waters the plant. The temple keeper who sweeps the floor. The builder who lays one stone correctly. Positive Earth is not dead routine. It is life held in reliable form.`,
+          entries: [
+            {
+              title: 'Doing the practice even without inspiration',
+              incident: 'I felt no enthusiasm but I stood up, did the ritual, and recorded it anyway.',
+              expression: 'Discipline, repetition, vow-keeping.',
+              bodyFeel: 'Heavy but moving, grounded, no drama.',
+              result: 'The practice became real for that day.',
+              purifiedQuality: 'Faithful repetition \u2014 Earth as sincere form.',
+            },
+            {
+              title: 'Writing out the inner work',
+              incident: 'I took the Fire profile and turned it into a practical worksheet.',
+              expression: 'Craftsmanship, documentation, structure.',
+              bodyFeel: 'Settled, focused, concrete, mind quiet.',
+              result: 'Fire became something I could actually observe and track.',
+              purifiedQuality: 'Writing as incarnation \u2014 Earth giving form to insight.',
+            },
+            {
+              title: 'Cleaning the space before practice',
+              incident: 'I cleared my desk, lit incense, and set up a simple altar area.',
+              expression: 'Temple-keeping, preparation, reverence through order.',
+              bodyFeel: 'Calm, purposeful, body moving with attention.',
+              result: 'The space felt ready, and the practice had a container.',
+              purifiedQuality: 'Sacred order \u2014 Earth as the vessel that invites spirit.',
+            },
+            {
+              title: 'Returning after a missed day',
+              incident: 'I skipped practice yesterday but did it today without self-punishment.',
+              expression: 'Resilience, continuity without guilt.',
+              bodyFeel: 'Simple, steady, no inner drama.',
+              result: 'The chain continued. The vow survived.',
+              purifiedQuality: 'Steadfast return \u2014 Earth that does not collapse after one failure.',
+            },
+            {
+              title: 'Choosing the minimum over nothing',
+              incident: 'I was exhausted but did two minutes of practice instead of skipping entirely.',
+              expression: 'Realistic discipline, respecting limits.',
+              bodyFeel: 'Tired but upright, brief but sincere.',
+              result: 'The thread was kept.',
+              purifiedQuality: 'Minimum viable practice \u2014 Earth that respects reality.',
+            },
+          ],
+        },
+      },
+      {
+        id: 'negative',
+        label: '\u2212',
+        content: {
+          overview: `Negative Earth is form without life. It appears as laziness, inertia, dullness, stuckness, fear of change, rigidity, stubbornness, materialism, comfort addiction, procrastination, avoidance through heaviness, sleepwalking habit, messiness, clutter, hoarding, bodily neglect, over-attachment to security, mechanical repetition, dead routine, pessimism.
+
+Negative Earth says: "Nothing moves." This is Earth as mud, not mountain. It does not hold the flame. It smothers it.
+
+In practice: "I feel too tired. I will start tomorrow. I need the perfect setup first. My room is chaotic so I cannot begin. I lie down and do not get back up. I keep notes but do not act."
+
+Negative Earth is especially dangerous because it does not feel dramatic. It feels normal. It is the slow death of practice by comfort and delay.`,
+          entries: [
+            {
+              title: 'Comfort defeating practice',
+              incident: 'At night I wanted to do LBRP but lay down and watched videos.',
+              expression: 'Inertia, comfort-seeking, body heaviness.',
+              bodyFeel: 'Heavy eyes, slack posture, body sinking.',
+              result: 'No ritual. Sleep delayed. Vague frustration.',
+              hiddenNeed: 'Rest without discipline.',
+              purifiedCounterpart: 'Practice must happen before lying down. Bed is not the temple.',
+            },
+            {
+              title: 'Endless preparation',
+              incident: 'I got excited about multiple systems and opened many tabs, collecting material instead of choosing one action.',
+              expression: 'Hoarding, preparation-as-avoidance.',
+              bodyFeel: 'Restless body, eyes scanning, no settled posture.',
+              result: 'More material, less practice.',
+              hiddenNeed: 'I wanted the feeling of progress without the discipline of limits.',
+              purifiedCounterpart: 'Earth requires limits: one text, one exercise, one log.',
+            },
+            {
+              title: 'Messy environment blocking practice',
+              incident: 'My space was cluttered and I felt I could not begin until it was clean.',
+              expression: 'Using external chaos as permission to delay.',
+              bodyFeel: 'Heavy, overwhelmed, scattered attention.',
+              result: 'No practice because conditions were not perfect.',
+              hiddenNeed: 'I wanted to avoid the imperfect start.',
+              purifiedCounterpart: 'Clear one square foot. Begin there.',
+            },
+            {
+              title: 'Dead routine',
+              incident: 'I went through the motions mechanically with no presence or heart.',
+              expression: 'Earth without Fire, Air, or Water.',
+              bodyFeel: 'Dull, heavy, numb, disconnected.',
+              result: 'The form was there but the life was absent.',
+              hiddenNeed: 'I wanted safety without vulnerability.',
+              purifiedCounterpart: 'Add one moment of presence: a breath, a word felt, a pause.',
+            },
+            {
+              title: 'Procrastination through tiredness',
+              incident: 'I felt too tired to practice and used that as permission to skip.',
+              expression: 'Using body state to avoid will.',
+              bodyFeel: 'Heavy eyelids, low energy, desire to collapse.',
+              result: 'The practice did not happen.',
+              hiddenNeed: 'I wanted ease without cost.',
+              purifiedCounterpart: 'Do the minimum. Two minutes keeps the vow.',
+            },
+          ],
+        },
+      },
+      {
+        id: 'weak',
+        label: 'Weak',
+        content: {
+          overview: `Too little Earth appears as no routine, no stability, no follow-through, no schedule, no ritual record, no body awareness, poor sleep rhythm, poor food rhythm, messy environment, unfinished projects, spiritual fantasy, too many systems, too many tabs, inconsistent practice, insight without application, visions without integration, theory without lifestyle, emotion without container, will without repetition.
+
+Weak Earth says: "I cannot hold what comes through."
+
+This might be one of your core issues. Not because you lack Earth completely, but because your Fire-Air-Water currents are intense. Earth has to become strong enough to hold them.
+
+Your Earth may not need to become boring. It needs to become vessel.`,
+          entries: [
+            {
+              title: 'Insight without application',
+              incident: 'I understood a deep pattern about myself but did nothing with it.',
+              actionAvoided: 'Turning insight into action.',
+              replacedFire: 'Air satisfaction with understanding.',
+              cost: 'The insight faded without incarnation.',
+              fireCorrection: 'Every insight must produce one action.',
+            },
+            {
+              title: 'No fixed practice time',
+              incident: 'I practiced whenever I felt like it, which meant gaps of days.',
+              actionAvoided: 'Committing to a regular slot.',
+              replacedFire: 'Mood-dependent practice.',
+              cost: 'Inconsistent progress, weak container.',
+              fireCorrection: 'Same time, same place, minimum action.',
+            },
+            {
+              title: 'No record keeping',
+              incident: 'I had experiences and insights but did not write them down.',
+              actionAvoided: 'Documenting before it faded.',
+              replacedFire: 'Trusting memory, which failed.',
+              cost: 'Lost material, lost learning.',
+              fireCorrection: 'Write one line before doing anything else.',
+            },
+            {
+              title: 'Too many systems at once',
+              incident: 'I was studying Bardon, Enochian, Buddhism, and Jung simultaneously.',
+              actionAvoided: 'Choosing one and repeating.',
+              replacedFire: 'Air breadth without Earth depth.',
+              cost: 'Fragmented attention, no deep practice.',
+              fireCorrection: 'One system. One notebook. One minimum daily act.',
+            },
+            {
+              title: 'Poor sleep rhythm',
+              incident: 'I stayed up late and then had no energy for morning practice.',
+              actionAvoided: 'Respecting the body\u2019s need for order.',
+              replacedFire: 'Late-night stimulation, comfort, delay.',
+              cost: 'The next day was lost to fog.',
+              fireCorrection: 'Sleep is an Earth practice. Rhythm before ritual.',
+            },
+          ],
+        },
+      },
+      {
+        id: 'archetypes',
+        label: 'Archetypes',
+        content: {
+          overview: `Earth archetypes are the universal patterns through which the formative, embodying, and stabilising principle expresses itself.
+
+Use archetypes only after you have collected scenes. Otherwise it becomes fantasy.
+
+Recurring themes to look for
+
+Theme 1: Weak continuation \u2014 I ignite strongly but struggle to repeat. Fire gives real inspiration, but without Earth, inspiration vanishes. Correction: minimum daily action.
+
+Theme 2: Notes as partial Earth \u2014 Writing profiles and structures helps make inner material concrete. Air becomes Earth through documentation, but notes can replace practice. Correction: every note must produce one action.
+
+Theme 3: Evening Earth collapse \u2014 At night, the body becomes heavy and practice collapses into bed or video. The body is asking for rhythm and rest, but inertia takes over. Correction: practice before bed-state. Standing ritual before lying down.
+
+Theme 4: Too much material, not enough vessel \u2014 Gathering Bardon, Rowe, Enochian, Buddhism, commentaries, forums. Deep study, but the container breaks under too much input. Correction: one working notebook, one active exercise, everything else waits.
+
+Theme 5: Earth as temple \u2014 When there is a fixed place, text, and sequence, practice becomes more possible. You respond well to ritualised structure, but risk waiting for perfect conditions. Correction: make a minimal temple anywhere.
+
+Earth in LBRP
+
+Earth enters LBRP through standing posture, feet on floor, the physical room, the direction North, drawing the pentagrams, using the same sequence, vibrating names with the body, finishing the rite, recording the result, and returning the next day.
+
+Earth question before ritual: "Am I embodied, or am I about to drift?"
+During ritual: "Feet. Posture. Gesture. Voice. Complete the form."
+After ritual: Did I physically do it? Did I stay upright? Did I complete the sequence? Did I write a record? What changed in the room or body afterward? What is the next minimum repetition?`,
+          archetypes: [
+            {
+              name: 'The Builder',
+              description: 'Turns vision into structure. Where do I actually build what I imagine?',
+              symbol: '\uD83E\uDDF1',
+            },
+            {
+              name: 'The Monk',
+              description: 'Repeats the simple practice daily. Can I do the same thing without needing novelty?',
+              symbol: '\uD83E\uDDD8',
+            },
+            {
+              name: 'The Farmer',
+              description: 'Trusts seasons, cultivation, patience, and small repeated care. Where do I need to cultivate instead of force?',
+              symbol: '\uD83C\uDF3E',
+            },
+            {
+              name: 'The Craftsman',
+              description: 'Improves through repetition, tools, method, and attention. What skill am I willing to practise badly until it becomes real?',
+              symbol: '\uD83D\uDD28',
+            },
+            {
+              name: 'The Temple Keeper',
+              description: 'Maintains sacred space. Is my room, notebook, altar, and body fit to hold the work?',
+              symbol: '\uD83C\uDFDB\uFE0F',
+            },
+            {
+              name: 'The Guardian',
+              description: 'Protects boundaries, routines, resources, and limits. What do I need to guard so my practice survives?',
+              symbol: '\uD83D\uDEE1\uFE0F',
+            },
+            {
+              name: 'The Mountain Sage',
+              description: 'Stable, quiet, unmoved by every mood. Can I remain when the weather changes?',
+              symbol: '\u26F0\uFE0F',
+            },
+            {
+              name: 'The Sluggard',
+              description: 'Negative. Heavy, delayed, comfort-seeking. Where does comfort quietly defeat my will?',
+              symbol: '\uD83D\uDE34',
+            },
+            {
+              name: 'The Hoarder',
+              description: 'Negative. Collects material, books, notes, systems, tools, but does not transform. Where am I collecting instead of practising?',
+              symbol: '\uD83D\uDCDA',
+            },
+            {
+              name: 'The Prisoner',
+              description: 'Negative. Trapped by habit and environment. What routines have become a cell?',
+              symbol: '\uD83D\uDD17',
+            },
+            {
+              name: 'The Dead King',
+              description: 'Negative. Structure without life. Authority without vitality. Where has my routine become dead, punitive, or joyless?',
+              symbol: '\uD83D\uDC51',
+            },
+            {
+              name: 'The Unrooted Visionary',
+              description: 'Weak. Sees much, embodies little. Where do my visions fail to touch the ground?',
+              symbol: '\uD83C\uDF2B\uFE0F',
+            },
+            {
+              name: 'The Cracked Vessel',
+              description: 'Weak. Receives energy but cannot hold it. Where does intensity leak out because I have no structure?',
+              symbol: '\uD83C\uDF7A',
+            },
+          ],
+          archetypeProfiles: [
+            {
+              relateTo: 'The Scribe-Builder \u2014 turning insight into structures, notes, systems, and working documents.',
+              fear: 'The Dead King \u2014 routine becoming lifeless, boring, restrictive, spiritually dead.',
+              distortion: 'The Hoarder / Bureaucrat \u2014 collecting material, making systems, preparing endlessly.',
+              cultivate: 'The Temple Keeper \u2014 simple daily repetition, clean space, fixed minimum practice.',
+            },
+          ],
+          vows: [
+            { text: 'My Earth makes the work real.' },
+            { text: 'I do the minimum before seeking more.' },
+            { text: 'I stand before I lie down.' },
+            { text: 'I record before I interpret.' },
+            { text: 'I keep one notebook.' },
+            { text: 'I use one active practice at a time.' },
+            { text: 'I clean the vessel.' },
+            { text: 'I respect food, sleep, body, and place.' },
+            { text: 'I return after failure.' },
+            { text: 'I do not need perfect conditions to begin.' },
+            { text: 'My temple is wherever I stand, act, and record.' },
+          ],
+          compoundElements: [
+            {
+              name: 'Fire + Earth',
+              positive: 'Training, ritual repetition, physical courage, craft, building, daily vow, strength, doing the work.',
+              negative: 'Harsh self-discipline, stubborn force, burnout, rigidity, punishing the body, forcing routine without life.',
+              note: 'Does my discipline protect the flame or crush it?',
+            },
+            {
+              name: 'Air + Earth',
+              positive: 'Notebooks, diagrams, practice manuals, logs, classification, clear methods, study plans, ritual records.',
+              negative: 'Over-planning, dead taxonomies, collecting systems, preparation replacing action, bureaucratic magic.',
+              note: 'Does this structure lead to practice, or merely organise avoidance?',
+            },
+            {
+              name: 'Water + Earth',
+              positive: 'Devotional routine, dream journal, altar care, evening ritual, body-based imagination, emotional regulation, sleep rhythm.',
+              negative: 'Comfort addiction, sleepy passivity, nostalgic stagnation, bed/video/fantasy loop, emotional heaviness.',
+              note: 'Does this soothe me into practice or soothe me away from practice?',
+            },
+          ],
+        },
+      },
+    ],
+  },
+  spirit: {
+    id: 'spirit',
+    name: 'Spirit',
+    symbol: '\uD83D\uDD00',
+    symbolSvg: '/symbols/spirit.svg',
+    color: '#9333ea',
+    bgGradient: 'from-violet-950 via-purple-900 to-fuchsia-950',
+    borderColor: 'border-violet-500/40',
+    tagline: 'Aether \u2014 the fifth element that unites and transcends.',
+    description:
+      'Spirit is the quintessence \u2014 the element that transcends and unites all others. It is the point of awareness itself, the still point of the turning world.',
+    tabs: [
+      {
+        id: 'nature',
+        label: 'Nature',
+        content: {
+          overview: 'Spirit is the fifth element \u2014 the quintessence or aether. It is the principle that holds all elements in balance. Spirit is the witness, the aware presence that observes the play of the four elements without identifying with any of them.',
+        },
+      },
+      {
+        id: 'positive',
+        label: '+',
+        content: { overview: 'Placeholder for Spirit reflections.', entries: [] },
+      },
+      {
+        id: 'negative',
+        label: '\u2212',
+        content: { overview: 'Spirit distorted: spiritual bypass, dissociation, inflation, escape from embodiment.', entries: [] },
+      },
+      {
+        id: 'weak',
+        label: 'Weak',
+        content: { overview: 'Where is integration absent? Where do you live entirely identified with one element?', entries: [] },
+      },
+      {
+        id: 'archetypes',
+        label: 'Archetypes',
+        content: {
+          overview: 'Spirit archetypes: The Self (integration), The Sage (transcendent wisdom), The Fool (divine innocence), The Mystic (union with the absolute), The Hermit (the solitary seeker).',
+          archetypes: [],
+        },
+      },
+    ],
+  },
+};
+
+export function getElement(id: string): ElementData | undefined {
+  return ELEMENTS[id as ElementId];
+}
+
+export function getVisibleElements(): ElementData[] {
+  return VISIBLE_ELEMENTS.map((id) => ELEMENTS[id]);
+}
+
+export function getAllElements(): ElementData[] {
+  return ELEMENT_IDS.map((id) => ELEMENTS[id]);
+}

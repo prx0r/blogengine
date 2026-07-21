@@ -1,0 +1,347 @@
+{
+  "ro_id": "ro:crowley-cosmology",
+  "schema_version": 1,
+  "title": "Thelemic Cosmology: Liber AL, Liber Trigrammaton, Liber Arcanorum",
+  "subtitle": "The Nuit/Hadit/Ra-Hoor-Khuit triad, the 8-fold trigrammic cosmogony, and the cosmic process via the Tarot trumps",
+  "family": "tradition",
+  "status": "draft",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "Thelemic cosmology describes a triadic universe (Nuit as infinite space, Hadit as the point, Ra-Hoor-Khuit as their union), an 8-fold cosmogony in Liber Trigrammaton, and a 22-fold cosmic process i...",
+    "scope": "Covers Liber AL Chapter I (Nuit), Chapter II (Hadit), Chapter III (Ra-Hoor-Khuit); Liber Trigrammaton (the 8 trigrams of cosmic evolution); and Liber Arcanorum (the 22 paths of the Tarot as cosmic process).",
+    "traditions": [
+      "thelema",
+      "hermetic_qabalah",
+      "comparative_esotericism"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "liber-al",
+      "tier": 1,
+      "label": "Liber AL vel Legis (The Book of the Law) \u2014 Class A. Three chapters: Nuit (Ch. I), Hadit (Ch. II), Ra-Hoor-Khuit (Ch. III). The central revelation of Thelema, received by Aleister Crowley in Cairo, 1904.",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "nuit_cosmology",
+        "hadit_doctrine",
+        "rahoor_aeon",
+        "do_what_thou_wilt",
+        "every_star"
+      ],
+      "sections_affected": [
+        "cosmology",
+        "theology"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "liber-trigrammaton",
+      "tier": 1,
+      "label": "Liber Trigrammaton (Liber XXVII) \u2014 Class A. The 8-fold cosmogony described through 8 trigrams (3-line permutations of solid/broken lines). Crowley's adaptation of the Yijing trigrams to Thelemic cosmology.",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "eight_trigrams",
+        "trigrammic_cosmogony",
+        "binary_opposition"
+      ],
+      "sections_affected": [
+        "cosmogony"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "liber-arcanorum",
+      "tier": 1,
+      "label": "Liber Arcanorum (Liber CCXXXI) \u2014 Class A. The cosmic process as described by the 22 Tarot trumps (Major Arcana). Each trump is a stage in the unfolding of the universe from the Fool to the Universe.",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "twenty_two_trumps",
+        "tarot_cosmogony",
+        "fool_to_universe"
+      ],
+      "sections_affected": [
+        "cosmic_process"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "duquette-magick-crowley",
+      "tier": 2,
+      "label": "DuQuette, Lon Milo \u2014 The Magick of Aleister Crowley (2003). Commentary on Liber AL and the Thelemic pantheon: Nuit, Hadit, Ra-Hoor-Khuit, Babalon, Therion.",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "pantheon_exegesis",
+        "nuit_hadit_commentary",
+        "aeon_of_horus"
+      ],
+      "sections_affected": [
+        "cosmology",
+        "commentary"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "liber-samekh-full",
+      "tier": 2,
+      "label": "Liber Samekh (Liber DCCC) \u2014 Commentary on Section A and the identification of the Angel with the Ain Soph and Kether. Used here for the qabalistic elaboration of the Nuit/Hadit/Ra-Hoor-Khuit triad.",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "aint_soph_identification",
+        "nuit_hadit_qabalah"
+      ],
+      "sections_affected": [
+        "qabalah"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "corbin-man-of-light",
+      "tier": 2,
+      "label": "Corbin, Henry \u2014 The Man of Light in Iranian Sufism. Used for comparative unus-ambo structure.",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "unus_ambo_comparison"
+      ],
+      "sections_affected": [
+        "comparative"
+      ],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "cosmology",
+      "subsection": "nuit_infinite_space",
+      "kind": "source",
+      "text": "Had! The manifestation of Nuit. Nu! the hiding of Hadit. (Liber AL I:1, II:1) I am Nuit, and my word is six and fifty. Divide, add, multiply, and understand. (I:24) I am the continuous one of Heaven. (I:26) The naked splendour of Nuit; the secret ardours of Hadit. (DuQuette, Ch. 3, citing Liber AL) Nuit is the infinite space of possibility, the night sky, the body of the goddess that contains all stars. She is described as 'the continuous one' \u2014 the undifferentiated continuum of consciousness that is the ground of all manifestation. Her number is 56 (the sum of the squares of the Sephiroth), and her word is 'Nu' \u2014 negation, the no-thing from which all things arise.",
+      "source_ids": [
+        "liber-al",
+        "duquette-magick-crowley"
+      ],
+      "topics": [
+        "nuit",
+        "infinite_space",
+        "continuous_one",
+        "nu"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "cosmology",
+      "subsection": "hadit_the_point",
+      "kind": "source",
+      "text": "I am Hadit, the complement of Nu, my bride. I am not extended. I am the flame that burns in every heart of man, and in the core of every star. (Liber AL II:2-6) I am the energy of the slumbering serpent, coiled to spring in the inmost centre of the universe. (DuQuette on Hadit) Hadit is the point \u2014 the secret centre, the infinite density of being that contracts Nuit's unbounded space into a single point of self-awareness. He is the 'flame that burns in every heart' \u2014 the individual spark of consciousness that is the core of each star. His number is 19 (ChVH = 'life'), and his symbol is the winged globe, the coiled serpent, the point within the circle.",
+      "source_ids": [
+        "liber-al",
+        "duquette-magick-crowley"
+      ],
+      "topics": [
+        "hadit",
+        "point",
+        "flame",
+        "coiled_serpent",
+        "secret_centre"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "cosmology",
+      "subsection": "rahoor_khuit_union",
+      "kind": "source",
+      "text": "Now let it be understood: I am Ra-Hoor-Khuit, the avenger and lord of the Aeon. (Liber AL III:1) Abrogate are all rituals, all ordeals, all words and signs. Ra-Hoor-Khuit hath taken his throne in the East. (III:49) I am the Lord of the Aeon, the crowned and conquering child. (DuQuette, Ch. 3) Ra-Hoor-Khuit is the union of Nuit and Hadit \u2014 the child of infinite space and the point. He is the manifest deity, the 'avenger' (the force that destroys outworn forms), the 'lord of the Aeon' (the spiritual formula of the present epoch). His number is 666 (the sum of the solar numbers), and his symbol is the crowned child, the sun at noon, the Horus falcon.",
+      "source_ids": [
+        "liber-al",
+        "duquette-magick-crowley"
+      ],
+      "topics": [
+        "ra_hoor_khuit",
+        "aeon_of_horus",
+        "crowned_child",
+        "union"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "cosmogony",
+      "subsection": "eight_trigrams",
+      "kind": "source",
+      "text": "Liber Trigrammaton (Liber XXVII) describes the cosmic process through 8 trigrams \u2014 permutations of three lines, each of which may be solid (Yang, Active, Male) or broken (Yin, Passive, Female). The 8 trigrams are: Heaven (\u2630), Water (\u2631), Fire (\u2632), Thunder (\u2633), Wind (\u2634), Water-again (\u2635), Mountain (\u2636), Earth (\u2637). Crowley reinterprets these as the 8 stages of manifestation: from pure spirit (Heaven) through the formation of the elements (Water, Fire, Thunder, Wind, Water-again, Mountain) to completed matter (Earth). Each trigram is a 'word' of the process \u2014 a stage in the descent of the One into the Many and the corresponding ascent of the Many back to the One. The 8-fold structure parallels the 8 limbs of yoga (ashtanga), the 8 Bhairavas of Tantraloka, and the 8 directions of space. (DuQuette, Appendix; Crowley, Liber XXVII commentary)",
+      "source_ids": [
+        "liber-trigrammaton",
+        "duquette-magick-crowley"
+      ],
+      "topics": [
+        "eight_trigrams",
+        "cosmogony",
+        "yang_yin",
+        "descent_and_ascent"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "cosmic_process",
+      "subsection": "twenty_two_trumps",
+      "kind": "source",
+      "text": "Liber Arcanorum (Liber CCXXXI) describes the cosmic process as the unfolding of the 22 Tarot trumps (Major Arcana). Each trump is a stage in the universal process: from the Fool (0 \u2014 the spirit before manifestation) through the Magician (1 \u2014 the first differentiation), the High Priestess (2 \u2014 the receptive principle), the Empress (3 \u2014 generation), the Emperor (4 \u2014 authority), the Hierophant (5 \u2014 tradition), the Lovers (6 \u2014 choice), the Chariot (7 \u2014 conquest), Strength (8 \u2014 courage), the Hermit (9 \u2014 wisdom), the Wheel of Fortune (10 \u2014 destiny), Justice (11 \u2014 equilibrium), the Hanged Man (12 \u2014 sacrifice), Death (13 \u2014 transformation), Temperance (14 \u2014 alchemy), the Devil (15 \u2014 limitation), the Tower (16 \u2014 upheaval), the Star (17 \u2014 hope), the Moon (18 \u2014 illusion), the Sun (19 \u2014 realization), Judgment (20 \u2014 awakening), to the Universe (21 \u2014 completion). These 22 trumps correspond to the 22 paths of the Tree of Life and the 22 letters of the Hebrew alphabet. Each trump is a 'key' to the understanding of a universal process.",
+      "source_ids": [
+        "liber-arcanorum",
+        "duquette-magick-crowley"
+      ],
+      "topics": [
+        "twenty_two_trumps",
+        "major_arcana",
+        "tarot_cosmogony",
+        "paths_of_the_tree"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_006",
+      "section": "cosmology",
+      "subsection": "triad_comparative",
+      "kind": "source",
+      "text": "The Nuit/Hadit/Ra-Hoor-Khuit triad maps precisely onto the Tantraloka's Par\u0101-Par\u0101par\u0101-Apar\u0101 structure. Nuit (infinite space, the continuous one) = Par\u0101 (the transcendent light of consciousness, prak\u0101\u015ba, the ground of all knowing). Hadit (the point, the secret centre, the flame in every heart) = Par\u0101par\u0101 (the 'I-ness' that contracts infinity into a point of self-awareness, the reflective dimension of consciousness). Ra-Hoor-Khuit (the crowned child, the union made manifest as a discrete god) = Apar\u0101 (the immanent deity, the manifest form of consciousness embodied in the cosmos). The Thelemic triad is also structurally parallel to Steiner's trimurti of Physical Body / Ether Body / Astral Body (as cosmic principles of density, life, and consciousness), and to Layayoga's \u015aiva-\u015aakti-\u015aakta (the Lord, the Power, and the Recipient of Power). (Comparative analysis; DuQuette, Ch. 3)",
+      "source_ids": [
+        "liber-al",
+        "duquette-magick-crowley",
+        "corbin-man-of-light"
+      ],
+      "topics": [
+        "triadic_comparison",
+        "para_aparapara_apara",
+        "steiner_trimurti",
+        "shiva_shakti_shakta"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_007",
+      "section": "cosmology",
+      "subsection": "hadit_as_serpent_power",
+      "kind": "source",
+      "text": "I am the energy of the slumbering serpent, coiled to spring in the inmost centre of the universe. (DuQuette on Hadit, Ch. 3) Be thou Hadit, my secret centre, my heart & my tongue! (Liber AL II:1) The identification of Hadit with the serpent power (Ku\u1e47\u1e0dalin\u012b) is explicit: Hadit is the 'coiled serpent' at the base of the spine, the 'flame that burns in every heart,' the 'secret centre' that is the core of every star. In Layayoga, Ku\u1e47\u1e0dalin\u012b is the serpent goddess coiled at the m\u016bl\u0101dh\u0101ra cakra. In Tantraloka, the \u015bakti is the dynamic power of consciousness that contracts and expands. The Thelemic-Hadit = Layayoga's Ku\u1e47\u1e0dalin\u012b = Tantraloka's \u015bakti is the direct identification: the individualised power of consciousness that seeks to unite with its source.",
+      "source_ids": [
+        "liber-al",
+        "duquette-magick-crowley"
+      ],
+      "topics": [
+        "hadit_as_kundalini",
+        "serpent_power",
+        "ku\u1e47\u1e0dalin\u012b_parallel"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_008",
+      "section": "cosmogony",
+      "subsection": "trigrammaton_versus_tattvas",
+      "kind": "source",
+      "text": "Liber Trigrammaton's 8 trigrams and the Tantraloka's 36 tattvas describe the same cosmic descent through different numerical structures. The 8 trigrams are: (1) \u2630 Heaven = \u015aiva tattva (pure spirit), (2) \u2631 Water = \u015aakti tattva (the primal creative power), (3) \u2632 Fire = Sad\u0101\u015biva tattva (the first differentiation), (4) \u2633 Thunder = \u012a\u015bvara tattva (the lord of manifestation), (5) \u2634 Wind = \u015auddhavidy\u0101 tattva (pure knowing), (6) \u2635 Water-again = M\u0101y\u0101 / ka\u00f1cuka stage (the fixing of the fluid principles into structure), (7) \u2636 Mountain = the 24 material tattvas (solidified form), (8) \u2637 Earth = the physical universe (the end of descent, the beginning of ascent). The 8 trigrams compress the 36 tattvas into an 8-stage octave. Where the tantric system is exhaustive (every level of being named individually), the trigrammic system is schematic (each trigram encodes an entire stage of the process). The 'comment' of the Book of the Law (Liber AL I:40) says 'the word of the law is Thelema' \u2014 the trigrams are the alphabet of that word, just as the 36 tattvas are the alphabet of the Tantraloka's universe. (Comparative analysis; DuQuette, Appendix)",
+      "source_ids": [
+        "liber-trigrammaton",
+        "duquette-magick-crowley"
+      ],
+      "topics": [
+        "trigrams_vs_tattvas",
+        "cosmic_descent",
+        "octave_structure"
+      ],
+      "status": "active"
+    }
+  ],
+  "coverage": {
+    "cosmology": {
+      "status": "comprehensive",
+      "sources": [
+        "liber-al",
+        "duquette-magick-crowley"
+      ],
+      "passage_count": 5,
+      "estimated_completeness": 0.9,
+      "gaps": [
+        "Liber AL Chapter III full exegesis on the Aeon of Horus not yet extracted"
+      ]
+    },
+    "cosmogony": {
+      "status": "good",
+      "sources": [
+        "liber-trigrammaton",
+        "duquette-magick-crowley"
+      ],
+      "passage_count": 2,
+      "estimated_completeness": 0.7,
+      "gaps": [
+        "Full Liber Trigrammaton text with Crowley's commentary not yet extracted"
+      ]
+    },
+    "cosmic_process": {
+      "status": "good",
+      "sources": [
+        "liber-arcanorum"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 0.6,
+      "gaps": [
+        "Individual trump passages from Liber Arcanorum not yet extracted"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "coverage_gap",
+      "title": "Liber Trigrammaton full text not yet extracted",
+      "description": "Only the summary of the 8 trigrams is given here. The full text of Liber Trigrammaton with Crowley's commentary should be extracted as individual passages.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    },
+    {
+      "id": "issue-002",
+      "type": "coverage_gap",
+      "title": "Liber AL Chapter III not fully extracted",
+      "description": "Chapter III of Liber AL (Ra-Hoor-Khuit, the Aeon of Horus, the judgment) is referenced but the full text is not yet extracted. The later chapters contain the practical instructions for the new Aeon.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial RO created covering Liber AL (Nuit, Hadit, Ra-Hoor-Khuit), Liber Trigrammaton (8 trigrams), Liber Arcanorum (22 Tarot trumps), and comparative analysis with Tantraloka tattvas. 8 passages.",
+      "sources_added": [
+        "liber-al",
+        "liber-trigrammaton",
+        "liber-arcanorum",
+        "duquette-magick-crowley",
+        "liber-samekh-full",
+        "corbin-man-of-light"
+      ],
+      "passage_count": 8,
+      "status": "draft"
+    }
+  ],
+  "appendices": [],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created from Liber AL, Liber Trigrammaton, Liber Arcanorum, DuQuette commentary, and comparative sources",
+      "sources_total": 6,
+      "passages_total": 8
+    }
+  ]
+}

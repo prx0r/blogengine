@@ -1,0 +1,54 @@
+{
+  "co_id": "co:uno_therapy3_t1195_t1202_consolida_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3_t1195_t1202_consolidation_template_linking",
+  "turn_index": 0,
+  "lineage": "Therapeutic",
+  "student_state": "understanding_nod",
+  "behavior_tags": [
+    "agreement"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_01",
+    "function_name": "RM_01",
+    "mechanism_shape": "STRUCTURAL_ANALOGY",
+    "teaching_actions": [
+      "links_past_to_present",
+      "applies_template_to_transference"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.62,
+      "attunement": 0.8,
+      "style": 0.35,
+      "depth": 0.38,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_03",
+      "style_discrete": "LS_02",
+      "depth_discrete": "PD_02",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "'Yeah'—minimal but agreement. They're accepting previous teaching. Teacher consolidates by making it explicit: 'in most relationships, closeness = sharing feelings.' This moves from specific ('you and me') to universal ('most relationships'). Template-linking: if this pattern holds here, it likely holds elsewhere. Not telling them what to do ('share feelings!') but describing how closeness works generally. They can apply this template to other relationships. Single turn consolidation—plant general principle after specific learning.",
+  "accumulated_insight": "T1 (Single-turn): Student acknowledges 'Yeah' (minimal agreement to previous teaching about closeness through sharing feelings). Teacher consolidates learning by making pattern explicit: 'in most relationships, we achieve closeness by sharing feelings.' This is consolidation—linking specific observation to general principle. Uses 'we' (universal) not 'you should' (prescriptive). Single turn template-linking: specific example → general pattern.",
+  "abstract_pattern": "",
+  "visible_response": "Whereas, in fact, in most relationships, we achieve closeness by sharing emotions.\n... And we see that even here today part of what we were struggling with is sharing these emotions with me.\nBecause that template was there: How close am I wanting to really be with Jon?\nAnd do I really have permission to actually reveal all these emotions...?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

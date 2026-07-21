@@ -1,0 +1,62 @@
+{
+  "co_id": "co:uno_gurdjeff2_t1818_t1830_love_you_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gurdjeff2_t1818_t1830_love_yourself_first",
+  "turn_index": 0,
+  "lineage": "Gurdjieffian",
+  "student_state": "stuck_on_emotional_expression_binary",
+  "behavior_tags": [
+    "identifies_paradox",
+    "seeks_middle_ground"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_03",
+    "function_name": "RM_03",
+    "mechanism_shape": "NONE",
+    "teaching_actions": [
+      "rejects_binary",
+      "defines_emotional_necessity",
+      "introduces_third_category"
+    ],
+    "traps_avoided": [
+      "ego_defense",
+      "none"
+    ],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.65,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_04",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "request_clarification",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The rejection/third category works: not binary (positive/negative), introduces: third category (pleasant/unpleasant emotions that are not negative), defines: emotional necessity (some emotions necessary). The student identifies paradox (stuck on emotional expression binary), which shows they understand: positive = beyond experience, negative = don't express (paradox). They'll likely ask about definition next. Hypothesis: paradox rejections trigger definition questions—testable by tracking whether paradox rejections lead to definition inquiries.",
+  "accumulated_insight": "T1: Student identifies paradox ('if it is beyond ordinary human experience to feel positive emotion, and we are told not to express negative emotions, is it meant that we are not to express any emotion whatsoever?')—stuck on emotional expression binary via identifies paradox and seeks middle ground. They understand: positive = beyond experience, negative = don't express (paradox). The none mechanism rejects: not binary (positive/negative), introduces: third category (pleasant/unpleasant emotions that are not negative), defines: emotional necessity (some emotions necessary). Pattern: paradox question → rejection/third category → [next: definition question]. Low confidence because paradox rejections can lead to clarification requests or compliance.",
+  "abstract_pattern": "",
+  "visible_response": "No, it is necessary to navigate between the two.\nWe must be as emotional as\npossible, for we miss many perceptions... because at the moment\nwe are not emotional.\nWe have no positive\nemotions, but we can say that we have negative emotions and pleasant and unpleasant\nemotions that are not negative.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:sufi-comparative-analysis",
+    "ro:steiner-tantraloka-parallels"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

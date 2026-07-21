@@ -1,0 +1,159 @@
+{
+  "ro_id": "ro:ro-path-acher",
+  "schema_version": 1,
+  "title": "The Frater Acher Path",
+  "subtitle": "Four-week Saturn Exerzitium with PGM egg systasis",
+  "family": "tradition",
+  "status": "draft",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "Four-week Saturn Exerzitium with PGM egg systasis",
+    "scope": "",
+    "traditions": [
+      "occult",
+      "daimon"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "acher-holy-daimon",
+      "tier": 1,
+      "label": "acher-holy-daimon",
+      "status": "active",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [],
+      "sections_affected": [],
+      "passages_used": 0
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "trust",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [
+        "acher-holy-daimon"
+      ],
+      "topics": [],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "joy",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [
+        "acher-holy-daimon"
+      ],
+      "topics": [],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "darkness",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [
+        "acher-holy-daimon"
+      ],
+      "topics": [],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "encounter",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [
+        "acher-holy-daimon"
+      ],
+      "topics": [],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "saturn_retreat",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [
+        "acher-holy-daimon"
+      ],
+      "topics": [],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_006",
+      "section": "egg_systasis",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [
+        "acher-holy-daimon"
+      ],
+      "topics": [],
+      "status": "placeholder"
+    }
+  ],
+  "total_duration": "4 weeks intensive",
+  "difficulty": "Very high",
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-13",
+      "type": "initial",
+      "summary": "Initial draft. 6 sections outlined.",
+      "sources_added": [
+        "acher-holy-daimon"
+      ],
+      "passage_count": 6,
+      "status": "draft"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-07-13",
+      "event": "RO created",
+      "sources_total": 1,
+      "passages_total": 6
+    }
+  ],
+  "coverage": {
+    "encounter": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    },
+    "saturn_retreat": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    },
+    "darkness": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    },
+    "trust": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    },
+    "egg_systasis": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    },
+    "joy": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    }
+  }
+}

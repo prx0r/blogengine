@@ -1,0 +1,133 @@
+{
+  "ro_id": "ro:literature-pilgrims-progress",
+  "schema_version": 1,
+  "title": "The Pilgrim's Progress — The Kañcukas as Obstacles",
+  "subtitle": "Bunyan's allegory of the soul's journey through the six tattvas toward the Celestial City",
+  "family": "literature",
+  "status": "draft",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "Bunyan's The Pilgrim's Progress as an allegory of the soul's passage through the six kañcukas — each obstacle corresponding to a tattvic contraction.",
+    "scope": "Covers the Slough of Despond as Earth tattva/mūlādhāra; the Hill of Difficulty as Fire tattva/maṇipūra; the Valley of the Shadow of Death as Air tattva/anāhata; the Delectable Mountains as the pure path; the river of death as the final threshold; Apollyon as the Guardian.",
+    "traditions": [
+      "kashmir_shaivism",
+      "tantra",
+      "christian_mysticism",
+      "literature"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "bunyan-pilgrims-progress",
+      "tier": 1,
+      "label": "John Bunyan — The Pilgrim's Progress from This World to That Which Is to Come (1678)",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": ["allegorical_obstacles", "kancuka_correspondence", "guardian_apollyon"],
+      "sections_affected": ["theory", "allegory", "tattva_correspondence"],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "theory",
+      "subsection": "slough_of_despond",
+      "kind": "source",
+      "text": "The Slough of Despond is the Earth tattva (mūlādhāra) — the heaviest and most contracted of the kañcukas. Christian sinks into the mire under the weight of his burden (the karmic residue of the past), and only Help's outstretched hand can pull him out. The slough represents the gravitational pull of materiality — the kalā (limited agency) that makes the soul feel trapped in the density of embodiment. The 'skilful' who have built 'good steps' through the middle of the slough represent the vidyeśvaras who have laid down the path through the tattva.",
+      "source_ids": ["bunyan-pilgrims-progress"],
+      "topics": ["earth_tattva", "muladhara", "slough_of_despond", "kala"],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "theory",
+      "subsection": "hill_of_difficulty",
+      "kind": "source",
+      "text": "The Hill of Difficulty is the Fire tattva (maṇipūra) — the will that must be strengthened through effort. Christian must climb the steep hill, and those who fall asleep on the hill (like Sloth and Presumption) represent the failure of the will — the tirobhāva (obscuration) that occurs when the aspirant mistakes the intermediate stage for the goal. The arbor where Christian rests is the pause at the third cakra where the purified will rests before the ascent to the heart. The Hill has both a 'hard' and 'easy' path — the direct and indirect means within the same tattva.",
+      "source_ids": ["bunyan-pilgrims-progress"],
+      "topics": ["fire_tattva", "manipura", "hill_of_difficulty", "will"],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "theory",
+      "subsection": "valley_of_shadow_of_death",
+      "kind": "source",
+      "text": "The Valley of the Shadow of Death is the Air tattva (anāhata) — the realm of fear, doubt, and the dissolution of the ego. Christian walks through a valley filled with flames, pits, and the whispers of demons. This is the anāhata cakra in its impure form: the heart exposed to its own terror before it is purified into compassion. The valley corresponds to the niyati (limited time/space) kañcuka — the experience of being trapped in a nightmare that has no end. Christian's prayer and his song — 'Though I walk through the valley of the shadow of death' — are the mantras that carry him through.",
+      "source_ids": ["bunyan-pilgrims-progress"],
+      "topics": ["air_tattva", "anahata", "valley_of_shadow", "niyati"],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "theory",
+      "subsection": "apollyon_as_guardian",
+      "kind": "source",
+      "text": "Apollyon is the Guardian of the Threshold — the personification of the contracted ego that resists its own dissolution. He confronts Christian in the Valley of Humiliation armed with 'darts like fiery darts.' The battle is the direct confrontation with the asmitā (the 'I'-maker) — the contraction that says 'I am separate from the divine.' Christian's victory comes through the Sword of the Spirit (the Word) — the śabda (sound/vibration) that cuts through the illusion of separateness. Apollyon covers the entire breadth of the way — the Guardian's function is to block every path except the one.",
+      "source_ids": ["bunyan-pilgrims-progress"],
+      "topics": ["guardian", "apollyon", "asmita", "ego_death"],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "theory",
+      "subsection": "delectable_mountains",
+      "kind": "source",
+      "text": "The Delectable Mountains (Immanuel's Land) are the pure path — the śuddha tattvas glimpsed from within the impure path. Here Christian meets the Shepherds (Knowledge, Experience, Watchful, Sincere) who show him sights from the mountain: the Error Mountain (misguided asceticism), the Caution Mountain (the danger of falling back), and a glimpse of the Celestial City through a perspective glass. The Shepherds are the Vidyeśvaras — the lords of knowledge who guide the soul through the higher stages. The mountains correspond to the śuddhavidyā tattva — the pure knowledge that recognizes the divine in all things.",
+      "source_ids": ["bunyan-pilgrims-progress"],
+      "topics": ["pure_path", "delectable_mountains", "vidyesvara", "shuddhavidya"],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_006",
+      "section": "theory",
+      "subsection": "river_of_death",
+      "kind": "source",
+      "text": "The river of death is the final threshold — the passage beyond the 36 tattvas altogether. Christian and Hopeful cross the deep river that has no bridge, and the waters are 'bitter and sweet' — the pain of final dissolution and the joy of liberation. Hopeful's reassurance ('Be of good cheer, my brother, I feel the bottom, and it is good') is the knowledge that the ground of being (the anuttara) supports the soul even in its final letting-go. The trumpets sound on the other side — the sounding of the śakti in its unbound state. This is the mahābhairava — the dissolution of the individual into the universal consciousness.",
+      "source_ids": ["bunyan-pilgrims-progress"],
+      "topics": ["final_threshold", "river_of_death", "mahabhairava", "liberation"],
+      "status": "placeholder"
+    }
+  ],
+  "coverage": {
+    "theory": {
+      "status": "comprehensive",
+      "sources": ["bunyan-pilgrims-progress"],
+      "passage_count": 6,
+      "estimated_completeness": 0.6,
+      "gaps": ["Christian's encounters with Evangelist, Worldly Wiseman, Vanity Fair, Doubting Castle, and the Land of Beulah need tattvic analysis; detailed page references needed"]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "placeholder",
+      "title": "Passages need refinement with specific page/paragraph references",
+      "description": "All passages currently summarize themes without precise textual citations.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial RO created. Six passages covering the Slough of Despond (Earth), Hill of Difficulty (Fire), Valley of Shadow (Air), Apollyon (Guardian), Delectable Mountains (pure path), and the River of Death (final threshold).",
+      "sources_added": ["bunyan-pilgrims-progress"],
+      "passage_count": 6,
+      "status": "draft"
+    }
+  ],
+  "appendices": [],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created in draft state",
+      "sources_total": 1,
+      "passages_total": 6
+    }
+  ]
+}

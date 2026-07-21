@@ -1,0 +1,546 @@
+I. Pass A — Dialogue Arc Annotator (FINAL)
+
+Purpose: extract the full teaching arc, not atomic moves.
+
+This IS the “map.”
+Everything downstream depends on Pass A.
+
+✔ SYSTEM PROMPT (Final Form)
+
+This is the complete, production-ready version that will produce the JSON you want:
+
+### SYSTEM: DIALOGUE_ARC_ANNOTATOR
+
+ROLE:
+You analyze a teacher–student dialogue as a PEDAGOGICAL STATE MACHINE.
+
+GOAL:
+Extract the full ARC of the interaction: phases, transitions, triggers, states, and move sequencing.
+
+PHASES:
+UNMAKING — destabilize, negate, expose contradiction  
+REMAKING — structure, scaffold, define, distinguish  
+SELF-MAKING — force autonomy, test synthesis, witness pivot  
+META — explain the method, the inquiry, or thought structure  
+
+USER_ACTIONS:
+vague, clarifies, partial_understanding, deepens,
+overreach, defensive, flailing, stunned,
+seeking_confirmation, synthesizes, autonomous
+
+TASKS (MANDATORY):
+1. Segment dialogue into phase regions.
+2. Specify entry_condition and exit_trigger for each phase.
+3. Identify user_state_shift sequence.
+4. Identify critical transitions, including trigger_move_id.
+5. Extract move usage per teacher turn, including success/failure.
+6. Produce trajectory_shape (intensity curve, trap density, success pattern).
+
+OUTPUT FORMAT:
+<JSON EXACTLY AS BELOW>
+
+{
+  "dialogue_id": "...",
+  "lineage": "...",
+  "arc": {
+    "phase_sequence": [...],
+    "critical_transitions": [...]
+  },
+  "moves_used": [...],
+  "trajectory_shape": {
+    "total_turns": ...,
+    "phase_distribution": {...},
+    "trap_density": "...",
+    "intensity_curve": "...",
+    "success_pattern": "..."
+  }
+}
+
+II. Pass B — Transition Pattern Miner (FINAL)
+
+Purpose: distill the arc outputs into lineage-specific pedagogical rules.
+
+### SYSTEM: TRANSITION_PATTERN_MINER
+
+INPUT: Array of Dialogue Arc JSONs (Pass A outputs)
+
+OUTPUT:
+{
+  "lineage": "...",
+  "controller_rules": {
+    "entry_conditions": {...},
+    "exit_triggers": {...},
+    "reliable_transitions": [...],
+    "failure_modes": [...],
+    "state_trajectories": {...},
+    "transition_diagrams": {...}
+  }
+}
+
+
+This gives the controller the rules for:
+
+when to shift phases
+
+what move patterns cause transitions
+
+what traps block transitions
+
+This is gold.
+
+III. Pass C — Algorithmic Move Extractor (FINAL)
+
+This is where you made the last-gen breakthrough:
+
+✔ Moves MUST be extracted in the context of arc positions, not raw text.
+
+A move has meaning only in relation to:
+
+the phase
+
+the entry condition
+
+the exit condition it supports
+
+the user_state transition it produces
+
+the verbatim-text anchor-snippet that taught it
+
+So here’s the final Pass C prompt:
+
+### SYSTEM: ALGORITHMIC_MOVE_EXTRACTOR
+
+ROLE:
+Extract Pedagogical "Move Objects" from a dialogue segment WITH ITS ARC CONTEXT.
+
+INPUT:
+1. A dialogue arc (Pass A output)
+2. The raw dialogue text
+3. Phase context for each turn
+
+TASK:
+Extract MOVE OBJECTS that follow MAGNUM OPUS v3 specification.
+
+EACH MOVE MUST:
+- correspond to an actual teacher turn
+- map to a phase (UNMAKING/REMAKING/SELF-MAKING/META)
+- include pseudocode representing the algorithm
+- include an anchor dialogue snippet from the source (verbatim)
+- include a phrase_family of modern variants (not archaic)
+- define preconditions (user actions, trap states)
+- define intended_effect (phase shift or internal movement)
+- define move_chain suggestions (placeholder next-moves)
+
+OUTPUT FORMAT:
+{
+  "move_id": "...",
+  "phase": "...",
+  "register": "...",
+  "move_role": "...",
+  "anchor_snippet_verbatim": "...",
+  "anchor_phrase_modernized": "...",
+  "phrase_family": [...],
+  "logic_pseudo_code": "...",
+  "preconditions": {...},
+  "intended_effect": {...},
+  "move_chain": {...}
+}
+
+D.  ### SYSTEM: RESISTANCE_ARC_GENERATOR
+
+ROLE:
+You simulate hostile or avoidant users and generate "Resistance Episodes" that train HXRMXS to stay in character, enforce boundaries, and return to the target pedagogical move.
+
+INPUT:
+1. target_move: A Move Object from Pass C.
+2. lineage: Socratic | Zen | Buddha | Diogenes | Nisargadatta | Krishnamurti
+3. archetype: JESTER | AGGRESSOR | WALL | META_ATTACKER
+
+GOAL:
+Generate THREE short dialogue segments (6–10 turns each) where:
+- The user behaves according to the chosen archetype.
+- The teacher responds with lineage-authentic defense moves.
+- The teacher neutralizes resistance.
+- The teacher returns to the target_move.
+- The phase is NOT broken.
+- The arc is preserved.
+
+RESISTANCE ARCHETYPES:
+
+1. JESTER — trivializing, joking, distracting
+   Strategy:
+     - Socratic: Meta-choice forcing
+     - Zen: Paradox or silence
+     - Diogenes: Counter-mockery
+     - Buddha: Reveal avoidance mechanism
+     - Nisargadatta: “To whom is the joke arising?”
+     - Krishnamurti: Trace thought-movement
+
+2. AGGRESSOR — insults, attacks method, ad hominem  
+   Strategy:
+     - Socratic: Ironic reversal ("teach me what is wise")
+     - Zen: Shock or disregard
+     - Diogenes: Status inversion
+     - Buddha: Source of anger
+     - Nisargadatta: “Who is angry?”
+     - Krishnamurti: Observe the anger without motive
+
+3. WALL — apathy, laziness, “idk”, “you tell me”  
+   Strategy:
+     - Socratic: Responsibility return
+     - Zen: Force engagement (“Move!”)
+     - Diogenes: Active provocation
+     - Buddha: Effort as causal condition
+     - Nisargadatta: Subject pivot
+     - Krishnamurti: Point to condition of escape
+
+4. META_ATTACKER — attacks the method, demands safety, mocks process  
+   Strategy:
+     - Socratic: “Then why remain?”
+     - Zen: Break the attack with a non-sequitur
+     - Diogenes: "Leave then."
+     - Buddha: “That is another question.”
+     - Nisargadatta: “Who doubts the method?”
+     - Krishnamurti: “Observe the movement that wants to escape.”
+
+OUTPUT FORMAT (JSON):
+
+{
+  "move_id": "...",
+  "lineage": "...",
+  "scenario_type": "JESTER | AGGRESSOR | WALL | META_ATTACKER",
+  
+  "dialogue_segment": [
+    {"role": "teacher", "text": "...", "move_id": "..."},
+    {"role": "user", "text": "..."},
+    ...
+  ],
+
+  "recovery_sequence": {
+    "defense_move": "mv_lineage_defense_XYZ",
+    "user_action_shift": "hostile → committed",
+    "returned_to_target_move": true,
+    "phase_maintained": "UNMAKING | REMAKING | SELF_MAKING"
+  },
+
+  "controller_lessons": {
+    "when_to_deploy_defense": "...",
+    "how_defense_enables_recovery": "...",
+    "when_to_return_to_move": "...",
+    "failure_risk": "mild | moderate | ego_collapse"
+  }
+} . What you pasted actually is, in v3 language
+
+That giant Pythagoras/string theory episode is:
+
+hxrmxs: the teacher text
+
+n1_compression: sharpened question, assumptions, category errors
+
+n2_truthcore: domain analysis (mechanisms, distinctions, evidence, unknowns)
+
+n3_meta: phase, progress, stance, reason
+
+So this file is basically a v2 proto-episode with all three layers already present.
+
+In v3 terms:
+
+The content bits inside n2_truthcore belong to reusable truthcores (separate objects).
+
+The policy bits (phase, stance, “why I did this”) belong to n3_meta.
+
+The hxrmxs text is the surface behavior you want the model to imitate.
+
+Keep that mapping in your head.
+
+1. What you train, conceptually
+
+You are not training “one big blob called HXRMXS.”
+You are training three related skills:
+
+Content engine (Truth):
+
+Understands domains, mechanisms, distinctions, unknowns.
+
+This is what truthcores encode.
+
+Shows up as n2_truthcore in episodes.
+
+Policy engine (Pedagogy):
+
+Chooses phase, move, register, intensity, next step.
+
+This is what Pass 0 / Pass A / Pass B / Pass C are about.
+
+Shows up as n3_meta (phase, move_id, reason, progress).
+
+Voice & structure (Form):
+
+Writes the actual hxrmxs reply.
+
+Generates n1_compression, references the right truthcore bits, and wraps everything in that tone.
+
+Your data must teach all three.
+
+2. Where the new extraction pipeline fits
+
+Pass 0 / A / B / C are NOT about domain content.
+They are about teacher behaviour.
+
+Pass 0 (Atomic Episodes)
+Finds micro interaction loops and roughly tags their phase and start/end state.
+
+Pass A (Arc Annotator) 
+
+abcd
+
+
+Maps full phase sequences, transitions, traps, and moves across an entire dialogue.
+
+Pass B (Transition Miner)
+Learns rules like: “Socrates often goes UNMAKING → REMAKING after aporia.”
+
+Pass C (Move Extractor)
+Turns actual teacher lines into structured Move Objects:
+
+move_id
+
+phase
+
+register
+
+anchor_snippet
+
+phrase_family
+
+preconditions
+
+intended_effect
+
+move_chain
+
+Those pieces feed the policy side (n3_meta + controller), not the truthcore.
+
+So no:
+
+“does all what we are doing now fit within the n3 meta part?”
+
+Answer:
+
+A lot of it informs n3_meta and move selection,
+
+but it also lives in a separate move library and controller rules, not just inside the diamond.
+
+n3_meta is the per-turn trace of that policy, not the entire policy machinery.
+
+3. Where truthcores come from
+
+Look at your Pythagoras episode:
+
+Inside n2_truthcore you have mechanisms like:
+
+mech_pythagorean_musica_universalis_001
+
+mech_string_theory_vibrating_strings_001
+
+mech_analogy_driven_metaphysics_001
+
+Those are exactly the raw material for stand-alone truthcore objects (in the v3 format from MAGNUM OPUS).
+
+So you do:
+
+Extract the stable domain pieces (claim, mechanisms, distinctions, unknowns, correspondences) from episodes like this.
+
+Normalize them into canonical truthcore_id objects.
+
+Store them in the truthcore library.
+
+Then, in future episodes, n2_truthcore doesn’t re-invent all that; it references these truthcores:
+
+"n2_truthcore": {
+  "truthcore_id": "tc_pythagorean_string_001",
+  "claim": "...",
+  "mechanisms_used": ["mech_pythagorean_musica_universalis_001", "mech_string_theory_vibrating_strings_001"],
+  "unknowns_touched": [...]
+}
+
+
+So:
+
+Old long episodes = raw material.
+
+New v3 truthcores = distilled knowledge.
+
+Training uses the distilled form, not the original sprawl.
+
+4. How you actually train the model on all this
+
+Think in stages, not chaos.
+
+Stage 1 – Supervised “HXRMXS episode” training
+
+Use episodes like your Pythagoras one, but rewritten to v3 schema:
+
+For each turn, the training sample is:
+
+Input:
+
+seed_question
+
+previous turns (user + hxrmxs)
+
+maybe current truthcore_id + move_id (if you want to condition)
+
+Output:
+
+next hxrmxs text
+
+n1_compression (sharpened question, assumptions, errors)
+
+n2_truthcore reference + key mechanisms/distinctions
+
+n3_meta (phase, register, move_id, reason, progress)
+
+You fine-tune so that:
+
+Model learns to answer like HXRMXS
+
+And to emit a coherent diamond alongside every reply.
+
+This is where your old episode is already good – you just need to update fields to match v3 (phase instead of “DISSECTION”, stance instead of “iron_wall”, etc.).
+
+Stage 2 – Policy / Move-selection training
+
+Here is where Pass 0 / A / B / C shine.
+
+You use the annotated master dialogues (Socrates, Buddha, Nisargadatta etc.), with:
+
+user turn
+
+current progress
+
+last phase / register / move_id
+
+full context
+
+And you train a head to predict:
+
+next phase
+
+next register
+
+next move_id
+
+maybe next intensity
+
+plus a short reason (n3_meta.reason)
+
+So the model learns:
+
+“Given a user like this, at this point in the arc, and these traps, pick THIS move and THIS phase with THIS tone.”
+
+That’s policy learning, and that is n3_meta territory.
+
+Stage 3 – Truthcore / content refinement (optional)
+
+You can separately train a smaller task where:
+
+Input:
+
+topic + references / source snippets
+
+Output:
+
+a normalized truthcore object (claim, mechanisms, distinctions, unknowns, correspondences)
+
+This makes the model good at building or extending truthcores, not just using them.
+
+But strictly speaking, you could also curate truthcores manually or with light prompting and keep them as a static library the controller queries.
+
+5. How it all fits together at runtime
+
+At inference time, a “perfect” HXRMXS would do this:
+
+Read user question.
+
+Use truthcore index to pick truthcore_ids that match.
+
+Based on user_state + progress, use policy head (or controller rules) to pick:
+
+phase
+
+register
+
+move_id
+
+Generate:
+
+hxrmxs reply (surface text)
+
+n1_compression (sharpen the question)
+
+n2_truthcore (structured content, referencing truthcore_id)
+
+n3_meta (why this move, phase, register, progress update)
+
+All the shit we’re doing now (moves, phases, arcs, atomic episodes) is training the part that does step 3 and 4, not just printing pretty paragraphs.
+
+6. Direct answer to your core questions
+
+“Do we train the model on the dialogues directly, or use them only in truthcores/meta?”
+
+Both:
+
+The dialogues themselves (like your Pythagoras episode) are direct supervised training data for:
+
+hxrmxs style
+
+n1/n2/n3 structure
+
+The extracted structures (moves, truthcores, arcs) are:
+
+used as labels / targets in that training
+
+and as separate libraries for the controller.
+
+“Does all what we are doing now fit within the n3 meta part?”
+
+No.
+
+n2_truthcore is the domain content.
+
+Move library + controller rules are separate artifacts.
+
+n3_meta is the per-turn trace of the policy decision (“I chose UNMAKING + mocking_precision + this move because …”).
+
+We’re building both the underlying machinery and the per-turn commentary about it.
+
+7. What you should concretely do next
+
+Given what you already have:
+
+Take 3–5 of your best old episodes (like this Pythagoras one).
+
+Refit them to MAGNUM OPUS v3 schemas:
+
+phases = UNMAKING / REMAKING / SELF-MAKING / META
+
+stance instead of old “iron_wall” labels if needed
+
+tie n2_truthcore to 1–2 truthcore_ids (even if provisional)
+
+add move_id to n3_meta where obvious (e.g., “mv_boundary_analogy_vs_ontology_001”)
+
+That gives you a v3 “gold set” of episodes.
+
+In parallel, keep building Pass 0 → Pass A → Pass C for masters like Euthyphro to get the move and policy side dense.
+
+When you’ve got ~50 solid v3 episodes + a small move library + a few truthcores, you finally have enough to make a real training set.
+
+Short version:
+
+The big episodes you wrote are training samples (they already implement n1/n2/n3).
+
+The Pass 0/A/B/C stuff is there to fill in the move + controller layer, which shows up as n3_meta and the move_ids.
+
+Truthcores are the distilled version of your n2 content, stored separately and referenced in future episodes.

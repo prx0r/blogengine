@@ -1,0 +1,62 @@
+{
+  "co_id": "co:uno_gurdjeff1_meta_t43_t50_alterat_t1",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gurdjeff1_meta_t43_t50_alteration_control_law_of_accident",
+  "turn_index": 1,
+  "lineage": "Gurdjieffian",
+  "student_state": "focusing_on_external_power",
+  "behavior_tags": [
+    "asks_about_power_hierarchy",
+    "seeks_structural_rule"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_01",
+    "function_name": "RM_01",
+    "mechanism_shape": "SYSTEM_DYNAMICS",
+    "teaching_actions": [
+      "qualifies_control",
+      "introduces_structural_constraint",
+      "defines_influence_mechanisms",
+      "explains_law_of_triads"
+    ],
+    "traps_avoided": [
+      "power_fantasy"
+    ],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.5,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "request_clarification",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The qualification/structural model works: yes but with reservations (cannot act directly, only through B influences), structural constraint (C influences require B acceptance, cannot use violence = wrong triad), law of triads (special triad for each result). The student asked power hierarchy question (focusing on external power), which shows they understand: inner circle = control over outer circle (power hierarchy). They'll likely ask about accident next.",
+  "accumulated_insight": "T2: Student asked power hierarchy question ('Have the people in the inner circle any control over people in the outer circle?')—focusing on external power via asks about power hierarchy and seeks structural rule. They understand: inner circle = control over outer circle (power hierarchy). The system_dynamics mechanism qualifies: yes but with reservations (cannot act directly, only through B influences), structural constraint (C influences require B acceptance, cannot use violence = wrong triad), law of triads (special triad for each result, wrong triad = opposite result) ('Yes, but with many reservations. The conscious circle cannot act directly, but only through B influences. Influences C can appear only if influences B are accepted and if people look for them. Men in the inner circle cannot have control over people who do not wish to know them. They cannot use violence, because it would mean a wrong triad, a wrong activity. For every kind of result there is a special triad'). Pattern: authenticity check → denial/flexibility rule → control question → qualification/structural model → [next: accident question]. They're grasping: control = yes but with reservations (B/C influences, triads), structural constraint (violence = wrong triad) (qualification/structural model).",
+  "abstract_pattern": "",
+  "visible_response": "Yes, but with many reservations. The conscious circle cannot act directly, but only\nthrough B influences.\nInfluences C can appear only if influences B are accepted and if\npeople look for them.\nMen in the inner circle cannot have control over people who do\nnot wish to know them.\nThey cannot use violence, because it would mean a wrong\ntriad, a wrong activity.\nFor every kind of result there is a special triad.\nFor instance, if\npeople wish to acquire control, they can achieve it only in one way.\nIf they act in\nanother way they will get the opposite result.\nWars, revolutions and so on never give\nthe desired results, but always the opposite results, because wrong triads are used.\nIf\npeople of the inner circles wish to influence other people, they can produce good\nresults only if there is understanding, and only with people who wish it.\nThis is a\nuseful question. Try to think about it.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:sufi-comparative-analysis",
+    "ro:steiner-tantraloka-parallels"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

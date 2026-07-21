@@ -1,0 +1,65 @@
+{
+  "work_id": "work:t2-pubmed-advancing-inter-brain-synchrony-measurement-a-comparative-hyperscannin",
+  "schema_version": 2,
+  "title": "Advancing inter-brain synchrony measurement: A Comparative hyperscanning study of diffuse optical tomography and functional near-infrared spectroscopy.",
+  "authors": [
+    {
+      "name": "Guan, Shuo"
+    },
+    {
+      "name": "Li, Yuhang"
+    },
+    {
+      "name": "Geng, Yingbo"
+    },
+    {
+      "name": "Li, Dongyun"
+    },
+    {
+      "name": "Xu, Qiong"
+    },
+    {
+      "name": "Niu, Peisong"
+    },
+    {
+      "name": "Yang, Dalin"
+    },
+    {
+      "name": "Eggebrecht, Adam"
+    },
+    {
+      "name": "Zhang, Yingchun"
+    },
+    {
+      "name": "Li, Rihui"
+    }
+  ],
+  "identifiers": {
+    "pmid": "41421501",
+    "doi": "10.1016/j.neuroimage.2025.121663"
+  },
+  "publication": {
+    "journal": "NeuroImage",
+    "year": "2026"
+  },
+  "abstract": "Inter-brain synchrony (IBS), measured by hyperscanning, refers to the synchronization of multiple individuals' brain activities during social interactions. Traditional fNIRS-based hyperscanning suffers shortcomings like low spatial resolution and high susceptibility to superficial interference, causing imprecise estimation of IBS in complex social tasks. This study aims to fill the knowledge gap by comprehensively assessing diffuse optical tomography (DOT), an enhanced alternative to fNIRS, can benefit hyperscanning studies of complex social interactions. Sixteen dyads were engaged in both collaborative and individual tangram puzzle tasks, and their brain activities were recorded simultaneously using DOT and fNIRS. We found that DOT demonstrated significantly stronger IBS and identified more brain regions with significant IBS compared to fNIRS during the collaborative task. Specifically, while fNIRS detected IBS only in the dorsolateral prefrontal cortex (DLPFC) and supramarginal gyrus (SMG), DOT revealed additional IBS in the superior temporal gyrus (STG). Additionally, compared to the individual task, the collaborative task showed increased IBS in DOT, not only in the DLPFC but also in the SMG, frontal eye fields (FEF), and inferior frontal gyrus (IFG). By highlighting the superior spatial resolution and sensitivity of DOT in capturing detailed and extensive neural activity during complex social interactions, our findings for the first time clarified the potential strengths of DOT in measuring IBS over traditional fNIRS. These advances provide a stronger empirical foundation for investigating the neural basis of social interaction, paving the way for future research on real-world, dynamic group behaviors.",
+  "phase_mapping": {
+    "phase": 12,
+    "phase_name": "Ritual"
+  },
+  "bridge_tags": [
+    "ritual",
+    "interpersonal-synchrony",
+    "collective",
+    "hyperscanning",
+    "collaborative-task",
+    "diffuse-optical-tomography",
+    "functional-near-infrared-spectroscopy"
+  ],
+  "evaluation": "Quality pass v3 (score=58) \u2014 High-signal bridge paper for Ritual.",
+  "assets": {
+    "pdf_path": null,
+    "nxml_path": null
+  },
+  "tier": 2
+}

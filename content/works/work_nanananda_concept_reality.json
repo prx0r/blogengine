@@ -1,0 +1,77 @@
+{
+  "work_id": "work:nanananda-concept-and-reality",
+  "schema_version": 1,
+  "title": "Concept and Reality in Early Buddhist Thought",
+  "authors": [
+    {
+      "name": "Bhikkhu \u00d1\u0101\u1e47ananda",
+      "author_id": "author:nanananda"
+    }
+  ],
+  "publication": {
+    "year": 1971,
+    "type": "book",
+    "publisher": "Buddhist Publication Society",
+    "language": "en"
+  },
+  "identifiers": {
+    "doi": null,
+    "openalex_id": null
+  },
+  "topics": [
+    "papanca",
+    "conceptual_proliferation",
+    "early_buddhism",
+    "phenomenology_of_perception",
+    "language_and_reality"
+  ],
+  "tradition": [
+    "theravada_buddhism",
+    "early_buddhism"
+  ],
+  "relations": [
+    {
+      "predicate": "develops",
+      "target_id": "concept:papanca",
+      "confidence": 0.99
+    },
+    {
+      "predicate": "related_to",
+      "target_id": "concept:dependent-origination",
+      "confidence": 0.9
+    },
+    {
+      "predicate": "contrasts_with",
+      "target_id": "concept:conceptual-reification",
+      "confidence": 0.85
+    }
+  ],
+  "assets": {
+    "pdf_path": "library/nanananda/concept-and-reality.pdf",
+    "text_path": null,
+    "source_url": "https://ahandfulofleaves.files.wordpress.com/2012/02/concept-and-reality-in-early-buddhist-thought_nanananda_1971.pdf"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "bronze",
+    "license": null,
+    "version": "published_version",
+    "host_type": "website",
+    "sha256": null,
+    "page_count": null,
+    "file_size_bytes": 37221006,
+    "retrieved_at": "2026-07-11T06:56:00Z",
+    "validation_confidence": 0.95
+  },
+  "analysis": {
+    "summary": "A seminal work in early Buddhist philosophy examining the concept of papa\u00f1ca (conceptual proliferation) and its role in constructing phenomenal experience. \u00d1\u0101\u1e47ananda argues that the fundamental cognitive error is the reification of concepts into realities, drawing on the Madhupi\u1e47\u1e0dika Sutta and related texts.",
+    "argument": "Suffering arises from papa\u00f1ca \u2014 the tendency of the mind to proliferate concepts and reify them into substantial realities. Liberation requires seeing through this process at the perceptual level, before conceptual elaboration takes hold. Concepts are useful tools but become cages when mistaken for realities.",
+    "quality_score": 0.98,
+    "tier": 1,
+    "tier_label": "primary source"
+  },
+  "commentary_on": {},
+  "scholarly_contribution": {},
+  "relevance_to_ros": {},
+  "tier": 2
+}

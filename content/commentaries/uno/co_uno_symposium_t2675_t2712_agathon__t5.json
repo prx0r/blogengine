@@ -1,0 +1,57 @@
+{
+  "co_id": "co:uno_symposium_t2675_t2712_agathon__t5",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "symposium_t2675_t2712_agathon_refutation",
+  "turn_index": 5,
+  "lineage": "Socratic",
+  "student_state": "defensive_rationalization",
+  "behavior_tags": [
+    "pushes_back"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_02",
+    "function_name": "UM_02",
+    "mechanism_shape": "CONSTRAINT_COLLAPSE",
+    "teaching_actions": [
+      "collapses_definition"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.62,
+      "attunement": 0.8,
+      "style": 0.5,
+      "depth": 0.62,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_03",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_03",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "resist_intellectually",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "symposium_t2675_t2712_agathon_refutation T6: Using constraint_collapse/UM_02 with intensity=PR_02, intimacy=IN_03, attunement=AT_03 on 'I fear that I did not understand what'. Response shows pushing back to defend a stance; expecting resist_intellectually next. If not, lower PR and re-anchor the hinge.",
+  "accumulated_insight": "T6: Student says 'I fear that I did not understand what I was saying.'?pushing back to defend a stance (defensive_rationalization) via pushes_back. Focus: I fear that I did not understand what. The constraint_collapse/UM_02 move applies shift their frame: standard function application. Pattern: go_along_compliantly ? go_along_compliantly ? go_along_compliantly ? resist_intellectually. Confidence low.",
+  "abstract_pattern": "",
+  "visible_response": "Then would you still say that love is beautiful?",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:proclus-elements",
+    "ro:platonism-decoded",
+    "ro:chaldean-oracles"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

@@ -1,0 +1,57 @@
+{
+  "co_id": "co:uno_gorgias_ep024_callicles_reject_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gorgias_ep024_callicles_rejects_benefit",
+  "turn_index": 0,
+  "lineage": "Socratic",
+  "student_state": "cooperative_engagement",
+  "behavior_tags": [
+    "short_affirmation"
+  ],
+  "pedagogy": {
+    "phase": "SELF-MAKING",
+    "function_id": "SM_04",
+    "function_name": "SM_04",
+    "mechanism_shape": "COMPARISON_CONTRAST",
+    "teaching_actions": [
+      "mirrors_student_action"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.85,
+      "intimacy": 0.85,
+      "attunement": 0.8,
+      "style": 0.65,
+      "depth": 0.85,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_04",
+      "intimacy_discrete": "IN_04",
+      "attunement_discrete": "AT_03",
+      "style_discrete": "LS_04",
+      "depth_discrete": "PD_04",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "request_clarification",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "gorgias_ep024_callicles_rejects_benefit T1: Using comparison_contrast/SM_04 with intensity=PR_04, intimacy=IN_04, attunement=AT_03 on 'the hinge'. Response shows agreeing without elaboration; expecting request_clarification next. If not, lower PR and re-anchor the hinge.",
+  "accumulated_insight": "T1: Student says ''?agreeing without elaboration (cooperative_engagement) via short_affirmation. Focus: the hinge. The comparison_contrast/SM_04 move applies shift their frame: standard function application. Pattern: go_along_compliantly. Confidence medium.",
+  "abstract_pattern": "",
+  "visible_response": "This fellow won’t put up with being benefited and disciplined.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:proclus-elements",
+    "ro:platonism-decoded",
+    "ro:chaldean-oracles"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

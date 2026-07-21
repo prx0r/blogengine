@@ -1,0 +1,47 @@
+{
+  "work_id": "work:t2-pubmed-free-energy-and-inference-living-systems",
+  "schema_version": 2,
+  "title": "Free energy and inference in living systems.",
+  "authors": [
+    {
+      "name": "Kim CS"
+    }
+  ],
+  "publication": {
+    "year": 2023,
+    "type": "article",
+    "source": "PubMed/MEDLINE",
+    "language": "en",
+    "journal": "Interface Focus"
+  },
+  "identifiers": {
+    "pmid": "37065269",
+    "doi": "10.1098/rsfs.2022.0041"
+  },
+  "topics": [
+    "phase-6-6",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "tradition": [
+    "contemporary_science"
+  ],
+  "tier": 2,
+  "assets": {
+    "pdf_path": "t2-PMC10102732_Free_energy_and_inference_in_living_syst.pdf",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/37065269/",
+    "abstract": "Organisms are non-equilibrium, stationary systems self-organized via spontaneous symmetry breaking and undergoing metabolic cycles with broken detailed balance in the environment. The thermodynamic free-energy (FE) principle describes an organism's homeostasis as the regulation of biochemical work constrained by the physical FE cost. By contrast, recent research in neuroscience and theoretical biology explains a higher organism's homeostasis and allostasis as Bayesian inference facilitated by th"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_t2_search",
+    "retrieved_at": "2026-07-11"
+  },
+  "phase_mapping": {
+    "phase": 6,
+    "phase_name": "Dependent Arising",
+    "bridge_rationale": "Predictive processing \u2014 free energy principle, Bayesian brain, active inference, neural causality."
+  },
+  "evaluation": "Low signal (score=1.3)"
+}

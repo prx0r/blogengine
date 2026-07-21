@@ -1,0 +1,57 @@
+{
+  "co_id": "co:uno_therapy2_t1730_t1738_denial_wo_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy2_t1730_t1738_denial_words_husband",
+  "turn_index": 0,
+  "lineage": "Therapeutic",
+  "student_state": "hopeful_delusion",
+  "behavior_tags": [
+    "naivety",
+    "denial"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_04",
+    "function_name": "UM_04",
+    "mechanism_shape": "COMPARISON_CONTRAST",
+    "teaching_actions": [
+      "identifies_focus",
+      "contrasts_data"
+    ],
+    "traps_avoided": [
+      "symbolic_literalism"
+    ],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.35,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_02",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "no_clear_effect",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "'We talked about it, and he said he’s sorry, and he won’t do it ag'—student presents as hopeful delusion. Teacher's move uses comparison_contrast: 'You pay attention to his words rather than his deeds.'. Strategy: identifies focus, contrasts data. Hypothesis: comparison_contrast mechanism will create no_clear_effect. Watching how student responds to this intervention.",
+  "accumulated_insight": "T1: Student says 'We talked about it, and he said he’s sorry, and he won’t do it ag' showing hopeful_delusion via naivety, denial. Teacher responds 'You pay attention to his words rather than his deeds.' using comparison_contrast to identifies focus, contrasts data. Opening UNMAKING move addresses hopeful_delusion. Predicting no_clear_effect because comparison_contrast interventions typically produce this response pattern.",
+  "abstract_pattern": "",
+  "visible_response": "You pay attention to his words rather than his deeds.",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

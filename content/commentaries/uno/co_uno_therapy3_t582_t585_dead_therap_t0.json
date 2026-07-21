@@ -1,0 +1,57 @@
+{
+  "co_id": "co:uno_therapy3_t582_t585_dead_therap_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3_t582_t585_dead_therapy_reductio",
+  "turn_index": 0,
+  "lineage": "Therapeutic",
+  "student_state": "hopeless_shutdown",
+  "behavior_tags": [
+    "dramatic_defense",
+    "deadness"
+  ],
+  "pedagogy": {
+    "phase": "META",
+    "function_id": "UNKNOWN",
+    "function_name": "UNKNOWN",
+    "mechanism_shape": "STRUCTURAL_ANALOGY",
+    "teaching_actions": [
+      "extends_metaphor",
+      "exposes_futility"
+    ],
+    "traps_avoided": [
+      "retreat"
+    ],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.35,
+      "attunement": 0.2,
+      "style": 0.8,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_01",
+      "style_discrete": "LS_05",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "no_clear_effect",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "'I'm dead to my feelings'—totalizing claim. Not 'I don't feel much' but 'I'm DEAD.' Teacher's reductio is perfect: 'cannot be psychotherapy of the dead.' Takes their metaphor literally and shows consequence: dead = no therapy possible. This is different from challenging ('you're not really dead')—instead, accepts premise and follows logic. If dead, therapy is impossible. Forces them to choose: maintain dramatic claim (lose therapy) or revise (admit aliveness). Reductio ad absurdum as teaching tool. Single turn so no response shown, but seed planted.",
+  "accumulated_insight": "T1 (Single-turn): Student claims 'I'm dead to my feelings'—extreme statement presenting emotional deadness as fact. Teacher uses reductio ad absurdum: 'this cannot be psychotherapy of the dead. If you are emotionally dead, we cannot do therapy.' Logical consequence: if premise (I'm dead) is true, then therapy impossible. This forces student to either maintain claim (therapy ends) or revise (admit some aliveness). Single turn plants paradox without waiting for response.",
+  "abstract_pattern": "",
+  "visible_response": "But this cannot be psychotherapy of the dead.\nIf you are emotionally dead, then this can be only a dead therapy.",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

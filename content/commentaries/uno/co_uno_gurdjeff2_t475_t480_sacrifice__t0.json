@@ -1,0 +1,62 @@
+{
+  "co_id": "co:uno_gurdjeff2_t475_t480_sacrifice__t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gurdjeff2_t475_t480_sacrifice_of_suffering",
+  "turn_index": 0,
+  "lineage": "Gurdjieffian",
+  "student_state": "seeking_purpose_of_struggle",
+  "behavior_tags": [
+    "conceptual_inquiry",
+    "purpose_seeking"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_03",
+    "function_name": "RM_03",
+    "mechanism_shape": "COMPARISON_CONTRAST",
+    "teaching_actions": [
+      "reiterates_aim",
+      "asserts_incapacity",
+      "introduces_necessary_act"
+    ],
+    "traps_avoided": [
+      "conceptual_reification",
+      "none"
+    ],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.65,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_04",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "request_clarification",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The aim/necessity works: aim = create moon (abstract aim), introduces: necessary act = sacrifice suffering (functional necessity), asserts: incapacity (cannot do without sacrifice). The student asks for purpose (seeking purpose of struggle), which shows they're seeking purpose (struggle). They'll likely ask about causal link next. Hypothesis: purpose questions trigger causal link proposals—testable by tracking whether purpose questions lead to causal link inquiries.",
+  "accumulated_insight": "T1: Student asks for purpose ('What is the purpose of struggling against self-will?')—seeking purpose of struggle via conceptual inquiry and purpose seeking. They're seeking purpose (struggle). The comparison_contrast mechanism defines: aim = create moon (abstract aim), introduces: necessary act = sacrifice suffering (functional necessity), asserts: incapacity (cannot do without sacrifice). Pattern: purpose question → aim/necessity → [next: causal question]. Low confidence because purpose questions can lead to clarification requests or compliance.",
+  "abstract_pattern": "",
+  "visible_response": "You remember how we started.\nThe aim was to create a centre of gravity, create\nmoon in ourselves. We cannot do it through self-will.\nCreating moon in ourselves is connected with the idea of sacrificing suffering.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:sufi-comparative-analysis",
+    "ro:steiner-tantraloka-parallels"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

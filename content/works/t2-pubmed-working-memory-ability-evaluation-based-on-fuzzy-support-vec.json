@@ -1,0 +1,49 @@
+{
+  "work_id": "work:t2-pubmed-working-memory-ability-evaluation-based-on-fuzzy-support-vec",
+  "schema_version": 2,
+  "title": "Working Memory Ability Evaluation Based on Fuzzy Support Vector Regression.",
+  "authors": [
+    {
+      "name": "Lo JH"
+    },
+    {
+      "name": "Huang HP"
+    },
+    {
+      "name": "Sung SC"
+    }
+  ],
+  "publication": {
+    "year": 2023,
+    "journal": "Sensors (Basel)",
+    "source": "PubMed/MEDLINE",
+    "language": "en"
+  },
+  "identifiers": {
+    "pmid": "37837076",
+    "doi": "10.3390/s23198246"
+  },
+  "topics": [
+    "phase-8-formless-absorption",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "assets": {
+    "pdf_path": null,
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/37837076/",
+    "abstract": "One's working memory process is a fundamental cognitive activity which often serves as an indicator of brain disease and cognitive impairment. In this research, the approach to evaluate working memory ability by means of electroencephalography (EEG) analysis was proposed. The result shows that the EEG signals of subjects share some characteristics when performing working memory tasks. Through correlation analysis, a working memory model describes the changes in EEG signals within alpha, beta and"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_alt17_acquisition",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 8,
+    "phase_name": "Formless/Absorption",
+    "bridge_rationale": "Bridge paper score=9.0: links Formless/Absorption concept to mechanistic neuroscience"
+  },
+  "evaluation": "Score 9: Good bridge signal",
+  "tier": 2
+}

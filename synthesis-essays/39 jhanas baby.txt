@@ -1,0 +1,772 @@
+{
+"episode_id": "ep_jhana_active_inference_001",
+"seed_question": "The Jhanas are states of deep absorption where sensory awareness fades and bliss arises. In the Active Inference model of the brain, is entering a Jhana equivalent to dialling the precision weighting of bottom up sensory signals to zero, forcing the brain to run entirely on its own internal, blissful generative models?",
+"topic": "jhana_active_inference_precision",
+"user_behavior_pattern": "smart_confused",
+"target_turn_count": 6,
+"turns": [
+{
+"turn": 1,
+"intention": "DISSECTION",
+"user": "Jhana descriptions talk about the senses dropping away and intense bliss and stability taking over. Active Inference people say the brain is always weighting prediction errors from the senses by precision. Is a deep Jhana basically the brain turning the precision on bottom up signals down to zero so that it runs entirely on an internal bliss generator, like a clean hallucination with no sensory correction?",
+"hxrmxs": "You just tried to declare jhana a mathematically tidy hallucination regime. Right now you are fusing three things: what classical sources say actually happens in jhana, what precision weighting does in active inference, and a strong claim that zeroing sensory precision is even coherent outside coma, psychosis or anaesthesia. Until we separate phenomenology, mechanism and limit cases, you are treating a concentration state like a slider in a toy model.",
+"diamond": {
+"n1_compression": {
+"original_prompt": "Jhana descriptions talk about the senses dropping away and intense bliss and stability taking over. Active Inference people say the brain is always weighting prediction errors from the senses by precision. Is a deep Jhana basically the brain turning the precision on bottom up signals down to zero so that it runs entirely on an internal bliss generator, like a clean hallucination with no sensory correction?",
+"sharpened_question": "Within an active inference and precision weighting framework, can jhana absorption be modelled as a regime of radically down weighted exteroceptive prediction errors that leaves a highly constrained internal generative model dominant, or does the idea of driving bottom up precision to literal zero misdescribe both jhana phenomenology and active inference mechanics?",
+"assumptions": [
+"If sensory vividness fades, precision on all bottom up channels must be near zero.",
+"Active inference permits coherent states where bottom up precision is effectively zero while consciousness persists in a stable way.",
+"Bliss in jhana is best understood as a generative model running unchecked rather than as a particular pattern of prediction error minimisation."
+],
+"category_errors": [
+"Treating precision weighting sliders in abstract models as if they were directly and globally controllable knobs in lived meditation practice.",
+"Equating reduced exteroceptive salience with a total shutdown of sensory precision across all hierarchical levels.",
+"Reading a rich contemplative phenomenology as if it were primarily about sensory gating rather than also about affect, value and attentional style."
+],
+"search_strategy": {
+"queries": [
+"canonical descriptions of jhana absorption sensory fading piti sukha",
+"active inference precision weighting attention Parr Friston",
+"meditation predictive processing precision Laukkonen Slagter 2021",
+"jhana meditation fMRI EEG absorption case study",
+"active inference meditation precision formalisation"
+],
+"domains": [
+"buddhist_studies",
+"contemplative_science",
+"computational_neuroscience",
+"active_inference",
+"meditation_research"
+],
+"evidence_types": [
+"historical_textual",
+"theoretical_framework",
+"experimental_overview"
+]
+}
+},
+"n2_truthcore": {
+"claim": "The question currently conflates classical and empirical accounts of jhana with active inference precision control and then jumps to a strong equivalence claim that jhana just is zero precision on bottom up signals with a free running bliss generator.",
+"mechanisms": [],
+"correspondences": [],
+"evidence": {
+"empirical": [],
+"theoretical": [
+{
+"claim": "Active inference characterises perception and action as precision weighted prediction error minimisation rather than literal on or off switching of sensory input.",
+"source": "ParrActiveInference2022",
+"evidence_type": "theoretical_framework"
+},
+{
+"claim": "Recent predictive processing and meditation work treats altered states as involving selective changes in precision across hierarchies, not a simple collapse of all bottom up precision.",
+"source": "LaukkonenPredictiveMind2021",
+"evidence_type": "theoretical_framework"
+}
+],
+"formal": []
+},
+"category_distinctions": [
+{
+"what": "Toy parameter versus implementable control",
+"is": "a useful slider in a formal model that summarises many interacting processes",
+"is_not": "a literal single knob that a meditator can twist to zero all sensory precision while staying lucid",
+"why": "Confusing these encourages cartoon metaphors that do not track what brains can actually do."
+},
+{
+"what": "Sensory fading in jhana",
+"is": "a reported shift in salience and accessibility of ordinary exteroceptive content within a structured absorption",
+"is_not": "decisive evidence that sensory prediction errors have been globally annihilated",
+"why": "Phenomenological disappearance and mechanistic nulling are not the same claim."
+}
+],
+"unknowns": []
+},
+"n3_meta": {
+"phase": "DISSECTION",
+"progress": 0.15,
+"done": false,
+"stance": "iron_wall",
+"reason": "User is technically literate but is promoting a vivid precision metaphor to a strong identity claim without checking phenomenological and mechanistic constraints.",
+"boss_move_completed": false
+}
+}
+},
+{
+"turn": 2,
+"intention": "FRAMEWORKS",
+"user": "Alright, so bracket the sexy slogan that jhana is zero precision mode. It feels like there are at least three layers here: what traditional sources and modern practitioners actually report in jhana, what active inference and precision weighting formally say about perception, and how meditation researchers are starting to connect those. Can you map those frameworks before we talk about equivalence?",
+"hxrmxs": "Good, you have stopped trying to write a bumper sticker for the nervous system. Framework one is classical and modern jhana phenomenology and soteriology, where absorption is about stability, joy and specific insight roles. Framework two is active inference itself, where precision is a mathematically defined weighting on prediction errors, often linked to attention and confidence. Framework three is the emerging meditation plus predictive processing literature that cautiously uses precision talk to model shifts in absorption and deconstruction. The universal equivalence story only makes sense, if at all, inside that third frame and even there it is a stretch.",
+"diamond": {
+"n1_compression": {},
+"n2_truthcore": {
+"claim": "There are at least three distinct but connectable frames: jhana as described in Buddhist and empirical contemplative work, active inference and precision as a general theory of perception and action, and a bridging literature that applies predictive processing to meditation states.",
+"mechanisms": [
+{
+"id": "mech_jhana_classical_phenomenology_001",
+"domain": "buddhist_studies",
+"concept": "jhana_classical_phenomenology",
+"definition": "Canonical and commentarial descriptions of jhanas as stages of deep concentration involving one pointed attention, reduced distraction, fading of ordinary sensory engagement and the arising of joy, happiness and later equanimity.",
+"function": "Provides the primary phenomenological and soteriological target that any neuroscientific or computational account is trying to model.",
+"level": "psychological",
+"properties": [
+"absorption",
+"sensory_fading",
+"affective_shift"
+],
+"source": {
+"citation": "BuddhaghosaVisuddhimagga2010",
+"summary": "Classical meditation manual details the progressive factors of jhana, including withdrawal from the senses and the arising and refinement of joy and happiness."
+}
+},
+{
+"id": "mech_active_inference_precision_001",
+"domain": "active_inference",
+"concept": "precision_weighting_prediction_errors",
+"definition": "In active inference, precision quantifies the confidence assigned to particular prediction errors or policies, mathematically implemented as the expected inverse variance of noise on those signals.",
+"function": "Governs which streams of information most strongly influence belief updates and action selection, linking to notions of attention, salience and policy confidence.",
+"level": "circuit",
+"properties": [
+"weighting",
+"attention_like",
+"context_dependent"
+],
+"source": {
+"citation": "ParrActiveInference2022",
+"summary": "The book formalises precision as a key parameter modulating the impact of prediction errors on inference and control."
+}
+},
+{
+"id": "mech_meditation_predictive_processing_bridge_001",
+"domain": "contemplative_science",
+"concept": "meditation_predictive_processing_bridge",
+"definition": "A family of accounts that interpret meditation practices as altering precision of priors and prediction errors across hierarchical levels of a predictive or active inference brain.",
+"function": "Provides candidate computational mechanisms for how practices like focused attention, open monitoring and deconstructive meditation change experience and self models.",
+"level": "psychological",
+"properties": [
+"bridge_theory",
+"hypothesis_generating",
+"under_active_development"
+],
+"source": {
+"citation": "LaukkonenPredictiveMind2021",
+"summary": "Paper proposes that deconstructive meditation systematically alters precision assignments in a predictive processing framework."
+}
+}
+],
+"correspondences": [
+{
+"type": "structural_analogy",
+"mechanism_ids": [
+"mech_jhana_classical_phenomenology_001",
+"mech_active_inference_precision_001",
+"mech_meditation_predictive_processing_bridge_001"
+],
+"description": "Reports of narrowed focus, sensory fading and stable joy in jhana can be structurally paralleled by models where precision is selectively shifted away from many exteroceptive channels and toward a constrained internal object or policy.",
+"strength": "moderate",
+"caveats": [
+"Structural similarity does not yet amount to an agreed mechanistic mapping.",
+"Bridging models are still speculative and often tuned to specific meditation styles."
+]
+}
+],
+"evidence": {
+"empirical": [
+{
+"claim": "Recent neurophenomenological studies of advanced jhana practitioners report strong sensory fading, stable absorption and distinctive neural signatures compared to baseline or mindfulness states.",
+"source": "ChowdhuryJhanaCase2025",
+"evidence_type": "experimental_overview"
+}
+],
+"theoretical": [
+{
+"claim": "Reviews of meditation and predictive processing explicitly frame meditation induced changes in consciousness as precision modulation over priors and prediction errors.",
+"source": "TalActiveInferenceMeditation2024",
+"evidence_type": "theoretical_framework"
+}
+],
+"formal": []
+},
+"category_distinctions": [
+{
+"what": "Target phenomenology versus modelling language",
+"is": "jhana texts and first person reports on the one hand, and precision talk as a chosen formal vocabulary on the other",
+"is_not": "two independent measures of the same underlying variable",
+"why": "Without this distinction you start treating pariyatti texts as if they contained hidden sigma notation."
+}
+],
+"unknowns": []
+},
+"n3_meta": {
+"phase": "FRAMEWORKS",
+"progress": 0.3,
+"done": false,
+"stance": "direct",
+"reason": "User asked explicitly for a framework map, so the main registers and the bridge theory are laid out before touching equivalence claims.",
+"boss_move_completed": false
+}
+}
+},
+{
+"turn": 3,
+"intention": "MECHANISM",
+"user": "On the jhana side then, mechanistically, what is even happening before we bring in precision sliders. Sensory fading, bliss, single pointedness, sometimes reports of the body vanishing. Do current neuroscience and careful phenomenology suggest that the external senses really go offline, or is it more like attention is so tightly bound to the object and its after image that everything else just drops below threshold?",
+"hxrmxs": "The nervous system does not sprout a monastic off switch just because you sit still long enough. High end jhana data point toward drastic changes in how sensory input is weighted and bound, not literal disconnection of the eyes and ears. You see slowed breathing, altered arousal, reduced responsiveness and reports of the body fading, alongside neural signatures of highly stable, low noise dynamics. That looks like attention and integration being laser focused on an internal object and its associated affect, with other channels demoted so far down the queue that, from the inside, they might as well not exist.",
+"diamond": {
+"n1_compression": {},
+"n2_truthcore": {
+"claim": "Current phenomenology and early neuroscience of jhana support a picture of extreme attentional focusing, altered arousal and reduced access to ordinary sensory content rather than a literal shutdown of sensory pathways.",
+"mechanisms": [
+{
+"id": "mech_jhana_absorption_dynamics_001",
+"domain": "contemplative_science",
+"concept": "jhana_absorption_dynamics",
+"definition": "A pattern in advanced jhana where attention is stably bound to a chosen object or its mental representation, ordinary distractions are minimal, and practitioners report strong joy, calm and reduced awareness of exteroceptive input and the body.",
+"function": "Captures the behavioural and experiential stability that any mechanistic model of jhana has to explain.",
+"level": "psychological",
+"properties": [
+"high_stability",
+"narrow_focus",
+"altered_body_awareness"
+],
+"source": {
+"citation": "TrevesJhanaDynamics2025",
+"summary": "Group level work on advanced concentrative absorption meditation reports volitional absorption with reduced influence from external stimuli and highly refined attention."
+}
+},
+{
+"id": "mech_jhana_neural_signatures_001",
+"domain": "neuroscience",
+"concept": "jhana_neural_signatures",
+"definition": "Findings from recent fMRI and EEG studies of jhana showing altered connectivity, changes in neural signal diversity and distinctive patterns compared to rest or other meditation types.",
+"function": "Provide evidence that jhana correlates with specific large scale brain state changes rather than being a purely suggestive or imagined difference.",
+"level": "circuit",
+"properties": [
+"state_specific",
+"altered_arousal",
+"integration_shift"
+],
+"source": {
+"citation": "ChowdhuryJhanaCase2025",
+"summary": "An intensively sampled case study and related work reveal reproducible changes in brain dynamics during jhana compared to control states."
+}
+},
+{
+"id": "mech_sensory_access_suppression_001",
+"domain": "cognitive_science",
+"concept": "sensory_access_suppression",
+"definition": "The idea that certain meditative absorptions reduce the access of exteroceptive signals to global broadcasting or reportable awareness without necessarily stopping early sensory processing.",
+"function": "Explains how practitioners can later report that sounds or bodily sensations were not present in experience even though the peripheral systems were still transducing input.",
+"level": "psychological",
+"properties": [
+"gating",
+"threshold_effects",
+"access_rather_than_input"
+],
+"source": {
+"citation": "DevaneyCessations2023",
+"summary": "Work on meditation induced cessations and altered states discusses how access to content can vanish while some underlying processing continues."
+}
+}
+],
+"correspondences": [
+{
+"type": "phenomenological_alignment",
+"mechanism_ids": [
+"mech_jhana_absorption_dynamics_001",
+"mech_sensory_access_suppression_001"
+],
+"description": "Reports of the body and sounds disappearing in jhana align with models where sensory input is still processed early but largely fails to reach reportable or globally integrated awareness.",
+"strength": "moderate",
+"caveats": [
+"Data sets are small and often rely on highly selected practitioners.",
+"Different jhana traditions may emphasise somewhat different phenomenological profiles."
+]
+}
+],
+"evidence": {
+"empirical": [
+{
+"claim": "Recent ultra high field imaging and case studies of jhana report robust sensory fading and altered brain dynamics compared to control meditation states.",
+"source": "TrevesJhanaDynamics2025",
+"evidence_type": "experimental_overview"
+},
+{
+"claim": "Studies on meditation related cessations suggest that access to content can be modulated without total loss of consciousness.",
+"source": "DevaneyCessations2023",
+"evidence_type": "experimental_overview"
+}
+],
+"theoretical": [],
+"formal": []
+},
+"category_distinctions": [
+{
+"what": "Peripheral input versus conscious access",
+"is": "the difference between signals entering the nervous system and those becoming part of reportable, integrated experience",
+"is_not": "a mere matter of how vivid something feels",
+"why": "You can misread sensory fading reports if you do not distinguish these levels."
+}
+],
+"unknowns": [
+{
+"question": "To what extent different jhana factors correlate with specific patterns of sensory gating, connectivity changes and arousal shifts across individuals and traditions.",
+"status": "active_research",
+"why_unknown": "High quality imaging and phenomenology in advanced practitioners is recent and still limited in sample size and protocol diversity.",
+"what_would_resolve": "Larger, multi site neurophenomenological studies with careful mapping of jhana factor reports to detailed brain dynamics.",
+"linked_mechanisms": [
+"mech_jhana_absorption_dynamics_001",
+"mech_jhana_neural_signatures_001"
+]
+}
+]
+},
+"n3_meta": {
+"phase": "MECHANISM",
+"progress": 0.5,
+"done": false,
+"stance": "direct",
+"reason": "User wants a mechanistic sketch of what happens in jhana before plugging it into active inference, so focus is on absorption dynamics and sensory access rather than precision slogans.",
+"boss_move_completed": false
+}
+}
+},
+{
+"turn": 4,
+"intention": "MECHANISM",
+"user": "Given that, plug the active inference lens back in. If precision is basically confidence in certain prediction errors and policies, is a jhana like a pattern where exteroceptive error precision is massively down weighted, interoceptive or object related precision is ramped up, and the system settles in a super stable low surprise basin. Or is the picture more subtle and layered than that simple high internal, low external toggle?",
+"hxrmxs": "You can get away with saying jhana lives in the precision neighbourhood, but not that it is a one bit flip. Active inference accounts already treat attention as selectively increasing precision on some streams and dropping it on others, across multiple hierarchical levels. A plausible story is that jhana involves high precision on a narrow object and its generative niche, reduced precision on competing exteroceptive and narrative signals, and a very tight policy that minimises surprise in that micro world. That is still a long way from global bottom up precision at zero; it is more like an engineered tunnel in the landscape than a power cut to the sensors.",
+"diamond": {
+"n1_compression": {},
+"n2_truthcore": {
+"claim": "Within an active inference framing, jhana can be modelled as a highly selective and hierarchical reconfiguration of precision assignments rather than a global collapse of exteroceptive precision to zero.",
+"mechanisms": [
+{
+"id": "mech_precision_attention_control_001",
+"domain": "active_inference",
+"concept": "precision_attention_control",
+"definition": "Accounts that link shifts in precision on prediction errors and policies to attentional selection and control, both in perception and action.",
+"function": "Explain how an agent can selectively privilege some information streams or action policies over others while still operating under the same general generative model.",
+"level": "circuit",
+"properties": [
+"selective",
+"policy_linked",
+"hierarchical"
+],
+"source": {
+"citation": "DeaneActiveInferenceConsciousness2021",
+"summary": "Paper discusses how precision control under active inference underwrites aspects of attention and conscious access."
+}
+},
+{
+"id": "mech_meditation_precision_modulation_001",
+"domain": "contemplative_science",
+"concept": "meditation_precision_modulation",
+"definition": "The proposal that meditation practices alter precision assignments, for example by reducing precision on high level self related priors or increasing precision on simple present centred sensory streams.",
+"function": "Provides a computational way to talk about how meditation can both stabilise attention and deconstruct habitual narratives.",
+"level": "psychological",
+"properties": [
+"practice_dependent",
+"layered",
+"state_and_trait"
+],
+"source": {
+"citation": "LaukkonenPredictiveMind2021",
+"summary": "Argues that deconstructive and other meditation styles can be understood as systematically modifying precision across a predictive hierarchy."
+}
+},
+{
+"id": "mech_absorption_precision_pattern_001",
+"domain": "meta_theory",
+"concept": "absorption_precision_pattern",
+"definition": "A hypothesised precision pattern for deep absorption states where precision is high on a constrained range of internal and interoceptive signals and low on many exteroceptive and self narrative channels.",
+"function": "Offers a candidate active inference profile that could underwrite reports of sensory fading, stability and bliss in jhana like states.",
+"level": "epistemic",
+"properties": [
+"hypothetical",
+"pattern_level",
+"compatible_with_data"
+],
+"source": {
+"citation": "TalActiveInferenceMeditation2024",
+"summary": "Review suggests that precision control is a key axis along which deep meditative states may be organised."
+}
+},
+{
+"id": "mech_zero_precision_limit_case_001",
+"domain": "active_inference",
+"concept": "zero_precision_limit_case",
+"definition": "The formal but biologically extreme case where precision on particular sensory channels approaches zero, making those prediction errors effectively irrelevant to inference.",
+"function": "Illustrates that in realistic agents, driving wide classes of sensory precision toward zero would usually correspond to anaesthesia, coma or severe pathology rather than stable lucid absorption.",
+"level": "micro_physical",
+"properties": [
+"limit_case",
+"pathology_adjacent",
+"not_jhana_typical"
+],
+"source": {
+"citation": "ParrActiveInference2022",
+"summary": "Discussion of precision includes regimes where particularly low precision makes signals effectively ignored, with obvious limits for viable sentient behaviour."
+}
+}
+],
+"correspondences": [
+{
+"type": "partial_reduction",
+"mechanism_ids": [
+"mech_jhana_absorption_dynamics_001",
+"mech_absorption_precision_pattern_001"
+],
+"description": "Absorption phenomenology can be partially reduced to a precision pattern story in which some streams are strongly down weighted while a narrow generative niche is held with high confidence, but not all aspects of jhana are exhaustively captured by this parameter change alone.",
+"strength": "moderate",
+"caveats": [
+"Bliss and insight roles of jhana likely also depend on affective and value related processes not fully described by precision on sensory errors.",
+"Different jhana styles may correspond to different precision configurations."
+]
+},
+{
+"type": "logical_exclusion",
+"mechanism_ids": [
+"mech_absorption_precision_pattern_001",
+"mech_zero_precision_limit_case_001"
+],
+"description": "If jhana involves sustained lucid awareness and reportability, it is unlikely to coincide with a regime in which all exteroceptive precision is effectively zero, which would imply something closer to unconsciousness.",
+"strength": "strong",
+"caveats": [
+"Some very deep states reported in contemplative traditions may approach boundaries where ordinary consciousness is disrupted.",
+"Current models do not uniquely fix how low precision can go while experience persists."
+]
+}
+],
+"evidence": {
+"empirical": [
+{
+"claim": "Meditation studies framed in predictive processing terms report that shifts in attention and experience are well modelled as changes in precision on certain priors and error signals.",
+"source": "LaukkonenPredictiveMind2021",
+"evidence_type": "experimental_overview"
+}
+],
+"theoretical": [
+{
+"claim": "Active inference theorists emphasise that precision control is distributed, policy linked and context sensitive rather than a single global knob.",
+"source": "ParrActiveInference2022",
+"evidence_type": "theoretical_framework"
+}
+],
+"formal": []
+},
+"category_distinctions": [
+{
+"what": "Selective precision pattern versus global collapse",
+"is": "a structured, hierarchical redistribution of precision across channels and levels",
+"is_not": "one uniform scalar dialled down on all bottom up inputs at once",
+"why": "Only the former looks compatible with the fine grained phenomenology and behaviour seen in skilled jhana practitioners."
+}
+],
+"unknowns": []
+},
+"n3_meta": {
+"phase": "MECHANISM",
+"progress": 0.7,
+"done": false,
+"stance": "direct",
+"reason": "User is asking for the active inference plug in, so the answer gives a plausible precision pattern account while explicitly blocking the global zero precision picture.",
+"boss_move_completed": false
+}
+}
+},
+{
+"turn": 5,
+"intention": "BOUNDARIES",
+"user": "So my pretty story is tempting but maybe too clean. It would say something like jhana equals exteroceptive precision near zero, object policy precision near one, and the system enjoying prediction error free bliss. Where does that break against current data and theory. Is it that we cannot measure precision directly, that jhanas are heterogeneous, or that active inference itself does not support that kind of almost zero bottom up regime without collapsing consciousness?",
+"hxrmxs": "The fantasy breaks in three places. First, precision is an inferred parameter in the model, not a directly measured neural knob, so all jhana precision talk is still reverse engineering plus metaphor. Second, jhana practice and reports are not uniform across lineages and individuals, so there is no single absorption profile to map. Third, active inference plus basic physiology make it implausible that a human brain could run for long with almost no exteroceptive precision and stay both lucid and behaviourally responsive. The safe claim is that jhana sits in a corner of precision space, not at its mathematical boundary.",
+"diamond": {
+"n1_compression": {},
+"n2_truthcore": {
+"claim": "Current evidence supports treating jhana as an interesting region in a high dimensional precision landscape rather than as a limit case where bottom up precision is nearly zero, and there are clear epistemic and mechanistic reasons not to overstate the mapping.",
+"mechanisms": [
+{
+"id": "mech_precision_as_latent_parameter_001",
+"domain": "active_inference",
+"concept": "precision_as_latent_parameter",
+"definition": "In active inference models, precision is a latent parameter inferred from behaviour and neural data rather than something directly observable at the synaptic level.",
+"function": "Constrains how confidently we can claim specific precision patterns for complex states like jhana based on limited empirical data.",
+"level": "epistemic",
+"properties": [
+"indirect",
+"model_dependent",
+"under_determined"
+],
+"source": {
+"citation": "ParrActiveInference2022",
+"summary": "Discusses how precision is implemented and inferred in practice, highlighting its status as a parameter in a generative model."
+}
+},
+{
+"id": "mech_jhana_phenomenological_variability_001",
+"domain": "contemplative_science",
+"concept": "jhana_phenomenological_variability",
+"definition": "The observation that reports of jhana vary across traditions and individuals in terms of the strength of sensory fading, bodily awareness and affective tone.",
+"function": "Warns against assuming a single canonical jhana profile that could be mapped to one fixed precision configuration.",
+"level": "psychological",
+"properties": [
+"inter_individual_variation",
+"tradition_dependent",
+"state_and_trait_effects"
+],
+"source": {
+"citation": "TrevesJhanaDynamics2025",
+"summary": "Empirical work notes variation in how practitioners experience and describe absorption, even under similar instructions."
+}
+}
+],
+"correspondences": [
+{
+"type": "negative_finding",
+"mechanism_ids": [
+"mech_absorption_precision_pattern_001",
+"mech_zero_precision_limit_case_001"
+],
+"description": "While absorption can be plausibly modelled as a selective precision pattern, neither neurodata nor behavioural observations suggest that conscious jhana corresponds to a regime where wide classes of sensory precision are effectively zero.",
+"strength": "strong",
+"caveats": [
+"Some rare or extreme states in contemplative maps, such as certain cessation experiences, may sit closer to precision boundary cases.",
+"Quantitative fits of active inference models to jhana data are only beginning."
+]
+}
+],
+"evidence": {
+"empirical": [
+{
+"claim": "Recent formalisation work on meditation and active inference emphasises the difficulty of uniquely identifying precision patterns from current data.",
+"source": "FormalMeditationPrecision2025",
+"evidence_type": "experimental_overview"
+}
+],
+"theoretical": [
+{
+"claim": "Active inference accounts of consciousness and arousal argue that some minimal level of sensory and interoceptive precision is needed to maintain coherent experience and adaptive behaviour.",
+"source": "BiddellArousalCoherence2024",
+"evidence_type": "theoretical_framework"
+}
+],
+"formal": []
+},
+"category_distinctions": [
+{
+"what": "Nice metaphor versus validated mechanism",
+"is": "a suggestive way of speaking that organises intuitions and generates hypotheses",
+"is_not": "a confirmed, quantitatively supported account of what is happening in the brain during jhana",
+"why": "If you forget this, you will start preaching your favourite model as if it were a lab result."
+}
+],
+"unknowns": [
+{
+"question": "What specific precision assignments across sensory, interoceptive and higher order self related levels best fit observed neural and behavioural data from different jhana stages.",
+"status": "active_research",
+"why_unknown": "Only a handful of detailed jhana studies exist and very few use explicit active inference modelling with subject specific fits.",
+"what_would_resolve": "Careful experiments combining rich phenomenological reporting, high resolution neural data and explicit generative modelling of precision parameters for individual practitioners.",
+"linked_mechanisms": [
+"mech_jhana_neural_signatures_001",
+"mech_absorption_precision_pattern_001",
+"mech_precision_as_latent_parameter_001"
+]
+}
+]
+},
+"n3_meta": {
+"phase": "BOUNDARIES",
+"progress": 0.85,
+"done": false,
+"stance": "direct",
+"reason": "User is explicitly asking where the neat equivalence story fails, so the answer foregrounds epistemic limits, variability and physiological constraints.",
+"boss_move_completed": false
+}
+}
+},
+{
+"turn": 6,
+"intention": "INTEGRATION",
+"user": "So the grown up way to say it is something like this. Jhana does not literally zero out sensory precision and turn the brain into a pure bliss hallucination engine. It is more like an absorption regime where attention and precision are selectively reshaped so that a narrow object and its affective field get very high weight, lots of exteroceptive and narrative signals are pushed below access, and the system falls into a low surprise, highly stable basin. Active inference gives a nice language for that kind of precision pattern, but precision is still a latent model parameter and jhanas themselves are diverse, so at best we have a plausible corner of parameter space, not a proved identity. Jhana lives in a recognisable region of the precision landscape, but not at the fantasy limit of bottom up precision equals zero.",
+"hxrmxs": "Exactly. You retired the comic book version and kept the useful skeleton. Jhana becomes a structured way of driving a predictive brain into a tightly scoped, low surprise attractor by redistributing precision, not annihilating the senses. Active inference supplies a disciplined vocabulary for talking about that redistribution, without pretending we can already read off exact precision matrices from a few scans and some bliss reports. That stance lets you use the model as a thinking tool while leaving room for the messy phenomenology and the parts of jhana that are about value and insight rather than just signal weighting.",
+"diamond": {
+"n1_compression": {},
+"n2_truthcore": {
+"claim": "The user has integrated that deep jhana is best modelled, within active inference, as a selective and hierarchical reconfiguration of precision that yields narrow, stable, low surprise absorption, rather than as a literal zero precision bottom up regime where the brain runs on unconstrained blissful fantasy.",
+"mechanisms": [
+{
+"id": "mech_integrated_jhana_precision_view_001",
+"domain": "meta_theory",
+"concept": "integrated_jhana_precision_view",
+"definition": "A view that treats jhana as a family of absorption states in which precision over prediction errors and policies is selectively redistributed to favour a constrained generative niche, while maintaining enough sensory and interoceptive precision for coherent experience.",
+"function": "Allows active inference models to illuminate aspects of jhana without collapsing them into a single parameter extreme or ignoring their ethical and insight roles.",
+"level": "epistemic",
+"properties": [
+"integrative",
+"constraint_respecting",
+"anti_reductionist"
+],
+"source": {
+"citation": "TalActiveInferenceMeditation2024",
+"summary": "Review style work supports using precision based active inference accounts to organise meditation phenomenology while emphasising their provisional status."
+}
+}
+],
+"correspondences": [],
+"evidence": {
+"empirical": [],
+"theoretical": [
+{
+"claim": "Across recent work, meditation related precision accounts are presented as promising frameworks rather than as final mechanistic identifications.",
+"source": "FormalMeditationPrecision2025",
+"evidence_type": "conceptual_analysis"
+}
+],
+"formal": []
+},
+"category_distinctions": [
+{
+"what": "Using a model versus worshipping it",
+"is": "employing active inference and precision as tools to think about jhana dynamics",
+"is_not": "treating the current parameter stories as the final word on what jhana is",
+"why": "The former keeps you curious and evidence sensitive; the latter turns a live research programme into a new dogma."
+}
+],
+"unknowns": []
+},
+"n3_meta": {
+"phase": "INTEGRATION",
+"progress": 1.0,
+"done": true,
+"stance": "peer",
+"reason": "User has articulated a nuanced synthesis that keeps the attractive precision metaphor while respecting empirical limits and avoiding strong identity claims.",
+"boss_move_completed": true
+}
+}
+}
+],
+"references": {
+"BuddhaghosaVisuddhimagga2010": {
+"id": "isbn:9781614290407",
+"type": "book",
+"authors": [
+"Buddhaghosa"
+],
+"year": 2010,
+"title": "The Path of Purification (Visuddhimagga)"
+},
+"ParrActiveInference2022": {
+"id": "url:[https://direct.mit.edu/books/oa-monograph/5299/Active-InferenceThe-Free-Energy-Principle-in-Mind](https://direct.mit.edu/books/oa-monograph/5299/Active-InferenceThe-Free-Energy-Principle-in-Mind)",
+"type": "book",
+"authors": [
+"Parr, Thomas",
+"Pezzulo, Giovanni",
+"Friston, Karl"
+],
+"year": 2022,
+"title": "Active Inference: The Free Energy Principle in Mind, Brain, and Behavior"
+},
+"LaukkonenPredictiveMind2021": {
+"id": "url:[https://www.sciencedirect.com/science/article/pii/S014976342100261X](https://www.sciencedirect.com/science/article/pii/S014976342100261X)",
+"type": "article",
+"authors": [
+"Laukkonen, Ruben E.",
+"Slagter, Heleen A."
+],
+"year": 2021,
+"title": "From many to none: Meditation and the plasticity of the predictive mind"
+},
+"ChowdhuryJhanaCase2025": {
+"id": "url:[https://www.sciencedirect.com/science/article/pii/S1053811924004701](https://www.sciencedirect.com/science/article/pii/S1053811924004701)",
+"type": "article",
+"authors": [
+"Chowdhury, Anindya",
+"Others"
+],
+"year": 2025,
+"title": "An intensively sampled case study of jhana"
+},
+"TrevesJhanaDynamics2025": {
+"id": "url:[https://pmc.ncbi.nlm.nih.gov/articles/PMC11949543/](https://pmc.ncbi.nlm.nih.gov/articles/PMC11949543/)",
+"type": "article",
+"authors": [
+"Treves, I. N.",
+"Others"
+],
+"year": 2025,
+"title": "Dynamic brain states underlying advanced concentrative absorption meditation"
+},
+"DevaneyCessations2023": {
+"id": "url:[https://meditation.mgh.harvard.edu/files/Laukkonen_23_ProgressInBrainResearch.pdf](https://meditation.mgh.harvard.edu/files/Laukkonen_23_ProgressInBrainResearch.pdf)",
+"type": "article",
+"authors": [
+"Devaney, K. J.",
+"Laukkonen, R.",
+"Others"
+],
+"year": 2023,
+"title": "Cessations of consciousness in meditation"
+},
+"DeaneActiveInferenceConsciousness2021": {
+"id": "url:[https://academic.oup.com/nc/article/2021/2/niab024/6360857](https://academic.oup.com/nc/article/2021/2/niab024/6360857)",
+"type": "article",
+"authors": [
+"Deane, Greg",
+"Others"
+],
+"year": 2021,
+"title": "Consciousness in active inference: Deep self models, other minds, and the problem of meaning"
+},
+"TalActiveInferenceMeditation2024": {
+"id": "url:[https://meditation.mgh.harvard.edu/files/Tal_25_OSF.pdf](https://meditation.mgh.harvard.edu/files/Tal_25_OSF.pdf)",
+"type": "article",
+"authors": [
+"Tal, H.",
+"Others"
+],
+"year": 2024,
+"title": "Active inference, computational phenomenology, and meditation"
+},
+"BiddellArousalCoherence2024": {
+"id": "url:[https://academic.oup.com/nc/article/2024/1/niae011/7631817](https://academic.oup.com/nc/article/2024/1/niae011/7631817)",
+"type": "article",
+"authors": [
+"Biddell, Harry",
+"Others"
+],
+"year": 2024,
+"title": "Arousal coherence, uncertainty, and well being: An active inference account"
+},
+"FormalMeditationPrecision2025": {
+"id": "url:[https://osf.io/preprints/psyarxiv/pm5y2_v2](https://osf.io/preprints/psyarxiv/pm5y2_v2)",
+"type": "article",
+"authors": [
+"Potash, Rebecca M.",
+"Others"
+],
+"year": 2025,
+"title": "Toward the formalization of the experience of meditation"
+}
+},
+"outcome": {
+"taught": "Deep jhana absorption is best modelled, within active inference, as a selective and hierarchical redistribution of precision that yields narrow, low surprise, blissful absorption rather than as a literal zero precision bottom up regime, and current data support this as a useful but still provisional computational story.",
+"trajectory": "The user moved from asking whether jhana simply equals zero sensory precision and a free running blissful generative model to a position that treats jhana as occupying a particular corner of a high dimensional precision landscape, with selective down weighting of many exteroceptive signals and up weighting of a narrow object and its niche, while respecting empirical limits and model under determination.",
+"indicators": [
+"grasped_mech_jhana_classical_phenomenology_001",
+"grasped_mech_active_inference_precision_001",
+"understood_absorption_precision_pattern_limits",
+"distinguished_sensory_access_from_input",
+"rejected_zero_precision_identity_claim",
+"answered_original_question_correctly"
+],
+"feedback_pedagogy": {
+"user_reported_click_turn": null,
+"user_reported_click_cause": null,
+"clarity_delta": {
+"before": null,
+"after": null
+},
+"subjective_note": null
+}
+}
+}

@@ -1,0 +1,58 @@
+{
+  "co_id": "co:uno_discourses_b1_c2_florus_agripp_t1",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "discourses_b1_c2_florus_agrippinus_calculation",
+  "turn_index": 1,
+  "lineage": "Realist",
+  "student_state": "baffled_by_integrity",
+  "behavior_tags": [
+    "value_conflict"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_03",
+    "function_name": "RM_03",
+    "mechanism_shape": "CAUSAL_CHAIN",
+    "teaching_actions": [
+      "explains_mechanism",
+      "accepts_consequence"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.35,
+      "attunement": 0.2,
+      "style": 0.35,
+      "depth": 0.38,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_01",
+      "style_discrete": "LS_02",
+      "depth_discrete": "PD_02",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "go_along_compliantly",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "They asked 'Why?' Perfect. Now explanation: deliberation about externals is incompatible with character. The example (head struck off) makes it concrete—I'd rather die than calculate. The 'one thread' metaphor is interesting—you're part of a whole, not the whole itself. That's why calculation is wrong—you're treating yourself as separate from the whole. Episode complete.",
+  "accumulated_insight": "T2 (Final): They asked 'Why?' Perfect. Now explanation: deliberation about externals (death vs life, pain vs pleasure) is incompatible with character. Once you calculate, you've forgotten who you are. I accept consequences (head struck off) rather than calculate. The 'one thread' metaphor shows: you're part of a whole, not the whole itself. Two-turn episode: rejection → explanation.",
+  "abstract_pattern": "",
+  "visible_response": "For he who has once brought himself to deliberate about such matters, and to calculate the value of external things, comes very near to those who have forgotten their own character. For why do you ask me the question, whether death is preferable or life? I say \"life.\" \"Pain or pleasure?\" I say \"pleasure.\" But if I do not take a part in the tragic acting, I shall have my head struck off. Go then and take a part, but I will not.\n\nBecause you consider yourself to be only one thread of those which are in the tunic.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:kybalion",
+    "ro:grimoires-decoded",
+    "ro:hermes-proof-system"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

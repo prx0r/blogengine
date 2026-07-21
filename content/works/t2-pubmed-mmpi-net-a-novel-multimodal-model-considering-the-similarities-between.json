@@ -1,0 +1,38 @@
+{
+  "work_id": "work:t2-pubmed-mmpi-net-a-novel-multimodal-model-considering-the-similarities-between",
+  "schema_version": 2,
+  "title": "MMPI Net: A Novel Multimodal Model Considering the Similarities Between Perception and Imagination for Image Evoked EEG Decoding.",
+  "authors": [
+    {
+      "name": "Tong, Jinze"
+    },
+    {
+      "name": "Chen, Wanzhong"
+    }
+  ],
+  "identifiers": {
+    "pmid": "40126958",
+    "doi": "10.1109/JBHI.2025.3554664"
+  },
+  "publication": {
+    "journal": "IEEE journal of biomedical and health informatics",
+    "year": "2025"
+  },
+  "abstract": "In recent years, non-invasive electroencephalography (EEG) has been widely used to decode high-level cognitive functions, such as visual perception and imagination. The processes of visual perception and imagination in the human brain have been shown to share similar neural circuits and activation patterns in cognitive science. However, current research predominantly focuses on single cognitive processes, overlooking the natural commonalities between these processes and the insights that multimodal approaches can provide. To address this, this study proposes a novel multimodal model, MMPI Net, for jointly decoding EEG signals of visual image perception and imagination. MMPI Net comprises four components: Primitive Feature Extraction for Perception and Imagination (PFE), Cross-Semantic Feature Fusion (CSFF), Joint Semantic Feature Decoder (JSFD), and Semantic Classification (SC). To ensure the effectiveness of PFEM, an Improved Channel Attention Mechanism is introduced, which employs multiple parallel convolutional branches to enhance the extraction of important information and utilizes a Diverse Branch Block approach to reduce the parameter count. In the CSFF module, a cross-attention-based fusion method is designed to effectively capture and utilize intermodal information. In the JSFD phase, a Kolmogorov-Arnold Network is incorporated and coupled with linear layers to improve classification performance. Finally, a linear layer with Softmax is used as the SC module. Experimental results on two publicly available datasets show that, compared to models that use a single cognitive process, MMPI Net achieves average accuracy improvements of 14.22% and 106.1%, demonstrating its effectiveness.",
+  "phase_mapping": {
+    "phase": 10,
+    "phase_name": "Imaginal"
+  },
+  "bridge_tags": [
+    "mental-imagery",
+    "imagination",
+    "imaginal",
+    "perception"
+  ],
+  "evaluation": "Quality pass v3 (score=50) \u2014 High-signal bridge paper for Imaginal.",
+  "assets": {
+    "pdf_path": null,
+    "nxml_path": null
+  },
+  "tier": 2
+}

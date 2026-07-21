@@ -1,0 +1,27 @@
+name: Deploy to Cloudflare Workers
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    name: Cloudflare Deploy
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "npm"
+      - run: npm install --legacy-peer-deps
+      - name: Remove heavy reference dirs and ensure empty dirs for build
+        run: |
+          rm -rf library source-texts content/sources
+          mkdir -p content/essays content/sources
+      - name: Install missing deps for build (pg needed by db.ts)
+        run: npm install pg --legacy-peer-deps
+      - run: npm run cf:deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}

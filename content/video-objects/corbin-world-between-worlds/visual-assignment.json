@@ -1,0 +1,108 @@
+{
+  "video_id": "corbin-world-between-worlds",
+  "storyboard_id": "the-world-between-worlds",
+  "generated": "2026-07-20",
+  "model": "qwen3.7-plus",
+  "tradition": "corbin",
+  "default_treatment": "corbin-blue",
+  "notes": "First full pipeline test — Corbin's Mundus Imaginalis",
+  "segments": [
+    {
+      "segment_id": "seg-01-hook",
+      "label": "The Missing Middle",
+      "type": "doorway_open",
+      "doorway": "door_mist_001",
+      "duration": 8.0,
+      "artwork_id": null,
+      "treatment": "corbin-blue",
+      "motion": "still",
+      "treatment_mood": "visionary, liminal",
+      "notes": "Opening — mist doorway into the imaginal. Fade from black."
+    },
+    {
+      "segment_id": "seg-02-thesis",
+      "label": "The Geography of the Imaginal",
+      "type": "artwork",
+      "artwork_id": "art_alchemy_e001",
+      "treatment": "corbin-blue",
+      "motion": "slow_zoom",
+      "duration": 40.0,
+      "treatment_mood": "cosmic, contemplative",
+      "concepts_matched": ["Unity", "Imaginal World", "Correspondence", "Divine Order"],
+      "notes": "Fludd's astrologer consulting the heavens — perfect for the intermediate world."
+    },
+    {
+      "segment_id": "seg-03-expansion",
+      "label": "The Inner Eye and the Emerald Light",
+      "type": "artwork",
+      "artwork_id": "art_alchemy_e281",
+      "treatment": "golden-imaginal",
+      "motion": "ken_burns",
+      "duration": 40.8,
+      "treatment_mood": "visionary, illuminated",
+      "concepts_matched": ["Imagination", "Perception", "Light"],
+      "notes": "Raymond Lull — visionary imagination. Switch to golden-imaginal for warmth."
+    },
+    {
+      "segment_id": "seg-04-quote",
+      "label": "The Encounter in the Vault",
+      "type": "quote_card",
+      "quote_text": "I am thy Perfect Nature.",
+      "quote_author": "Shihab al-Din Yahya Suhrawardi",
+      "style": "centered_sparse",
+      "artwork_id": "art_angel_gabriel",
+      "treatment": "corbin-blue",
+      "motion": "still",
+      "duration": 39.0,
+      "notes": "Angelic annunciation imagery behind the quote card."
+    },
+    {
+      "segment_id": "seg-05-contrast",
+      "label": "The Counterpart vs. The Shadow",
+      "type": "artwork",
+      "artwork_id": "art_alchemy_e045",
+      "treatment": "mystical-dark",
+      "motion": "slow_zoom",
+      "duration": 41.2,
+      "treatment_mood": "mystical, contemplative, austere",
+      "concepts_matched": ["Transformation", "Ascent", "Darkness"],
+      "notes": "Tree of dark and light — the contrast between counterpart and shadow."
+    },
+    {
+      "segment_id": "seg-06-example",
+      "label": "The Fire of Remembrance",
+      "type": "artwork",
+      "artwork_id": "art_alchemy_e024",
+      "treatment": "tibetan-red",
+      "motion": "ken_burns",
+      "duration": 40.8,
+      "treatment_mood": "warm, intense, sacred",
+      "concepts_matched": ["Ascent", "Transformation", "Fire", "Light"],
+      "notes": "Fire and ascent imagery for dhikr/remembrance practice."
+    },
+    {
+      "segment_id": "seg-07-synthesis",
+      "label": "The Mirror and the Face",
+      "type": "artwork",
+      "artwork_id": "art_alchemy_e155",
+      "treatment": "golden-imaginal",
+      "motion": "slow_zoom",
+      "duration": 35.4,
+      "treatment_mood": "cosmic, visionary, mystical",
+      "concepts_matched": ["Unity", "Imagination", "Correspondence", "Beauty"],
+      "notes": "Maier's title page — unity and correspondence for the unus-ambo."
+    },
+    {
+      "segment_id": "seg-08-closing",
+      "label": "The Green Light Outlasts",
+      "type": "doorway_close",
+      "doorway": "door_mist_001",
+      "duration": 8.0,
+      "artwork_id": "art_alchemy_e270",
+      "treatment": "corbin-blue",
+      "motion": "still",
+      "treatment_mood": "visionary, illuminated",
+      "notes": "Fludd's descent of light — reverse doorway, fade to black."
+    }
+  ]
+}

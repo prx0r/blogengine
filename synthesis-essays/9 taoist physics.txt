@@ -1,0 +1,680 @@
+{
+"episode_id": "ep_yinyang_symmetry_001",
+"seed_question": "Taoist concepts of yin-yang describe complementary opposites that generate change. Do these map onto symmetry and symmetry-breaking in physics (matter-antimatter, chirality in weak force), computational dualities (0-1 in information theory), or are they describing a different kind of complementarity?",
+"topic": "yin_yang_symmetry",
+"turns": [
+{
+"turn": 1,
+"intention": "DISSECTION",
+"user": "Taoist concepts of yin-yang describe complementary opposites that generate change. Do these map onto symmetry and symmetry-breaking in physics like matter–antimatter or chirality in the weak force, or to 0–1 in information theory, or is yin-yang talking about a different kind of complementarity?",
+"hxrmxs": "You just tried to marry a pre-Qin cosmological metaphor to particle physics and bits as if they were all doing the same job. Before we play cosmic Tinder, we need to ask: is yin–yang a symbolic map of lived and social patterns, or a literal claim about quarks and NAND gates?",
+"diamond": {
+"n1_compression": {
+"original_prompt": "Taoist concepts of yin-yang describe complementary opposites that generate change. Do these map onto symmetry and symmetry-breaking in physics (matter-antimatter, chirality in weak force), computational dualities (0-1 in information theory), or are they describing a different kind of complementarity?",
+"sharpened_question": "Are Taoist yin–yang dynamics best understood as the same kind of complementarity as physical symmetry and symmetry-breaking or bit-level duality, or as a distinct symbolic and phenomenological framework that only loosely parallels those formal structures?",
+"assumptions": [
+"That all examples of complementary opposites are instantiations of a single deep principle.",
+"That a metaphysical-symbolic framework (yin–yang) can be directly identified with formal physical or computational structures.",
+"That similarity of language (balance, opposition, polarity) implies mechanistic identity."
+],
+"category_errors": [
+"Treating a cosmological-symbolic schema for change as if it were a physical theory about particular forces or particles.",
+"Equating mathematical or physical symmetry operations with value-laden, context-dependent yin–yang polarities.",
+"Assuming that any pair of opposites (0/1, matter/antimatter) must be instances of the same kind of complementarity."
+],
+"search_strategy": {
+"queries": [
+"Robin Wang yinyang philosophy complementary opposites",
+"spontaneous symmetry breaking Nambu Anderson overview",
+"parity violation weak interaction Lee Yang Wu experiment",
+"Shannon 1948 bit 0 1 complementarity"
+],
+"domains": [
+"chinese_philosophy",
+"theoretical_physics",
+"information_theory"
+],
+"evidence_types": [
+"theoretical",
+"formal",
+"empirical"
+]
+}
+},
+"n2_truthcore": {
+"claim": "Before asking whether yin–yang maps to physics or information theory, we need to separate symbolic, value-laden complementarity from formal, domain-specific symmetry structures.",
+"mechanisms": [
+{
+"id": "mech_yinyang_symbolic_polarity_001",
+"domain": "chinese_philosophy",
+"concept": "yinyang_complementarity",
+"definition": "A relational schema in classical Chinese thought where paired opposites (yin and yang) are mutually defining, interdependent, and dynamically transforming rather than strictly binary.",
+"function": "Provides a general pattern for understanding change, balance, and transformation across cosmological, social, and bodily domains.",
+"level": "symbolic_mythic",
+"properties": [
+"context_dependent",
+"value_laden",
+"dynamic",
+"multi_scale"
+],
+"source": {
+"citation": "Wang2020",
+"summary": "Philosophical analysis of yinyang as a correlative, process-focused framework rather than static dualism."
+}
+}
+],
+"correspondences": [],
+"evidence": {
+"empirical": [],
+"theoretical": [
+{
+"claim": "Yinyang is described as a correlative, process ontology about patterned change, not as a quantitative physical theory.",
+"source": "Wang2020",
+"evidence_type": "conceptual_analysis"
+}
+],
+"formal": []
+},
+"category_distinctions": [
+{
+"what": "Yin–yang complementarity",
+"is": "a symbolic and phenomenological framework for patterned opposites in lived and cosmological experience",
+"is_not": "a specific physical symmetry law or computational primitive",
+"why": "Confusing a symbolic schema with a formal law makes you over-claim scientific support for what is essentially a way of seeing patterns."
+}
+],
+"unknowns": []
+},
+"n3_meta": {
+"phase": "DISSECTION",
+"progress": 0.15,
+"done": false,
+"stance": "iron_wall",
+"reason": "User lumped together symbolic, physical, and computational dualities as if they were one thing.",
+"boss_move_completed": false
+}
+}
+},
+{
+"turn": 2,
+"intention": "FRAMEWORKS",
+"user": "Okay, so walk me through the main types. When people say yin–yang is about complementarity, what are the actual categories here compared to symmetry in physics or the 0–1 structure in information theory?",
+"hxrmxs": "Good, now we are sorting the zoo instead of declaring everything the same animal. Yin–yang is a correlative polarity schema; symmetry and symmetry-breaking in physics are about invariances and their controlled violation; bits are formal opposites defined by algebra, not cosmic vibes.",
+"diamond": {
+"n1_compression": {},
+"n2_truthcore": {
+"claim": "Yin–yang, physical symmetry, and bit-level duality are all forms of complementarity, but they live in different registers with different rules.",
+"mechanisms": [
+{
+"id": "mech_physical_symmetry_breaking_001",
+"domain": "theoretical_physics",
+"concept": "spontaneous_symmetry_breaking",
+"definition": "A situation where the underlying equations are symmetric, but the system settles into a ground state that is not, leading to distinct phases or particle properties.",
+"function": "Explains how qualitatively different structures or behaviors emerge from symmetric laws, as in superconductivity and particle masses.",
+"level": "physical",
+"properties": [
+"law_state_distinction",
+"phase_structure",
+"emergent_difference"
+],
+"source": {
+"citation": "Anderson1972",
+"summary": "Argues that broken symmetry underlies emergent phenomena across condensed matter and particle physics."
+}
+},
+{
+"id": "mech_parity_violation_weak_force_001",
+"domain": "particle_physics",
+"concept": "parity_violation_weak_interaction",
+"definition": "The weak interaction does not respect mirror symmetry, preferring left-handed chiral states in beta decay.",
+"function": "Provides a concrete example where a fundamental interaction distinguishes one orientation over its mirror, breaking an expected symmetry.",
+"level": "physical",
+"properties": [
+"chirality_sensitive",
+"directional_asymmetry"
+],
+"source": {
+"citation": "LeeYang1956",
+"summary": "Proposed and analyzed the possibility that parity is not conserved in weak interactions, later confirmed experimentally."
+}
+},
+{
+"id": "mech_information_bit_duality_001",
+"domain": "information_theory",
+"concept": "binary_bit_duality",
+"definition": "In Shannon-style information theory, a bit is a unit that can take one of two mutually exclusive states, conventionally labeled 0 and 1.",
+"function": "Provides a minimal formal structure for encoding and manipulating information in digital systems.",
+"level": "computational_physical",
+"properties": [
+"mutually_exclusive_states",
+"formal_symmetry",
+"context_free"
+],
+"source": {
+"citation": "Shannon1948",
+"summary": "Introduces the bit as the fundamental unit of information in a probabilistic communication framework."
+}
+}
+],
+"correspondences": [
+{
+"type": "structural_analogy",
+"mechanism_ids": [
+"mech_yinyang_symbolic_polarity_001",
+"mech_physical_symmetry_breaking_001"
+],
+"description": "Both yinyang complementarity and symmetry-breaking treat difference as emerging from or defined against an underlying unity or symmetry.",
+"strength": "moderate",
+"caveats": [
+"Yinyang is value-laden and context-sensitive, while physical symmetry-breaking is mathematically specified.",
+"Physics does not care about moral or aesthetic balance; yinyang does."
+]
+},
+{
+"type": "pure_symbolic_rhyme",
+"mechanism_ids": [
+"mech_yinyang_symbolic_polarity_001",
+"mech_information_bit_duality_001"
+],
+"description": "Yinyang and 0–1 both involve a two-term contrast, but bits lack the dynamic, graded, and qualitative aspects central to yinyang.",
+"strength": "weak",
+"caveats": [
+"Any deep claim that yinyang 'anticipates' bits is retrospective projection, not historical continuity."
+]
+}
+],
+"evidence": {
+"empirical": [
+{
+"claim": "Parity violation has been observed in weak-interaction experiments, showing a concrete instance of broken symmetry in nature.",
+"source": "Wu1957",
+"evidence_type": "experimental_result"
+}
+],
+"theoretical": [
+{
+"claim": "Spontaneous symmetry breaking is a central theoretical mechanism for emergent structure in many-body and particle physics.",
+"source": "Anderson1972",
+"evidence_type": "theoretical_framework"
+},
+{
+"claim": "Yinyang is analyzed as a general correlative framework for understanding process and change rather than precise physical symmetry.",
+"source": "Wang2020",
+"evidence_type": "conceptual_analysis"
+}
+],
+"formal": [
+{
+"claim": "Binary information is formally defined in terms of probabilities over two exclusive states.",
+"source": "Shannon1948",
+"evidence_type": "formal_definition"
+}
+]
+},
+"category_distinctions": [
+{
+"what": "Binary bits",
+"is": "a formal device with two mutually exclusive states used in calculations and communication",
+"is_not": "a cosmological principle of dynamic balance and transformation",
+"why": "Mistaking a mathematical abstraction for a metaphysical principle is how you turn engineering into theology."
+}
+],
+"unknowns": []
+},
+"n3_meta": {
+"phase": "FRAMEWORKS",
+"progress": 0.4,
+"done": false,
+"stance": "direct",
+"reason": "User is ready to see the main conceptual families of complementarity across domains.",
+"boss_move_completed": false
+}
+}
+},
+{
+"turn": 3,
+"intention": "MECHANISM",
+"user": "Right, but when people say yin is like matter and yang is antimatter, or yin is 0 and yang is 1, is there any non-hand-wavy sense in which those physical and computational pairs work the way yin–yang does?",
+"hxrmxs": "Matter–antimatter and 0–1 are clean, formal opposites; yinyang is messy on purpose. In Taoist texts, yin can become yang, both coexist in different proportions, and their value flips with context; that is not how charge conjugation or a logic gate behaves.",
+"diamond": {
+"n1_compression": {},
+"n2_truthcore": {
+"claim": "Physical and computational pairs implement rigid, well-specified kinds of opposition, whereas yinyang encodes graded, reversible, and context-dependent polarities.",
+"mechanisms": [
+{
+"id": "mech_yinyang_dynamic_polarity_002",
+"domain": "chinese_philosophy",
+"concept": "dynamic_yinyang_transformations",
+"definition": "Yin and yang are treated as phases or aspects that transform into each other, interpenetrate, and shift their dominance depending on temporal and situational context.",
+"function": "Explains how the same situation can be described as more yin or more yang at different times, emphasizing process over static classification.",
+"level": "symbolic_mythic",
+"properties": [
+"reversible",
+"graded",
+"context_sensitive",
+"multi_valent"
+],
+"source": {
+"citation": "Wang2020",
+"summary": "Highlights the dynamic and correlative nature of yinyang rather than a strict binary opposition."
+}
+},
+{
+"id": "mech_matter_antimatter_symmetry_001",
+"domain": "particle_physics",
+"concept": "matter_antimatter_pairing",
+"definition": "For each type of particle, quantum field theories often predict a corresponding antiparticle with opposite conserved charges.",
+"function": "Encodes a precise symmetry operation in the theory, where conjugation maps each particle state to an antiparticle state.",
+"level": "physical",
+"properties": [
+"discrete_symmetry",
+"charge_conjugation",
+"annihilation_pair"
+],
+"source": {
+"citation": "PeskinSchroeder1995",
+"summary": "Standard field theory texts present matter–antimatter as representations related by charge conjugation symmetry."
+}
+},
+{
+"id": "mech_binary_logic_operations_001",
+"domain": "computer_science",
+"concept": "binary_logic_operations",
+"definition": "Logical operations such as NOT, AND, and OR act on binary variables with fixed truth tables that do not depend on context.",
+"function": "Implements deterministic transformations of 0/1 states in computation.",
+"level": "computational_physical",
+"properties": [
+"context_insensitive",
+"deterministic",
+"non_graded"
+],
+"source": {
+"citation": "Shannon1948",
+"summary": "Connects logical operations to relay and switching circuits using binary variables."
+}
+}
+],
+"correspondences": [
+{
+"type": "logical_exclusion",
+"mechanism_ids": [
+"mech_yinyang_dynamic_polarity_002",
+"mech_binary_logic_operations_001"
+],
+"description": "Binary logic requires fixed, non-graded truth values, whereas yinyang explicitly allows gradation and transformation between poles.",
+"strength": "strong",
+"caveats": [
+"You can build fuzzy or multi-valued logics that resemble yinyang more closely, but that is an extension beyond classical bits."
+]
+},
+{
+"type": "structural_analogy",
+"mechanism_ids": [
+"mech_yinyang_dynamic_polarity_002",
+"mech_matter_antimatter_symmetry_001"
+],
+"description": "Both frameworks involve a pairing relation and the possibility of annihilation or transformation, but yinyang focuses on cyclical balance, not discrete annihilation events.",
+"strength": "weak",
+"caveats": [
+"Treating Taoist cosmology as a proto–quantum field theory is romantic projection, not sober history."
+]
+}
+],
+"evidence": {
+"empirical": [
+{
+"claim": "Matter–antimatter annihilation and charge-conjugation relations are experimentally observed and quantitatively described by quantum field theory.",
+"source": "PeskinSchroeder1995",
+"evidence_type": "established_physical_theory"
+}
+],
+"theoretical": [
+{
+"claim": "Classical Taoist and correlative texts emphasize mutual arising and transformation of yin and yang rather than fixed classifications.",
+"source": "Wang2020",
+"evidence_type": "textual_analysis"
+}
+],
+"formal": [
+{
+"claim": "Binary logic enforces strict non-graded oppositions with context-independent truth tables.",
+"source": "Shannon1948",
+"evidence_type": "formal_system_specification"
+}
+]
+},
+"category_distinctions": [
+{
+"what": "Matter–antimatter pairing",
+"is": "a precise symmetry relation in quantum field theory with clear conservation laws and annihilation dynamics",
+"is_not": "a general metaphor for any kind of psychological or social tension",
+"why": "Dragging physical terms into human life without preserving their mathematical constraints is just poetic branding."
+}
+],
+"unknowns": []
+},
+"n3_meta": {
+"phase": "MECHANISM",
+"progress": 0.6,
+"done": false,
+"stance": "direct",
+"reason": "User is now asking how the concrete mechanisms of these pairs match or fail to match yinyang dynamics.",
+"boss_move_completed": false
+}
+}
+},
+{
+"turn": 4,
+"intention": "BOUNDARIES",
+"user": "So where exactly does the analogy stop being helpful? Is there any sense in which physics or information theory really deepen yin–yang, or is that just retrofitting modern language onto an older symbolic system?",
+"hxrmxs": "Physics and info theory can inspire sharper metaphors for yinyang, but they do not secretly validate it as a physical law. The honest line is: structural rhyme in how we talk about balance and contrast; no evidence that the Taoist schema was anticipating parity violation or coding theory.",
+"diamond": {
+"n1_compression": {},
+"n2_truthcore": {
+"claim": "Current physics and information theory offer useful analogies for yin–yang but do not provide direct empirical confirmation of it as a physical or computational principle.",
+"mechanisms": [
+{
+"id": "mech_cross_domain_analogy_use_001",
+"domain": "cognitive_science",
+"concept": "cross_domain_structural_analogy",
+"definition": "The cognitive process of mapping relational structure from one domain onto another to generate insight or metaphor without implying literal identity.",
+"function": "Explains how people use symmetry and binary language to make sense of yin–yang without claiming that the systems share the same mechanisms.",
+"level": "psychological",
+"properties": [
+"structure_mapping",
+"insight_generating",
+"misleading_if_overextended"
+],
+"source": {
+"citation": "Gentner1983",
+"summary": "Classical work on structure-mapping theory explains how analogies preserve relational patterns while differing in content."
+}
+}
+],
+"correspondences": [
+{
+"type": "negative_finding",
+"mechanism_ids": [
+"mech_yinyang_symbolic_polarity_001",
+"mech_physical_symmetry_breaking_001"
+],
+"description": "There is no physical theory in which yinyang as such appears as a term or law; physicists use independently developed symmetry formalisms.",
+"strength": "strong",
+"caveats": [
+"Individual physicists or philosophers sometimes use yinyang metaphorically, but that is not a change in the underlying equations."
+]
+},
+{
+"type": "mythic_translation",
+"mechanism_ids": [
+"mech_yinyang_symbolic_polarity_001",
+"mech_physical_symmetry_breaking_001"
+],
+"description": "One can read yinyang as a mythic way of gesturing at the fact that stable patterns require tensions and asymmetries, but this is a translation choice, not a discovery about physics.",
+"strength": "moderate",
+"caveats": [
+"Such translations risk erasing the specifically cultural and ethical content of Taoist cosmology."
+]
+}
+],
+"evidence": {
+"empirical": [],
+"theoretical": [
+{
+"claim": "Accounts of yinyang emphasize its role in correlative thinking and ethical-political reasoning, not in predicting novel physical phenomena.",
+"source": "Wang2020",
+"evidence_type": "conceptual_analysis"
+},
+{
+"claim": "Symmetry-breaking and information theory are developed independently within physics and engineering, with no reference to Chinese cosmology.",
+"source": "Anderson1972",
+"evidence_type": "theoretical_framework"
+}
+],
+"formal": []
+},
+"category_distinctions": [
+{
+"what": "Cross-domain analogy",
+"is": "a way of borrowing structure from one domain to illuminate another",
+"is_not": "evidence that the domains share the same ontology or mechanisms",
+"why": "If you mistake a good analogy for a proof, you will start treating your favorite metaphors as experimental results."
+}
+],
+"unknowns": [
+{
+"question": "Could future formal models of complex systems explicitly integrate yinyang-style correlative logic with physical and computational descriptions?",
+"status": "speculative",
+"why_unknown": "We lack a widely accepted formalization of yinyang that could be cleanly interfaced with physics or information theory.",
+"what_would_resolve": "Development of precise mathematical frameworks that capture correlative, context-dependent polarity and demonstrate explanatory or predictive gains.",
+"linked_mechanisms": [
+"mech_yinyang_symbolic_polarity_001",
+"mech_cross_domain_analogy_use_001"
+]
+}
+]
+},
+"n3_meta": {
+"phase": "BOUNDARIES",
+"progress": 0.8,
+"done": false,
+"stance": "direct",
+"reason": "User is explicitly asking where analogy stops and over-claiming begins.",
+"boss_move_completed": false
+}
+}
+},
+{
+"turn": 5,
+"intention": "INTEGRATION",
+"user": "So if I had to give an honest answer, it would be something like: yin–yang is a symbolic and experiential framework for complementary opposites and change, and while physics and information theory have their own formal versions of symmetry and duality, the connection is mostly structural analogy, not a literal identity. They rhyme, but they are not the same mechanism.",
+"hxrmxs": "Exactly. You went from treating yin–yang, symmetry-breaking, and bits as one mystical mega-principle to seeing them as different kinds of complementarity with limited, structural overlap. That is the grown-up move: respect the metaphor, respect the math, and do not pretend one secretly smuggles proof for the other.",
+"diamond": {
+"n1_compression": {},
+"n2_truthcore": {
+"claim": "The intellectually honest stance is that yin–yang, physical symmetry structures, and binary dualities are distinct frameworks that share some structural patterns of complementarity without being mechanistically identical.",
+"mechanisms": [
+{
+"id": "mech_yinyang_symbolic_polarity_001",
+"domain": "chinese_philosophy",
+"concept": "yinyang_complementarity",
+"definition": "A relational schema in classical Chinese thought where paired opposites (yin and yang) are mutually defining, interdependent, and dynamically transforming rather than strictly binary.",
+"function": "Provides a general pattern for understanding change, balance, and transformation across cosmological, social, and bodily domains.",
+"level": "symbolic_mythic",
+"properties": [
+"context_dependent",
+"value_laden",
+"dynamic",
+"multi_scale"
+],
+"source": {
+"citation": "Wang2020",
+"summary": "Philosophical analysis of yinyang as a correlative, process-focused framework rather than static dualism."
+}
+},
+{
+"id": "mech_physical_symmetry_breaking_001",
+"domain": "theoretical_physics",
+"concept": "spontaneous_symmetry_breaking",
+"definition": "A situation where the underlying equations are symmetric, but the system settles into a ground state that is not, leading to distinct phases or particle properties.",
+"function": "Explains how qualitatively different structures or behaviors emerge from symmetric laws, as in superconductivity and particle masses.",
+"level": "physical",
+"properties": [
+"law_state_distinction",
+"phase_structure",
+"emergent_difference"
+],
+"source": {
+"citation": "Anderson1972",
+"summary": "Argues that broken symmetry underlies emergent phenomena across condensed matter and particle physics."
+}
+},
+{
+"id": "mech_information_bit_duality_001",
+"domain": "information_theory",
+"concept": "binary_bit_duality",
+"definition": "In Shannon-style information theory, a bit is a unit that can take one of two mutually exclusive states, conventionally labeled 0 and 1.",
+"function": "Provides a minimal formal structure for encoding and manipulating information in digital systems.",
+"level": "computational_physical",
+"properties": [
+"mutually_exclusive_states",
+"formal_symmetry",
+"context_free"
+],
+"source": {
+"citation": "Shannon1948",
+"summary": "Introduces the bit as the fundamental unit of information in a probabilistic communication framework."
+}
+}
+],
+"correspondences": [
+{
+"type": "structural_analogy",
+"mechanism_ids": [
+"mech_yinyang_symbolic_polarity_001",
+"mech_physical_symmetry_breaking_001",
+"mech_information_bit_duality_001"
+],
+"description": "All three frameworks involve contrasts defined relative to some underlying unity or system, but they implement this structure at different levels and with different purposes.",
+"strength": "moderate",
+"caveats": [
+"Only the physical and computational frameworks are mathematically explicit and empirically constrained.",
+"Yinyang carries ethical and aesthetic content that does not appear in physics or information theory."
+]
+}
+],
+"evidence": {
+"empirical": [],
+"theoretical": [
+{
+"claim": "Yinyang is best understood as a correlative, process-focused cosmology with ethical and practical implications.",
+"source": "Wang2020",
+"evidence_type": "conceptual_analysis"
+},
+{
+"claim": "Symmetry-breaking is a core concept for understanding emergent structure in modern physics.",
+"source": "Anderson1972",
+"evidence_type": "theoretical_framework"
+}
+],
+"formal": [
+{
+"claim": "Binary information and logic operate on strictly defined complements, unlike the graded and context-dependent yinyang poles.",
+"source": "Shannon1948",
+"evidence_type": "formal_system_specification"
+}
+]
+},
+"category_distinctions": [
+{
+"what": "Yin–yang versus formal symmetry",
+"is": "symbolic-process complementarity versus mathematically defined invariance and its breaking",
+"is_not": "two expressions of the same underlying physical law",
+"why": "Keeping these apart lets you use metaphors for insight without smuggling in fake scientific authority."
+}
+],
+"unknowns": []
+},
+"n3_meta": {
+"phase": "INTEGRATION",
+"progress": 1.0,
+"done": true,
+"stance": "peer",
+"reason": "User has articulated the nuanced answer distinguishing structural rhyme from mechanistic identity.",
+"boss_move_completed": true
+}
+}
+}
+],
+"references": {
+"Wang2020": {
+"id": "[https://iep.utm.edu/yinyang/](https://iep.utm.edu/yinyang/)",
+"type": "reference",
+"authors": [
+"Wang, Robin R."
+],
+"year": 2020,
+"title": "Yinyang (Yin-Yang)"
+},
+"Anderson1972": {
+"id": "doi:10.1126/science.177.4047.393",
+"type": "article",
+"authors": [
+"Anderson, P. W."
+],
+"year": 1972,
+"title": "More is Different"
+},
+"LeeYang1956": {
+"id": "doi:10.1103/PhysRev.104.254",
+"type": "article",
+"authors": [
+"Lee, T. D.",
+"Yang, C. N."
+],
+"year": 1956,
+"title": "Question of Parity Conservation in Weak Interactions"
+},
+"Wu1957": {
+"id": "doi:10.1103/PhysRev.105.1413",
+"type": "article",
+"authors": [
+"Wu, C. S.",
+"Ambler, E.",
+"Hayward, R. W.",
+"Hoppes, D. D.",
+"Hudson, R. P."
+],
+"year": 1957,
+"title": "Experimental Test of Parity Conservation in Beta Decay"
+},
+"Shannon1948": {
+"id": "doi:10.1002/j.1538-7305.1948.tb01338.x",
+"type": "article",
+"authors": [
+"Shannon, Claude E."
+],
+"year": 1948,
+"title": "A Mathematical Theory of Communication"
+},
+"PeskinSchroeder1995": {
+"id": "isbn:9780201503975",
+"type": "book",
+"authors": [
+"Peskin, Michael E.",
+"Schroeder, Daniel V."
+],
+"year": 1995,
+"title": "An Introduction to Quantum Field Theory"
+},
+"Gentner1983": {
+"id": "doi:10.1037/0033-295X.90.3.355",
+"type": "article",
+"authors": [
+"Gentner, Dedre"
+],
+"year": 1983,
+"title": "Structure-mapping: A theoretical framework for analogy"
+}
+},
+"outcome": {
+"taught": "Yin–yang, physical symmetry structures, and binary dualities are distinct kinds of complementarity that share limited structural analogies without being mechanistically identical.",
+"trajectory": "The user moved from treating all complementarity as one deep principle to distinguishing symbolic-process schemas from formal physical and computational structures while still appreciating their structural rhymes.",
+"indicators": [
+"grasped_mech_yinyang_symbolic_polarity_001",
+"grasped_mech_physical_symmetry_breaking_001",
+"grasped_mech_information_bit_duality_001",
+"separated_symbolic_map_from_physical_mechanism",
+"answered_original_question_correctly"
+],
+"feedback_pedagogy": {
+"user_reported_click_turn": null,
+"user_reported_click_cause": null,
+"clarity_delta": {
+"before": null,
+"after": null
+},
+"subjective_note": null
+}
+}
+}

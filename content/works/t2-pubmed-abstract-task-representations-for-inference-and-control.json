@@ -1,0 +1,46 @@
+{
+  "work_id": "work:t2-pubmed-abstract-task-representations-for-inference-and-control",
+  "schema_version": 2,
+  "title": "Abstract task representations for inference and control.",
+  "authors": [
+    {
+      "name": "Vaidya AR"
+    },
+    {
+      "name": "Badre D"
+    }
+  ],
+  "publication": {
+    "year": 2022,
+    "journal": "Trends Cogn Sci",
+    "source": "PubMed/MEDLINE",
+    "language": "en"
+  },
+  "identifiers": {
+    "pmid": "35469725",
+    "doi": "10.1016/j.tics.2022.03.009"
+  },
+  "topics": [
+    "phase-14-knowledge-gnosis",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "assets": {
+    "pdf_path": null,
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/35469725/",
+    "abstract": "Behavioral flexibility depends on our capacity to build and leverage abstract knowledge about tasks. Recently, two separate lines of research have implicated distinct brain networks in representing abstract task information: a frontoparietal cortical network, and a network involving the medial temporal lobe (MTL), medial prefrontal, and orbitofrontal cortex (OMPFC). These observations have mostly been made in parallel, with little attempt to understand their relationship. Here, we hypothesize th"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_alt17_acquisition",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 14,
+    "phase_name": "Knowledge/Gnosis",
+    "bridge_rationale": "Bridge paper score=9.5: links Knowledge/Gnosis concept to mechanistic neuroscience"
+  },
+  "evaluation": "Score 9: Good bridge signal",
+  "tier": 2
+}

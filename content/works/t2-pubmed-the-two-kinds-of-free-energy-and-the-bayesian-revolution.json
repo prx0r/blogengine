@@ -1,0 +1,42 @@
+{
+  "work_id": "work:t2-pubmed-the-two-kinds-of-free-energy-and-the-bayesian-revolution",
+  "schema_version": 2,
+  "title": "The two kinds of free energy and the Bayesian revolution.",
+  "publication": {
+    "year": 2020,
+    "type": "article",
+    "source": "PubMed/MEDLINE",
+    "language": "en",
+    "journal": "PLoS Comput Biol"
+  },
+  "identifiers": {
+    "pmid": "33270644",
+    "doi": "10.1371/journal.pcbi.1008420"
+  },
+  "topics": [
+    "phase-6-dependent-arising",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "tradition": [
+    "contemporary_science"
+  ],
+  "tier": 2,
+  "assets": {
+    "pdf_path": "t2-pubmed-pmc7714236_The_two_kinds_of_free_energy_and_the_Bayesian_revo.pdf",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/33270644/",
+    "abstract": "The concept of free energy has its origins in 19th century thermodynamics, but has recently found its way into the behavioral and neural sciences, where it has been promoted for its wide applicability and has even been suggested as a fundamental principle of understanding intelligent behavior and brain function. We argue that there are essentially two different notions of free energy in current models of intelligent agency, that can both be considered as applications of Bayesian inference to the"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_t2_search",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 6,
+    "phase_name": "Dependent Arising",
+    "bridge_rationale": "Dependent arising \u2014 predictive processing, free energy principle, active inference as causal cognition."
+  },
+  "evaluation": "Marginal (score=1.8)"
+}

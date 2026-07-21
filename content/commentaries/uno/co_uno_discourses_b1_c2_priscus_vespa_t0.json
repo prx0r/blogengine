@@ -1,0 +1,59 @@
+{
+  "co_id": "co:uno_discourses_b1_c2_priscus_vespa_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "discourses_b1_c2_priscus_vespasian",
+  "turn_index": 0,
+  "lineage": "Realist",
+  "student_state": "principled_resolution",
+  "behavior_tags": [
+    "role_identification",
+    "defiant_compliance"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_06",
+    "function_name": "UM_06",
+    "mechanism_shape": "THRESHOLDING",
+    "teaching_actions": [
+      "attempts_compromise",
+      "tests_boundary"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.15,
+      "attunement": 0.2,
+      "style": 0.35,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_01",
+      "attunement_discrete": "AT_01",
+      "style_discrete": "LS_02",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "conditional_obedience",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "They said 'I must go in'—role obligation. I'm testing: can the role exist without its function? 'Go in, but say nothing' strips speaking from senator. This will force them to choose. Prediction: they'll try to compromise ('don't ask my opinion, and I will be silent') but that won't work because the role requires speaking.",
+  "accumulated_insight": "T1: Student said 'I must go in' (role obligation). They're principled but I'm testing: can the role exist without its function? 'Go in, but say nothing' strips speaking from senator. This will force them to choose: role without function, or function without permission?",
+  "abstract_pattern": "",
+  "visible_response": "Well, go in then, but say nothing.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:kybalion",
+    "ro:grimoires-decoded",
+    "ro:hermes-proof-system"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

@@ -1,0 +1,59 @@
+{
+  "work_id": "work:t2-pubmed-mindfulness-meditation-styles-differently-modulate-source-level-meg-mi",
+  "schema_version": 2,
+  "title": "Mindfulness meditation styles differently modulate source-level MEG microstate dynamics and complexity.",
+  "authors": [
+    {
+      "name": "D'Andrea, Antea"
+    },
+    {
+      "name": "Croce, Pierpaolo"
+    },
+    {
+      "name": "O'Byrne, Jordan"
+    },
+    {
+      "name": "Jerbi, Karim"
+    },
+    {
+      "name": "Pascarella, Annalisa"
+    },
+    {
+      "name": "Raffone, Antonino"
+    },
+    {
+      "name": "Pizzella, Vittorio"
+    },
+    {
+      "name": "Marzetti, Laura"
+    }
+  ],
+  "identifiers": {
+    "pmid": "38370436",
+    "doi": "10.3389/fnins.2024.1295615"
+  },
+  "publication": {
+    "journal": "Frontiers in neuroscience",
+    "year": "2024"
+  },
+  "abstract": "The investigation of mindfulness meditation practice, classically divided into focused attention meditation (FAM), and open monitoring meditation (OMM) styles, has seen a long tradition of theoretical, affective, neurophysiological and clinical studies. In particular, the high temporal resolution of magnetoencephalography (MEG) or electroencephalography (EEG) has been exploited to fill the gap between the personal experience of meditation practice and its neural correlates. Mounting evidence, in fact, shows that human brain activity is highly dynamic, transiting between different brain states (microstates). In this study, we aimed at exploring MEG microstates at source-level during FAM, OMM and in the resting state, as well as the complexity and criticality of dynamic transitions between microstates. Ten right-handed Theravada Buddhist monks with a meditative expertise of minimum 2,265 h participated in the experiment. MEG data were acquired during a randomized block design task (6\u2009min FAM, 6\u2009min OMM, with each meditative block preceded and followed by 3\u2009min resting state). Source reconstruction was performed using eLORETA on individual cortical space, and then parcellated according to the Human Connect Project atlas. Microstate analysis was then applied to parcel level signals in order to derive microstate topographies and indices. In addition, from microstate sequences, the Hurst exponent and the Lempel-Ziv complexity (LZC) were computed. Our results show that the coverage and occurrence of specific microstates are modulated either by being in a meditative state or by performing a specific meditation style. Hurst exponent values in both meditation conditions are reduced with respect to the value observed during rest, LZC shows significant differences between OMM, FAM, and REST, with a progressive increase from REST to FAM to OMM. Importantly, we report changes in brain criticality indices during meditation and between meditation styles, in line with a state-like effect of meditation on cognitive performance. In line with previous reports, we suggest that the change in cognitive state experienced in meditation is paralleled by a shift with respect to critical points in brain dynamics.",
+  "phase_mapping": {
+    "phase": 9,
+    "phase_name": "Language/Mantra"
+  },
+  "bridge_tags": [
+    "inner-speech",
+    "mantra",
+    "language",
+    "verbal-meditation",
+    "brain-criticality",
+    "complexity",
+    "focused-attention-meditation"
+  ],
+  "evaluation": "Quality pass v3 (score=41) \u2014 High-signal bridge paper for Language/Mantra.",
+  "assets": {
+    "pdf_path": null,
+    "nxml_path": null
+  },
+  "tier": 2
+}

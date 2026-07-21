@@ -1,0 +1,58 @@
+{
+  "co_id": "co:uno_gurdjeff3_t1194_t1200_hungry_m_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gurdjeff3_t1194_t1200_hungry_moon",
+  "turn_index": 0,
+  "lineage": "Gurdjieffian",
+  "student_state": "seeking_esoteric_explanation",
+  "behavior_tags": [
+    "asks_theological_question",
+    "seeks_mechanism"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_01",
+    "function_name": "RM_01",
+    "mechanism_shape": "STRUCTURAL_ANALOGY",
+    "teaching_actions": [
+      "gives_shocking_answer",
+      "uses_anthropomorphic_metaphor"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.85,
+      "intimacy": 0.15,
+      "attunement": 0.5,
+      "style": 0.5,
+      "depth": 0.62,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_04",
+      "intimacy_discrete": "IN_01",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_03",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The shocking metaphor works: moon is hungry (anthropomorphic metaphor). The student asks esoteric question (seeking esoteric explanation), which shows they understand: soul = goes to moon (mechanism). They'll likely test boundary conditions next. Hypothesis: shocking metaphors trigger boundary tests—testable by tracking whether shocking metaphors lead to boundary inquiries.",
+  "accumulated_insight": "T1: Student asks esoteric question ('Why does the soul at death go to the moon?')—seeking esoteric explanation via asks theological question and seeks mechanism. They understand: soul = goes to moon (mechanism). The structural_analogy mechanism gives: shocking answer (moon is hungry), uses: anthropomorphic metaphor (moon = hungry). Pattern: esoteric question → shocking metaphor → [next: boundary test]. Low confidence because shocking metaphors can lead to deeper questions or boundary tests.",
+  "abstract_pattern": "",
+  "visible_response": "The moon is hungry.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:sufi-comparative-analysis",
+    "ro:steiner-tantraloka-parallels"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

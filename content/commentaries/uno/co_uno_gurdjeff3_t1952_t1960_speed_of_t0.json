@@ -1,0 +1,62 @@
+{
+  "co_id": "co:uno_gurdjeff3_t1952_t1960_speed_of_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gurdjeff3_t1952_t1960_speed_of_emotions",
+  "turn_index": 0,
+  "lineage": "Gurdjieffian",
+  "student_state": "seeking_objective_measurement",
+  "behavior_tags": [
+    "asks_for_criterion",
+    "seeks_quantification"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_03",
+    "function_name": "RM_03",
+    "mechanism_shape": "COMPARISON_CONTRAST",
+    "teaching_actions": [
+      "redefines_measurement_criterion",
+      "defines_speed_as_density",
+      "provides_phenomenological_measure"
+    ],
+    "traps_avoided": [
+      "answer_hunting",
+      "none"
+    ],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.65,
+      "depth": 0.38,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_04",
+      "depth_discrete": "PD_02",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The redefinition works: measurement criterion (speed = density, not linear time), defines: speed as density (phenomenological measure), provides: phenomenological measure. The student asks measurement question (seeking objective measurement), which shows they understand: speed = needs measurement (quantification). They'll likely test temporal definition next. Hypothesis: measurement redefinitions trigger temporal tests—testable by tracking whether measurement redefinitions lead to temporal inquiries.",
+  "accumulated_insight": "T1: Student asks measurement question ('I do not understand about the speed of emotions. How can it be measured?')—seeking objective measurement via asks for criterion and seeks quantification. They understand: speed = needs measurement (quantification). The comparison_contrast mechanism redefines: measurement criterion (speed = density, not linear time), defines: speed as density (phenomenological measure), provides: phenomenological measure. Pattern: measurement question → redefinition → [next: temporal test]. Low confidence because redefinitions can lead to deeper questions or temporal tests.",
+  "abstract_pattern": "",
+  "visible_response": "By realizing how many different feelings can pass in you during one thought or\nduring one swing of the pendulum.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:sufi-comparative-analysis",
+    "ro:steiner-tantraloka-parallels"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

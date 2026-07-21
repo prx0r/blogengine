@@ -1,0 +1,63 @@
+{
+  "co_id": "co:uno_gurdjeff1_t071_t082_sleep_aim__t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gurdjeff1_t071_t082_sleep_aim_effort",
+  "turn_index": 0,
+  "lineage": "Gurdjieffian",
+  "student_state": "focusing_on_high_moments",
+  "behavior_tags": [
+    "asks_for_optimization",
+    "romanticizes_peak_states"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_04",
+    "function_name": "RM_04",
+    "mechanism_shape": "COMPARISON_CONTRAST",
+    "teaching_actions": [
+      "reorients_focus",
+      "defines_difficulty",
+      "demands_emotional_realization",
+      "warns_against_theory"
+    ],
+    "traps_avoided": [
+      "overreach",
+      "conceptual_reification"
+    ],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.62,
+      "attunement": 0.5,
+      "style": 0.5,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "request_clarification",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The reorientation works: regular efforts (not occasional), emotional realization of sleep (not peak states). The student is focusing on high moments (romanticizes peak states), which shows they're seeking peak optimization. They'll likely ask about preconditions next. Hypothesis: peak state optimization questions trigger precondition inquiries—testable by tracking whether optimization questions lead to precondition questions.",
+  "accumulated_insight": "T1: Student asks for optimization ('How can I make better use of moments when I feel the miraculousness of the system?')—focusing on high moments via asks for optimization and romanticizes peak states. They're seeking peak state optimization. The comparison_contrast mechanism reorients: regular efforts (not occasional), emotional realization of sleep (not peak states). Pattern: peak optimization → reorientation → [next: precondition question]. Medium confidence because reorientations typically trigger clarification requests.",
+  "abstract_pattern": "",
+  "visible_response": "Make more regular efforts, not occasional efforts. You know why I always speak\nabout this?\nBecause it is self-deception to think that one can awake without special and\nlong work.\nWe must realize how difficult it is. Thinking, not thinking, talking, not\ntalking, feeling, not feeling, everything keeps us asleep.\nNow we speak theoretically\nabout it, but work cannot be theoretical.\nThe fact that one is asleep must become a\npermanent realization, one must feel it emotionally.\nBut by itself this realization will\nnot make one awake: special efforts are necessary to wake oneself up for a moment.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:sufi-comparative-analysis",
+    "ro:steiner-tantraloka-parallels"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

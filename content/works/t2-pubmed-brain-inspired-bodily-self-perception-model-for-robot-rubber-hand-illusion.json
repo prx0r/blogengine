@@ -1,0 +1,53 @@
+{
+  "work_id": "work:t2-pubmed-brain-inspired-bodily-self-perception-model-for-robot-rubber-hand-illusion",
+  "schema_version": 2,
+  "title": "Brain-inspired bodily self-perception model for robot rubber hand illusion.",
+  "authors": [
+    {
+      "name": "Zhao Y"
+    },
+    {
+      "name": "Lu E"
+    },
+    {
+      "name": "Zeng Y"
+    }
+  ],
+  "publication": {
+    "year": 2023,
+    "type": "article",
+    "source": "PubMed/MEDLINE",
+    "language": "en",
+    "journal": "Patterns (N Y)"
+  },
+  "identifiers": {
+    "pmid": "38106608",
+    "doi": "10.1016/j.patter.2023.100888"
+  },
+  "topics": [
+    "phase-2-2",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "tradition": [
+    "contemporary_science"
+  ],
+  "tier": 2,
+  "assets": {
+    "pdf_path": "t2-PMC10724368_Brain_inspired_bodily_self_perception_mo.pdf",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/38106608/",
+    "abstract": "The core of bodily self-consciousness involves perceiving ownership of one's body. A central question is how body illusions like the rubber hand illusion (RHI) occur. Existing theoretical models still lack satisfying computational explanations from connectionist perspectives, especially for how the brain encodes body perception and generates illusions from neuronal interactions. Moreover, the integration of disability experiments is also neglected. Here, we integrate biological findings of bodil"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_t2_search",
+    "retrieved_at": "2026-07-11"
+  },
+  "phase_mapping": {
+    "phase": 2,
+    "phase_name": "Physical De-solidification",
+    "bridge_rationale": "Body illusion \u2014 multisensory integration, rubber hand illusion, ownership as constructed percept."
+  },
+  "evaluation": "Marginal (score=2.3)"
+}

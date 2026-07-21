@@ -1,0 +1,46 @@
+{
+  "work_id": "work:t2-pubmed-interoceptive-predictions-in-the-brain",
+  "schema_version": 2,
+  "title": "Interoceptive predictions in the brain.",
+  "authors": [
+    {
+      "name": "Barrett LF"
+    },
+    {
+      "name": "Simmons WK"
+    }
+  ],
+  "publication": {
+    "year": 2015,
+    "journal": "Nat Rev Neurosci",
+    "source": "PubMed/MEDLINE",
+    "language": "en"
+  },
+  "identifiers": {
+    "pmid": "26016744",
+    "doi": "10.1038/nrn3950"
+  },
+  "topics": [
+    "phase-6-dependent-arising",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "assets": {
+    "pdf_path": "t2-4731102-interoceptive-predictions-in-the-brain.pdf",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/26016744/",
+    "abstract": "Intuition suggests that perception follows sensation and therefore bodily feelings originate in the body. However, recent evidence goes against this logic: interoceptive experience may largely reflect limbic predictions about the expected state of the body that are constrained by ascending visceral sensations. In this Opinion article, we introduce the Embodied Predictive Interoception Coding model, which integrates an anatomical model of corticocortical connections with Bayesian active inference"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_alt17_acquisition",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 6,
+    "phase_name": "Dependent-arising",
+    "bridge_rationale": "Bridge paper score=7.5: links Dependent-arising concept to mechanistic neuroscience"
+  },
+  "evaluation": "Score 7: Good bridge signal",
+  "tier": 2
+}

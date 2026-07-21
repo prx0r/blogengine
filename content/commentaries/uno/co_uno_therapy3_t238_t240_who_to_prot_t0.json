@@ -1,0 +1,55 @@
+{
+  "co_id": "co:uno_therapy3_t238_t240_who_to_prot_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3_t238_t240_who_to_protect_choice",
+  "turn_index": 0,
+  "lineage": "Therapeutic",
+  "student_state": "sober_recognition",
+  "behavior_tags": [
+    "insight",
+    "realization"
+  ],
+  "pedagogy": {
+    "phase": "SELF-MAKING",
+    "function_id": "SM_04",
+    "function_name": "SM_04",
+    "mechanism_shape": "CONSTRAINT_COLLAPSE",
+    "teaching_actions": [
+      "forces_choice",
+      "mobilizes_will"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.62,
+      "attunement": 0.8,
+      "style": 0.15,
+      "depth": 0.62,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_03",
+      "style_discrete": "LS_01",
+      "depth_discrete": "PD_03",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "'Who should I protect?'—asking me to decide for them. Classic ethical outsourcing. But if I answer ('protect yourself!'), they follow my rule not their values. The 'Only you can know' returns agency. THEY must choose: loyalty to abusive parent vs self-protection. No right answer from outside. This forces internal reckoning: what do I value more? Single turn plants question without resolution. Seed for their own deliberation.",
+  "accumulated_insight": "T1 (Single-turn): Student asks 'Who should I protect?'—seeking external authority for choice between protecting self vs protecting abusive parent. Teacher refuses authority: 'Only you can know that.' Returns choice to student. This is SM_04: mobilizes will by forcing student to own decision. Can't outsource moral choice. Predicting no_clear_effect (single-turn, no response shown).",
+  "abstract_pattern": "",
+  "visible_response": "Who shall we protect here: him or you?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

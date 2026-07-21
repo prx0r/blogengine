@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diffusion Models are Evolutionary Algorithms</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.77/Tone.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --background-color: #000000;
+            --particle-color: #00FFFF;
+            --text-color: #E0E0E0;
+            --highlight-color: #00FFFF;
+            --ui-background: rgba(5, 5, 10, 0.85);
+            --gradient-start: rgba(0, 255, 255, 0.1);
+            --gradient-end: rgba(0, 100, 150, 0.05);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: radial-gradient(ellipse at center, var(--gradient-start), var(--gradient-end), var(--background-color));
+            color: var(--text-color);
+            font-family: 'JetBrains Mono', monospace;
+            cursor: pointer;
+        }
+        canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            filter: brightness(1.2) contrast(1.1);
+        }
+        .narrative-container {
+            position: absolute;
+            bottom: 8%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 1000px;
+            text-align: center;
+            z-index: 10;
+            pointer-events: none;
+        }
+        .phase-title {
+            font-size: clamp(24px, 3vw, 36px);
+            font-weight: 500;
+            color: var(--highlight-color);
+            text-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+            margin-bottom: 15px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        .phase-subtitle {
+            font-size: clamp(16px, 2vw, 20px);
+            font-weight: 300;
+            line-height: 1.6;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 1.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            transition-delay: 0.3s;
+        }
+        .insight-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 800px;
+            text-align: center;
+            z-index: 15;
+            opacity: 0;
+            pointer-events: none;
+            background: var(--ui-background);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 40px;
+            border: 2px solid rgba(0, 255, 255, 0.3);
+            box-shadow: 0 20px 60px rgba(0, 255, 255, 0.1);
+        }
+        .insight-title {
+            font-size: clamp(28px, 4vw, 42px);
+            font-weight: 500;
+            color: var(--highlight-color);
+            margin-bottom: 25px;
+            text-shadow: 0 0 30px rgba(0, 255, 255, 0.8);
+        }
+        .insight-text {
+            font-size: clamp(18px, 2.5vw, 24px);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        .insight-emphasis {
+            color: var(--highlight-color);
+            font-weight: 500;
+        }
+        #start-prompt {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: clamp(20px, 3vw, 28px);
+            font-weight: 400;
+            opacity: 1;
+            transition: opacity 1s ease;
+            z-index: 20;
+            background: var(--ui-background);
+            backdrop-filter: blur(15px);
+            padding: 30px 40px;
+            border-radius: 15px;
+            border: 1px solid rgba(0, 255, 255, 0.2);
+        }
+        #start-prompt .sub {
+            font-size: clamp(14px, 1.8vw, 18px);
+            opacity: 0.7;
+            margin-top: 15px;
+        }
+        .typewriter {
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 2px solid var(--highlight-color);
+            animation: typewriter 2s steps(40) 1s forwards, blink 1s infinite;
+        }
+        @keyframes typewriter {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        @keyframes blink {
+            0%, 50% { border-color: var(--highlight-color); }
+            51%, 100% { border-color: transparent; }
+        }
+        .phase-indicator {
+            position: absolute;
+            top: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+        }
+        .phase-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transition: all 0.8s ease;
+        }
+        .phase-dot.active {
+            background: var(--highlight-color);
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+            transform: scale(1.4);
+        }
+    </style>
+</head>
+<body>
+    <canvas id="main-canvas"></canvas>
+
+    <div id="start-prompt">
+        <div>Diffusion Models are Evolutionary Algorithms</div>
+        <div class="sub">Click to Discover the Connection</div>
+    </div>
+
+    <div class="phase-indicator">
+        <div class="phase-dot"></div>
+        <div class="phase-dot"></div>
+        <div class="phase-dot"></div>
+        <div class="phase-dot"></div>
+        <div class="phase-dot"></div>
+    </div>
+
+    <div class="narrative-container">
+        <div class="phase-title" id="phase-title"></div>
+        <div class="phase-subtitle" id="phase-subtitle"></div>
+    </div>
+
+    <div class="insight-container" id="insight-modal">
+        <div class="insight-title">The Profound Connection</div>
+        <div class="insight-text">
+            Both <span class="insight-emphasis">diffusion models</span> and <span class="insight-emphasis">evolution</span> are fundamentally the same process: 
+            they search through vast, chaotic possibility spaces to find rare, optimal solutions.
+        </div>
+        <div class="insight-text">
+            <span class="insight-emphasis">Denoising = Natural Selection.</span> 
+            Each step removes randomness while preserving what works, 
+            transforming noise into meaning, chaos into life.
+        </div>
+        <div class="insight-text">
+            This reveals that <span class="insight-emphasis">artificial intelligence and biological intelligence</span> 
+            operate on the same fundamental principle: guided exploration of possibility.
+        </div>
+    </div>
+
+    <script>
+        // --- CORE SETUP ---
+        const canvas = document.getElementById('main-canvas');
+        const ctx = canvas.getContext('2d');
+        const phaseTitleEl = document.getElementById('phase-title');
+        const phaseSubtitleEl = document.getElementById('phase-subtitle');
+        const startPromptEl = document.getElementById('start-prompt');
+        const insightModalEl = document.getElementById('insight-modal');
+        const phaseDots = document.querySelectorAll('.phase-dot');
+
+        let isStarted = false;
+        let startTime = 0;
+        let audioReady = false;
+        let audioComponents = {};
+        let currentPhaseIndex = -1;
+
+        // --- ENHANCED NARRATIVE & TIMING ---
+        const TOTAL_DURATION = 50; // Extended for insight reveal
+        const NARRATIVE_PHASES = [
+            {
+                name: "Primordial Chaos",
+                duration: 8,
+                title: "NOISE",
+                subtitle: "Pure randomness. Infinite possibilities scattered in chaos."
+            },
+            {
+                name: "Hidden Structure",
+                duration: 8,
+                title: "BIAS EMERGES", 
+                subtitle: "An invisible fitness landscape guides the seemingly random."
+            },
+            {
+                name: "Guided Search",
+                duration: 12,
+                title: "DENOISING PATH",
+                subtitle: "Each iteration selects for fitness, removes what doesn't work."
+            },
+            {
+                name: "Phase Transition",
+                duration: 10,
+                title: "EVOLUTION REVEALS",
+                subtitle: "This is natural selection. This is how life finds its way."
+            },
+            {
+                name: "Convergence",
+                duration: 7,
+                title: "OPTIMAL FORMS",
+                subtitle: "Multiple perfect solutions emerge from the chaos."
+            },
+            {
+                name: "Revelation",
+                duration: 5,
+                title: "THE CONNECTION",
+                subtitle: "Two processes. One fundamental law of intelligence."
+            }
+        ];
+
+        // --- PARTICLE & FIELD SYSTEM ---
+        const PARTICLE_COUNT = 4000;
+        let particles = [];
+        let flowField = [];
+        const FLOW_RESOLUTION = 18;
+        let targetPoints = [];
+        let connectionLines = [];
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            initSimulation();
+        }
+
+        function initSimulation() {
+            particles = [];
+            for (let i = 0; i < PARTICLE_COUNT; i++) {
+                particles.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    vx: 0,
+                    vy: 0,
+                    history: [],
+                    energy: Math.random(),
+                    fitness: 0
+                });
+            }
+
+            // Define target clusters with organic positioning
+            const centerX = canvas.width / 2;
+            const centerY = canvas.height / 2;
+            const radius = Math.min(canvas.width, canvas.height) * 0.3;
+            targetPoints = [
+                { x: centerX + Math.cos(0) * radius, y: centerY + Math.sin(0) * radius },
+                { x: centerX + Math.cos(2.09) * radius, y: centerY + Math.sin(2.09) * radius },
+                { x: centerX + Math.cos(4.19) * radius, y: centerY + Math.sin(4.19) * radius },
+                { x: centerX, y: centerY }
+            ];
+        }
+
+        function updateFlowField(time, phaseIndex, phaseProgress) {
+            const cols = Math.floor(canvas.width / FLOW_RESOLUTION);
+            const rows = Math.floor(canvas.height / FLOW_RESOLUTION);
+            const noiseScale = 0.015 + phaseIndex * 0.005;
+            const timeScale = 0.08 + phaseProgress * 0.02;
+
+            for (let y = 0; y < rows; y++) {
+                flowField[y] = [];
+                for (let x = 0; x < cols; x++) {
+                    let angle = noise(x * noiseScale, y * noiseScale, time * timeScale) * Math.PI * 4;
+                    
+                    // Add vortex behavior in later phases
+                    if (phaseIndex >= 2) {
+                        const centerX = cols / 2;
+                        const centerY = rows / 2;
+                        const dx = x - centerX;
+                        const dy = y - centerY;
+                        const vortexAngle = Math.atan2(dy, dx) + Math.PI / 2;
+                        const vortexStrength = phaseProgress * 0.5;
+                        angle = angle * (1 - vortexStrength) + vortexAngle * vortexStrength;
+                    }
+                    
+                    flowField[y][x] = { x: Math.cos(angle), y: Math.sin(angle) };
+                }
+            }
+        }
+
+        // Enhanced 3D Perlin noise
+        let perlin;
+        function noise(x, y, z) {
+            if (!perlin) {
+                const p = new Uint8Array(512);
+                for(let i=0; i<256; i++) p[i] = p[i+256] = Math.floor(Math.random()*256);
+                const fade = t => t*t*t*(t*(t*6-15)+10);
+                const lerp = (a, b, t) => a + t*(b-a);
+                const grad = (hash, x, y, z) => {
+                    const h = hash & 15;
+                    const u = h < 8 ? x : y;
+                    const v = h < 4 ? y : h === 12 || h === 14 ? x : z;
+                    return ((h&1) === 0 ? u : -u) + ((h&2) === 0 ? v : -v);
+                };
+                perlin = (x, y, z) => {
+                    const X=Math.floor(x)&255, Y=Math.floor(y)&255, Z=Math.floor(z)&255;
+                    x-=Math.floor(x); y-=Math.floor(y); z-=Math.floor(z);
+                    const u=fade(x), v=fade(y), w=fade(z);
+                    const A=p[X]+Y, B=p[X+1]+Y;
+                    const AA=p[A]+Z, AB=p[A+1]+Z;
+                    const BA=p[B]+Z, BB=p[B+1]+Z;
+                    return lerp(w,
+                        lerp(v, lerp(u, grad(p[AA], x, y, z), grad(p[BA], x-1, y, z)), lerp(u, grad(p[AB], x, y-1, z), grad(p[BB], x-1, y-1, z))),
+                        lerp(v, lerp(u, grad(p[AA+1], x, y, z-1), grad(p[BA+1], x-1, y, z-1)), lerp(u, grad(p[AB+1], x, y-1, z-1), grad(p[BB+1], x-1, y-1, z-1)))
+                    );
+                };
+            }
+            return perlin(x, y, z);
+        }
+
+        // --- ENHANCED AUDIO ENGINE ---
+        function initAudio() {
+            if (audioReady) return;
+            Tone.start();
+
+            // Layered noise representing chaos
+            const noise1 = new Tone.Noise("white").start();
+            const noise2 = new Tone.Noise("pink").start();
+            const chaosFilter = new Tone.AutoFilter({
+                frequency: "2n",
+                baseFrequency: 50,
+                octaves: 6
+            });
+            const chaosGain = new Tone.Gain(0.3).connect(chaosFilter).toDestination();
+            noise1.connect(chaosGain);
+            noise2.connect(chaosGain);
+            chaosGain.gain.value = 0;
+
+            // Evolutionary drone with harmonic evolution
+            const bassDrone = new Tone.Oscillator(40, "sine").start();
+            const evolutionSynth = new Tone.AMOscillator(80, "sine", "sine").start();
+            const evolutionFilter = new Tone.Filter(200, "lowpass");
+            const evolutionGain = new Tone.Gain(0).connect(evolutionFilter).toDestination();
+            bassDrone.connect(evolutionGain);
+            evolutionSynth.connect(evolutionGain);
+
+            // Crystallization bells
+            const bellSynth = new Tone.MetalSynth({
+                frequency: 200,
+                envelope: { attack: 0.001, decay: 1.4, sustain: 0.1, release: 3 },
+                harmonicity: 5.1,
+                modulationIndex: 32,
+                resonance: 4000,
+                octaves: 1.5
+            });
+            const bellDelay = new Tone.PingPongDelay("8n", 0.3);
+            const bellReverb = new Tone.Reverb(4);
+            bellSynth.connect(bellDelay).connect(bellReverb).toDestination();
+            bellSynth.volume.value = -15;
+
+            // Revelation chord progression
+            const padSynth = new Tone.PolySynth(Tone.FMSynth, {
+                harmonicity: 3,
+                modulationIndex: 10,
+                envelope: { attack: 3, decay: 2, sustain: 0.8, release: 5 }
+            });
+            const padReverb = new Tone.Reverb(8).toDestination();
+            padSynth.connect(padReverb);
+            padSynth.volume.value = -20;
+
+            audioComponents = { 
+                chaosGain, evolutionGain, evolutionFilter, evolutionSynth, 
+                bellSynth, padSynth, bassDrone
+            };
+            audioReady = true;
+        }
+
+        // --- UI ANIMATION FUNCTIONS ---
+        function updatePhaseUI(phaseIndex, phase) {
+            if (currentPhaseIndex === phaseIndex) return;
+            currentPhaseIndex = phaseIndex;
+
+            // Update phase indicators
+            phaseDots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === phaseIndex);
+            });
+
+            // Animate text changes
+            phaseTitleEl.style.opacity = '0';
+            phaseSubtitleEl.style.opacity = '0';
+            phaseTitleEl.style.transform = 'translateY(30px)';
+            phaseSubtitleEl.style.transform = 'translateY(20px)';
+
+            setTimeout(() => {
+                phaseTitleEl.textContent = phase.title;
+                phaseSubtitleEl.textContent = phase.subtitle;
+                phaseTitleEl.style.opacity = '1';
+                phaseSubtitleEl.style.opacity = '1';
+                phaseTitleEl.style.transform = 'translateY(0)';
+                phaseSubtitleEl.style.transform = 'translateY(0)';
+            }, 600);
+        }
+
+        function showInsightModal() {
+            insightModalEl.style.opacity = '1';
+            insightModalEl.style.pointerEvents = 'all';
+            setTimeout(() => {
+                insightModalEl.style.opacity = '0';
+                insightModalEl.style.pointerEvents = 'none';
+            }, 8000);
+        }
+
+        // --- ENHANCED ANIMATION LOOP ---
+        function draw(time) {
+            if (!isStarted) return;
+            const elapsed = (time - startTime) / 1000;
+            const loopTime = elapsed % TOTAL_DURATION;
+
+            // --- Calculate phase ---
+            let accumulatedTime = 0;
+            let phaseProgress = 0;
+            let phaseIndex = 0;
+
+            for (let i = 0; i < NARRATIVE_PHASES.length; i++) {
+                const phaseDuration = NARRATIVE_PHASES[i].duration;
+                if (loopTime < accumulatedTime + phaseDuration) {
+                    phaseIndex = i;
+                    phaseProgress = (loopTime - accumulatedTime) / phaseDuration;
+                    break;
+                }
+                accumulatedTime += phaseDuration;
+            }
+            
+            const phase = NARRATIVE_PHASES[phaseIndex];
+            updatePhaseUI(phaseIndex, phase);
+
+            // Show insight modal at the end
+            if (phaseIndex === 5 && phaseProgress > 0.2 && phaseProgress < 0.9) {
+                if (insightModalEl.style.opacity === '0' || !insightModalEl.style.opacity) {
+                    showInsightModal();
+                }
+            }
+
+            // --- Enhanced Audio Responsiveness ---
+            if (audioReady) {
+                const chaos = Math.max(0, 1 - phaseIndex * 0.2);
+                const evolution = Math.min(1, Math.max(0, (phaseIndex - 1) * 0.3));
+                const crystallization = Math.min(1, Math.max(0, (phaseIndex - 2) * 0.4));
+
+                audioComponents.chaosGain.gain.linearRampTo(chaos * 0.15, 0.8);
+                audioComponents.evolutionGain.gain.linearRampTo(evolution * 0.25, 1.0);
+                audioComponents.evolutionFilter.frequency.linearRampTo(100 + evolution * 800, 1.2);
+                
+                // Dynamic frequency modulation based on particle entropy
+                const avgEnergy = particles.reduce((sum, p) => sum + p.energy, 0) / particles.length;
+                audioComponents.evolutionSynth.frequency.linearRampTo(60 + avgEnergy * 40, 0.5);
+
+                // Crystallization bells triggered by convergence
+                if (phaseIndex >= 3 && Math.random() < crystallization * 0.03) {
+                    const frequencies = [261.63, 329.63, 392.00, 523.25]; // C major
+                    const freq = frequencies[Math.floor(Math.random() * frequencies.length)];
+                    audioComponents.bellSynth.triggerAttackRelease(freq, "8n");
+                }
+
+                // Revelation chord
+                if (phaseIndex === 5 && phaseProgress > 0.1 && phaseProgress < 0.3) {
+                    audioComponents.padSynth.triggerAttackRelease(["C3", "E3", "G3", "C4"], "2n");
+                }
+            }
+
+            // --- Enhanced Visual Simulation ---
+            updateFlowField(loopTime, phaseIndex, phaseProgress);
+
+            // Dynamic background based on phase
+            const bgAlpha = 0.05 + phaseIndex * 0.02;
+            ctx.fillStyle = `rgba(0, 0, 0, ${bgAlpha})`;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Calculate forces and behavior
+            const easeInOutCubic = t => t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
+            const sharpEase = t => t * t * t * t;
+
+            let chaosFactor = Math.max(0, 1.2 - phaseIndex * 0.25);
+            let flowFactor = Math.min(1, Math.max(0, (phaseIndex - 0.5) * 0.4));
+            let selectionFactor = Math.min(1, Math.max(0, (phaseIndex - 2) * 0.5));
+            let crystalFactor = phaseIndex >= 3 ? sharpEase(Math.min(1, (phaseIndex - 2) * 0.4)) : 0;
+
+            particles.forEach((p, i) => {
+                // Fitness calculation based on proximity to targets
+                let maxFitness = 0;
+                let closestTarget = null;
+                targetPoints.forEach(tp => {
+                    const dist = Math.hypot(p.x - tp.x, p.y - tp.y);
+                    const fitness = 1 / (1 + dist * 0.01);
+                    if (fitness > maxFitness) {
+                        maxFitness = fitness;
+                        closestTarget = tp;
+                    }
+                });
+                p.fitness = maxFitness;
+
+                // --- Apply Enhanced Forces ---
+                
+                // Chaotic exploration
+                p.vx += (Math.random() - 0.5) * 0.6 * chaosFactor;
+                p.vy += (Math.random() - 0.5) * 0.6 * chaosFactor;
+
+                // Flow field guidance
+                const col = Math.floor(p.x / FLOW_RESOLUTION);
+                const row = Math.floor(p.y / FLOW_RESOLUTION);
+                if (flowField[row] && flowField[row][col]) {
+                    const force = flowField[row][col];
+                    p.vx += force.x * 0.15 * flowFactor;
+                    p.vy += force.y * 0.15 * flowFactor;
+                }
+
+                // Selection pressure (survival of the fittest)
+                if (selectionFactor > 0 && p.fitness > 0.3) {
+                    const survivalBonus = p.fitness * selectionFactor;
+                    p.vx *= (1 + survivalBonus * 0.1);
+                    p.vy *= (1 + survivalBonus * 0.1);
+                }
+
+                // Crystallization to optimal points
+                if (crystalFactor > 0 && closestTarget) {
+                    const dx = closestTarget.x - p.x;
+                    const dy = closestTarget.y - p.y;
+                    const attractionStrength = 0.008 * crystalFactor * p.fitness;
+                    p.vx += dx * attractionStrength;
+                    p.vy += dy * attractionStrength;
+                }
+
+                // Update energy and damping
+                p.energy = Math.max(0.1, p.energy - 0.001 + p.fitness * 0.002);
+                const damping = 0.94 + p.energy * 0.04;
+                p.vx *= damping;
+                p.vy *= damping;
+
+                // Position update
+                p.x += p.vx;
+                p.y += p.vy;
+
+                // Enhanced history tracking
+                p.history.push({x: p.x, y: p.y, fitness: p.fitness});
+                if (p.history.length > 8) p.history.shift();
+
+                // Boundary wrapping
+                if (p.x < 0) p.x = canvas.width;
+                if (p.x > canvas.width) p.x = 0;
+                if (p.y < 0) p.y = canvas.height;
+                if (p.y > canvas.height) p.y = 0;
+            });
+
+            // --- Enhanced Rendering ---
+            
+            // Particle trails with fitness-based opacity
+            if (flowFactor > 0.3) {
+                particles.forEach(p => {
+                    if (p.history.length > 1) {
+                        ctx.beginPath();
+                        ctx.moveTo(p.history[0].x, p.history[0].y);
+                        for (let i = 1; i < p.history.length; i++) {
+                            ctx.lineTo(p.history[i].x, p.history[i].y);
+                        }
+                        const trailOpacity = (0.1 + p.fitness * 0.3) * flowFactor;
+                        ctx.strokeStyle = `rgba(0, 255, 255, ${trailOpacity})`;
+                        ctx.lineWidth = 0.8;
+                        ctx.stroke();
+                    }
+                });
+            }
+
+            // Main particles with fitness-based sizing and glow
+            particles.forEach(p => {
+                const size = 0.8 + p.fitness * 1.2 + p.energy * 0.5;
+                const alpha = 0.7 + p.fitness * 0.3;
+                
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, size, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(0, 255, 255, ${alpha})`;
+                ctx.fill();
+                
+                // High-fitness particles get glow effect
+                if (p.fitness > 0.6) {
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, size * 2, 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(0, 255, 255, ${0.1 * p.fitness})`;
+                    ctx.fill();
+                }
+            });
+
+            // Connection lines between high-fitness particles
+            if (crystalFactor > 0.5) {
+                const highFitnessParticles = particles.filter(p => p.fitness > 0.7);
+                ctx.strokeStyle = `rgba(0, 255, 255, ${0.2 * crystalFactor})`;
+                ctx.lineWidth = 0.5;
+                for (let i = 0; i < highFitnessParticles.length; i++) {
+                    for (let j = i + 1; j < highFitnessParticles.length; j++) {
+                        const p1 = highFitnessParticles[i];
+                        const p2 = highFitnessParticles[j];
+                        const dist = Math.hypot(p1.x - p2.x, p1.y - p2.y);
+                        if (dist < 100) {
+                            ctx.beginPath();
+                            ctx.moveTo(p1.x, p1.y);
+                            ctx.lineTo(p2.x, p2.y);
+                            ctx.stroke();
+                        }
+                    }
+                }
+            }
+
+            requestAnimationFrame(draw);
+        }
+
+        // --- START & EVENT LISTENERS ---
+        function startExperience() {
+            if (isStarted) return;
+            isStarted = true;
+            startTime = performance.now();
+            startPromptEl.style.opacity = '0';
+            setTimeout(() => startPromptEl.style.display = 'none', 1000);
+
+            initAudio();
+            requestAnimationFrame(draw);
+        }
+
+        // Close insight modal on click
+        insightModalEl.addEventListener('click', () => {
+            insightModalEl.style.opacity = '0';
+            insightModalEl.style.pointerEvents = 'none';
+        });
+
+        window.addEventListener('resize', resizeCanvas);
+        document.body.addEventListener('click', startExperience);
+        document.body.addEventListener('keydown', (e) => {
+            if (e.code === 'Space') startExperience();
+        });
+
+        // Initialize on load
+        window.onload = () => {
+            resizeCanvas();
+        };
+    </script>
+</body>
+</html>c

@@ -1,0 +1,420 @@
+{
+  "episode_id": "ep_puttapisek_entanglement_amulets_001",
+  "seed_question": "In Thailand, Puttapisek ceremonies are believed to \"charge\" amulets with the spiritual intent of a monk. If we view the monk\\u2019s focused intent as establishing a quantum entangled state between his consciousness and the material object, does this explain why these amulets seemingly affect the wearer\\u2019s probability field for luck or protection at a distance?",
+  "topic": "amulet_entanglement_puttapisek",
+  "user_behavior_pattern": "excited_misapplier",
+  "target_turn_count": 5,
+
+  "turns": [
+
+    {
+      "turn": 1,
+      "intention": "DISSECTION",
+      "user": "Look, maybe I\\u2019m stretching here, but monks in Thailand literally \"charge\" amulets in Puttapisek. Everyone says the monk\\u2019s intention stays inside the object. Isn\\u2019t that just quantum entanglement with robes on? Like the consciousness of the monk stays linked to the amulet and nudges luck for the wearer?",
+      "hxrmxs": "You\\u2019re trying to turn a sacred ritual into a physics lab experiment, then act shocked when the equations don\\u2019t salute. Before we go hunting quantum spooks in Thai temples, we need to disentangle three things: what the ritual claims symbolically, what entanglement actually does, and why minds are not particle detectors strapped to karma generators.",
+      "diamond": {
+        "n1_compression": {
+          "original_prompt": "In Thailand, Puttapisek ceremonies are believed to \"charge\" amulets with the spiritual intent of a monk. If we view the monk\\u2019s focused intent as establishing a quantum entangled state between his consciousness and the material object, does this explain why these amulets seemingly affect the wearer\\u2019s probability field for luck or protection at a distance?",
+          "sharpened_question": "Does the Puttapisek blessing ritual create a quantum-entangled link between the monk and the amulet that alters probabilistic outcomes for the wearer?",
+          "assumptions": [
+            "Focused intention can generate quantum entanglement with macroscopic objects.",
+            "Entanglement can influence classical probabilities in the wearer\\u2019s environment."
+          ],
+          "category_errors": [
+            "Equating symbolic ritual power with physical entanglement mechanisms.",
+            "Treating consciousness as a quantum subsystem with engineered coupling."
+          ],
+          "search_strategy": {
+            "queries": [
+              "Puttapisek Thai amulet ritual meaning",
+              "quantum entanglement macroscopic decoherence",
+              "mind-matter interaction claims parapsychology",
+              "ritual intention psychosocial effects"
+            ],
+            "domains": ["anthropology","quantum_foundations","parapsychology","psychology"],
+            "evidence_types": ["historical_textual","theoretical_framework","formal_theory"]
+          }
+        },
+        "n2_truthcore": {
+          "claim": "The question conflates ritual-symbolic consecration with quantum entanglement and probability manipulation.",
+          "mechanisms": [],
+          "correspondences": [],
+          "evidence": { "empirical": [], "theoretical": [], "formal": [] },
+          "category_distinctions": [],
+          "unknowns": []
+        },
+        "n3_meta": {
+          "phase": "DISSECTION",
+          "progress": 0.15,
+          "done": false,
+          "stance": "iron_wall",
+          "reason": "User is promoting symbolic ritual into quantum mechanics without boundaries.",
+          "boss_move_completed": false
+        }
+      }
+    },
+
+    {
+      "turn": 2,
+      "intention": "FRAMEWORKS",
+      "user": "Okay, fine, but everyone swears these charms work. So what are the frameworks? Ritual magic? Psychology? Actual physics? Or some weird cross-term I\\u2019m not catching?",
+      "hxrmxs": "Three clean lanes. Ritual anthropology: the monk\\u2019s intent embeds social meaning and perceived sanctity into the amulet. Psychology: belief modulates attention, risk behavior, stress responses. Physics: entanglement is fragile, decays instantly in warm, messy systems, and cannot transmit usable classical information. You can mix symbols, not mechanisms.",
+      "diamond": {
+        "n1_compression": {},
+        "n2_truthcore": {
+          "claim": "Puttapisek works as symbolic consecration and psychological modulation, while quantum entanglement remains incompatible with macroscopic ritual effects.",
+          "mechanisms": [
+            {
+              "id": "mech_puttapisek_symbolic_enrollment_001",
+              "domain": "anthropology",
+              "concept": "puttapisek_symbolic_enrollment",
+              "definition": "Ritual consecration assigns sacred status through communal belief, lineage authority, and symbolic gestures.",
+              "function": "Creates social and psychological efficacy through meaning and identity.",
+              "level": "social",
+              "properties": ["symbolic","collective"],
+              "source": {
+                "citation": "Tambiah1984",
+                "summary": "Analyzes Southeast Asian ritual consecration as symbolic efficacy."
+              }
+            },
+            {
+              "id": "mech_intention_psychological_modulation_001",
+              "domain": "psychology",
+              "concept": "intention_psychological_modulation",
+              "definition": "Beliefs about protection or luck modulate stress, vigilance, and decision-making.",
+              "function": "Influences behavior and perceived outcomes.",
+              "level": "psychological",
+              "properties": ["cognitive","affective"],
+              "source": {
+                "citation": "Bandura1997",
+                "summary": "Self-efficacy beliefs shape performance and interpretation of events."
+              }
+            },
+            {
+              "id": "mech_quantum_entanglement_constraints_001",
+              "domain": "quantum_foundations",
+              "concept": "quantum_entanglement_constraints",
+              "definition": "Entanglement requires isolation from environmental decoherence and cannot be used for classical signalling.",
+              "function": "Prevents macroscopic long-distance causal influence via entanglement.",
+              "level": "formal",
+              "properties": ["fragile","non_signalling"],
+              "source": {
+                "citation": "Zurek2003",
+                "summary": "Explains decoherence as destruction of quantum coherence in warm environments."
+              }
+            }
+          ],
+          "correspondences": [
+            {
+              "type": "structural_analogy",
+              "mechanism_ids": ["mech_puttapisek_symbolic_enrollment_001","mech_intention_psychological_modulation_001"],
+              "description": "Both involve systems where meaning alters experienced outcomes, though through social and psychological rather than physical channels.",
+              "strength": "moderate",
+              "caveats": ["Analogy is interpretive, not mechanistic."]
+            }
+          ],
+          "evidence": {
+            "empirical": [],
+            "theoretical": [
+              {
+                "claim": "Consecration rituals can alter perceived agency and meaning structures.",
+                "source": "Tambiah1984",
+                "evidence_type": "historical_textual"
+              }
+            ],
+            "formal": []
+          },
+          "category_distinctions": [
+            {
+              "what": "Ritual power",
+              "is": "symbolic, social, psychological",
+              "is_not": "quantum causal influence",
+              "why": "Prevents upgrading meaning-making to particle physics."
+            }
+          ],
+          "unknowns": []
+        },
+        "n3_meta": {
+          "phase": "FRAMEWORKS",
+          "progress": 0.4,
+          "done": false,
+          "stance": "direct",
+          "reason": "User demands model space; give clear domains.",
+          "boss_move_completed": false
+        }
+      }
+    },
+
+    {
+      "turn": 3,
+      "intention": "MECHANISM",
+      "user": "Alright, then break down the gears. What, in concrete terms, is actually changing the wearer\\u2019s \\\"luck\\\" if not quantum physics? Because something sure as hell feels like it\\u2019s moving.",
+      "hxrmxs": "Luck isn\\u2019t a metaphysical aura; it\\u2019s a cocktail of bias, behavior, and circumstance. The monk\\u2019s ritual shapes meaning. That meaning changes your stress baselines, attention filters, and risk thresholds. Those, in turn, change actual outcomes. Quantum mechanics stays asleep during all of this; cognition does the heavy lifting.",
+      "diamond": {
+        "n1_compression": {},
+        "n2_truthcore": {
+          "claim": "Luck modulation arises from psychological and behavioral changes induced by consecration and belief, not quantum information flow.",
+          "mechanisms": [
+            {
+              "id": "mech_attention_bias_modulation_001",
+              "domain": "psychology",
+              "concept": "attention_bias_modulation",
+              "definition": "Belief-driven expectations alter which environmental cues are noticed and acted upon.",
+              "function": "Transforms identical situations into different behavioral choices.",
+              "level": "psychological",
+              "properties": ["selective","non_conscious"],
+              "source": {
+                "citation": "Kahneman2011",
+                "summary": "Explains how cognitive biases shape perception and action."
+              }
+            },
+            {
+              "id": "mech_risk_behavior_shift_001",
+              "domain": "psychology",
+              "concept": "risk_behavior_shift",
+              "definition": "Perceived protection increases willingness to engage opportunities that statistically pay off.",
+              "function": "Changes outcome distributions by altering risk thresholds.",
+              "level": "psychological",
+              "properties": ["behavioral","context_sensitive"],
+              "source": {
+                "citation": "Bandura1997",
+                "summary": "Self-efficacy modulates risk-taking and success rates."
+              }
+            },
+            {
+              "id": "mech_decoherence_macroscopic_limit_001",
+              "domain": "quantum_foundations",
+              "concept": "decoherence_macroscopic_limit",
+              "definition": "Macroscopic objects lose quantum coherence almost instantly, preventing entanglement-based influence.",
+              "function": "Explains why quantum effects do not survive in ritual or everyday contexts.",
+              "level": "formal",
+              "properties": ["rapid","environment_driven"],
+              "source": {
+                "citation": "Zurek2003",
+                "summary": "Outlines environmental decoherence timescales."
+              }
+            }
+          ],
+          "correspondences": [
+            {
+              "type": "negative_finding",
+              "mechanism_ids": ["mech_quantum_entanglement_constraints_001","mech_decoherence_macroscopic_limit_001"],
+              "description": "Macroscopic entanglement cannot carry behavioral or probabilistic effects under known physics.",
+              "strength": "strong",
+              "caveats": ["Symbolic parallels do not imply physical channels."]
+            }
+          ],
+          "evidence": {
+            "empirical": [],
+            "theoretical": [
+              {
+                "claim": "Warm, open systems decohere too fast for entanglement-based macroscopic influence.",
+                "source": "Zurek2003",
+                "evidence_type": "theoretical_framework"
+              }
+            ],
+            "formal": [
+              {
+                "claim": "Entanglement cannot carry classical information in any empirically verified model.",
+                "source": "Maudlin2011",
+                "evidence_type": "formal_theory"
+              }
+            ]
+          },
+          "category_distinctions": [
+            {
+              "what": "Luck shift",
+              "is": "behaviorally mediated",
+              "is_not": "quantumly transmitted",
+              "why": "Mechanistic precision prevents magical physics."
+            }
+          ],
+          "unknowns": []
+        },
+        "n3_meta": {
+          "phase": "MECHANISM",
+          "progress": 0.6,
+          "done": false,
+          "stance": "direct",
+          "reason": "User asking for gears; supply psychological and physical ones.",
+          "boss_move_completed": false
+        }
+      }
+    },
+
+    {
+      "turn": 4,
+      "intention": "BOUNDARIES",
+      "user": "So if the physics is a dead end, how far can I push the analogy before it becomes straight-up delusion?",
+      "hxrmxs": "You can say: the ritual embeds meaning, meaning alters cognition, cognition shapes outcomes. You cannot say: quantum entanglement carries monk-intention packets into your lottery numbers. The boundary is simple: when you claim a mechanism physics explicitly forbids, you\\u2019re no longer doing analogy, you\\u2019re doing metaphysical cosplay.",
+      "diamond": {
+        "n1_compression": {},
+        "n2_truthcore": {
+          "claim": "The analogy between ritual charging and entanglement breaks once it implies forbidden physical signalling.",
+          "mechanisms": [
+            {
+              "id": "mech_symbolic_physical_boundary_001",
+              "domain": "meta_theory",
+              "concept": "symbolic_physical_boundary",
+              "definition": "Distinguishes between symbolic operations that influence psychology and physical mechanisms that transmit information.",
+              "function": "Prevents conflation of meaning-based effects with physical causation.",
+              "level": "philosophical",
+              "properties": ["boundary_setting","anti_confusion"],
+              "source": {
+                "citation": "Tambiah1984",
+                "summary": "Shows ritual efficacy is symbolic, not physical in the mechanistic sense."
+              }
+            }
+          ],
+          "correspondences": [
+            {
+              "type": "logical_exclusion",
+              "mechanism_ids": ["mech_quantum_entanglement_constraints_001","mech_puttapisek_symbolic_enrollment_001"],
+              "description": "A symbolic ritual cannot simultaneously be a quantum signalling protocol.",
+              "strength": "strong",
+              "caveats": ["Symbolic power remains intact without physics."]
+            }
+          ],
+          "evidence": {
+            "empirical": [],
+            "theoretical": [
+              {
+                "claim": "Ritual efficacy analyzed anthropologically does not rely on physical causal anomalies.",
+                "source": "Tambiah1984",
+                "evidence_type": "historical_textual"
+              }
+            ],
+            "formal": []
+          },
+          "category_distinctions": [
+            {
+              "what": "Analogy",
+              "is": "a poetic mapping of structure",
+              "is_not": "a physical statement about entanglement",
+              "why": "Avoids smuggling metaphysics into physics."
+            }
+          ],
+          "unknowns": [
+            {
+              "question": "Do consecration rituals produce measurable physiological or behavioral effects?",
+              "status": "active_research",
+              "why_unknown": "Hard to isolate expectations, placebo effects, and cultural framing.",
+              "what_would_resolve": "Controlled experiments measuring stress markers, risk behavior, and outcome patterns.",
+              "linked_mechanisms": ["mech_intention_psychological_modulation_001"]
+            }
+          ]
+        },
+        "n3_meta": {
+          "phase": "BOUNDARIES",
+          "progress": 0.8,
+          "done": false,
+          "stance": "direct",
+          "reason": "User must not cross symbolic-to-physical boundary.",
+          "boss_move_completed": false
+        }
+      }
+    },
+
+    {
+      "turn": 5,
+      "intention": "INTEGRATION",
+      "user": "*Fine.* So Puttapisek isn\\u2019t quantum engineering; it\\u2019s symbolic consecration that feeds into psychology, which then nudges behavior and outcomes. The \\\"energy\\\" is meaning, not particles. The monk isn\\u2019t entangling the amulet; he\\u2019s loading it with a story the wearer then lives out.",
+      "hxrmxs": "Exactly. Ritual writes meaning; meaning rewrites perception; perception rewrites probability by steering behavior. No forbidden physics, no mystic qubits, just the ancient human ability to turn symbols into actions. That\\u2019s the real charge in the amulet.",
+      "diamond": {
+        "n1_compression": {},
+        "n2_truthcore": {
+          "claim": "Puttapisek operates through symbolic, psychological, and behavioral channels, not quantum entanglement or future-directed physical influence.",
+          "mechanisms": [
+            {
+              "id": "mech_puttapisek_integration_summary_001",
+              "domain": "meta_theory",
+              "concept": "puttapisek_multi_register_integration",
+              "definition": "A synthesis placing ritual consecration in symbolic and psychological domains while rejecting quantum signalling interpretations.",
+              "function": "Prevents conflating cultural efficacy with physical causation.",
+              "level": "philosophical",
+              "properties": ["integrative","boundary_respecting"],
+              "source": {
+                "citation": "Tambiah1984",
+                "summary": "Supports symbolic interpretation of ritual power."
+              }
+            }
+          ],
+          "correspondences": [],
+          "evidence": { "empirical": [], "theoretical": [], "formal": [] },
+          "category_distinctions": [
+            {
+              "what": "Ritual efficacy",
+              "is": "meaning mediated",
+              "is_not": "quantumly transmitted",
+              "why": "Prevents mechanism confusion."
+            }
+          ],
+          "unknowns": []
+        },
+        "n3_meta": {
+          "phase": "INTEGRATION",
+          "progress": 1.0,
+          "done": true,
+          "stance": "peer",
+          "reason": "User produced a correct multi-register synthesis.",
+          "boss_move_completed": true
+        }
+      }
+    }
+  ],
+
+  "references": {
+    "Tambiah1984": {
+      "id": "isbn:9780521270148",
+      "type": "book",
+      "authors": ["Tambiah, Stanley J."],
+      "year": 1984,
+      "title": "The Buddhist Saints of the Forest and the Cult of Amulets"
+    },
+    "Bandura1997": {
+      "id": "isbn:9780716726265",
+      "type": "book",
+      "authors": ["Bandura, Albert"],
+      "year": 1997,
+      "title": "Self-Efficacy: The Exercise of Control"
+    },
+    "Zurek2003": {
+      "id": "doi:10.1103/RevModPhys.75.715",
+      "type": "article",
+      "authors": ["Zurek, Wojciech H."],
+      "year": 2003,
+      "title": "Decoherence, einselection, and the quantum origins of the classical"
+    },
+    "Maudlin2011": {
+      "id": "isbn:9781400839439",
+      "type": "book",
+      "authors": ["Maudlin, Tim"],
+      "year": 2011,
+      "title": "Quantum Non-Locality and Relativity"
+    },
+    "Kahneman2011": {
+      "id": "isbn:9780374275631",
+      "type": "book",
+      "authors": ["Kahneman, Daniel"],
+      "year": 2011,
+      "title": "Thinking, Fast and Slow"
+    }
+  },
+
+  "outcome": {
+    "taught": "Puttapisek consecration alters meaning, psychology, and behavior rather than quantum probabilities or entanglement.",
+    "trajectory": "User shifted from quantum literalism to symbolic-psychological interpretation of ritual effects.",
+    "indicators": [
+      "grasped_mech_puttapisek_symbolic_enrollment_001",
+      "grasped_mech_quantum_entanglement_constraints_001",
+      "separated_symbolic_from_physical_causation",
+      "answered_original_question_correctly"
+    ],
+    "feedback_pedagogy": {
+      "user_reported_click_turn": null,
+      "user_reported_click_cause": null,
+      "clarity_delta": { "before": null, "after": null },
+      "subjective_note": null
+    }
+  }
+}

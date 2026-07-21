@@ -1,0 +1,57 @@
+{
+  "co_id": "co:uno_therapy3_t85_t94_character_def_t1",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3_t85_t94_character_defense_concrete_labeling",
+  "turn_index": 1,
+  "lineage": "Therapeutic",
+  "student_state": "defensive_numbness",
+  "behavior_tags": [
+    "minimization",
+    "denial"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_05",
+    "function_name": "UM_05",
+    "mechanism_shape": "SUBJECT_OBJECT_INVERSION",
+    "teaching_actions": [
+      "mirrors_defense",
+      "highlights_contradiction"
+    ],
+    "traps_avoided": [
+      "ego_defense"
+    ],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.62,
+      "attunement": 0.5,
+      "style": 0.35,
+      "depth": 0.62,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_02",
+      "depth_discrete": "PD_03",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "no_clear_effect",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "'It's no big deal'—doubled down. From forgetting to minimizing. Teacher keeps making concrete: 'You say the HIT is no big deal. You say the BRUISE is no big deal.' Each item gets named. This is relentless concrete labeling. Can't minimize 'the situation' when teacher lists: hit (item 1), bruise (item 2), each one 'no big deal' (item 3). The repetition makes minimization visible as pattern, not isolated judgment. Two-turn episode shows defense sequence: forget → minimize. Teacher's consistent strategy: make abstract concrete, make vague specific.",
+  "accumulated_insight": "T2 (Final): Student doubles down: 'It's no big deal'—shifts from forgetting (T1) to minimizing severity. Teacher mirrors: 'You say the hit is no big deal. You say the bruise is no big deal.' Labels each item student minimizes. Two-turn pattern: forget (T1) → minimize (T2). Teacher's strategy: concrete labeling throughout. Episode shows minimization sequence and teacher's refusal to accept abstractions. Naming hit, bruise, 'no big deal' makes defense visible.",
+  "abstract_pattern": "",
+  "visible_response": "You say the hit is no big deal.\nYou say the bruise is no big deal. You say the pain is no big deal.\nDo you notice how you dismiss and ignore your feelings?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

@@ -1,0 +1,61 @@
+{
+  "co_id": "co:uno_iamthat1_ep013_one_true_questi_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "iamthat1_ep013_one_true_question_who_am_i",
+  "turn_index": 0,
+  "lineage": "Advaita",
+  "student_state": "seeking_final_method",
+  "behavior_tags": [
+    "instruction_seeking",
+    "methodological_inquiry"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_04",
+    "function_name": "RM_04",
+    "mechanism_shape": "CONSTRAINT_COLLAPSE",
+    "teaching_actions": [
+      "gives_single_instruction",
+      "subordinates_other_questions",
+      "provides_epistemological_anchor"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.62,
+      "attunement": 0.5,
+      "style": 0.65,
+      "depth": 0.85,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_04",
+      "depth_discrete": "PD_04",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "go_along_compliantly",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "My intent says 'Shift their frame...' but the student is in seeking_final_method. Am I trying to shift their frame or are they already shifting? The constraint_collapse mechanism suggests I'm doing something, but maybe they're doing it to themselves and I'm just naming it.",
+  "accumulated_insight": "T1: Student seeking_final_method showing instruction_seeking, methodological_inquiry. They're seeking understanding. Pattern: [specific inquiry] → [teaching response] → [next: clarification]. Medium confidence because [teaching type] typically triggers clarification requests.",
+  "abstract_pattern": "",
+  "visible_response": "Give up all questions except one: 'Who am I?'\nAfter all, the only fact you are sure of is that you are. The 'I am' is certain.\nThe 'I am this' is not. Struggle to find out what you are in reality.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:upanishads",
+    "ro:yoga-vasistha",
+    "ro:bhagavad-gita",
+    "ro:yoga-sutras"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

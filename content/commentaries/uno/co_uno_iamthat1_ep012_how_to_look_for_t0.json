@@ -1,0 +1,61 @@
+{
+  "co_id": "co:uno_iamthat1_ep012_how_to_look_for_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "iamthat1_ep012_how_to_look_for_myself",
+  "turn_index": 0,
+  "lineage": "Advaita",
+  "student_state": "seeking_ontological_anchor",
+  "behavior_tags": [
+    "asks_for_definition",
+    "seeks_stability"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_04",
+    "function_name": "RM_04",
+    "mechanism_shape": "CONSTRAINT_COLLAPSE",
+    "teaching_actions": [
+      "redirects_search",
+      "gives_instruction",
+      "asserts_internal_locus"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.62,
+      "attunement": 0.8,
+      "style": 0.65,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_03",
+      "style_discrete": "LS_04",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "My intent says 'Shift their frame...' but the student is in seeking_ontological_anchor. Am I trying to shift their frame or are they already shifting? The constraint_collapse mechanism suggests I'm doing something, but maybe they're doing it to themselves and I'm just naming it.",
+  "accumulated_insight": "T1: Student seeking_ontological_anchor showing asks_for_definition, seeks_stability. They're seeking understanding. Pattern: [specific inquiry] → [teaching response] → [next: clarification]. Medium confidence because [teaching type] typically triggers clarification requests.",
+  "abstract_pattern": "",
+  "visible_response": "Look to yourself for the permanent.\nDive deep within and find what is real in you.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:upanishads",
+    "ro:yoga-vasistha",
+    "ro:bhagavad-gita",
+    "ro:yoga-sutras"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

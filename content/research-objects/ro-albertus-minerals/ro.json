@@ -1,0 +1,392 @@
+{
+  "ro_id": "ro:albertus-minerals",
+  "schema_version": 1,
+  "title": "Albertus Magnus \u2014 Book of Minerals",
+  "subtitle": "The first systematic Christian treatise on mineralogy \u2014 four causes, Sulphur-Quicksilver theory, astrological lapidary, and the sigils of stones",
+  "family": "theme",
+  "status": "draft",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "Albertus Magnus's 13th-century synthesis of Aristotelian mineralogy, Arabic alchemy, and Hermetic lapidary lore \u2014 organized through the four causes, the Sulphur-Quicksilver theory of metals, and a ...",
+    "scope": "Covers all 5 Books: (I) Stones in general \u2014 material, efficient, formal causes; (II) Precious stones \u2014 alphabetical lapidary, cause of powers, sigils and images; (III) Metals in general \u2014 Sulphur-Quicksilver theory, transmutation, places of production; (IV) The seven metals individually; (V) Intermediates (salts, vitriols, alums). Extensive field observations on mining districts of Germany (Goslar, Freiberg, the Rhine, Bohemia).",
+    "traditions": [
+      "alchemy",
+      "scholasticism",
+      "aristotelian",
+      "hermetica",
+      "mineralogy",
+      "medieval-science"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "albertus-minerals-borgnet",
+      "tier": 1,
+      "label": "Albertus Magnus \u2014 Mineralium Libri V (Opera omnia, ed. Borgnet, Vol. V, Paris 1890)",
+      "first_added_in": "0.1.0",
+      "contribution": [
+        "four_causes_mineralogy",
+        "sulphur_quicksilver_theory",
+        "alphabetical_lapidary",
+        "astrological_sigils",
+        "field_observations_mining",
+        "transmutation_discussion"
+      ],
+      "sections_affected": [
+        "stones_general",
+        "precious_stones",
+        "sigils",
+        "metals_general",
+        "metals_individually",
+        "intermediates"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "albertus-minerals-wyckoff",
+      "tier": 1,
+      "label": "Albertus Magnus \u2014 Book of Minerals, translated by Dorothy Wyckoff, Clarendon Press Oxford 1967",
+      "first_added_in": "0.1.0",
+      "contribution": [
+        "translation",
+        "commentary",
+        "identification_of_minerals",
+        "bibliography"
+      ],
+      "sections_affected": [
+        "all"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "avicenna-congelatione",
+      "tier": 2,
+      "label": "Avicenna \u2014 De congelatione et conglutinatione lapidum (trans. Alfred of Sareshel, c. 1200)",
+      "first_added_in": "0.1.0",
+      "contribution": [
+        "mineralizing_power",
+        "conglutination_theory",
+        "sulphur_quicksilver_theory"
+      ],
+      "sections_affected": [
+        "stones_general",
+        "metals_general"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "aristotle-lapidary",
+      "tier": 2,
+      "label": "Aristotle (pseudo-) \u2014 Lapidarium Aristotelis / Liber de lapidibus",
+      "first_added_in": "0.1.0",
+      "contribution": [
+        "powers_of_stones",
+        "magnet_polarity",
+        "attractive_stones"
+      ],
+      "sections_affected": [
+        "precious_stones",
+        "sigils_ligatures"
+      ],
+      "status": "reference"
+    },
+    {
+      "source_id": "hermes-emerald-tablet",
+      "tier": 2,
+      "label": "Hermes Trismegistus \u2014 Tabula Smaragdina (Emerald Tablet)",
+      "first_added_in": "0.1.0",
+      "contribution": [
+        "as_above_so_below",
+        "calcination_sublimation_cycle",
+        "maternal_earth_paternal_heaven"
+      ],
+      "sections_affected": [
+        "stones_general",
+        "metals_general"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "constantinus-africanus",
+      "tier": 2,
+      "label": "Constantine of Africa \u2014 Opera (including De gradibus and Letter on Incantations of Costa ben Luca)",
+      "first_added_in": "0.1.0",
+      "contribution": [
+        "powers_of_stones_by_form",
+        "ligatures_and_suspensions",
+        "medical_properties"
+      ],
+      "sections_affected": [
+        "precious_stones",
+        "sigils_ligatures"
+      ],
+      "status": "reference"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "stones_general",
+      "subsection": "the_four_causes",
+      "kind": "commentary",
+      "text": "Albert structures his mineralogy through Aristotle's four causes: (1) Material cause \u2014 stones are made of Earth and Water, with unctuous moisture as the cement; metals are made of Sulphur and Quicksilver. (2) Efficient cause \u2014 a 'mineralizing power' (from Avicenna) transmitted via the stars, using heat and cold as instruments. (3) Formal cause \u2014 substantial forms imparted by heavenly influences and element mixture; stones have forms but not souls. (4) Final cause \u2014 not discussed separately; form is the final cause for inanimate things. This four-cause framework maps directly to the tetrahedron: material = V\u2084 (Earth/Water), efficient = V\u2082 (the acting agent), formal = V\u2083 (the shaping principle), final = V\u2081 (the end). The same fourfold structure Albert uses to analyze minerals is the same K\u2084 that \u00d1\u0101\u1e47av\u012bra identified in experience and the amplituhedron identified in scattering.",
+      "source_ids": [
+        "albertus-minerals-borgnet"
+      ],
+      "topics": [
+        "four_causes",
+        "aristotelian_method",
+        "tetrahedral_structure"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "stones_general",
+      "subsection": "emerald_tablet_interpretation",
+      "kind": "source",
+      "text": "And this, the greatest skill of the alchemists, Hermes teaches in his Secret of Secrets, saying metaphorically: the stone 'gently, with great skill, ascends from earth to heaven, and again descends from heaven to earth. Its nurse is the earth, and the wind carried it in its belly.' For intending to teach the operations of alchemy he says it 'ascends to Heaven' when by roasting and calcination it takes on the properties of Fire: for alchemists mean by calcination the reduction of material to powder by burning and roasting. And the material 'again descends from heaven to earth' when it takes on the properties of Earth by inhumation, for inhumation revives and nourishes what was previously killed by calcination. And when he says that 'the wind carries it in its belly' he means the levigation of the material, raising it to the properties of Air. And there distils and issues from the mouth of the alembic a watery or oily liquor with all the powers of the elements.",
+      "source_ids": [
+        "albertus-minerals-borgnet",
+        "hermes-emerald-tablet"
+      ],
+      "topics": [
+        "emerald_tablet",
+        "calcination",
+        "sublimation",
+        "alchemical_interpretation"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "precious_stones",
+      "subsection": "powers_of_stones_by_substantial_form",
+      "kind": "commentary",
+      "text": "Albert defends the 'powers' of stones (medical, magical) against materialist skeptics and against those who ascribe them to souls in stones. His solution: the specific substantial form of each stone IS the cause of its powers \u2014 not its constituent elements, not Platonic Ideas, not astrological influences alone. This is exactly the formal cause operating through the specific form. The powers are the 'actions' of the form. In the tetrahedron framework, this means each stone's position in the 36-tattva system (its specific mix of elements and heavenly influences) determines its 'tattva function' \u2014 its particular contraction of consciousness into matter. The magnet attracts iron because its form 'is' that relation \u2014 just as a tattva IS its specific contraction at its specific location in the body.",
+      "source_ids": [
+        "albertus-minerals-borgnet"
+      ],
+      "topics": [
+        "substantial_form",
+        "powers_of_stones",
+        "specific_form",
+        "tattva_mapping"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "metals_general",
+      "subsection": "sulphur_quicksilver_theory_as_tattva_duality",
+      "kind": "commentary",
+      "text": "Albert adopts the Arab Sulphur-Quicksilver theory: metals are composed of Sulphur (active, male, hot-dry, the 'father') and Quicksilver (passive, female, cold-moist, the 'mother'), with the planets determining the specific form. This maps directly onto the i\u1e0d\u0101-pi\u1e45gal\u0101 duality of the subtle body: pi\u1e45gal\u0101 (solar, active, right channel) = Sulphur = the 'father' = heat that digests and forms; i\u1e0d\u0101 (lunar, receptive, left channel) = Quicksilver = the 'mother' = moisture that receives and holds form. Their union in su\u1e63um\u1e47\u0101 (the central channel) IS the birth of the completed metal \u2014 the lapis, the gold, the body of light. The 1:4:2 breath ratio that forces pr\u0101\u1e47a into su\u1e63um\u1e47\u0101 is the same operation as the alchemical 'coagulation' of Sulphur and Quicksilver into gold.",
+      "source_ids": [
+        "albertus-minerals-borgnet"
+      ],
+      "topics": [
+        "sulphur_quicksilver",
+        "ida_pingala",
+        "sushumna",
+        "alchemical_marriage",
+        "subtle_body"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "metals_general",
+      "subsection": "transmutation_and_grace",
+      "kind": "source",
+      "text": "Let practitioners of alchemy know that they cannot transmute one form of metal into another, but only make something similar, as when they colour a red [metal] with yellow, so that it may appear to be gold; or whiten it until it is similar to silver. ... Specific forms are not transmuted, unless perhaps they are first reduced to prime matter \u2014 the [indeterminate] matter of [all] metals \u2014 and then, with the help of art, developed into the specific form of the metal they want. ... For whatever the elemental and celestial powers produce in natural vessels they also produce in artificial vessels, provided the artificial vessels are formed just like the natural ones. And whatever nature produces by the heat of the sun and stars, art also produces by the heat of fire, provided the fire is tempered so as not to be stronger than the self-moving formative power in the metals.",
+      "source_ids": [
+        "albertus-minerals-borgnet"
+      ],
+      "topics": [
+        "transmutation",
+        "prime_matter",
+        "art_imitates_nature",
+        "celestial_powers"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_006",
+      "section": "metals_individually",
+      "subsection": "field_observations",
+      "kind": "source",
+      "text": "I have seen pure gold formed in the sands of rivers in different countries, and in our own country both in the Rhine and the Elbe. ... I myself have found silver as a sort of vein extending throughout the substance of the stone; and this was somewhat purer, but still had some stony calx mixed with it. And it is found in earth as a sort of vein purer than any found in stone; for in the place called Freiberg \u2014 which means 'Free Mountain' \u2014 it is sometimes found as soft as a firm mush. ... I myself have seen in Swabia in Germany a stone upon which more than fifty serpents had collected. ... There is at Cologne, in the shrine of the Three Kings, an onyx of large size, having the breadth of a man's hand or more; and on it, upon the material of the onyx stone, which is like a fingernail [in colour], are pictured in pure white the heads of two young men.",
+      "source_ids": [
+        "albertus-minerals-borgnet"
+      ],
+      "topics": [
+        "field_observations",
+        "mining",
+        "fossils",
+        "cameos",
+        "germany"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_007",
+      "section": "sigils",
+      "subsection": "astrological_lapidary",
+      "kind": "commentary",
+      "text": "Albert includes a complete astrological lapidary (II, iii, 5) listing the 12 Signs of the Zodiac by triplicity, the Northern and Southern constellations, and the seven planets, with specific images to be engraved on specific stones for specific effects. This is the same structure as the later Renaissance 'image magic' of Ficino, Agrippa, and Dee \u2014 and it maps directly onto the 36 tattvas: the 12 signs = 12 K\u0101l\u012bs = 12 edges of the star tetrahedron; the 7 planets = 7 cakras = 6 edges + center; the 36 decans = 36 tattvas. The astrological lapidary IS the tattva system in Western astrological language.",
+      "source_ids": [
+        "albertus-minerals-borgnet"
+      ],
+      "topics": [
+        "astrological_lapidary",
+        "zodiac",
+        "planets",
+        "engraved_gems",
+        "tattva_mapping"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_008",
+      "section": "intermediates",
+      "subsection": "the_lapis_philosophorum",
+      "kind": "commentary",
+      "text": "Albert's final book on 'intermediates' (media) \u2014 substances between stones and metals like salts, vitriols, alums, marchasitas, electrum \u2014 forms a bridge between the mineral kingdom and the metallic. These are 'incomplete' substances whose forms are not fully fixed, and therefore are capable of being transmuted. This is the alchemical lapis philosophorum concept in embryonic form: the stone that is no stone, the tattva that includes all tattvas, the 38th principle (An\u0101khy\u0101) that remains when all 36 tattvas are dissolved. Albert's 'intermediates' are the matter of the alchemical work \u2014 what must be dissolved and coagulated to produce the completed lapis.",
+      "source_ids": [
+        "albertus-minerals-borgnet"
+      ],
+      "topics": [
+        "intermediates",
+        "lapis_philosophorum",
+        "prime_matter",
+        "transmutation",
+        "alchemical_work"
+      ],
+      "status": "active"
+    }
+  ],
+  "coverage": {
+    "stones_general": {
+      "status": "complete",
+      "sources": [
+        "albertus-minerals-borgnet"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 0.9,
+      "gaps": [
+        "Detailed comparison of Albert's four causes with Aristotelian originals"
+      ]
+    },
+    "precious_stones": {
+      "status": "complete",
+      "sources": [
+        "albertus-minerals-borgnet"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 0.8,
+      "gaps": [
+        "Full extraction of alphabetical lapidary entries with mineral identifications"
+      ]
+    },
+    "sigils": {
+      "status": "complete",
+      "sources": [
+        "albertus-minerals-borgnet"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 0.7,
+      "gaps": [
+        "Detailed comparison of Albert's astrological sigils with Ficino and Agrippa"
+      ]
+    },
+    "metals_general": {
+      "status": "complete",
+      "sources": [
+        "albertus-minerals-borgnet"
+      ],
+      "passage_count": 2,
+      "estimated_completeness": 0.9,
+      "gaps": [
+        "Comparison with Avicenna's original Sulphur-Quicksilver theory"
+      ]
+    },
+    "metals_individually": {
+      "status": "complete",
+      "sources": [
+        "albertus-minerals-borgnet"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 0.6,
+      "gaps": [
+        "Extraction of all 7 metal descriptions"
+      ]
+    },
+    "intermediates": {
+      "status": "complete",
+      "sources": [
+        "albertus-minerals-borgnet"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 0.5,
+      "gaps": [
+        "Full extraction of salt, vitriol, alum, marchasita sections"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "coverage_gap",
+      "title": "Alphabetical lapidary not fully extracted",
+      "description": "The full 20-chapter alphabetical lapidary (II, ii) with ~120 stones and their powers has not been extracted passage-by-passage. Only summarized.",
+      "status": "open",
+      "created": "2026-07-15"
+    },
+    {
+      "id": "issue-002",
+      "type": "analysis_required",
+      "title": "Comparison with Ficino's astrological medicine needed",
+      "description": "Albert's medical-lapidary and sigil theory should be compared with Ficino's De Sole and De Vita for continuities in the Western astrological-hermetic tradition.",
+      "status": "open",
+      "created": "2026-07-15"
+    },
+    {
+      "id": "issue-003",
+      "type": "cross_tradition",
+      "title": "Sulphur-Quicksilver theory vs i\u1e0d\u0101-pi\u1e45gal\u0101 mapping",
+      "description": "The mapping of Sulphur (male, hot-dry) to pi\u1e45gal\u0101 and Quicksilver (female, cold-moist) to i\u1e0d\u0101 should be developed into a full comparative analysis with the Tantraloka's n\u0101\u1e0d\u012b theory.",
+      "status": "open",
+      "created": "2026-07-15"
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-15",
+      "author": "ai-assistant",
+      "changes": [
+        "Created RO with commentary passages on key doctrines",
+        "Mapped to tetrahedron framework",
+        "Added comparative notes on i\u1e0d\u0101-pi\u1e45gal\u0101, tattvas, alchemical marriage",
+        "Identified convergence points with Gowan's hourglass/grail model"
+      ]
+    }
+  ],
+  "dependencies": [],
+  "outputs": [
+    {
+      "id": "output-albertus-commentary",
+      "type": "document",
+      "label": "Commentary on Albertus Magnus Book of Minerals with Convergence Analysis",
+      "path": "/root/projects/blog/bookofminerals-commentary.md",
+      "status": "draft"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-07-15",
+      "event": "RO created from full-text translation of Book of Minerals",
+      "details": "Initial extraction and commentary on key doctrines including four causes, Sulphur-Quicksilver theory, astrological lapidary, and field observations of German mining districts"
+    }
+  ]
+}

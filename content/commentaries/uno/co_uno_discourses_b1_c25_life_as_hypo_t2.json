@@ -1,0 +1,60 @@
+{
+  "co_id": "co:uno_discourses_b1_c25_life_as_hypo_t2",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "discourses_b1_c25_life_as_hypothesis",
+  "turn_index": 2,
+  "lineage": "Realist",
+  "student_state": "alert_competence",
+  "behavior_tags": [
+    "logical_policing"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_05",
+    "function_name": "RM_05",
+    "mechanism_shape": "STRUCTURAL_ANALOGY",
+    "teaching_actions": [
+      "transfers_rule_to_life",
+      "sets_trap"
+    ],
+    "traps_avoided": [
+      "conceptual_reification"
+    ],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.35,
+      "depth": 0.38,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_02",
+      "depth_discrete": "PD_02",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "logical_policing",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "They caught the night/day inconsistency—'that is not consistent with the hypothesis.' Perfect. Now the transfer: same logic to life. The pattern: hypothesis (unfortunate) doesn't require belief (misery). If they catch this, they've understood the distinction. If not, I'll point it out. The 'Another forbids me' suggests they have an internal check—that's good.",
+  "accumulated_insight": "T3: They caught the inconsistency—'that is not consistent with the hypothesis.' Perfect. Now the transfer: same logic to life. 'Suppose unfortunate' (hypothesis) → 'are you unhappy?' (yes) → 'think also misery' (inconsistent). The trap is set. Will they catch it? If yes, they understand the distinction. If no, I'll point it out.",
+  "abstract_pattern": "",
+  "visible_response": "So in this case also: \"Suppose that you are unfortunate.\" Well, suppose so... \"Are you then unhappy?\" Yes. \"Well, then, are you troubled with an unfavourable demon?\" Yes. \"But think also that you are in misery.\"",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:kybalion",
+    "ro:grimoires-decoded",
+    "ro:hermes-proof-system"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

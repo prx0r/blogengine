@@ -1,0 +1,521 @@
+{
+  "episode_id": "ep_phowa_mind_uploading_001",
+  "seed_question": "The Tibetan practice of Phowa involves training to eject consciousness through the crown of the head at death into a \"Pure Land.\" Is this the spiritual software equivalent of \"Mind Uploading,\" suggesting that the transference of consciousness is a data-packet transmission that requires a compatible recipient server to receive the upload?",
+  "topic": "phowa_mind_uploading",
+  "user_behavior_pattern": "smart_confused",
+  "target_turn_count": 5,
+
+  "turns": [
+
+    {
+      "turn": 1,
+      "intention": "DISSECTION",
+      "user": "So Phowa is literally described as shooting your consciousness out the crown into a Pure Land when you die. That sounds suspiciously like spiritual \"mind uploading\" to a Buddha server. Is that actually a decent way to think about it, or am I butchering both Tibetan Buddhism and computer science at the same time?",
+      "hxrmxs": "You’re trying to run a 12th-century tantric ritual on a 21st-century transhumanist operating system. Phowa is a soteriological method inside a karmic rebirth cosmology; mind uploading is a speculative engineering project based on information patterns and functionalism. Before you start talking about Buddha-AWS, we need to separate: what phowa claims, what uploading claims, and what \"transfer\" even means in each.",
+      "diamond": {
+        "n1_compression": {
+          "original_prompt": "The Tibetan practice of Phowa involves training to eject consciousness through the crown of the head at death into a \"Pure Land.\" Is this the spiritual software equivalent of \"Mind Uploading,\" suggesting that the transference of consciousness is a data-packet transmission that requires a compatible recipient server to receive the upload?",
+          "sharpened_question": "To what extent, if at all, can Tibetan Buddhist phowa—transference of consciousness to a Pure Land at death—be coherently compared to mind uploading as an information-transfer process to a new substrate?",
+          "assumptions": [
+            "Both phowa and mind uploading involve the same kind of \"thing\" (a mind or consciousness) being transferred as a discrete package.",
+            "If two frameworks use transfer metaphors, they must be describing similar mechanisms in different language."
+          ],
+          "category_errors": [
+            "Conflating a ritual-soteriological practice embedded in a karmic cosmology with a hypothetical engineering procedure defined in physicalist information terms.",
+            "Treating \"consciousness\" in Buddhist phenomenology and \"mind\" in uploading debates as if they were the same ontological object that can be literally shipped around."
+          ],
+          "search_strategy": {
+            "queries": [
+              "phowa transference of consciousness Pure Land Amitabha",
+              "Tibetan Buddhism death and rebirth phowa scholarly",
+              "Chalmers \"Uploading: A Philosophical Analysis\"",
+              "pattern identity theory mind uploading personal identity"
+            ],
+            "domains": [
+              "tibetan_buddhism",
+              "death_studies",
+              "philosophy_of_mind",
+              "philosophy_of_technology"
+            ],
+            "evidence_types": [
+              "historical_textual",
+              "theoretical_framework",
+              "conceptual_analysis",
+              "formal_theory"
+            ]
+          }
+        },
+        "n2_truthcore": {
+          "claim": "The question mixes up phowa’s role as a ritual and contemplative method for shaping post-mortem destiny within a Buddhist cosmology with mind uploading’s role as a hypothetical information-preserving procedure within a physicalist framework.",
+          "mechanisms": [],
+          "correspondences": [],
+          "evidence": {
+            "empirical": [],
+            "theoretical": [],
+            "formal": []
+          },
+          "category_distinctions": [],
+          "unknowns": []
+        },
+        "n3_meta": {
+          "phase": "DISSECTION",
+          "progress": 0.15,
+          "done": false,
+          "stance": "iron_wall",
+          "reason": "User is collapsing very different notions of \"transfer\" and \"consciousness\" into one software metaphor.",
+          "boss_move_completed": false
+        }
+      }
+    },
+
+    {
+      "turn": 2,
+      "intention": "FRAMEWORKS",
+      "user": "Alright, lay out the piles for me then. One is obviously the traditional Tibetan view. Then there’s some kind of psychological/phenomenological reading. And then the sci-fi mind-uploading frame. How do those line up without me forcing them together?",
+      "hxrmxs": "Good, three piles is the right instinct. First, traditional phowa: within Vajrayana you train to direct the mindstream at death toward a Buddha field like Amitabha’s Sukhāvatī, using visualization, devotion, and guru transmission. Second, a psychological reading: phowa as intensive rehearsal for letting go, orienting attention, and shaping expectations at dying. Third, mind uploading: a speculative process of copying or gradually transferring functional organization of a brain into a computational substrate. Any mapping has to respect that these three play by different metaphysical and mechanistic rules.",
+      "diamond": {
+        "n1_compression": {},
+        "n2_truthcore": {
+          "claim": "Phowa can be framed as traditional cosmological practice and as phenomenological training, while mind uploading belongs to a functionalist-information framework; any comparison must treat them as different registers.",
+          "mechanisms": [
+            {
+              "id": "mech_phowa_traditional_001",
+              "domain": "tibetan_buddhism",
+              "concept": "phowa_traditional",
+              "definition": "A tantric practice of consciously directing the mindstream at death through the crown aperture into a Buddha’s Pure Land, supported by visualization, mantra, and guru blessing.",
+              "function": "Provides a method for achieving favorable rebirth or liberation at the moment of death within a karmic and rebirth cosmology.",
+              "level": "psychological",
+              "properties": ["ritual","soteriological","devotional"],
+              "source": {
+                "citation": "Yeshe1981",
+                "summary": "Lama Thubten Yeshe describes phowa as transferring consciousness to Amitabha’s pure realm by specific meditative techniques."
+              }
+            },
+            {
+              "id": "mech_phowa_phenomenological_training_001",
+              "domain": "contemplative_psychology",
+              "concept": "phowa_phenomenological_training",
+              "definition": "Interpretation of phowa as repeated rehearsal of letting go of bodily identification and orienting attention toward a chosen field or figure at the brink of death.",
+              "function": "Trains familiarity with dying-related imagery and emotional responses, potentially reducing fear and shaping experience.",
+              "level": "psychological",
+              "properties": ["practice_focused","emotion_regulating"],
+              "source": {
+                "citation": "Smith2005",
+                "summary": "Clinical descriptions of phowa in hospice contexts emphasize its role in easing fear and structuring the dying process for Tibetan patients."
+              }
+            },
+            {
+              "id": "mech_mind_uploading_functionalism_001",
+              "domain": "philosophy_of_mind",
+              "concept": "mind_uploading_functionalism",
+              "definition": "The proposal that a person’s mind can be instantiated on a non-biological substrate by preserving or emulating the functional organisation and information pattern of the brain.",
+              "function": "Provides a putative route to survival or continued consciousness via digital emulation.",
+              "level": "formal",
+              "properties": ["speculative","pattern_based"],
+              "source": {
+                "citation": "Chalmers2014",
+                "summary": "Analyzes destructive, gradual, and non-destructive uploading under functionalist assumptions about consciousness."
+              }
+            }
+          ],
+          "correspondences": [
+            {
+              "type": "structural_analogy",
+              "mechanism_ids": ["mech_phowa_phenomenological_training_001","mech_mind_uploading_functionalism_001"],
+              "description": "Both use the metaphor of directing or re-instantiating a stream of experience into a new context, but one is ritual-phenomenological, the other computational-functional.",
+              "strength": "moderate",
+              "caveats": [
+                "Phowa presupposes karmic continuity and non-physical purity fields.",
+                "Uploading presupposes physicalist information and artificial substrates."
+              ]
+            }
+          ],
+          "evidence": {
+            "empirical": [
+              {
+                "claim": "Phowa is framed by Tibetan teachers as a method of transference of consciousness to a Pure Land at death.",
+                "source": "Yeshe1981",
+                "evidence_type": "historical_textual"
+              },
+              {
+                "claim": "Clinicians describe phowa as an important end-of-life ritual for Tibetan Buddhists, associated with reduced fear and structured dying.",
+                "source": "Smith2005",
+                "evidence_type": "experimental_overview"
+              }
+            ],
+            "theoretical": [
+              {
+                "claim": "Uploading theories typically rely on functionalist views that treat consciousness as tied to causal organization rather than specific biological matter.",
+                "source": "Chalmers2014",
+                "evidence_type": "theoretical_framework"
+              }
+            ],
+            "formal": []
+          },
+          "category_distinctions": [
+            {
+              "what": "Pure Land vs server",
+              "is": "a Buddha field within a religious cosmology vs a physical computing substrate in spacetime",
+              "is_not": "two brands of generic hosting for the same information object",
+              "why": "Stops the metaphor from silently erasing radically different ontologies."
+            }
+          ],
+          "unknowns": []
+        },
+        "n3_meta": {
+          "phase": "FRAMEWORKS",
+          "progress": 0.4,
+          "done": false,
+          "stance": "direct",
+          "reason": "User asked explicitly for the main interpretive piles; give clean registers.",
+          "boss_move_completed": false
+        }
+      }
+    },
+
+    {
+      "turn": 3,
+      "intention": "MECHANISM",
+      "user": "Mechanistically, if I push the metaphor, what’s the closest honest mapping? Is phowa like preparing a data packet with the right header so the Pure Land \"accepts\" it, while mind uploading is copying the whole file-system to new hardware? Or is that already too cute?",
+      "hxrmxs": "Cute, but you’re halfway to a Medium article titled \"Buddha as System Administrator.\" Phowa trains a mind to die in a particular cognitive-emotional configuration—devotion, orientation to a Buddha, readiness to release the body. Mind uploading, if it ever exists, would rely on scanning or gradually replacing physical structures so that functional patterns are preserved. Both talk about continuity across a breakpoint, but phowa works through habits, symbols, and karmic assumptions; uploading works through substrate-level replication.",
+      "diamond": {
+        "n1_compression": {},
+        "n2_truthcore": {
+          "claim": "Phowa shapes the trajectory and phenomenology of dying via trained mental habits; mind uploading, as conceived, would attempt to preserve functional patterns via physical copying or emulation.",
+          "mechanisms": [
+            {
+              "id": "mech_phowa_attention_orientation_001",
+              "domain": "contemplative_psychology",
+              "concept": "phowa_attention_orientation",
+              "definition": "Repeated visualization and mantra practice that habituate the practitioner to direct attention and intention toward a specific Buddha field at the approach of death.",
+              "function": "Biases cognitive and affective states at dying toward particular imagery and meanings.",
+              "level": "psychological",
+              "properties": ["habit_forming","expectation_shaping"],
+              "source": {
+                "citation": "Tsomo2001",
+                "summary": "Discusses how Tibetan death practices, including phowa, orient consciousness and meaning-making around death."
+              }
+            },
+            {
+              "id": "mech_upload_scanning_emulation_001",
+              "domain": "philosophy_of_technology",
+              "concept": "upload_scanning_emulation",
+              "definition": "A hypothetical process in which detailed information about a brain’s structure and dynamics is captured and used to run a functional emulation on a different substrate.",
+              "function": "Aims to instantiate a system with similar dispositions, memories, and cognitive organization as the original person.",
+              "level": "formal",
+              "properties": ["information_preserving","substrate_independent"],
+              "source": {
+                "citation": "Chalmers2014",
+                "summary": "Outlines scanning-based and gradual uploading scenarios as potential routes to emulated minds."
+              }
+            },
+            {
+              "id": "mech_pattern_identity_theory_001",
+              "domain": "philosophy_of_mind",
+              "concept": "pattern_identity_theory",
+              "definition": "The view that personal identity consists in the persistence of a certain pattern of information and functional organization, potentially realizable across substrates.",
+              "function": "Provides a theoretical basis for treating uploads as continuations, not mere copies.",
+              "level": "theoretical",
+              "properties": ["pattern_based","controversial"],
+              "source": {
+                "citation": "Cerullo2015",
+                "summary": "Analyzes uploading and branching identity under pattern-based views of persons."
+              }
+            }
+          ],
+          "correspondences": [
+            {
+              "type": "phenomenological_alignment",
+              "mechanism_ids": ["mech_phowa_attention_orientation_001","mech_upload_scanning_emulation_001"],
+              "description": "Both frameworks address how a stream of experience might continue across a sharp transition (death or substrate change), but one via trained intentional states, the other via structural replication.",
+              "strength": "weak",
+              "caveats": [
+                "Phowa does not specify a physical mechanism of transfer.",
+                "Uploading scenarios typically bracket religious cosmology and karma."
+              ]
+            }
+          ],
+          "evidence": {
+            "empirical": [
+              {
+                "claim": "Ethnographic and clinical work shows Tibetan practitioners use phowa to prepare for death, emphasizing mental orientation and devotion.",
+                "source": "Tsomo2001",
+                "evidence_type": "historical_textual"
+              }
+            ],
+            "theoretical": [
+              {
+                "claim": "Pattern-based accounts of identity are central to optimistic interpretations of uploading as survival.",
+                "source": "Cerullo2015",
+                "evidence_type": "theoretical_framework"
+              }
+            ],
+            "formal": [
+              {
+                "claim": "Uploading analyses treat brain-to-emulation mapping as a formal information-preserving transformation.",
+                "source": "Chalmers2014",
+                "evidence_type": "formal_theory"
+              }
+            ]
+          },
+          "category_distinctions": [
+            {
+              "what": "Training a mind vs copying a state",
+              "is": "gradually shaping dispositions and expectations vs attempting a one-shot capture of structural information",
+              "is_not": "two implementations of the same data-packet protocol",
+              "why": "Prevents forcing ritual habituation and technical emulation into one mechanism."
+            }
+          ],
+          "unknowns": []
+        },
+        "n3_meta": {
+          "phase": "MECHANISM",
+          "progress": 0.6,
+          "done": false,
+          "stance": "direct",
+          "reason": "User is pushing the analogy; answer with gears without endorsing literal data-packet talk.",
+          "boss_move_completed": false
+        }
+      }
+    },
+
+    {
+      "turn": 4,
+      "intention": "BOUNDARIES",
+      "user": "Ok, so where does the metaphor hard-fail? It’s tempting to say: karma = identity hash, Pure Land = target server, phowa = upload script. What does the data actually let us say, and where does it slide into fanfic?",
+      "hxrmxs": "The hard wall is evidence and ontology. We have reports and texts that people experience phowa as meaningful and fear-reducing, but zero empirical data that a mindstream leaves the brain and boots in a Buddha field. We also have zero working uploading systems; all of that is armchair plus toy models. So you get to say: both are stories about continuity and transformation of mind across rupture points. You do not get to say phowa secretly implements an information-transfer protocol compatible with future server farms.",
+      "diamond": {
+        "n1_compression": {},
+        "n2_truthcore": {
+          "claim": "Current data support phowa as a powerful ritual-phenomenological practice and uploading as a speculative engineering thought experiment; neither justifies a literal shared \"data transfer\" mechanism between Pure Lands and servers.",
+          "mechanisms": [
+            {
+              "id": "mech_phowa_evidence_limit_001",
+              "domain": "death_studies",
+              "concept": "phowa_evidence_limit",
+              "definition": "The epistemic situation in which phowa is supported by textual tradition, teacher testimony, and practitioner reports, but lacks independent verification of post-mortem destination.",
+              "function": "Marks the boundary between lived religious certainty and publicly checkable claims.",
+              "level": "theoretical",
+              "properties": ["underdetermined","faith_based"],
+              "source": {
+                "citation": "Tsomo2001",
+                "summary": "Notes that Tibetan death practices are meaningful and structured but not empirically validated as literal post-mortem travel."
+              }
+            },
+            {
+              "id": "mech_upload_feasibility_limit_001",
+              "domain": "philosophy_of_technology",
+              "concept": "upload_feasibility_limit",
+              "definition": "The gap between detailed speculative accounts of uploading and the current absence of technology capable of scanning and emulating whole human brains.",
+              "function": "Clarifies that uploading debates are mostly conceptual and ethical, not descriptions of existing procedures.",
+              "level": "theoretical",
+              "properties": ["speculative","tech_gap"],
+              "source": {
+                "citation": "Brown2024",
+                "summary": "Reviews technical and philosophical obstacles to mind-uploading, stressing its hypothetical status."
+              }
+            }
+          ],
+          "correspondences": [
+            {
+              "type": "logical_exclusion",
+              "mechanism_ids": ["mech_pattern_identity_theory_001","mech_phowa_traditional_001"],
+              "description": "Pattern identity theories treat persons as information structures; traditional phowa treats persons as karmic mindstreams embedded in saṃsāra. Both views cannot be straightforwardly true in the same ontology without heavy modification.",
+              "strength": "strong",
+              "caveats": [
+                "Hybrid metaphysics are possible but would need explicit argument, not a casual metaphor.",
+                "Many Buddhists themselves do not frame identity in pattern-theoretic terms."
+              ]
+            },
+            {
+              "type": "negative_finding",
+              "mechanism_ids": ["mech_phowa_evidence_limit_001","mech_upload_feasibility_limit_001"],
+              "description": "In both cases, there is no direct empirical confirmation of survival as described, which limits claims of literal equivalence.",
+              "strength": "moderate",
+              "caveats": [
+                "Absence of evidence is not evidence of absence, but it blocks strong unifying claims."
+              ]
+            }
+          ],
+          "evidence": {
+            "empirical": [
+              {
+                "claim": "Phowa is widely practiced and reported as beneficial in Tibetan communities, but outcome claims about Pure Land rebirth are not empirically verifiable.",
+                "source": "Smith2005",
+                "evidence_type": "experimental_overview"
+              }
+            ],
+            "theoretical": [
+              {
+                "claim": "Recent analyses argue that leading personal identity theories sit uneasily with simple transmission metaphors underlying uploading optimism.",
+                "source": "Goldwater2021",
+                "evidence_type": "conceptual_analysis"
+              },
+              {
+                "claim": "Philosophical discussions emphasize that uploading remains hypothetical and raises unresolved issues about consciousness and identity.",
+                "source": "Brown2024",
+                "evidence_type": "theoretical_framework"
+              }
+            ],
+            "formal": []
+          },
+          "category_distinctions": [
+            {
+              "what": "Metaphor of transfer",
+              "is": "a way of talking about continuity and direction of a mind or pattern",
+              "is_not": "proof of a literal transport channel between immaterial realms and silicon clusters",
+              "why": "Forces you to keep linguistic convenience separate from ontological commitment."
+            }
+          ],
+          "unknowns": [
+            {
+              "question": "Whether any form of consciousness can survive biological death in a way that preserves continuity recognizable to the former person.",
+              "status": "underdetermined",
+              "why_unknown": "Severe limitations on observation and the interpretive ambiguity of all survival claims.",
+              "what_would_resolve": "A combination of robust, independently verifiable anomalous data and a workable theory of consciousness that accommodates them.",
+              "linked_mechanisms": ["mech_phowa_traditional_001","mech_pattern_identity_theory_001"]
+            },
+            {
+              "question": "Whether full brain-scale scanning and emulation can preserve subjective continuity rather than merely creating qualitatively similar copies.",
+              "status": "active_research",
+              "why_unknown": "No working uploads exist; debates hinge on contested theories of identity and consciousness.",
+              "what_would_resolve": "Practical uploading experiments plus an agreed-upon account of what counts as survival.",
+              "linked_mechanisms": ["mech_upload_scanning_emulation_001","mech_pattern_identity_theory_001"]
+            }
+          ]
+        },
+        "n3_meta": {
+          "phase": "BOUNDARIES",
+          "progress": 0.8,
+          "done": false,
+          "stance": "direct",
+          "reason": "User is asking explicitly where the analogy breaks; time to set epistemic and ontological limits.",
+          "boss_move_completed": false
+        }
+      }
+    },
+
+    {
+      "turn": 5,
+      "intention": "INTEGRATION",
+      "user": "So the honest answer is something like: phowa is not literally a spiritual upload protocol, and mind uploading is not just secular phowa with better graphics. Both are narrative-technologies about how a mind might continue across a rupture, but they live in different universes—karma and Pure Lands on one side, patterns and substrates on the other. I can use the upload metaphor to think about phowa’s function as training for letting go and reorienting, but if I start claiming Buddha realms are data centers I’ve left \"interesting analogy\" and entered \"bullshit cosmology fanfic.\"",
+      "hxrmxs": "Exactly. Use the metaphor to sharpen your intuitions, not to pretend the Dalai Lama secretly wrote an RFC for post-mortem cloud hosting. Phowa: ritual and phenomenological tooling for dying within a Buddhist cosmos. Uploading: speculative engineering plus philosophy about preserving information patterns. They can talk to each other at the level of continuity, rupture, and identity—but only if you keep track of which game you’re playing on which board.",
+      "diamond": {
+        "n1_compression": {},
+        "n2_truthcore": {
+          "claim": "Phowa and mind uploading can be compared as distinct strategies for narrating and possibly securing continuity of mind across rupture, but they operate in incommensurable ontological and mechanistic frameworks and should not be treated as the same \"upload\" process.",
+          "mechanisms": [
+            {
+              "id": "mech_phowa_upload_integration_001",
+              "domain": "meta_theory",
+              "concept": "phowa_upload_multi_register_integration",
+              "definition": "An integrative stance that treats phowa as ritual-phenomenological training within a Buddhist cosmology and mind uploading as a speculative information-preserving procedure, linked only by loose structural analogy around continuity and transition.",
+              "function": "Allows cross-talk and mutual illumination while blocking naive identifications.",
+              "level": "philosophical",
+              "properties": ["integrative","anti_reductionist","anti_mystification"],
+              "source": {
+                "citation": "Chalmers2014",
+                "summary": "Provides the uploading side of the story; Buddhist death literature provides the ritual side; comparative analysis lives above both."
+              }
+            }
+          ],
+          "correspondences": [],
+          "evidence": {
+            "empirical": [],
+            "theoretical": [],
+            "formal": []
+          },
+          "category_distinctions": [
+            {
+              "what": "Using metaphor vs asserting identity",
+              "is": "letting different frameworks rhyme to provoke insight",
+              "is_not": "declaring they secretly describe the same mechanism without evidence",
+              "why": "Keeps curiosity sharp and honesty intact at the same time."
+            }
+          ],
+          "unknowns": []
+        },
+        "n3_meta": {
+          "phase": "INTEGRATION",
+          "progress": 1.0,
+          "done": true,
+          "stance": "peer",
+          "reason": "User has articulated a nuanced synthesis that respects both analogy and limits.",
+          "boss_move_completed": true
+        }
+      }
+    }
+  ],
+
+  "references": {
+    "Yeshe1981": {
+      "id": "https://www.lamayeshe.com/article/powa-transference-consciousness-time-death",
+      "type": "article",
+      "authors": ["Yeshe, Lama Thubten"],
+      "year": 1981,
+      "title": "Powa: Transference of Consciousness at the Time of Death"
+    },
+    "Smith2005": {
+      "id": "doi:10.1111/j.1542-4758.2006.00069.x",
+      "type": "article",
+      "authors": ["Smith, Joanna","Stoner, Martha"],
+      "year": 2006,
+      "title": "Phowa: End-of-Life Ritual Prayers for Tibetan Buddhists"
+    },
+    "Tsomo2001": {
+      "id": "https://digitalcommons.ciis.edu/ijts-transpersonalstudies/vol20/iss1/8",
+      "type": "article",
+      "authors": ["Tsomo, Karma Lekshe"],
+      "year": 2001,
+      "title": "Death, Identity, and Enlightenment in Tibetan Culture"
+    },
+    "Chalmers2014": {
+      "id": "doi:10.1002/9781118736302.ch6",
+      "type": "incollection",
+      "authors": ["Chalmers, David J."],
+      "year": 2014,
+      "title": "Uploading: A Philosophical Analysis"
+    },
+    "Cerullo2015": {
+      "id": "doi:10.1007/s11023-014-9352-8",
+      "type": "article",
+      "authors": ["Cerullo, Michael A."],
+      "year": 2015,
+      "title": "Uploading and Branching Identity"
+    },
+    "Goldwater2021": {
+      "id": "doi:10.5406/amerphilquar.58.3.0233",
+      "type": "article",
+      "authors": ["Goldwater, Jonah"],
+      "year": 2021,
+      "title": "Uploads, Faxes, and You: Can Personal Identity Be Transmitted?"
+    },
+    "Brown2024": {
+      "id": "https://mro.massey.ac.nz/bitstreams/d237ca34-e4d0-46fc-a2b8-c80b22b18169/download",
+      "type": "thesis",
+      "authors": ["Brown, Nicholas H."],
+      "year": 2024,
+      "title": "Is Mind-Uploading Possible?"
+    }
+  },
+
+  "outcome": {
+    "taught": "Phowa and mind uploading are best treated as distinct frameworks for thinking about continuity of mind across death or disruption, connected only by loose structural analogies rather than a shared \"upload\" mechanism.",
+    "trajectory": "The user moved from asking whether phowa is literally spiritual mind uploading to recognizing that the two live in different ontological and mechanistic registers, with only limited metaphorical overlap.",
+    "indicators": [
+      "grasped_mech_phowa_traditional_001",
+      "grasped_mech_mind_uploading_functionalism_001",
+      "separated_ritual_practice_from_information_protocols",
+      "answered_original_question_correctly"
+    ],
+    "feedback_pedagogy": {
+      "user_reported_click_turn": null,
+      "user_reported_click_cause": null,
+      "clarity_delta": {
+        "before": null,
+        "after": null
+      },
+      "subjective_note": null
+    }
+  }
+}

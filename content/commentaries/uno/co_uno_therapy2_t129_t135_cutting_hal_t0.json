@@ -1,0 +1,57 @@
+{
+  "co_id": "co:uno_therapy2_t129_t135_cutting_hal_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy2_t129_t135_cutting_hallway_interruption",
+  "turn_index": 0,
+  "lineage": "Therapeutic",
+  "student_state": "dissociated_rage",
+  "behavior_tags": [
+    "acting_out",
+    "self_harm"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_05",
+    "function_name": "UM_05",
+    "mechanism_shape": "STRUCTURAL_ANALOGY",
+    "teaching_actions": [
+      "interprets_action",
+      "defines_defense"
+    ],
+    "traps_avoided": [
+      "pain_validates_reality"
+    ],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.62,
+      "attunement": 0.8,
+      "style": 0.5,
+      "depth": 0.85,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_03",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_04",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "no_clear_effect",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "'I went out there and sure enough, there she was, sitting on the f'—student presents as dissociated rage. Teacher's move uses structural_analogy: '[Action: Takes the knife away, brings her into office.]  Every de'. Strategy: interprets action, defines defense. Hypothesis: structural_analogy mechanism will create no_clear_effect. Watching how student responds to this intervention.",
+  "accumulated_insight": "T1: Student says 'I went out there and sure enough, there she was, sitting on the f' showing dissociated_rage via acting_out, self_harm. Teacher responds '[Action: Takes the knife away, brings her into office.]  Every de' using structural_analogy to interprets action, defines defense. Opening UNMAKING move addresses dissociated_rage. Predicting no_clear_effect because structural_analogy interventions typically produce this response pattern.",
+  "abstract_pattern": "",
+  "visible_response": "[Action: Takes the knife away, brings her into office.]\n\nEvery defense is a cut to the soul.\nIf these defenses are not blocked, the patient may die the death of a thousand cuts.",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

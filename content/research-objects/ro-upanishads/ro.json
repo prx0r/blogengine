@@ -1,0 +1,178 @@
+{
+  "ro_id": "ro:upanishads",
+  "schema_version": 1,
+  "title": "The Upanishads: Principal Teachings on Brahman, Atman, and Liberation",
+  "subtitle": "Key passages on non-duality, the Self, and the path to liberation from the Isa, Katha, and Kena Upanishads (Swami Paramananda trans.)",
+  "family": "source-study",
+  "status": "draft",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "Extracted passages from the Isa, Katha, and Kena Upanishads on Brahman-Atman identity, neti neti, OM, the chariot metaphor, the four states of consciousness, and liberation.",
+    "scope": "Covers Isa-Upanishad (oneness of Self and God), Katha-Upanishad (Nachiketas' dialogue with Death, the chariot metaphor, OM as Brahman), and Kena-Upanishad (Brahman as the eye of the eye, beyond mind and speech). This edition (Paramananda, 1919) includes three of the eleven principal Upanishads.",
+    "traditions": ["vedanta", "upanishads", "hinduism"]
+  },
+  "sources": [
+    {
+      "source_id": "upanishads-paramananda",
+      "tier": 1,
+      "label": "The Upanishads — Translated and Commentated by Swami Paramananda (1919), Project Gutenberg #3283",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": ["isa_upanishad", "katha_upanishad", "kena_upanishad", "brahman_atman_identity", "om_as_brahman", "chariot_metaphor", "four_states_of_consciousness"],
+      "sections_affected": ["brahman_atman", "om_pranava", "practical_philosophy", "states_of_consciousness"],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "brahman_atman",
+      "subsection": "isa_upanishad_oneness",
+      "kind": "source",
+      "text": "All this, whatsoever exists in the universe, should be covered by the Lord. Having renounced (the unreal), enjoy (the Real). Do not covet the wealth of any man. ... He who sees all beings in the Self and the Self in all beings, he never turns away from It (the Self). He who perceives all beings as the Self for him how can there be delusion or grief, when he sees this oneness (everywhere)?",
+      "source_ids": ["upanishads-paramananda"],
+      "topics": ["brahman", "atman", "oneness", "non-duality", "renunciation"],
+      "line_refs": ["343-345", "437-452"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "practical_philosophy",
+      "subsection": "the_good_and_the_pleasant",
+      "kind": "source",
+      "text": "Yama said: The good is one thing and the pleasant another. These two, having different ends, bind a man. It is well with him who chooses the good. He who chooses the pleasant misses the true end. The good and the pleasant approach man; the wise examines both and discriminates between them; the wise prefers the good to the pleasant, but the foolish man chooses the pleasant through love of bodily pleasure.",
+      "source_ids": ["upanishads-paramananda"],
+      "topics": ["discrimination", "shreyas", "preyas", "katha_upanishad"],
+      "line_refs": ["995-1007"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "practical_philosophy",
+      "subsection": "chariot_metaphor",
+      "kind": "source",
+      "text": "Know the Atman (Self) as the lord of the chariot, and the body as the chariot. Know also the intellect to be the driver and mind the reins. The senses are called the horses; the sense objects are the roads; when the Atman is united with body, senses and mind, then the wise call Him the enjoyer.",
+      "source_ids": ["upanishads-paramananda"],
+      "topics": ["atman", "chariot", "senses", "mind", "intellect", "katha_upanishad"],
+      "line_refs": ["1373-1382"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "om_pranava",
+      "subsection": "om_as_brahman",
+      "kind": "source",
+      "text": "Yama replied: That goal which all the Vedas glorify, which all austerities proclaim, desiring which (people) practice Brahmacharya (a life of continence and service), that goal I tell thee briefly\u2014it is Aum. This Word is indeed Brahman. This Word is indeed the Supreme. He who knows this Word obtains whatever he desires. This is the best Support, This is the highest Support; he who knows this Support is glorified in the world of Brahman.",
+      "source_ids": ["upanishads-paramananda"],
+      "topics": ["om", "pranava", "brahman", "katha_upanishad", "sound_brahman"],
+      "line_refs": ["1183-1213"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "brahman_atman",
+      "subsection": "self_unborn_and_eternal",
+      "kind": "source",
+      "text": "This Self is never born, nor does It die. It did not spring from anything, nor did anything spring from It. This Ancient One is unborn, eternal, everlasting. It is not slain even though the body is slain. If the slayer thinks that he slays, or if the slain thinks that he is slain, both of these know not. For It neither slays nor is It slain. The Self is subtler than the subtle, greater than the great; It dwells in the heart of each living being.",
+      "source_ids": ["upanishads-paramananda"],
+      "topics": ["atman", "eternity", "immortality", "katha_upanishad", "death"],
+      "line_refs": ["1223-1241"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_006",
+      "section": "brahman_atman",
+      "subsection": "kena_brahman_as_ground",
+      "kind": "source",
+      "text": "By whom commanded and directed does the mind go towards its objects? Commanded by whom does the life-force, the first (cause), move? At whose will do men utter speech? What power directs the eye and the ear? ... It is the ear of the ear, the mind of the mind, the speech of the speech, the life of the life, the eye of the eye. The wise, freed (from the senses and from mortal desires), after leaving this world, become immortal.",
+      "source_ids": ["upanishads-paramananda"],
+      "topics": ["brahman", "kena_upanishad", "source_of_consciousness", "immortality"],
+      "line_refs": ["2159-2178"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_007",
+      "section": "brahman_atman",
+      "subsection": "brahman_beyond_mind_and_speech",
+      "kind": "source",
+      "text": "There the eye does not go, nor speech, nor mind. We do not know That; we do not understand how It can be taught. It is distinct from the known and also It is beyond the unknown. ... That which speech does not illumine, but which illumines speech: know that alone to be the Brahman (the Supreme Being), not this which people worship here. That which cannot be thought by mind, but by which, they say, mind is able to think: know that alone to be the Brahman, not this which people worship here.",
+      "source_ids": ["upanishads-paramananda"],
+      "topics": ["brahman", "kena_upanishad", "neti_neti", "apophatic", "transcendence"],
+      "line_refs": ["2200-2227"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_008",
+      "section": "practical_philosophy",
+      "subsection": "beyond_the_senses_and_liberation",
+      "kind": "source",
+      "text": "Beyond the senses are the objects, beyond the objects is the mind, beyond the mind is the intellect, beyond the intellect is the great Atman. Beyond the great Atman is the Unmanifested; beyond the Unmanifested is the Purusha (the Cosmic Soul); beyond the Purusha there is nothing. That is the end, that is the final goal. ... When the five organs of perception become still, together with the mind, and the intellect ceases to be active: that is called the highest state. This firm holding back of the senses is what is known as Yoga.",
+      "source_ids": ["upanishads-paramananda"],
+      "topics": ["hierarchy_of_being", "yoga", "liberation", "katha_upanishad", "purusha"],
+      "line_refs": ["1455-1477", "1995-2009"],
+      "status": "active"
+    }
+  ],
+  "coverage": {
+    "brahman_atman": {
+      "status": "good",
+      "sources": ["upanishads-paramananda"],
+      "passage_count": 4,
+      "estimated_completeness": 0.5,
+      "gaps": ["Only Isa, Katha, and Kena Upanishads are present in this edition. Missing Chandogya (tat tvam asi), Brihadaranyaka (neti neti), Mandukya (four states of consciousness), Taittiriya (five koshas), and Shvetashvatara. These must be sourced from a more complete edition."]
+    },
+    "om_pranava": {
+      "status": "good",
+      "sources": ["upanishads-paramananda"],
+      "passage_count": 1,
+      "estimated_completeness": 0.4,
+      "gaps": ["The Mandukya Upanishad, which is entirely devoted to OM, is not included in this edition."]
+    },
+    "practical_philosophy": {
+      "status": "good",
+      "sources": ["upanishads-paramananda"],
+      "passage_count": 3,
+      "estimated_completeness": 0.5,
+      "gaps": ["Key teachings from later Upanishads on jivanmukti, the five koshas, and the four states are absent from this source."]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "coverage_gap",
+      "title": "Only three of eleven principal Upanishads included in source",
+      "description": "The Paramananda edition only covers Isa, Katha, and Kena. Missing: Isha (covered), Kena (covered), Katha (covered), Prashna, Mundaka, Mandukya, Taittiriya, Aitareya, Chandogya, Brihadaranyaka, Shvetashvatara. A complete edition must be sourced for full coverage.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    },
+    {
+      "id": "issue-002",
+      "type": "coverage_gap",
+      "title": "Missing Chandogya 'tat tvam asi' and Brihadaranyaka 'neti neti'",
+      "description": "Two of the four Mahavakyas are absent from this edition. These are foundational teachings for non-dual Vedanta.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial RO created from Paramananda's translation of three Upanishads (Isa, Katha, Kena). Eight key passages extracted covering Brahman-Atman identity, the chariot metaphor, OM, the ground of consciousness, and the path of discrimination.",
+      "sources_added": ["upanishads-paramananda"],
+      "passage_count": 8,
+      "status": "draft"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created in draft state from Paramananda's Upanishads edition",
+      "sources_total": 1,
+      "passages_total": 8
+    }
+  ]
+}

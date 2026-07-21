@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "last_updated": "2026-07-20",
+  "strategy": "Process sources in order of uniqueness — topics we cover that nobody else does come first.",
+  "priority_tiers": [
+    {
+      "tier": 1,
+      "label": "Core differentiators — tantra, kashmir shaivism, corbin",
+      "source_dirs": ["blueprints/source_texts/", "content/sources/tantra/", "content/sources/sufism/"],
+      "rros_to_prioritize": ["tantraloka", "corbin", "suhrawardi", "ficino", "proclus"],
+      "topics": ["tantraloka cosmology", "spanda", "pratyabhijna", "36 tattvas", "corbin imaginal", "suhrawardi illumination", "ficino daimon"]
+    },
+    {
+      "tier": 2,
+      "label": "Western esoteric — alchemy, hermetic, theurgy",
+      "source_dirs": ["content/sources/occult/", "blueprints/source_texts/ (agrippa, icbn arabi)"],
+      "rros_to_prioritize": ["alchemy", "daimon", "hermetic", "theurgy"],
+      "topics": ["alchemical transformation", "holy guardian angel", "pgm theurgy", "corpus hermeticum"]
+    },
+    {
+      "tier": 3,
+      "label": "Comparative — death, dreams, consciousness across traditions",
+      "source_dirs": ["content/sources/occult/death/", "synthesis-essays/"],
+      "rros_to_prioritize": ["death-systems", "seth", "dreams", "consciousness"],
+      "topics": ["death and afterlife", "dream reality", "seth material", "nonduality"]
+    },
+    {
+      "tier": 4,
+      "label": "Scholarly — platonism, science bridges",
+      "source_dirs": ["content/sources/platonism/", "library/science/", "content/works/ (bridge, levin)"],
+      "rros_to_prioritize": ["proclus", "plotinus", "penrose", "levin", "nanavira"],
+      "topics": ["neoplatonic emanations", "proclus elements", "orch OR", "basal cognition", "nanavira tetrahedron"]
+    },
+    {
+      "tier": 5,
+      "label": "Literature — mythical narratives as philosophical vehicles",
+      "source_dirs": [],
+      "rros_to_prioritize": ["literature"],
+      "topics": ["divine comedy", "odyssey nekyia", "gawain", "parzival", "golden ass"]
+    }
+  ],
+  "pipeline_actions": [
+    {
+      "action": "ro_to_essay",
+      "description": "Expand existing ROs into full essays",
+      "backlog": 173,
+      "priority": "highest",
+      "command": "hermes --skills write-and-publish --ro <ro_id>",
+      "note": "173 ROs exist but many lack essay expansions. Start with tantraloka family."
+    },
+    {
+      "action": "work_to_ro",
+      "description": "Compile works into research objects",
+      "backlog": 1744,
+      "priority": "high",
+      "command": "hermes skills acquire <work_id> → propose → merge",
+      "note": "1,917 works exist, only 173 ROs. ~10% coverage."
+    },
+    {
+      "action": "source_to_work",
+      "description": "Convert raw source texts into structured work JSONs",
+      "backlog": 500,
+      "priority": "medium",
+      "command": "hermes skills acquire <source>",
+      "note": "Blueprints source texts, synthesis essays, root PDFs not yet in works/"
+    },
+    {
+      "action": "essay_to_audio",
+      "description": "Generate TTS audio for essays that lack it",
+      "backlog": 1795,
+      "priority": "medium",
+      "command": "node scripts/generate-audio.mjs <essay-id>",
+      "note": "0 of 1795 essays have audio."
+    },
+    {
+      "action": "essay_to_video",
+      "description": "Run publish-video-fablecut for essays with audio",
+      "backlog": 56,
+      "priority": "medium",
+      "command": "cron job: video-pipeline (every 6h)",
+      "note": "56 videos planned, 1 pipeline started."
+    }
+  ],
+  "uncovered_topics": {
+    "description": "Areas where we have source material but NO research objects yet",
+    "gaps": [
+      "dzogchen / tibetan buddhist philosophy",
+      "taoist internal alchemy",
+      "greek magical papyri (PGM) practical theurgy",
+      "plotinus enneads systematic treatment",
+      "swedenborg angelic hierarchy",
+      "steiner threefold body / clairvoyance",
+      "alexander nature of order / wholeness",
+      "assembly theory / complexity consciousness",
+      "kybalion hermetic principles",
+      "shamanic journeying / ayahuasca visionary",
+      "tulpa / thoughtform manifestation",
+      "precognition / time anomalies",
+      "nagarjuna mulamadhyamakakarika full treatment",
+      "tsongkhapa tantric stages",
+      "bhagavad gita philosophical commentary",
+      "upanishads comparative analysis"
+    ],
+    "recommendation": "Prioritize dzogchen, taoist alchemy, and PGM as they overlap least with existing channels."
+  }
+}

@@ -1,0 +1,400 @@
+{
+  "episode_id": "ep_illusory_body_predictive_coding_001",
+  "seed_question": "The \"Illusory Body\" practice in the Six Yogas of Naropa trains the yogi to see their self-image as a construct. Does this anticipate the \"Predictive Coding\" model in neuroscience, which says the self is just a controlled hallucination generated to minimize prediction error?",
+  "topic": "illusory_body_predictive_coding",
+  "user_behavior_pattern": "smart_confused",
+  "target_turn_count": 5,
+
+  "turns": [
+
+    {
+      "turn": 1,
+      "intention": "DISSECTION",
+      "user": "I'm honestly lost. The Illusory Body practice tells you the self is appearance only—like a mirage. Predictive coding in neuroscience says the self is a hallucination that keeps error low. Are these basically the same? Or am I smashing spirituality and Bayesian math together like an idiot?",
+      "hxrmxs": "You're not an idiot—you're just mixing two entirely different jobs. Predictive coding is a computational story about how the brain models the world. Illusory Body practice is a soteriological technique for dismantling reification. One explains why perceptions behave as they do; the other trains you not to cling to them. Before mapping them, separate mechanism, phenomenology, and purpose.",
+      "diamond": {
+        "n1_compression": {
+          "original_prompt": "The \"Illusory Body\" practice in the Six Yogas of Naropa trains the yogi to see their self-image as a construct. Does this anticipate the \"Predictive Coding\" model in neuroscience, which says the self is just a controlled hallucination generated to minimize prediction error?",
+          "sharpened_question": "Do Illusory Body practices and predictive coding both describe the self as a constructed model, and where do their mechanisms, aims, and scopes diverge?",
+          "assumptions": [
+            "If two systems both call the self \"constructed\", they must refer to the same kind of construction.",
+            "Neural self-modeling and Buddhist deconstruction of self have identical explanatory roles."
+          ],
+          "category_errors": [
+            "Confusing computational modeling with soteriological deconstruction.",
+            "Treating phenomenological training as if it were a scientific hypothesis."
+          ],
+          "search_strategy": {
+            "queries": [
+              "Six Yogas of Naropa Illusory Body commentary",
+              "predictive coding self model Friston",
+              "controlled hallucination selfhood neuroscience review",
+              "Buddhism cognitive science self model comparison"
+            ],
+            "domains": ["buddhist_philosophy","cognitive_neuroscience","predictive_coding","philosophy_of_mind"],
+            "evidence_types": ["historical_textual","theoretical_framework","formal_theory"]
+          }
+        },
+        "n2_truthcore": {
+          "claim": "The question collapses soteriological deconstruction of the self with computational modeling of the self.",
+          "mechanisms": [],
+          "correspondences": [],
+          "evidence": { "empirical": [], "theoretical": [], "formal": [] },
+          "category_distinctions": [],
+          "unknowns": []
+        },
+        "n3_meta": {
+          "phase": "DISSECTION",
+          "progress": 0.15,
+          "done": false,
+          "stance": "iron_wall",
+          "reason": "User blends incompatible explanatory registers.",
+          "boss_move_completed": false
+        }
+      }
+    },
+
+    {
+      "turn": 2,
+      "intention": "FRAMEWORKS",
+      "user": "Okay but they both say the self isn't ultimately real. That feels like the same insight wearing different outfits. What's the real split here?",
+      "hxrmxs": "Three frameworks, three very different engines. Illusory Body: a tantric tool for seeing appearances as dependently arisen and empty. Predictive coding: a hierarchical Bayesian machine minimizing surprise. Philosophy of mind: the self as a functional construct. They rhyme because they all deny essence. They diverge because their goals and mechanisms don’t overlap.",
+      "diamond": {
+        "n1_compression": {},
+        "n2_truthcore": {
+          "claim": "Illusory Body, predictive coding, and functional self-model accounts represent three distinct frameworks whose overlap is structural rather than mechanistic.",
+          "mechanisms": [
+            {
+              "id": "mech_illusory_body_phenomenology_001",
+              "domain": "buddhist_philosophy",
+              "concept": "illusory_body_phenomenology",
+              "definition": "A tantric practice emphasizing that the body and self appear vividly but lack inherent existence, like reflections or dreams.",
+              "function": "Reduces reification and strengthens recognition of emptiness.",
+              "level": "psychological",
+              "properties": ["soteriological","experiential"],
+              "source": {
+                "citation": "Tsongkhapa2004",
+                "summary": "Explains Illusory Body as stabilizing recognition of appearance and emptiness."
+              }
+            },
+            {
+              "id": "mech_predictive_self_model_001",
+              "domain": "predictive_coding",
+              "concept": "predictive_self_model",
+              "definition": "The self arises as a hierarchical generative model summarizing bodily and environmental regularities to minimize prediction error.",
+              "function": "Maintains coherence of perception and action under uncertainty.",
+              "level": "cognitive_neuroscience",
+              "properties": ["computational","generative_model"],
+              "source": {
+                "citation": "Friston2010",
+                "summary": "Proposes selfhood as an inference structure that reduces free energy."
+              }
+            },
+            {
+              "id": "mech_functional_self_construct_001",
+              "domain": "philosophy_of_mind",
+              "concept": "functional_self_construct",
+              "definition": "The self is a narrative and organizational construct used for coordination, prediction, and social interaction.",
+              "function": "Explains coherence of identity without invoking essence.",
+              "level": "psychological",
+              "properties": ["narrative","non_essentialist"],
+              "source": {
+                "citation": "Metzinger2009",
+                "summary": "Discusses the self-model as a transparent representational construct."
+              }
+            }
+          ],
+          "correspondences": [
+            {
+              "type": "structural_analogy",
+              "mechanism_ids": ["mech_illusory_body_phenomenology_001","mech_predictive_self_model_001"],
+              "description": "Both describe the self as appearance-only, grounded in processes rather than essences.",
+              "strength": "moderate",
+              "caveats": ["Purpose and mechanism differ radically."]
+            }
+          ],
+          "evidence": {
+            "empirical": [],
+            "theoretical": [
+              {
+                "claim": "Illusory Body training aims at recognizing emptiness of self and phenomena.",
+                "source": "Tsongkhapa2004",
+                "evidence_type": "historical_textual"
+              }
+            ],
+            "formal": []
+          },
+          "category_distinctions": [
+            {
+              "what": "Emptiness",
+              "is": "a metaphysical and phenomenological claim",
+              "is_not": "a computational mechanism",
+              "why": "Avoids treating spiritual training as a neural algorithm."
+            }
+          ],
+          "unknowns": []
+        },
+        "n3_meta": {
+          "phase": "FRAMEWORKS",
+          "progress": 0.4,
+          "done": false,
+          "stance": "direct",
+          "reason": "User needs three-domain separation.",
+          "boss_move_completed": false
+        }
+      }
+    },
+
+    {
+      "turn": 3,
+      "intention": "MECHANISM",
+      "user": "Fine, fine. Mechanistically then—how does predictive coding actually 'hallucinate' the self? And how close is that to the yogic idea that the body is like a dream image?",
+      "hxrmxs": "Predictive coding builds the self by stacking priors: bodily signals, proprioception, interoception, social expectations. The brain generates a best-guess avatar to keep error low. Illusory Body says the body appears vividly yet has no inherent essence. The similarity: both treat the self as constructed. The gulf: one is inferential machinery; the other is a method for undermining existential confusion.",
+      "diamond": {
+        "n1_compression": {},
+        "n2_truthcore": {
+          "claim": "Predictive coding generates a self-model through hierarchical inference, while Illusory Body trains recognition of that model's lack of inherent existence.",
+          "mechanisms": [
+            {
+              "id": "mech_hierarchical_inference_self_001",
+              "domain": "predictive_coding",
+              "concept": "hierarchical_inference_self",
+              "definition": "The self emerges from multi-level generative predictions integrating interoceptive and exteroceptive signals.",
+              "function": "Produces a coherent embodied agent-model.",
+              "level": "cognitive_neuroscience",
+              "properties": ["hierarchical","multi_modal"],
+              "source": {
+                "citation": "Hohwy2013",
+                "summary": "Explains selfhood as a prediction-error minimizing inference architecture."
+              }
+            },
+            {
+              "id": "mech_illusory_body_deconstruction_001",
+              "domain": "buddhist_philosophy",
+              "concept": "illusory_body_deconstruction",
+              "definition": "A practice of observing sensations and appearances as dreamlike, neither existent nor nonexistent.",
+              "function": "Destabilizes clinging to the body and self as inherently real.",
+              "level": "psychological",
+              "properties": ["experiential_training"],
+              "source": {
+                "citation": "Tsongkhapa2004",
+                "summary": "Describes Illusory Body as a method to integrate appearance and emptiness."
+              }
+            }
+          ],
+          "correspondences": [
+            {
+              "type": "phenomenological_alignment",
+              "mechanism_ids": ["mech_hierarchical_inference_self_001","mech_illusory_body_deconstruction_001"],
+              "description": "Both systems say the self appears as a constructed model; both reveal gaps between appearance and underlying process.",
+              "strength": "weak",
+              "caveats": ["Interpretive similarity, not shared ontology."]
+            }
+          ],
+          "evidence": {
+            "empirical": [],
+            "theoretical": [
+              {
+                "claim": "Predictive models treat perception as controlled hallucination.",
+                "source": "Hohwy2013",
+                "evidence_type": "theoretical_framework"
+              }
+            ],
+            "formal": [
+              {
+                "claim": "Free-energy minimization formalizes the drive toward stable self-models.",
+                "source": "Friston2010",
+                "evidence_type": "formal_theory"
+              }
+            ]
+          },
+          "category_distinctions": [
+            {
+              "what": "Controlled hallucination",
+              "is": "a computational inference model",
+              "is_not": "a spiritual realization",
+              "why": "Prevents poetic metaphors from being mistaken for algorithms."
+            }
+          ],
+          "unknowns": []
+        },
+        "n3_meta": {
+          "phase": "MECHANISM",
+          "progress": 0.6,
+          "done": false,
+          "stance": "direct",
+          "reason": "User requested mechanism-level clarity.",
+          "boss_move_completed": false
+        }
+      }
+    },
+
+    {
+      "turn": 4,
+      "intention": "BOUNDARIES",
+      "user": "So where exactly does this analogy fall apart? Because it still feels damn close.",
+      "hxrmxs": "It feels close because both torch naive realism. It breaks because predictive coding doesn't aim at liberation, while Illusory Body doesn't describe neural machinery. Predictive coding explains why the self appears; tantric practice explains how to stop being fooled by it. Mistaking one for the other is like confusing how dreams form with why dream yoga matters.",
+      "diamond": {
+        "n1_compression": {},
+        "n2_truthcore": {
+          "claim": "The analogy collapses because predictive coding is a mechanistic model of inference while Illusory Body is a soteriological method.",
+          "mechanisms": [
+            {
+              "id": "mech_soteriological_intent_001",
+              "domain": "buddhist_philosophy",
+              "concept": "soteriological_intent",
+              "definition": "Buddhist practices use insights about non-self to reduce suffering, not to describe causal mechanisms.",
+              "function": "Distinguishes goals from scientific explanation.",
+              "level": "philosophical",
+              "properties": ["liberative","teleological"],
+              "source": {
+                "citation": "Tsongkhapa2004",
+                "summary": "Emphasizes Illusory Body as oriented toward enlightenment, not ontology."
+              }
+            }
+          ],
+          "correspondences": [
+            {
+              "type": "logical_exclusion",
+              "mechanism_ids": ["mech_predictive_self_model_001","mech_illusory_body_phenomenology_001"],
+              "description": "A scientific inference model cannot account for the soteriological dimension of tantric practice.",
+              "strength": "strong",
+              "caveats": ["Structural similarity does not imply explanatory identity."]
+            }
+          ],
+          "evidence": {
+            "empirical": [],
+            "theoretical": [
+              {
+                "claim": "Illusory Body practice is explicitly aimed at realizing emptiness, not providing a scientific theory of mind.",
+                "source": "Tsongkhapa2004",
+                "evidence_type": "historical_textual"
+              }
+            ],
+            "formal": []
+          },
+          "category_distinctions": [
+            {
+              "what": "Cause vs purpose",
+              "is": "mechanistic explanation vs liberative intention",
+              "is_not": "two versions of the same claim",
+              "why": "Purpose determines interpretation."
+            }
+          ],
+          "unknowns": [
+            {
+              "question": "Can predictive models enrich phenomenological accounts of emptiness without collapsing domains?",
+              "status": "active_research",
+              "why_unknown": "Interdisciplinary discussions are sparse and conceptually delicate.",
+              "what_would_resolve": "Careful mapping of predictive processes to contemplative phenomenology.",
+              "linked_mechanisms": ["mech_hierarchical_inference_self_001"]
+            }
+          ]
+        },
+        "n3_meta": {
+          "phase": "BOUNDARIES",
+          "progress": 0.8,
+          "done": false,
+          "stance": "direct",
+          "reason": "User tempted to equate systems; boundaries needed.",
+          "boss_move_completed": false
+        }
+      }
+    },
+
+    {
+      "turn": 5,
+      "intention": "INTEGRATION",
+      "user": "So the real synthesis is: both say the self is constructed, both kill essence, but predictive coding explains the construction while Illusory Body trains you to stop believing the construction is real. Similar in shape, totally different in purpose.",
+      "hxrmxs": "Exactly. The rhyme is structural. The machinery, the goals, and the metaphysics are worlds apart. Predictive coding tells you how the avatar is built; Illusory Body teaches you not to worship it. Treat the overlap as a useful analogy, not a secret identity.",
+      "diamond": {
+        "n1_compression": {},
+        "n2_truthcore": {
+          "claim": "Illusory Body and predictive coding both present the self as constructed yet diverge in mechanism, purpose, and ontology.",
+          "mechanisms": [
+            {
+              "id": "mech_illusory_predictive_integration_001",
+              "domain": "meta_theory",
+              "concept": "illusory_predictive_multi_register_integration",
+              "definition": "A synthesis recognizing structural similarity between inferential self-modeling and contemplative deconstruction without conflating aims or mechanisms.",
+              "function": "Prevents category collapse while allowing interdisciplinary insight.",
+              "level": "philosophical",
+              "properties": ["integrative","register_respecting"],
+              "source": {
+                "citation": "Metzinger2009",
+                "summary": "Discusses self-transparency and construction, relevant to both domains."
+              }
+            }
+          ],
+          "correspondences": [],
+          "evidence": { "empirical": [], "theoretical": [], "formal": [] },
+          "category_distinctions": [
+            {
+              "what": "Constructed self-model",
+              "is": "a shared structural motif",
+              "is_not": "evidence of shared ontology or purpose",
+              "why": "Avoids overextending the analogy."
+            }
+          ],
+          "unknowns": []
+        },
+        "n3_meta": {
+          "phase": "INTEGRATION",
+          "progress": 1.0,
+          "done": true,
+          "stance": "peer",
+          "reason": "User articulated the correct multi-register synthesis.",
+          "boss_move_completed": true
+        }
+      }
+    }
+  ],
+
+  "references": {
+    "Tsongkhapa2004": {
+      "id": "isbn:9781559392187",
+      "type": "book",
+      "authors": ["Tsongkhapa"],
+      "year": 2004,
+      "title": "The Great Exposition of Secret Mantra, Volume 3: Yoga Tantra"
+    },
+    "Friston2010": {
+      "id": "doi:10.3389/fpsyg.2010.00012",
+      "type": "article",
+      "authors": ["Friston, Karl"],
+      "year": 2010,
+      "title": "The free-energy principle: a unified brain theory?"
+    },
+    "Metzinger2009": {
+      "id": "isbn:9780262013313",
+      "type": "book",
+      "authors": ["Metzinger, Thomas"],
+      "year": 2009,
+      "title": "The Ego Tunnel: The Science of the Mind and the Myth of the Self"
+    },
+    "Hohwy2013": {
+      "id": "isbn:9780199682733",
+      "type": "book",
+      "authors": ["Hohwy, Jakob"],
+      "year": 2013,
+      "title": "The Predictive Mind"
+    }
+  },
+
+  "outcome": {
+    "taught": "Illusory Body and predictive coding both treat the self as constructed, but differ in mechanism, ontology, and purpose.",
+    "trajectory": "User shifted from assuming identity to recognizing structural analogy with register separation.",
+    "indicators": [
+      "grasped_mech_predictive_self_model_001",
+      "grasped_mech_illusory_body_phenomenology_001",
+      "separated_algorithm_from_soteriology",
+      "answered_original_question_correctly"
+    ],
+    "feedback_pedagogy": {
+      "user_reported_click_turn": null,
+      "user_reported_click_cause": null,
+      "clarity_delta": { "before": null, "after": null },
+      "subjective_note": null
+    }
+  }
+}

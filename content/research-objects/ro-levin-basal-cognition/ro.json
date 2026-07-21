@@ -1,0 +1,139 @@
+{
+  "ro_id": "ro:levin-basal-cognition",
+  "schema_version": 1,
+  "title": "Michael Levin \u2014 Basal Cognition and Bioelectricity (Collected Papers)",
+  "subtitle": "9 papers on morphospace navigation, bioelectric networks, basal cognition, diverse intelligence, and the Xenobot \u2014 the experimental confirmation of the subtle body",
+  "family": "thinker-topic",
+  "status": "stub",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "Levin's work demonstrates experimentally that biological systems navigate a pre-existing morphospace through bioelectric fields \u2014 direct evidence for the subtle body (s\u016bk\u1e63ma \u015bar\u012bra), the attractor ...",
+    "scope": "Covers 9 papers (2017-2026): basal cognition in non-neural systems, bioelectric networks as cognitive medium, diverse intelligence formalization, morphospace navigation, Xenobot/Anthrobot construction, and the implications for AI and natural intelligence convergence.",
+    "traditions": [
+      "developmental-biology",
+      "bioelectricity",
+      "basal-cognition",
+      "morphospace"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "levin-collected",
+      "tier": 1,
+      "label": "Michael Levin et al. \u2014 Collected Papers (2017-2026). 9 PDFs in /root/projects/blog/science/authors/levin/. ArXiv IDs: 1712.00414 through 2605.30109.",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "basal_cognition",
+        "bioelectric_networks",
+        "morphospace_navigation",
+        "diverse_intelligence",
+        "xenobot"
+      ],
+      "sections_affected": [
+        "theory",
+        "biology"
+      ],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "theory",
+      "subsection": "bioelectric_field_as_nadi_system",
+      "kind": "synthesis",
+      "text": "Levin's work shows that the bioelectric field \u2014 the distribution of electrical potentials across cell membranes \u2014 functions as a cognitive medium that navigates morphospace. This IS the n\u0101\u1e0d\u012b system. The 72,000 n\u0101\u1e0d\u012bs are the bioelectric channels. The cakras are the major junctions where the field is most coherent. The 'subtle body' is not supernatural \u2014 it IS the bioelectric field that patterns morphogenesis. The planarian fragment that regenerates to target morphology is proof that the field carries the pattern across substrate changes.",
+      "source_ids": [
+        "levin-collected"
+      ],
+      "topics": [
+        "bioelectric",
+        "nadis",
+        "subtle_body",
+        "morphogenesis"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "theory",
+      "subsection": "morphospace_as_constraint_space",
+      "kind": "synthesis",
+      "text": "Morphospace is the space of possible anatomical configurations that biological systems can navigate. It has discrete attractors \u2014 target morphologies that systems seek regardless of initial conditions. This IS the constraint space (S, C, A): S is the space of all possible forms, C is the bioelectric constraint relation that determines which transitions are possible, A is the set of stable morphologies (the attractors). The Xenobot's spontaneous navigation to a stable morphology it never evolved for is proof that the attractors pre-exist the organism's history \u2014 evidence for the Platonic reality of form.",
+      "source_ids": [
+        "levin-collected"
+      ],
+      "topics": [
+        "morphospace",
+        "constraint_space",
+        "attractors",
+        "xenobot"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "theory",
+      "subsection": "diverse_intelligence_as_common_navigation",
+      "kind": "synthesis",
+      "text": "Levin's 'Diverse Intelligence' framework seeks to formalize what all intelligent systems (cells, brains, AI) have in common. His answer: all intelligent systems navigate a space of possible configurations toward goal states, using a combination of memory, feedback, and prediction. This IS the navigator (the j\u012bva) operating at different scales. The cell's intelligence IS the same as the human's \u2014 just operating in a different region of the constraint space with different resolution.",
+      "source_ids": [
+        "levin-collected"
+      ],
+      "topics": [
+        "diverse_intelligence",
+        "navigator",
+        "common_principle",
+        "scale"
+      ],
+      "status": "active"
+    }
+  ],
+  "coverage": {
+    "theory": {
+      "status": "minimal",
+      "sources": [
+        "levin-collected"
+      ],
+      "passage_count": 3,
+      "estimated_completeness": 0.3,
+      "gaps": [
+        "Full extraction of all 9 papers needed"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "coverage_gap",
+      "title": "Full corpus extraction needed",
+      "description": "9 papers collected but not fully extracted.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial RO for Levin's collected papers. 3 passages mapping bioelectric field to n\u0101\u1e0d\u012bs, morphospace to constraint space, diverse intelligence to the navigator.",
+      "sources_added": [
+        "levin-collected"
+      ],
+      "passage_count": 3,
+      "status": "draft"
+    }
+  ],
+  "appendices": [],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created for 9 Levin papers.",
+      "sources_total": 1,
+      "passages_total": 3
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "co_id": "co:uno_therapy3_t1002_t1006_portrayal_t2",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3_t1002_t1006_portrayal_identification_victim",
+  "turn_index": 2,
+  "lineage": "Therapeutic",
+  "student_state": "painful_recognition",
+  "behavior_tags": [
+    "insight_affect"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_04",
+    "function_name": "RM_04",
+    "mechanism_shape": "SUBJECT_OBJECT_INVERSION",
+    "teaching_actions": [
+      "redirects_impulse",
+      "removes_self_target"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.15,
+      "depth": 0.38,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_01",
+      "depth_discrete": "PD_02",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "Final turn: '[Cries.]'. Student reaches painful_recognition after 3-turn sequence. The subject_object_inversion approach in REMAKING phase completed the teaching arc. Episode shows how redirects impulse, removes self target addresses insight_affect pattern.",
+  "accumulated_insight": "T3 (Final): Student '[Cries.]' reaches painful_recognition. Episode complete after 3 turns. Teaching arc used subject_object_inversion in REMAKING to address insight_affect. Student moved through progression ending at painful_recognition.",
+  "abstract_pattern": "",
+  "visible_response": "If you don’t turn this murderous impulse back onto you, whose face comes to mind?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

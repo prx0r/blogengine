@@ -1,0 +1,57 @@
+{
+  "co_id": "co:uno_meno_t86_t92_diagonal_as_key_i_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "meno_t86_t92_diagonal_as_key_insight",
+  "turn_index": 0,
+  "lineage": "Socratic",
+  "student_state": "cooperative_engagement",
+  "behavior_tags": [
+    "short_affirmation"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_02",
+    "function_name": "RM_02",
+    "mechanism_shape": "SYSTEM_DYNAMICS",
+    "teaching_actions": [
+      "introduces_new_concept"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.62,
+      "attunement": 0.8,
+      "style": 0.5,
+      "depth": 0.62,
+      "meta_mode": 0.75,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_03",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_03",
+      "meta_mode_discrete": "MM_02"
+    },
+    "predicted_impact": "request_clarification",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "meno_t86_t92_diagonal_as_key_insight T1: Using system_dynamics/RM_02 with intensity=PR_02, intimacy=IN_03, attunement=AT_03 on 'Yes, I know that'. Response shows agreeing without elaboration; expecting request_clarification next. If not, lower PR and re-anchor the hinge.",
+  "accumulated_insight": "T1: Student says 'Yes, I know that.'?agreeing without elaboration (cooperative_engagement) via short_affirmation. Focus: Yes, I know that. The system_dynamics/RM_02 move applies shift their frame: standard function application. Pattern: go_along_compliantly. Confidence medium.",
+  "abstract_pattern": "",
+  "visible_response": "It is the line drawn from one corner to the opposite corner of the square.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:proclus-elements",
+    "ro:platonism-decoded",
+    "ro:chaldean-oracles"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

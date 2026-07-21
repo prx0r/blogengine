@@ -1,0 +1,55 @@
+{
+  "co_id": "co:uno_therapy3_t476_t494_passive_omn_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3_t476_t494_passive_omnipotent_transference",
+  "turn_index": 0,
+  "lineage": "Therapeutic",
+  "student_state": "collapsed_dependency",
+  "behavior_tags": [
+    "passivity",
+    "helplessness"
+  ],
+  "pedagogy": {
+    "phase": "META",
+    "function_id": "UNKNOWN",
+    "function_name": "UNKNOWN",
+    "mechanism_shape": "NONE",
+    "teaching_actions": [
+      "validates_obstacle",
+      "refuses_rescue"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.15,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_01",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "no_clear_effect",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "'You should tell me what to do'—demanding I solve their life. Classic passive omnipotence: make me all-powerful so they can be passive. Teacher blocks: 'you'd be following MY decisions.' This shows cost of dependency: lose your own authority. Not 'you should decide for yourself' (prescriptive) but 'here's what happens if I decide' (consequence). Hypothesis: they'll escalate demand or argue they can't decide. Testing if consequence-framing works.",
+  "accumulated_insight": "T1: Student demands 'You should tell me what to do'—passive omnipotence transferring agency to therapist. Teacher refuses: 'I could, but then you'd be following my decisions not yours.' Blocks dependency by showing consequence. Predicting resist_intellectually because passive-omnipotent patients typically push back when dependency is refused.",
+  "abstract_pattern": "",
+  "visible_response": "That will be a problem.",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

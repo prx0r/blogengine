@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Free Energy Principle: From Confusion to Clarity</title>
+    <style>
+        body { 
+            margin: 0; 
+            background: linear-gradient(135deg, #0c0e14 0%, #1a1b26 100%); 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            font-family: 'Arial', sans-serif;
+        }
+        canvas { 
+            border: 2px solid #313244; 
+            border-radius: 8px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+        }
+        #subtitles { 
+            position: absolute; 
+            bottom: 30px; 
+            width: 80%; 
+            max-width: 800px;
+            text-align: center; 
+            color: #f5c2e7; 
+            font-size: 22px; 
+            font-weight: 600;
+            padding: 20px;
+            background: rgba(12, 14, 20, 0.85);
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+            line-height: 1.4;
+        }
+        #equations {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: #f9e2af;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            background: rgba(12, 14, 20, 0.9);
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #313244;
+            max-width: 280px;
+            line-height: 1.3;
+        }
+        .highlight { color: #f38ba8; font-weight: bold; }
+        #freeEnergy {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: #f38ba8;
+            font-size: 24px;
+            font-weight: bold;
+            background: rgba(12, 14, 20, 0.9);
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #f38ba8;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="mainCanvas" width="800" height="600"></canvas>
+    <div id="subtitles"></div>
+    <div id="equations"></div>
+    <div id="freeEnergy">F = <span id="fValue">1.00</span></div>
+    <script>
+        const canvas = document.getElementById('mainCanvas');
+        const ctx = canvas.getContext('2d');
+        const subtitlesDiv = document.getElementById('subtitles');
+        const equationsDiv = document.getElementById('equations');
+        const fValueSpan = document.getElementById('fValue');
+        const W = canvas.width, H = canvas.height;
+
+        let time = 0;
+        const duration = 100;
+        const fps = 60;
+
+        // The story: A face emerges from visual confusion
+        // This represents how the brain resolves uncertainty
+        
+        // Face data - what the brain "expects" to see
+        const faceFeatures = {
+            // Face outline
+            faceOval: { x: W/2, y: H/2, width: 140, height: 180 },
+            // Eyes
+            leftEye: { x: W/2 - 35, y: H/2 - 25, width: 25, height: 12 },
+            rightEye: { x: W/2 + 35, y: H/2 - 25, width: 25, height: 12 },
+            leftPupil: { x: W/2 - 35, y: H/2 - 25, radius: 6 },
+            rightPupil: { x: W/2 + 35, y: H/2 - 25, radius: 6 },
+            // Eyebrows
+            leftBrow: { x: W/2 - 35, y: H/2 - 40, width: 30, height: 4 },
+            rightBrow: { x: W/2 + 35, y: H/2 - 40, width: 30, height: 4 },
+            // Nose
+            noseBridge: { x: W/2, y: H/2 - 10, width: 3, height: 25 },
+            noseBase: { x: W/2, y: H/2 + 8, width: 15, height: 8 },
+            leftNostril: { x: W/2 - 6, y: H/2 + 10, radius: 2 },
+            rightNostril: { x: W/2 + 6, y: H/2 + 10, radius: 2 },
+            // Mouth
+            upperLip: { x: W/2, y: H/2 + 35, width: 40, height: 8 },
+            lowerLip: { x: W/2, y: H/2 + 45, width: 35, height: 6 },
+            // Additional features
+            leftCheek: { x: W/2 - 60, y: H/2 + 15, radius: 8 },
+            rightCheek: { x: W/2 + 60, y: H/2 + 15, radius: 8 },
+            chin: { x: W/2, y: H/2 + 70, width: 25, height: 15 }
+        };
+
+        // Sensory fragments - confused, noisy inputs
+        const sensoryFragments = [];
+        for (let i = 0; i < 200; i++) {
+            sensoryFragments.push({
+                id: i,
+                x: Math.random() * W,
+                y: Math.random() * H,
+                vx: (Math.random() - 0.5) * 2,
+                vy: (Math.random() - 0.5) * 2,
+                size: Math.random() * 3 + 1.5,
+                brightness: Math.random(),
+                // Which face feature this fragment "belongs" to
+                targetFeature: i < 20 ? 'faceOval' :
+                              i < 35 ? 'leftEye' :
+                              i < 50 ? 'rightEye' :
+                              i < 60 ? 'leftPupil' :
+                              i < 70 ? 'rightPupil' :
+                              i < 80 ? 'leftBrow' :
+                              i < 90 ? 'rightBrow' :
+                              i < 105 ? 'noseBridge' :
+                              i < 115 ? 'noseBase' :
+                              i < 120 ? 'leftNostril' :
+                              i < 125 ? 'rightNostril' :
+                              i < 145 ? 'upperLip' :
+                              i < 160 ? 'lowerLip' :
+                              i < 170 ? 'leftCheek' :
+                              i < 180 ? 'rightCheek' : 'chin'
+            });
+        }
+
+        // Brain's predictions - what it expects to see
+        const predictions = {
+            confidence: 0,
+            eyePositions: [],
+            nosePosition: null,
+            mouthPosition: null
+        };
+
+        // Prediction error - difference between expectation and reality
+        let predictionError = 1.0;
+        let freeEnergy = 1.0;
+
+        // Phase progression
+        const phases = [
+            {
+                name: "chaos",
+                start: 0, end: 20,
+                title: "Raw Sensory Chaos",
+                subtitle: "Your eyes receive scattered light patterns - pure confusion",
+                equation: "s̃ = chaotic sensory inputs<br>F = very high (surprise!)"
+            },
+            {
+                name: "prediction",
+                start: 20, end: 40,
+                title: "Brain Makes Predictions",
+                subtitle: "Your brain guesses: 'This might be a face' - forming expectations",
+                equation: "p(s̃|θ) = generative model<br>θ = face hypothesis<br>F still high (mismatch)"
+            },
+            {
+                name: "perception",
+                start: 40, end: 65,
+                title: "Perception: Update Beliefs",
+                subtitle: "Brain adjusts its model: 'Yes, it IS a face' - beliefs align with input",
+                equation: "∂F/∂μ = 0<br>μ = belief parameters<br><span class='highlight'>F decreasing</span>"
+            },
+            {
+                name: "action",
+                start: 65, end: 85,
+                title: "Action: Improve Input",
+                subtitle: "You focus your eyes, lean forward - actively seek clearer input",
+                equation: "∂F/∂a = 0<br>a = action (eye movement)<br><span class='highlight'>F minimized</span>"
+            },
+            {
+                name: "clarity",
+                start: 85, end: 100,
+                title: "Clear Perception",
+                subtitle: "Perfect clarity: brain's predictions match sensory reality",
+                equation: "F ≈ 0<br>Prediction = Reality<br>Understanding achieved!"
+            }
+        ];
+
+        function getCurrentPhase() {
+            for (let phase of phases) {
+                if (time >= phase.start && time < phase.end) {
+                    const progress = (time - phase.start) / (phase.end - phase.start);
+                    return { ...phase, progress };
+                }
+            }
+            return phases[phases.length - 1];
+        }
+
+        function easeInOutCubic(t) {
+            return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
+        }
+
+        // Draw sensory fragments
+        function drawSensoryInputs(phase) {
+            const { progress } = phase;
+            
+            for (let fragment of sensoryFragments) {
+                let targetX, targetY;
+                
+                // Where should this fragment go to form a face?
+                switch (fragment.targetFeature) {
+                    case 'faceOval':
+                        const ovalAngle = Math.random() * Math.PI * 2;
+                        targetX = faceFeatures.faceOval.x + Math.cos(ovalAngle) * (faceFeatures.faceOval.width/2);
+                        targetY = faceFeatures.faceOval.y + Math.sin(ovalAngle) * (faceFeatures.faceOval.height/2);
+                        break;
+                    case 'leftEye':
+                        targetX = faceFeatures.leftEye.x + (Math.random() - 0.5) * faceFeatures.leftEye.width;
+                        targetY = faceFeatures.leftEye.y + (Math.random() - 0.5) * faceFeatures.leftEye.height;
+                        break;
+                    case 'rightEye':
+                        targetX = faceFeatures.rightEye.x + (Math.random() - 0.5) * faceFeatures.rightEye.width;
+                        targetY = faceFeatures.rightEye.y + (Math.random() - 0.5) * faceFeatures.rightEye.height;
+                        break;
+                    case 'leftPupil':
+                        targetX = faceFeatures.leftPupil.x + (Math.random() - 0.5) * 8;
+                        targetY = faceFeatures.leftPupil.y + (Math.random() - 0.5) * 8;
+                        break;
+                    case 'rightPupil':
+                        targetX = faceFeatures.rightPupil.x + (Math.random() - 0.5) * 8;
+                        targetY = faceFeatures.rightPupil.y + (Math.random() - 0.5) * 8;
+                        break;
+                    case 'leftBrow':
+                        targetX = faceFeatures.leftBrow.x + (Math.random() - 0.5) * faceFeatures.leftBrow.width;
+                        targetY = faceFeatures.leftBrow.y + (Math.random() - 0.5) * faceFeatures.leftBrow.height;
+                        break;
+                    case 'rightBrow':
+                        targetX = faceFeatures.rightBrow.x + (Math.random() - 0.5) * faceFeatures.rightBrow.width;
+                        targetY = faceFeatures.rightBrow.y + (Math.random() - 0.5) * faceFeatures.rightBrow.height;
+                        break;
+                    case 'noseBridge':
+                        targetX = faceFeatures.noseBridge.x + (Math.random() - 0.5) * faceFeatures.noseBridge.width;
+                        targetY = faceFeatures.noseBridge.y + (Math.random() - 0.5) * faceFeatures.noseBridge.height;
+                        break;
+                    case 'noseBase':
+                        targetX = faceFeatures.noseBase.x + (Math.random() - 0.5) * faceFeatures.noseBase.width;
+                        targetY = faceFeatures.noseBase.y + (Math.random() - 0.5) * faceFeatures.noseBase.height;
+                        break;
+                    case 'leftNostril':
+                        targetX = faceFeatures.leftNostril.x + (Math.random() - 0.5) * 4;
+                        targetY = faceFeatures.leftNostril.y + (Math.random() - 0.5) * 4;
+                        break;
+                    case 'rightNostril':
+                        targetX = faceFeatures.rightNostril.x + (Math.random() - 0.5) * 4;
+                        targetY = faceFeatures.rightNostril.y + (Math.random() - 0.5) * 4;
+                        break;
+                    case 'upperLip':
+                        targetX = faceFeatures.upperLip.x + (Math.random() - 0.5) * faceFeatures.upperLip.width;
+                        targetY = faceFeatures.upperLip.y + (Math.random() - 0.5) * faceFeatures.upperLip.height;
+                        break;
+                    case 'lowerLip':
+                        targetX = faceFeatures.lowerLip.x + (Math.random() - 0.5) * faceFeatures.lowerLip.width;
+                        targetY = faceFeatures.lowerLip.y + (Math.random() - 0.5) * faceFeatures.lowerLip.height;
+                        break;
+                    case 'leftCheek':
+                        targetX = faceFeatures.leftCheek.x + (Math.random() - 0.5) * 12;
+                        targetY = faceFeatures.leftCheek.y + (Math.random() - 0.5) * 12;
+                        break;
+                    case 'rightCheek':
+                        targetX = faceFeatures.rightCheek.x + (Math.random() - 0.5) * 12;
+                        targetY = faceFeatures.rightCheek.y + (Math.random() - 0.5) * 12;
+                        break;
+                    case 'chin':
+                        targetX = faceFeatures.chin.x + (Math.random() - 0.5) * faceFeatures.chin.width;
+                        targetY = faceFeatures.chin.y + (Math.random() - 0.5) * faceFeatures.chin.height;
+                        break;
+                }
+
+                // Movement logic based on phase
+                if (phase.name === 'chaos') {
+                    // Pure chaos - random movement
+                    fragment.x += fragment.vx;
+                    fragment.y += fragment.vy;
+                    if (fragment.x < 0 || fragment.x > W) fragment.vx *= -1;
+                    if (fragment.y < 0 || fragment.y > H) fragment.vy *= -1;
+                    
+                } else if (phase.name === 'prediction') {
+                    // Brain starts guessing - slight attraction to face positions
+                    const attractionStrength = progress * 0.02;
+                    fragment.x += (targetX - fragment.x) * attractionStrength + fragment.vx * (1 - progress * 0.5);
+                    fragment.y += (targetY - fragment.y) * attractionStrength + fragment.vy * (1 - progress * 0.5);
+                    
+                } else if (phase.name === 'perception') {
+                    // Perception updates - stronger attraction
+                    const attractionStrength = easeInOutCubic(progress) * 0.15;
+                    fragment.x += (targetX - fragment.x) * attractionStrength;
+                    fragment.y += (targetY - fragment.y) * attractionStrength;
+                    
+                } else if (phase.name === 'action') {
+                    // Action phase - fragments stabilize and sharpen
+                    const attractionStrength = 0.2;
+                    fragment.x += (targetX - fragment.x) * attractionStrength;
+                    fragment.y += (targetY - fragment.y) * attractionStrength;
+                    
+                } else {
+                    // Clarity - locked in position
+                    fragment.x += (targetX - fragment.x) * 0.3;
+                    fragment.y += (targetY - fragment.y) * 0.3;
+                }
+
+                // Draw the fragment
+                ctx.save();
+                
+                // Brightness and clarity change with understanding
+                let alpha = fragment.brightness;
+                let blur = 0;
+                let color = [200, 200, 255]; // Default light blue
+                
+                // Different colors for different features
+                switch (fragment.targetFeature) {
+                    case 'leftPupil':
+                    case 'rightPupil':
+                        color = [50, 50, 50]; // Dark for pupils
+                        break;
+                    case 'leftBrow':
+                    case 'rightBrow':
+                        color = [120, 80, 60]; // Brown for eyebrows
+                        break;
+                    case 'upperLip':
+                    case 'lowerLip':
+                        color = [200, 120, 120]; // Pink for lips
+                        break;
+                    case 'leftNostril':
+                    case 'rightNostril':
+                        color = [100, 100, 100]; // Dark for nostrils
+                        break;
+                    case 'faceOval':
+                        color = [220, 200, 180]; // Skin tone
+                        break;
+                    default:
+                        color = [180, 160, 140]; // Neutral skin tone
+                }
+                
+                if (phase.name === 'chaos') {
+                    alpha *= 0.4;
+                    blur = 3;
+                    color = [200, 200, 255]; // All same color in chaos
+                } else if (phase.name === 'prediction') {
+                    alpha *= 0.4 + progress * 0.3;
+                    blur = 3 * (1 - progress);
+                } else if (phase.name === 'perception') {
+                    alpha *= 0.7 + progress * 0.2;
+                    blur = 2 * (1 - progress);
+                } else {
+                    alpha *= 0.9;
+                    blur = 0;
+                }
+
+                if (blur > 0) {
+                    ctx.filter = `blur(${blur}px)`;
+                }
+
+                ctx.beginPath();
+                ctx.arc(fragment.x, fragment.y, fragment.size, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(${color[0]}, ${color[1]}, ${color[2]}, ${alpha})`;
+                
+                // Add glow for recognition
+                if (phase.name === 'perception' || phase.name === 'action' || phase.name === 'clarity') {
+                    ctx.shadowBlur = 6 + progress * 8;
+                    ctx.shadowColor = `rgba(${color[0]}, ${color[1]}, ${color[2]}, ${alpha * 0.5})`;
+                }
+                
+                ctx.fill();
+                ctx.filter = 'none';
+                ctx.restore();
+            }
+        }
+
+        // Draw brain's predictions (what it expects to see)
+        function drawPredictions(phase) {
+            if (phase.name === 'chaos') return;
+            
+            const { progress } = phase;
+            let predictionStrength = 0;
+            
+            if (phase.name === 'prediction') {
+                predictionStrength = progress;
+            } else {
+                predictionStrength = 1;
+            }
+
+            ctx.save();
+            ctx.strokeStyle = `rgba(249, 226, 175, ${predictionStrength * 0.4})`;
+            ctx.fillStyle = `rgba(249, 226, 175, ${predictionStrength * 0.2})`;
+            ctx.lineWidth = 1.5;
+            ctx.setLineDash([3, 3]);
+
+            // Face outline prediction
+            if (predictionStrength > 0.2) {
+                ctx.beginPath();
+                ctx.ellipse(faceFeatures.faceOval.x, faceFeatures.faceOval.y,
+                           faceFeatures.faceOval.width/2 * predictionStrength,
+                           faceFeatures.faceOval.height/2 * predictionStrength,
+                           0, 0, Math.PI * 2);
+                ctx.stroke();
+            }
+
+            // Eyes prediction
+            if (predictionStrength > 0.3) {
+                // Left eye
+                ctx.beginPath();
+                ctx.ellipse(faceFeatures.leftEye.x, faceFeatures.leftEye.y,
+                           faceFeatures.leftEye.width/2 * predictionStrength,
+                           faceFeatures.leftEye.height/2 * predictionStrength,
+                           0, 0, Math.PI * 2);
+                ctx.stroke();
+
+                // Right eye
+                ctx.beginPath();
+                ctx.ellipse(faceFeatures.rightEye.x, faceFeatures.rightEye.y,
+                           faceFeatures.rightEye.width/2 * predictionStrength,
+                           faceFeatures.rightEye.height/2 * predictionStrength,
+                           0, 0, Math.PI * 2);
+                ctx.stroke();
+            }
+
+            // Eyebrows prediction
+            if (predictionStrength > 0.4) {
+                ctx.beginPath();
+                ctx.ellipse(faceFeatures.leftBrow.x, faceFeatures.leftBrow.y,
+                           faceFeatures.leftBrow.width/2 * predictionStrength,
+                           faceFeatures.leftBrow.height/2 * predictionStrength,
+                           0, 0, Math.PI * 2);
+                ctx.stroke();
+
+                ctx.beginPath();
+                ctx.ellipse(faceFeatures.rightBrow.x, faceFeatures.rightBrow.y,
+                           faceFeatures.rightBrow.width/2 * predictionStrength,
+                           faceFeatures.rightBrow.height/2 * predictionStrength,
+                           0, 0, Math.PI * 2);
+                ctx.stroke();
+            }
+
+            // Nose prediction
+            if (predictionStrength > 0.5) {
+                // Nose bridge
+                ctx.beginPath();
+                ctx.rect(faceFeatures.noseBridge.x - faceFeatures.noseBridge.width/2 * predictionStrength,
+                        faceFeatures.noseBridge.y - faceFeatures.noseBridge.height/2 * predictionStrength,
+                        faceFeatures.noseBridge.width * predictionStrength,
+                        faceFeatures.noseBridge.height * predictionStrength);
+                ctx.stroke();
+
+                // Nose base
+                ctx.beginPath();
+                ctx.ellipse(faceFeatures.noseBase.x, faceFeatures.noseBase.y,
+                           faceFeatures.noseBase.width/2 * predictionStrength,
+                           faceFeatures.noseBase.height/2 * predictionStrength,
+                           0, 0, Math.PI * 2);
+                ctx.stroke();
+            }
+
+            // Mouth prediction
+            if (predictionStrength > 0.6) {
+                // Upper lip
+                ctx.beginPath();
+                ctx.ellipse(faceFeatures.upperLip.x, faceFeatures.upperLip.y,
+                           faceFeatures.upperLip.width/2 * predictionStrength,
+                           faceFeatures.upperLip.height/2 * predictionStrength,
+                           0, 0, Math.PI);
+                ctx.stroke();
+
+                // Lower lip
+                ctx.beginPath();
+                ctx.ellipse(faceFeatures.lowerLip.x, faceFeatures.lowerLip.y,
+                           faceFeatures.lowerLip.width/2 * predictionStrength,
+                           faceFeatures.lowerLip.height/2 * predictionStrength,
+                           0, Math.PI, Math.PI * 2);
+                ctx.stroke();
+            }
+
+            ctx.restore();
+        }
+
+        // Draw prediction error visualization
+        function drawPredictionError(phase) {
+            const { progress } = phase;
+            
+            // Calculate current error
+            if (phase.name === 'chaos') {
+                predictionError = 1.0;
+            } else if (phase.name === 'prediction') {
+                predictionError = 1.0 - progress * 0.2; // Error starts decreasing
+            } else if (phase.name === 'perception') {
+                predictionError = 0.8 - progress * 0.6; // Major error reduction
+            } else if (phase.name === 'action') {
+                predictionError = 0.2 - progress * 0.15; // Final error reduction
+            } else {
+                predictionError = 0.05;
+            }
+
+            freeEnergy = predictionError;
+            fValueSpan.textContent = freeEnergy.toFixed(2);
+
+            // Visual error representation
+            if (predictionError > 0.1) {
+                ctx.save();
+                ctx.translate(W/2, H/2);
+                
+                const errorIntensity = predictionError;
+                const pulseRate = 2 + errorIntensity * 3;
+                const pulsePhase = Math.sin(time * pulseRate) * 0.5 + 0.5;
+                
+                // Error field around face area
+                for (let i = 0; i < 20; i++) {
+                    const angle = (i / 20) * Math.PI * 2;
+                    const radius = 80 + pulsePhase * 30 * errorIntensity;
+                    const x = Math.cos(angle) * radius;
+                    const y = Math.sin(angle) * radius;
+                    
+                    ctx.beginPath();
+                    ctx.arc(x, y, 3 * errorIntensity, 0, Math.PI * 2);
+                    ctx.fillStyle = `hsla(0, 80%, 60%, ${errorIntensity * 0.5})`;
+                    ctx.fill();
+                }
+                
+                ctx.restore();
+            }
+        }
+
+        // Main animation loop
+        function animate() {
+            time += 1 / fps;
+
+            // Clear canvas
+            ctx.fillStyle = '#0c0e14';
+            ctx.fillRect(0, 0, W, H);
+
+            const currentPhase = getCurrentPhase();
+
+            // Draw components
+            drawPredictionError(currentPhase);
+            drawPredictions(currentPhase);
+            drawSensoryInputs(currentPhase);
+
+            // Update UI
+            subtitlesDiv.innerHTML = `<strong>${currentPhase.title}</strong><br>${currentPhase.subtitle}`;
+            equationsDiv.innerHTML = currentPhase.equation;
+
+            // Continue animation
+            if (time < duration) {
+                requestAnimationFrame(animate);
+            }
+        }
+
+        // Start animation
+        animate();
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+{
+  "work_id": "work:t2-pubmed-poisson-variational-autoencoder",
+  "schema_version": 2,
+  "title": "Poisson Variational Autoencoder.",
+  "authors": [
+    {
+      "name": "Vafaii H"
+    },
+    {
+      "name": "Galor D"
+    },
+    {
+      "name": "Yates JL"
+    }
+  ],
+  "publication": {
+    "year": 2024,
+    "journal": "ArXiv",
+    "source": "PubMed/MEDLINE",
+    "language": "en"
+  },
+  "identifiers": {
+    "pmid": "39713798",
+    "doi": ""
+  },
+  "topics": [
+    "phase-6-dependent-arising",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "assets": {
+    "pdf_path": null,
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/39713798/",
+    "abstract": "Variational autoencoders (VAEs) employ Bayesian inference to interpret sensory inputs, mirroring processes that occur in primate vision across both ventral [1] and dorsal [2] pathways. Despite their success, traditional VAEs rely on continuous latent variables, which deviates sharply from the discrete nature of biological neurons. Here, we developed the Poisson VAE ( 𝒫 -VAE), a novel architecture that combines principles of predictive coding with a VAE that encodes inputs into discrete spike cou"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_alt17_acquisition",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 6,
+    "phase_name": "Dependent-arising",
+    "bridge_rationale": "Bridge paper score=10.5: links Dependent-arising concept to mechanistic neuroscience"
+  },
+  "evaluation": "Score 10: Excellent bridge signal",
+  "tier": 2
+}

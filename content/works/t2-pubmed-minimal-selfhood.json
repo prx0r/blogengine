@@ -1,0 +1,43 @@
+{
+  "work_id": "work:t2-pubmed-minimal-selfhood",
+  "schema_version": 2,
+  "title": "Minimal selfhood.",
+  "authors": [
+    {
+      "name": "Glasgow RDV"
+    }
+  ],
+  "publication": {
+    "year": 2020,
+    "journal": "J Neurogenet",
+    "source": "PubMed/MEDLINE",
+    "language": "en"
+  },
+  "identifiers": {
+    "pmid": "31599179",
+    "doi": "10.1080/01677063.2019.1672680"
+  },
+  "topics": [
+    "phase-1-birth-body",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "assets": {
+    "pdf_path": null,
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/31599179/",
+    "abstract": "This Perspective article outlines a concept of minimal selfhood. A central claim is that minimal selfhood is not dependent on possession of a brain, a nervous system or neurons. It will be argued instead that minimal selfhood requires intrinsically reflexive activity, specifically taking the form of self-maintenance, self-reproduction and self-containment. The implications of this in thinking about animal behavior and consciousness will be briefly discussed."
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_alt17_acquisition",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 1,
+    "phase_name": "Birth/Body",
+    "bridge_rationale": "Bridge paper score=5.5: links Birth/Body concept to mechanistic neuroscience"
+  },
+  "evaluation": "Score 5: Marginal bridge signal",
+  "tier": 2
+}

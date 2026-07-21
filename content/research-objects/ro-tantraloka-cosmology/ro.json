@@ -1,0 +1,454 @@
+{
+  "ro_id": "ro:tantraloka-cosmology",
+  "schema_version": 1,
+  "title": "The Path of Worlds (Bhuvan\u0101dhvan) and the 36 Tattvas in Abhinavagupta's Tantr\u0101loka",
+  "subtitle": "\u0100hnikas 8\u201310: cosmic geography, tattva-evolution, seven perceivers, and the architecture of liberation",
+  "family": "tradition",
+  "status": "draft",
+  "current_version": "0.2.0",
+  "summary": {
+    "one_line": "Abhinavagupta's systematic exposition of the \u015aaiva cosmos: the 207 worlds of the Bhuvan\u0101dhvan, the 36 tattvas with the five ka\u00f1cukas, the seven perceivers, and the subtle body (purya\u1e63\u1e6daka/vigrah\u0101\u1e63\u1e6d...",
+    "scope": "Covers \u0100hnika 8 (Bhuvan\u0101dhvan \u2014 the Path of Worlds, from the Egg of Brahm\u0101 through the netherworlds, Mount Meru, the seven lokas, and the ascent through the tattvas up to \u015aiva), \u0100hnika 9 (the 36 tattvas, causality, ka\u00f1cukas, m\u0101y\u0101 as the knot, the pure and impure paths), and \u0100hnika 10 (the seven perceivers, their states, and the relation of tattvas to consciousness).",
+    "traditions": [
+      "kashmiri_shaivism",
+      "trika",
+      "saiva_siddhanta"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "ta_ahnika_8",
+      "tier": 1,
+      "label": "Tantr\u0101loka \u0100hnika 8 (Dyczkowski tr., Vol. 5) \u2014 The Path of Space (de\u015b\u0101dhavan): Bhuvan\u0101dhvan cosmology",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "bhuvana_cosmology",
+        "egg_of_brahma",
+        "meru_geography",
+        "seven_lokas",
+        "subtle_body",
+        "ka\u00f1cukas",
+        "maaya_granthi"
+      ],
+      "sections_affected": [
+        "cosmology",
+        "tattvas",
+        "subtle_body"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "ta_ahnika_9",
+      "tier": 1,
+      "label": "Tantr\u0101loka \u0100hnika 9 (Dyczkowski tr., Vol. 6) \u2014 The Path of the Principles (tattv\u0101dhvan): 36 tattvas, causality, ka\u00f1cukas",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "tattva_definition",
+        "cause_effect",
+        "ka\u00f1cukas",
+        "mala",
+        "karma",
+        "maaya"
+      ],
+      "sections_affected": [
+        "tattvas",
+        "metaphysics"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "ta_ahnika_10",
+      "tier": 1,
+      "label": "Tantr\u0101loka \u0100hnika 10 (Dyczkowski tr., Vol. 6) \u2014 The Division of the Principles: seven perceivers and consciousness states",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "seven_perceivers",
+        "consciousness_states",
+        "jagrat_svapna_sushupti",
+        "turiya_turiyatita"
+      ],
+      "sections_affected": [
+        "perceivers",
+        "consciousness"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "mvg",
+      "tier": 2,
+      "label": "M\u0101lin\u012bvijayottaratantra (MV) \u2014 cited by Abhinavagupta for tattva and bhuvana classifications",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "tattva_worlds",
+        "bhuvana_series",
+        "trident_throne_correspondence"
+      ],
+      "sections_affected": [
+        "cosmology",
+        "tattvas"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "svacchanda_reference",
+      "tier": 2,
+      "label": "Svacchandatantra \u2014 cited for the summary of worlds distributed in the five kal\u0101s",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "five_kalas",
+        "world_summary",
+        "bhuvana_distribution"
+      ],
+      "sections_affected": [
+        "cosmology"
+      ],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "cosmology",
+      "subsection": "egg_of_brahma",
+      "kind": "source",
+      "text": "Abhinavagupta opens \u0100hnika 8 with the physical cosmos: the Egg of Brahm\u0101, a vast cosmic egg containing the earth, the thirty-five hells (Av\u012bci, Kumbh\u012bp\u0101ka, Mah\u0101raurava), the eight netherworlds (p\u0101t\u0101la), Mount Meru with its surrounding mountains, Jambudv\u012bpa and its nine regions, the six concentric islands and oceans, and Mount Lok\u0101loka at the edge of the visible world (T\u0100 8/19cd-118ab; Dyczkowski Vol. 5, pp. 68\u2013161). Beyond Lok\u0101loka lies an ocean of Garbhoda and the region of darkness. This entire physical universe is the lowest stratum of a graded cosmos that ascends through increasingly subtle levels.",
+      "source_ids": [
+        "ta_ahnika_8"
+      ],
+      "topics": [
+        "egg_of_brahma",
+        "meru",
+        "lok\u0101loka",
+        "p\u0101t\u0101la"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "cosmology",
+      "subsection": "seven_lokas",
+      "kind": "source",
+      "text": "Above the physical Egg rise the seven lokas: Bh\u016brloka (Earth), Bhuvarloka (Atmosphere with the paths of the wind), Svarloka (Heaven), Maharloka (the Great World), Janaloka (the World of People), Tapoloka (the World of Austerities), and Satyaloka (the World of Truth). Beyond these lie the worlds of Brahm\u0101, Vi\u1e63\u1e47u, and Rudra, then the elements gross and subtle from which the Egg is fashioned, culminating in the sphere of the Hundred Rudras (T\u0100 8/118cd-186ab; pp. 161\u2013208). The entire structure is measured and graded: from the Earth principle up to \u015aiva, each successive principle subtends a larger sphere and brings the soul proportionally closer to liberation.",
+      "source_ids": [
+        "ta_ahnika_8"
+      ],
+      "topics": [
+        "seven_lokas",
+        "brahmanda",
+        "hundred_rudras",
+        "graded_cosmos"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "cosmology",
+      "subsection": "subtle_body",
+      "kind": "source",
+      "text": "The subtle body (purya\u1e63\u1e6daka / vigrah\u0101\u1e63\u1e6daka) is described in \u0100hnika 8 as comprising eight components: the five subtle elements (tanm\u0101tras), manas (mind), aha\u1e41k\u0101ra (ego), and buddhi (intellect). The Spheres of the Subtle Elements and the Eight Bodies of \u015aiva (T\u0100 8/215cd-221ab; pp. 239\u2013243) are followed by the deities of the organs of action and knowledge, the Moon as the sphere of manas, and the worlds of the Rudras of the ego (T\u0100 8/221cd-238ab; pp. 243\u2013256). This subtle body is the vehicle of transmigration, bearing the soul's karmic residues through the cycle of rebirth until purified by initiation.",
+      "source_ids": [
+        "ta_ahnika_8"
+      ],
+      "topics": [
+        "purya\u1e63\u1e6daka",
+        "vigrah\u0101\u1e63\u1e6daka",
+        "subtle_body",
+        "tanm\u0101tras",
+        "karmic_vehicle"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "tattvas",
+      "subsection": "tattva_definition",
+      "kind": "source",
+      "text": "\u0100hnika 9 opens by defining what a tattva is. Drawing on the Mata\u1e45gatantra, Abhinavagupta explains that a tattva is a generic nature (s\u0101m\u0101nya) that pervades its own effects, its properties, and the group of perceivers similar to itself. The Earth tattva, for example, extends from K\u0101l\u0101gn\u012b to V\u012brabhadra and is recognized by the qualities of solidity (k\u0101\u1e6dhinya), weight (garim\u0101), and sustaining power (dh\u1e5bti) that manifest throughout its domain (T\u0100 9/2-3; Vol. 6, pp. 2\u20137). The \u015aaiva system extends the S\u0101\u1e41khya 25 tattvas by adding eleven more \u2014 from \u015aiva to \u015auddhavidy\u0101 \u2014 to account for the pure universe, plus M\u0101y\u0101 and the five ka\u00f1cukas, reaching the standard 36 principles of \u015aaiva Siddh\u0101nta.",
+      "source_ids": [
+        "ta_ahnika_9"
+      ],
+      "topics": [
+        "tattva_definition",
+        "generic_nature",
+        "36_tattvas",
+        "universal_pervasion"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "tattvas",
+      "subsection": "ka\u00f1cukas_and_m\u0101y\u0101",
+      "kind": "source",
+      "text": "The five ka\u00f1cukas (coverings) are the principles that contract \u015aiva's infinite capacities into the finite experience of the bounded soul: kal\u0101 (limited agency), vidy\u0101 (limited knowledge), r\u0101ga (attachment), k\u0101la (time), and niyati (necessity). These emerge from M\u0101y\u0101 and together constitute the apparatus of finitude. M\u0101y\u0101 itself is the 'knot' (m\u0101y\u0101granthi) \u2014 the root principle of differentiation that, when pierced, releases the soul from the impure universe into the pure path (T\u0100 9/147cd-220ab; Vol. 6, pp. 121\u2013208). The relation between M\u0101y\u0101 and the individual soul is carefully distinguished: M\u0101y\u0101 is the principle of obscuration, while the soul is the conscious subject whose innate freedom is veiled by it.",
+      "source_ids": [
+        "ta_ahnika_9"
+      ],
+      "topics": [
+        "ka\u00f1cukas",
+        "m\u0101y\u0101",
+        "m\u0101y\u0101granthi",
+        "limited_agency",
+        "knot_of_m\u0101y\u0101"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_006",
+      "section": "perceivers",
+      "subsection": "seven_perceivers",
+      "kind": "source",
+      "text": "\u0100hnika 10 introduces the seven perceivers (pram\u0101t\u1e5b), ranging from the fully conditioned (sakala) to the unconditioned (\u015biva). These are: 1) sakala (bound soul with all coverings), 2) pralay\u0101kala (deconditioned by dissolution but still impure), 3) vij\u00f1\u0101n\u0101kala (consciousness deconditioned), 4) mantre\u015ba (lord of mantras), 5) mantre\u015bvara (superior lord of mantras), 6) sad\u0101\u015biva, and 7) \u015biva. Each perceives reality at a different level of universality, and the same object manifests differently to each (T\u0100 10/2-18; pp. 269\u2013285). The fifteen divisions of the perceivers are also projected into the vital breath (pr\u0101\u1e47a), linking cosmology to embodied practice.",
+      "source_ids": [
+        "ta_ahnika_10"
+      ],
+      "topics": [
+        "seven_perceivers",
+        "sakala",
+        "pralay\u0101kala",
+        "vij\u00f1\u0101n\u0101kala",
+        "mantre\u015ba",
+        "pram\u0101t\u1e5b_hierarchy"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_007",
+      "section": "cosmology",
+      "subsection": "five_kalas",
+      "kind": "source",
+      "text": "The 207 worlds enumerated in \u0100hnika 8 are summarized in relation to the five kal\u0101s (forces of contraction and expansion): niv\u1e5btti (cessation), prati\u1e63\u1e6dh\u0101 (establishment), vidy\u0101 (knowledge), \u015b\u0101nti (peace), and \u015b\u0101nty\u0101t\u012bta (beyond peace). These kal\u0101s distribute the worlds across the spectrum from the Earth principle up to Sad\u0101\u015biva. The summary according to the Svacchandatantra (T\u0100 8/407-428ab; pp. 375\u2013384) and alternative arrangements from the Mata\u1e45gatantra (8/428cd-436; pp. 384\u2013388) and M\u0101lin\u012bvijayottara (8/437-452; pp. 388\u2013397) demonstrate that the Bhuvan\u0101dhvan admits of multiple systematic arrangements.",
+      "source_ids": [
+        "ta_ahnika_8",
+        "svacchanda_reference",
+        "mvg"
+      ],
+      "topics": [
+        "five_kalas",
+        "world_arrangement",
+        "niv\u1e5btti",
+        "\u015b\u0101nty\u0101t\u012bta"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_008",
+      "section": "tattvas",
+      "subsection": "pure_and_impure",
+      "kind": "source",
+      "text": "The 36 tattvas are divided into the Pure Path (\u015buddh\u0101dhvan) of five principles \u2014 \u015aiva, \u015aakti, Sad\u0101\u015biva, \u012a\u015bvara, and \u015auddhavidy\u0101 \u2014 and the Impure Path (a\u015buddh\u0101dhvan) of thirty-one principles from M\u0101y\u0101 down to Earth. The five pure principles are themselves subjects (pram\u0101t\u1e5b), not objects; they are the levels of \u015aiva's self-awareness progressively 'descending' into manifestation. The six causes (kal\u0101, vidy\u0101, r\u0101ga, k\u0101la, niyati, and m\u0101y\u0101) are not themselves tattvas but the limiting conditions that produce the impure categories (T\u0100 9/49cd-61; pp. 56\u201365). Abhinavagupta adds two principles above the 36 \u2014 Supreme \u015aiva (Bhairava) and the Inexplicable (An\u0101khy\u0101) K\u0101l\u012b \u2014 distinctive of his Trika system (T\u0100 9 intro; p. 3).",
+      "source_ids": [
+        "ta_ahnika_9"
+      ],
+      "topics": [
+        "\u015buddh\u0101dhvan",
+        "a\u015buddh\u0101dhvan",
+        "an\u0101khy\u0101_k\u0101l\u012b",
+        "bhairava",
+        "trika"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_009",
+      "section": "cosmology",
+      "subsection": "egg_of_brahma",
+      "kind": "source",
+      "text": "The Egg of Brahm\u0101 (brahm\u0101\u1e47\u1e0da) is described with precise measurements in \u0100hnika 8. Jayaratha, commenting on the Nandi\u015bikh\u0101, transmits: 'The thickness (sthaulya) of the shell of the Egg of Brahm\u0101 is ten million leagues (yojana). O beloved, it is said that one should know that above it there is a gap (antara) which is of the same extent. The Egg of Brahm\u0101 extends for a thousand million (leagues) all around. The shell is said to be ten million (leagues thick) and it has a hundred Rudras' (T\u0100 8, quoting SvT 10/2cd; Dyczkowski Vol. 5, pp. 308\u2013309). Further, 'There are ninety-eight hundred million (leagues) from K\u0101l\u0101gni to Da\u1e47\u1e0dap\u0101\u1e47i. Thus, the upper (like the lower) shell of the Egg (of Brahm\u0101) is ten million leagues thick. There are five hundred million leagues from the surface of the earth (up to the upper limit). The same is the case with the lower section' (T\u0100 8/165cd-166; Vol. 5, pp. 195\u2013196). From the earth's surface to the Pole Star the distance is fifteen hundred thousand leagues; beyond that, the heavens of Maharloka, Janaloka, Tapoloka and Satyaloka extend for progressively greater spans, crowned by the worlds of Brahm\u0101, Vi\u1e63\u1e47u, Rudra and finally the upper shell.",
+      "source_ids": [
+        "ta_ahnika_8"
+      ],
+      "topics": [
+        "egg_of_brahma",
+        "brahm\u0101\u1e47\u1e0da",
+        "measurements",
+        "shell_thickness",
+        "hundred_rudras"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_010",
+      "section": "tattvas",
+      "subsection": "ka\u00f1cukas_and_m\u0101y\u0101",
+      "kind": "source",
+      "text": "The five ka\u00f1cukas (obscuring coverings) are described in \u0100hnika 9 as the powers of contraction that reduce \u015aiva's infinite capacities to the finitude of the individual soul. Abhinavagupta writes: 'Thus the Supreme Lord renders (the individual souls) subject to (the chain of) cause and effect of Fundamental Nature. This is heralded by the progressive operation (kalan\u0101) of the obscuring coverings (ka\u00f1cuka) Kal\u0101, Vidy\u0101, R\u0101ga, K\u0101la and Niyati. (They are in the form of) limited agency, limited noetic subjectivity (j\u00f1atva), craving, temporal differentiation, and its emergence due to the necessity (of karmic consequence) (respectively). They consist of the lack of reflective awareness (of the essential) nature (of the soul) which does and knows everything, is free of craving, is undifferentiated by time and is all things' (T\u0100 9/166cd-170; Vol. 6, pp. 144\u2013147). Kal\u0101 (the Force of limited agency) arises first from M\u0101y\u0101: 'The Force (of limited agency) arises from the principle of M\u0101y\u0101, and its characteristic is limited agency (ki\u00f1citkart\u1e5btva). This, the first of the obscuring coverings, not only obscures its essentially omnipotent \u015aiva nature, it enlivens its limited consciousness' (T\u0100 9/174; Vol. 6, pp. 150\u2013151).",
+      "source_ids": [
+        "ta_ahnika_9"
+      ],
+      "topics": [
+        "ka\u00f1cukas",
+        "kal\u0101",
+        "vidy\u0101",
+        "r\u0101ga",
+        "k\u0101la",
+        "niyati",
+        "limited_agency",
+        "obscuring_coverings"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_011",
+      "section": "cosmology",
+      "subsection": "m\u0101y\u0101_as_knot",
+      "kind": "source",
+      "text": "M\u0101y\u0101 is presented in \u0100hnika 8 under three aspects: the Knot (m\u0101y\u0101granthi), the Cavity (m\u0101y\u0101bila), and the Cave (guh\u0101) \u2014 the Womb of the universe. 'The great plane is the pure current, of which the distinguishing mark is union with \u015aiva's divine qualities. Ananta is the presiding Lord of the Principle of M\u0101y\u0101. The Cavity of M\u0101y\u0101 is M\u0101y\u0101 in the form of the Knot, and the Cave is (M\u0101y\u0101) in the form of the Principle' (T\u0100 8/307cd-308; Vol. 5, pp. 309\u2013310). She is called the Womb (bhaga) because 'all beings are generated in those cavities of her wombs (yoni) that abound with many desires, in accord with the arousing effect the Lord's power (has upon them). If the Lord passionately desires this goddess and she behaves in accord with (his) will, then the creatures from Unmanifest Nature onwards are born from each of her wombs' (T\u0100 8/309-310; Vol. 5, pp. 310\u2013311). Within the three cavities (pu\u1e6da) of M\u0101y\u0101 reside twelve Rudras: six in the lower cavity (Gahana, As\u0101dhya, Harihara, Da\u015be\u015bvara, Trikala, Gopati), Ananta in the centre, and five in the upper cavity (K\u1e63ema, Dvije\u015ba, Vidye\u015ba, Vi\u015bva, \u015aiva). 'The members of these groups of five and six who reside in the cavities can exchange places with one another. However, the Lord Ananta is (always) in every case in the centre' (T\u0100 8/317cd-320ab; Vol. 5, pp. 314\u2013315).",
+      "source_ids": [
+        "ta_ahnika_8"
+      ],
+      "topics": [
+        "m\u0101y\u0101granthi",
+        "m\u0101y\u0101bila",
+        "guh\u0101",
+        "m\u0101y\u0101_cavities",
+        "knot_of_m\u0101y\u0101",
+        "twelve_rudras",
+        "ananta"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_012",
+      "section": "cosmology",
+      "subsection": "subtle_body",
+      "kind": "source",
+      "text": "The subtle body (purya\u1e63\u1e6daka / vigrah\u0101\u1e63\u1e6daka) is described in \u0100hnika 8 as the 'City of Eight' that transmigrates after death, bearing the karmic residues. K\u1e63emar\u0101ja explains that there are three bodies: 'the gross (sth\u016bla) physical body, the subtle (s\u016bk\u1e63ma) body and the supreme (para) body. The subtle body is the City of Eight (purya\u1e63\u1e6daka), that transmigrates after the death of the gross, physical body to a new one. The individual soul (j\u012bva) who transmigrates in this way is the subjectivity that identifies itself with the City of Eight, and consists of Karma (karm\u0101tma). Deposited in the City of Eight are the latent traces of past action, that are at the root of the many desires that govern the behaviour of the fettered. Not only of those operant in a single lifespan, but also those that are transmitted from life to life. When active in the physical body, the City of Eight contains not only all the physical sensations transmitted through the senses, but also the conflicting turmoil of inner sensations. Identification with the City of Eight is bondage. When this identification is overcome, the soul discovers its authentic subjectivity' (K\u1e63emar\u0101ja on SpK\u0101 49, cited in T\u0100 8/163cd-165ab; Vol. 5, pp. 192\u2013193). The components of the subtle body are the five subtle elements (tanm\u0101tras), manas, aha\u1e41k\u0101ra, and buddhi.",
+      "source_ids": [
+        "ta_ahnika_8"
+      ],
+      "topics": [
+        "purya\u1e63\u1e6daka",
+        "vigrah\u0101\u1e63\u1e6daka",
+        "subtle_body",
+        "city_of_eight",
+        "karm\u0101tma",
+        "latent_traces",
+        "transmigration"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_013",
+      "section": "cosmology",
+      "subsection": "sixfold_path",
+      "kind": "source",
+      "text": "The Sixfold Path (\u1e63a\u1e0dadhvan) \u2014 the six initiatory paths that constitute the \u015aaiva cosmic order \u2014 are described in Appendix A to \u0100hnika 8 in relation to the cosmology of the Svacchandatantra. These six paths are the Path of the Principles (tattv\u0101dhvan), the Path of Worlds (bhuvan\u0101dhvan), the Path of Phonemes (var\u1e47\u0101dhvan), the Path of Mantras (mantr\u0101dhvan), the Path of the Pads (pad\u0101dhvan), and the Path of the Kal\u0101s (kal\u0101dhvan). Goodall notes that the sixfold path 'make their first appearance in the Sv\u0101yambhuvas\u016btrasa\u1e41graha' and that 'there are six initiatory paths (\u1e63a\u1e0dadhvan) that lead from earthly existence to the liberated state of \u015bivatva. Much of Sv\u0101yambhuvas\u016btrasa\u1e41graha 4 is dedicated to setting out the correspondences between these paths' (T\u0100 Vol. 5, p. 382, citing Goodall 2015: 43). The doctrine of the six paths 'may seem to be almost ubiquitous in \u015aaiva literature, but it is in fact conspicuously absent in several pre-tenth-century Siddh\u0101ntatantras' (ibid.). The Bhuvan\u0101dhvan \u2014 the Path of Worlds detailed in \u0100hnika 8 \u2014 is one of these six, and the entire cosmology serves as the ritual basis for the purifications performed in initiation (d\u012bk\u1e63\u0101).",
+      "source_ids": [
+        "ta_ahnika_8"
+      ],
+      "topics": [
+        "\u1e63a\u1e0dadhvan",
+        "sixfold_path",
+        "initiatory_paths",
+        "bhuvan\u0101dhvan",
+        "tattv\u0101dhvan",
+        "mantr\u0101dhvan",
+        "var\u1e47\u0101dhvan",
+        "pad\u0101dhvan",
+        "kal\u0101dhvan"
+      ],
+      "status": "active"
+    }
+  ],
+  "coverage": {
+    "cosmology": {
+      "status": "comprehensive",
+      "sources": [
+        "ta_ahnika_8"
+      ],
+      "passage_count": 7,
+      "estimated_completeness": 0.9,
+      "gaps": [
+        "Detailed verse-by-verse mapping of each world to its tattva still needed; the full Bhuvan\u0101dhvan lists 207 worlds but only representative samples are given here"
+      ]
+    },
+    "tattvas": {
+      "status": "comprehensive",
+      "sources": [
+        "ta_ahnika_9"
+      ],
+      "passage_count": 4,
+      "estimated_completeness": 0.85,
+      "gaps": [
+        "The Pratyabhij\u00f1\u0101-based exegesis of the higher tattvas from the nondualist perspective needs fuller treatment"
+      ]
+    },
+    "perceivers": {
+      "status": "good",
+      "sources": [
+        "ta_ahnika_10"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 0.65,
+      "gaps": [
+        "The detailed mapping of the fifteen divisions of each perceiver and their projection into the breath cycle needs expansion"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "coverage_gap",
+      "title": "The bhuvana-tattva correspondence not fully mapped",
+      "description": "\u0100hnika 8 associates each world with a tattva, but the precise mapping of all 207 worlds to the 36 tattvas across the five kal\u0101s needs a dedicated lookup table or appendix.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    },
+    {
+      "id": "issue-002",
+      "type": "coverage_gap",
+      "title": "Relation of cosmology to initiation (d\u012bk\u1e63\u0101) not yet traced",
+      "description": "The purpose of the Bhuvan\u0101dhvan is primarily ritual: the soul's karmic residues must be purified in every world and tattva where they bear fruit. This connection to the initiation system of \u0100hnikas 15\u201327 is not yet articulated here.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial RO created covering \u0100hnikas 8\u201310. Cosmology (Egg of Brahm\u0101, 7 lokas, subtle body), tattva system (36 tattvas, ka\u00f1cukas, m\u0101y\u0101granthi), and seven perceivers documented with 8 passages.",
+      "sources_added": [
+        "ta_ahnika_8",
+        "ta_ahnika_9",
+        "ta_ahnika_10",
+        "mvg",
+        "svacchanda_reference"
+      ],
+      "passage_count": 8,
+      "status": "draft"
+    },
+    {
+      "version": "0.2.0",
+      "date": "2026-07-14",
+      "type": "update",
+      "summary": "Added 5 passages with direct source extracts: Egg of Brahm\u0101 measurements (T\u0100 8/165cd-166), detailed ka\u00f1cuka description (T\u0100 9/174), M\u0101y\u0101 as Knot/Cave with the three cavities and twelve Rudras (T\u0100 8/307cd-320ab), subtle body as City of Eight with karmic vehicle explanation (K\u1e63emar\u0101ja on SpK\u0101 49), and the Sixfold Path (\u1e63a\u1e0dadhvan) from the appendix (Goodall on Sv\u0101yambhuvas\u016btrasa\u1e41graha 4).",
+      "sources_added": [],
+      "passage_count": 13,
+      "status": "draft"
+    }
+  ],
+  "appendices": [
+    {
+      "file": "bhuvana-tattva-map.md",
+      "description": "Full mapping of the 207 worlds to the 36 tattvas and five kal\u0101s, with verse references"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created in draft state covering Tantr\u0101loka \u0100hnikas 8\u201310 on cosmology and tattvas",
+      "sources_total": 5,
+      "passages_total": 13
+    }
+  ]
+}

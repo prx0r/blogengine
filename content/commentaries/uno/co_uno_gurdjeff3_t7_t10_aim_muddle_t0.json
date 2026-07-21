@@ -1,0 +1,58 @@
+{
+  "co_id": "co:uno_gurdjeff3_t7_t10_aim_muddle_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gurdjeff3_t7_t10_aim_muddle",
+  "turn_index": 0,
+  "lineage": "Gurdjieffian",
+  "student_state": "confused_and_aimless",
+  "behavior_tags": [
+    "self_analysis",
+    "confusion"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_05",
+    "function_name": "UM_05",
+    "mechanism_shape": "NONE",
+    "teaching_actions": [
+      "validates_confusion",
+      "diagnoses_lack_of_unity"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.65,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_04",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "resist_intellectually",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The validation/diagnosis works: confusion = correct observation (lack of unity), diagnoses: lack of unity (muddle = many things, not one). The student reports confusion (confused and aimless), which shows they understand: muddle = many things (confusion). They'll likely accept the validation/diagnosis. Single-turn episode: confusion report → validation/diagnosis → complete. Hypothesis: confusion validations lead to compliance in single-turn episodes—testable by tracking whether confusion validations end episodes.",
+  "accumulated_insight": "T1: Student reports confusion ('I have often tried to think what I want, but I only find a muddle of many things')—confused and aimless via self analysis and confusion. They understand: muddle = many things (confusion). The none mechanism validates: confusion = correct observation (lack of unity), diagnoses: lack of unity (muddle = many things, not one). Pattern: confusion report → validation/diagnosis → [complete]. Low confidence because validations can lead to resistance or compliance.",
+  "abstract_pattern": "",
+  "visible_response": "That's it.\nI want you to realize how difficult it is to define what one wants.\nSuppose\nyou are given full choice to have what you want: you will not know what to say.\nBut it\nis important that you should understand and know it;\nyou must be able to formulate it.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:sufi-comparative-analysis",
+    "ro:steiner-tantraloka-parallels"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

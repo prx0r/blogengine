@@ -1,0 +1,51 @@
+{
+  "co_id": "co:uno_therapy2_t1095_t1125_somatic_t_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy2_t1095_t1125_somatic_transference_breakthrough",
+  "turn_index": 0,
+  "lineage": "Therapeutic",
+  "student_state": "curious_observation",
+  "behavior_tags": [
+    "somatic_awareness"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "UNKNOWN",
+    "function_name": "UNKNOWN",
+    "mechanism_shape": "NONE",
+    "teaching_actions": [],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.15,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_01",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "go_along_compliantly",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "'Not sure. They’re, they’re kind of locked into position.'—student presents as curious observation. Teacher's move uses none: 'What do you notice feeling in your arms? Because you notice your '. Strategy: none. Hypothesis: none mechanism will create go_along_compliantly. Watching how student responds to this intervention.",
+  "accumulated_insight": "T1: Student says 'Not sure. They’re, they’re kind of locked into position.' showing curious_observation via somatic_awareness. Teacher responds 'What do you notice feeling in your arms? Because you notice your ' using none to none. Opening REMAKING move addresses curious_observation. Predicting go_along_compliantly because none interventions typically produce this response pattern.",
+  "abstract_pattern": "",
+  "visible_response": "What do you notice feeling in your arms? Because you notice your arms are like this. [Grabbing position.] What’s that? What are those arms wanting to do?”\n\nThey’re locking into position.\nWhat are those arms wanting to do?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

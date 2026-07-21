@@ -1,0 +1,55 @@
+{
+  "co_id": "co:uno_therapy2_t1898_t1915_rationali_t5",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy2_t1898_t1915_rationalization_employee",
+  "turn_index": 5,
+  "lineage": "Therapeutic",
+  "student_state": "struggle",
+  "behavior_tags": [
+    "affect_emergence",
+    "habitual_defense"
+  ],
+  "pedagogy": {
+    "phase": "SELF-MAKING",
+    "function_id": "SM_01",
+    "function_name": "SM_01",
+    "mechanism_shape": "NONE",
+    "teaching_actions": [
+      "blocks_rationalization",
+      "points_to_somatic_marker"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.15,
+      "depth": 0.38,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_01",
+      "depth_discrete": "PD_02",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "Final turn: '[Sighs. Pounds his fist on the chair.] I tell you I think it’s because'. Reached struggle after 6 turns. Episode demonstrates embodied_contradiction effectiveness in SELF-MAKING work. Teaching complete for this sequence.",
+  "accumulated_insight": "T6 (Final): Student: '[Sighs. Pounds his fist on the chair.] I tell you I think it’s because'. Final state: struggle. Episode complete with 6 turns. Arc shows progression through SELF-MAKING phase using embodied_contradiction interventions. Teaching sequence addressed affect_emergence, habitual_defense pattern.",
+  "abstract_pattern": "",
+  "visible_response": "If we don’t go off to because, how do you experience this anger right now in your fist?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

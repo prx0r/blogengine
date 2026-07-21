@@ -1,0 +1,232 @@
+{
+  "ro_id": "ro:alchemy-emerald-tablet",
+  "schema_version": 1,
+  "title": "The Emerald Tablet and the Golden Tractate of Hermes Trismegistus",
+  "subtitle": "The foundational Hermetic axioms of as above/so below, the seven operations, and the unity of the One Thing",
+  "family": "theme",
+  "status": "draft",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "The most compressed and sacred text of Western alchemy \u2014 the Emerald Tablet of Hermes Trismegistus with its seven clauses \u2014 together with the Corpus Hermeticum context.",
+    "scope": "Covers the Emerald Tablet (Tabula Smaragdina) from the Hermetic corpus, the Golden Tractate, and the Hermetic Triomph. Primary focus on the as above/so below principle, the separation of the elements, the seven operations, and the One Thing doctrine.",
+    "traditions": [
+      "hermetica",
+      "alchemy",
+      "egyptian",
+      "gnostic",
+      "perennial_philosophy"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "herm-tr-text",
+      "tier": 1,
+      "label": "Hermetic Triumph / Emerald Tablet texts at alchemywebsite.com",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "emerald_tablet",
+        "as_above_so_below",
+        "seven_operations",
+        "one_thing"
+      ],
+      "sections_affected": [
+        "tablet",
+        "hermetic_axioms"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "corp-herm",
+      "tier": 1,
+      "label": "Corpus Hermeticum (Everard translation), Liber I (Poemandres)",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "poemandres_vision",
+        "noetic_light",
+        "creation_hymn"
+      ],
+      "sections_affected": [
+        "hermetic_cosmogony"
+      ],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "tablet",
+      "subsection": "as_above_so_below",
+      "kind": "source",
+      "text": "That which is below is like that which is above and that which is above is like that which is below, to accomplish the miracles of one thing. And just as all things have been and arose from one by the mediation of one: so all things have their birth from this one thing by adaptation. The Sun is its father, the Moon its mother, the wind hath carried it in its belly, the earth is its nurse. It is the father of all perfection throughout the world. Its power is integral if it be turned into earth. Thou shalt separate the earth from the fire, the subtle from the gross, gently, with much sagacity. It ascends from the earth to the heaven and again descends to the earth, and receives the power of the superiors and of the inferiors.",
+      "source_ids": [
+        "herm-tr-text"
+      ],
+      "topics": [
+        "as_above_so_below",
+        "one_thing",
+        "separation_of_elements",
+        "descent_ascent"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "hermetic_cosmogony",
+      "subsection": "poemandres_the_light_of_mind",
+      "kind": "source",
+      "text": "Poemandres, the Mind of the Sovereignty, appeared to me in meditation, saying: 'I am the Light; I am the Nous, thy God, who am older than the watery nature that appeared out of the shadow. The Light is I, the Nous, thy God, who am before the moist nature that appeared out of the darkness, and the luminous Word (Logos) from the Nous is the Son of God.' When he had thus spoken, for a long time we looked fixedly at one another, so that I trembled at his aspect. And when he nodded, I saw in my Nous the Light consisting of innumerable Powers, and become a boundless World, embracing the Fire, water, earth, and air, and the Light was the Life and the Unity.",
+      "source_ids": [
+        "corp-herm"
+      ],
+      "topics": [
+        "poemandres",
+        "nous",
+        "light",
+        "logos",
+        "creation",
+        "four_elements"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "tablet",
+      "subsection": "the_seven_clauses_and_the_worlds_fabric",
+      "kind": "source",
+      "text": "So thou hast the glory of the whole world. Therefore let all obscurity flee from thee. This is the strong force of all forces, for it overcomes every subtle thing and penetrates every solid thing. Thus was the world created. From this are and do come admirable adaptations, of which this is the means. Therefore I am called Hermes Trismegistus, having the three parts of the philosophy of the whole world. That which I have said of the operation of the Sun is accomplished and ended.",
+      "source_ids": [
+        "herm-tr-text"
+      ],
+      "topics": [
+        "seven_clauses",
+        "force_of_forces",
+        "trismegistus",
+        "operation_complete"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "tablet",
+      "subsection": "as_above_so_below_as_daimonic_axis",
+      "kind": "commentary",
+      "text": "The axiom 'as above, so below' is the operational principle of the daimon path: the HGA is the 'above' of which the practitioner is the 'below'. In the PGM systasis, the magician becomes the mirror of the daimon \u2014 the egg ritual (PGM VII.515) involves coating the body with an egg, which is the microcosm (below) receiving the imprint of the macrocosm (above). The 'one thing' is the unus-ambo of Corbin's Shakhs-e Nurani: the Perfect Nature that is simultaneously the Guide above and the Self below. The saying 'Its power is integral if it be turned into earth' means the spiritual power must be incarnated, grounded in the physical body \u2014 which is precisely what the tantric tradition means by r\u016b\u1e0dha (incarnation) in Layayoga: the pr\u0101\u1e47a must be stabilized in the body (earth) before it can ascend.",
+      "source_ids": [
+        "herm-tr-text"
+      ],
+      "topics": [
+        "daimon_path",
+        "hga",
+        "corbin",
+        "pgm",
+        "unus_ambo",
+        "incarnation"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "hermetic_cosmogony",
+      "subsection": "poemandres_as_the_clear_light_of_bardo",
+      "kind": "commentary",
+      "text": "Poemandres' self-revelation \u2014 'I am the Light, I am the Nous, thy God, who am older than the watery nature that appeared out of the shadow' \u2014 is structurally identical to the Tibetan Book of the Dead's address to the deceased: 'O nobly-born, the Clear Light of the First Bardo is upon thee. Recognize it. It is thine own consciousness, void and luminous, not born of anything.' The 'watery nature out of the shadow' is the alaya-vij\u00f1\u0101na (store consciousness) of Yogacara Buddhism, the substrate from which samsaric appearances arise. Poemandres' nod and the vision of the 'Light consisting of innumerable Powers' corresponds to the dharmata bardo where the peaceful and wrathful deities (the 'innumerable Powers') arise from the Clear Light. Hermes' trembling before Poemandres is the awe of the bardo vision, and the injunction to 'recognize' parallels Padmasambhava's root instruction: 'Recognize the luminosity of your own awareness.'",
+      "source_ids": [
+        "corp-herm"
+      ],
+      "topics": [
+        "tibetan_book_of_dead",
+        "clear_light",
+        "bardo",
+        "alaya_vijnana",
+        "recognition"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_006",
+      "section": "tablet",
+      "subsection": "the_seven_operations_and_the_cakra_system",
+      "kind": "commentary",
+      "text": "The seven clauses of the Emerald Tablet encode the seven stages of the alchemical opus, which correspond to the seven cakras. Clause 1 (as above/so below) = m\u016bl\u0101dh\u0101ra (grounding the macrocosm in the body). Clause 2 (Sun father/Moon mother) = sv\u0101dhi\u1e63\u1e6dh\u0101na (the duality of i\u1e0d\u0101-pi\u1e45gal\u0101). Clause 3 (wind carried in belly) = ma\u1e47ip\u016bra (the fire of pr\u0101\u1e47a in the navel center). Clause 4 (separate earth from fire, subtle from gross) = an\u0101hata (the purification of the heart center, discrimination between spirit and matter). Clause 5 (ascends to heaven, descends to earth) = vi\u015buddhi (the ascending and descending of ku\u1e47\u1e0dalin\u012b through the central channel). Clause 6 (thou hast the glory of the whole world) = \u0101j\u00f1\u0101 (the vision of the cosmos in the third eye, the sarva-j\u00f1\u0101na). Clause 7 (I am called Hermes Trismegistus) = sahasr\u0101ra (the realization of the three parts of philosophy, the trikaya of Buddhism).",
+      "source_ids": [
+        "herm-tr-text"
+      ],
+      "topics": [
+        "layayoga",
+        "shakti",
+        "shat_chakras",
+        "kundalini",
+        "trikaya"
+      ],
+      "status": "active"
+    }
+  ],
+  "coverage": {
+    "tablet": {
+      "status": "comprehensive",
+      "sources": [
+        "herm-tr-text"
+      ],
+      "passage_count": 3,
+      "estimated_completeness": 0.9,
+      "gaps": [
+        "Alternative translations of the Emerald Tablet (e.g. Jubilant, Newton, Steele/Singer) not compared"
+      ]
+    },
+    "hermetic_cosmogony": {
+      "status": "good",
+      "sources": [
+        "corp-herm"
+      ],
+      "passage_count": 2,
+      "estimated_completeness": 0.6,
+      "gaps": [
+        "Full Poemandres text not yet excerpted; only the Light passage"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "interpretation",
+      "title": "Multiple versions of the Emerald Tablet exist with variant phrasing",
+      "description": "The tablet exists in Latin (Hortulanus), Arabic (Balinus/Jabir), and Greek (Zosimos) versions. The alchemywebsite version blends traditions. The seven clauses are variously divided.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    },
+    {
+      "id": "issue-002",
+      "type": "coverage_gap",
+      "title": "Corpus Hermeticum only partially covered",
+      "description": "Only Book I (Poemandres) is excerpted. Books II-XVII, especially the Asclepius and the definitions of God, remain unincorporated.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial RO covering the Emerald Tablet (as above/so below, seven operations) and Poemandres vision from Corpus Hermeticum.",
+      "sources_added": [
+        "herm-tr-text",
+        "corp-herm"
+      ],
+      "passage_count": 6,
+      "status": "draft"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created in draft state from Hermetic Triumph and Corpus Hermeticum sources",
+      "sources_total": 2,
+      "passages_total": 6
+    }
+  ]
+}

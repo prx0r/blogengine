@@ -1,0 +1,59 @@
+{
+  "co_id": "co:uno_gurdjeff3_t1219_t1233_moon_wir_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gurdjeff3_t1219_t1233_moon_wires",
+  "turn_index": 0,
+  "lineage": "Gurdjieffian",
+  "student_state": "seeking_cosmological_mechanism",
+  "behavior_tags": [
+    "asks_for_mechanism",
+    "seeks_structural_detail"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_06",
+    "function_name": "UM_06",
+    "mechanism_shape": "CONSTRAINT_COLLAPSE",
+    "teaching_actions": [
+      "states_functional_dependency",
+      "warns_against_premature_freedom",
+      "gives_minimal_instruction"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.85,
+      "intimacy": 0.62,
+      "attunement": 0.5,
+      "style": 0.15,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_04",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_01",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The constraint/warning works: functional dependency (under moon influence), warns: against premature freedom (premature wire-cutting = collapse), gives: minimal instruction. The student asks mechanism question (seeking cosmological mechanism), which shows they understand: moon influence = needs explanation (mechanism). They'll likely accept the constraint/warning. Single-turn episode: mechanism question → constraint/warning → complete. Hypothesis: constraint warnings lead to compliance in single-turn episodes—testable by tracking whether constraint warnings end episodes.",
+  "accumulated_insight": "T1: Student asks mechanism question ('In what way are we under the influence of the moon?')—seeking cosmological mechanism via asks for mechanism and seeks structural detail. They understand: moon influence = needs explanation (mechanism). The constraint_collapse mechanism states: functional dependency (under moon influence), warns: against premature freedom (premature wire-cutting = collapse), gives: minimal instruction. Pattern: mechanism question → constraint/warning → [complete]. Low confidence because constraints can lead to deeper questions or compliance.",
+  "abstract_pattern": "",
+  "visible_response": "The moon controls all our movements.\nIf I move my arm, it is the moon that\ndoes it, because without the influence of the moon it cannot happen.\nThe moon is like\nthe weight on an old-fashioned clock and organic life is like the clock mechanism\nwhich is kept going by this weight.\n\nAll our mechanicalness depends on the moon.\nWe are like marionettes moved by\nwires, but we can be more free of the moon or less free.\n\nAt present we cannot move\na step without the energy of the moon;\nthe wires cannot be cut at once, for then the\nmarionettes would simply collapse.\nIt is necessary to learn to move first. All sleeping\npeople are under the influence of the moon.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:sufi-comparative-analysis",
+    "ro:steiner-tantraloka-parallels"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

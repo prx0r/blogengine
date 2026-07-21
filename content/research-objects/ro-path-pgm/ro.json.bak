@@ -1,0 +1,177 @@
+{
+  "ro_id": "ro:ro-path-pgm",
+  "schema_version": 1,
+  "title": "The PGM Path: Simple Ritual-Based Daimon Contact",
+  "subtitle": "Standalone rites from the Greek Magical Papyri",
+  "family": "tradition",
+  "status": "draft",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "The most accessible method. Individual spells without elaborate preparation.",
+    "scope": "",
+    "traditions": [
+      "occult",
+      "daimon"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "pgm-vii-505-528",
+      "tier": 1,
+      "label": "pgm-vii-505-528",
+      "status": "active"
+    },
+    {
+      "source_id": "pgm-i-1-42",
+      "tier": 1,
+      "label": "pgm-i-1-42",
+      "status": "active"
+    },
+    {
+      "source_id": "pgm-vii-478-490",
+      "tier": 1,
+      "label": "pgm-vii-478-490",
+      "status": "active"
+    },
+    {
+      "source_id": "pgm-iii-494-611",
+      "tier": 1,
+      "label": "pgm-iii-494-611",
+      "status": "active"
+    },
+    {
+      "source_id": "pgm-vii-644-651",
+      "tier": 1,
+      "label": "pgm-vii-644-651",
+      "status": "active"
+    },
+    {
+      "source_id": "pgm-vii-862-918",
+      "tier": 1,
+      "label": "pgm-vii-862-918",
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "dream_revelation",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [],
+      "topics": [],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "lunar_invocation",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [],
+      "topics": [],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "systasis_to_helios",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [],
+      "topics": [],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "systasis_to_daimon",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [],
+      "topics": [],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "assistant_daimon",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [],
+      "topics": [],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_006",
+      "section": "prayer_to_good_daimon",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [],
+      "topics": [],
+      "status": "placeholder"
+    }
+  ],
+  "total_duration": "~5 weeks",
+  "difficulty": "Low",
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-13",
+      "type": "initial",
+      "summary": "Initial draft. 6 sections.",
+      "sources_added": [
+        "pgm-vii-505-528",
+        "pgm-i-1-42",
+        "pgm-vii-478-490",
+        "pgm-iii-494-611",
+        "pgm-vii-644-651",
+        "pgm-vii-862-918"
+      ],
+      "passage_count": 6,
+      "status": "draft"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-07-13",
+      "event": "RO created",
+      "sources_total": 6,
+      "passages_total": 6
+    }
+  ],
+  "coverage": {
+    "systasis_to_daimon": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    },
+    "prayer_to_good_daimon": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    },
+    "assistant_daimon": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    },
+    "lunar_invocation": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    },
+    "dream_revelation": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    },
+    "systasis_to_helios": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    }
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "ro_id": "ro:penrose-orch-or",
+  "schema_version": 1,
+  "title": "Roger Penrose \u2014 ORCH-OR and Non-Computable Physics (Collected Papers)",
+  "subtitle": "6 papers on quantum state reduction, the non-computable, twistor theory, and the Di\u00f3si-Penrose criterion \u2014 the physical basis of \u015baktip\u0101ta and the 38th principle",
+  "family": "thinker-topic",
+  "status": "stub",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "Penrose's ORCH-OR theory of quantum state reduction as a non-computable physical process provides the physical basis for \u015baktip\u0101ta (grace) \u2014 the variable in the system that cannot be engineered, th...",
+    "scope": "Covers 6 papers (2018-2025): the Di\u00f3si-Penrose criterion for quantum gravity induced collapse, twistor theory, the non-computable, the quantum mind, and consciousness-related physics.",
+    "traditions": [
+      "quantum-gravity",
+      "consciousness",
+      "non-computable",
+      "twistor-theory"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "penrose-collected",
+      "tier": 1,
+      "label": "Roger Penrose et al. \u2014 Collected Papers (2018-2025). 6 PDFs in /root/projects/blog/science/authors/penrose/. ArXiv IDs: 1812.04630 through 2509.01586.",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "orch_or",
+        "non_computable",
+        "twistor",
+        "diosi_penrose",
+        "quantum_mind"
+      ],
+      "sections_affected": [
+        "theory"
+      ],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "theory",
+      "subsection": "non_computable_as_saktipata",
+      "kind": "synthesis",
+      "text": "Penrose argues that objective quantum state reduction (OR) is a non-computable physical process \u2014 not random (as in standard QM) and not algorithmic. The moment of reduction cannot be predicted from prior states. This IS \u015baktip\u0101ta \u2014 grace as the non-computable gap in the fabric of reality. The five degrees of grace (t\u012bvrat\u012bvra \u2192 manda) correspond to five degrees of non-computability: from complete openness to almost-complete determination. Penrose gives the 38th principle a physical basis: the non-computable IS the An\u0101khy\u0101 \u2014 the aspect of reality that cannot be captured by any formal system.",
+      "source_ids": [
+        "penrose-collected"
+      ],
+      "topics": [
+        "non_computable",
+        "grace",
+        "saktipata",
+        "quantum_reduction"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "theory",
+      "subsection": "twistor_as_pasyanti",
+      "kind": "synthesis",
+      "text": "Twistor theory replaces space-time points with twistors \u2014 complex geometric objects that encode both location and momentum. Space-time emerges from twistor interactions. This IS the pa\u015byant\u012b level of speech: the geometry before space-time, where sound (information) and light (geometry) are undifferentiated. The twistor IS the phoneme at the pa\u015byant\u012b level \u2014 the unit of reality that is both information and form.",
+      "source_ids": [
+        "penrose-collected"
+      ],
+      "topics": [
+        "twistor",
+        "pasyanti",
+        "space_time_emergence",
+        "geometry"
+      ],
+      "status": "active"
+    }
+  ],
+  "coverage": {
+    "theory": {
+      "status": "minimal",
+      "sources": [
+        "penrose-collected"
+      ],
+      "passage_count": 2,
+      "estimated_completeness": 0.2,
+      "gaps": [
+        "Full extraction of all 6 papers needed"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "coverage_gap",
+      "title": "Full corpus extraction needed",
+      "description": "6 papers collected but not fully extracted.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial RO for Penrose's collected papers. 2 passages mapping non-computable to grace, twistor to pa\u015byant\u012b.",
+      "sources_added": [
+        "penrose-collected"
+      ],
+      "passage_count": 2,
+      "status": "draft"
+    }
+  ],
+  "appendices": [],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created for 6 Penrose papers.",
+      "sources_total": 1,
+      "passages_total": 2
+    }
+  ]
+}

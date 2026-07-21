@@ -1,0 +1,59 @@
+{
+  "co_id": "co:uno_gorgias_ep014_nature_vs_conven_t2",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gorgias_ep014_nature_vs_convention",
+  "turn_index": 2,
+  "lineage": "Socratic",
+  "student_state": "defensive_rationalization",
+  "behavior_tags": [
+    "pushes_back"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_02",
+    "function_name": "UM_02",
+    "mechanism_shape": "CONSTRAINT_COLLAPSE",
+    "teaching_actions": [
+      "asserts_logical_consequence"
+    ],
+    "traps_avoided": [
+      "category_conflation"
+    ],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.62,
+      "attunement": 0.8,
+      "style": 0.5,
+      "depth": 0.62,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_03",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_03",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "resist_intellectually",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "Contradiction is visible: they don?t want ?stronger? to include the many. Next, press them to redefine ?stronger? (knowledge/justice) or concede the nature rule is unstable. Expect continued resistance but an opening to pivot to a justice-based criterion.",
+  "accumulated_insight": "Three-turn pattern: T1 nature thesis (?stronger should rule weaker?) ? T2 criterion supplied (?the superior man?) ? T3 recoil (?That?s not what I meant?) when ?superior? is flipped (e.g., the many). They understand the consequence but refuse it. The constraint_collapse/UM_02 move exposed the internal contradiction between their nature rule and their intuitive limit.",
+  "abstract_pattern": "",
+  "visible_response": "But it’s what you said—and your principle collapses under its own definition.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:proclus-elements",
+    "ro:platonism-decoded",
+    "ro:chaldean-oracles"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

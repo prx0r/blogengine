@@ -1,0 +1,54 @@
+{
+  "co_id": "co:uno_therapy3.1_t3000_t3017_fake_gu_t8",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3.1_t3000_t3017_fake_guilt_self_attack",
+  "turn_index": 8,
+  "lineage": "Therapeutic",
+  "student_state": "unknown",
+  "behavior_tags": [],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_03",
+    "function_name": "RM_03",
+    "mechanism_shape": "SUBJECT_OBJECT_INVERSION",
+    "teaching_actions": [
+      "interprets_defense",
+      "defines_substitution"
+    ],
+    "traps_avoided": [
+      "false_paradox"
+    ],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.35,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_02",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "no_clear_effect",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "Final turn: 'I didn’t come back to her afterward about it.'. Reached unknown after 9 turns. Episode demonstrates subject_object_inversion effectiveness in REMAKING work. Teaching complete for this sequence.",
+  "accumulated_insight": "T9 (Final): Student: 'I didn’t come back to her afterward about it.'. Final state: unknown. Episode complete with 9 turns. Arc shows progression through REMAKING phase using subject_object_inversion interventions. Teaching sequence addressed none pattern.",
+  "abstract_pattern": "",
+  "visible_response": "In a way, attacking yourself became a substitute for reaching out to her. Was this self-attack a way to avoid facing your guilt, reaching out to her, and repairing the damage?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

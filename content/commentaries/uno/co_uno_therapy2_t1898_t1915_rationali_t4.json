@@ -1,0 +1,51 @@
+{
+  "co_id": "co:uno_therapy2_t1898_t1915_rationali_t4",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy2_t1898_t1915_rationalization_employee",
+  "turn_index": 4,
+  "lineage": "Therapeutic",
+  "student_state": "cognitive_block",
+  "behavior_tags": [
+    "logical_defense"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_04",
+    "function_name": "UM_04",
+    "mechanism_shape": "NONE",
+    "teaching_actions": [],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.15,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_01",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "go_along_compliantly",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "Turn 5: 'How can I feel angry when the company has already punished her?'. Student now in cognitive_block. Continuing with none approach. Building on previous turn's foundation.",
+  "accumulated_insight": "T5: Student: 'How can I feel angry when the company has already punished her?'. Shift from unknown to cognitive_block. Teacher applies none mechanism with none. Mid-episode progression in UNMAKING phase.",
+  "abstract_pattern": "",
+  "visible_response": "That’s not your anger.\nThat’s how you explain it away... How do you experience this anger physically in your body?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

@@ -1,0 +1,58 @@
+{
+  "co_id": "co:uno_therapy3_t969_t976_portrayal_d_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3_t969_t976_portrayal_devaluation_trash",
+  "turn_index": 0,
+  "lineage": "Therapeutic",
+  "student_state": "contemptuous_dismissal",
+  "behavior_tags": [
+    "devaluation",
+    "disposal"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_01",
+    "function_name": "RM_01",
+    "mechanism_shape": "STRUCTURAL_ANALOGY",
+    "teaching_actions": [
+      "interprets_defense",
+      "links_to_history",
+      "reframes_task"
+    ],
+    "traps_avoided": [
+      "identification_with_content"
+    ],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.85,
+      "attunement": 0.8,
+      "style": 0.5,
+      "depth": 0.62,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_04",
+      "attunement_discrete": "AT_03",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_03",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "'I'm trash'—internalized devaluation. Teacher doesn't argue ('you're not trash'), asks WHO taught this. Treats devaluation as learned, not factual. Traces to source: someone taught this view. Hypothesis: they'll name abuser.",
+  "accumulated_insight": "T1: Student in portrayal calls self 'trash.' Teacher confronts devaluation: 'Who taught you to see yourself as trash?' Traces origin. Predicting surface_emotion as source gets questioned.",
+  "abstract_pattern": "",
+  "visible_response": "Just like you did with your feelings for so many years.\nEven when you told your mother about his molestation, she said, in effect, put your feelings in the trash and you did.\nBut if we don’t trash your feelings, if we treat all of them with respect and care, what do you do with his body to prepare it for burial?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

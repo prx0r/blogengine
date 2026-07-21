@@ -1,0 +1,62 @@
+{
+  "work_id": "work:t2-pubmed-neural-and-phenotypic-representation-under-the-free-energy-principle",
+  "schema_version": 2,
+  "title": "Neural and phenotypic representation under the free-energy principle.",
+  "authors": [
+    {
+      "name": "Ramstead MJD"
+    },
+    {
+      "name": "Hesp C"
+    },
+    {
+      "name": "Tschantz A"
+    },
+    {
+      "name": "Smith R"
+    },
+    {
+      "name": "Constant A"
+    },
+    {
+      "name": "Friston K"
+    }
+  ],
+  "publication": {
+    "year": 2021,
+    "type": "article",
+    "source": "PubMed/MEDLINE",
+    "language": "en",
+    "journal": "Neurosci Biobehav Rev"
+  },
+  "identifiers": {
+    "pmid": "33271162",
+    "doi": "10.1016/j.neubiorev.2020.11.024"
+  },
+  "topics": [
+    "phase-6-6",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "tradition": [
+    "contemporary_science"
+  ],
+  "tier": 2,
+  "assets": {
+    "pdf_path": "t2-PMC7955287_Neural_and_phenotypic_representation_und.pdf",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/33271162/",
+    "abstract": "The aim of this paper is to leverage the free-energy principle and its corollary process theory, active inference, to develop a generic, generalizable model of the representational capacities of living creatures; that is, a theory of phenotypic representation. Given their ubiquity, we are concerned with distributed forms of representation (e.g., population codes), whereby patterns of ensemble activity in living tissue come to represent the causes of sensory input or data. The active inference fr"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_t2_search",
+    "retrieved_at": "2026-07-11"
+  },
+  "phase_mapping": {
+    "phase": 6,
+    "phase_name": "Dependent Arising",
+    "bridge_rationale": "Predictive processing \u2014 free energy principle, Bayesian brain, active inference, neural causality."
+  },
+  "evaluation": "Marginal (score=1.8)"
+}

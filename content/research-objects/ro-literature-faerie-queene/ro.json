@@ -1,0 +1,133 @@
+{
+  "ro_id": "ro:literature-faerie-queene",
+  "schema_version": 1,
+  "title": "The Faerie Queene — The Seven Knights of the Cakras",
+  "subtitle": "Spenser's epic as a complete initiatic curriculum across seven cakras, each knight representing a purified kañcuka",
+  "family": "literature",
+  "status": "draft",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "Spenser's The Faerie Queene as a complete initiatic curriculum: seven knights, seven cakras, seven stages of the purification of the kañcukas.",
+    "scope": "Covers the Redcross Knight's initiatic journey as primary exemplar; Una as daimon/Sophia; the Wandering Wood as Māyā; the Dragon as the Guardian; the House of Holiness as the pure path; each of the seven knights as a purified kañcuka.",
+    "traditions": [
+      "kashmir_shaivism",
+      "tantra",
+      "western_esotericism",
+      "literature"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "spenser-faerie-queene",
+      "tier": 1,
+      "label": "Edmund Spenser — The Faerie Queene (1590, 1596)",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": ["seven_knights", "redcross_initiation", "una_daimon", "house_of_holiness"],
+      "sections_affected": ["theory", "allegory", "cakra_correspondence"],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "theory",
+      "subsection": "redcross_knight",
+      "kind": "source",
+      "text": "The Redcross Knight's journey (Book I) is the first and most complete initiatic journey in the poem. He begins as a naive knight who does not know his own name (St. George/Holiness), falls repeatedly through the Wandering Wood, encounters Error, is deceived by Archimago and Duessa, descends into despair in Orgoglio's dungeon, is rescued by Prince Arthur (the Great Self), and is finally purified in the House of Holiness before slaying the Dragon. This is the complete arc of spiritual awakening: ignorance → fall → purification → union.",
+      "source_ids": ["spenser-faerie-queene"],
+      "topics": ["initiation", "redcross", "purification"],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "theory",
+      "subsection": "una_as_daimon",
+      "kind": "source",
+      "text": "Una is the daimon/Sophia figure — the veiled guide who accompanies the Redcross Knight throughout his journey. She is Truth (Una = one/truth), and her veiling represents the daimon's concealment from the unready consciousness. She is separated from the knight through his errors, is rescued by the satyrs (the raw forces of nature who recognize her divinity), and is finally reunited after the dragon-slaying. Her parents' release from the dragon's captivity is the liberation of the soul itself.",
+      "source_ids": ["spenser-faerie-queene"],
+      "topics": ["daimon", "sophia", "una", "guide"],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "theory",
+      "subsection": "wandering_wood_as_maya",
+      "kind": "source",
+      "text": "The Wandering Wood (Book I, Canto I) is Māyā — the realm of endless wandering where the knight loses his way. Error's den is at its heart: the half-serpent, half-woman monster whose vomit of books and frogs represents the intellectual confusion that arises from entanglement in phenomenality. The wood's endless paths that lead nowhere correspond to saṃsāra — the cycle of confusion that must be cut through by the sword of discriminative wisdom (Arthur's diamond shield/Malone's sword).",
+      "source_ids": ["spenser-faerie-queene"],
+      "topics": ["maya", "wandering_wood", "error", "samsara"],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "theory",
+      "subsection": "dragon_as_guardian",
+      "kind": "source",
+      "text": "The Dragon of Book I is the Guardian of the Threshold — the karmic residue that must be faced and slain before liberation. The three-day battle mirrors the three-day initiatic death: the first day the knight is beaten down (?), the second day he is restored by the Well of Life (baptism) and the Tree of Life (Eucharist), and the third day he slays the dragon. This is the trika pattern of emanation, maintenance, and reabsorption: the dragon is the contracted consciousness that dissolves when the full force of the pure path is brought to bear.",
+      "source_ids": ["spenser-faerie-queene"],
+      "topics": ["guardian", "dragon", "initiatic_death", "trika"],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "theory",
+      "subsection": "house_of_holiness",
+      "kind": "source",
+      "text": "The House of Holiness (Book I, Canto X) is the pure path — the direct means (upāya) after the long detour through the impure path. Here the Redcross Knight receives systematic instruction from Fidelia (Faith), Speranza (Hope), and Charissa (Love/Divine Will). He is taken through the hospital of the seven Beadsmen (the seven cakras purified), shown Mount Sinai (the descent of law), and finally sees the New Jerusalem from the Mount of Contemplation. This is the curriculum of the cakras in their ascended form.",
+      "source_ids": ["spenser-faerie-queene"],
+      "topics": ["pure_path", "house_of_holiness", "seven_cakras", "upaya"],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_006",
+      "section": "theory",
+      "subsection": "seven_knights_seven_cakras",
+      "kind": "source",
+      "text": "Each of the seven knights of The Faerie Queene represents a purified kañcuka — an instrument of contraction that has been transformed into an instrument of expansion. Holiness (Redcross/Mūlādhāra, Earth purified as stability), Temperance (Guymon/Svādhiṣṭhāna, Water purified as flow), Chastity (Britomart/Manipūra, Fire purified as will), Friendship (Cambell & Triamond/Anāhata, Air purified as relation), Justice (Artegall/ Viśuddha, Ether purified as discernment), Courtesy (Calidore/Ājñā, mind purified as mirror), and Mutability (the fragmentary seventh/continued in the Cantos of Mutability — the cakra beyond the six).",
+      "source_ids": ["spenser-faerie-queene"],
+      "topics": ["seven_knights", "kancuka", "cakra", "correspondence"],
+      "status": "placeholder"
+    }
+  ],
+  "coverage": {
+    "theory": {
+      "status": "comprehensive",
+      "sources": ["spenser-faerie-queene"],
+      "passage_count": 6,
+      "estimated_completeness": 0.6,
+      "gaps": ["Individual knight-by-knight analysis beyond Book I needs expansion; detailed cakra correspondences for each book need systematic treatment"]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "placeholder",
+      "title": "Passages need refinement with specific stanza/page references",
+      "description": "All passages currently summarize themes without precise textual citations. Full analysis requires stanza-level references.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial RO created. Six passages covering the Redcross Knight, Una as daimon, Wandering Wood as Māyā, Dragon as Guardian, House of Holiness as pure path, and the seven-knights/seven-cakras correspondence.",
+      "sources_added": ["spenser-faerie-queene"],
+      "passage_count": 6,
+      "status": "draft"
+    }
+  ],
+  "appendices": [],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created in draft state",
+      "sources_total": 1,
+      "passages_total": 6
+    }
+  ]
+}

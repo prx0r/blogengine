@@ -1,0 +1,280 @@
+{
+  "ro_id": "ro:literature-his-dark-materials",
+  "schema_version": 1,
+  "title": "His Dark Materials \u2014 The Daemon Visible",
+  "subtitle": "The daemon as the visible soul, the alethiometer as developed phantasia, the amber spyglass as tattva-vision, and the Republic of Heaven as the work itself",
+  "family": "theme",
+  "status": "draft",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "Pullman's trilogy is the most literal rendering of the daimon in modern literature: the daemon as the visible soul, the alethiometer as the developed phantasia (the image-reading faculty), the ambe...",
+    "scope": "Covers the entire His Dark Materials trilogy (Northern Lights / The Golden Compass, The Subtle Knife, The Amber Spyglass), with primary focus on the daemon-body relationship, the alethiometer as a noetic instrument, the subtle knife as the power of discrimination, and the theological architecture of the Authority vs. the Republic of Heaven.",
+    "traditions": [
+      "platonism",
+      "neoplatonism",
+      "hermetica",
+      "tantric_\u015baivism",
+      "gnosticism"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "hdm-northern-lights",
+      "tier": 1,
+      "label": "Pullman, Philip \u2014 Northern Lights / The Golden Compass (1995)",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "daemon_visible_soul",
+        "alethiometer_first_principles",
+        "lyra_and_pan_bond",
+        "dust_as_consciousness"
+      ],
+      "sections_affected": [
+        "daemon",
+        "alethiometer",
+        "dust"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "hdm-subtle-knife",
+      "tier": 1,
+      "label": "Pullman, Philip \u2014 The Subtle Knife (1997)",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "subtle_knife_as_discrimination",
+        "will_as_operator",
+        "windows_between_worlds",
+        "ci_gazette_as_daimon"
+      ],
+      "sections_affected": [
+        "knife",
+        "discrimination",
+        "threshold"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "hdm-amber-spyglass",
+      "tier": 1,
+      "label": "Pullman, Philip \u2014 The Amber Spyglass (2000)",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "amber_spyglass_as_tattva_vision",
+        "authority_false_siva",
+        "republic_of_heaven",
+        "mulefa_as_dharma_vehicle",
+        "lyra_pan_separation"
+      ],
+      "sections_affected": [
+        "spyglass",
+        "authority",
+        "completion"
+      ],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "daemon",
+      "subsection": "the_daemon_visible",
+      "kind": "source",
+      "text": "[See HDM Northern Lights ch.1-7 and throughout. Pullman's daemon is the most literal rendering in modern literature of the Platonic daimon as the visible soul. Each human has a daemon \u2014 the 'outer self' that walks beside them in animal form, that speaks in a voice that is theirs and not theirs, that knows things they do not consciously know. Pan (Pantalaimon) is not a pet or a symbol but Lyra's soul made visible, tactile, separable. The body and the daemon are one continuum in two modes: the physical body and the subtle body side by side. When Pan settles into a fixed form at puberty, this is the crystallisation of the soul's character \u2014 the moment the daimon's form becomes the dharma of the person. It is the exact inverse of the Western occult maxim 'know thyself': here the self is known by looking beside you.]",
+      "source_ids": [
+        "hdm-northern-lights"
+      ],
+      "topics": [
+        "daemon",
+        "visible_soul",
+        "subtle_body",
+        "puberty"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "alethiometer",
+      "subsection": "alethiometer_as_phantasia",
+      "kind": "source",
+      "text": "[See HDM Northern Lights and throughout. The alethiometer (the 'truth-measurer') is the developed phantasia \u2014 the image-reading faculty of the soul that perceives meaning directly through symbols. It has 36 symbols arranged around a face, each bearing an infinite web of meanings. The alethiometer does not 'tell' answers; it presents correspondences that the reader must interpret. This is the exact function of the Neoplatonic phantasia: the middle faculty that receives noetic impressions and translates them into images the discursive mind can approach. Lyra reads the alethiometer by instinct \u2014 she does not 'learn' it but remembers it \u2014 because the capacity is innate to the soul before the dust of convention settles. Her loss of the ability and later recovery is the arc of the soul forgetting and remembering its own nature.]",
+      "source_ids": [
+        "hdm-northern-lights",
+        "hdm-subtle-knife",
+        "hdm-amber-spyglass"
+      ],
+      "topics": [
+        "alethiometer",
+        "phantasia",
+        "symbol",
+        "correspondence"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "spyglass",
+      "subsection": "amber_spyglass_as_tattva_vision",
+      "kind": "source",
+      "text": "[See HDM Amber Spyglass ch.27-30. The amber spyglass built by Mary Malone is the instrument that sees Dust directly \u2014 the 'amber' of the title referring to the golden colour of the particles of consciousness. The spyglass functions by polarising light through amber (a fossilised resin, itself a substance that preserves life across time) to reveal what is always present but invisible to ordinary sight. This is the capacity to see the tattvas \u2014 the 'thatnesses' or real categories of reality \u2014 directly, without the mediation of concept. Mary sees Dust as a continuous golden rain, the substrate of consciousness itself. The amber spyglass is the purified vision that perceives the subtle realm as directly as the physical: the vaikhar\u012b level rendered transparent to the madhyama.]",
+      "source_ids": [
+        "hdm-amber-spyglass"
+      ],
+      "topics": [
+        "amber_spyglass",
+        "tattva",
+        "dust",
+        "subtle_vision"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "separation",
+      "subsection": "lyra_and_pan_separation_as_breach",
+      "kind": "source",
+      "text": "[See HDM Amber Spyglass ch.32-33. The separation of Lyra and Pantalaimon by the harpies in the land of the dead is the breach of the subtle body \u2014 the traumatic division of the soul from itself. The severance is agony because the daemon and the body have never been apart; their unity is the ground of Lyra's existence. Pan, pulled away across the lake of the dead, becomes a distant agonised shape. Lyra experiences this as the tearing of her own interior. This is the \u015aaiva description of the soul in the state of extreme impurity (\u0101\u1e47avamala): the sense of separation so radical that the soul believes itself to be only the body, having lost the daimon. The reunion \u2014 when Lyra steps out of the land of the dead and Pan flies back to her \u2014 is the restoration of the subtle body, the reintegration without which no further work is possible.]",
+      "source_ids": [
+        "hdm-amber-spyglass"
+      ],
+      "topics": [
+        "separation",
+        "subtle_body",
+        "land_of_the_dead",
+        "reintegration"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "authority",
+      "subsection": "the_authority_as_false_siva",
+      "kind": "source",
+      "text": "[See HDM Amber Spyglass ch.28-29. The Authority \u2014 the ancient being who claims to be God \u2014 is revealed as the first angel to crystallise out of Dust, who then claimed to be the creator. He is not \u015aiva but the false \u015aiva: the hypostatised ego of the cosmos that mistakes its seniority for supremacy. By the time we meet him, he is a decrepit figure in a crystal box, 'demented' and 'powerless,' kept alive by the Regent Metatron. This is the gnostic Demiurge \u2014 the limited creator who believes he is the Absolute. The death of the Authority is not a murder but a dissolution: he simply dissipates when released from the crystal, 'as if he were a bubble of air.' The false god was never a god at all \u2014 he was the first and most subtle contraction.]",
+      "source_ids": [
+        "hdm-amber-spyglass"
+      ],
+      "topics": [
+        "authority",
+        "false_siva",
+        "demiurge",
+        "gnosticism"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_006",
+      "section": "completion",
+      "subsection": "republic_of_heaven_as_the_work",
+      "kind": "source",
+      "text": "[See HDM Amber Spyglass ch.36 and throughout. The Republic of Heaven is Pullman's answer to the Kingdom of Heaven \u2014 not a place but a project, not a reward but a practice. 'The Kingdom of Heaven is a state of \u2014 a state of \u2014 what? It's a state of happiness, I suppose. But the Republic of Heaven is a place where people work together for the good of all.' This is the work itself (s\u0101dhana) understood not as the attainment of a fixed state but as the continuous building of consciousness. Dust \u2014 the material of consciousness itself \u2014 increases when humans love, learn, create, and attend to one another. The Republic is not waiting to be found; it is being built with every act of attention, every moment of love, every deliberate choice to see clearly. The work is the goal; the path is the destination.]",
+      "source_ids": [
+        "hdm-amber-spyglass"
+      ],
+      "topics": [
+        "republic_of_heaven",
+        "work",
+        "sadhana",
+        "dust",
+        "completion"
+      ],
+      "status": "placeholder"
+    }
+  ],
+  "coverage": {
+    "daemon": {
+      "status": "good",
+      "sources": [
+        "hdm-northern-lights",
+        "hdm-amber-spyglass"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 0.6,
+      "gaps": [
+        "Full typology of daemon forms and their correlations with human types needs extraction"
+      ]
+    },
+    "alethiometer": {
+      "status": "good",
+      "sources": [
+        "hdm-northern-lights",
+        "hdm-subtle-knife",
+        "hdm-amber-spyglass"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 0.5,
+      "gaps": [
+        "Detailed symbol-by-symbol analysis of the 36 alethiometer symbols missing"
+      ]
+    },
+    "spyglass": {
+      "status": "good",
+      "sources": [
+        "hdm-amber-spyglass"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 0.6,
+      "gaps": [
+        "Deeper connection between Mary Malone's scientific method and tantric empiricism needed"
+      ]
+    },
+    "completion": {
+      "status": "good",
+      "sources": [
+        "hdm-amber-spyglass"
+      ],
+      "passage_count": 2,
+      "estimated_completeness": 0.6,
+      "gaps": [
+        "The mulefa civilisation as a living example of tattva-dharma could be expanded"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "placeholder",
+      "title": "All passages are meta-commentary \u2014 need primary text extraction",
+      "description": "Passages currently describe the esoteric mapping. Real passages should include actual quotations from the novels with analysis.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    },
+    {
+      "id": "issue-002",
+      "type": "coverage_gap",
+      "title": "The subtle knife as the power of discrimination (viveka)",
+      "description": "The subtle knife cuts windows between worlds \u2014 this is viveka, the discriminative faculty that sees through the apparent separateness of realms. The knife's double-edged danger (it cuts anything, including the wielder) is the risk of discrimination without integration. Not yet developed.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial RO created mapping His Dark Materials onto the daimon tradition and Tantric-\u015aaiva esoteric architecture. Six passages covering the daemon visible, alethiometer as phantasia, amber spyglass as tattva-vision, the separation of Lyra and Pan, the Authority as false \u015aiva, and the Republic of Heaven as the work.",
+      "sources_added": [
+        "hdm-northern-lights",
+        "hdm-subtle-knife",
+        "hdm-amber-spyglass"
+      ],
+      "passage_count": 6,
+      "status": "draft"
+    }
+  ],
+  "appendices": [],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created in draft state with 3 primary sources and 6 passages",
+      "sources_total": 3,
+      "passages_total": 6
+    }
+  ]
+}

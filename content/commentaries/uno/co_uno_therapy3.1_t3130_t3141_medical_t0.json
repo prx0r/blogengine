@@ -1,0 +1,49 @@
+{
+  "co_id": "co:uno_therapy3.1_t3130_t3141_medical_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3.1_t3130_t3141_medical_leave_denial",
+  "turn_index": 0,
+  "lineage": "Therapeutic",
+  "student_state": "unknown",
+  "behavior_tags": [],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_04",
+    "function_name": "UM_04",
+    "mechanism_shape": "NONE",
+    "teaching_actions": [],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.15,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_01",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "go_along_compliantly",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "'I’m afraid, if the rest of my office finds out I am requesting me'—student presents as unknown. Teacher's move uses none: 'Are you having some doubts yourself ?'. Strategy: none. Hypothesis: none mechanism will create go_along_compliantly. Watching how student responds to this intervention.",
+  "accumulated_insight": "T1: Student says 'I’m afraid, if the rest of my office finds out I am requesting me' showing unknown via none. Teacher responds 'Are you having some doubts yourself ?' using none to none. Opening UNMAKING move addresses unknown. Predicting go_along_compliantly because none interventions typically produce this response pattern.",
+  "abstract_pattern": "",
+  "visible_response": "Are you having some doubts yourself ?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

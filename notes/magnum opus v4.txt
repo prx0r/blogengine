@@ -1,0 +1,557 @@
+MAGNUM OPUS v4 — HXRMXS Roadmap
+0. Intent of the System
+
+HXRMXS is not “a wise chatbot.”
+It is a stack of cooperating agents:
+
+A Teacher that knows how to cut (pedagogy, lineage, register)
+
+A Librarian that knows what is true (truthcores, references)
+
+An Analyst that knows what just happened (states, traps, arcs)
+
+A Graph Engine that knows what tends to work (policies from data)
+
+A Policy/Strategist that knows what to do next (phase/function/move selection)
+
+Phase-1 (what you’re doing now) is only the Teacher.
+Magnum Opus v4 is the whole staircase.
+
+1. Stack Overview (Agents + Responsibilities)
+1.1 Teacher-HXRMXS (LoRA-1, you’re training this now)
+
+Role: Lineage teacher + [PEDAGOGY] engine.
+
+Input (training):
+
+messages: system prompt + student turns + assistant turns
+
+Assistant turns contain:
+
+[PEDAGOGY] block (phase, function_id, mechanism_shape, register, traps, intent, approach, predicted_response)
+
+Natural lineage-voice response (Gurdjieffian / Advaita / ISTDP / etc.)
+
+Input (inference, v1):
+
+System prompt (HXRMXS_TRAINING_PROMPT or a slightly softer deployment prompt)
+
+Conversation history
+
+User message
+
+Output:
+
+[PEDAGOGY] block (internal reasoning surface)
+
+Natural response in lineage voice
+
+What it doesn’t do (by design):
+
+It is not an encyclopedia.
+
+It is not the long-term planner.
+
+It is not the judge of “what should have been done instead” — that’s downstream.
+
+1.2 Librarian + Truthcore DB (offline, later)
+
+Role: Store actual conceptual knowledge in a structured, reusable way.
+
+Truthcore object (target schema):
+
+{
+  "truthcore_id": "qm_double_slit_01",
+  "concept_name": "Double-slit interference",
+  "domain": ["physics", "quantum_mechanics"],
+  "statement": "Light and matter show interference patterns when passed through two slits.",
+  "conditions": [
+    "coherent source",
+    "slit separation comparable to wavelength"
+  ],
+  "invariants": [
+    "fringe spacing depends on wavelength and slit geometry",
+    "pattern disappears when which-path information is fully determined"
+  ],
+  "common_misreadings": [
+    "interpreted as 'consciousness collapses wavefunction'",
+    "interpreted as 'thoughts create reality'"
+  ],
+  "dependencies": ["qm_superposition_01", "wave_optics_01"],
+  "recommended_references": [
+    {"type": "book", "id": "griffiths_qm_ch1"},
+    {"type": "lecture", "id": "feynman_lectures_vol3_ch1"}
+  ]
+}
+
+
+How truthcores are created (later):
+
+Use a strong model over curated sources (books, papers).
+
+Prompt it with the Truthcore schema.
+
+Manually sanity-check a subset.
+
+Store in a small DB / JSON + embeddings for retrieval.
+
+The Librarian becomes the knowledge substrate that Teacher can be forced to respect.
+
+1.3 Analyst-HXRMXS (LoRA-2 or external model, offline at first)
+
+Role: Post-hoc annotator of episodes.
+
+Input:
+
+Full episodes of:
+
+user turns
+
+Teacher [PEDAGOGY] blocks
+
+Teacher responses
+
+Optional: user feedback, explicit ratings
+
+Output (per episode):
+
+Cleaned / refined per-turn labels:
+
+student_state, behavior_tags, trap_activations
+
+phase, function_id, mechanism_shape, register
+
+Episode-level labels:
+
+shape_type (arc type)
+
+progress_curve (rough “movement” through state space)
+
+Flags: stuck, complains_about_method, premature_meta, drops_topic, etc.
+
+Think: “Pass-1, but automated and applied to live data.”
+
+1.4 Graph Engine (offline analysis)
+
+Role: Turn all Pass-1 + live episodes into a usable policy landscape.
+
+Nodes:
+
+State nodes: clusters of student_state + behavior_tags + traps.
+
+Move nodes: clusters of (phase, function_id, mechanism_shape, approach, register).
+
+Truthcore nodes: from the Librarian.
+
+Optional: arc shape nodes (canonical mini-stories).
+
+Edges:
+
+State → Move (what we tend to do from this state).
+
+Move → Next State (empirical transition distribution).
+
+State → Truthcore / Move → Truthcore links where content is used.
+
+Statistics:
+
+For state cluster S:
+
+distribution over moves used historically
+
+outcome rates (clean_success, partial, stuck, complaint)
+
+For a move type M:
+
+which states it helps
+
+which states it makes worse (complaints, drop-off)
+
+This is where “what should we have done instead?” emerges from data instead of guesswork.
+
+1.5 Policy / Strategist Heads (later small models / LoRAs)
+
+Two main ones:
+
+Move Policy Head
+
+Input:
+
+current [PEDAGOGY]
+
+recent user turns
+
+graph features (current state cluster, typical transitions)
+
+Output:
+
+target move spec: (phase, function_id, mechanism_shape, approach, register)
+
+Teacher then uses this spec as “instructions” for what kind of [PEDAGOGY] to emit and how to speak.
+
+Knowledge Strategist Head
+
+Input:
+
+current question
+
+conversation context
+
+Output:
+
+retrieval plan for truthcores / external tools:
+
+which domains
+
+what queries
+
+how strict we should be (“don’t contradict these invariants”)
+
+This is how you get “master of knowledge”: not by stuffing everything into Teacher, but by routing Teacher through Librarian + Graph + Policy.
+
+2. Phase Roadmap (Concrete Steps)
+
+Let’s rewrite your roadmap as phases you can actually execute.
+
+Phase 1 — Teacher LoRA + Data Pipeline (you’re here)
+
+Goal: Train HXRMXS-Teacher to:
+
+Emit consistent [PEDAGOGY] blocks.
+
+Speak in the major lineage voices.
+
+Respect your Pass-1 annotations.
+
+Inputs:
+
+Pass-1 episodes JSON (books, transcripts).
+
+Generator LLM prompt + validator (those we just finished).
+
+Tinker training stack:
+
+episode_to_messages(episode, HXRMXS_TRAINING_PROMPT)
+
+messages_to_weighted_datum(messages, renderer, tokenizer) with 3× weighting in [PEDAGOGY].
+
+Outputs:
+
+hxrmxs_teacher_lora_v1 weights.
+
+A small evaluation harness:
+
+curated test questions per lineage
+
+script that:
+
+prompts Teacher
+
+checks [PEDAGOGY] structure
+
+manually rated outputs (even by you).
+
+Deployment v0:
+
+Simple web app:
+
+user ↔ Teacher chat
+
+hidden display of [PEDAGOGY] for you.
+
+Logging for every session:
+
+session_id, timestamp
+
+user messages
+
+Teacher messages
+
+raw [PEDAGOGY] text
+
+lineage, model version
+
+Phase 1.5 — Live Logging + External Evaluator
+
+Don’t retrain yet. Just watch.
+
+Add:
+
+A script that:
+
+samples episodes from logs
+
+sends them to a strong external model with an “Evaluator prompt”:
+
+“Is the claimed phase/function_id appropriate?”
+
+“Does the response match lineage tone?”
+
+“Any huge theoretical nonsense/hallucination?”
+
+Store evaluation results as:
+
+{
+  "eval_model": "gpt-4.x",
+  "eval_time": "...",
+  "per_turn_scores": [...],
+  "episode_score": 0.0–1.0,
+  "notes": ["..."]
+}
+
+
+Outcome:
+
+You get a realistic picture of:
+
+where Teacher is strong/weak
+
+which lineages behave best/worst
+
+whether [PEDAGOGY] is coherent under pressure.
+
+Phase 2 — Truthcore / Librarian Foundations
+
+Goal: Give HXRMXS access to real knowledge without contaminating Teacher’s geometry.
+
+Steps:
+
+Define Truthcore schema (as above).
+
+Pick one or two domains:
+
+e.g. “Foundations of QM” + “Core ML math” (or whatever you care about most).
+
+Use a strong model to:
+
+read curated sources
+
+generate truthcores under strict schema
+
+Hand-check a subset.
+
+Build:
+
+truthcores.json
+
+embedding index (for retrieval)
+
+simple retrieval API:
+
+query → top_k truthcores + references
+
+Then add [CONTEXT] injection:
+
+Extend Teacher system prompt to say:
+
+“If a [CONTEXT] block is present, you must not contradict its invariants. Use its information explicitly where relevant.”
+
+Build a tiny training set:
+
+(question, [CONTEXT], ideal answer)
+
+Train a small LoRA-1B or fine-tune Teacher a little to respect [CONTEXT].
+
+Now Teacher can be steered by concrete knowledge chunks instead of hallucinating.
+
+Phase 3 — Analyst-HXRMXS + Graph v1
+
+Goal: Turn logs into structured data + a first graph.
+
+Steps:
+
+Write an Analyst prompt for a strong external model:
+
+Input: full episode (user, Teacher, [PEDAGOGY]).
+
+Output:
+
+cleaned per-turn labels
+
+coarse episode-level tags (shape_type, stuck?, etc.)
+
+Run Analyst over:
+
+all Pass-1 episodes (books)
+
+a chunk of real episodes from Phase-1.5
+
+Build Graph v1:
+
+Cluster student states to state archetypes.
+
+Cluster moves (phase + function_id + mechanism_shape + approach) to move archetypes.
+
+For each state cluster, compute:
+
+which move clusters were used
+
+transitions and outcomes.
+
+Result:
+
+A first data-driven policy landscape:
+
+“When people in state S are given move type M, we usually see outcome O.”
+
+Phase 4 — Policy & Strategy Heads
+
+Goal: Stop Teacher from deciding everything alone.
+
+4.1 Move Policy Head
+
+Data for supervised pretraining:
+
+For each teacher turn in good episodes:
+
+Input:
+
+previous [PEDAGOGY]
+
+current student turn (text + state)
+
+maybe graph-derived features (“we’re in state cluster S5”)
+
+Target:
+
+actual (phase, function_id, mechanism_shape, approach, register) of that turn.
+
+Train a small policy model (or another LoRA on top of some backbone) to output these specs.
+
+In deployment:
+
+When user speaks:
+
+Policy head proposes a move spec.
+
+Teacher uses that spec as a hint / constraint when generating [PEDAGOGY].
+
+4.2 Knowledge Strategist
+
+Data for pretraining:
+
+Annotated cases where:
+
+knowledge was clearly needed (technical Qs)
+
+knowledge was clearly not needed (pure emotional/process work).
+
+Model outputs:
+
+whether to query Truthcore DB
+
+which domains
+
+what to prioritize (definitions, invariants, misreadings, etc.)
+
+Now your overall loop for a “hard question” is:
+
+User asks something technical or mixed.
+
+Strategist:
+
+decides: “we need truthcores from QM + maybe ML.”
+
+Librarian:
+
+returns truthcores + references.
+
+Policy:
+
+picks pedagogical move spec (phase/function/etc.).
+
+Teacher:
+
+generates [PEDAGOGY] + response that uses the truthcores and respects the move spec.
+
+Phase 5 — RL / Bandit Tuning (optional but powerful)
+
+Once you have enough data + evaluations:
+
+Define reward signals:
+
+external eval scores
+
+user retention / continued engagement
+
+Analyst markers (“progress up”, fewer complains_about_method)
+
+Optimize:
+
+Policy head parameters
+
+Strategist thresholds (when to inject knowledge)
+
+Maybe Teacher slight adjustments
+
+You can use:
+
+basic multi-armed bandit on discrete strategies
+
+simple RL on top of policy head
+
+Teacher becomes the relatively stable style/geometry module. Policies and knowledge strategies get tuned.
+
+3. Where You Actually Are + Next Concrete Moves
+
+Right now you have:
+
+✅ Pass-1 episodes
+
+✅ Clear [PEDAGOGY] schema + Tinker training code
+
+✅ Generation + validation prompts for building the Phase-1 dataset
+
+Immediate next actions:
+
+Run the generator + validator:
+
+Take your Pass-1 JSON.
+
+Generate llm_output.json with the transformer prompt.
+
+Validate with the Python validator.
+
+Fix any schema drift until it passes.
+
+Train Teacher-HXRMXS LoRA (Phase-1):
+
+Use your Tinker script with:
+
+HXRMXS_TRAINING_PROMPT
+
+episode_to_messages
+
+messages_to_weighted_datum
+
+Save hxrmxs_teacher_lora_v1.
+
+Wrap in a logging web app:
+
+Very simple frontend:
+
+choose lineage
+
+chat
+
+Backend:
+
+call Teacher model
+
+log everything including [PEDAGOGY].
+
+Write a v1 Evaluator prompt and run it on a small set of sessions.
+
+Once that’s done, Magnum Opus v4 becomes your living spec:
+
+Section “Agents” = who you’re building.
+
+Section “Phases” = what you do next.
+
+You can then add detail as you actually hit each phase.
+
+If you want, next step I can turn this into a more formal “design doc” format (headings, numbered requirements, checklists) that you can literally paste into a repo as MAGNUM_OPUS_v4.md.
+
+
+You said:
+ok so should i add the scalar forstudent resitsance level for the v1 finetune? 

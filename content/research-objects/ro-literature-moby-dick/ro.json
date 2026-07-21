@@ -1,0 +1,246 @@
+{
+  "ro_id": "ro:literature-moby-dick",
+  "schema_version": 1,
+  "title": "Moby-Dick \u2014 The Daimon That Cannot Be Caught",
+  "family": "theme",
+  "status": "draft",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "Melville's Moby-Dick read as a cautionary tale of the daimon pursued rather than received: the White Whale as the daimon transcendent, Ahab as the practitioner who forces instead of allowing.",
+    "scope": "Covers the White Whale as the daimon in its transcendent aspect; Ahab as the practitioner who pursues the daimon instead of allowing it to approach; the doubloon nailed to the mast as the tattvas inviting interpretation; the Pequod as the soul's vessel; the sea as the astral world; the final sinking as the dissolution when the threshold is not crossed correctly.",
+    "traditions": [
+      "american-literature",
+      "comparative-mythology",
+      "initiation",
+      "daimon",
+      "alchemy"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "moby-dick",
+      "tier": 1,
+      "label": "Herman Melville \u2014 Moby-Dick; or, The Whale (1851)",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "primary_text",
+        "daimon_narrative",
+        "whaling_allegory",
+        "threshold_warning"
+      ],
+      "sections_affected": [
+        "whale",
+        "ahab",
+        "sinking"
+      ],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "whale",
+      "subsection": "daimon_transcendent",
+      "kind": "analysis",
+      "text": "[The White Whale is the daimon in its transcendent aspect \u2014 the mysterium tremendum, the 'ungraspable phantom of life.' It is seen only in glimpses, leaving traces (the spout, the breached body, the whiteness), but its full nature is beyond capture. The whale is not evil; it is beyond moral categories. It is the daimon as it appears before the theurgic encounter \u2014 the overwhelming presence that the practitioner must learn to approach with reverence, not violence.]",
+      "source_ids": [
+        "moby-dick"
+      ],
+      "topics": [
+        "white_whale",
+        "daimon",
+        "transcendent",
+        "mysterium_tremendum"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "ahab",
+      "subsection": "wrong_method",
+      "kind": "analysis",
+      "text": "[Ahab is the practitioner who pursues the daimon instead of allowing it to approach \u2014 the inversion of the theurgic method. He uses force, obsession, violation of the natural order. The daimon in theurgical tradition must be approached through purification, prayer, and receptivity. Ahab does the opposite: he rages, commands, sacrifices the crew, breaks the quadrant. His method is the sorcery of coercion, not the theurgy of invitation.]",
+      "source_ids": [
+        "moby-dick"
+      ],
+      "topics": [
+        "ahab",
+        "wrong_method",
+        "coercion",
+        "obsession"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "pequod",
+      "subsection": "doubloon_tattvas",
+      "kind": "analysis",
+      "text": "[The doubloon nailed to the mast is the tattvas \u2014 the manifest world inviting interpretation. Each crew member reads the doubloon according to his own nature (the Pequod is a microcosm of the soul). The mast itself is the axis mundi, the central pillar of the vessel. The coin reflects the light of the sun (pure consciousness) but is itself a fixed object of limited meaning \u2014 the tattvas are the reflections of consciousness, not consciousness itself.]",
+      "source_ids": [
+        "moby-dick"
+      ],
+      "topics": [
+        "doubloon",
+        "tattvas",
+        "interpretation",
+        "mast",
+        "microcosm"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "pequod",
+      "subsection": "ship_soul_vessel",
+      "kind": "analysis",
+      "text": "[The Pequod is the soul's vessel \u2014 the body-mind complex that carries the practitioner through the astral world (the sea). Its elaborate description (the whalebone tiller, the inscribed gold teeth, the queerly adapted parts) mirrors the complexity of the human instrument. The ship's crew represents the faculties: Starbuck (conscience), Stubb (carelessness), Flask (brutality), Queequeg (the primitive daimon-friend), Fedallah (the shadow as false guide).]",
+      "source_ids": [
+        "moby-dick"
+      ],
+      "topics": [
+        "pequod",
+        "soul_vessel",
+        "crew",
+        "faculties"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "sea",
+      "subsection": "astral_world",
+      "kind": "analysis",
+      "text": "[The sea is the astral world \u2014 the subtle realm through which the soul journeys. Its endless movement, hidden depths, sudden storms, and strange creatures correspond to the fluid, image-based nature of the astral plane. Whaling is the work of extracting meaning from this realm. The try-works (the rendering of blubber into oil) is the alchemical opus \u2014 the extraction of the light-substance from the dark matter of experience.]",
+      "source_ids": [
+        "moby-dick"
+      ],
+      "topics": [
+        "sea",
+        "astral_world",
+        "whaling",
+        "try_works",
+        "alchemy"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_006",
+      "section": "sinking",
+      "subsection": "failed_threshold",
+      "kind": "analysis",
+      "text": "[The final sinking of the Pequod is the dissolution when the threshold is not crossed correctly. Ahab's approach \u2014 the pursuit, the harpooning, the narcissistic rage \u2014 leads to the destruction of the vessel. The whale breaches and destroys the ship, Ahab is caught in his own line and dragged into the depths. This is the warning: approaching the daimon with the wrong method leads to psychic disintegration. Ishmael survives because he is the detached observer \u2014 the one who understands.]",
+      "source_ids": [
+        "moby-dick"
+      ],
+      "topics": [
+        "sinking",
+        "dissolution",
+        "failed_threshold",
+        "ishmael",
+        "survivor"
+      ],
+      "status": "placeholder"
+    }
+  ],
+  "coverage": {
+    "whale": {
+      "status": "good",
+      "sources": [
+        "moby-dick"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 0.65,
+      "gaps": [
+        "More detailed mapping of whale symbolism to daimon traditions needed"
+      ]
+    },
+    "ahab": {
+      "status": "good",
+      "sources": [
+        "moby-dick"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 0.7,
+      "gaps": [
+        "Comparison of Ahab with other failed initiates in literature needed"
+      ]
+    },
+    "pequod": {
+      "status": "good",
+      "sources": [
+        "moby-dick"
+      ],
+      "passage_count": 2,
+      "estimated_completeness": 0.65,
+      "gaps": [
+        "Complete mapping of each crew member to a psychic faculty needed"
+      ]
+    },
+    "sea": {
+      "status": "good",
+      "sources": [
+        "moby-dick"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 0.6,
+      "gaps": [
+        "Deeper analysis of whaling as alchemical process needed"
+      ]
+    },
+    "sinking": {
+      "status": "good",
+      "sources": [
+        "moby-dick"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 0.65,
+      "gaps": [
+        "More complete comparison with other 'failed quest' narratives needed"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "placeholder",
+      "title": "All passages currently referencing analysis framework",
+      "description": "Passages need to be elaborated with primary text citations and chapter references.",
+      "status": "open",
+      "created": "2026-07-13",
+      "auto_generated": true
+    },
+    {
+      "id": "issue-002",
+      "type": "coverage_gap",
+      "title": "Missing engagement with Moby-Dick scholarship",
+      "description": "Should integrate the vast critical tradition on Moby-Dick, especially esoteric and philosophical readings.",
+      "status": "open",
+      "created": "2026-07-13",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-13",
+      "type": "initial",
+      "summary": "Initial RO mapping Moby-Dick as daimon contact warning narrative. 6 passage framework established.",
+      "sources_added": [
+        "moby-dick"
+      ],
+      "passage_count": 6,
+      "status": "draft"
+    }
+  ],
+  "appendices": [],
+  "timeline": [
+    {
+      "date": "2026-07-13",
+      "event": "RO created in draft state as cautionary daimon narrative",
+      "sources_total": 1,
+      "passages_total": 6
+    }
+  ]
+}

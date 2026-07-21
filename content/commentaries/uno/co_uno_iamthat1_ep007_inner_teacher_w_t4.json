@@ -1,0 +1,64 @@
+{
+  "co_id": "co:uno_iamthat1_ep007_inner_teacher_w_t4",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "iamthat1_ep007_inner_teacher_witness_pivot",
+  "turn_index": 4,
+  "lineage": "Advaita",
+  "student_state": "reciting_doctrinal_answer",
+  "behavior_tags": [
+    "conceptual_jargon",
+    "intellectual_recall"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_04",
+    "function_name": "UM_04",
+    "mechanism_shape": "GROUND_REALITY_CHECK",
+    "teaching_actions": [
+      "tests_definition_validity",
+      "questions_experiential_source"
+    ],
+    "traps_avoided": [
+      "conceptual_reification",
+      "ego_defense",
+      "none"
+    ],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.62,
+      "attunement": 0.5,
+      "style": 0.65,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_04",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "resist_intellectually",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The ground_reality_check mechanism works: tests definition validity (did anybody come and say this?), questions experiential source (where did this answer come from?). The student's reciting doctrinal answer (conceptual jargon, intellectual recall) shows they understand: witness = conceptual answer (from doctrine, not experience). They'll likely recognize the answer is conceptual, not experiential. Hypothesis: ground reality checks on doctrinal answers expose their conceptual nature—testable by tracking whether students recognize the difference between conceptual and experiential knowledge.",
+  "accumulated_insight": "Five-turn pattern: T1: Student says 'The inner teacher is not easily reached'—feeling blocked by difficulty via resistance, intellectual barrier. The constraint_collapse mechanism minimizes difficulty, gives instruction (look within), asserts immediacy. T2: Student says 'When I look within, I find sensations and perceptions... I am immersed in this cloud'—transitions to lost in mental content. The ontological_shift mechanism redefines teacher functionally (that which sees), establishes hierarchy (self vs. content). T3: Student says 'I do believe you, but when it comes to the actual finding of this inner self, I find it escapes me'—transitions to vulnerable helplessness. The source_tracing mechanism questions location ('where does it arise?'). T4: Student says 'In the mind'—transitions to mechanically locating experience. The subject_object_inversion mechanism escalates inquiry ('And who knows the mind?'). T5: Student says 'The witness of the mind knows the mind'—reciting doctrinal answer via conceptual jargon, intellectual recall. The ground_reality_check mechanism tests definition validity: did anybody come and say this? Questions experiential source. Pattern: difficulty → look within → find content → escape → locate in mind → doctrinal answer → [next: test validity]. They're grasping: witness = conceptual answer (needs testing).",
+  "abstract_pattern": "",
+  "visible_response": "Did anybody come to you and say: 'I am the witness of your mind'?",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:upanishads",
+    "ro:yoga-vasistha",
+    "ro:bhagavad-gita",
+    "ro:yoga-sutras"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

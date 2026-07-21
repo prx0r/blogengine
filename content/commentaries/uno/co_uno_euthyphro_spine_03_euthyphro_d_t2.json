@@ -1,0 +1,57 @@
+{
+  "co_id": "co:uno_euthyphro_spine_03_euthyphro_d_t2",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "euthyphro_spine_03_euthyphro_dilemma",
+  "turn_index": 2,
+  "lineage": "Socratic",
+  "student_state": "cooperative_engagement",
+  "behavior_tags": [
+    "short_affirmation"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_04",
+    "function_name": "UM_04",
+    "mechanism_shape": "SUBJECT_OBJECT_INVERSION",
+    "teaching_actions": [
+      "asserts_logical_consequence"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.35,
+      "attunement": 0.8,
+      "style": 0.5,
+      "depth": 0.85,
+      "meta_mode": 0.75,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_03",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_04",
+      "meta_mode_discrete": "MM_02"
+    },
+    "predicted_impact": "go_along_compliantly",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "euthyphro_spine_03_euthyphro_dilemma T3: Using subject_object_inversion/UM_04 with intensity=PR_03, intimacy=IN_02, attunement=AT_03 on 'the hinge'. Response shows agreeing without elaboration; expecting go_along_compliantly next. If not, lower PR and re-anchor the hinge.",
+  "accumulated_insight": "T3: Student says ''?agreeing without elaboration (cooperative_engagement) via short_affirmation. Focus: the hinge. The subject_object_inversion/UM_04 move applies shift their frame: standard function application. Pattern: go_along_compliantly ? go_along_compliantly ? go_along_compliantly. Confidence medium.",
+  "abstract_pattern": "",
+  "visible_response": "Then the pious is loved because it is pious — not pious because it is loved.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:proclus-elements",
+    "ro:platonism-decoded",
+    "ro:chaldean-oracles"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

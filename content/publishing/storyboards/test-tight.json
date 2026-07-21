@@ -1,0 +1,96 @@
+{
+  "_schema": "storyboard-v1",
+  "episode_id": "test-tight",
+  "episode_title": "No Escape — You Are the Tetrahedron",
+  "series": "test",
+  "episode_number": 0,
+  "version": "0.2.0",
+  "source_ros": ["ro:nanavira-clearing-path"],
+  "source_docs": ["nanavira-proclus-tetrahedron.md"],
+  "global_concepts": ["tetrahedron", "subject", "object", "intention", "act", "k4", "no-escape"],
+  "narration_voice": "en-GB-RyanNeural",
+  "estimated_duration_min": 1,
+  "segments": [
+    {
+      "segment_id": "seg-01",
+      "label": "You are the subject",
+      "start_sec": 0, "end_sec": 7,
+      "rhetorical_role": "hook",
+      "narration": "You are the subject.",
+      "visual": { "type": "manim", "scene_file": "tight_escape.py", "scene_class": "NoEscape", "beat": "setup" },
+      "concepts": ["subject"]
+    },
+    {
+      "segment_id": "seg-02",
+      "label": "Everything you perceive is an object",
+      "start_sec": 7, "end_sec": 13,
+      "rhetorical_role": "thesis",
+      "narration": "Everything you perceive — an object. Everything you want — intention. Every act of looking, of reaching, of trying — the act.",
+      "visual": { "type": "manim", "scene_file": "tight_escape.py", "scene_class": "NoEscape", "beat": "introduce_three" },
+      "concepts": ["object", "intention", "act"]
+    },
+    {
+      "segment_id": "seg-03",
+      "label": "Try to leave",
+      "start_sec": 13, "end_sec": 22,
+      "rhetorical_role": "contrast",
+      "narration": "Try to leave.",
+      "visual": { "type": "manim", "scene_file": "tight_escape.py", "scene_class": "NoEscape", "beat": "try_leave" },
+      "concepts": ["subject", "escape"]
+    },
+    {
+      "segment_id": "seg-04",
+      "label": "New tetrahedron forms",
+      "start_sec": 22, "end_sec": 28,
+      "rhetorical_role": "expansion",
+      "narration": "A new tetrahedron forms. You are still the subject. Just somewhere else.",
+      "visual": { "type": "manim", "scene_file": "tight_escape.py", "scene_class": "NoEscape", "beat": "new_tetra" },
+      "concepts": ["subject", "new-experience"]
+    },
+    {
+      "segment_id": "seg-05",
+      "label": "Try to observe yourself",
+      "start_sec": 28, "end_sec": 35,
+      "rhetorical_role": "contrast",
+      "narration": "Try to observe yourself.",
+      "visual": { "type": "manim", "scene_file": "tight_escape.py", "scene_class": "NoEscape", "beat": "observe_self" },
+      "concepts": ["subject", "object", "self-observation"]
+    },
+    {
+      "segment_id": "seg-06",
+      "label": "Now you are the object",
+      "start_sec": 35, "end_sec": 42,
+      "rhetorical_role": "expansion",
+      "narration": "Now you are the object. A new subject observes you. A new tetrahedron. Same four terms.",
+      "visual": { "type": "manim", "scene_file": "tight_escape.py", "scene_class": "NoEscape", "beat": "become_object" },
+      "concepts": ["subject", "object", "tetrahedron"]
+    },
+    {
+      "segment_id": "seg-07",
+      "label": "The attempt to leave IS the act",
+      "start_sec": 42, "end_sec": 49,
+      "rhetorical_role": "synthesis",
+      "narration": "The attempt to leave — is the act. The self you try to see — is an object. The wanting to escape — intention. And you — the subject of that wanting.",
+      "visual": { "type": "manim", "scene_file": "tight_escape.py", "scene_class": "NoEscape", "beat": "meta_loop" },
+      "concepts": ["subject", "object", "intention", "act", "no-escape"]
+    },
+    {
+      "segment_id": "seg-08",
+      "label": "Remove one vertex",
+      "start_sec": 49, "end_sec": 56,
+      "rhetorical_role": "closing",
+      "narration": "Remove any one — just a triangle. Flat. No inside. No experience.",
+      "visual": { "type": "manim", "scene_file": "tight_escape.py", "scene_class": "NoEscape", "beat": "collapse" },
+      "concepts": ["triangle", "k4", "minimal"]
+    },
+    {
+      "segment_id": "seg-09",
+      "label": "The shape of having a world",
+      "start_sec": 56, "end_sec": 62,
+      "rhetorical_role": "closing",
+      "narration": "Four. Always four. The minimum for an inside. The shape of having a world at all.",
+      "visual": { "type": "manim", "scene_file": "tight_escape.py", "scene_class": "NoEscape", "beat": "final" },
+      "concepts": ["tetrahedron", "k4", "experience", "green-core"]
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "co_id": "co:uno_gurdjeff1_meta_t01_t06_psychol_t2",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gurdjeff1_meta_t01_t06_psychological_method_basics",
+  "turn_index": 2,
+  "lineage": "Gurdjieffian",
+  "student_state": "seeking_esoteric_definition",
+  "behavior_tags": [
+    "proposes_mystical_definition",
+    "seeks_definition"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_05",
+    "function_name": "RM_05",
+    "mechanism_shape": "CONSTRAINT_COLLAPSE",
+    "teaching_actions": [
+      "rejects_mystical_definition",
+      "redefines_esoteric_as_systemic",
+      "states_incapacity"
+    ],
+    "traps_avoided": [
+      "mystical_fixation",
+      "overreach"
+    ],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.62,
+      "attunement": 0.5,
+      "style": 0.5,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "go_along_compliantly",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The rejection works: not higher centres, esoteric = use of system (you cannot use higher centres, but you can use the system). The student proposed mystical definition (seeking esoteric definition), which shows they understand: esoteric method = higher centres (mystical). They'll likely accept the rejection. The episode is complete: method → validation → reduction → rejection → esoteric → rejection. Pattern complete.",
+  "accumulated_insight": "Three-turn pattern: T1: Student asked about method (seeking rule of method)—validation: partial insight, recognition = experience. T2: Student attempted reduction (attempting to reduce method)—rejection: holistic (multiple centres), logical = mechanical part only. T3: Student proposed mystical definition ('And is the esoteric method the use of higher centres?')—seeking esoteric definition via proposes mystical definition and seeks definition. They understand: esoteric method = higher centres (mystical). The constraint_collapse mechanism rejects: not higher centres, esoteric = use of system (you cannot use higher centres, but you can use the system) ('No, it is the use of the system. You cannot use higher centres, but you can use the system'). Pattern complete: method question → validation → reduction attempt → rejection → esoteric question → rejection. They've shifted: esoteric = system (not higher centres), incapacity = cannot use higher centres (rejection).",
+  "abstract_pattern": "",
+  "visible_response": "No, it is the use of the system. You cannot use higher centres, but you can use the\nsystem.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:sufi-comparative-analysis",
+    "ro:steiner-tantraloka-parallels"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

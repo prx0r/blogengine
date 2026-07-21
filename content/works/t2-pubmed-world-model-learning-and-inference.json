@@ -1,0 +1,55 @@
+{
+  "work_id": "work:t2-pubmed-world-model-learning-and-inference",
+  "schema_version": 2,
+  "title": "World model learning and inference.",
+  "authors": [
+    {
+      "name": "Friston K"
+    },
+    {
+      "name": "Moran RJ"
+    },
+    {
+      "name": "Nagai Y"
+    },
+    {
+      "name": "Taniguchi T"
+    },
+    {
+      "name": "Gomi H"
+    }
+  ],
+  "publication": {
+    "year": 2021,
+    "journal": "Neural Netw",
+    "source": "PubMed/MEDLINE",
+    "language": "en"
+  },
+  "identifiers": {
+    "pmid": "34634605",
+    "doi": "10.1016/j.neunet.2021.09.011"
+  },
+  "topics": [
+    "phase-6-dependent-arising",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "assets": {
+    "pdf_path": null,
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/34634605/",
+    "abstract": "Understanding information processing in the brain-and creating general-purpose artificial intelligence-are long-standing aspirations of scientists and engineers worldwide. The distinctive features of human intelligence are high-level cognition and control in various interactions with the world including the self, which are not defined in advance and are vary over time. The challenge of building human-like intelligent machines, as well as progress in brain science and behavioural analyses, roboti"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_alt17_acquisition",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 6,
+    "phase_name": "Dependent-arising",
+    "bridge_rationale": "Bridge paper score=9.5: links Dependent-arising concept to mechanistic neuroscience"
+  },
+  "evaluation": "Score 9: Good bridge signal",
+  "tier": 2
+}

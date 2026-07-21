@@ -1,0 +1,58 @@
+{
+  "co_id": "co:uno_euthyphro_spine_04_definition__t1",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "euthyphro_spine_04_definition_slippage",
+  "turn_index": 1,
+  "lineage": "Socratic",
+  "student_state": "cooperative_engagement",
+  "behavior_tags": [
+    "short_affirmation"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_06",
+    "function_name": "UM_06",
+    "mechanism_shape": "STRUCTURAL_ANALOGY",
+    "teaching_actions": [
+      "asserts_existential_truth",
+      "justifies_method"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.8,
+      "style": 0.5,
+      "depth": 0.62,
+      "meta_mode": 0.75,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_03",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_03",
+      "meta_mode_discrete": "MM_02"
+    },
+    "predicted_impact": "go_along_compliantly",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "euthyphro_spine_04_definition_slippage T2: Using structural_analogy/UM_06 with intensity=PR_02, intimacy=IN_02, attunement=AT_03 on 'the hinge'. Response shows agreeing without elaboration; expecting go_along_compliantly next. If not, lower PR and re-anchor the hinge.",
+  "accumulated_insight": "T2: Student says ''?agreeing without elaboration (cooperative_engagement) via short_affirmation. Focus: the hinge. The structural_analogy/UM_06 move applies shift their frame: standard function application. Pattern: go_along_compliantly ? go_along_compliantly. Confidence high.",
+  "abstract_pattern": "",
+  "visible_response": "Then I must be more skilled than Dedalos, moving not only my arguments but others’. Yet I want them fixed more than wealth.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:proclus-elements",
+    "ro:platonism-decoded",
+    "ro:chaldean-oracles"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

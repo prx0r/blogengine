@@ -1,0 +1,258 @@
+{
+  "ro_id": "ro:alchemy-turba",
+  "schema_version": 1,
+  "title": "Turba Philosophorum",
+  "subtitle": "The Assembly of the Alchemical Philosophers \u2014 12th century dialogues on the four elements, the One Thing, and the regimen of the Stone",
+  "family": "theme",
+  "status": "draft",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "The earliest Latin alchemical dialogue-cycle, presenting the doctrines of the four elements, the coction of copper into gold, and the central mystery of Permanent Water.",
+    "scope": "Covers the 24 dicta of the Turba assembly, the four-element cosmology of Iximidrus, Exumedrus, Anaxagoras, and Pythagoras, the egg analogy, the vinegar/copper operation, and the stone called by many names.",
+    "traditions": [
+      "alchemy",
+      "hermetica",
+      "gnosticism",
+      "pythagoreanism"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "turba-text",
+      "tier": 1,
+      "label": "Turba Philosophorum (Aurora Chemica translation, via alchemywebsite.com)",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "four_elements",
+        "permanent_water",
+        "copper_operation",
+        "egg_analogy",
+        "one_thing_doctrine"
+      ],
+      "sections_affected": [
+        "cosmology",
+        "operation",
+        "materia"
+      ],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "cosmology",
+      "subsection": "four_elements_and_air_as_mediator",
+      "kind": "source",
+      "text": "Iximidrus Saith:- ... the stars are igneous, and are kept within bounds by the air. If the humidity and density of the air did not exist to separate the flames of the sun from living things, then the Sun would consume all creatures. ... The air, which is warm and moist, joins these together by its concording medium; between the humidity of water and the heat of fire the air is thus placed to establish peace. ... An egg is an illustration, for therein four things are conjoined; the visible cortex or shell represents the earth, and the albumen, for white part, is the water. ... the yolk also of the egg represents fire; the cortex which contains the yolk corresponds to that other air which separates the water from the fire.",
+      "source_ids": [
+        "turba-text"
+      ],
+      "topics": [
+        "four_elements",
+        "air_mediator",
+        "egg_analogy",
+        "microcosm"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "cosmology",
+      "subsection": "the_sublime_creature_beyond_sense",
+      "kind": "source",
+      "text": "Lucusta saith:- ... the creature which is cognised in none of these five ways is a sublime creature, and, as such, is neither seen nor felt, but is perceived by reason alone, of which reason Nature confesses that God is a partaker. ... this creature, that is to say, the world, hath a light, which is the Sun ... but the sublime creature before mentioned has no need of the light of this Sun, because the Sun is beneath that creature, which is more subtle and more lucid. This light, which is more lucid than the light of the Sun, they have taken from the light of God.",
+      "source_ids": [
+        "turba-text"
+      ],
+      "topics": [
+        "sublime_creature",
+        "light_above_sun",
+        "noetic_perception"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "operation",
+      "subsection": "the_copper_and_the_tincture",
+      "kind": "source",
+      "text": "Arisleus saith:- Know that the key of this work is the art of Coins. Take, therefore, the body which I have shewn to you and reduce it to thin tablets. Next immerse the said tablets in the Water of our Sea, which is permanent Water, and, after it is covered, set it over a gentle fire until the tablets are melted and become waters or Etheliae ... Cook it, therefore, until it be deprived of blackness, and the whiteness appear. Then rub it, mix with the Gum of Gold, and cook until it becomes red Etheliae.",
+      "source_ids": [
+        "turba-text"
+      ],
+      "topics": [
+        "copper_operation",
+        "permanent_water",
+        "nigredo_albedo_rubedo",
+        "etheliac"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "materia",
+      "subsection": "the_stone_with_many_names",
+      "kind": "source",
+      "text": "Pythagoras saith:- ... the thing which they have described in so many ways follows and attains its companion without fire, even as the magnet follows the iron ... being a stone, and also not a stone; common and precious; hidden and concealed, yet known by everyone; of one name and of many names, which is the Spume of the Moon. This stone, therefore, is not a stone, because it is more precious; without it Nature never operates anything; its name is one, yet we have called it by many names on account of the excellence of its nature.",
+      "source_ids": [
+        "turba-text"
+      ],
+      "topics": [
+        "stone_not_a_stone",
+        "spume_of_the_moon",
+        "magnet_analogy",
+        "hidden_names"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "cosmology",
+      "subsection": "two_elements_visible_two_hidden",
+      "kind": "commentary",
+      "text": "The Turba's distinction between the two visible elements (earth and water) and two invisible ones (air and fire) maps directly onto Steiner's fourfold division of the human being: the physical body (earth), etheric body (water), astral body (air), and ego (fire). The air as 'peacemaker between hostile things' corresponds to the astral body's mediatory role between spirit and matter. In Layayoga terms, the air is v\u0101yu-tattva, the mediating principle that carries pr\u0101\u1e47a between the m\u016bl\u0101dh\u0101ra (earth) and the sv\u0101dhi\u1e63\u1e6dh\u0101na (water) cakras upward through the su\u1e63um\u1e47\u0101. The egg analogy is a precise microcosmic model: the four elements enclosing the 'point of the Sun' (puru\u1e63a/\u0101tman) at the center corresponds to the Tantraloka's description of the universe as a cosmic egg (brahm\u0101\u1e47\u1e0da) with \u015aiva as the central point (bindu).",
+      "source_ids": [
+        "turba-text"
+      ],
+      "topics": [
+        "steiner",
+        "layayoga",
+        "tantraloka",
+        "fourfold_being",
+        "brahmanda"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_006",
+      "section": "cosmology",
+      "subsection": "the_light_beyond_the_sun_as_daimon",
+      "kind": "commentary",
+      "text": "The 'sublime creature' that 'has no need of the light of this Sun' because it partakes of a light 'more lucid than the light of the Sun' is a perfect description of the HGA from the daimon path perspective. The Holy Guardian Angel is precisely this: a being whose light surpasses the visible sun because it originates in the intelligible realm (noetic light). In the PGM, the 'Meeting with Your Own Daimon' (PGM VII.505-528) involves an egg ritual where the practitioner draws down a superior light that transfigures the magician. The Turba's creature 'perceived by reason alone' (\u03bb\u03cc\u03b3\u1ff3 \u03bc\u03cc\u03bd\u1ff3) echoes Plato's no\u0113ta and Plotinus' Enneads on the undescended soul that remains in contact with the intelligible. This is the 'Eye of the Heart' in the Sufi tradition of Corbin \u2014 the organ that perceives the mundus imaginalis.",
+      "source_ids": [
+        "turba-text"
+      ],
+      "topics": [
+        "daimon_path",
+        "hga",
+        "pgm",
+        "plotinus",
+        "corbin"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_007",
+      "section": "operation",
+      "subsection": "the_three_stages_as_kundalini_awakening",
+      "kind": "commentary",
+      "text": "The three-stage operation \u2014 blackening (nigredo), whitening (albedo), reddening (rubedo) \u2014 corresponds exactly to the three gu\u1e47as and the ascent of ku\u1e47\u1e0dalin\u012b through the cakras. The blackness is tamas (inertia), the first awakening of the serpent power felt as darkness and inertia at m\u016bl\u0101dh\u0101ra. The whiteness is sattva (purity), as the energy rises to an\u0101hata and vi\u015buddhi. The redness is rajas (dynamism), the full activation of ku\u1e47\u1e0dalin\u012b at \u0101j\u00f1\u0101 and sahasr\u0101ra. The Turba's 'copper' that must be 'burnt, broken up, deprived of blackness' is the body itself, which must undergo tapas (austerity) to be purified. 'Permanent Water' is the am\u1e5bta (nectar) that flows through the brahman\u0101\u1e0d\u012b when the practitioner reaches vi\u015buddhi \u2014 the 'permanent water' that never dries up.",
+      "source_ids": [
+        "turba-text"
+      ],
+      "topics": [
+        "layayoga",
+        "kundalini",
+        "nigredo_albedo_rubedo",
+        "amrita",
+        "shat_chakras"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_008",
+      "section": "materia",
+      "subsection": "the_stone_without_fire_and_tibetan_bardo",
+      "kind": "commentary",
+      "text": "The Turba's statement that the One Thing 'follows and attains its companion without fire' \u2014 when the 'companion' is drawn by affinity like iron to a magnet \u2014 describes the Tibetan Bardo Th\u00f6dol's principle of the Clear Light: the second bardo involves the appearance of peaceful and wrathful deities that are projections of one's own consciousness. One does not 'make' the stone through effort (fire); one recognizes what is already present (the Clear Light, the dharmakaya). The many names of the stone \u2014 White Ethelia, Spume of the Moon, Kuhul, Permanent Water \u2014 correspond to the many names of the Great Perfection (Dzogchen: th\u00f6gal, trekch\u00f6, the rainbow body). The Tantraloka (I.5-15) similarly teaches that the highest up\u0101ya (means) is 'anup\u0101ya' \u2014 no means at all, pure recognition. The stone 'without fire' is the sahaja state of spontaneous liberation.",
+      "source_ids": [
+        "turba-text"
+      ],
+      "topics": [
+        "tibetan_book_of_dead",
+        "bardo",
+        "dzogchen",
+        "tantraloka",
+        "anupaya"
+      ],
+      "status": "active"
+    }
+  ],
+  "coverage": {
+    "cosmology": {
+      "status": "good",
+      "sources": [
+        "turba-text"
+      ],
+      "passage_count": 2,
+      "estimated_completeness": 0.7,
+      "gaps": [
+        "Additional dicta on the creation order (angels, heavenly bodies) not yet in separate passage"
+      ]
+    },
+    "operation": {
+      "status": "good",
+      "sources": [
+        "turba-text"
+      ],
+      "passage_count": 2,
+      "estimated_completeness": 0.7,
+      "gaps": [
+        "Detailed regimen from dicta 12-25 needs additional excerpts"
+      ]
+    },
+    "materia": {
+      "status": "good",
+      "sources": [
+        "turba-text"
+      ],
+      "passage_count": 2,
+      "estimated_completeness": 0.6,
+      "gaps": [
+        "Full list of stone's names scattered across dicta 12-25"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "coverage_gap",
+      "title": "Second section of Turba (turba2.html) not yet incorporated",
+      "description": "The text continues into a second HTML page with further dicta and the crucial section on the vinegars and Permanent Water operation.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    },
+    {
+      "id": "issue-002",
+      "type": "interpretation",
+      "title": "The nature of Permanent Water is deeply ambiguous",
+      "description": "Is Permanent Water (aqua permanens) a mineral acid, a mercury compound, or a spiritual state? The Turba's deliberate obscurity makes it unclear whether this refers to a physical reagent or the practitioner's own purified consciousness.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial RO with 8 passages (4 source, 4 commentary) covering the Turba's four-element cosmology, the sublime creature, copper operation, and the stone of many names.",
+      "sources_added": [
+        "turba-text"
+      ],
+      "passage_count": 8,
+      "status": "draft"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created in draft state from Turba Philosophorum HTML source",
+      "sources_total": 1,
+      "passages_total": 8
+    }
+  ]
+}

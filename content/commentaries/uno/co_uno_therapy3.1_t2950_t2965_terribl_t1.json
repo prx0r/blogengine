@@ -1,0 +1,54 @@
+{
+  "co_id": "co:uno_therapy3.1_t2950_t2965_terribl_t1",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3.1_t2950_t2965_terrible_mother_defense",
+  "turn_index": 1,
+  "lineage": "Therapeutic",
+  "student_state": "unknown",
+  "behavior_tags": [],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_05",
+    "function_name": "UM_05",
+    "mechanism_shape": "SUBJECT_OBJECT_INVERSION",
+    "teaching_actions": [
+      "differentiates_self_from_feeling",
+      "objectifies_superego"
+    ],
+    "traps_avoided": [
+      "identification_with_content"
+    ],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.65,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_04",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "no_clear_effect",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "Turn 2: 'I think I’m a terrible mother.'. Student now in unknown. Continuing with subject_object_inversion approach. Building on previous turn's foundation.",
+  "accumulated_insight": "T2: Student: 'I think I’m a terrible mother.'. Shift from guilt_ridden_collapse to unknown. Teacher applies subject_object_inversion mechanism with differentiates self from feeling, objectifies superego. Mid-episode progression in UNMAKING phase.",
+  "abstract_pattern": "",
+  "visible_response": "That describes you, not your feeling toward your daughter. Do you notice how this mechanism in your mind is criticizing you right now?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

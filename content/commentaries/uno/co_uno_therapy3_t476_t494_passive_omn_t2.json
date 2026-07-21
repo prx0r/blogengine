@@ -1,0 +1,56 @@
+{
+  "co_id": "co:uno_therapy3_t476_t494_passive_omn_t2",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3_t476_t494_passive_omnipotent_transference",
+  "turn_index": 2,
+  "lineage": "Therapeutic",
+  "student_state": "anxious_paralysis",
+  "behavior_tags": [
+    "fear_of_failure"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_06",
+    "function_name": "UM_06",
+    "mechanism_shape": "CAUSAL_CHAIN",
+    "teaching_actions": [
+      "accepts_failure",
+      "declines_rescue"
+    ],
+    "traps_avoided": [
+      "retreat"
+    ],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.35,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_02",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "'I want to leave him but I'm afraid'—they said it. They KNOW what they want. From 'you tell me' (T1) to 'I don't know' (T2) to 'I want to leave' (T3) in three turns. Teacher makes explicit: you DO know, you're just scared. This removes incapacity claim. Not 'you don't know,' you know but fear. Different problem. Knowing + fear is workable. Not knowing is stuck. Three turns from passive to knowing. Progress.",
+  "accumulated_insight": "T3: Student admits 'I want to leave him but I'm afraid'—names desire (leave) and obstacle (fear). From demanding (T1) to claiming incapacity (T2) to naming desire (T3). Teacher validates both: 'So you know what you want, you're just afraid.' Separates knowing from doing. Predicting surface_emotion as validation lands.",
+  "abstract_pattern": "",
+  "visible_response": "If you can’t do it, I can’t carry you on my shoulders the rest of the way.\nWe’ll have to accept that you won’t be able to achieve your goal.",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

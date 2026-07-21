@@ -1,0 +1,61 @@
+{
+  "co_id": "co:uno_gurdjeff1_t001_t012_false_pers_t2",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gurdjeff1_t001_t012_false_personality_buffers_weakness",
+  "turn_index": 2,
+  "lineage": "Gurdjieffian",
+  "student_state": "conceptual_difficulty",
+  "behavior_tags": [
+    "poses_logical_paradox",
+    "questions_definition"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_03",
+    "function_name": "RM_03",
+    "mechanism_shape": "COMPARISON_CONTRAST",
+    "teaching_actions": [
+      "redefines_weakness",
+      "links_weakness_to_blindness",
+      "introduces_relativity"
+    ],
+    "traps_avoided": [
+      "category_conflation"
+    ],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.5,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "request_clarification",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The redefinition works: weakness = mechanicalness/blindness (relative to other things we can see), not absolute bad. The student posed logical paradox (conceptual difficulty), which shows they understand the logical issue. They'll likely request definition clarification next.",
+  "accumulated_insight": "T3: Student poses logical paradox ('How can it be weakness if there is no not-weakness?')—conceptual difficulty via poses logical paradox and questions definition. They understand: if everything is weakness, weakness has no meaning (logical paradox). The comparison_contrast mechanism redefines: weakness = mechanicalness/blindness (relative to other things we can see), not absolute bad ('We are mechanical in all things, but in one or two things we are particularly mechanical and particularly blind; that is why they are chief weaknesses, for we cannot see them. Other things, that are not weaknesses, we can see'). Pattern: criterion inquiry → structural model → moral question → denial → logical paradox → redefinition → [next: definition request]. They're grasping: weakness = relative blindness, not absolute bad.",
+  "abstract_pattern": "",
+  "visible_response": "It means mechanicalness.\nWe are mechanical in all things, but in one\nor two things we are particularly mechanical and particularly blind;\nthat is why they\nare chief weaknesses, for we cannot see them.\nOther things, that are not weaknesses,\nwe can see.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:sufi-comparative-analysis",
+    "ro:steiner-tantraloka-parallels"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

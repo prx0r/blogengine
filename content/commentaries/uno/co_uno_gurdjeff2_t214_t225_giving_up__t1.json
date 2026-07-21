@@ -1,0 +1,62 @@
+{
+  "co_id": "co:uno_gurdjeff2_t214_t225_giving_up__t1",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gurdjeff2_t214_t225_giving_up_will",
+  "turn_index": 1,
+  "lineage": "Gurdjieffian",
+  "student_state": "seeking_external_guidance",
+  "behavior_tags": [
+    "requests_instruction",
+    "seeks_authority"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_03",
+    "function_name": "RM_03",
+    "mechanism_shape": "THRESHOLDING",
+    "teaching_actions": [
+      "sets_condition_for_guidance",
+      "defines_precondition_of_obedience",
+      "warns_of_stakes"
+    ],
+    "traps_avoided": [
+      "ego_defense",
+      "looking_outward"
+    ],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.62,
+      "attunement": 0.5,
+      "style": 0.65,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_04",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "request_clarification",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The condition/warning works: personal direction = high-stakes obligation (obedience required), defines: precondition = obedience (non-negotiable), warns: stakes (serious commitment). The student requested instruction (seeking external guidance), which shows they understand: personal directions = should ask (guidance). They'll likely test commitment next.",
+  "accumulated_insight": "T2: Student requested instruction ('Should one ask for further personal directions?')—seeking external guidance via requests instruction and seeks authority. They understand: personal directions = should ask (guidance). The thresholding mechanism sets condition: personal direction = high-stakes obligation (obedience required), defines: precondition = obedience (non-negotiable), warns: stakes (serious commitment). Pattern: contradiction question → resolution → guidance question → condition/warning → [next: commitment question]. They're grasping: personal direction = high-stakes (obedience required), precondition = obedience (condition/warning).",
+  "abstract_pattern": "",
+  "visible_response": "Yes, but if one asks, one must obey... One is not obliged to do anything\napart from following the general rules and principles if one does not ask,\nso before asking one must think twice.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:sufi-comparative-analysis",
+    "ro:steiner-tantraloka-parallels"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

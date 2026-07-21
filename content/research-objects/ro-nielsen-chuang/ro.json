@@ -1,0 +1,93 @@
+{
+  "ro_id": "ro:nielsen-chuang",
+  "schema_version": 1,
+  "title": "Quantum Computation and Quantum Information (Nielsen & Chuang)",
+  "subtitle": "The standard textbook on quantum computing \u2014 qubits, gates, algorithms, error correction, and quantum information theory",
+  "family": "thinker-topic",
+  "status": "stub",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "The definitive textbook on quantum computation and quantum information, covering the mathematical foundations, quantum algorithms (Shor, Grover), quantum error correction, entanglement theory, and ...",
+    "scope": "Covers quantum mechanics for computing (qubits, density operators, measurements), quantum circuits and gates, quantum algorithms (Deutsch-Jozsa, Shor's factoring, Grover's search), quantum error correction, quantum information theory (entropy, Holevo bound, no-cloning), entanglement theory, and physical implementations (NMR, ion traps, superconducting qubits).",
+    "traditions": [
+      "quantum-computing",
+      "quantum-information",
+      "computer-science"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "nielsen-chuang",
+      "tier": 1,
+      "label": "Michael A. Nielsen & Isaac L. Chuang \u2014 Quantum Computation and Quantum Information: 10th Anniversary Edition (Cambridge University Press, 2010). PDF, 7.5 MB.",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "qubits",
+        "quantum_circuits",
+        "quantum_algorithms",
+        "error_correction",
+        "quantum_information"
+      ],
+      "sections_affected": [
+        "theory"
+      ],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "theory",
+      "subsection": "qubit_as_S0",
+      "kind": "synthesis",
+      "text": "The qubit is the minimal unit of quantum information \u2014 a superposition of |0> and |1>. This IS the (S0, 0, 1) structure from the Tractatus: S0 is the qubit's state space (the Bloch sphere), |0> and |1> are the poles, and measurement forces the qubit into one pole or the other. The quantum computer operates in the superposition layer \u2014 it computes with uncommitted S0, not with collapsed configurations. Quantum error correction is the technology of maintaining S0 against decoherence. This maps directly to the constraint space: a quantum computer is a device that navigates C at L0 rather than L3.",
+      "source_ids": [
+        "nielsen-chuang"
+      ],
+      "topics": [
+        "qubit",
+        "superposition",
+        "measurement",
+        "information"
+      ],
+      "status": "active"
+    }
+  ],
+  "coverage": {
+    "theory": {
+      "status": "minimal",
+      "sources": [
+        "nielsen-chuang"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 0.15,
+      "gaps": [
+        "Full extraction of the 700+ page textbook needed"
+      ]
+    }
+  },
+  "issues": [],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial RO for Nielsen & Chuang.",
+      "sources_added": [
+        "nielsen-chuang"
+      ],
+      "passage_count": 1,
+      "status": "draft"
+    }
+  ],
+  "appendices": [],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created.",
+      "sources_total": 1,
+      "passages_total": 1
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "work_id": "work:t2-pubmed-the-human-egomotion-network",
+  "schema_version": 2,
+  "title": "The human egomotion network.",
+  "authors": [
+    {
+      "name": "Ruehl RM"
+    },
+    {
+      "name": "Flanagin VL"
+    },
+    {
+      "name": "Ophey L"
+    },
+    {
+      "name": "Raiser TM"
+    },
+    {
+      "name": "Seiderer K"
+    }
+  ],
+  "publication": {
+    "year": 2022,
+    "journal": "Neuroimage",
+    "source": "PubMed/MEDLINE",
+    "language": "en"
+  },
+  "identifiers": {
+    "pmid": "36334557",
+    "doi": "10.1016/j.neuroimage.2022.119715"
+  },
+  "topics": [
+    "phase-1-birth-body",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "assets": {
+    "pdf_path": null,
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/36334557/",
+    "abstract": "All volitional movement in a three-dimensional space requires multisensory integration, in particular of visual and vestibular signals. Where and how the human brain processes and integrates self-motion signals remains enigmatic. Here, we applied visual and vestibular self-motion stimulation using fast and precise whole-brain neuroimaging to delineate and characterize the entire cortical and subcortical egomotion network in a substantial cohort (n=131). Our results identify a core egomotion netw"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_alt17_acquisition",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 1,
+    "phase_name": "Birth/Body",
+    "bridge_rationale": "Bridge paper score=5.5: links Birth/Body concept to mechanistic neuroscience"
+  },
+  "evaluation": "Score 5: Marginal bridge signal",
+  "tier": 2
+}

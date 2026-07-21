@@ -1,0 +1,52 @@
+{
+  "co_id": "co:uno_meno_t01_t04_opening_ignorance_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "meno_t01_t04_opening_ignorance_reset",
+  "turn_index": 0,
+  "lineage": "Socratic",
+  "student_state": "seeking_clarity",
+  "behavior_tags": [
+    "requests_clarification"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_01",
+    "function_name": "UM_01",
+    "mechanism_shape": "CONSTRAINT_COLLAPSE",
+    "teaching_actions": [
+      "asserts_ignorance",
+      "refuses_to_answer"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.5,
+      "attunement": 0.5,
+      "style": 0.5,
+      "depth": 0.38,
+      "meta_mode": 0.2,
+      "provenance": "default"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "meno_t01_t04_opening_ignorance_reset T1: Using constraint_collapse/UM_01 with intensity=PR_03, intimacy=IN_03, attunement=AT_04 on 'Do you really not know what virtue is'. Response shows trying to pin down the mechanism; expecting ask_deeper_question next. If not, lower PR and re-anchor the hinge.",
+  "accumulated_insight": "T1: Student says 'Do you really not know what virtue is? Are we to report this to the folk back home about you?'?trying to pin down the mechanism (seeking_clarity) via requests_clarification. Focus: Do you really not know what virtue is. The constraint_collapse/UM_01 move applies shift their frame: standard function application. Pattern: request_clarification. Confidence medium.",
+  "abstract_pattern": "",
+  "visible_response": "Before now, Meno, Thessalians had a high high reputation among the Greeks ... If I do not know what something is, how could I know what qualities it possesses?",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:proclus-elements",
+    "ro:platonism-decoded",
+    "ro:chaldean-oracles"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

@@ -1,0 +1,59 @@
+{
+  "co_id": "co:uno_discourses_b2_c13_lute_player__t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "discourses_b2_c13_lute_player_anxiety",
+  "turn_index": 0,
+  "lineage": "Realist",
+  "student_state": "receptive",
+  "behavior_tags": [
+    "curiosity"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_03",
+    "function_name": "RM_03",
+    "mechanism_shape": "CAUSAL_CHAIN",
+    "teaching_actions": [
+      "diagnoses_anxiety",
+      "distinguishes_domains",
+      "identifies_ignorance"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.15,
+      "attunement": 0.5,
+      "style": 0.35,
+      "depth": 0.38,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_01",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_02",
+      "depth_discrete": "PD_02",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "go_along_compliantly",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "Long response for an open question. Risk: they'll get lost in the detail. Benefit: the model is complete and can be referenced later. The key insight is 'he knows not what a crowd is'—even experts can be ignorant about what matters. Hypothesis: this is too abstract. May need grounding in T2. Watching for confusion signals.",
+  "accumulated_insight": "T1: Open question, low information. Student is receptive but I don't know what they'll grab from this extended teaching. The lute player model has multiple handles—skill vs knowledge, internal vs external, competence vs wisdom. Let's see which they take.",
+  "abstract_pattern": "",
+  "visible_response": "When I see a man anxious, I say, \"What does this man want?\nIf he did not want something which is not in his power, how could he be anxious?\" For this reason a lute player when he is singing by himself has no anxiety, but when he enters the theatre, he is anxious even if he has a good voice and plays well on the lute; for he not only wishes to sing well, but also to obtain applause: but this is not in his power. Accordingly, where he has skill, there he has confidence. Bring any single person who knows nothing of music, and the musician does not care for him. \nBut in the matter where a man knows nothing and has not been practiced, there he is anxious.\n\nHe knows not what a crowd is or what the praise of a crowd is. However he has learned to strike the lowest chord and the highest; but what the praise of the many is, and what power it has in life he neither knows nor has he thought about it. Hence he must of necessity tremble and grow pale.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:kybalion",
+    "ro:grimoires-decoded",
+    "ro:hermes-proof-system"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

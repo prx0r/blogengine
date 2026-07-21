@@ -1,0 +1,43 @@
+{
+  "work_id": "work:t2-pubmed-mindfulness-based-psychotherapy",
+  "schema_version": 2,
+  "title": "[Mindfulness-based psychotherapy].",
+  "authors": [
+    {
+      "name": "Bohus M"
+    }
+  ],
+  "publication": {
+    "year": 2012,
+    "journal": "Nervenarzt",
+    "source": "PubMed/MEDLINE",
+    "language": "en"
+  },
+  "identifiers": {
+    "pmid": "23069894",
+    "doi": "10.1007/s00115-012-3555-0"
+  },
+  "topics": [
+    "phase-7-form-meditation",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "assets": {
+    "pdf_path": "t2-pubmed-mindfulness-based-psychotherapy.pdf",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/23069894/",
+    "abstract": "Mindfulness-based psychotherapy is rooted in the Far East meditation culture. In the context of psychotherapy mindfulness-based treatment programs mostly include mindfulness as modular components aiming at acceptance of aversive circumstances or emotions and on improvement of metacognitive awareness. Currently there are five mindfulness-based concepts with different proof of effectiveness: mindfulness-based cognitive therapy (MBCT) can be classified as effective in reducing the risk of relapse i"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_alt17_acquisition",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 7,
+    "phase_name": "Form/Meditation",
+    "bridge_rationale": "Bridge paper score=9.0: links Form/Meditation concept to mechanistic neuroscience"
+  },
+  "evaluation": "Score 9: Good bridge signal",
+  "tier": 2
+}

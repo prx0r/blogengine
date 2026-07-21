@@ -1,0 +1,38 @@
+{
+  "work_id": "work:t2-pubmed-subjective-signal-strength-distinguishes-reality-from-imagination",
+  "schema_version": 2,
+  "title": "Subjective signal strength distinguishes reality from imagination.",
+  "authors": [
+    {
+      "name": "Dijkstra, Nadine"
+    },
+    {
+      "name": "Fleming, Stephen M"
+    }
+  ],
+  "identifiers": {
+    "pmid": "36959279",
+    "doi": "10.1038/s41467-023-37322-1"
+  },
+  "publication": {
+    "journal": "Nature communications",
+    "year": "2023"
+  },
+  "abstract": "Humans are voracious imaginers, with internal simulations supporting memory, planning and decision-making. Because the neural mechanisms supporting imagery overlap with those supporting perception, a foundational question is how reality and imagination are kept apart. One possibility is that the intention to imagine is used to identify and discount self-generated signals during imagery. Alternatively, because internally generated signals are generally weaker, sensory strength is used to index reality. Traditional psychology experiments struggle to investigate this issue as subjects can rapidly learn that real stimuli are in play. Here, we combined one-trial-per-participant psychophysics with computational modelling and neuroimaging to show that imagined and perceived signals are in fact intermixed, with judgments of reality being determined by whether this intermixed signal is strong enough to cross a reality threshold. A consequence of this account is that when virtual or imagined signals are strong enough, they become subjectively indistinguishable from reality.",
+  "phase_mapping": {
+    "phase": 10,
+    "phase_name": "Imaginal"
+  },
+  "bridge_tags": [
+    "mental-imagery",
+    "imagination",
+    "imaginal",
+    "perception"
+  ],
+  "evaluation": "Quality pass v3 (score=43) \u2014 High-signal bridge paper for Imaginal.",
+  "assets": {
+    "pdf_path": null,
+    "nxml_path": null
+  },
+  "tier": 2
+}

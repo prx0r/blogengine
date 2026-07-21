@@ -1,0 +1,94 @@
+{
+  "ro_id": "ro:zenil-computable-universe",
+  "schema_version": 1,
+  "title": "A Computable Universe \u2014 Understanding and Exploring Nature (Zenil, Penrose et al.)",
+  "subtitle": "Essays on computation, the nature of reality, the Ruliad, algorithmic information theory, and the limits of computability",
+  "family": "thinker-topic",
+  "status": "stub",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "A multidisciplinary volume exploring the thesis that the universe is fundamentally computational, with contributions from Penrose, Wolfram, Zenil, Chaitin, and others \u2014 covering algorithmic informa...",
+    "scope": "Covers the computable universe hypothesis, algorithmic information theory (Kolmogorov-Chaitin), cellular automata as models of physical reality, hypercomputation and the limits of computability, Wolfram's computational equivalence principle, Penrose's non-computable physics, and the question of whether the universe can be fully described by computation.",
+    "traditions": [
+      "computability",
+      "information-theory",
+      "complexity",
+      "foundations-of-physics"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "zenil-computable-universe",
+      "tier": 1,
+      "label": "Hector Zenil (ed.), with R. Penrose, S. Wolfram, G. Chaitin et al. \u2014 A Computable Universe: Understanding and Exploring Nature (World Scientific, 2012). PDF, 12 MB.",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "computable_universe",
+        "algorithmic_information",
+        "ruliad",
+        "hypercomputation",
+        "cellular_automata"
+      ],
+      "sections_affected": [
+        "theory"
+      ],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "theory",
+      "subsection": "computable_universe_hypothesis",
+      "kind": "source",
+      "text": "The volume explores the thesis that physical reality is fundamentally computational \u2014 that the universe is a computer executing an algorithm. Wolfram's computational equivalence principle (any process that is computationally universal can emulate any other) implies that physical laws are not fundamental but emergent from computational processes. Zenil's algorithmic information theory provides a formal framework: the Kolmogorov complexity of a physical state is the length of the shortest program that produces it.",
+      "source_ids": [
+        "zenil-computable-universe"
+      ],
+      "topics": [
+        "computation",
+        "ruliad",
+        "cellular_automata",
+        "algorithmic_information"
+      ],
+      "status": "active"
+    }
+  ],
+  "coverage": {
+    "theory": {
+      "status": "minimal",
+      "sources": [
+        "zenil-computable-universe"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 0.2,
+      "gaps": [
+        "Full extraction of the 500+ page volume needed"
+      ]
+    }
+  },
+  "issues": [],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial RO for Zenil's Computable Universe volume.",
+      "sources_added": [
+        "zenil-computable-universe"
+      ],
+      "passage_count": 1,
+      "status": "draft"
+    }
+  ],
+  "appendices": [],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created.",
+      "sources_total": 1,
+      "passages_total": 1
+    }
+  ]
+}

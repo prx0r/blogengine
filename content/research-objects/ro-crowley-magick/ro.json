@@ -1,0 +1,389 @@
+{
+  "ro_id": "ro:crowley-magick",
+  "schema_version": 1,
+  "title": "Thelemic Practice: Magick, Liber Resh, Liber Astarte, Liber E",
+  "subtitle": "Daily practice structure: solar adorations (Liber Resh), devotional yoga (Liber Astarte), elementary training (Liber E), and ritual theurgy (the Star Ruby, Mass of the Phoenix)",
+  "family": "tradition",
+  "status": "draft",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "Thelemic practice comprises four limbs: solar adorations (Liber Resh \u2014 4\u00d7 daily), devotional practice (Liber Astarte \u2014 bhakti-yoga), elementary training (Liber E \u2014 asana, pranayama, dharana), and r...",
+    "scope": "Covers Liber Resh vel Helios (the 4 daily solar adorations at dawn, noon, sunset, midnight), Liber Astarte vel Berylli (attainment by devotion, including smara\u1e47a, japa, and the cultivation of love as magical force), Liber E vel Exercitiorum (asana, pranayama with the 1:4:2 ratio, dharana, dhyana), the Star Ruby (the Thelemic pentagram ritual), and the Mass of the Phoenix (the sunset solar Eucharist).",
+    "traditions": [
+      "thelema",
+      "western_occultism",
+      "ceremonial_magic"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "liber-resh",
+      "tier": 1,
+      "label": "Liber Resh vel Helios (Liber CC) \u2014 Class C. The four solar adorations: Ra at dawn, Ahathoor at noon, Tum at sunset, Khephra at midnight.",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "solar_adorations",
+        "four_solar_stations",
+        "egyptian_god_forms",
+        "daily_practice_structure"
+      ],
+      "sections_affected": [
+        "solar_rites",
+        "daily_practice"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "liber-astarte",
+      "tier": 1,
+      "label": "Liber Astarte vel Berylli (Liber CLXXV) \u2014 Class B. The attainment of the Knowledge and Conversation of the Holy Guardian Angel by the method of devotion (bhakti-yoga).",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "bhakti_yoga",
+        "smara\u1e47a",
+        "japa",
+        "devotional_method",
+        "love_as_magical_force"
+      ],
+      "sections_affected": [
+        "devotion"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "liber-e",
+      "tier": 1,
+      "label": "Liber E vel Exercitiorum (Liber IX) \u2014 Class B. The elementary training: asana, pranayama, dharana, dhyana. The 1:4:2 breath ratio.",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "asana",
+        "pranayama",
+        "1_4_2_ratio",
+        "dharana",
+        "dhyana",
+        "elementary_training"
+      ],
+      "sections_affected": [
+        "elementary_practice"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "star-ruby",
+      "tier": 1,
+      "label": "The Star Ruby \u2014 Class D. The Thelemic pentagram ritual, replacing the Golden Dawn's LBRP with Thelemic god-names.",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "pentagram_ritual",
+        "thelemic_banishing",
+        "nuit_hadit_invocation"
+      ],
+      "sections_affected": [
+        "ritual"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "mass-phoenix",
+      "tier": 1,
+      "label": "Mass of the Phoenix \u2014 Liber 333 (The Book of Lies), Chapter 44. The sunset Eucharist: the Cake of Light consecrated with the magician's blood.",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "solar_eucharist",
+        "blood_consecration",
+        "cake_of_light",
+        "sunset_rite"
+      ],
+      "sections_affected": [
+        "eucharist"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "duquette-magick-crowley",
+      "tier": 1,
+      "label": "DuQuette, Lon Milo \u2014 The Magick of Aleister Crowley (2003). Practical commentary on Liber Resh, the Mass of the Phoenix, the Star Ruby, Liber Astarte, and Liber E.",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "practical_commentary",
+        "ritual_instructions",
+        "solar_rites_commentary"
+      ],
+      "sections_affected": [
+        "all"
+      ],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "solar_rites",
+      "subsection": "liber_resh_dawn",
+      "kind": "source",
+      "text": "Let him greet the Sun at dawn, facing East, giving the sign of his grade. And let him say in a loud voice: Hail unto Thee who art Ra in Thy rising, even unto Thee who art Ra in Thy strength, who travellest over the Heavens in Thy bark at the Uprising of the Sun. Tahuti standeth in His splendour at the prow, and Ra-Hoor abideth at the helm. Hail unto Thee from the Abodes of Night! (Liber Resh, verse 1)",
+      "source_ids": [
+        "liber-resh"
+      ],
+      "topics": [
+        "dawn_adoration",
+        "ra",
+        "solar_bark",
+        "tahuti"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "solar_rites",
+      "subsection": "liber_resh_noon_sunset_midnight",
+      "kind": "source",
+      "text": "Also at Noon, let him greet the Sun, facing South giving the sign of his grade. And let him say in a loud voice: Hail unto Thee who art Ahathoor in Thy triumphing, even unto Thee who art Ahathoor in Thy beauty, who travellest over the Heavens in Thy bark at the Mid-course of the Sun. Tahuti standeth in His splendour at the prow, and Ra-Hoor abideth at the helm. Hail unto Thee from the Abodes of Morning! Also at Sunset, let him greet the Sun, facing West giving the sign of his grade. And let him say in a loud voice: Hail unto Thee who art Tum in Thy setting, even unto Thee who art Tum in Thy joy, who travellest over the Heavens in Thy bark at the Down-going of the Sun. Tahuti standeth in His splendour at the prow, and Ra-Hoor abideth at the helm. Hail unto Thee from the Abodes of Day! Lastly, at Midnight, let him greet the Sun, facing North giving the sign of his grade. And let him say in a loud voice: Hail unto Thee who art Khephra in Thy hiding, even unto Thee who art Khephra in Thy silence, who travellest over the Heavens in Thy bark at the Midnight Hour of the Sun. Tahuti standeth in His splendour at the prow, and Ra-Hoor abideth at the helm. Hail unto Thee from the Abodes of Evening! (Liber Resh, verses 2-4) And after each of these invocations thou shalt give the sign of silence, and afterward thou shalt perform the adoration that is taught thee by thy Superior. And then do thou compose Thyself to holy meditation. Thus shalt thou ever be mindful of the Great Work which thou hast undertaken to perform, and thus shalt thou be strengthened to pursue it unto the attainment of the Stone of the Wise, the Summum Bonum, True Wisdom and Perfect Happiness. (Liber Resh, verses 5-7)",
+      "source_ids": [
+        "liber-resh"
+      ],
+      "topics": [
+        "noon_adoration",
+        "sunset_adoration",
+        "midnight_adoration",
+        "ahathoor",
+        "tum",
+        "khephra",
+        "daily_structure"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "solar_rites",
+      "subsection": "mass_of_phoenix",
+      "kind": "source",
+      "text": "The Mass of the Phoenix (The Book of Lies, Ch. 44): The magician prepares the Cake of Light \u2014 a wafer of meal, wine, and oil. At sunset, he faces the Sun, makes the 'proper sign' on the breast (the mark of the Beast \u2014 a small cut drawing blood), and consecrates the Cake with the blood, saying: 'Let the blood of my sacrifice wash me clean.' He consumes the Cake, saying: 'With mirth I now go forth, and with thanksgiving, to do my pleasure on the earth among the legions of the living.' DuQuette (Ch. 9): 'The Mass of the Phoenix is a Eucharistic ceremony created to be celebrated at sunset in order to fortify the magician's awareness of the Sun during its nighttime journey. The essence of the Sun is safely sheltered until dawn in the body of the magician.'",
+      "source_ids": [
+        "mass-phoenix",
+        "duquette-magick-crowley"
+      ],
+      "topics": [
+        "mass_of_phoenix",
+        "solar_eucharist",
+        "cake_of_light",
+        "sunset_rite",
+        "blood_consecration"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "devotion",
+      "subsection": "liber_astarte_method",
+      "kind": "source",
+      "text": "Liber Astarte vel Berylli prescribes the method of attainment by devotion (bhakti-yoga). The aspirant selects a deity (the HGA, a god-form such as Ra-Hoor-Khuit, or an abstract ideal) and directs all thought, action, and feeling toward that deity. The key practices are: (1) smara\u1e47a (constant mindfulness of the Beloved \u2014 the deity is held in awareness throughout all waking activities), (2) japa (vocal and mental repetition of the divine name, synchronised with the breath), (3) sacrificial offerings (the giving up of something valued as an act of devotion that breaks attachment), (4) the cultivation of love as a magical force \u2014 'enflame yourself in praying' (the same phrase used in Abramelin). The aspirant must 'let the Beloved fill the whole sphere of sensation' \u2014 every sight, sound, taste, touch, and thought becomes an occasion for devotion. Liber Astarte is the Thelemic version of the bhakti-yoga of the Bhagavad G\u012bt\u0101 \u2014 but with the HGA as the object of devotion rather than K\u1e5b\u1e63\u1e47a.",
+      "source_ids": [
+        "liber-astarte",
+        "duquette-magick-crowley"
+      ],
+      "topics": [
+        "bhakti_yoga",
+        "smara\u1e47a",
+        "japa",
+        "liber_astarte",
+        "devotional_method"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "elementary_practice",
+      "subsection": "liber_e_training",
+      "kind": "source",
+      "text": "Liber E vel Exercitiorum establishes the elementary training for the aspirant. Four limbs are prescribed: (1) Asana \u2014 posture. A stable, comfortable sitting posture (siddhasana or padmasana) held for increasing periods, starting at 10 minutes and building to 4 hours or more. The spine must be straight, the body still, the eyes fixed on the tip of the nose or between the brows. (2) Pranayama \u2014 breath control. The 1:4:2 ratio: inhale for 1 count, hold for 4 counts, exhale for 2 counts. Begin with 10\u219210\u219210 (seconds) and build to 30\u2192120\u219260. The breath must be regulated through the nostrils, with the mind fixed on the breath itself. (3) Dharana \u2014 concentration. Fix the mind on a single object: a point, a flame, a triangle, the sound of the breath. When the mind wanders, bring it back without judgment. (4) Dhyana \u2014 meditation. The spontaneous flow of concentration into absorption, where the distinction between subject and object begins to dissolve. This fourfold training is the indispensable foundation for all higher Thelemic practice, including the HGA invocation. (Liber E; DuQuette, Ch. 2)",
+      "source_ids": [
+        "liber-e",
+        "duquette-magick-crowley"
+      ],
+      "topics": [
+        "asana",
+        "pranayama",
+        "1_4_2_ratio",
+        "dharana",
+        "dhyana",
+        "elementary_training"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_006",
+      "section": "ritual",
+      "subsection": "star_ruby",
+      "kind": "source",
+      "text": "The Star Ruby is the Thelemic pentagram ritual. It replaces the Golden Dawn's Lesser Banishing Ritual of the Pentagram (LBRP) with Thelemic god-names and configurations. The ritual consists of: facing East, tracing the pentagram of Earth (the invoking pentagram of Spirit for the new Aeon) with the words 'Nuit' (East), 'Hadit' (South), 'Ra-Hoor-Khuit' (West), 'Babalon' (North), and 'Therion' (Centre \u2014 the mark of the Beast). The Qabalistic Cross is replaced with the Thelemic formula of the LVX signs. The Star Ruby establishes the magician as the centre of the universe in the Thelemic formula: 'the circle is the body of Nuit, the point is Hadit, and the magician is Ra-Hoor-Khuit \u2014 the union of both.' (DuQuette, Ch. 5) The Star Ruby is performed at the beginning of all Thelemic ritual work \u2014 it is the standing-in-the-circle, the establishment of the Body of Light.",
+      "source_ids": [
+        "star-ruby",
+        "duquette-magick-crowley"
+      ],
+      "topics": [
+        "star_ruby",
+        "pentagram_ritual",
+        "thelemic_banishing",
+        "nuit",
+        "hadit",
+        "babalon",
+        "therion"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_007",
+      "section": "practice_structure",
+      "subsection": "daily_regimen",
+      "kind": "source",
+      "text": "The complete daily regimen of a Thelemic aspirant integrates all four limbs: Dawn \u2014 Liber Resh (Ra adoration), followed by Star Ruby banishing, then Liber E asana/pranayama practice. Midday \u2014 Liber Resh (Ahathoor adoration), followed by Liber Astarte smara\u1e47a (keeping the Beloved in mind throughout the afternoon). Sunset \u2014 Liber Resh (Tum adoration), followed by Mass of the Phoenix (eucharistic consecration of the Cake of Light), then the evening invocation (Liber Samekh or elemental practice). Midnight \u2014 Liber Resh (Khephra adoration), followed by dream incubation or silent meditation. This fourfold structure \u2014 solar adoration, purification/invocation, devotional mindfulness, and the eucharistic consummation \u2014 is the complete Thelemic analogue to the Tantraloka's daily practice (the 12 hourly sun forms, the \u0101vara\u1e47a p\u016bj\u0101, and the mantra japa) and to our own graded practice (dawn invocation, midday pranayama, night systasis). (DuQuette, Ch. 9; comparative analysis)",
+      "source_ids": [
+        "liber-resh",
+        "liber-astarte",
+        "liber-e",
+        "mass-phoenix",
+        "star-ruby",
+        "duquette-magick-crowley"
+      ],
+      "topics": [
+        "daily_regimen",
+        "practice_structure",
+        "solar_cycle",
+        "integrated_practice"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_008",
+      "section": "solar_rites",
+      "subsection": "resh_as_threshold_practice",
+      "kind": "source",
+      "text": "DuQuette (Ch. 9): 'The object of this practice (Liber Resh) is firstly to remind the aspirant at regular intervals of the Great Work; secondly, to bring him into conscious personal relation with the centre of our system; and thirdly, for advanced students, to make actual magical contact with the spiritual energy of the sun and thus to draw actual force from him.' This threefold function \u2014 mnemonic, relational, and theurgic \u2014 makes Liber Resh the structural analogue of our own dawn/dusk/night triple practice in the daimon path. The fourfold division (dawn, noon, sunset, midnight) adds a dimension of temporal fullness that our triple practice does not: the 'hidden sun' of midnight corresponds to the initiatic work, the secret centre, the place where the soul meets the angel in silence. The constant refrain \u2014 'Tahuti standeth in His splendour at the prow, and Ra-Hoor abideth at the helm' \u2014 is the mantra of the Great Work: wisdom (Tahuti/Thoth) guides, and the crowned child (Ra-Hoor-Khuit) commands.",
+      "source_ids": [
+        "liber-resh",
+        "duquette-magick-crowley"
+      ],
+      "topics": [
+        "resh_three_functions",
+        "threshold_practice",
+        "great_work_reminder",
+        "tahuti_and_rahoor"
+      ],
+      "status": "active"
+    }
+  ],
+  "coverage": {
+    "solar_rites": {
+      "status": "comprehensive",
+      "sources": [
+        "liber-resh",
+        "mass-phoenix",
+        "duquette-magick-crowley"
+      ],
+      "passage_count": 4,
+      "estimated_completeness": 0.9,
+      "gaps": [
+        "Liber Resh full text with DuQuette's line-by-line commentary"
+      ]
+    },
+    "devotion": {
+      "status": "good",
+      "sources": [
+        "liber-astarte",
+        "duquette-magick-crowley"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 0.7,
+      "gaps": [
+        "Liber Astarte full instructions on the selection of the deity and the 7-day cycle"
+      ]
+    },
+    "elementary_practice": {
+      "status": "good",
+      "sources": [
+        "liber-e",
+        "duquette-magick-crowley"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 0.7,
+      "gaps": [
+        "Liber E full graduated schedule for asana and pranayama"
+      ]
+    },
+    "ritual": {
+      "status": "good",
+      "sources": [
+        "star-ruby",
+        "duquette-magick-crowley"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 0.7,
+      "gaps": [
+        "Star Ruby full ritual text with all signs and gestures"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "coverage_gap",
+      "title": "Liber E full graduated schedule not yet extracted",
+      "description": "Liber E contains a detailed graduated schedule for asana (10 min to 4 hours) and pranayama (10\u219210\u219210 to 30\u2192120\u219260) that has not been extracted as individual passages.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    },
+    {
+      "id": "issue-002",
+      "type": "coverage_gap",
+      "title": "Star Ruby full text not yet extracted",
+      "description": "The full text of the Star Ruby with the signs, pentagram configurations, and god-name vibrations should be extracted as a source passage.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    },
+    {
+      "id": "issue-003",
+      "type": "coverage_gap",
+      "title": "Liber Astarte 7-day cycle not extracted",
+      "description": "Liber Astarte prescribes a 7-day cycle of devotional practices (one for each planet). This detailed structure should be extracted.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial RO created covering Liber Resh (4 solar adorations with full text for dawn, noon, sunset, midnight), Mass of the Phoenix (sunset Eucharist with blood consecration), Liber Astarte (bhakti-yoga method with smara\u1e47a and japa), Liber E (asana, pranayama, 1:4:2 ratio, dharana, dhyana), Star Ruby (Thelemic pentagram ritual), and the complete daily regimen integrated from all four limbs. 8 passages.",
+      "sources_added": [
+        "liber-resh",
+        "liber-astarte",
+        "liber-e",
+        "star-ruby",
+        "mass-phoenix",
+        "duquette-magick-crowley"
+      ],
+      "passage_count": 8,
+      "status": "draft"
+    }
+  ],
+  "appendices": [],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created from Liber Resh, Liber Astarte, Liber E, Star Ruby, Mass of the Phoenix, and DuQuette commentary",
+      "sources_total": 6,
+      "passages_total": 8
+    }
+  ]
+}

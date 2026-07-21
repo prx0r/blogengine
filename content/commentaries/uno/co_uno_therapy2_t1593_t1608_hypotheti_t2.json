@@ -1,0 +1,55 @@
+{
+  "co_id": "co:uno_therapy2_t1593_t1608_hypotheti_t2",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy2_t1593_t1608_hypothetical_speech",
+  "turn_index": 2,
+  "lineage": "Therapeutic",
+  "student_state": "resistant_game",
+  "behavior_tags": [
+    "defiance",
+    "ambivalence"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_04",
+    "function_name": "UM_04",
+    "mechanism_shape": "STRUCTURAL_ANALOGY",
+    "teaching_actions": [
+      "labels_pattern",
+      "uses_metaphor"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.5,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "no_clear_effect",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "Turn 3: 'Maybe it is, and maybe it isn’t.'. Student now in resistant_game. Continuing with structural_analogy approach. Building on previous turn's foundation.",
+  "accumulated_insight": "T3: Student: 'Maybe it is, and maybe it isn’t.'. Shift from evasive to resistant_game. Teacher applies structural_analogy mechanism with labels pattern, uses metaphor. Mid-episode progression in UNMAKING phase.",
+  "abstract_pattern": "",
+  "visible_response": "Again you sit on the fence.\nYou notice how you say “suppose,” “could be,” and “maybe”?\nDo you notice how you leave things in the air?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

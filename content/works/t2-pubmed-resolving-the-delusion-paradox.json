@@ -1,0 +1,46 @@
+{
+  "work_id": "work:t2-pubmed-resolving-the-delusion-paradox",
+  "schema_version": 2,
+  "title": "Resolving the Delusion Paradox.",
+  "authors": [
+    {
+      "name": "Petrovic P"
+    },
+    {
+      "name": "Sterzer P"
+    }
+  ],
+  "publication": {
+    "year": 2023,
+    "journal": "Schizophr Bull",
+    "source": "PubMed/MEDLINE",
+    "language": "en"
+  },
+  "identifiers": {
+    "pmid": "37478890",
+    "doi": "10.1093/schbul/sbad084"
+  },
+  "topics": [
+    "phase-6-dependent-arising",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "assets": {
+    "pdf_path": null,
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/37478890/",
+    "abstract": "The neurocomputational framework of predictive processing (PP) provides a promising approach to explaining delusions, a key symptom of psychotic disorders. According to PP, the brain makes inferences about the world by weighing prior beliefs against the available sensory data. Mismatches between prior beliefs and sensory data result in prediction errors that may update the brain's model of the world. Psychosis has been associated with reduced weighting of priors relative to the sensory data. How"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_alt17_acquisition",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 6,
+    "phase_name": "Dependent-arising",
+    "bridge_rationale": "Bridge paper score=12.5: links Dependent-arising concept to mechanistic neuroscience"
+  },
+  "evaluation": "Score 12: Excellent bridge signal",
+  "tier": 2
+}

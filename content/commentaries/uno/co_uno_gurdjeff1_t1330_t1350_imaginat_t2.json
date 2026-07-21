@@ -1,0 +1,61 @@
+{
+  "co_id": "co:uno_gurdjeff1_t1330_t1350_imaginat_t2",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gurdjeff1_t1330_t1350_imagination_attention_observation",
+  "turn_index": 2,
+  "lineage": "Gurdjieffian",
+  "student_state": "seeking_single_tool",
+  "behavior_tags": [
+    "asks_for_criterion",
+    "proposes_intellectual_solution"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_04",
+    "function_name": "RM_04",
+    "mechanism_shape": "COMPARISON_CONTRAST",
+    "teaching_actions": [
+      "corrects_tool",
+      "defines_imagination_functionally",
+      "asserts_attention_as_interrupt"
+    ],
+    "traps_avoided": [
+      "intellectual_bias"
+    ],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.62,
+      "attunement": 0.5,
+      "style": 0.5,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "request_clarification",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The correction works: not thought, attention (imagination = goes without attention, stops with attention). The student asked tool question (seeking single tool), which shows they understand: thought = tool (intellectual solution). They'll likely ask about observation next.",
+  "accumulated_insight": "T3: Student asked tool question ('Is thought the only way to test imagination?')—seeking single tool via asks for criterion and proposes intellectual solution. They understand: thought = tool (intellectual solution). The comparison_contrast mechanism corrects: not thought, attention (imagination = goes without attention, stops with attention) ('No, not thought but attention, because imagination is one of the manifestations that go without attention. The moment you turn your attention to it, imagination stops'). Pattern: urgency expression → crushing → universality question → causal link → tool question → correction → [next: observation question]. They're grasping: attention = tool, imagination = stops with attention (correction).",
+  "abstract_pattern": "",
+  "visible_response": "No, not thought but attention, because imagination is one of the manifestations that\ngo without attention.\nThe moment you turn your attention to it, imagination stops.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:sufi-comparative-analysis",
+    "ro:steiner-tantraloka-parallels"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

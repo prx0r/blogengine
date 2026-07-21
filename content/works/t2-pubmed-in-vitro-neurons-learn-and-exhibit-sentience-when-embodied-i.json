@@ -1,0 +1,55 @@
+{
+  "work_id": "work:t2-pubmed-in-vitro-neurons-learn-and-exhibit-sentience-when-embodied-i",
+  "schema_version": 2,
+  "title": "In vitro neurons learn and exhibit sentience when embodied in a simulated game-world.",
+  "authors": [
+    {
+      "name": "Kagan BJ"
+    },
+    {
+      "name": "Kitchen AC"
+    },
+    {
+      "name": "Tran NT"
+    },
+    {
+      "name": "Habibollahi F"
+    },
+    {
+      "name": "Khajehnejad M"
+    }
+  ],
+  "publication": {
+    "year": 2022,
+    "journal": "Neuron",
+    "source": "PubMed/MEDLINE",
+    "language": "en"
+  },
+  "identifiers": {
+    "pmid": "36228614",
+    "doi": "10.1016/j.neuron.2022.09.001"
+  },
+  "topics": [
+    "phase-6-dependent-arising",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "assets": {
+    "pdf_path": null,
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/36228614/",
+    "abstract": "Integrating neurons into digital systems may enable performance infeasible with silicon alone. Here, we develop DishBrain, a system that harnesses the inherent adaptive computation of neurons in a structured environment. In vitro neural networks from human or rodent origins are integrated with in silico computing via a high-density multielectrode array. Through electrophysiological stimulation and recording, cultures are embedded in a simulated game-world, mimicking the arcade game \"Pong.\" Apply"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_alt17_acquisition",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 6,
+    "phase_name": "Dependent-arising",
+    "bridge_rationale": "Bridge paper score=15.5: links Dependent-arising concept to mechanistic neuroscience"
+  },
+  "evaluation": "Score 15: Excellent bridge signal",
+  "tier": 2
+}

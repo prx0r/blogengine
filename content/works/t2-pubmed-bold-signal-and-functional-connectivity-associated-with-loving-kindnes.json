@@ -1,0 +1,47 @@
+{
+  "work_id": "work:t2-pubmed-bold-signal-and-functional-connectivity-associated-with-loving-kindnes",
+  "schema_version": 2,
+  "title": "BOLD signal and functional connectivity associated with loving kindness meditation.",
+  "authors": [
+    {
+      "name": "Garrison, Kathleen A"
+    },
+    {
+      "name": "Scheinost, Dustin"
+    },
+    {
+      "name": "Constable, R Todd"
+    },
+    {
+      "name": "Brewer, Judson A"
+    }
+  ],
+  "identifiers": {
+    "pmid": "24944863",
+    "doi": "10.1002/brb3.219"
+  },
+  "publication": {
+    "journal": "Brain and behavior",
+    "year": "2014"
+  },
+  "abstract": "Loving kindness is a form of meditation involving directed well-wishing, typically supported by the silent repetition of phrases such as \"may all beings be happy,\" to foster a feeling of selfless love. Here we used functional magnetic resonance imaging to assess the neural substrate of loving kindness meditation in experienced meditators and novices. We first assessed group differences in blood oxygen level-dependent (BOLD) signal during loving kindness meditation. We next used a relatively novel approach, the intrinsic connectivity distribution of functional connectivity, to identify regions that differ in intrinsic connectivity between groups, and then used a data-driven approach to seed-based connectivity analysis to identify which connections differ between groups. Our findings suggest group differences in brain regions involved in self-related processing and mind wandering, emotional processing, inner speech, and memory. Meditators showed overall reduced BOLD signal and intrinsic connectivity during loving kindness as compared to novices, more specifically in the posterior cingulate cortex/precuneus (PCC/PCu), a finding that is consistent with our prior work and other recent neuroimaging studies of meditation. Furthermore, meditators showed greater functional connectivity during loving kindness between the PCC/PCu and the left inferior frontal gyrus, whereas novices showed greater functional connectivity during loving kindness between the PCC/PCu and other cortical midline regions of the default mode network, the bilateral posterior insula lobe, and the bilateral parahippocampus/hippocampus. These novel findings suggest that loving kindness meditation involves a present-centered, selfless focus for meditators as compared to novices.",
+  "phase_mapping": {
+    "phase": 9,
+    "phase_name": "Language/Mantra"
+  },
+  "bridge_tags": [
+    "inner-speech",
+    "mantra",
+    "language",
+    "verbal-meditation",
+    "connectivity",
+    "default-mode-network",
+    "fmri"
+  ],
+  "evaluation": "Quality pass v3 (score=49) \u2014 High-signal bridge paper for Language/Mantra.",
+  "assets": {
+    "pdf_path": null,
+    "nxml_path": null
+  },
+  "tier": 2
+}

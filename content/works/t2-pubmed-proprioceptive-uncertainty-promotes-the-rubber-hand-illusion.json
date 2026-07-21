@@ -1,0 +1,46 @@
+{
+  "work_id": "work:t2-pubmed-proprioceptive-uncertainty-promotes-the-rubber-hand-illusion",
+  "schema_version": 2,
+  "title": "Proprioceptive uncertainty promotes the rubber hand illusion.",
+  "authors": [
+    {
+      "name": "Chancel M"
+    },
+    {
+      "name": "Ehrsson HH"
+    }
+  ],
+  "publication": {
+    "year": 2023,
+    "journal": "Cortex",
+    "source": "PubMed/MEDLINE",
+    "language": "en"
+  },
+  "identifiers": {
+    "pmid": "37269634",
+    "doi": "10.1016/j.cortex.2023.04.005"
+  },
+  "topics": [
+    "phase-1-birth-body",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "assets": {
+    "pdf_path": null,
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/37269634/",
+    "abstract": "Body ownership is the multisensory perception of a body as one's own. Recently, the emergence of body ownership illusions like the visuotactile rubber hand illusion has been described by Bayesian causal inference models in which the observer computes the probability that visual and tactile signals come from a common source. Given the importance of proprioception for the perception of one's body, proprioceptive information and its relative reliability should impact this inferential process. We us"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_alt17_acquisition",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 1,
+    "phase_name": "Birth/Body",
+    "bridge_rationale": "Bridge paper score=11.0: links Birth/Body concept to mechanistic neuroscience"
+  },
+  "evaluation": "Score 11: Excellent bridge signal",
+  "tier": 2
+}

@@ -1,0 +1,61 @@
+{
+  "co_id": "co:uno_gurdjeff2_t675_t679_unpleasant_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gurdjeff2_t675_t679_unpleasant_mirrors",
+  "turn_index": 0,
+  "lineage": "Gurdjieffian",
+  "student_state": "resisting_social_friction",
+  "behavior_tags": [
+    "cites_instruction",
+    "states_preference",
+    "expresses_difficulty"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_05",
+    "function_name": "UM_05",
+    "mechanism_shape": "COMPARISON_CONTRAST",
+    "teaching_actions": [
+      "validates_feeling",
+      "uses_agreement_as_trap",
+      "generalizes_unpleasantness",
+      "defines_reaction_as_mechanical"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.62,
+      "attunement": 0.8,
+      "style": 0.65,
+      "depth": 0.38,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_03",
+      "style_discrete": "LS_04",
+      "depth_discrete": "PD_02",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "request_clarification",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The validation/generalization works: feeling correct (especially unpleasant), generalizes: unpleasantness = universal (everyone finds it unpleasant), defines: reaction = mechanical (universal flaw). The student states preference (resisting social friction), which shows they understand: work alone = easier (preference). They'll likely ask about relation next. Hypothesis: preference validations trigger relation questions—testable by tracking whether preference validations lead to relation inquiries.",
+  "accumulated_insight": "T1: Student states preference ('You said that the second line is work with people. I find it easier to work alone')—resisting social friction via cites instruction, states preference and expresses difficulty. They understand: work alone = easier (preference). The comparison_contrast mechanism validates: feeling correct (especially unpleasant), generalizes: unpleasantness = universal (everyone finds it unpleasant), defines: reaction = mechanical (universal flaw). Pattern: preference statement → validation/generalization → [next: relation question]. Low confidence because preference validations can lead to clarification requests or resistance.",
+  "abstract_pattern": "",
+  "visible_response": "Everybody finds that.\nCertainly it would be much better if you could sit here alone\nand talk to me, without any other people, and particularly 'these' people, because these\npeople are especially unpleasant.\nWe all think that. I thought that when I began to\nstudy.\nIt is one of the most mechanical things in the world.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:sufi-comparative-analysis",
+    "ro:steiner-tantraloka-parallels"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

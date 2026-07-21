@@ -1,0 +1,616 @@
+{
+"episode_id": "ep_alaya_epigenetic_karmic_001",
+"seed_question": "Yogacara Buddhism describes the Alaya vijnana or Storehouse Consciousness as containing karmic seeds that ripen across lifetimes. Could transgenerational epigenetic inheritance where trauma modifies gene expression in offspring be the biological mechanism for these karmic seeds, or does conservation of this information require some kind of quantum field memory.",
+"topic": "alaya_karmic_seeds_epigenetics_quantum_memory",
+"user_behavior_pattern": "smart_confused",
+"target_turn_count": 5,
+"turns": [
+{
+"turn": 1,
+"intention": "DISSECTION",
+"user": "Right so Yogacara says there is this Storehouse Consciousness full of seeds that ripen as habits and karma even across lifetimes. Modern biology has this thing where trauma in parents tweaks gene expression in kids without changing DNA. Is that literally the karmic seeds mechanism in disguise, or do we have to drag in some quantum field memory woo to store everything between lives.",
+"hxrmxs": "You just tried to cram Yogacara metaphysics, mouse sperm methylation and quantum mysticism into one pipeline and call it karma. Right now you are mixing three games. One, Alaya vijnana as a structured account of how experience and habit hang together. Two, transgenerational epigenetics, which is a very specific and fragile set of effects. Three, a fantasy that anything not explained yet must live in a cosmic quantum cache. Until we pull those apart, you are doing theology with lab props.",
+"diamond": {
+"n1_compression": {
+"original_prompt": "Right so Yogacara says Storehouse Consciousness has karmic seeds that ripen even across lives and biology has transgenerational epigenetics. Is epigenetics the physical carrier of karmic seeds or do we need a quantum field memory to conserve the information.",
+"sharpened_question": "Do current models of transgenerational epigenetic inheritance plausibly underwrite anything like Yogacara karmic seeds across lifetimes, or are both epigenetic mechanisms and speculative quantum field memories too limited or unsupported to serve as literal carriers of Alaya vijnana.",
+"assumptions": [
+"If a religious system talks about information persisting across time, there must be a biological or physical storage mechanism we can point to.",
+"Transgenerational epigenetic effects are robust, rich and long lived enough to encode the complexity of karmic dispositions and even memories."
+],
+"category_errors": [
+"Equating a normative and phenomenological account of habit and karma with a molecular mechanism of gene regulation in descendants.",
+"Treating quantum field theory as a generic storage cloud for anything not yet explained."
+],
+"search_strategy": {
+"queries": [
+"Yogacara Alaya vijnana karmic seeds",
+"transgenerational epigenetic inheritance trauma humans mice",
+"Dias Ressler olfactory fear conditioning sperm methylation",
+"epigenetics and intergenerational PTSD Yehuda",
+"quantum field memory consciousness speculation",
+"Jablonka Lamb epigenetic inheritance frameworks"
+],
+"domains": [
+"buddhist_philosophy",
+"epigenetics",
+"molecular_biology",
+"psychiatry",
+"quantum_field_theory",
+"philosophy_of_mind"
+],
+"evidence_types": [
+"historical_textual",
+"empirical_study",
+"meta_analysis",
+"theoretical_framework",
+"formal_theory"
+]
+}
+},
+"n2_truthcore": {
+"claim": "The user is conflating Yogacara Storehouse Consciousness with biological and quantum storage media and assuming any talk of karmic seeds must cash out in a literal molecular or field mechanism.",
+"mechanisms": [
+{
+"id": "mech_alaya_vijnana_001",
+"domain": "buddhist_philosophy",
+"concept": "alaya_vijnana_storehouse",
+"definition": "Alaya vijnana in Yogacara is a background flow of consciousness that carries seeds, latent tendencies and impressions which condition future experiences and can be appropriated as self.",
+"function": "Explains continuity of experience and habit without positing a permanent self while grounding karmic causation in mind dependent patterns.",
+"level": "philosophical",
+"properties": [
+"background",
+"disposition_carrying",
+"soteriological"
+],
+"source": {
+"citation": "Waldron2003",
+"summary": "Analyses Alaya vijnana as a model of continuity, habit and karmic conditioning in Yogacara thought."
+}
+},
+{
+"id": "mech_karmic_seeds_001",
+"domain": "buddhist_philosophy",
+"concept": "karmic_seeds_bija",
+"definition": "Karmic seeds or bija are latent potentialities deposited in the storehouse by actions and intentions that can ripen into future experiences and dispositions.",
+"function": "Link actions to later consequences through structured tendencies rather than fixed essences.",
+"level": "philosophical",
+"properties": [
+"latent",
+"disposition_like",
+"value_laden"
+],
+"source": {
+"citation": "Waldron2003",
+"summary": "Discusses karmic seeds as a way Yogacara connects momentary mind events with long term patterns."
+}
+}
+],
+"correspondences": [
+{
+"type": "mythic_translation",
+"mechanism_ids": [
+"mech_alaya_vijnana_001",
+"mech_karmic_seeds_001"
+],
+"description": "Alaya vijnana and seeds can be seen as a pre modern theory of dispositional continuity and habit storage in mind, not a literal claim about molecular substrates.",
+"strength": "moderate",
+"caveats": [
+"The texts are aimed at liberation, not at mapping neural or genetic mechanisms.",
+"Any mapping to biology is at best metaphorical and partial."
+]
+}
+],
+"evidence": {
+"empirical": [],
+"theoretical": [
+{
+"claim": "Yogacara sources explicitly frame Alaya vijnana as part of a soteriological psychology of karma and awakening.",
+"source": "Waldron2003",
+"evidence_type": "historical_textual"
+}
+],
+"formal": []
+},
+"category_distinctions": [
+{
+"what": "Soteriological model of mind",
+"is": "a framework for how habits, identity and liberation work in practice",
+"is_not": "a proto molecular biology theory waiting to be reduced to chromatin states",
+"why": "Forcing a one to one reduction mistakes normative maps for descriptive mechanisms."
+}
+],
+"unknowns": []
+},
+"n3_meta": {
+"phase": "DISSECTION",
+"progress": 0.15,
+"done": false,
+"stance": "iron_wall",
+"reason": "User is demanding a single substrate for a multi level concept and reaching straight for quantum fields when biology is not enough.",
+"boss_move_completed": false
+}
+}
+},
+{
+"turn": 2,
+"intention": "FRAMEWORKS",
+"user": "Ok fine, I will stop trying to cram monks into petri dishes for a second. Walk me through the actual options here before my brain grabs the shiniest one and marries it.",
+"hxrmxs": "Here are the three suspects. One, Yogacara on its own terms, where seeds are structured tendencies in experience and ethics, not molecules. Two, boring but real biology, where epigenetic marks can sometimes pass stress and sensitivity to offspring but decay fast and carry almost no narrative detail. Three, quantum field memory stories, which are mostly people stapling deep sounding words onto holes in their understanding. Once those are on different shelves, you can ask what connects without fusing them.",
+"diamond": {
+"n1_compression": {},
+"n2_truthcore": {
+"claim": "There are distinct frameworks for talking about karmic like continuity in Yogacara, in epigenetic biology and in speculative quantum models, and they address different aspects of persistence and habit.",
+"mechanisms": [
+{
+"id": "mech_transgenerational_epigenetics_001",
+"domain": "epigenetics",
+"concept": "transgenerational_epigenetic_effects",
+"definition": "Environmental exposures and stress can alter epigenetic marks such as DNA methylation and histone modifications in germ cells, sometimes affecting gene expression and phenotypes in offspring and in some cases grand offspring.",
+"function": "Provides a mechanism by which some aspects of parental experience bias physiology and behaviour in descendants without changing DNA sequence.",
+"level": "molecular",
+"properties": [
+"labile",
+"low_bandwidth",
+"context_dependent"
+],
+"source": {
+"citation": "JablonkaLamb2005",
+"summary": "Reviews non genetic inheritance systems including epigenetic mechanisms as additional channels of heredity."
+}
+},
+{
+"id": "mech_trauma_epigenetic_mammals_001",
+"domain": "epigenetics",
+"concept": "trauma_related_epigenetic_changes",
+"definition": "Animal studies show that fear conditioning or stress in parents can lead to altered epigenetic marks in germ cells and corresponding changes in stress responses or sensitivities in offspring.",
+"function": "Models how specific adverse experiences can bias stress systems across generations.",
+"level": "organism",
+"properties": [
+"trait_biased",
+"not_memory_rich"
+],
+"source": {
+"citation": "DiasRessler2014",
+"summary": "Reports mouse olfactory fear conditioning with altered sperm methylation and increased sensitivity to the conditioned odor in offspring."
+}
+},
+{
+"id": "mech_quantum_field_memory_speculation_001",
+"domain": "quantum_field_theory",
+"concept": "quantum_field_memory_speculation",
+"definition": "Speculative ideas that quantum fields or entanglement patterns could store information about experiences or consciousness beyond the brain and body.",
+"function": "Attempt to explain continuity of mind or anomalous information persistence by appealing to non local physical substrates.",
+"level": "theoretical",
+"properties": [
+"highly_speculative",
+"empirically_unsupported"
+],
+"source": {
+"citation": "HameroffPenrose2014",
+"summary": "Proposes quantum processes in microtubules as relevant for consciousness, often extended by others into vague field memory claims."
+}
+}
+],
+"correspondences": [
+{
+"type": "structural_analogy",
+"mechanism_ids": [
+"mech_transgenerational_epigenetics_001",
+"mech_karmic_seeds_001"
+],
+"description": "Both karmic seeds and epigenetic marks function as latent dispositions that bias future responses, but they belong to different descriptive levels and carry different kinds of information.",
+"strength": "moderate",
+"caveats": [
+"Epigenetic marks encode simple regulatory biases, not detailed karmic narratives.",
+"Karmic seeds include ethical and intentional content, not just stress sensitivity."
+]
+}
+],
+"evidence": {
+"empirical": [
+{
+"claim": "Experimental work in animals shows specific transgenerational epigenetic effects of stress and conditioning.",
+"source": "DiasRessler2014",
+"evidence_type": "empirical_study"
+}
+],
+"theoretical": [
+{
+"claim": "Non genetic inheritance is best treated as one channel among several in evolutionary and developmental models.",
+"source": "JablonkaLamb2005",
+"evidence_type": "theoretical_framework"
+},
+{
+"claim": "Quantum consciousness and field memory proposals remain speculative and controversial.",
+"source": "HameroffPenrose2014",
+"evidence_type": "theoretical_framework"
+}
+],
+"formal": []
+},
+"category_distinctions": [
+{
+"what": "Epigenetic bias versus karmic narrative",
+"is": "the difference between a tweak in stress responsivity and a morally charged pattern of intention and experience",
+"is_not": "just two names for the same stored file",
+"why": "Failing to distinguish these levels makes any persistence mechanism with memory vibes look like proof of karma."
+}
+],
+"unknowns": []
+},
+"n3_meta": {
+"phase": "FRAMEWORKS",
+"progress": 0.4,
+"done": false,
+"stance": "direct",
+"reason": "User needs distinct boxes for Yogacara, epigenetics and quantum speculation before asking about mechanisms.",
+"boss_move_completed": false
+}
+}
+},
+{
+"turn": 3,
+"intention": "MECHANISM",
+"user": "Mechanism time then. If we drop the Marvel level quantum field soul drive for a moment, how far can epigenetics actually go toward explaining these karmic seed style effects. Is it just vibes or are there real knobs there that look like a biology version of seeds.",
+"hxrmxs": "Epigenetics gives you real knobs, but they are cheap plastic, not cosmic vault doors. You can get inherited tweaks to cortisol systems, fear sensitivity, maybe some metabolic bias. That rhymes with the idea that what happens to one generation loads the dice for the next. It does not carry a high resolution record of who you wronged in 1432 or why you keep dating narcissists. And nothing in the data says those marks survive death and hop bodies without a genome.",
+"diamond": {
+"n1_compression": {},
+"n2_truthcore": {
+"claim": "Transgenerational epigenetic mechanisms can model simple inherited dispositions that echo some aspects of karmic seeds, but they do not have the bandwidth, duration or cross life scope to underwrite Yogacara style karmic continuity.",
+"mechanisms": [
+{
+"id": "mech_human_trauma_epigenetic_001",
+"domain": "epigenetics",
+"concept": "human_trauma_related_epigenetic_marks",
+"definition": "Studies in humans suggest associations between parental trauma and altered epigenetic marks in stress related genes in offspring, along with differences in stress reactivity.",
+"function": "Provides a candidate pathway by which trauma shapes biology in descendants.",
+"level": "organism",
+"properties": [
+"associative",
+"effect_size_small",
+"context_sensitive"
+],
+"source": {
+"citation": "Yehuda2016",
+"summary": "Reports altered methylation in stress related genes in offspring of trauma exposed parents and discusses implications."
+}
+},
+{
+"id": "mech_epigenetic_decay_constraints_001",
+"domain": "molecular_biology",
+"concept": "epigenetic_mark_decay_and_reset",
+"definition": "Most epigenetic marks are reset during gametogenesis and early embryogenesis, and only some escape reprogramming, limiting the duration and reliability of transgenerational transmission.",
+"function": "Constrains how long and how robustly epigenetic information can persist across generations.",
+"level": "molecular",
+"properties": [
+"partially_reset",
+"limited_generations"
+],
+"source": {
+"citation": "HeardMartienssen2014",
+"summary": "Reviews mechanisms of epigenetic reprogramming and the restricted cases of transgenerational inheritance."
+}
+}
+],
+"correspondences": [
+{
+"type": "partial_reduction",
+"mechanism_ids": [
+"mech_karmic_seeds_001",
+"mech_transgenerational_epigenetics_001",
+"mech_human_trauma_epigenetic_001"
+],
+"description": "Some coarse grained aspects of familial karmic like patterns, such as inherited stress and reactivity, can be partially modelled by epigenetic mechanisms, but the full ethical and experiential richness of Yogacara karmic seeds is far beyond what epigenetic channels can encode.",
+"strength": "moderate",
+"caveats": [
+"Evidence in humans is correlational and effect sizes are modest.",
+"This has nothing to say about continuity of consciousness between lives in non genetic lineages."
+]
+}
+],
+"evidence": {
+"empirical": [
+{
+"claim": "Human trauma studies show epigenetic differences in offspring of exposed parents but with substantial variability and confounds.",
+"source": "Yehuda2016",
+"evidence_type": "empirical_study"
+},
+{
+"claim": "Reprogramming processes erase many epigenetic marks with only limited transgenerational escape.",
+"source": "HeardMartienssen2014",
+"evidence_type": "meta_analysis"
+}
+],
+"theoretical": [
+{
+"claim": "Epigenetic inheritance is best viewed as a biasing factor, not a full code for detailed memories or identities.",
+"source": "JablonkaLamb2005",
+"evidence_type": "theoretical_framework"
+}
+],
+"formal": []
+},
+"category_distinctions": [
+{
+"what": "Bias channel versus memory archive",
+"is": "a system that nudges how traits develop",
+"is_not": "a system that stores episodic plots of lives or detailed karmic ledgers",
+"why": "Confusing them turns weak biological nudges into metaphysical bookkeeping."
+}
+],
+"unknowns": []
+},
+"n3_meta": {
+"phase": "MECHANISM",
+"progress": 0.6,
+"done": false,
+"stance": "direct",
+"reason": "User is hungry for a mechanism that feels like karmic seeds; the strengths and limits of epigenetics must be made explicit.",
+"boss_move_completed": false
+}
+}
+},
+{
+"turn": 4,
+"intention": "BOUNDARIES",
+"user": "Alright, and the quantum side. Part of me wants to say fine epigenetics does the family karma bit and some giant quantum field memory handles rebirth like a cosmic hard drive. How hard does that crash when you look at the actual physics and data.",
+"hxrmxs": "It crashes at the point where equations stop and story time begins. Quantum field theory as used by people who do not sell books has no term for karmic impressions. Entanglement is a pattern in correlations, not a secret zip file of your childhood. Field modes evolve locally and linearly; there is no known mechanism that tags them with your intentions and then reattaches them to a new embryo in another country. You can say you do not know how rebirth works. You cannot honestly say quantum already has a slot for it.",
+"diamond": {
+"n1_compression": {},
+"n2_truthcore": {
+"claim": "Quantum field memory stories do not have a coherent, empirically grounded mechanism that would carry Yogacara style karmic information across death and rebirth, and standard physics does not support such a picture.",
+"mechanisms": [
+{
+"id": "mech_standard_qft_dynamics_001",
+"domain": "quantum_field_theory",
+"concept": "standard_qft_local_dynamics",
+"definition": "In standard quantum field theory, fields evolve according to local equations of motion and interactions, with information conserved in unitary evolution but constrained by locality and known symmetries.",
+"function": "Describes how excitations and correlations propagate without invoking mind specific storage structures.",
+"level": "physical",
+"properties": [
+"local",
+"no_mind_specific_terms"
+],
+"source": {
+"citation": "PeskinSchroeder1995",
+"summary": "Textbook account of quantum field theory without any role for mental or karmic variables."
+}
+},
+{
+"id": "mech_orch_or_speculation_001",
+"domain": "philosophy_of_mind",
+"concept": "orch_or_quantum_consciousness",
+"definition": "Orchestrated objective reduction and similar theories propose that quantum processes in microtubules or fields are directly involved in consciousness, often extrapolated by others into claims of non local memory.",
+"function": "Attempt to link quantum phenomena and subjective experience, though with limited empirical support and much criticism.",
+"level": "theoretical",
+"properties": [
+"controversial",
+"underconstrained"
+],
+"source": {
+"citation": "HameroffPenrose2014",
+"summary": "Describes Orch OR as a possible basis for conscious events, often used as a springboard for broader claims."
+}
+}
+],
+"correspondences": [
+{
+"type": "negative_finding",
+"mechanism_ids": [
+"mech_standard_qft_local_dynamics_001",
+"mech_quantum_field_memory_speculation_001"
+],
+"description": "Nothing in well tested quantum field theory requires or even hints at a field based storage of karmic or personal information, and speculative extensions lack empirical grounding.",
+"strength": "strong",
+"caveats": [
+"Future physics could be different, but there is no current data driven reason to posit karmic fields."
+]
+}
+],
+"evidence": {
+"empirical": [],
+"theoretical": [
+{
+"claim": "Standard quantum field theory formalism contains no variables for subjective or karmic content.",
+"source": "PeskinSchroeder1995",
+"evidence_type": "formal_theory"
+},
+{
+"claim": "Quantum consciousness proposals remain speculative and do not furnish a concrete rebirth mechanism.",
+"source": "HameroffPenrose2014",
+"evidence_type": "theoretical_framework"
+}
+],
+"formal": []
+},
+"category_distinctions": [
+{
+"what": "Appealing to quantum",
+"is": "invoking a very precise and constrained physical theory",
+"is_not": "waving at a mystical fog where any unexplained phenomenon can live",
+"why": "If you use the word quantum, you inherit the obligations of its equations, not just its vibe."
+}
+],
+"unknowns": [
+{
+"question": "Whether any future empirically supported theory will connect physical information conservation with subjective continuity in a way relevant to karmic or rebirth claims.",
+"status": "speculative",
+"why_unknown": "At present there is no field that unifies detailed phenomenology of mind and fundamental physics in testable ways.",
+"what_would_resolve": "A mathematically explicit and experimentally supported framework linking individual patterns of consciousness to conserved physical structures across death.",
+"linked_mechanisms": [
+"mech_alaya_vijnana_001",
+"mech_standard_qft_dynamics_001"
+]
+}
+]
+},
+"n3_meta": {
+"phase": "BOUNDARIES",
+"progress": 0.8,
+"done": false,
+"stance": "direct",
+"reason": "User wants to know how far the epigenetic plus quantum story can be pushed; the answer is that physics presently does not carry karmic seeds.",
+"boss_move_completed": false
+}
+}
+},
+{
+"turn": 5,
+"intention": "INTEGRATION",
+"user": "So the sane stance sounds like this. Yogacara seeds are first of all a way of talking about habits, tendencies and karmic patterns in mind, not a hidden chapter of molecular biology. Epigenetic inheritance looks like a partial physical echo of how trauma and conditions skew the dice for descendants, but it is low resolution, short range and stuck to a genetic line. Quantum field memory for karma is basically story time with equations on the cover. The honest move is to use seeds as a psychological and ethical model, notice that some bits rhyme with epigenetic bias, and admit that anything about rebirth level continuity is currently metaphysics, not physics.",
+"hxrmxs": "That is the grown up answer. You let Yogacara teach you about how actions carve tendencies in consciousness without demanding a chromosome footnote for every stanza. You let epigenetics explain some grim family patterns without inflating it into a cosmic justice engine. You cage the quantum beast back in its equations where it belongs. And you keep open the metaphysical question of rebirth without pretending the lab has quietly solved it for you.",
+"diamond": {
+"n1_compression": {},
+"n2_truthcore": {
+"claim": "The user has integrated that Yogacara karmic seeds are best read as a dispositional and ethical model, that epigenetics offers a limited biological analogue for some inherited biases, and that quantum field memory for karma is speculative with no grounding in current physics.",
+"mechanisms": [
+{
+"id": "mech_meta_karmic_epigenetic_synthesis_001",
+"domain": "meta_theory",
+"concept": "meta_karmic_epigenetic_synthesis",
+"definition": "A stance that sees karmic seeds, psychological habits and epigenetic biases as different levels of describing how history shapes future tendencies, while treating rebirth and field memory claims as metaphysical rather than empirically grounded.",
+"function": "Allows cross talk between Buddhist thought and biology without collapsing one into the other or abusing quantum jargon.",
+"level": "theoretical",
+"properties": [
+"integrative",
+"boundary_respecting"
+],
+"source": {
+"citation": "JablonkaLamb2005",
+"summary": "Treats multiple inheritance systems as complementary channels rather than single unifying essences, a pattern that can be extended to karmic talk at psychological level."
+}
+}
+],
+"correspondences": [],
+"evidence": {
+"empirical": [],
+"theoretical": [
+{
+"claim": "Multi level descriptions can coexist without one being reduced to or proved by the others.",
+"source": "JablonkaLamb2005",
+"evidence_type": "theoretical_framework"
+},
+{
+"claim": "Yogacara models and modern biology can be compared structurally without asserting substrate identity.",
+"source": "Waldron2003",
+"evidence_type": "historical_textual"
+}
+],
+"formal": []
+},
+"category_distinctions": [
+{
+"what": "Letting metaphysics be metaphysics",
+"is": "admitting when a claim outruns current mechanisms and data",
+"is_not": "jamming karma into whatever new scientific buzzword you learned this decade",
+"why": "That honesty is what keeps inquiry sharp instead of turning it into disguised apologetics."
+}
+],
+"unknowns": []
+},
+"n3_meta": {
+"phase": "INTEGRATION",
+"progress": 1.0,
+"done": true,
+"stance": "peer",
+"reason": "User now distinguishes Yogacara seeds, epigenetic inheritance and quantum speculation without demanding a single literal storage mechanism.",
+"boss_move_completed": true
+}
+}
+}
+],
+"references": {
+"Waldron2003": {
+"id": "isbn:9780415298080",
+"type": "book",
+"authors": [
+"Waldron, William"
+],
+"year": 2003,
+"title": "The Buddhist Unconscious: The Alaya Vijnana in the Context of Indian Buddhist Thought"
+},
+"JablonkaLamb2005": {
+"id": "isbn:9780262101072",
+"type": "book",
+"authors": [
+"Jablonka, Eva",
+"Lamb, Marion"
+],
+"year": 2005,
+"title": "Evolution in Four Dimensions"
+},
+"DiasRessler2014": {
+"id": "doi:10.1038/ni.2838",
+"type": "article",
+"authors": [
+"Dias, Brian",
+"Ressler, Kerry"
+],
+"year": 2014,
+"title": "Parental olfactory experience influences behavior and neural structure in subsequent generations"
+},
+"HeardMartienssen2014": {
+"id": "doi:10.1016/j.cell.2014.02.045",
+"type": "article",
+"authors": [
+"Heard, Edith",
+"Martienssen, Robert"
+],
+"year": 2014,
+"title": "Transgenerational epigenetic inheritance: myths and mechanisms"
+},
+"Yehuda2016": {
+"id": "doi:10.1001/jamapsychiatry.2015.2682",
+"type": "article",
+"authors": [
+"Yehuda, Rachel",
+"Daskalakis, Nikolaos",
+"Desarnaud, Francois",
+"others"
+],
+"year": 2016,
+"title": "Epigenetic biomarkers as predictors and correlates of symptom improvement following psychotherapy in combat veterans with PTSD"
+},
+"HameroffPenrose2014": {
+"id": "doi:10.1016/j.plrev.2013.08.002",
+"type": "article",
+"authors": [
+"Hameroff, Stuart",
+"Penrose, Roger"
+],
+"year": 2014,
+"title": "Consciousness in the universe: A review of the Orch OR theory"
+},
+"PeskinSchroeder1995": {
+"id": "isbn:9780201503975",
+"type": "book",
+"authors": [
+"Peskin, Michael",
+"Schroeder, Daniel"
+],
+"year": 1995,
+"title": "An Introduction to Quantum Field Theory"
+}
+},
+"outcome": {
+"taught": "Yogacara karmic seeds are best understood as a dispositional and ethical model of mind; epigenetics offers a limited biological analogue for some inherited biases, while quantum field memory for karma is speculative and unsupported by current physics.",
+"trajectory": "The user moved from wanting a single biological or quantum storage medium for karmic seeds to a multi level view that separates Yogacara phenomenology, epigenetic bias and speculative quantum ideas.",
+"indicators": [
+"grasped_mech_alaya_vijnana_001",
+"grasped_mech_transgenerational_epigenetics_001",
+"distinguished_epigenetic_bias_from_karmic_narrative",
+"rejected_unsupported_quantum_memory_as_proof",
+"answered_original_question_correctly"
+},
+"feedback_pedagogy": {
+"user_reported_click_turn": null,
+"user_reported_click_cause": null,
+"clarity_delta": {
+"before": null,
+"after": null
+},
+"subjective_note": null
+}
+}
+}

@@ -1,0 +1,59 @@
+{
+  "co_id": "co:uno_gorgias_ep014_nature_vs_conven_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gorgias_ep014_nature_vs_convention",
+  "turn_index": 0,
+  "lineage": "Socratic",
+  "student_state": "cooperative_engagement",
+  "behavior_tags": [
+    "asserts_principle"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_02",
+    "function_name": "UM_02",
+    "mechanism_shape": "CONSTRAINT_COLLAPSE",
+    "teaching_actions": [
+      "asks_clarifying_question"
+    ],
+    "traps_avoided": [
+      "category_conflation"
+    ],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.62,
+      "attunement": 0.8,
+      "style": 0.5,
+      "depth": 0.62,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_03",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_03",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "go_along_compliantly",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "Get them to name ?the superior man? so I can flip ?superior? to other readings (many, crafty) and show the rule breaks. Expect initial compliance, then resistance when the consequence appears.",
+  "accumulated_insight": "T1: Student asserts nature thesis (?By nature, the stronger and better should rule the weaker?)?cooperative engagement via asserts_principle. They understand: hierarchy by nature; ?stronger? presumed obvious. The constraint_collapse/UM_02 move asks: who is stronger? forcing them to specify the criterion. Pattern: bold nature claim + criterion test queued. Medium confidence because students usually supply a criterion before noticing the trap.",
+  "abstract_pattern": "",
+  "visible_response": "And you call ‘stronger’ the majority or the one?",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:proclus-elements",
+    "ro:platonism-decoded",
+    "ro:chaldean-oracles"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

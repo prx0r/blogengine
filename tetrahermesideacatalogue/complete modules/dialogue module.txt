@@ -1,0 +1,286 @@
+```python
+import logging
+import numpy as np
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+import nltk
+from transformers import AutoModelForCausalLM, AutoTokenizer
+from peft import LoraConfig, get_peft_model
+from typing import Dict, List, Tuple, Optional
+from functools import lru_cache
+import torch.multiprocessing as mp
+from scipy.stats import ks_2samp
+import random
+from collections import deque
+from agent import RoboBlade, DNAManager
+from quantum import QuantumProcessor
+from swarm import SwarmFieldSociety
+from arena import CQEConfig, FACTIONS
+
+# Configure logging per synthesis plan (Section 5.2)
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+logger = logging.getLogger("CosmicQuantumEcosystem_Dialogue")
+
+# Device configuration per synthesis plan (Section 6.1, 6.2)
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+dtype = torch.float16 if device.type == "cpu" else torch.float32
+
+# Ensure NLTK resources are available
+nltk.download('punkt', quiet=True)
+
+class GameTheoryModule(nn.Module):
+    """Game-theoretic module for strategic interactions (Plan Section 5.1)"""
+    def __init__(self, config: CQEConfig):
+        super().__init__()
+        self.config = config
+        self.strategy_network = nn.Linear(config.d_model, len(config.strategy_types), dtype=dtype)
+        self.payoff_matrix = nn.Parameter(torch.tensor([
+            [0, -2, 1, 0, 2],
+            [2, 0, -1, 1, 0],
+            [-1, 1, 0, -2, 1],
+            [0, -1, 2, 0, -1],
+            [-2, 0, -1, 1, 0]
+        ], dtype=dtype, device=device))
+        self.opponent_history = deque(maxlen=50)
+        self.position_network = nn.Linear(config.d_model, 1, dtype=dtype)
+
+    def compute_nash_equilibrium(self, opponent_probs: torch.Tensor) -> torch.Tensor:
+        expected_payoffs = torch.matmul(self.payoff_matrix, opponent_probs)
+        probs = torch.softmax(-expected_payoffs, dim=0)
+        return probs / probs.sum()
+
+    def apply_iesds(self, payoff_matrix: torch.Tensor) -> torch.Tensor:
+        dominated = torch.ones(payoff_matrix.shape[0], dtype=torch.bool, device=device)
+        for i in range(payoff_matrix.shape[0]):
+            for j in range(i + 1, payoff_matrix.shape[0]):
+                if torch.all(payoff_matrix[i] > payoff_matrix[j]):
+                    dominated[j] = False
+        return dominated
+
+    def hotelling_position(self, inputs: torch.Tensor) -> float:
+        return torch.sigmoid(self.position_network(inputs)).item() * 100
+
+    def update_payoff_matrix(self, interaction_outcome: float):
+        adjustment = 0.01 * interaction_outcome * torch.randn_like(self.payoff_matrix)
+        self.payoff_matrix.data += adjustment
+        self.payoff_matrix.data = torch.clamp(self.payoff_matrix, -2.0, 2.0)
+
+    def strategize(self, inputs: torch.Tensor, opponent_dna: str) -> Tuple[torch.Tensor, float]:
+        opponent_moves = [m for m in self.opponent_history if m['dna'] == opponent_dna]
+        opponent_probs = torch.ones(len(self.config.strategy_types), device=device) / len(self.config.strategy_types)
+        if opponent_moves:
+            counts = torch.zeros(len(self.config.strategy_types), device=device)
+            for move in opponent_moves:
+                counts[move['strategy']] += 1
+            opponent_probs = counts / counts.sum()
+        strategy_probs = self.compute_nash_equilibrium(opponent_probs)
+        strategy_output = self.strategy_network(inputs) * strategy_probs
+        valid_strategies = self.apply_iesds(self.payoff_matrix)
+        strategy_output = strategy_output * valid_strategies.float()
+        position = self.hotelling_position(inputs)
+        chosen_strategy = torch.argmax(strategy_output).item()
+        self.opponent_history.append({'dna': opponent_dna, 'strategy': chosen_strategy})
+        interaction_outcome = strategy_output[chosen_strategy].item()
+        self.update_payoff_matrix(interaction_outcome)
+        return strategy_output, position
+
+    def compute_optimality(self, strategy_probs: torch.Tensor) -> float:
+        ideal_probs = self.compute_nash_equilibrium(strategy_probs)
+        kl_div = torch.sum(ideal_probs * torch.log(ideal_probs / (strategy_probs + 1e-10)))
+        return min(1.0, 1.0 / (1.0 + kl_div.item()))
+
+class PersonaModule(nn.Module):
+    """Manages agent personas with DNA-driven emotions (Plan Section 5.1)"""
+    def __init__(self, config: CQEConfig):
+        super().__init__()
+        self.config = config
+        self.emotion_network = nn.Linear(config.d_model, len(config.persona_traits), dtype=dtype)
+        self.motivational_network = nn.Linear(config.d_model, len(config.motivational_drives), dtype=dtype)
+        self.emotional_state = nn.Parameter(torch.randn(config.num_agents, len(config.emotional_dimensions), dtype=dtype) * 0.01)
+        self.motivational_state = nn.Parameter(torch.randn(config.num_agents, len(config.motivational_drives), dtype=dtype) * 0.01)
+        self.narrative_memory = deque(maxlen=100)
+        self.strategy_adaptation = nn.Linear(len(config.strategy_types), len(config.persona_traits), dtype=dtype)
+        self.dialogue_style_network = nn.Linear(config.d_model, len(config.dialogue_styles), dtype=dtype)
+
+    def update_persona(self, dna: str, interaction_data: Dict, thermal_state: float, opponent_strategy: torch.Tensor, agent_idx: int):
+        dna_manager = DNAManager(self.config)
+        params = dna_manager.translate_dna(dna)
+        persona_weights = torch.tensor([params['personality'][trait] for trait in self.config.persona_traits], dtype=dtype, device=device)
+        motivational_weights = torch.tensor([random.uniform(0, 1) for _ in self.config.motivational_drives], dtype=dtype, device=device)
+        if 'strategy_probs' in interaction_data:
+            strategy_adapt = self.strategy_adaptation(interaction_data['strategy_probs'])
+            thermal_factor = 1.0 if thermal_state > 0.5 else 0.5
+            opponent_factor = torch.norm(opponent_strategy).item()
+            persona_weights = persona_weights + 0.1 * strategy_adapt + 0.05 * thermal_factor * opponent_factor
+            motivational_weights = motivational_weights + 0.05 * thermal_factor * opponent_factor
+        self.emotional_state.data[agent_idx] = torch.tensor([params['emotional_dimensions'][dim] for dim in self.config.emotional_dimensions], dtype=dtype, device=device)
+        self.motivational_state.data[agent_idx] = motivational_weights
+        self.narrative_memory.append(interaction_data)
+
+    def express_persona(self, inputs: torch.Tensor, t: float, agent_idx: int) -> Tuple[torch.Tensor, torch.Tensor]:
+        emotion_output = self.emotion_network(inputs)
+        motivational_output = self.motivational_network(inputs)
+        dialogue_style_output = self.dialogue_style_network(inputs)
+        persona_output = emotion_output * self.emotional_state[agent_idx] + motivational_output * self.motivational_state[agent_idx]
+        temporal_modulation = torch.cos(2 * np.pi * self.config.or_frequency * t)
+        return torch.softmax(persona_output + 0.1 * temporal_modulation, dim=-1), torch.softmax(dialogue_style_output, dim=-1)
+
+    def compute_emotional_coherence(self, outputs: torch.Tensor, context: torch.Tensor) -> float:
+        context_norm = torch.norm(context).item()
+        output_norm = torch.norm(outputs).item()
+        coherence = 1.0 / (1.0 + abs(context_norm - output_norm))
+        return min(1.0, coherence)
+
+class DialogueProcessor(nn.Module):
+    """Generates emergent, battle-driven dialogues (Plan Section 5.1, JAZZTHEORY.txt, p. 21)"""
+    def __init__(self, config: CQEConfig):
+        super().__init__()
+        self.config = config
+        self.dna_manager = DNAManager(config)
+        self.tokenizer = AutoTokenizer.from_pretrained("gpt2")  # Fallback for Raspberry Pi 5
+        try:
+            self.model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-3-8b-hf").to(device)
+            self.lora_config = LoraConfig(r=8, lora_alpha=16, target_modules=["q_proj", "v_proj"], lora_dropout=0.1)
+            self.model = get_peft_model(self.model, self.lora_config)
+        except Exception:
+            logger.warning("LLaMA-3 loading failed, using GPT-2")
+            self.model = AutoModelForCausalLM.from_pretrained("gpt2").to(device)
+        self.emotion_modulator = nn.Linear(len(config.emotional_dimensions), self.model.config.n_embd, dtype=dtype)
+        self.strategy_modulator = nn.Linear(len(config.strategy_types), self.model.config.n_embd, dtype=dtype)
+        self.community_modulator = nn.Linear(config.max_communities, self.model.config.n_embd, dtype=dtype)
+        self.narrative_network = nn.Linear(config.d_model, len(config.narrative_themes), dtype=dtype)
+        self.dialogue_history = deque(maxlen=100)
+        self.response_cache = {}
+        logger.info("Initialized DialogueProcessor with emergent dialogue generation")
+
+    @lru_cache(maxsize=1000)
+    def generate_response(self, agent_data: Dict, opponent_data: Dict, game_state: Dict, t: float) -> str:
+        """Generates dialogue based on battle context, emotions, and DNA (Plan Section 5.1)"""
+        agent_id = agent_data["agent_id"]
+        opponent_id = opponent_data["agent_id"]
+        dna = agent_data["dna"]
+        params = self.dna_manager.translate_dna(dna)
+        emotional_state = torch.tensor([agent_data["narrative_state"]["emotional_dimensions"][dim] for dim in self.config.emotional_dimensions], dtype=dtype, device=device)
+        strategy_probs = game_state.get("strategy_probs", torch.ones(len(self.config.strategy_types), dtype=dtype, device=device) / len(self.config.strategy_types))
+        community_role = agent_data["social_role"]["role"]
+        narrative_arc = agent_data["narrative_state"]["arc"]
+        dialogue_style = agent_data["narrative_state"]["style"]
+        battle_context = {
+            "energy": agent_data["energy"],
+            "integrity": agent_data["integrity"],
+            "collision_count": agent_data["collision_count"],
+            "opponent_strategy": opponent_data["battle_style"]["strategy"],
+            "opponent_faction": opponent_data["faction"]
+        }
+
+        # Construct context dynamically
+        context = f"{agent_data['faction'].capitalize()} [{community_role}, {narrative_arc}]: In battle with {opponent_data['faction'].capitalize()} ({battle_context['opponent_strategy']}). "
+        if battle_context["collision_count"] > 0:
+            context += f"Clashed {battle_context['collision_count']} times! "
+        if battle_context["energy"] < 50:
+            context += "Energy low, fighting with grit! "
+        elif battle_context["energy"] > 80:
+            context += "Energy surging, ready to dominate! "
+        if battle_context["integrity"] < 50:
+            context += "Integrity fading, but spirit unbroken! "
+        if emotional_state[0] > 0.7:  # High arousal
+            context += "Heart pounding, battle fever ignites! "
+        elif emotional_state[1] < 0.3:  # Low valence
+            context += "Anger fuels my resolve! "
+        context += f"Speaking in {dialogue_style} style to {opponent_id}."
+
+        # Modulate embeddings
+        emotion_embedding = self.emotion_modulator(emotional_state)
+        strategy_embedding = self.strategy_modulator(strategy_probs)
+        community_embedding = self.community_modulator(torch.tensor([1.0 if role == community_role else 0.0 for role in ['leader', 'mediator', 'explorer', 'supporter']], dtype=dtype, device=device))
+        narrative_embedding = self.narrative_network(torch.tensor([1.0 if theme == narrative_arc else 0.0 for theme in self.config.narrative_themes], dtype=dtype, device=device))
+        input_tokens = self.tokenizer.encode(context, return_tensors='pt').to(device)
+        input_embedding = self.model.transformer.wte(input_tokens) + emotion_embedding + strategy_embedding + community_embedding + narrative_embedding
+
+        # Generate dialogue
+        outputs = self.model.generate(
+            inputs_embeds=input_embedding,
+            max_length=60,
+            temperature=1.2 if dialogue_style == "jazz" else 0.8,
+            top_k=50,
+            do_sample=True,
+            pad_token_id=self.tokenizer.eos_token_id
+        )
+        response = self.tokenizer.decode(outputs[0], skip_special_tokens=True)
+        sentences = nltk.sent_tokenize(response)
+        dialogue = sentences[0] if sentences else response
+
+        # Cache and log
+        self.response_cache[(agent_id, opponent_id, t)] = dialogue
+        self.dialogue_history.append({
+            "agent_id": agent_id,
+            "opponent_id": opponent_id,
+            "dialogue": dialogue,
+            "context": context,
+            "t": t
+        })
+        logger.info(f"Agent {agent_id} dialogue: {dialogue[:50]}... (Coherence: {self.compute_dialogue_coherence(dialogue):.3f})")
+        return dialogue
+
+    def compute_dialogue_coherence(self, response: str) -> float:
+        """Computes dialogue coherence based on token overlap (Plan Section 8.1)"""
+        tokens = set(self.tokenizer.encode(response, add_special_tokens=False))
+        history_tokens = set()
+        for entry in self.dialogue_history:
+            history_tokens.update(self.tokenizer.encode(entry["dialogue"], add_special_tokens=False))
+        overlap = len(tokens & history_tokens) / max(len(tokens), 1)
+        return min(1.0, overlap * 2.0)
+
+    def compute_narrative_engagement(self, response: str, context: Dict) -> float:
+        """Computes narrative engagement based on emotional and strategic alignment (Plan Section 8.1)"""
+        emotional_state = torch.tensor([context["narrative_state"]["emotional_dimensions"][dim] for dim in self.config.emotional_dimensions], dtype=dtype, device=device)
+        strategy_probs = context.get("strategy_probs", torch.ones(len(self.config.strategy_types), dtype=dtype, device=device) / len(self.config.strategy_types))
+        engagement = 0.5 * torch.norm(emotional_state).item() + 0.5 * torch.norm(strategy_probs).item()
+        return min(1.0, engagement)
+
+    def parallel_generate(self, dialogues: List[Dict], t: float) -> List[Dict]:
+        """Parallelizes dialogue generation (Plan Section 6.1)"""
+        pool = mp.Pool(processes=mp.cpu_count())
+        results = pool.starmap(
+            lambda agent_data, opponent_data, game_state: {
+                "agent_id": agent_data["agent_id"],
+                "dialogue": self.generate_response(agent_data, opponent_data, game_state, t),
+                "coherence": self.compute_dialogue_coherence(self.response_cache.get((agent_data["agent_id"], opponent_data["agent_id"], t), "")),
+                "engagement": self.compute_narrative_engagement(self.response_cache.get((agent_data["agent_id"], opponent_data["agent_id"], t), ""), agent_data)
+            },
+            [(dialogue["agent_data"], dialogue["opponent_data"], dialogue["game_state"]) for dialogue in dialogues]
+        )
+        pool.close()
+        pool.join()
+        return results
+
+    def forward(self, agent_data_dict: Dict[str, Dict], game_states: List[Dict], t: float) -> List[Dict]:
+        """Forward pass generating battle-driven dialogues (Plan Section 5.1)"""
+        self.sigma.data += self.config.dt * self.config.kappa_seed * self.sigma * (1 - self.sigma / self.config.sigma_max)
+        dialogues = []
+        for agent_id, agent_data in agent_data_dict.items():
+            for opponent_id, opponent_data in agent_data_dict.items():
+                if agent_id != opponent_id and random.random() < self.config.eta_s:
+                    game_state = next((gs for gs in game_states if gs["agent_id"] == agent_id), {})
+                    dialogues.append({
+                        "agent_data": agent_data,
+                        "opponent_data": opponent_data,
+                        "game_state": game_state
+                    })
+        dialogue_outputs = self.parallel_generate(dialogues, t)
+        metrics = {
+            'dialogue_coherence': {"value": np.mean([output["coherence"] for output in dialogue_outputs]), "ks_stat": 0.0, "p_value": 1.0, "is_valid": True},
+            'narrative_engagement': {"value": np.mean([output["engagement"] for output in dialogue_outputs]), "ks_stat": 0.0, "p_value": 1.0, "is_valid": True}
+        }
+        for metric, data in metrics.items():
+            target = self.config.target_values.get(metric, 1.0)
+            ks_stat, p_value = ks_2samp([data["value"]], [target])
+            metrics[metric]["ks_stat"] = ks_stat
+            metrics[metric]["p_value"] = p_value
+            metrics[metric]["is_valid"] = p_value > 0.05
+        for output in dialogue_outputs:
+            agent_data_dict[output["agent_id"]]["metrics"].update(metrics)
+        logger.info(f"DialogueProcessor generated {len(dialogue_outputs)} dialogues at t={t:.3f}")
+        return dialogue_outputs
+```

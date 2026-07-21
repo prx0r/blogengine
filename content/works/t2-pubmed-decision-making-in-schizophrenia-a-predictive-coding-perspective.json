@@ -1,0 +1,42 @@
+{
+  "work_id": "work:t2-pubmed-decision-making-in-schizophrenia-a-predictive-coding-perspective",
+  "schema_version": 2,
+  "title": "Decision-making in schizophrenia: A predictive-coding perspective.",
+  "publication": {
+    "year": 2019,
+    "type": "article",
+    "source": "PubMed/MEDLINE",
+    "language": "en",
+    "journal": "Neuroimage"
+  },
+  "identifiers": {
+    "pmid": "29860087",
+    "doi": "10.1016/j.neuroimage.2018.05.074"
+  },
+  "topics": [
+    "phase-6-dependent-arising",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "tradition": [
+    "contemporary_science"
+  ],
+  "tier": 2,
+  "assets": {
+    "pdf_path": null,
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/29860087/",
+    "abstract": "Dysfunctional decision-making has been implicated in the positive and negative symptoms of schizophrenia. Decision-making can be conceptualized within the framework of hierarchical predictive coding as the result of a Bayesian inference process that uses prior beliefs to infer states of the world. According to this idea, prior beliefs encoded at higher levels in the brain are fed back as predictive signals to lower levels. Whenever these predictions are violated by the incoming sensory data, a p"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_t2_search",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 6,
+    "phase_name": "Dependent Arising",
+    "bridge_rationale": "Dependent arising — predictive processing, free energy principle, active inference as causal cognition."
+  },
+  "evaluation": "Good (score=2.9)"
+}

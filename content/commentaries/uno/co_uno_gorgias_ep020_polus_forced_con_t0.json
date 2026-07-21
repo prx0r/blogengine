@@ -1,0 +1,57 @@
+{
+  "co_id": "co:uno_gorgias_ep020_polus_forced_con_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gorgias_ep020_polus_forced_concession",
+  "turn_index": 0,
+  "lineage": "Socratic",
+  "student_state": "defensive_rationalization",
+  "behavior_tags": [
+    "pushes_back"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_06",
+    "function_name": "UM_06",
+    "mechanism_shape": "RECURSION_LOOP",
+    "teaching_actions": [
+      "asks_clarifying_question"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.62,
+      "attunement": 0.8,
+      "style": 0.5,
+      "depth": 0.62,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_03",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_03",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "resist_intellectually",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "Use Polus?s contradiction as mirror: ask if they too will dodge truth to avoid shame. Expect resistance; if they defend Polus, press whether truth can be hidden without self-contradiction.",
+  "accumulated_insight": "T1: Student defends Polus (?Yes. He was forced to contradict himself because he dared not say what he truly believed?)?defensive_rationalization via pushes_back. They understand: contradiction arose from fear, not logic. Recursion_loop/UM_06 will show that hiding belief creates self-contradiction again. Pattern: defense of Polus ? ready to mirror the trap.",
+  "abstract_pattern": "",
+  "visible_response": "So you admit that shame compelled him—not understanding?",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:proclus-elements",
+    "ro:platonism-decoded",
+    "ro:chaldean-oracles"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

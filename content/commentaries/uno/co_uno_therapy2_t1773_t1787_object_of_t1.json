@@ -1,0 +1,54 @@
+{
+  "co_id": "co:uno_therapy2_t1773_t1787_object_of_t1",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy2_t1773_t1787_object_of_rage_identification",
+  "turn_index": 1,
+  "lineage": "Therapeutic",
+  "student_state": "placating",
+  "behavior_tags": [
+    "reaction_formation"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_06",
+    "function_name": "UM_06",
+    "mechanism_shape": "NONE",
+    "teaching_actions": [
+      "validates_trigger",
+      "blocks_self_attack"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.35,
+      "depth": 0.38,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_02",
+      "depth_discrete": "PD_02",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "Turn 2: 'I’m not being fair. After all, you have been really helpful.'. Student now in placating. Continuing with none approach. Building on previous turn's foundation.",
+  "accumulated_insight": "T2: Student: 'I’m not being fair. After all, you have been really helpful.'. Shift from guilty_retreat to placating. Teacher applies none mechanism with validates trigger, blocks self attack. Mid-episode progression in UNMAKING phase.",
+  "abstract_pattern": "",
+  "visible_response": "And yet we see you feel angry because I didn’t help you last time.\nIf we don’t turn the criticism back onto you, can we take a look at this anger toward me?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

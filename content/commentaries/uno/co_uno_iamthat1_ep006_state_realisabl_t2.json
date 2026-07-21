@@ -1,0 +1,63 @@
+{
+  "co_id": "co:uno_iamthat1_ep006_state_realisabl_t2",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "iamthat1_ep006_state_realisable_inner_teacher",
+  "turn_index": 2,
+  "lineage": "Advaita",
+  "student_state": "seeking_transactional_instruction",
+  "behavior_tags": [
+    "external_locus_of_control",
+    "instruction_seeking"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_06",
+    "function_name": "UM_06",
+    "mechanism_shape": "CONSTRAINT_COLLAPSE",
+    "teaching_actions": [
+      "questions_student_premise",
+      "redirects_responsibility"
+    ],
+    "traps_avoided": [
+      "looking_outward",
+      "none"
+    ],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.62,
+      "attunement": 0.5,
+      "style": 0.65,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_04",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "resist_intellectually",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "Earlier I noted: 'The comparison_contrast mechanism with UM_05 feels...' Now with UM_06 and constraint_collapse, I'm seeing seeking_transactional_instruction respond to external_locus_of_control, instruction_seeking. The recursive pattern is that each mechanism creates the conditions for the next. But who is creating the conditions?",
+  "accumulated_insight": "T3: Student 'I am studying Sanskrit under a professor, but really I am only reading scripture'—transitions confused by authority proliferation to seeking transactional instruction. Teacher applies constraint collapse with questions student premise, redirects responsibility. Mid-episode in UNMAKING phase, building toward resolution. Previous comparison contrast from T2 led to this shift.",
+  "abstract_pattern": "",
+  "visible_response": "Since you have read the scriptures, why do you ask me?",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:upanishads",
+    "ro:yoga-vasistha",
+    "ro:bhagavad-gita",
+    "ro:yoga-sutras"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

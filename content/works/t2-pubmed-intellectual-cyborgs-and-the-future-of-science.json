@@ -1,0 +1,42 @@
+{
+  "work_id": "work:t2-pubmed-intellectual-cyborgs-and-the-future-of-science",
+  "schema_version": 2,
+  "title": "Intellectual cyborgs and the future of science.",
+  "publication": {
+    "year": 2023,
+    "type": "article",
+    "source": "PubMed/MEDLINE",
+    "language": "en",
+    "journal": "Trends Cogn Sci"
+  },
+  "identifiers": {
+    "pmid": "37442679",
+    "doi": "10.1016/j.tics.2023.06.004"
+  },
+  "topics": [
+    "phase-3-mind-as-computer-critique",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "tradition": [
+    "contemporary_science"
+  ],
+  "tier": 2,
+  "assets": {
+    "pdf_path": null,
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/37442679/",
+    "abstract": "Unlike classical artificial intelligence (AI), generative AI has the potential to transform scientists into intellectual cyborgs. Leveraging embodied cognition and extended mind theories can help us understand this scientific revolution. Despite ethical concerns, generative AI can enhance research efficiency and accessibility. However, this requires unprecedented proactive regulation and responsible development."
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_t2_search",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 3,
+    "phase_name": "Mind as Computer Critique",
+    "bridge_rationale": "4E cognition — embodied, embedded, enactive, extended mind; critique of computationalism."
+  },
+  "evaluation": "Good (score=3.0)"
+}

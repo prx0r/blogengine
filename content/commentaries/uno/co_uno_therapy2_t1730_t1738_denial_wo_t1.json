@@ -1,0 +1,54 @@
+{
+  "co_id": "co:uno_therapy2_t1730_t1738_denial_wo_t1",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy2_t1730_t1738_denial_words_husband",
+  "turn_index": 1,
+  "lineage": "Therapeutic",
+  "student_state": "defensive_insistence",
+  "behavior_tags": [
+    "rationalization"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_04",
+    "function_name": "UM_04",
+    "mechanism_shape": "COMPARISON_CONTRAST",
+    "teaching_actions": [
+      "validates_fact",
+      "reiterates_contrast"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.35,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_02",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "no_clear_effect",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "Turn 2: 'But he said he wouldn’t do it again.'. Student now in defensive_insistence. Continuing with comparison_contrast approach. Building on previous turn's foundation.",
+  "accumulated_insight": "T2: Student: 'But he said he wouldn’t do it again.'. Shift from hopeful_delusion to defensive_insistence. Teacher applies comparison_contrast mechanism with validates fact, reiterates contrast. Mid-episode progression in UNMAKING phase.",
+  "abstract_pattern": "",
+  "visible_response": "That is what he said.\nDo you notice you pay attention to what he said but not what he did?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

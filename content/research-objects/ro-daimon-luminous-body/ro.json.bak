@@ -1,0 +1,152 @@
+{
+  "ro_id": "ro:daimon-luminous-body",
+  "schema_version": 1,
+  "title": "The Luminous Body and the Daimonic Vehicle",
+  "subtitle": "Och\u00eama, astroeides, and the subtle anatomy of daimon contact",
+  "family": "theme",
+  "status": "draft",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "Across Platonism, Hermeticism, and alchemy, the daimon operates through a 'subtle body' or vehicle of the soul \u2014 the och\u00eama (Proclus), astroeides (Plutarch), pneuma (Synesius), and the 'luminous bo...",
+    "scope": "",
+    "traditions": [
+      "general"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "proclus-in-tim",
+      "tier": 1,
+      "label": "proclus-in-tim",
+      "status": "active"
+    },
+    {
+      "source_id": "synesius-on-dreams",
+      "tier": 1,
+      "label": "synesius-on-dreams",
+      "status": "active"
+    },
+    {
+      "source_id": "plutarch-de-genio-socratis",
+      "tier": 1,
+      "label": "plutarch-de-genio-socratis",
+      "status": "active"
+    },
+    {
+      "source_id": "iamblichus-mysteries",
+      "tier": 1,
+      "label": "iamblichus-mysteries",
+      "status": "active"
+    },
+    {
+      "source_id": "psellus-daemonibus",
+      "tier": 1,
+      "label": "psellus-daemonibus",
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "proclus_och\u00eama",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [],
+      "topics": [],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "synesius_pneuma",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [],
+      "topics": [],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "plutarch_astroeides",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [],
+      "topics": [],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "alchemical_luminosity",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [],
+      "topics": [],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "the_body_of_light",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [],
+      "topics": [],
+      "status": "placeholder"
+    }
+  ],
+  "coverage": {
+    "proclus_och\u00eama": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    },
+    "plutarch_astroeides": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    },
+    "the_body_of_light": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    },
+    "synesius_pneuma": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    },
+    "alchemical_luminosity": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    }
+  },
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-13",
+      "type": "initial",
+      "summary": "Initial draft. 5 sections outlined.",
+      "sources_added": [
+        "proclus-in-tim",
+        "synesius-on-dreams",
+        "plutarch-de-genio-socratis",
+        "iamblichus-mysteries",
+        "psellus-daemonibus"
+      ],
+      "passage_count": 5,
+      "status": "draft"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-07-13",
+      "event": "RO created",
+      "sources_total": 5,
+      "passages_total": 5
+    }
+  ]
+}

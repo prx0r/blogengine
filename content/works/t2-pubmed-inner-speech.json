@@ -1,0 +1,42 @@
+{
+  "work_id": "work:t2-pubmed-inner-speech",
+  "schema_version": 2,
+  "title": "Inner speech.",
+  "publication": {
+    "year": 2021,
+    "type": "article",
+    "source": "PubMed/MEDLINE",
+    "language": "en",
+    "journal": "Wiley Interdiscip Rev Cogn Sci"
+  },
+  "identifiers": {
+    "pmid": "32949083",
+    "doi": "10.1002/wcs.1544"
+  },
+  "topics": [
+    "phase-9-language/mantra",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "tradition": [
+    "contemporary_science"
+  ],
+  "tier": 2,
+  "assets": {
+    "pdf_path": null,
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/32949083/",
+    "abstract": "Inner speech travels under many aliases: the inner voice, verbal thought, thinking in words, internal verbalization, \"talking in your head,\" the \"little voice in the head,\" and so on. It is both a familiar element of first-person experience and a psychological phenomenon whose complex cognitive components and distributed neural bases are increasingly well understood. There is evidence that inner speech plays a variety of cognitive roles, from enabling abstract thought, to supporting metacognitio"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_t2_search",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 9,
+    "phase_name": "Language/Mantra",
+    "bridge_rationale": "Language as mantra — mantra meditation, inner speech, focused attention, verbal repetition."
+  },
+  "evaluation": "Good (score=3.0)"
+}

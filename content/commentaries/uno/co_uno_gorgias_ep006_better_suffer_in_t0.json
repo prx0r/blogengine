@@ -1,0 +1,51 @@
+{
+  "co_id": "co:uno_gorgias_ep006_better_suffer_in_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gorgias_ep006_better_suffer_injustice",
+  "turn_index": 0,
+  "lineage": "Socratic",
+  "student_state": "defensive_rationalization",
+  "behavior_tags": [
+    "pushes_back"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_06",
+    "function_name": "UM_06",
+    "mechanism_shape": "COMPARISON_CONTRAST",
+    "teaching_actions": [
+      "asks_for_agreement"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.5,
+      "attunement": 0.5,
+      "style": 0.5,
+      "depth": 0.38,
+      "meta_mode": 0.2,
+      "provenance": "default"
+    },
+    "predicted_impact": "go_along_compliantly",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The agreement check works: asking 'So you agree that doing injustice is shameful?' after they've already said suffering is preferable. This is clever—they've already committed to a moral hierarchy, so the logical chain will follow naturally. The student asserted preference (defensive rationalization), which shows they understand: suffering = preferable (moral stance). They'll likely agree to the logical steps next. Hypothesis: students who assert moral preferences follow logical chains more cooperatively than those who resist—testable by tracking whether moral assertions lead to logical compliance.",
+  "accumulated_insight": "T1: Student asserts preference ('To suffer it. No one would choose the other')—defensive rationalization via pushes back. They understand: suffering injustice = preferable to doing it (moral stance). The comparison_contrast mechanism asks: agreement check ('So you agree that doing injustice is shameful?'), builds: logical chain (shameful → bad → worse). Pattern: moral assertion → agreement check → [next: logical step]. Medium confidence because Socratic method typically leads to cooperative logical following when student has already taken moral stance.",
+  "abstract_pattern": "",
+  "visible_response": "So you agree that doing injustice is shameful?",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:proclus-elements",
+    "ro:platonism-decoded",
+    "ro:chaldean-oracles"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

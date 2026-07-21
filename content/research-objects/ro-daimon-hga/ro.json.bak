@@ -1,0 +1,145 @@
+{
+  "ro_id": "ro:daimon-hga",
+  "schema_version": 1,
+  "title": "The Holy Guardian Angel in Western Occultism",
+  "subtitle": "Abramelin, Liber Samekh, and the Thelemic synthesis",
+  "family": "tradition",
+  "status": "draft",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "The Abramelin operation (6-month retreat for HGA contact) and Crowley's Liber Samekh (theurgic invocation with barbarous names) represent the two poles of Western HGA practice: slow purification vs...",
+    "scope": "",
+    "traditions": [
+      "general"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "abramelin-mathers",
+      "tier": 1,
+      "label": "abramelin-mathers",
+      "status": "active"
+    },
+    {
+      "source_id": "abramelin-dehn",
+      "tier": 1,
+      "label": "abramelin-dehn",
+      "status": "active"
+    },
+    {
+      "source_id": "liber-samekh",
+      "tier": 1,
+      "label": "liber-samekh",
+      "status": "active"
+    },
+    {
+      "source_id": "acher-holy-daimon",
+      "tier": 1,
+      "label": "acher-holy-daimon",
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "abramelin_method",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [],
+      "topics": [],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "liber_samekh_structure",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [],
+      "topics": [],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "the_invoke_often_formula",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [],
+      "topics": [],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "crowley_synthesis",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [],
+      "topics": [],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "acher_synthesis",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [],
+      "topics": [],
+      "status": "placeholder"
+    }
+  ],
+  "coverage": {
+    "crowley_synthesis": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    },
+    "liber_samekh_structure": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    },
+    "the_invoke_often_formula": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    },
+    "abramelin_method": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    },
+    "acher_synthesis": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    }
+  },
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-13",
+      "type": "initial",
+      "summary": "Initial draft. 5 sections outlined.",
+      "sources_added": [
+        "abramelin-mathers",
+        "abramelin-dehn",
+        "liber-samekh",
+        "acher-holy-daimon"
+      ],
+      "passage_count": 5,
+      "status": "draft"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-07-13",
+      "event": "RO created",
+      "sources_total": 4,
+      "passages_total": 5
+    }
+  ]
+}

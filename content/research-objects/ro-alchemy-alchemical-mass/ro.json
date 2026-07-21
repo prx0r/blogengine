@@ -1,0 +1,191 @@
+{
+  "ro_id": "ro:alchemy-alchemical-mass",
+  "schema_version": 1,
+  "title": "An Alchemical Mass \u2014 Melchior Cibinensis",
+  "subtitle": "The alchemical process allegorized as the Catholic Mass: from the Introit through the Kyrie to the resurrection of the Ethiopian King",
+  "family": "theme",
+  "status": "draft",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "Melchior Cibinensis' extraordinary text from the Theatrum Chemicum (1602) mapping the entire alchemical opus onto the structure of the Tridentine Mass.",
+    "scope": "Covers the Introit, Kyrie, Graduale, Ave Maria, and the sequence of the union of the three principles, the birth of the Ethiopian, his death and resurrection as the Philosopher's Stone.",
+    "traditions": [
+      "alchemy",
+      "christian_mysticism",
+      "hermetica",
+      "liturgy"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "alchemical-mass",
+      "tier": 1,
+      "label": "Melchior Cibinensis \u2014 An Alchemical Mass (Theatrum Chemicum Vol. III, 1602)",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "liturgical_allegory",
+        "ethiopian_king",
+        "three_principles",
+        "death_and_resurrection"
+      ],
+      "sections_affected": [
+        "theory",
+        "practice"
+      ],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "theory",
+      "subsection": "liturgical_allegory",
+      "kind": "source",
+      "text": "Introitus. Our Lord, fount of goodness, inspirer of the sacred art, from whom all good things come to your faithful, have mercy. ... Kyrie. Our Lord, divine fire, help our hearts, that we may be able, to your praise, to expand the sacraments of the art, have mercy. ... Graduale. He descends like rain upon the fleece, and as showers falling gently upon the earth. Allelujah. O blessed creator of the earth, whiter than snow, sweeter than sweetness, fragrant at the bottom of the vessel like balsam. O salutary medicine for men, that cureth every weakness of the body.",
+      "source_ids": [
+        "alchemical-mass"
+      ],
+      "topics": [
+        "mass",
+        "liturgy",
+        "introit",
+        "kyrie",
+        "graduale"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "theory",
+      "subsection": "liturgical_allegory",
+      "kind": "commentary",
+      "text": "Cibinensis' mapping of the Mass onto the alchemical opus is the Christian-Hermetic equivalent of the Tantraloka's description of the puja (worship) as an internal alchemy: each gesture, each offering is a transformation of the subtle body. The Introit corresponds to the invocation of the daimon \u2014 the 'fount of goodness' who inspires the sacred art. The Kyrie ('Lord have mercy') is the purificatory request that opens the PGM systasis ('Lord, deliver me from my errors'). Steiner's 'renewal of the Mystery of Golgotha' in the Eucharist is also an alchemical process: the bread and wine are the matter that is transformed through the Word. The Graduale's 'rain upon the fleece' is the Tantraloka's 'amrita vrishti' (rain of nectar) that descends when the kundalini reaches the sahasrara. The fleece is the purified receptacle (the subtle body) that receives the spiritual moisture.",
+      "source_ids": [
+        "alchemical-mass"
+      ],
+      "topics": [
+        "tantraloka",
+        "daimon",
+        "steiner",
+        "amrita"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "practice",
+      "subsection": "three_principles",
+      "kind": "source",
+      "text": "Ave Maria. Hail beautiful lamp of heaven, shining light of the world! Here art thou united with the moon, here is made the band of Mars and the conjunction of Mercury. From these three is born through the magistery of the art, in the river bed, the strong giant whom a thousand times a thousand seek, when these three shall have dissolved, not into rain water... but into mercurial water, into this our blessed gum which dissolves of itself and is named the Sperm of the Philosophers.",
+      "source_ids": [
+        "alchemical-mass"
+      ],
+      "topics": [
+        "three_principles",
+        "conjunction",
+        "sol_luna_mercury",
+        "sperm"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "practice",
+      "subsection": "three_principles",
+      "kind": "commentary",
+      "text": "The 'band of Mars and the conjunction of Mercury' producing the 'strong giant' from three principles is the alchemical formula for the pranic body. In Layayoga, the three nadis (ida, pingala, sushumna) \u2014 corresponding to Moon, Sun, and Mercury \u2014 must 'dissolve' into the mercurial water of the central channel to produce the 'giant' of prana (the mahaprana). The Tantraloka describes this as the 'trika' (threefold) heart: the three energies (para, parapara, apara) dissolving into the supreme. The 'sperm of the philosophers' is the ojas (vital essence) that is generated when the three bind in sushumna. Steiner's 'threefold social order' is again a macrocosmic recapitulation: the threefold dissolution produces the 'giant' of the healthy body politic. In daimon work, the three are Thought, Word, and Deed \u2014 their mercurial dissolution into a single flow is the HGA-union.",
+      "source_ids": [
+        "alchemical-mass"
+      ],
+      "topics": [
+        "layayoga",
+        "tantraloka",
+        "steiner",
+        "daimon"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "practice",
+      "subsection": "ethiopian_king",
+      "kind": "source",
+      "text": "Then will appear in the bottom of the vessel the mighty Ethiopian, burned, calcined, discoloured, altogether dead and lifeless. He asks to be buried, to be sprinkled with his own moisture and slowly calcined till he shall arise in glowing form from the fierce fire... Behold a wondrous restoration and renewal of the Ethiopian! Because of the bath of rebirth he takes a new name, which the philosophers call the natural sulphur and their son, this being the stone of the philosophers. And behold it is one thing, one root, one essence with nothing extraneous added.",
+      "source_ids": [
+        "alchemical-mass"
+      ],
+      "topics": [
+        "ethiopian",
+        "nigredo",
+        "death_resurrection",
+        "rebirth"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_006",
+      "section": "practice",
+      "subsection": "ethiopian_king",
+      "kind": "commentary",
+      "text": "The 'mighty Ethiopian' \u2014 black, dead, calcined \u2014 is the nigredo state par excellence: the dark night of the soul where the old self is rendered lifeless before resurrection. In the Tantraloka, this is the 'shava' (corpse) state that precedes the full awakening of shakti \u2014 the practitioner becomes 'dead to the world' before being reborn. Steiner describes the Kundalini experience as a 'corpse-like' state during the transition from the third to the fourth degree of initiation. The daimon path's Saturn retreat produces this exact condition: the practitioner is 'burned, calcined, discoloured' \u2014 stripped of all that is not the essential self. The 'bath of rebirth' is the PGM egg ritual (the Helios egg) where the practitioner is 'reborn' as a new name. The Ethiopian's new name is the daimonic Name \u2014 the 'new name written on the white stone' of Revelation, which is the HGA-union's signature.",
+      "source_ids": [
+        "alchemical-mass"
+      ],
+      "topics": [
+        "nigredo",
+        "tantraloka",
+        "steiner",
+        "hga"
+      ],
+      "status": "active"
+    }
+  ],
+  "coverage": {
+    "theory": {
+      "status": "good",
+      "sources": [
+        "alchemical-mass"
+      ],
+      "passage_count": 2,
+      "estimated_completeness": 0.6,
+      "gaps": [
+        "The full liturgical structure more completely mapped \u2014 Gloria, Credo, Sanctus, etc. are absent from the surviving text"
+      ]
+    },
+    "practice": {
+      "status": "good",
+      "sources": [
+        "alchemical-mass"
+      ],
+      "passage_count": 4,
+      "estimated_completeness": 0.8,
+      "gaps": [
+        "The specific details of the fire regimen and the 'philosophical potion' description"
+      ]
+    }
+  },
+  "issues": [],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial RO with 6 passages (3 source, 3 commentary) from Melchior Cibinensis' Alchemical Mass. Covers liturgical allegory, three principles, and Ethiopian king resurrection.",
+      "sources_added": [
+        "alchemical-mass"
+      ],
+      "passage_count": 6,
+      "status": "draft"
+    }
+  ],
+  "appendices": [],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created in draft state with 6 passages",
+      "sources_total": 1,
+      "passages_total": 6
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "work_id": "work:t2-pubmed-neuropharmacological-computational-analysis-of-longitudinal-electroenc",
+  "schema_version": 2,
+  "title": "Neuropharmacological computational analysis of longitudinal electroencephalograms in clozapine-treated patients with schizophrenia using hierarchical dynamic causal modeling.",
+  "authors": [
+    {
+      "name": "Eo, Jinseok"
+    },
+    {
+      "name": "Kang, Jiyoung"
+    },
+    {
+      "name": "Youn, Tak"
+    },
+    {
+      "name": "Park, Hae-Jeong"
+    }
+  ],
+  "identifiers": {
+    "pmid": "37172662",
+    "doi": "10.1016/j.neuroimage.2023.120161"
+  },
+  "publication": {
+    "journal": "NeuroImage",
+    "year": "2023"
+  },
+  "abstract": "The hierarchical characteristics of the brain are prominent in the pharmacological treatment of psychiatric diseases, primarily targeting cellular receptors that extend upward to intrinsic connectivity within a region, interregional connectivity, and, consequently, clinical observations such as an electroencephalogram (EEG). To understand the long-term effects of neuropharmacological intervention on neurobiological properties at different hierarchical levels, we explored long-term changes in neurobiological parameters of an N-methyl-D-aspartate canonical microcircuit model (CMM-NMDA) in the default mode network (DMN) and auditory hallucination network (AHN) using dynamic causal modeling of longitudinal EEG in clozapine-treated patients with schizophrenia. The neurobiological properties of the CMM-NMDA model associated with symptom improvement in schizophrenia were found across hierarchical levels, from a reduced membrane capacity of the deep pyramidal cell and intrinsic connectivity with the inhibitory population in DMN and intrinsic and extrinsic connectivity in AHN. The medication duration mainly affects the intrinsic connectivity and NMDA time constant in DMN. Virtual perturbation analysis specified the contribution of each parameter to the cross-spectral density (CSD) of the EEG, particularly intrinsic connectivity and membrane capacitances for CSD frequency shifts and progression. It further reveals that excitatory and inhibitory connectivity complements frequency-specific CSD changes, notably the alpha frequency band in DMN. Positive and negative synergistic interactions exist between neurobiological properties primarily within the same region in patients treated with clozapine. The current study shows how computational neuropharmacology helps explore the multiscale link between neurobiological properties and clinical observations and understand the long-term mechanism of neuropharmacological intervention reflected in clinical EEG.",
+  "phase_mapping": {
+    "phase": 13,
+    "phase_name": "Daimon"
+  },
+  "bridge_tags": [
+    "voice-hearing",
+    "inner-speech",
+    "daimon",
+    "auditory-hallucination",
+    "clozapine",
+    "computational-neuropharmacological-modeling",
+    "computational-neuropharmacology"
+  ],
+  "evaluation": "Quality pass v3 (score=29) \u2014 High-signal bridge paper for Daimon.",
+  "assets": {
+    "pdf_path": null,
+    "nxml_path": null
+  },
+  "tier": 2
+}

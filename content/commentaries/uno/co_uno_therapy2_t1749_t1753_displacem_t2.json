@@ -1,0 +1,54 @@
+{
+  "co_id": "co:uno_therapy2_t1749_t1753_displacem_t2",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy2_t1749_t1753_displacement_desk",
+  "turn_index": 2,
+  "lineage": "Therapeutic",
+  "student_state": "focused_anger",
+  "behavior_tags": [
+    "redirection",
+    "insight"
+  ],
+  "pedagogy": {
+    "phase": "SELF-MAKING",
+    "function_id": "SM_03",
+    "function_name": "SM_03",
+    "mechanism_shape": "NONE",
+    "teaching_actions": [
+      "summarizes_mechanism"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.15,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.35,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_01",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_02",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "no_clear_effect",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "Final turn: 'No, I was furious toward Alex.'. Reached focused_anger after 3 turns. Episode demonstrates none effectiveness in SELF-MAKING work. Teaching complete for this sequence.",
+  "accumulated_insight": "T3 (Final): Student: 'No, I was furious toward Alex.'. Final state: focused_anger. Episode complete with 3 turns. Arc shows progression through SELF-MAKING phase using none interventions. Teaching sequence addressed redirection, insight pattern.",
+  "abstract_pattern": "",
+  "visible_response": "You felt the rage toward Alex, but it came out toward your desk instead.",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

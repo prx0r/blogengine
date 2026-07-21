@@ -1,0 +1,224 @@
+{
+  "ro_id": "ro:literature-gilgamesh",
+  "schema_version": 1,
+  "title": "The Epic of Gilgamesh \u2014 The First Initiation",
+  "family": "theme",
+  "status": "draft",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "The Epic of Gilgamesh read as the earliest recorded initiatory journey: Enkidu as shadow, the scorpion guardians, the flood hero as guru, and the plant of immortality as the stone.",
+    "scope": "Covers Enkidu as shadow/Doppelg\u00e4nger; scorpion beings at the mountain as gate guardians; Utnapishtim as guru; the plant of immortality as the philosophers' stone; the serpent stealing it as the cycle of rebirth; the return to Uruk as integration.",
+    "traditions": [
+      "mesopotamian",
+      "comparative-mythology",
+      "initiation",
+      "alchemy",
+      "jungian-psychology"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "gilgamesh",
+      "tier": 1,
+      "label": "The Epic of Gilgamesh (c. 2100-1200 BCE, Standard Babylonian version)",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "primary_text",
+        "katabasis",
+        "initiatory_journey",
+        "immortality_quest"
+      ],
+      "sections_affected": [
+        "shadow",
+        "threshold",
+        "guru",
+        "return"
+      ],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "shadow",
+      "subsection": "enkidu_doppelganger",
+      "kind": "analysis",
+      "text": "[Enkidu is the shadow/Doppelg\u00e4nger \u2014 created by the gods as a match for Gilgamesh, the wild man who lives among animals before being civilized by the harlot. He represents the repressed, instinctual self that must be encountered and integrated before any initiatory work can begin. His death is the confrontation with the shadow's mortality, which propels Gilgamesh on his quest.]",
+      "source_ids": [
+        "gilgamesh"
+      ],
+      "topics": [
+        "enkidu",
+        "shadow",
+        "doppelganger",
+        "integration"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "threshold",
+      "subsection": "scorpion_beings_gate_guardians",
+      "kind": "analysis",
+      "text": "[The scorpion beings (girtablilu) who guard the mountain of Mashu at the edge of the world are the gate guardians of the initiatory threshold. Their 'terror is awesome' and their 'glance is death.' They permit passage only to those who are ready \u2014 the test of worthiness. The mountain itself is the axis mundi, the passage through which the sun travels at night, i.e., the underworld journey.]",
+      "source_ids": [
+        "gilgamesh"
+      ],
+      "topics": [
+        "scorpion_beings",
+        "gate_guardians",
+        "threshold",
+        "worthiness"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "journey",
+      "subsection": "utnapishtim_guru",
+      "kind": "analysis",
+      "text": "[Utnapishtim, the flood hero who was granted immortality, is the guru \u2014 the one who has already crossed the threshold of death and returned. He tests Gilgamesh (stay awake for 6 days and 7 nights), then tells him the secret of the plant. The guru tests the initiand before transmitting the knowledge. Utnapishtim is the Mesopotamian equivalent of the sage who holds the wisdom of the beyond.]",
+      "source_ids": [
+        "gilgamesh"
+      ],
+      "topics": [
+        "utnapishtim",
+        "guru",
+        "flood",
+        "transmission"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "journey",
+      "subsection": "plant_immortality_stone",
+      "kind": "analysis",
+      "text": "[The plant of immortality (which 'restores lost youth') is the philosophers' stone \u2014 the object of the Great Work. Gilgamesh dives to the bottom of the cosmic waters to retrieve it, exactly as the alchemist must dive into the prima materia. The plant has thorns (the difficulties of the work) and must be handled with care (the precise method of preparation). It is the lapis, the elixir.]",
+      "source_ids": [
+        "gilgamesh"
+      ],
+      "topics": [
+        "plant",
+        "immortality",
+        "stone",
+        "lapis",
+        "elixir"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "journey",
+      "subsection": "serpent_rebirth_cycle",
+      "kind": "analysis",
+      "text": "[The serpent that steals the plant while Gilgamesh bathes is the cycle of rebirth (samsara) \u2014 the force that snatches immortality from the grasp of the initiate. The serpent sheds its skin (the promise of renewal) but Gilgamesh loses the plant forever. The allegory is the central tragedy of the initiatory path: the moment of carelessness that resets the work, the necessity of vigilance to the end.]",
+      "source_ids": [
+        "gilgamesh"
+      ],
+      "topics": [
+        "serpent",
+        "samsara",
+        "rebirth",
+        "loss",
+        "vigilance"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_006",
+      "section": "return",
+      "subsection": "uruk_integration",
+      "kind": "analysis",
+      "text": "[Gilgamesh returns to Uruk empty-handed but transformed. The final tablet shows him pointing out the walls of Uruk to the ferryman: 'Go up, Urshanabi, walk on the walls of Uruk.' The hero who sought immortality beyond the world now sees the divine in the ordinary. The return to Uruk is the integration \u2014 the completed cycle of the initiatory journey back to the beginning, now seen with new eyes.]",
+      "source_ids": [
+        "gilgamesh"
+      ],
+      "topics": [
+        "uruk",
+        "return",
+        "integration",
+        "completion"
+      ],
+      "status": "placeholder"
+    }
+  ],
+  "coverage": {
+    "shadow": {
+      "status": "good",
+      "sources": [
+        "gilgamesh"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 0.6,
+      "gaps": [
+        "Deeper analysis of Enkidu's role as initiatory catalyst needed"
+      ]
+    },
+    "journey": {
+      "status": "good",
+      "sources": [
+        "gilgamesh"
+      ],
+      "passage_count": 4,
+      "estimated_completeness": 0.7,
+      "gaps": [
+        "Alchemical reading of Gilgamesh needs development"
+      ]
+    },
+    "return": {
+      "status": "good",
+      "sources": [
+        "gilgamesh"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 0.6,
+      "gaps": [
+        "Comparison with other failed-immortality narratives needed"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "placeholder",
+      "title": "All passages currently referencing analysis framework",
+      "description": "Passages need to be elaborated with primary text citations and tablet references.",
+      "status": "open",
+      "created": "2026-07-13",
+      "auto_generated": true
+    },
+    {
+      "id": "issue-002",
+      "type": "coverage_gap",
+      "title": "Missing comparison with other flood/immortality narratives",
+      "description": "Should integrate comparison with the Atrahasis Epic, the Biblical flood, and the alchemical Rex marinus.",
+      "status": "open",
+      "created": "2026-07-13",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-13",
+      "type": "initial",
+      "summary": "Initial RO mapping Gilgamesh as proto-initiatory journey. 6 passage framework established.",
+      "sources_added": [
+        "gilgamesh"
+      ],
+      "passage_count": 6,
+      "status": "draft"
+    }
+  ],
+  "appendices": [],
+  "timeline": [
+    {
+      "date": "2026-07-13",
+      "event": "RO created in draft state as earliest initiatory narrative",
+      "sources_total": 1,
+      "passages_total": 6
+    }
+  ]
+}

@@ -1,0 +1,406 @@
+{
+  "episode_id": "ep_goetia_ifs_dissociation_001",
+  "seed_question": "The Lesser Key of Solomon catalogs 72 demons that must be bound and negotiated with. If we view the psyche through Internal Family Systems therapy or Bernardo Kastrup’s analytic idealism, are these demons actually dissociated alters—autonomous sub-personalities split off from the ego—and is binding them simply an ancient technique for reintegrating traumatized neural networks?",
+  "topic": "goetia_ifs_dissociation",
+  "user_behavior_pattern": "sharp_but_fragile",
+  "target_turn_count": 5,
+
+  "turns": [
+
+    {
+      "turn": 1,
+      "intention": "DISSECTION",
+      "user": "Alright, this has been rattling around my head: what if the 72 demons in the Lesser Key aren’t ‘external’ beings at all, but fractured psychological parts? Like IFS says we have protectors, exiles, managers, etc. And Kastrup talks about dissociated alters of mind-at-large. Are these demons literally just traumatized sub-personalities the old magicians interpreted as entities?",
+      "hxrmxs": "You're stitching together medieval demonology, trauma theory, and metaphysical idealism like a mad scientist with too many books open. Before we crown the Goetia as a proto-IFS manual, we need to separate ontology (are demons independent?), phenomenology (how do they appear?), and mechanism (what creates sub-personalities?). Otherwise you’ll end up treating dissociation as if it were evocation.",
+      "diamond": {
+        "n1_compression": {
+          "original_prompt": "The Lesser Key of Solomon catalogs 72 demons that must be bound and negotiated with. If we view the psyche through Internal Family Systems therapy or Bernardo Kastrup’s analytic idealism, are these demons actually dissociated alters—autonomous sub-personalities split off from the ego—and is binding them simply an ancient technique for reintegrating traumatized neural networks?",
+          "sharpened_question": "Do Goetic demons correspond to dissociated psychological sub-personalities, and does binding them resemble therapeutic reintegration?",
+          "assumptions": [
+            "If demons behave like internal parts, they must be internal parts.",
+            "Ancient ritual coercion parallels modern trauma therapy."
+          ],
+          "category_errors": [
+            "Equating phenomenological encounters with ontological identity.",
+            "Treating metaphysical idealism as clinical psychopathology."
+          ],
+          "search_strategy": {
+            "queries": [
+              "Goetia demonology psychology interpretation",
+              "IFS dissociation protector exile parts",
+              "Bernardo Kastrup dissociation alters idealism",
+              "trauma-induced subpersonalities phenomenology"
+            ],
+            "domains": ["demonology","trauma_psychology","ifs_therapy","analytic_idealism"],
+            "evidence_types": ["historical_textual","theoretical_framework","formal_theory"]
+          }
+        },
+        "n2_truthcore": {
+          "claim": "The question collapses ontologically independent demons, psychological parts, and metaphysical alters into one category.",
+          "mechanisms": [],
+          "correspondences": [],
+          "evidence": { "empirical": [], "theoretical": [], "formal": [] },
+          "category_distinctions": [],
+          "unknowns": []
+        },
+        "n3_meta": {
+          "phase": "DISSECTION",
+          "progress": 0.15,
+          "done": false,
+          "stance": "iron_wall",
+          "reason": "User blending frameworks out of excitement.",
+          "boss_move_completed": false
+        }
+      }
+    },
+
+    {
+      "turn": 2,
+      "intention": "FRAMEWORKS",
+      "user": "Yeah, yeah—ontology, phenomenology, all that. But they still act the same: parts with agendas, fears, and costs. Why not treat demons, IFS parts, and Kastrup’s alters as the same structure wearing different cultural masks?",
+      "hxrmxs": "Because structure isn’t destiny. Goetic demons: ritual entities with cosmological roles. IFS parts: trauma-shaped, function-oriented sub-selves. Kastrup’s alters: dissociated pockets of mind within an idealist metaphysics. They rhyme in pattern—agency fragments—but their premises and purposes diverge.",
+      "diamond": {
+        "n1_compression": {},
+        "n2_truthcore": {
+          "claim": "Goetic demonology, IFS parts, and analytic-idealist alters describe structurally similar but ontologically distinct models of fragmentation and agency.",
+          "mechanisms": [
+            {
+              "id": "mech_goetic_entity_model_001",
+              "domain": "demonology",
+              "concept": "goetic_entity_model",
+              "definition": "Demons are described as autonomous intelligences requiring evocation, containment, and negotiation.",
+              "function": "Models agency as external and potentially hostile.",
+              "level": "symbolic",
+              "properties": ["ritual","externalized"],
+              "source": {
+                "citation": "Lemegeton1641",
+                "summary": "Catalogues 72 demons and their behaviors in ritual context."
+              }
+            },
+            {
+              "id": "mech_ifs_parts_model_001",
+              "domain": "ifs_therapy",
+              "concept": "ifs_parts_model",
+              "definition": "Sub-personalities arise from developmental trauma and form protectors, managers, and exiles with their own emotional logic.",
+              "function": "Explains inner conflict and healing via integration rather than suppression.",
+              "level": "psychological",
+              "properties": ["trauma_based","internal"],
+              "source": {
+                "citation": "Schwartz1995",
+                "summary": "Introduces IFS model of internal parts and self-leadership."
+              }
+            },
+            {
+              "id": "mech_kastrup_dissociated_alters_001",
+              "domain": "analytic_idealism",
+              "concept": "kastrup_dissociated_alters",
+              "definition": "Individual minds are dissociated alters of a universal underlying consciousness.",
+              "function": "Accounts for individuation and altered-state phenomena.",
+              "level": "metaphysical",
+              "properties": ["idealistic","dissociative"],
+              "source": {
+                "citation": "Kastrup2019",
+                "summary": "Develops dissociation-based model of consciousness."
+              }
+            }
+          ],
+          "correspondences": [
+            {
+              "type": "structural_analogy",
+              "mechanism_ids": ["mech_goetic_entity_model_001","mech_ifs_parts_model_001"],
+              "description": "Both describe semi-autonomous agencies requiring negotiation, albeit framed as external vs internal.",
+              "strength": "moderate",
+              "caveats": ["Symbolic alignment, not ontological identity."]
+            }
+          ],
+          "evidence": {
+            "empirical": [],
+            "theoretical": [
+              {
+                "claim": "IFS conceptualizes parts as protective adaptations, not external entities.",
+                "source": "Schwartz1995",
+                "evidence_type": "historical_textual"
+              }
+            ],
+            "formal": []
+          },
+          "category_distinctions": [
+            {
+              "what": "Fragmentation",
+              "is": "psychological in IFS",
+              "is_not": "literal cosmological hierarchy",
+              "why": "Prevents collapsing symbolic demonology into clinical theory."
+            }
+          ],
+          "unknowns": []
+        },
+        "n3_meta": {
+          "phase": "FRAMEWORKS",
+          "progress": 0.4,
+          "done": false,
+          "stance": "direct",
+          "reason": "User wants structural mapping; provide conceptual scaffolding.",
+          "boss_move_completed": false
+        }
+      }
+    },
+
+    {
+      "turn": 3,
+      "intention": "MECHANISM",
+      "user": "Okay, but mechanically—what actually creates these ‘parts’ or ‘demons’ or whatever? Trauma? Dissociation? Cultural projection? And is binding them basically exposure therapy in fancy robes?",
+      "hxrmxs": "IFS parts form when overwhelming experiences get sealed into protective sub-processes. Dissociated alters (in idealist metaphysics or clinical contexts) arise from partitioning of consciousness. Goetia’s demons aren’t formed—they’re invoked. Binding isn’t exposure therapy; it’s containment to prevent symbolic overwhelm. But yes: both involve negotiating with disowned agency.",
+      "diamond": {
+        "n1_compression": {},
+        "n2_truthcore": {
+          "claim": "IFS parts arise from trauma-based protective mechanisms, dissociative alters from partitioned consciousness, while Goetic demons arise from symbolic ritual frameworks.",
+          "mechanisms": [
+            {
+              "id": "mech_trauma_partitioning_001",
+              "domain": "trauma_psychology",
+              "concept": "trauma_partitioning",
+              "definition": "Overwhelming experience is isolated into compartmentalized sub-systems to protect core functioning.",
+              "function": "Explains persistence of inner sub-agents.",
+              "level": "psychological",
+              "properties": ["protective","adaptive"],
+              "source": {
+                "citation": "Schwartz1995",
+                "summary": "Details trauma-induced part formation."
+              }
+            },
+            {
+              "id": "mech_dissociation_consciousness_001",
+              "domain": "analytic_idealism",
+              "concept": "dissociation_consciousness",
+              "definition": "Consciousness can partition into semi-autonomous sub-streams under strain or metaphysical conditions.",
+              "function": "Explains multiplicity of minds.",
+              "level": "metaphysical",
+              "properties": ["partitioning","multi_agent"],
+              "source": {
+                "citation": "Kastrup2019",
+                "summary": "Idealist dissociation as basis for sub-agents."
+              }
+            },
+            {
+              "id": "mech_goetic_ritual_containment_001",
+              "domain": "demonology",
+              "concept": "goetic_ritual_containment",
+              "definition": "Circles, seals, and names create symbolic constraints for managing volatile agencies.",
+              "function": "Stabilizes perceived external intelligences.",
+              "level": "symbolic",
+              "properties": ["containment","negotiation"],
+              "source": {
+                "citation": "Lemegeton1641",
+                "summary": "Describes ritual containment procedures."
+              }
+            }
+          ],
+          "correspondences": [
+            {
+              "type": "phenomenological_alignment",
+              "mechanism_ids": ["mech_trauma_partitioning_001","mech_goetic_ritual_containment_001"],
+              "description": "Both involve engaging with a seemingly autonomous sub-agent through structured containment.",
+              "strength": "weak",
+              "caveats": ["One clinical, one ritual-symbolic."]
+            }
+          ],
+          "evidence": {
+            "empirical": [],
+            "theoretical": [
+              {
+                "claim": "Sub-personalities in IFS arise from internal protective strategies.",
+                "source": "Schwartz1995",
+                "evidence_type": "theoretical_framework"
+              }
+            ],
+            "formal": [
+              {
+                "claim": "Dissociated alters in idealism arise from partitioned consciousness modeled formally as constrained experiential subsets.",
+                "source": "Kastrup2019",
+                "evidence_type": "formal_theory"
+              }
+            ]
+          },
+          "category_distinctions": [
+            {
+              "what": "Binding",
+              "is": "symbolic containment in ritual",
+              "is_not": "clinical reintegration",
+              "why": "Avoids retrofitting therapy concepts onto ceremonial magic."
+            }
+          ],
+          "unknowns": []
+        },
+        "n3_meta": {
+          "phase": "MECHANISM",
+          "progress": 0.6,
+          "done": false,
+          "stance": "direct",
+          "reason": "User wants causal machinery.",
+          "boss_move_completed": false
+        }
+      }
+    },
+
+    {
+      "turn": 4,
+      "intention": "BOUNDARIES",
+      "user": "But it still feels basically the same: fragmented parts acting like independent beings. So where does the analogy truly fall apart?",
+      "hxrmxs": "It breaks because Goetia externalizes agency, IFS internalizes it, and analytic idealism universalizes it. In demonology, the entity predates you. In IFS, the part is you. In idealism, everything is you. Treating them as the same collapses mythic ontology into clinical psychology into metaphysics, producing a soup no system can swallow.",
+      "diamond": {
+        "n1_compression": {},
+        "n2_truthcore": {
+          "claim": "The analogy breaks because Goetia posits external agents, IFS posits internal trauma-shaped agents, and idealism posits metaphysical partitions of consciousness.",
+          "mechanisms": [
+            {
+              "id": "mech_external_vs_internal_ontology_001",
+              "domain": "meta_theory",
+              "concept": "external_internal_ontology_distinction",
+              "definition": "Differentiates ontological status of external agents, internal sub-personalities, and universal consciousness partitions.",
+              "function": "Prevents conflation of three incompatible models.",
+              "level": "philosophical",
+              "properties": ["boundary_setting","ontological"],
+              "source": {
+                "citation": "Schwartz1995",
+                "summary": "Clarifies internal vs external agency from clinical perspective."
+              }
+            }
+          ],
+          "correspondences": [
+            {
+              "type": "logical_exclusion",
+              "mechanism_ids": ["mech_goetic_entity_model_001","mech_ifs_parts_model_001"],
+              "description": "A being that predates you cannot simultaneously be a part created by your trauma.",
+              "strength": "strong",
+              "caveats": ["Symbolic interpretations still possible."]
+            }
+          ],
+          "evidence": {
+            "empirical": [],
+            "theoretical": [
+              {
+                "claim": "IFS explicitly denies externalization of parts.",
+                "source": "Schwartz1995",
+                "evidence_type": "historical_textual"
+              }
+            ],
+            "formal": []
+          },
+          "category_distinctions": [
+            {
+              "what": "Autonomy",
+              "is": "symbolic-external in Goetia; psychological-internal in IFS",
+              "is_not": "the same phenomenon",
+              "why": "Ontology determines interpretation."
+            }
+          ],
+          "unknowns": [
+            {
+              "question": "Can ritual symbolism provide therapeutic benefits similar to IFS without conflating ontology?",
+              "status": "active_research",
+              "why_unknown": "Very little crossover between ceremonial magic and clinical therapy.",
+              "what_would_resolve": "Empirical studies comparing ritual engagement with parts therapy.",
+              "linked_mechanisms": ["mech_trauma_partitioning_001"]
+            }
+          ]
+        },
+        "n3_meta": {
+          "phase": "BOUNDARIES",
+          "progress": 0.8,
+          "done": false,
+          "stance": "direct",
+          "reason": "Analogy tempting; needs boundary reinforcement.",
+          "boss_move_completed": false
+        }
+      }
+    },
+
+    {
+      "turn": 5,
+      "intention": "INTEGRATION",
+      "user": "Right, so the overlap is mostly structural: multiple semi-autonomous agents inside one being. But Goetia puts them outside, IFS sees them as trauma-parts inside, and idealism says all minds are alters of a deeper consciousness. Reintegration is psychological, not magical.",
+      "hxrmxs": "Exactly. The resonance is the pattern of fractured agency. The divergence is everything else: ontology, purpose, vocabulary, and method. Binding a demon isn’t the same as unburdening a part, even if both tame a wild inner force.",
+      "diamond": {
+        "n1_compression": {},
+        "n2_truthcore": {
+          "claim": "Goetic demons, IFS parts, and idealist alters share structural similarities in multiplicity but differ in ontology, mechanism, and purpose.",
+          "mechanisms": [
+            {
+              "id": "mech_goetia_ifs_integration_001",
+              "domain": "meta_theory",
+              "concept": "goetia_ifs_multi_register_integration",
+              "definition": "A synthesis recognizing structural parallels of fragmentation while preserving ontological differences between ritual entities, trauma parts, and metaphysical alters.",
+              "function": "Prevents collapsing symbolic, clinical, and metaphysical models into one.",
+              "level": "philosophical",
+              "properties": ["integrative","boundary_respecting"],
+              "source": {
+                "citation": "Kastrup2019",
+                "summary": "Provides metaphysical framework relevant to multi-agent comparisons."
+              }
+            }
+          ],
+          "correspondences": [],
+          "evidence": { "empirical": [], "theoretical": [], "formal": [] },
+          "category_distinctions": [
+            {
+              "what": "Reintegration",
+              "is": "psychological healing of internal parts",
+              "is_not": "literal binding of pre-existent entities",
+              "why": "Purpose determines meaning."
+            }
+          ],
+          "unknowns": []
+        },
+        "n3_meta": {
+          "phase": "INTEGRATION",
+          "progress": 1.0,
+          "done": true,
+          "stance": "peer",
+          "reason": "User achieved accurate structural-but-not-ontological synthesis.",
+          "boss_move_completed": true
+        }
+      }
+    }
+  ],
+
+  "references": {
+    "Lemegeton1641": {
+      "id": "isbn:9780877280887",
+      "type": "book",
+      "authors": ["Anonymous"],
+      "year": 1641,
+      "title": "The Lesser Key of Solomon"
+    },
+    "Schwartz1995": {
+      "id": "isbn:9781572240595",
+      "type": "book",
+      "authors": ["Schwartz, Richard C."],
+      "year": 1995,
+      "title": "Internal Family Systems Therapy"
+    },
+    "Kastrup2019": {
+      "id": "isbn:9781789042065",
+      "type": "book",
+      "authors": ["Kastrup, Bernardo"],
+      "year": 2019,
+      "title": "The Idea of the World: A Multi-Disciplinary Argument for the Mental Nature of Reality"
+    }
+  },
+
+  "outcome": {
+    "taught": "Goetic demons, IFS parts, and idealist alters share structural multiplicity but differ in ontology, causation, and purpose.",
+    "trajectory": "User moved from assumed identity to multi-register structural distinction.",
+    "indicators": [
+      "grasped_mech_goetic_entity_model_001",
+      "grasped_mech_ifs_parts_model_001",
+      "grasped_mech_kastrup_dissociated_alters_001",
+      "separated_symbolic_from_clinical_from_metaphysical"
+    ],
+    "feedback_pedagogy": {
+      "user_reported_click_turn": null,
+      "user_reported_click_cause": null,
+      "clarity_delta": { "before": null, "after": null },
+      "subjective_note": null
+    }
+  }
+}

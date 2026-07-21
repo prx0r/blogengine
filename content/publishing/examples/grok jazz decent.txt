@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Audio-Visual Framework</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #111118;
+            --text-color: #d9e1f2;
+            --label-color: rgba(217, 225, 242, 0.6);
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #canvasContainer {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        canvas {
+            display: block;
+            background-color: transparent;
+        }
+
+        #infoLabel {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: var(--label-color);
+            pointer-events: none;
+            text-shadow: 0 0 5px var(--bg-color);
+            text-align: center;
+        }
+
+        .controls {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .play-button, .preset-button {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 1rem;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            pointer-events: auto;
+        }
+
+        .play-button:hover, .preset-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.6);
+            transform: scale(1.05);
+        }
+
+        .preset-button.active {
+            background: rgba(255, 255, 255, 0.4);
+            border-color: rgba(255, 255, 255, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <div id="canvasContainer">
+        <canvas id="artCanvas"></canvas>
+        <div id="infoLabel">Visualizing: <span>Crystalline Jazz</span></div>
+        <div class="controls">
+            <button id="playButton" class="play-button">▶ Play</button>
+            <button id="crystallinePreset" class="preset-button active">Crystalline</button>
+            <button id="nebulaPreset" class="preset-button">Nebula</button>
+            <button id="geometricPreset" class="preset-button">Geometric</button>
+        </div>
+    </div>
+
+    <script>
+        // Mock EnhancedUniversalVisualMusicEngine (simplified for demo)
+        class EnhancedUniversalVisualMusicEngine {
+            constructor() {
+                this.currentState = {
+                    key: 'C',
+                    mode: 'major',
+                    tuningSystem: '12-TET',
+                    microtonalOffset: 0,
+                    emotionalState: { valence: 0.6, arousal: 0.4 },
+                    fractalDepth: 3
+                };
+                this.jazzProgression = this.generateJazzProgression();
+            }
+
+            generateJazzProgression() {
+                const chords = [
+                    ['C4', 'E4', 'G4', 'Bb4'], // Cm7
+                    ['F4', 'A4', 'C5', 'Eb5'], // Fm7
+                    ['G4', 'B4', 'D5', 'F5'],  // G7
+                    ['C4', 'E4', 'G4', 'Bb4'], // Cm7
+                    ['A4', 'C5', 'E5', 'G5'],  // Am7
+                    ['D4', 'F#4', 'A4', 'C5'], // D7
+                    ['G4', 'B4', 'D5', 'F5'],  // G7
+                    ['C4', 'E4', 'G4', 'Bb4'], // Cm7
+                    ['F4', 'A4', 'C5', 'Eb5'], // Fm7
+                    ['Bb4', 'D5', 'F5', 'A5'], // Bbmaj7
+                    ['Eb4', 'G4', 'Bb4', 'D5'],// Ebmaj7
+                    ['A4', 'C5', 'E5', 'G5'],  // Am7
+                    ['D4', 'F#4', 'A4', 'C5'], // D7
+                    ['G4', 'B4', 'D5', 'F5'],  // G7
+                    ['C4', 'E4', 'G4', 'Bb4'], // Cm7
+                    ['F4', 'A4', 'C5', 'Eb5']  // Fm7
+                ];
+                const rhythms = [
+                    { type: 'swing', pattern: [1, 0, 1, 0, 1, 0, 1, 0], duration: '4n' },
+                    { type: 'syncopated', pattern: [1, 0, 1, 1, 0, 1, 0, 1], duration: '8n' },
+                    { type: 'bebop', pattern: [1, 1, 0, 1, 0, 1, 1, 0], duration: '8n.' },
+                    { type: 'swing', pattern: [1, 0, 1, 0, 1, 0, 1, 0], duration: '4n' }
+                ];
+                return chords.map((chord, i) => ({
+                    notes: chord.map(note => ({
+                        pitchClass: note,
+                        microtonal_offset: Math.random() * (i % 2 === 0 ? 25 : 50)
+                    })),
+                    rhythm: rhythms[i % rhythms.length],
+                    valence: 0.5 + Math.sin(i * 0.2) * 0.3,
+                    arousal: 0.4 + Math.cos(i * 0.3) * 0.3
+                }));
+            }
+
+            translateVisualToMusical(visualState) {
+                return {
+                    metadata: {
+                        tempo: 130,
+                        tuningSystem: visualState.chaos_level > 0.7 ? '24-TET' : '12-TET',
+                        emotionalTag: visualState.valence > 0.5 ? 'excitement' : 'contentment'
+                    },
+                    harmony: {
+                        progression: this.jazzProgression,
+                        chord: this.jazzProgression[0]
+                    },
+                    rhythm: {
+                        pattern: this.jazzProgression[0].rhythm
+                    },
+                    emotional: {
+                        valence: visualState.valence,
+                        arousal: visualState.arousal
+                    },
+                    timbre: {
+                        spectralProfile: {
+                            fundamental: 220,
+                            partials: Array.from({ length: 8 }, (_, i) => ({
+                                frequency: 220 * (i + 1),
+                                amplitude: 1 / Math.sqrt(i + 1)
+                            }))
+                        }
+                    }
+                };
+            }
+
+            generateMicrotonalMIDI(chord) {
+                return chord.notes.map((note, i) => ({
+                    type: 'noteOn',
+                    channel: i % 16,
+                    note: note.pitchClass,
+                    velocity: 0.5 + Math.random() * 0.3,
+                    time: 0,
+                    microtonalOffset: note.microtonal_offset
+                }));
+            }
+        }
+
+        // Visual Style Presets
+        const VISUAL_PRESETS = {
+            crystalline: {
+                name: 'Crystalline',
+                colorPalette: {
+                    hueRange: [260, 300], // Amethyst
+                    saturation: [70, 90],
+                    lightness: [60, 85],
+                    mapTo: 'notePitch'
+                },
+                shapes: {
+                    chord: 'polygon',
+                    sides: note => note?.microtonal_offset ? Math.floor(3 + note.microtonal_offset / 25) : 3,
+                    mapTo: 'chordComplexity',
+                    pulseOn: 'chordTrigger'
+                },
+                animations: {
+                    growth: 'fractalBranch',
+                    speed: rhythm => 0.1 + rhythm.velocity * 0.2,
+                    mapTo: 'rhythmVelocity',
+                    pulseAmplitude: arousal => 1.0 + arousal * 0.5
+                },
+                textures: {
+                    type: 'crystalline',
+                    edge: 'sharp',
+                    mapTo: 'spectralBrightness'
+                },
+                chaosLevel: 0.6
+            },
+            nebula: {
+                name: 'Nebula',
+                colorPalette: {
+                    hueRange: [180, 240], // Cyan to Blue
+                    saturation: [60, 80],
+                    lightness: [50, 70],
+                    mapTo: 'arousal'
+                },
+                shapes: {
+                    chord: 'circle',
+                    sides: 0,
+                    mapTo: 'harmonicDensity',
+                    pulseOn: 'rhythmHit'
+                },
+                animations: {
+                    growth: 'diffuse',
+                    speed: rhythm => 0.05 + rhythm.velocity * 0.15,
+                    mapTo: 'rhythmDensity',
+                    pulseAmplitude: arousal => 1.2 + arousal * 0.6
+                },
+                textures: {
+                    type: 'cloudy',
+                    edge: 'soft',
+                    mapTo: 'spectralBrightness'
+                },
+                chaosLevel: 0.8
+            },
+            geometric: {
+                name: 'Geometric',
+                colorPalette: {
+                    hueRange: [0, 60], // Red to Yellow
+                    saturation: [80, 100],
+                    lightness: [50, 80],
+                    mapTo: 'notePitch'
+                },
+                shapes: {
+                    chord: 'rectangle',
+                    sides: 4,
+                    mapTo: 'chordType',
+                    pulseOn: 'chordTrigger'
+                },
+                animations: {
+                    growth: 'linear',
+                    speed: rhythm => 0.2 + rhythm.velocity * 0.1,
+                    mapTo: 'tempo',
+                    pulseAmplitude: arousal => 0.8 + arousal * 0.4
+                },
+                textures: {
+                    type: 'grid',
+                    edge: 'hard',
+                    mapTo: 'harmonicStability'
+                },
+                chaosLevel: 0.4
+            }
+        };
+
+        // Visual Renderer Class
+        class VisualRenderer {
+            constructor(canvas, preset) {
+                this.canvas = canvas;
+                this.ctx = canvas.getContext('2d');
+                this.preset = preset;
+                this.visualObjects = [];
+                this.lastChordTime = 0;
+                this.lastRhythmTime = 0;
+            }
+
+            setPreset(preset) {
+                this.preset = preset;
+                this.visualObjects = [];
+                console.log('Preset set to:', preset.name);
+            }
+
+            noteToHue(note, score) {
+                const noteNames = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
+                const [minHue, maxHue] = this.preset.colorPalette.hueRange;
+
+                // Log inputs for debugging
+                console.log('noteToHue - note:', note, 'score.emotional:', score?.emotional);
+
+                if (this.preset.colorPalette.mapTo === 'notePitch' && note && typeof note.pitchClass === 'string') {
+                    const noteNameMatch = note.pitchClass.match(/[A-G]#?/);
+                    if (noteNameMatch) {
+                        const noteName = noteNameMatch[0];
+                        const index = noteNames.indexOf(noteName);
+                        if (index !== -1) {
+                            return minHue + (index / 12) * (maxHue - minHue);
+                        }
+                    }
+                    console.warn('Invalid noteName in noteToHue:', note.pitchClass);
+                } else if (this.preset.colorPalette.mapTo === 'arousal' && score?.emotional?.arousal != null) {
+                    return minHue + ((score.emotional.arousal + 1) / 2) * (maxHue - minHue);
+                }
+
+                // Fallback for invalid or undefined note/score
+                console.warn('Falling back to random hue in noteToHue');
+                return minHue + Math.random() * (maxHue - minHue);
+            }
+
+            addObject(event, score, noteIndex = 0) {
+                // Validate score and chord
+                if (!score?.harmony?.chord?.notes || !Array.isArray(score.harmony.chord.notes)) {
+                    console.warn('Invalid score or chord in addObject:', score);
+                    return;
+                }
+
+                const note = event.note || score.harmony.chord.notes[noteIndex % score.harmony.chord.notes.length];
+                const obj = {
+                    x: this.canvas.width * (0.3 + Math.random() * 0.4),
+                    y: this.canvas.height * (0.3 + Math.random() * 0.4),
+                    age: 0,
+                    lifespan: 800 + Math.random() * 800,
+                    shape: this.preset.shapes.chord,
+                    sides: typeof this.preset.shapes.sides === 'function' 
+                        ? this.preset.shapes.sides(note) 
+                        : this.preset.shapes.sides,
+                    size: score.emotional?.arousal != null ? 20 + score.emotional.arousal * 30 : 30,
+                    hue: this.noteToHue(note, score),
+                    scalePulse: 1.0,
+                    vertices: [],
+                    velocity: event.velocity || 0.7
+                };
+
+                if (obj.shape === 'polygon' || obj.shape === 'rectangle') {
+                    for (let i = 0; i < obj.sides; i++) {
+                        const angle = (i / obj.sides) * Math.PI * 2;
+                        obj.vertices.push({
+                            x: Math.cos(angle) * obj.size,
+                            y: Math.sin(angle) * obj.size
+                        });
+                    }
+                } else if (obj.shape === 'circle') {
+                    obj.radius = obj.size;
+                }
+
+                this.visualObjects.push(obj);
+            }
+
+            update(score, time, musicalEvents) {
+                // Validate score
+                if (!score?.emotional || !score?.harmony?.chord) {
+                    console.warn('Invalid score in update:', score);
+                    return;
+                }
+
+                this.visualObjects = this.visualObjects.filter(obj => obj.age < obj.lifespan);
+                this.visualObjects.forEach(obj => {
+                    obj.age++;
+                    obj.scalePulse = Math.max(1.0, obj.scalePulse * 0.95);
+
+                    if (this.preset.animations.growth === 'fractalBranch' && Math.random() < 0.2 * obj.velocity) {
+                        const lastVertex = obj.vertices[obj.vertices.length - 1];
+                        if (lastVertex) {
+                            obj.vertices.push({
+                                x: lastVertex.x + Math.cos(Math.random() * Math.PI * 2) * 20,
+                                y: lastVertex.y + Math.sin(Math.random() * Math.PI * 2) * 20
+                            });
+                        }
+                    } else if (this.preset.animations.growth === 'diffuse') {
+                        obj.size += 0.1 * obj.velocity;
+                    } else if (this.preset.animations.growth === 'linear') {
+                        obj.size += 0.05 * obj.velocity;
+                    }
+                });
+
+                // Process musical events
+                musicalEvents.forEach(event => {
+                    console.log('Processing event:', event);
+                    if (event.type === 'noteOn' && time - this.lastChordTime > 100) {
+                        this.addObject(event, score, this.visualObjects.length % score.harmony.chord.notes.length);
+                        this.visualObjects.forEach(obj => {
+                            obj.scalePulse = this.preset.animations.pulseAmplitude(score.emotional.arousal);
+                        });
+                        this.lastChordTime = time;
+                    }
+                    if (event.type === 'rhythmHit' && time - this.lastRhythmTime > 50) {
+                        if (this.preset.shapes.pulseOn === 'rhythmHit') {
+                            this.addObject({ 
+                                type: 'rhythmHit', 
+                                note: { pitchClass: null, arousal: score.emotional.arousal }, 
+                                velocity: event.velocity 
+                            }, score);
+                        }
+                        this.visualObjects.forEach(obj => {
+                            obj.scalePulse = this.preset.animations.pulseAmplitude(score.emotional.arousal);
+                        });
+                        this.lastRhythmTime = time;
+                    }
+                });
+            }
+
+            draw() {
+                this.ctx.globalCompositeOperation = 'source-over';
+                this.ctx.fillStyle = 'rgba(12, 10, 24, 0.18)';
+                this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
+                this.ctx.globalCompositeOperation = 'lighter';
+
+                this.visualObjects.forEach(obj => {
+                    const alpha = Math.sin((obj.age / obj.lifespan) * Math.PI) * (0.3 + obj.velocity * 0.5);
+                    this.ctx.save();
+                    this.ctx.translate(obj.x, obj.y);
+                    this.ctx.scale(obj.scalePulse, obj.scalePulse);
+
+                    if (obj.shape === 'polygon' || obj.shape === 'rectangle') {
+                        this.ctx.beginPath();
+                        if (obj.vertices.length > 0) {
+                            this.ctx.moveTo(obj.vertices[0].x, obj.vertices[0].y);
+                            for (let i = 1; i < obj.vertices.length; i++) {
+                                this.ctx.lineTo(obj.vertices[i].x, obj.vertices[i].y);
+                            }
+                            this.ctx.closePath();
+                        }
+                        this.ctx.strokeStyle = `hsla(${obj.hue}, ${this.preset.colorPalette.saturation[0]}%, ${this.preset.colorPalette.lightness[0]}%, ${alpha})`;
+                        this.ctx.fillStyle = `hsla(${obj.hue}, ${this.preset.colorPalette.saturation[0]}%, ${this.preset.colorPalette.lightness[0] - 20}%, ${alpha * 0.2})`;
+                        this.ctx.lineWidth = this.preset.textures.edge === 'sharp' ? 1 : 2;
+                        this.ctx.fill();
+                        this.ctx.stroke();
+                    } else if (obj.shape === 'circle') {
+                        this.ctx.beginPath();
+                        this.ctx.arc(0, 0, obj.radius, 0, Math.PI * 2);
+                        this.ctx.fillStyle = `hsla(${obj.hue}, ${this.preset.colorPalette.saturation[0]}%, ${this.preset.colorPalette.lightness[0] - 20}%, ${alpha * 0.2})`;
+                        this.ctx.strokeStyle = `hsla(${obj.hue}, ${this.preset.colorPalette.saturation[0]}%, ${this.preset.colorPalette.lightness[0]}%, ${alpha})`;
+                        this.ctx.lineWidth = this.preset.textures.edge === 'soft' ? 3 : 1;
+                        this.ctx.fill();
+                        this.ctx.stroke();
+                    }
+
+                    this.ctx.restore();
+                });
+            }
+        }
+
+        // Main Application
+        document.addEventListener('DOMContentLoaded', () => {
+            const canvas = document.getElementById('artCanvas');
+            const playButton = document.getElementById('playButton');
+            const presetButtons = {
+                crystalline: document.getElementById('crystallinePreset'),
+                nebula: document.getElementById('nebulaPreset'),
+                geometric: document.getElementById('geometricPreset')
+            };
+
+            const engine = new EnhancedUniversalVisualMusicEngine();
+            let renderer = new VisualRenderer(canvas, VISUAL_PRESETS.crystalline);
+            let isPlaying = false;
+            let audioReady = false;
+            let sceneIndex = 0;
+            let sceneStartTime = 0;
+
+            const visualState = {
+                geometric_alignment: 0.5,
+                chaos_level: 0.6,
+                color_brightness: 0.9,
+                movement_speed: 1.5,
+                particle_density: 0.8,
+                intensity: 0.7,
+                valence: 0.6,
+                arousal: 0.4
+            };
+
+            // Audio Setup
+            let instruments = {};
+            function initAudio() {
+                Tone.start().then(() => {
+                    instruments.piano = new Tone.PolySynth(Tone.Synth, {
+                        oscillator: { type: 'sine' },
+                        envelope: { attack: 0.05, decay: 0.4, sustain: 0.2, release: 1.5 }
+                    }).toDestination();
+                    instruments.bass = new Tone.Synth({
+                        oscillator: { type: 'sine' },
+                        envelope: { attack: 0.02, decay: 0.2, sustain: 0.4, release: 1.0 }
+                    }).toDestination();
+                    instruments.drums = new Tone.MembraneSynth().toDestination();
+                    const reverb = new Tone.Reverb(3.0).toDestination();
+                    const delay = new Tone.PingPongDelay("8n", 0.2).toDestination();
+                    instruments.piano.connect(reverb);
+                    instruments.bass.connect(reverb);
+                    instruments.drums.connect(delay);
+                    audioReady = true;
+                });
+            }
+
+            function scheduleProgression(score) {
+                Tone.Transport.cancel();
+                score.harmony.progression.forEach((chord, i) => {
+                    const time = i * 0.5; // 130 BPM, 4 beats per chord
+                    Tone.Transport.schedule(t => {
+                        const midiEvents = engine.generateMicrotonalMIDI(chord);
+                        midiEvents.forEach(event => {
+                            if (event.type === 'noteOn') {
+                                instruments.piano.triggerAttackRelease(event.note, chord.rhythm.duration, t, event.velocity);
+                                instruments.bass.triggerAttackRelease(event.note.replace(/\d/, n => parseInt(n) - 2), '4n', t, 0.4);
+                            }
+                        });
+                        if (chord.rhythm.pattern[(i % chord.rhythm.pattern.length)] === 1) {
+                            instruments.drums.triggerAttackRelease('C2', '8n', t, 0.6);
+                        }
+                    }, time);
+                });
+                Tone.Transport.loop = true;
+                Tone.Transport.loopStart = 0;
+                Tone.Transport.loopEnd = score.harmony.progression.length * 0.5;
+            }
+
+            // Canvas Setup
+            function resizeCanvas() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+            window.addEventListener('resize', resizeCanvas);
+            resizeCanvas();
+
+            // Preset Switching
+            Object.entries(presetButtons).forEach(([key, button]) => {
+                button.addEventListener('click', () => {
+                    renderer.setPreset(VISUAL_PRESETS[key]);
+                    document.getElementById('infoLabel').innerHTML = `Visualizing: <span>${VISUAL_PRESETS[key].name}</span>`;
+                    Object.values(presetButtons).forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    visualState.chaos_level = VISUAL_PRESETS[key].chaosLevel;
+                    visualState.valence = engine.jazzProgression[sceneIndex].valence;
+                    visualState.arousal = engine.jazzProgression[sceneIndex].arousal;
+                });
+            });
+
+            // Play/Pause
+            playButton.addEventListener('click', () => {
+                if (!audioReady) {
+                    initAudio();
+                    setTimeout(() => playButton.click(), 100);
+                    return;
+                }
+                isPlaying = !isPlaying;
+                playButton.textContent = isPlaying ? '⏸ Pause' : '▶ Play';
+                playButton.style.background = isPlaying ? 'rgba(255, 255, 255, 0.3)' : 'rgba(255, 255, 255, 0.2)';
+                if (!isPlaying) {
+                    Tone.Transport.stop();
+                    Object.values(instruments).forEach(instrument => instrument.triggerRelease());
+                } else {
+                    const score = engine.translateVisualToMusical(visualState);
+                    scheduleProgression(score);
+                    Tone.Transport.start();
+                }
+            });
+
+            // Animation Loop
+            function animate(time) {
+                if (canvas.width === 0 || canvas.height === 0) {
+                    requestAnimationFrame(animate);
+                    return;
+                }
+
+                const score = engine.translateVisualToMusical(visualState);
+                const currentChordIndex = Math.floor((time - sceneStartTime) / 500) % score.harmony.progression.length;
+                score.harmony.chord = score.harmony.progression[currentChordIndex];
+                score.rhythm.pattern = score.harmony.progression[currentChordIndex].rhythm;
+                visualState.valence = score.harmony.progression[currentChordIndex].valence;
+                visualState.arousal = score.harmony.progression[currentChordIndex].arousal;
+
+                const musicalEvents = [];
+                if (isPlaying) {
+                    const midiEvents = engine.generateMicrotonalMIDI(score.harmony.chord);
+                    midiEvents.forEach(event => {
+                        event.note.arousal = score.emotional.arousal;
+                        musicalEvents.push(event);
+                    });
+                    if (score.rhythm.pattern.pattern[Math.floor(time / 150) % score.rhythm.pattern.pattern.length] === 1) {
+                        musicalEvents.push({
+                            type: 'rhythmHit',
+                            velocity: 0.6,
+                            note: { arousal: score.emotional.arousal }
+                        });
+                    }
+                }
+
+                renderer.update(score, time, musicalEvents);
+                renderer.draw();
+                requestAnimationFrame(animate);
+            }
+
+            requestAnimationFrame(animate);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+{
+  "co_id": "co:uno_gurdjeff3_t2056_t2060_yawning__t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gurdjeff3_t2056_t2060_yawning_pump",
+  "turn_index": 0,
+  "lineage": "Gurdjieffian",
+  "student_state": "seeking_practical_mechanism",
+  "behavior_tags": [
+    "conceptual_inquiry",
+    "instruction_seeking"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_01",
+    "function_name": "RM_01",
+    "mechanism_shape": "SYSTEM_DYNAMICS",
+    "teaching_actions": [
+      "defines_yawning_as_pump",
+      "qualifies_connection",
+      "links_yawning_to_switching"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.65,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_04",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "go_along_compliantly",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The definition/qualification works: yawning as pump (mechanical function), qualifies: connection (pumping energy between accumulators), links: yawning to switching. The student asks mechanism question (seeking practical mechanism), which shows they understand: yawning = connects accumulators (mechanism). They'll likely accept the definition/qualification. Single-turn episode: mechanism question → definition/qualification → complete. Hypothesis: yawning mechanism definitions lead to compliance in single-turn episodes—testable by tracking whether yawning mechanism definitions end episodes.",
+  "accumulated_insight": "T1: Student asks mechanism question ('When a man yawns, does he connect with the other accumulator?')—seeking practical mechanism via conceptual inquiry and instruction seeking. They understand: yawning = connects accumulators (mechanism). The system_dynamics mechanism defines: yawning as pump (mechanical function), qualifies: connection (pumping energy between accumulators), links: yawning to switching. Pattern: mechanism question → definition/qualification → [complete]. Low confidence because mechanism definitions can lead to compliance or deeper questions.",
+  "abstract_pattern": "",
+  "visible_response": "Not every time... Besides, yawning\nis pumping energy, it is not necessarily switching over, although a really\ngood yawn may produce a switch over when necessary.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:sufi-comparative-analysis",
+    "ro:steiner-tantraloka-parallels"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

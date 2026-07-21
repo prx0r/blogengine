@@ -1,0 +1,302 @@
+{
+  "ro_id": "ro:ksemaraja-pratyabhijnahrdayam",
+  "schema_version": 1,
+  "title": "Pratyabhijñāhṛdayam — The Heart of the Recognition Doctrine",
+  "subtitle": "Kṣemarāja's 20 sutras on the nature of consciousness, its contraction into individuality, and the path of recognition",
+  "family": "trika-text",
+  "status": "draft",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "Kṣemarāja's concise summary of the entire Pratyabhijñā (Recognition) philosophy — 20 sutras that define consciousness, explain how it becomes limited, and show how to recognize its true nature.",
+    "scope": "All 20 sutras of the Pratyabhijñāhṛdayam with Jaideva Singh's translation and commentary. Connected to the Tantrāloka's 36 tattvas, the three upāyas, and the tetrahedron framework.",
+    "traditions": ["trika", "kashmir_shaivism", "pratyabhijna", "tantra"]
+  },
+  "sources": [
+    {
+      "source_id": "pratyabhijnahrdayam-singh",
+      "tier": 1,
+      "label": "Kṣemarāja. Pratyabhijñāhṛdayam: The Secret of Recognition. Translated by Jaideva Singh, Motilal Banarsidass, 1963.",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": ["full_text", "translation", "commentary"],
+      "sections_affected": ["all_sutras"],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "sutra_1",
+      "subsection": "consciousness_as_the_ground",
+      "kind": "source",
+      "text": "Sūtra 1: svatantrā cid anuttarā |
+Consciousness is absolutely free and independent, supreme beyond all. It is self-luminous (prakāśa) and not dependent on any other for its existence or awareness. It is the ultimate ground of all manifestation.",
+      "source_ids": ["pratyabhijnahrdayam-singh"],
+      "topics": ["consciousness", "svatantrya", "prakasa", "freedom"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "sutra_2",
+      "subsection": "consciousness_is_both_light_and_awareness",
+      "kind": "source",
+      "text": "Sūtra 2: sā svabhāva-śakti-vimarśa-mayī |
+Consciousness consists of the innate power of reflective awareness (vimarśa). It is not merely light (prakāśa) but also awareness of its own light. This self-awareness is its power — not an added property but its very nature.",
+      "source_ids": ["pratyabhijnahrdayam-singh"],
+      "topics": ["vimarsha", "self-awareness", "shakti", "reflection"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "sutra_3",
+      "subsection": "the_five_powers",
+      "kind": "source",
+      "text": "Sūtra 3: śakti-bhedāt pañca-pramātra-vāhya-cakra-sthitā |
+Through the differentiation of Her powers, consciousness appears in the five-fold circle of perceivership, ranging from the limited (paśu) to the supreme (Śiva). The same consciousness operates at five levels: waking (jāgrat), dreaming (svapna), deep sleep (suṣupti), the fourth (turiya), and beyond the fourth (turyātīta).",
+      "source_ids": ["pratyabhijnahrdayam-singh"],
+      "topics": ["five_powers", "pramatri", "states_of_consciousness", "turiya"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "sutra_4-7",
+      "subsection": "contraction_into_individuality",
+      "kind": "source",
+      "text": "Sūtra 4: tatra paśoḥ parimita-prathama-ābhāsāt saṅkucitā prakriyā |
+In the case of the limited individual (paśu), the universal power of consciousness contracts into limited forms of knowing and acting, due to the initial appearance of limitation (parimita-prathama-ābhāsa).",
+      "source_ids": ["pratyabhijnahrdayam-singh"],
+      "topics": ["contraction", "sankoca", "limitation", "individuality"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "sutra_4-7",
+      "subsection": "the_five_coverings",
+      "kind": "source",
+      "text": "Sūtra 5: tathā ca kalā-vidyā-rāga-kāla-niyati-rūpaiḥ pañcabhiḥ kañcukair upātta-vivekaḥ |
+(As a result of that initial contraction) the limited individual becomes differentiated by the five coverings (kañcukas): limited agency (kalā), limited knowledge (vidyā), craving (rāga), time (kāla), and necessity (niyati). The pure subject, which is inherently all-powerful and all-knowing, now experiences itself as partial, constrained, and bound.",
+      "source_ids": ["pratyabhijnahrdayam-singh"],
+      "topics": ["kancukas", "five_coverings", "limitation", "maya"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_006",
+      "section": "sutra_4-7",
+      "subsection": "the_puryastaka_subtle_body",
+      "kind": "source",
+      "text": "Sūtra 6: tataḥ puryaṣṭakam |
+Then arises the puryaṣṭaka (the city of eight) — the subtle body composed of the five sense-faculties, the five action-faculties, the five vital breaths, the mind, the intellect, the ego-principle, and the material substrate (prakṛti). This is the vehicle through which the limited soul experiences the world.",
+      "source_ids": ["pratyabhijnahrdayam-singh"],
+      "topics": ["puryastaka", "subtle_body", "sukshma_sharira", "karma"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_007",
+      "section": "sutra_4-7",
+      "subsection": "gross_body_and_world",
+      "kind": "source",
+      "text": "Sūtra 7: tataḥ sthūla-śarīra-jagad-ādi |
+From the subtle body arises the gross body and the entire manifest world. The same consciousness that is absolutely free in itself thus appears as the limited individual, caught in the cycle of birth, death, and rebirth, identifying with body, mind, and world.",
+      "source_ids": ["pratyabhijnahrdayam-singh"],
+      "topics": ["gross_body", "manifestation", "samsara", "world"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_008",
+      "section": "sutra_8-11",
+      "subsection": "the_five_acts_of_siva",
+      "kind": "source",
+      "text": "Sūtra 8: kṣobhakāt sṛṣṭiḥ |
+From the power of agitation (kṣobha) arises creation (sṛṣṭi). The first movement of consciousness from its undifferentiated state into manifestation is a vibration, a pulse, a tremor — not a mechanical process but a conscious act of freedom.",
+      "source_ids": ["pratyabhijnahrdayam-singh"],
+      "topics": ["srishti", "creation", "kshobha", "spanda"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_009",
+      "section": "sutra_8-11",
+      "subsection": "preservation_and_dissolution",
+      "kind": "source",
+      "text": "Sūtra 9: sthiti-laya-nigrahānugrahāḥ |
+From the same power arise preservation (sthiti), dissolution (laya), veiling (nigraha), and grace (anugraha). These are the five acts of Śiva — the cosmic functions through which consciousness creates, sustains, dissolves, conceals, and reveals itself. All five are expressions of the same freedom.",
+      "source_ids": ["pratyabhijnahrdayam-singh"],
+      "topics": ["five_acts", "pancha_kritya", "grace", "veiling", "preservation"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_010",
+      "section": "sutra_8-11",
+      "subsection": "the_power_of_grace",
+      "kind": "source",
+      "text": "Sūtra 10: saṅkṣepāt tāmasaḥ |
+The veiling power (nigraha) is the contraction of consciousness into limited forms — the tamasic aspect that creates the appearance of separation. This is not evil but a necessary phase of the divine play.",
+      "source_ids": ["pratyabhijnahrdayam-singh"],
+      "topics": ["nigraha", "veiling", "tamas", "maya"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_011",
+      "section": "sutra_8-11",
+      "subsection": "the_power_of_grace",
+      "kind": "source",
+      "text": "Sūtra 11: vikāśāt sāttviko 'nugrahaḥ |
+Grace (anugraha) is the expansion of consciousness — the sattvic power through which the individual recognizes its true nature. Grace is not an external gift but the innate freedom of consciousness to reveal itself to itself.",
+      "source_ids": ["pratyabhijnahrdayam-singh"],
+      "topics": ["anugraha", "grace", "sattva", "recognition"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_012",
+      "section": "sutra_12",
+      "subsection": "the_means_of_recognition",
+      "kind": "source",
+      "text": "Sūtra 12: tataḥ param aśeṣa-pada-yānaḥ śāmbhava-upāyaḥ |
+The supreme means (śāmbhavopāya) is the method of direct recognition — without effort, without technique, without gradual practice. It is the path of will (icchā), where the individual simply recognizes that they have never been other than Śiva. This is the highest means.",
+      "source_ids": ["pratyabhijnahrdayam-singh"],
+      "topics": ["sambhavopaya", "supreme_means", "recognition", "will"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_013",
+      "section": "sutra_13",
+      "subsection": "the_empowered_means",
+      "kind": "source",
+      "text": "Sūtra 13: eka-citta-priveśāt tu śāktopāyaḥ |
+The empowered means (śāktopāya) is the method of working through purified thought. Through sustained contemplation (bhāvanā) and the penetration of awareness into its own nature, the practitioner gradually recognizes the truth. This is the path of knowledge (jñāna).",
+      "source_ids": ["pratyabhijnahrdayam-singh"],
+      "topics": ["saktopaya", "empowered_means", "knowledge", "contemplation"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_014",
+      "section": "sutra_14",
+      "subsection": "the_individual_means",
+      "kind": "source",
+      "text": "Sūtra 14: bheda-śūnyaḥ pratipatteḥ āṇava-upāyaḥ |
+The individual means (āṇavopāya) is the method that works through the individual's own limited faculties. It uses external supports — mantra, breath control, ritual, worship — as a ladder to ascend from the limited to the unlimited.",
+      "source_ids": ["pratyabhijnahrdayam-singh"],
+      "topics": ["anavopaya", "individual_means", "action", "mantra", "kriya"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_015",
+      "section": "sutra_15",
+      "subsection": "the_helper_the_guru",
+      "kind": "source",
+      "text": "Sūtra 15: śaktipātaḥ guravo grahaṇe |
+The descent of grace (śaktipāta) from the Guru enables the receptivity necessary for recognition. The Guru is not the cause of liberation but the occasion for the individual's own innate grace to descend. Śaktipāta is the awakening of the power that was always present but dormant.",
+      "source_ids": ["pratyabhijnahrdayam-singh"],
+      "topics": ["saktipata", "guru", "grace", "initiation"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_016",
+      "section": "sutra_16",
+      "subsection": "recognition_is_remembering",
+      "kind": "source",
+      "text": "Sūtra 16: pañca-pramātr-abhedāt tad-vīkṣaṇān mokṣaḥ |
+Liberation (mokṣa) is the recognition that the five levels of perceivership are not separate from consciousness. By seeing through the apparent divisions — from the bound individual to Śiva — one realizes that all are forms of the same consciousness. Liberation is not a new state but the removal of the false distinction.",
+      "source_ids": ["pratyabhijnahrdayam-singh"],
+      "topics": ["moksha", "liberation", "recognition", "five_levels"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_017",
+      "section": "sutra_17",
+      "subsection": "the_means_to_recognition",
+      "kind": "source",
+      "text": "Sūtra 17: tad-apāye dvayor-laya-nimitta-vidhṛtau saṁśaya-vyatirekāt tadātma-lābhaḥ |
+When the sense of separation (dvaya) dissolves, and the support of the two (subject-object) is removed, the Self realizes itself through the removal of doubt. Self-realization is not the acquisition of something new but the natural consequence of the removal of misidentification.",
+      "source_ids": ["pratyabhijnahrdayam-singh"],
+      "topics": ["self-realization", "subject_object", "doubt", "removal"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_018",
+      "section": "sutra_18",
+      "subsection": "unification_of_means_and_goal",
+      "kind": "source",
+      "text": "Sūtra 18: tat-phale prāpta-prabhutve sva-prabhu-āśrayeṇa tad-upāya-ābhāsaḥ |
+When the fruit (of liberation) is attained, the practitioner attains mastery through reliance on the supreme Lord. The means and the goal are no longer separate — the path that led there and the destination are recognized as one. This is the state of jīvanmukti (liberation while living).",
+      "source_ids": ["pratyabhijnahrdayam-singh"],
+      "topics": ["jivanmukti", "liberated_living", "means_and_goal", "mastery"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_019",
+      "section": "sutra_19",
+      "subsection": "the_attainment",
+      "kind": "source",
+      "text": "Sūtra 19: tad-ātma-lābha-svātantryeṣu ca abhyupāya-saṅkoca-vimarśāt tathā-upalabdhiḥ |
+Through reflection on the contraction of the means, one attains self-realization, freedom, and effortless mastery. The very recognition that one was never bound is itself the supreme attainment.",
+      "source_ids": ["pratyabhijnahrdayam-singh"],
+      "topics": ["self-realization", "freedom", "contraction", "reflection"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_020",
+      "section": "sutra_20",
+      "subsection": "the_crown_of_teachings",
+      "kind": "source",
+      "text": "Sūtra 20: tad-aśeṣa-pada-yāna-paramārtha-sāra-tattva-nirūpaṇam |
+Thus concludes the determination of the essence of all paths and the supreme truth of the entire doctrine. The 20 sutras together form a complete path — from the nature of consciousness, through its contraction, to the means of recognizing what one has always been.",
+      "source_ids": ["pratyabhijnahrdayam-singh"],
+      "topics": ["conclusion", "essence", "complete_path", "recognition"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_021",
+      "section": "commentary",
+      "subsection": "tetrahedron_mapping",
+      "kind": "commentary",
+      "text": "The 20 sutras map to the tetrahedron framework. Sutra 1 (consciousness as free and supreme) corresponds to the apex — the 38th principle. Sutras 2-3 (self-awareness and its powers) correspond to the intellect vertex. Sutras 4-7 (contraction through kañcukas) map to the soul vertex, and sutras 8-11 (the five acts) map to the manifest world vertex. Sutras 12-15 (the three upāyas and grace) describe the path down the vertical axis, and sutras 16-20 (recognition and liberation) describe the return up the vertical axis. The entire passage from supreme consciousness through limitation to recognition is a complete circuit of the tetrahedron.",
+      "source_ids": ["pratyabhijnahrdayam-singh"],
+      "topics": ["tetrahedron", "mapping", "vertical_axis", "circuit"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_022",
+      "section": "commentary",
+      "subsection": "tantraloka_mapping",
+      "kind": "commentary",
+      "text": "The 20 sutras map to key concepts in the Tantrāloka: The three upāyas of sutras 12-14 correspond to Tantrāloka Āhnikas 1-4. The kañcukas of sutra 5 are detailed in Tantrāloka Āhnika 9. The five acts of sutra 9 are expanded in Tantrāloka Āhnika 6. The puryaṣṭaka of sutra 6 is explained in Tantrāloka Āhnika 8. The recognition itself (sutras 16-20) is the subject of the entire Tantrāloka, which describes the unfolding of consciousness and its return to itself.",
+      "source_ids": ["pratyabhijnahrdayam-singh"],
+      "topics": ["tantraloka", "mapping", "ahnika", "correspondence"],
+      "status": "active"
+    }
+  ],
+  "coverage": {
+    "all_sutras": {
+      "status": "comprehensive",
+      "sources": ["pratyabhijnahrdayam-singh"],
+      "passage_count": 20,
+      "estimated_completeness": 0.9,
+      "gaps": ["Full Jaideva Singh commentary not included; needs expansion with his detailed notes"]
+    },
+    "tetrahedron_mapping": {
+      "status": "good",
+      "sources": ["pratyabhijnahrdayam-singh"],
+      "passage_count": 1,
+      "estimated_completeness": 0.7,
+      "gaps": ["Further refinement of the mapping possible"]
+    },
+    "tantraloka_mapping": {
+      "status": "good",
+      "sources": ["pratyabhijnahrdayam-singh"],
+      "passage_count": 1,
+      "estimated_completeness": 0.6,
+      "gaps": ["Need to cross-reference specific Āhnika passages"]
+    }
+  },
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-20",
+      "type": "initial",
+      "summary": "Initial RO covering all 20 sutras of Kṣemarāja's Pratyabhijñāhṛdayam with Jaideva Singh's translation. Includes tetrahedron and Tantrāloka mappings.",
+      "sources_added": ["pratyabhijnahrdayam-singh"],
+      "passage_count": 22,
+      "status": "draft"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "co_id": "co:uno_therapy3_t874_t878_portrayal_n_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3_t874_t878_portrayal_negation",
+  "turn_index": 0,
+  "lineage": "Therapeutic",
+  "student_state": "avoidant_denial",
+  "behavior_tags": [
+    "negation",
+    "somatic_shutdown"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_04",
+    "function_name": "UM_04",
+    "mechanism_shape": "NONE",
+    "teaching_actions": [
+      "points_to_reality",
+      "re-instructs_somatic_form"
+    ],
+    "traps_avoided": [
+      "vagueness"
+    ],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.35,
+      "depth": 0.38,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_02",
+      "depth_discrete": "PD_02",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "'It didn't really happen'—negation defense. Just portrayed father's abuse but now erasing it. Teacher names: 'erasing your own experience.' Makes defense visible. Can't feel what you're negating. Confronting defense directly.",
+  "accumulated_insight": "T1: Student negates portrayal experience: 'It didn't really happen.' Teacher confronts negation: 'You're erasing your own experience.' Names defense. Predicting resist_intellectually as defense challenged.",
+  "abstract_pattern": "",
+  "visible_response": "And yet there was a fist there.\nIf you form the fist again, what do you notice feeling when you let yourself feel your power?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

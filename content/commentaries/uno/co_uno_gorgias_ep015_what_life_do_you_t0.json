@@ -1,0 +1,59 @@
+{
+  "co_id": "co:uno_gorgias_ep015_what_life_do_you_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gorgias_ep015_what_life_do_you_defend",
+  "turn_index": 0,
+  "lineage": "Socratic",
+  "student_state": "cooperative_engagement",
+  "behavior_tags": [
+    "asserts_value"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_03",
+    "function_name": "UM_03",
+    "mechanism_shape": "CONSTRAINT_COLLAPSE",
+    "teaching_actions": [
+      "sets_extreme_case"
+    ],
+    "traps_avoided": [
+      "category_conflation"
+    ],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.62,
+      "attunement": 0.8,
+      "style": 0.5,
+      "depth": 0.62,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_03",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_03",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "resist_intellectually",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "Start with the leaky-jar image to make 'endless indulging' feel like punishment. Expect initial pushback; if they defend, sharpen the cost (never filled, constant labor) to crack pleasure=good.",
+  "accumulated_insight": "T1: Student endorses 'life of indulged desires' as best?cooperative engagement via asserts_value. They understand: pleasure = good. The constraint_collapse/UM_03 move sets an extreme case (leaky-jar life) to expose endless toil. Pattern: bold hedonist claim ? consequence test queued. Medium confidence because hedonist theses often resist until the toil is vivid.",
+  "abstract_pattern": "",
+  "visible_response": "And is this life admirable because it is pleasant, or for some other reason?",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:proclus-elements",
+    "ro:platonism-decoded",
+    "ro:chaldean-oracles"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

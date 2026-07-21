@@ -1,0 +1,13 @@
+name = "youtube-proxy"
+main = "youtube-proxy.ts"
+compatibility_date = "2025-07-01"
+
+# Bind a KV namespace for caching YouTube API responses.
+# Create it first: wrangler kv:namespace create "KV"
+kv_namespaces = [
+  { binding = "KV", id = "YOUR_KV_NAMESPACE_ID" }
+]
+
+# YouTube Data API key (set via wrangler secret put YOUTUBE_API_KEY)
+[vars]
+YOUTUBE_API_KEY = ""

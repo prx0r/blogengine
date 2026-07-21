@@ -1,0 +1,41 @@
+{
+  "work_id": "work:t2-pubmed-measuring-brain-potentials-of-imagination-linked-to-physiological-need",
+  "schema_version": 2,
+  "title": "Measuring brain potentials of imagination linked to physiological needs and motivational states.",
+  "authors": [
+    {
+      "name": "Proverbio, A M"
+    },
+    {
+      "name": "Pischedda, F"
+    }
+  ],
+  "identifiers": {
+    "pmid": "37007683",
+    "doi": "10.3389/fnhum.2023.1146789"
+  },
+  "publication": {
+    "journal": "Frontiers in human neuroscience",
+    "year": "2023"
+  },
+  "abstract": "While EEG signals reflecting motor and perceptual imagery are effectively used in brain computer interface (BCI) contexts, little is known about possible indices of motivational states. In the present study, electrophysiological markers of imagined motivational states, such as craves and desires were investigated. Event-related potentials (ERPs) were recorded in 31 participants during perception and imagery elicited by the presentation of 360 pictograms. Twelve micro-categories of needs, subdivided into four macro-categories, were considered as most relevant for a possible BCI usage, namely: primary visceral needs (e.g., hunger, linked to desire of food); somatosensory thermal and pain sensations (e.g., cold, linked to desire of warm), affective states (e.g., fear: linked to desire of reassurance) and secondary needs (e.g., desire to exercise or listen to music). Anterior N400 and centroparietal late positive potential (LPP) were measured and statistically analyzed. N400 and LPP were differentially sensitive to the various volition stats, depending on their sensory, emotional and motivational poignancy. N400 was larger to imagined positive appetitive states (e.g., play, cheerfulness) than negative ones (sadness or fear). In addition, N400 was of greater amplitude during imagery of thermal and nociceptive sensations than other motivational or visceral states. Source reconstruction of electromagnetic dipoles showed the activation of sensorimotor areas and cerebellum for movement imagery, and of auditory and superior frontal areas for music imagery. Overall, ERPs were smaller and more anteriorly distributed during imagery than perception, but showed some similarity in terms of lateralization, distribution, and category response, thus indicating some overlap in neural processing, as also demonstrated by correlation analyses. In general, anterior frontal N400 provided clear markers of subjects' physiological needs and motivational states, especially cold, pain, and fear (but also sadness, the urgency to move, etc.), than can signal life-threatening conditions. It is concluded that ERP markers might potentially allow the reconstruction of mental representations related to various motivational states through BCI systems.",
+  "phase_mapping": {
+    "phase": 10,
+    "phase_name": "Imaginal"
+  },
+  "bridge_tags": [
+    "mental-imagery",
+    "imagination",
+    "imaginal",
+    "perception",
+    "eeg/erp",
+    "erp-markers",
+    "brain-computer-interface-(bci)"
+  ],
+  "evaluation": "Quality pass v3 (score=47) \u2014 High-signal bridge paper for Imaginal.",
+  "assets": {
+    "pdf_path": null,
+    "nxml_path": null
+  },
+  "tier": 2
+}

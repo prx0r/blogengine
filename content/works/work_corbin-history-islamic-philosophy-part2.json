@@ -1,0 +1,60 @@
+{
+  "work_id": "work:corbin-history-islamic-philosophy-part2",
+  "schema_version": 1,
+  "title": "History of Islamic Philosophy, Part II",
+  "authors": [
+    {
+      "name": "Henry Corbin",
+      "author_id": "author:henry-corbin"
+    }
+  ],
+  "publication": {
+    "year": null,
+    "type": "book",
+    "language": "en"
+  },
+  "identifiers": {
+    "doi": null,
+    "openalex_id": null
+  },
+  "topics": [
+    "islamic_philosophy",
+    "iranian_philosophy",
+    "mulla_sadra",
+    "shiism"
+  ],
+  "tradition": [
+    "sufism",
+    "shii_islam",
+    "iranian_philosophy"
+  ],
+  "relations": [
+    {
+      "predicate": "part_of",
+      "target_id": "work:corbin-history-islamic-philosophy-part1",
+      "confidence": 1
+    }
+  ],
+  "assets": {
+    "pdf_path": "library/corbin/corbin-history-islamic-philosophy-part2.pdf",
+    "source_url": "https://web.archive.org/web/20100326193125/http://www.amiscorbin.com/textes/anglais/Hist_Iran_Phil_Corbin_p2.pdf"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "bronze",
+    "sha256": null,
+    "file_size_bytes": null,
+    "retrieved_at": "2026-07-11T07:05:00Z",
+    "validation_confidence": 0.95
+  },
+  "analysis": {
+    "summary": "Corbin's comprehensive history of Islamic philosophy, Part II. Covers later developments including Mulla Sadra and Shiite thought.",
+    "quality_score": 0.9,
+    "tier": 1,
+    "tier_label": "primary source"
+  },
+  "commentary_on": {},
+  "scholarly_contribution": {},
+  "relevance_to_ros": {},
+  "tier": 2
+}

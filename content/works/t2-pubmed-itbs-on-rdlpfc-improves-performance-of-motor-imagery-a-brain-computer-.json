@@ -1,0 +1,65 @@
+{
+  "work_id": "work:t2-pubmed-itbs-on-rdlpfc-improves-performance-of-motor-imagery-a-brain-computer-",
+  "schema_version": 2,
+  "title": "iTBS on RDLPFC improves performance of motor imagery: a brain-computer interface study combining EEG and fNIRS.",
+  "authors": [
+    {
+      "name": "Chen, Jialin"
+    },
+    {
+      "name": "Liu, Quan"
+    },
+    {
+      "name": "Chen, Gengbin"
+    },
+    {
+      "name": "Cai, Guiyuan"
+    },
+    {
+      "name": "Jiang, Junbo"
+    },
+    {
+      "name": "Yang, Xueru"
+    },
+    {
+      "name": "Tan, Chunqiu"
+    },
+    {
+      "name": "Zhang, Cailin"
+    },
+    {
+      "name": "Xu, Guangqing"
+    },
+    {
+      "name": "Lan, Yue"
+    }
+  ],
+  "identifiers": {
+    "pmid": "40745321",
+    "doi": "10.1186/s12984-025-01688-8"
+  },
+  "publication": {
+    "journal": "Journal of neuroengineering and rehabilitation",
+    "year": "2025"
+  },
+  "abstract": "Some individuals using brain-computer interfaces (BCIs) exhibit ineffective control during motor imagery-based BCI (MI-BCI) training. MI-BCI performance correlates with the activation in the frontoparietal attention network, premotor-parietal network, and supplementary motor area (SMA). This study aimed to enhance motor imagery ability and MI-BCI performance by modulating the excitability of the right dorsolateral prefrontal cortex (RDLPFC) through intermittent theta-burst stimulation (iTBS), inducing neuroplastic changes. Fifty-two healthy right-handed participants were randomly assigned to either the iTBS or sham group. They undertook two MI-BCI training sessions, with electroencephalography (EEG) and functional near-infrared spectroscopy (fNIRS) used to assess acute neuroplasticity changes. The intervention was administered between sessions. Corticospinal excitability and motor imagery vividness were assessed using single-pulse transcranial magnetic stimulation (spTMS) and the Kinesthetic and Visual Imagery Questionnaire-20 (KVIQ-20) before and following the trial. The iTBS group significantly improved motor state percentage (MSP). Significant \u00b5 event-related desynchronization (\u00b5-ERD) was observed at the F4 electrode in the iTBS group. Functional connectivity (FC) analyses revealed decreased connectivity among several electrodes during the post-intervention period. The hemodynamic response function (HRF) indicated significant activation in the right PMC and SMA, with reduced FC among motor areas. No significant differences in MEP, CSP, and KVIQ-20 scores were found between groups. iTBS targeting the RDLPFC may improve MI-BCI training performance and address the \"BCI inefficiency\" problem. RDLPFC stimulation induced changes in FC of brain regions associated with motor imagery and increased the activation of motor areas, suggesting that the RDLPFC could be a promising target for enhancing motor imagery and optimizing BCI systems.",
+  "phase_mapping": {
+    "phase": 10,
+    "phase_name": "Imaginal"
+  },
+  "bridge_tags": [
+    "mental-imagery",
+    "imagination",
+    "imaginal",
+    "perception",
+    "brain-computer-interface",
+    "electroencephalography",
+    "functional-near-infrared-spectroscopy"
+  ],
+  "evaluation": "Quality pass v3 (score=43) \u2014 High-signal bridge paper for Imaginal.",
+  "assets": {
+    "pdf_path": null,
+    "nxml_path": null
+  },
+  "tier": 2
+}

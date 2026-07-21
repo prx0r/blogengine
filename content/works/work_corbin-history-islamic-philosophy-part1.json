@@ -1,0 +1,60 @@
+{
+  "work_id": "work:corbin-history-islamic-philosophy-part1",
+  "schema_version": 1,
+  "title": "History of Islamic Philosophy, Part I",
+  "authors": [
+    {
+      "name": "Henry Corbin",
+      "author_id": "author:henry-corbin"
+    }
+  ],
+  "publication": {
+    "year": null,
+    "type": "book",
+    "language": "en"
+  },
+  "identifiers": {
+    "doi": null,
+    "openalex_id": null
+  },
+  "topics": [
+    "islamic_philosophy",
+    "iranian_philosophy",
+    "suhrawardi",
+    "ishraq"
+  ],
+  "tradition": [
+    "sufism",
+    "shii_islam",
+    "iranian_philosophy"
+  ],
+  "relations": [
+    {
+      "predicate": "part_of",
+      "target_id": "work:corbin-history-islamic-philosophy-part2",
+      "confidence": 1
+    }
+  ],
+  "assets": {
+    "pdf_path": "library/corbin/corbin-history-islamic-philosophy-part1.pdf",
+    "source_url": "https://web.archive.org/web/20080509183618/http://www.amiscorbin.com/textes/anglais/Hist_Iran_Phil_Corbin_part_I.pdf"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "bronze",
+    "sha256": null,
+    "file_size_bytes": null,
+    "retrieved_at": "2026-07-11T07:05:00Z",
+    "validation_confidence": 0.95
+  },
+  "analysis": {
+    "summary": "Corbin's comprehensive history of Islamic philosophy, focusing on the Iranian and Suhrawardian tradition. Part I covers the early period through Suhrawardi.",
+    "quality_score": 0.9,
+    "tier": 1,
+    "tier_label": "primary source"
+  },
+  "commentary_on": {},
+  "scholarly_contribution": {},
+  "relevance_to_ros": {},
+  "tier": 2
+}

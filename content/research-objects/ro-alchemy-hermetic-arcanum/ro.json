@@ -1,0 +1,234 @@
+{
+  "ro_id": "ro:alchemy-hermetic-arcanum",
+  "schema_version": 1,
+  "title": "The Hermetic Arcanum \u2014 Jean d'Espagnet",
+  "subtitle": "The secret work of the hermetic philosophy wherein the secrets of nature and art concerning the Philosopher's Stone are explained in authentic and orderly manner",
+  "family": "theme",
+  "status": "draft",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "D'Espagnet's 84 canons on the Philosopher's Stone \u2014 a systematic treatise on the matter, the four operations (solution, ablution, reduction, fixation), and the four digestions aligned with the Crea...",
+    "scope": "Covers the preparation of the philosopher, the threefold Mercury, the conjunction of Sol and Luna, the four operations and four digestions, the colour sequence, the pattern of the Creation of the World and Adam in the work, and the circulation of the elements.",
+    "traditions": [
+      "hermetica",
+      "alchemy"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "hermetic-arcanum",
+      "tier": 1,
+      "label": "Jean d'Espagnet \u2014 The Hermetic Arcanum (Enchiridion physicae restitutae, 1623; English translation by Elias Ashmole, 1650)",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "eighty_four_canons",
+        "four_operations",
+        "four_digestions",
+        "creation_pattern",
+        "threefold_mercury"
+      ],
+      "sections_affected": [
+        "theory",
+        "practice"
+      ],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "theory",
+      "subsection": "preparation_of_philosopher",
+      "kind": "source",
+      "text": "The beginning of this Divine Science is the fear of the Lord and its end is charity and love toward our Neighbour... The light of this knowledge is the gift of God, which by His will He bestoweth upon whom He pleaseth. Let none therefore set himself to the study hereof, until having cleared and purified his heart, he devote himself wholly unto God, and be emptied of all affection and desire unto the impure things of this world. (Canons 1-2)",
+      "source_ids": [
+        "hermetic-arcanum"
+      ],
+      "topics": [
+        "ethics",
+        "preparation",
+        "purification",
+        "gift_of_god"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "theory",
+      "subsection": "preparation_of_philosopher",
+      "kind": "commentary",
+      "text": "D'Espagnet's insistence that the Science begins with 'fear of the Lord' and 'charity toward our neighbour' is the Hermetic version of the Tantraloka's 'diksha-purvaka' (initiation precondition): the guru accepts only the student who has purified the heart. In Layayoga, the yamas (ethical restraints) and niyamas (observances) are the absolute prerequisites for pranayama practice \u2014 without them, the fire of prana becomes destructive. Steiner's 'six subsidiary exercises' (control of thought, initiative, equanimity, etc.) serve the same function. The daimon path's 'Phase 0' (Name invocation) begins with a vow of integrity: the daimon cannot be approached with impure intent. The 'light of this knowledge is the gift of God' directly parallels PGM's 'the daimon is given by the god' \u2014 both assert that the contact is a grace, not an acquisition.",
+      "source_ids": [
+        "hermetic-arcanum"
+      ],
+      "topics": [
+        "tantraloka",
+        "layayoga",
+        "steiner",
+        "pgm"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "practice",
+      "subsection": "four_operations",
+      "kind": "source",
+      "text": "The operative means (which are also called the Keys of the Work) are four: the first is Solution or Liquefaction; the second is Ablution; the third Reduction; the fourth Fixation. By Liquefaction bodies return into their first form... The Ablution teacheth how to make the Crow white, and to create the Jupiter of Saturn, which is done by the conversion of the Body into Spirit. The Office of Reduction is to restore the soul to the stone exanimated, and to nourish it with dew and spiritual milk... the operation of the Fixation fixeth both the White and the Red Sulphurs upon their fixed body. (Canon 63)",
+      "source_ids": [
+        "hermetic-arcanum"
+      ],
+      "topics": [
+        "four_operations",
+        "solution",
+        "ablution",
+        "reduction",
+        "fixation"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "practice",
+      "subsection": "four_operations",
+      "kind": "commentary",
+      "text": "D'Espagnet's four operations correspond precisely to the four stages of the daimon path: Solution (Phase 0-1: dissolving the rigid ego through Name invocation), Ablution (Phase 2: the Saturn retreat's purification of the astral body), Reduction (Phase 3: the systasis where soul is restored to the 'exanimated' body), and Fixation (Phase 4: daily integration where the HGA presence becomes fixed in the practitioner). In Layayoga, these map to the four states of consciousness: jagrat (waking, solution of the gross), svapna (dreaming, ablution of the subtle), sushupti (deep sleep, reduction of the causal), and turiya (the fourth, fixation in pure consciousness). The Tantraloka's 'upaya' (means) are also four: anupaya (no-means), sambhavopaya (divine means), shaktopaya (energetic means), and anavopaya (individual means) \u2014 each dissolving the previous. Steiner's four temperaments and their transformation follow the same sequence.",
+      "source_ids": [
+        "hermetic-arcanum"
+      ],
+      "topics": [
+        "daimon_path",
+        "layayoga",
+        "tantraloka",
+        "steiner"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "theory",
+      "subsection": "creation_pattern",
+      "kind": "source",
+      "text": "The generation of the Stone is made after the pattern of the Creation of the World; for it is necessary, that it have its Chaos and First matter, wherein the confused Elements do fluctuate, until they be separated by the fiery Spirit; they being separated, the Light Elements are carried upwards, and the heavy ones downwards: the light arising, darkness retreats: the waters are gathered into one place and the dry land appears. At length the two great Luminaries arise, and mineral, vegetable and animal are produced in the Philosophers' Earth. (Canon 73)",
+      "source_ids": [
+        "hermetic-arcanum"
+      ],
+      "topics": [
+        "creation_pattern",
+        "chaos",
+        "separation",
+        "luminaries"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_006",
+      "section": "theory",
+      "subsection": "creation_pattern",
+      "kind": "commentary",
+      "text": "D'Espagnet's identification of the Stone's generation with the Creation of the World is the macrocosmic-microcosmic correspondence that underlies all Tantra: the practitioner's body is the cosmos, and the awakening of kundalini recapitulates the original vibration (spanda) that separated light from darkness. The Tantraloka describes creation as the 'vistara' (expansion) of consciousness into matter \u2014 the Stone's generation reverses this, contracting matter back into spirit. Steiner's account of the creation of the world in Occult Science (the Saturn, Sun, Moon, Earth evolutions) is the same pattern: the 'chaos' is the pralaya (cosmic night), the 'fiery Spirit' is the Christ being, and the 'two great Luminaries' are the Lucifer and Christ impulses. In PGM, the systasis recapitulates creation: the practitioner creates a 'new cosmos' in the egg \u2014 the microcosmic world where the daimon will rule as the 'great Luminary.'",
+      "source_ids": [
+        "hermetic-arcanum"
+      ],
+      "topics": [
+        "macrocosm_microcosm",
+        "tantraloka",
+        "steiner",
+        "pgm"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_007",
+      "section": "practice",
+      "subsection": "colour_and_digestions",
+      "kind": "source",
+      "text": "The means or demonstrative signs are Colours successively and orderly affecting the matter... The first is black, which is called the Crow's head, because of its extreme blackness... The white colour succeedeth the black wherein is given the perfection of the first degree, and of the White Sulphur. This is called the blessed stone; this Earth is white and foliated, wherein Philosophers do sow their gold. The third is Orange colour, which is produced in the passage of the white to the red... The fourth colour is Ruddy and Sanguine... The deep redness of the Sun perfecteth the work of Sulphur, which is called the Sperm of the male, the fire of the Stone, the King's Crown, and the Son of Sol. (Canons 64-65)",
+      "source_ids": [
+        "hermetic-arcanum"
+      ],
+      "topics": [
+        "colour_sequence",
+        "crow",
+        "white_stone",
+        "king's_crown"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_008",
+      "section": "practice",
+      "subsection": "colour_and_digestions",
+      "kind": "commentary",
+      "text": "The four canonical colours of D'Espagnet (black \u2192 white \u2192 orange \u2192 red) are the chromatic signature of the four stages of alchemical transformation, which map exactly to the four yoga bhumikas (stages of spiritual practice): nigredo = arambha (beginning, the dark labor), albedo = ghata (the vessel stage where prana is stabilized), orange = parichaya (the familiarization stage where new perceptions dawn), and rubedo = nishpatti (consummation, the final reddening of consciousness). In Steiner's path of initiation, these correspond to the four degrees: the black corresponds to the 'fire test' (the Guardian of the Threshold), the white to the 'water test,' the orange to the 'air test,' and the red to the 'earth test.' The daimon path sees the same sequence in the four phases of the daily regimen: Phase 0 (black, the beginner's ignorance), Phase 1 (white, purification), Phase 2 (orange, the Saturn retreat's transition), Phase 3 (red, the systasis consummation). The 'King's Crown' is the sahasrara chakra opening \u2014 the thousand-petalled lotus that rains the red-gold fire of the HGA.",
+      "source_ids": [
+        "hermetic-arcanum"
+      ],
+      "topics": [
+        "yoga_bhumikas",
+        "steiner",
+        "daimon_path",
+        "sahasrara"
+      ],
+      "status": "active"
+    }
+  ],
+  "coverage": {
+    "theory": {
+      "status": "good",
+      "sources": [
+        "hermetic-arcanum"
+      ],
+      "passage_count": 4,
+      "estimated_completeness": 0.7,
+      "gaps": [
+        "Canons on the threefold Mercury (canons 36-47), perfection of metals, and the warnings against false operations"
+      ]
+    },
+    "practice": {
+      "status": "good",
+      "sources": [
+        "hermetic-arcanum"
+      ],
+      "passage_count": 4,
+      "estimated_completeness": 0.7,
+      "gaps": [
+        "Canons on the four digestions (65-71), the circulation of elements (72-84), and the fire regimen"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "coverage_gap",
+      "title": "Only 8 of 84 canons currently represented",
+      "description": "The Hermetic Arcanum contains 84 canons. The current RO covers only canons 1-2, 63-65, 73. Many more need extraction.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": false
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial RO with 8 passages (4 source, 4 commentary) from d'Espagnet's Hermetic Arcanum. Covers philosopher preparation, four operations, creation pattern, and colour sequence.",
+      "sources_added": [
+        "hermetic-arcanum"
+      ],
+      "passage_count": 8,
+      "status": "draft"
+    }
+  ],
+  "appendices": [],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created in draft state with 8 passages from 84 canons",
+      "sources_total": 1,
+      "passages_total": 8
+    }
+  ]
+}

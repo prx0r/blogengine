@@ -1,0 +1,54 @@
+{
+  "co_id": "co:uno_therapy3_t171_t183_self_tortur_t3",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3_t171_t183_self_torture_distinction",
+  "turn_index": 3,
+  "lineage": "Therapeutic",
+  "student_state": "sadness",
+  "behavior_tags": [
+    "affect_labeling"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_02",
+    "function_name": "UM_02",
+    "mechanism_shape": "CAUSAL_CHAIN",
+    "teaching_actions": [
+      "establishes_causality",
+      "questions_motive"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.62,
+      "attunement": 0.5,
+      "style": 0.35,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_02",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "'Bad'—one word but admission. They FEEL bad when they call themselves stupid. Teacher makes it explicit: 'When you verbally abuse yourself, you make yourself feel bad.' Causality clear: abuse (input) → bad feeling (output). Then the question: 'Why do that to yourself?' This gives agency back. Not 'stop doing it' (command) but 'why do it?' (reflection). Makes self-attack visible as CHOICE with consequence. They're hurting themselves. Why? Watching if this produces tears (breakthrough) or defense (rationalization).",
+  "accumulated_insight": "T4: Student feels: 'Bad'—admits verbal abuse makes them feel bad. Teacher makes causal chain explicit: 'When you verbally abuse yourself, you make yourself feel bad. Why do that to yourself?' Links abuse → bad feeling → questions motivation. The 'why do that?' shifts from description to agency: YOU are doing this TO YOURSELF. Predicting surface_emotion continued as causality sinks in.",
+  "abstract_pattern": "",
+  "visible_response": "When you verbally abuse yourself, you make yourself feel bad.\nWhy do that to yourself?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

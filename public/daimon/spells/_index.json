@@ -1,0 +1,54 @@
+{
+  "tradition": "occult",
+  "topic": "daimon",
+  "section": "spells",
+  "description": "Magical spells and rituals related to daimon contact, guidance, protection, and theurgical practice.",
+  "sources": {
+    "PGM (Greek Magical Papyri)": {
+      "description": "The Greek Magical Papyri in Translation (Betz, 2nd ed.) — primary source for Greco-Egyptian ritual texts",
+      "file": "content/glossary/sources/books/pgm.txt (89,887 lines)",
+      "catalog": "content/glossary/pgm-catalog.json (150 spells)"
+    },
+    "Picatrix": {
+      "description": "Picatrix Liber Atratus (Greer/Warnock trans.) — medieval grimoire of astrological magic",
+      "files": [
+        "content/glossary/sources/books/Picatrix Liber Atratus Books 1 and 2.pdf",
+        "content/glossary/sources/books/Picatrix Liber Atratus Books 3 and 4.pdf"
+      ],
+      "catalog": "content/glossary/picatrix-catalog.json (35 operations)"
+    },
+    "Agrippa": {
+      "file": "content/glossary/sources/books/Agrippa - Three Books of Occult Philosophy.pdf",
+      "description": "Three Books of Occult Philosophy — Renaissance magical encyclopedia"
+    },
+    "Arbatel": {
+      "file": "content/glossary/sources/books/arbatel.txt",
+      "description": "Arbatel of Magic — Renaissance grimoire of spiritual magic"
+    },
+    "Liber 777": {
+      "file": "content/glossary/sources/books/Liber 777 Revised.pdf",
+      "description": "Liber 777 — Crowleyan correspondences"
+    }
+  },
+  "modern_reconstructions": {
+    "Agathos Daimon Liturgy": {
+      "file": "agathos-daimon-liturgy.md",
+      "author": "João Pedro Feliciano",
+      "description": "Modern reconstructed Greco-Egyptian ritual for invoking the Good Daimon, drawing on PGM and Coptic magical papyri sources"
+    }
+  },
+  "daimon_spells": {
+    "pgm": [
+      "pgm/pgm-i-1-42.json — Spell of Pnouthis for acquiring an assistant daimon",
+      "pgm/pgm-iii-494-611.json — Systasis to Helios (establish relationship with sun god)",
+      "pgm/pgm-iv-86-87.json — Phylactery against daimons",
+      "pgm/pgm-iv-1872-1927.json — Rite for driving out daimons",
+      "pgm/pgm-vii-478-490.json — Dream revelation (Hermes' wondrous victory charm)",
+      "pgm/pgm-vii-505-528.json — Meeting with your own daimon",
+      "pgm/pgm-vii-644-651.json — Prayer of invocation to the Good Daimon"
+    ],
+    "picatrix": [
+      "picatrix/picatrix-ring-of-saturn.json — Ring of Saturn for spirit communication"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+name = "re-rendering-atlas"
+main = ".next/standalone/server.js"
+compatibility_date = "2025-07-01"
+pages_build_output_dir = ".vercel/output/static"
+
+# ── Account ──────────────────────────────────────────────────
+account_id = "954612afb5a97bb15dddcdc70176813d"
+
+# ── D1: Atlas graph + Q&A + journal database ────────────────
+[[d1_databases]]
+binding = "ATLAS_DB"
+database_name = "atlas-db"
+database_id = "atlas-db-id"  # Set after `wrangler d1 create atlas-db`
+
+# ── R2: Source documents, exports ────────────────────────────
+[[r2_buckets]]
+binding = "ATLAS_R2"
+bucket_name = "atlas-sources"
+
+# ── Vectorize: Embedding search ──────────────────────────────
+[[vectorize_indexes]]
+binding = "ATLAS_VECTORIZE"
+index_name = "atlas-global"
+
+# ── Environment variables ────────────────────────────────────
+[vars]
+DEEPSEEK_API_KEY = ""
+ENVIRONMENT = "development"
+
+# ── D1 migrations ────────────────────────────────────────────
+# [[migrations]]
+# directory = "src/atlas/db/migrations"

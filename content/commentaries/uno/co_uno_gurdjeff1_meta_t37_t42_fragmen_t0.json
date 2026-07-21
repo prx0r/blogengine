@@ -1,0 +1,62 @@
+{
+  "co_id": "co:uno_gurdjeff1_meta_t37_t42_fragmen_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gurdjeff1_meta_t37_t42_fragments_and_scales",
+  "turn_index": 0,
+  "lineage": "Gurdjieffian",
+  "student_state": "seeking_concrete_example",
+  "behavior_tags": [
+    "requests_example",
+    "seeks_clarification"
+  ],
+  "pedagogy": {
+    "phase": "META",
+    "function_id": "UNKNOWN",
+    "function_name": "UNKNOWN",
+    "mechanism_shape": "STRUCTURAL_ANALOGY",
+    "teaching_actions": [
+      "gives_examples_of_fragments",
+      "states_central_difficulty",
+      "uses_analogy",
+      "provides_assembly_instruction"
+    ],
+    "traps_avoided": [
+      "conceptual_reification"
+    ],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.5,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "go_along_compliantly",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The structural model works: examples (building up energies, psychological side, machine explanation, world side), central difficulty (scale changes), analogy (geographical maps on different scales), assembly instruction (put together, correct scale). The student requested example (seeking concrete example), which shows they're seeking concrete example. They'll likely ask about scale next. Hypothesis: scale-related structural models trigger scale questions—testable by tracking whether scale examples lead to scale inquiries.",
+  "accumulated_insight": "T1: Student requests example ('Can you give an an example of what it means that it is taught in fragments?')—seeking concrete example via requests example and seeks clarification. They're seeking concrete example (fragments). The structural_analogy mechanism provides: examples (building up energies, psychological side, machine explanation, world side), central difficulty (scale changes), analogy (geographical maps on different scales, cut into pieces), assembly instruction (put together, correct scale, see which piece fits). Pattern: example request → structural model → [next: scale question]. Medium confidence because structural models typically lead to compliance, but scale-related examples may trigger scale questions.",
+  "abstract_pattern": "",
+  "visible_response": "Many things are taught like that: all about building up energies, the psychological\nside, the explanation of how the machine works, the side concerning the world and so\non.\nIt is very important to understand this. Only when you begin to understand how the\nscale changes will you be able to understand the system.\nAs I said, it is taught in\nfragments each of which is on a different scale.\nYou have to put them together and at\nthe same time correct the scale.\nIt is like several geographical maps, each on a different\nscale, cut into pieces.\nYou have to see which piece fits which, where the scale is very\ndifferent and where it is less different.\nThis is the only way to study this system.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:sufi-comparative-analysis",
+    "ro:steiner-tantraloka-parallels"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

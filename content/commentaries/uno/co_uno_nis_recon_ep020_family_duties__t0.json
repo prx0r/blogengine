@@ -1,0 +1,63 @@
+{
+  "co_id": "co:uno_nis_recon_ep020_family_duties__t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "nis_recon_ep020_family_duties_and_freedom",
+  "turn_index": 0,
+  "lineage": "Advaita",
+  "student_state": "ethical_dissonance",
+  "behavior_tags": [
+    "social_guilt",
+    "dualistic_framing"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_05",
+    "function_name": "RM_05",
+    "mechanism_shape": "SUBJECT_OBJECT_INVERSION",
+    "teaching_actions": [
+      "inverts_judgement",
+      "redefines_selfishness",
+      "provides_functional_reframe"
+    ],
+    "traps_avoided": [
+      "social_guilt"
+    ],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.62,
+      "attunement": 0.5,
+      "style": 0.35,
+      "depth": 0.62,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_02",
+      "depth_discrete": "PD_03",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The response mentions 'selfish because yourself'. But I'm noticing the student asked about social_guilt, dualistic_framing and I'm using subject_object_inversion. There's a gap between their question and my mechanism—is that gap intentional or am I missing something?",
+  "accumulated_insight": "Initial observation: Student in ethical_dissonance showing social_guilt, dualistic_framing. Beginning pattern tracking.",
+  "abstract_pattern": "",
+  "visible_response": "You are selfish now, because you take yourself to be this one body-mind and seek its security.\nTo discover your real nature is the end of selfishness, not its peak.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:upanishads",
+    "ro:yoga-vasistha",
+    "ro:bhagavad-gita",
+    "ro:yoga-sutras"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

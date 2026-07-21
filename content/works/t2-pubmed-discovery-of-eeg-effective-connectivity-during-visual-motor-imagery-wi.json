@@ -1,0 +1,41 @@
+{
+  "work_id": "work:t2-pubmed-discovery-of-eeg-effective-connectivity-during-visual-motor-imagery-wi",
+  "schema_version": 2,
+  "title": "Discovery of EEG effective connectivity during visual motor imagery with multi-scale symbolic transfer entropy.",
+  "authors": [
+    {
+      "name": "Zhou, Haobo"
+    },
+    {
+      "name": "Iramina, Keiji"
+    }
+  ],
+  "identifiers": {
+    "pmid": "41174212",
+    "doi": "10.1038/s41598-025-22143-7"
+  },
+  "publication": {
+    "journal": "Scientific reports",
+    "year": "2025"
+  },
+  "abstract": "Visual motor imagery (VMI) is an important component of motor imagery, with potential applications in brain-computer interfaces and motor rehabilitation due to its lower training cost compared to kinesthetic motor imagery (KMI). However, the neural mechanisms underlying VMI, particularly the effects of imagery hand and imagery perspective (first-person perspective, 1pp, vs. third-person perspective, 3pp) remain unclear. This study examines the effective connectivity of VMI EEG using multi-scale symbolic transfer entropy. Time-frequency analysis revealed prominent event-related synchronization (ERS) in the alpha and high-beta bands, while connectivity analysis emphasized strong information flow within the parieto-occipital network. Notably, hand effect dominant information flows were found between the motor and posterior parietal-occipital regions, while perspective suggested a more remarkable effect. 1pp imagery significantly enhanced top-down modulation of the occipital cortex, whereas 3pp imagery engaged the right posterior parietal region, suggesting stronger spatial localization processing. These findings provide novel insights into the distinct neural mechanisms of VMI and its potential applications in cognitive neuroscience and brain-machine engineering.",
+  "phase_mapping": {
+    "phase": 10,
+    "phase_name": "Imaginal"
+  },
+  "bridge_tags": [
+    "mental-imagery",
+    "imagination",
+    "imaginal",
+    "perception",
+    "connectivity-network",
+    "eeg",
+    "motor-imagery"
+  ],
+  "evaluation": "Quality pass v3 (score=48) \u2014 High-signal bridge paper for Imaginal.",
+  "assets": {
+    "pdf_path": null,
+    "nxml_path": null
+  },
+  "tier": 2
+}

@@ -1,0 +1,415 @@
+{
+  "episode_id": "the-world-between-worlds",
+  "episode_title": "The World Between Worlds",
+  "series": "mixed-traditions",
+  "episode_number": 1,
+  "version": "0.1.0",
+  "source_ros": [
+    "ro:corbin-mundus-imaginalis",
+    "ro:corbin-man-of-light"
+  ],
+  "source_docs": [
+    "The Man of Light in Iranian Sufism",
+    "Adventures in the Imaginal"
+  ],
+  "global_concepts": [
+    "Mundus Imaginalis",
+    "Active Imagination",
+    "Perfect Nature",
+    "Unus Ambo",
+    "Dhikr",
+    "Hurqalya"
+  ],
+  "mythos_filter": "hermetic-documentary",
+  "style_profile": "distillery-dark-gold",
+  "visual_direction": "Dark void background with gold wireframe geometry representing the ontological structure. Green accents (#00FF88) used specifically to denote the imaginal realm, the emerald cities, and the fire of spiritual transmutation. Pacing is slow, deliberate, allowing geometric transformations to breathe.",
+  "narration_voice": "en-GB-RyanNeural",
+  "estimated_duration_min": 10,
+  "segments": [
+    {
+      "segment_id": "seg-01-hook",
+      "label": "The Missing Middle",
+      "start_sec": 0,
+      "end_sec": 75,
+      "rhetorical_role": "hook",
+      "narration": "We are accustomed to thinking of the universe in binary terms. On one side, there is the hard, measurable world of matter. On the other, the pure, unformed realm of spirit. But what happens in the space between? When you dream, when you experience a profound archetype, when a vision strikes you with the force of reality—where do these events actually take place? They are not physical, yet they are not mere illusions. They possess a weight, a texture, a geography. The philosopher Henry Corbin argued that to understand the human soul, we must map this missing middle. We must explore the world between worlds.",
+      "visual": {
+        "type": "manim",
+        "scene_file": "missing_middle.py",
+        "scene_class": "MissingMiddle",
+        "description": "A dark void. At the bottom, a dense, rigid, dark grey 3D grid represents matter. At the top, a blinding, abstract, rapidly shifting point-cloud of white light represents pure spirit. Between them is a vast, empty dark space. Slowly, a delicate, glowing gold wireframe membrane begins to weave itself in the empty space, forming a complex, intermediate geometric lattice.",
+        "manim_duration_sec": 75,
+        "color_palette": "distillery-dark-gold"
+      },
+      "on_screen_text": [
+        {
+          "text": "The World Between Worlds",
+          "style": "title-serif",
+          "position": "center"
+        },
+        {
+          "text": "Matter",
+          "style": "label",
+          "position": "bottom-left"
+        },
+        {
+          "text": "Spirit",
+          "style": "label",
+          "position": "top-left"
+        },
+        {
+          "text": "The Imaginal",
+          "style": "label-emphasis",
+          "position": "center"
+        }
+      ],
+      "concepts": [
+        "Mundus Imaginalis",
+        "Ontological Intermediary"
+      ],
+      "quote_active": false,
+      "quote_text": null,
+      "quote_source": null
+    },
+    {
+      "segment_id": "seg-02-thesis",
+      "label": "The Geography of the Imaginal",
+      "start_sec": 75,
+      "end_sec": 150,
+      "rhetorical_role": "thesis",
+      "narration": "Corbin calls this intermediate region the Mundus Imaginalis, the 'alam al-mithal. It is crucial to distinguish the 'imaginal' from the 'imaginary'. The imaginary is the unreal, the fake, the product of mere fantasy. The imaginal, however, is a concrete, spiritual world. It is as real as the physical world, but perceived by a different organ. Corbin maps this as the 'eighth clime', a mystical Earth called Hurqalya, situated beyond our physical geography. It is the realm where what is bodily becomes spirit, and what is spiritual acquires a body. It is the suprasensory Orient, the true north of the soul.",
+      "visual": {
+        "type": "manim",
+        "scene_file": "geography_imaginal.py",
+        "scene_class": "GeographyImaginal",
+        "description": "A 3D coordinate system emerges. The Z-axis represents ontological density. The bottom is labeled 'Sensory Universe', the top 'Pure Spiritual Lights'. In the exact middle, a glowing golden sphere forms. Inside the sphere, Platonic solids (tetrahedron, cube, dodecahedron) rotate slowly. The sphere is labeled 'Mundus Imaginalis'. A compass rose appears, with the North arrow glowing bright green, pointing to the sphere.",
+        "manim_duration_sec": 75,
+        "color_palette": "distillery-dark-gold"
+      },
+      "on_screen_text": [
+        {
+          "text": "Mundus Imaginalis",
+          "style": "title-serif",
+          "position": "top"
+        },
+        {
+          "text": "'alam al-mithal",
+          "style": "subtitle",
+          "position": "below"
+        },
+        {
+          "text": "Imaginal ≠ Imaginary",
+          "style": "label-emphasis",
+          "position": "mid-right"
+        },
+        {
+          "text": "Hurqalya: The Eighth Clime",
+          "style": "label",
+          "position": "bottom-right"
+        }
+      ],
+      "concepts": [
+        "'alam al-mithal",
+        "Hurqalya",
+        "Suprasensory Orient"
+      ],
+      "quote_active": false,
+      "quote_text": null,
+      "quote_source": null
+    },
+    {
+      "segment_id": "seg-03-expansion",
+      "label": "The Inner Eye and the Emerald Light",
+      "start_sec": 150,
+      "end_sec": 220,
+      "rhetorical_role": "expansion",
+      "narration": "But how do we perceive this world? Not with our physical eyes, which are bound to the sensory universe. We perceive it through the 'active Imagination'. This is not passive daydreaming; it is a rigorous, visionary apperception. It requires the opening of the inner eye, the removal of the veil that darkens it. When this eye opens, the five physical senses are transmuted. And what does this inner eye see? Corbin, drawing on the mystic Shahid, describes a vision of pure green. Green is the color that outlasts the others. It is the light of the emerald cities of Hurqalya, reflecting suprasensory realities.",
+      "visual": {
+        "type": "manim",
+        "scene_file": "inner_eye.py",
+        "scene_class": "InnerEye",
+        "description": "A golden wireframe outline of an eye forms in the center. The pupil is initially a dark void. Slowly, the pupil ignites with a brilliant, pulsing green (#00FF88) geometric fractal. Rays of this green light project outward in a cone, intersecting with the golden Platonic solids from the previous scene. The solids react by emitting their own soft green glow, demonstrating the transmutation of perception.",
+        "manim_duration_sec": 70,
+        "color_palette": "distillery-dark-gold"
+      },
+      "on_screen_text": [
+        {
+          "text": "The Active Imagination",
+          "style": "title-serif",
+          "position": "top"
+        },
+        {
+          "text": "Visionary Apperception",
+          "style": "label",
+          "position": "top-right"
+        },
+        {
+          "text": "Green: The Color that Outlasts",
+          "style": "label-emphasis",
+          "position": "bottom-left"
+        }
+      ],
+      "concepts": [
+        "Active Imagination",
+        "Transmutation of Senses",
+        "Emerald Light"
+      ],
+      "quote_active": false,
+      "quote_text": null,
+      "quote_source": null
+    },
+    {
+      "segment_id": "seg-04-quote",
+      "label": "The Encounter in the Vault",
+      "start_sec": 220,
+      "end_sec": 300,
+      "rhetorical_role": "quote",
+      "narration": "In this imaginal realm, the seeker eventually encounters a specific presence. Corbin recounts a profound narrative of a seeker who wished to understand the mystery of Creation. He descended into a subterranean vault, filled with darkness and howling winds. Suddenly, a figure of breathtaking beauty appeared in his sleep and spoke to him. 'Take a lamp,' the figure said, 'and place it under a glass to shield it from the winds; then it will give thee light in spite of them.' The seeker, trembling, asked: 'Who then art thou?' The figure answered: 'I am thy Perfect Nature. If thou wishest to see me, call me by my name.'",
+      "visual": {
+        "type": "manim",
+        "scene_file": "vault_encounter.py",
+        "scene_class": "VaultEncounter",
+        "description": "The scene darkens. A large, inverted golden wireframe cone represents the subterranean vault. Inside, chaotic, dark grey particle winds swirl. A single, bright golden point of light (the lamp) appears, surrounded by a translucent, glowing green glass sphere (the shield). The winds break against the glass. The light expands, and from the light, a towering, elegant, complex golden wireframe humanoid figure (The Perfect Nature) slowly materializes, its geometry perfectly symmetrical and radiant.",
+        "manim_duration_sec": 80,
+        "color_palette": "distillery-dark-gold"
+      },
+      "on_screen_text": [
+        {
+          "text": "The Perfect Nature",
+          "style": "title-serif",
+          "position": "top"
+        },
+        {
+          "text": "'I am thy Perfect Nature.'",
+          "style": "quote-serif",
+          "position": "center"
+        },
+        {
+          "text": "Shihab al-Din Yahya Suhrawardi",
+          "style": "citation",
+          "position": "bottom-right"
+        }
+      ],
+      "concepts": [
+        "Perfect Nature",
+        "Guide of Light",
+        "Shakhs Nurani"
+      ],
+      "quote_active": true,
+      "quote_text": "'Take a lamp and place it under a glass to shield it from the winds... I am thy Perfect Nature. If thou wishest to see me, call me by my name.'",
+      "quote_source": "Henry Corbin, The Man of Light in Iranian Sufism"
+    },
+    {
+      "segment_id": "seg-05-contrast",
+      "label": "The Counterpart vs. The Shadow",
+      "start_sec": 300,
+      "end_sec": 375,
+      "rhetorical_role": "contrast",
+      "narration": "It is vital to understand what this Perfect Nature is not. It is not a psychological 'double', nor is it the Jungian shadow. The shadow belongs to the lower psyche, the dark envelope of the ego that must be burned away. The Perfect Nature is a celestial, transcendent counterpart. It is your angel, conjoined with your star. Corbin expresses their relationship through a mathematical formula: not one equals one, which is the trap of abstract monism where everything blurs into a single blob. But rather, one times one. Two distinct entities, perfectly reflecting each other, maintaining their boundaries while acting in absolute unity.",
+      "visual": {
+        "type": "manim",
+        "scene_file": "unus_ambo.py",
+        "scene_class": "UnusAmbo",
+        "description": "Split screen. Left side: The formula '1 = 1'. A single golden sphere tries to merge with a dark, jagged polyhedron (the shadow), resulting in a messy, undefined grey blob (monism). A red 'X' appears. Right side: The formula '1 x 1'. Two distinct, beautiful golden tori (rings) intersect perfectly. They pass through each other, maintaining their individual geometry, but their intersection creates a brilliant green (#00FF88) glow. A green checkmark appears.",
+        "manim_duration_sec": 75,
+        "color_palette": "distillery-dark-gold"
+      },
+      "on_screen_text": [
+        {
+          "text": "Not the Shadow",
+          "style": "label",
+          "position": "top-left"
+        },
+        {
+          "text": "The Celestial Counterpart",
+          "style": "label-emphasis",
+          "position": "top-right"
+        },
+        {
+          "text": "1 = 1 (Monism)",
+          "style": "formula",
+          "position": "bottom-left"
+        },
+        {
+          "text": "1 x 1 (Unus Ambo)",
+          "style": "formula",
+          "position": "bottom-right"
+        }
+      ],
+      "concepts": [
+        "Unus Ambo",
+        "Perfect Nature vs Shadow",
+        "Celestial Counterpart"
+      ],
+      "quote_active": false,
+      "quote_text": null,
+      "quote_source": null
+    },
+    {
+      "segment_id": "seg-06-example",
+      "label": "The Fire of Remembrance",
+      "start_sec": 375,
+      "end_sec": 450,
+      "rhetorical_role": "example",
+      "narration": "How, then, does one actually meet this Guide of light? It is not achieved by passive waiting, but through the active fire of spiritual practice. In the Sufi tradition, this is the dhikr, the remembrance of the divine. The mystic Najm Kobra visualized this practice as a pure, ardent blaze. As the mystic breathes out the names of God, they exhale flames of fire. From the height of heaven, the Guide breathes fire back. The two flames meet. This fire consumes the dark envelope, the lower ego, and illuminates the darkness. If light is already there, the two lights associate, and there is light upon light.",
+      "visual": {
+        "type": "manim",
+        "scene_file": "fire_of_dhikr.py",
+        "scene_class": "FireOfDhikr",
+        "description": "A heavy, dark, jagged polyhedron (the dark envelope / nafs) sits in the center. From below, a rising column of golden and green particles (the fire of dhikr) washes over it. The particles swirl intensely. As the green fire touches the dark polyhedron, its jagged edges melt and sublimate into smoke. Inside, a smooth, luminous, glowing golden dodecahedron (the Guide) is revealed. From the top of the scene, a matching column of green light descends, meeting the upward fire in a brilliant, pulsing intersection.",
+        "manim_duration_sec": 75,
+        "color_palette": "distillery-dark-gold"
+      },
+      "on_screen_text": [
+        {
+          "text": "The Fire of Dhikr",
+          "style": "title-serif",
+          "position": "top"
+        },
+        {
+          "text": "Light upon Light",
+          "style": "label-emphasis",
+          "position": "center"
+        },
+        {
+          "text": "Consuming the Nafs",
+          "style": "label",
+          "position": "bottom-left"
+        }
+      ],
+      "concepts": [
+        "Dhikr",
+        "Fire of Remembrance",
+        "Nafs Ammara"
+      ],
+      "quote_active": false,
+      "quote_text": null,
+      "quote_source": null
+    },
+    {
+      "segment_id": "seg-07-synthesis",
+      "label": "The Mirror and the Face",
+      "start_sec": 450,
+      "end_sec": 515,
+      "rhetorical_role": "synthesis",
+      "narration": "When the veil is finally lifted, what is the nature of this meeting? It is a relationship of perfect, dynamic reflection. Corbin describes it beautifully: 'My image looks at me with my own look; I look at it with its own look.' In this state, the seeker and the Guide become an unus-ambo, a one-two. Each simultaneously assumes the position of the 'I' and the 'self', the image and the mirror. You are not losing yourself in a vast, impersonal cosmic ocean. You are meeting your own deepest, most authentic reality, looking back at you with a face of light.",
+      "visual": {
+        "type": "manim",
+        "scene_file": "mirror_face.py",
+        "scene_class": "MirrorFace",
+        "description": "Two identical, complex golden wireframe visages (abstract geometric representations of faces) face each other in the center of the screen. They begin to rotate slowly around a shared central axis. As they rotate, their corresponding vertices connect with thin, glowing green lines, forming a unified, breathing geometric lattice between them. The boundary between the two faces becomes a seamless, continuous mirror structure, pulsing with a soft, unified light.",
+        "manim_duration_sec": 65,
+        "color_palette": "distillery-dark-gold"
+      },
+      "on_screen_text": [
+        {
+          "text": "The Unus-Ambo",
+          "style": "title-serif",
+          "position": "top"
+        },
+        {
+          "text": "'My image looks at me with my own look.'",
+          "style": "quote-serif",
+          "position": "center"
+        },
+        {
+          "text": "Image and Mirror",
+          "style": "label",
+          "position": "bottom-right"
+        }
+      ],
+      "concepts": [
+        "Unus-Ambo",
+        "The Mirror",
+        "Shakhs Nurani"
+      ],
+      "quote_active": true,
+      "quote_text": "'My image looks at me with my own look; I look at it with its own look.'",
+      "quote_source": "Henry Corbin, Adventures in the Imaginal"
+    },
+    {
+      "segment_id": "seg-08-closing",
+      "label": "The Green Light Outlasts",
+      "start_sec": 515,
+      "end_sec": 585,
+      "rhetorical_role": "closing",
+      "narration": "The world between worlds is not an escape from reality; it is the bridge that makes reality meaningful. It is the realm where our deepest visions, our highest aspirations, and our personal angels take on form and substance. The next time you close your eyes and see the darkness, remember that the darkness is merely the canvas. According to whether what appears to you is light or darkness, your witness is light or darkness. Guard your inner eye. Nurture the fire. For in the end, as the mystics remind us, green is the color that outlasts the others. And from this color, the true light begins.",
+      "visual": {
+        "type": "manim",
+        "scene_file": "green_outlasts.py",
+        "scene_class": "GreenOutlasts",
+        "description": "The entire 3D structure from the first segment (matter grid, imaginal sphere, spirit point-cloud) is visible. Slowly, it all compresses inward, collapsing into a single, intensely bright, pulsing emerald green (#00FF88) point in the exact center of the screen. The background fades to pure, deep void. The green point remains, and a single, delicate golden wireframe line extends from it directly toward the 'camera' (the viewer), symbolizing the connection between the imaginal and the physical.",
+        "manim_duration_sec": 70,
+        "color_palette": "distillery-dark-gold"
+      },
+      "on_screen_text": [
+        {
+          "text": "The Witness",
+          "style": "title-serif",
+          "position": "top"
+        },
+        {
+          "text": "Green is the color that outlasts the others.",
+          "style": "closing-emphasis",
+          "position": "center"
+        },
+        {
+          "text": "Distillery",
+          "style": "closing-serif",
+          "position": "bottom-center"
+        }
+      ],
+      "concepts": [
+        "Shahid (Witness)",
+        "Imaginal as Bridge",
+        "The Green Light"
+      ],
+      "quote_active": false,
+      "quote_text": null,
+      "quote_source": null
+    }
+  ],
+  "youtube_metadata": {
+    "title": "The World Between Worlds: Henry Corbin and the Imaginal Realm",
+    "description": "What exists between the hard world of matter and the pure realm of spirit? The philosopher Henry Corbin mapped this missing middle: the Mundus Imaginalis. In this episode, we explore the geography of the imaginal realm, the encounter with the 'Perfect Nature', and the geometric reality of the soul's celestial counterpart. \n\nSource material: Henry Corbin's 'The Man of Light in Iranian Sufism' and 'Adventures in the Imaginal'.",
+    "tags": [
+      "Henry Corbin",
+      "Mundus Imaginalis",
+      "Sufism",
+      "Philosophy",
+      "Active Imagination",
+      "Esoteric",
+      "Hermeticism",
+      "Geometry",
+      "Perfect Nature",
+      "Iranian Sufism"
+    ],
+    "category": "Education",
+    "privacy": "private",
+    "playlist": "Mixed Traditions: The Esoteric Geography"
+  },
+  "analytics_tags": {
+    "rhetorical_roles_used": [
+      "hook",
+      "thesis",
+      "expansion",
+      "quote",
+      "contrast",
+      "example",
+      "synthesis",
+      "closing"
+    ],
+    "visual_types_used": [
+      "manim"
+    ],
+    "concept_density": "high",
+    "quote_ratio": 0.25
+  },
+  "timeline": [
+    {
+      "date": "2026-07-20",
+      "event": "Storyboard generated via DeepSeek.",
+      "version": "0.1.0"
+    }
+  ]
+}

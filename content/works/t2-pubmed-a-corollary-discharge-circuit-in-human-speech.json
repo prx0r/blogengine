@@ -1,0 +1,42 @@
+{
+  "work_id": "work:t2-pubmed-a-corollary-discharge-circuit-in-human-speech",
+  "schema_version": 2,
+  "title": "A corollary discharge circuit in human speech.",
+  "publication": {
+    "year": 2024,
+    "type": "article",
+    "source": "PubMed/MEDLINE",
+    "language": "en",
+    "journal": "Proc Natl Acad Sci U S A"
+  },
+  "identifiers": {
+    "pmid": "39625978",
+    "doi": "10.1073/pnas.2404121121"
+  },
+  "topics": [
+    "phase-13-daimon",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "tradition": [
+    "contemporary_science"
+  ],
+  "tier": 2,
+  "assets": {
+    "pdf_path": "t2-pubmed-pmc11648673_A_corollary_discharge_circuit_in_human_speech.pdf",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/39625978/",
+    "abstract": "When we vocalize, our brain distinguishes self-generated sounds from external ones. A corollary discharge signal supports this function in animals; however, in humans, its exact origin and temporal dynamics remain unknown. We report electrocorticographic recordings in neurosurgical patients and a connectivity analysis framework based on Granger causality that reveals major neural communications. We find a reproducible source for corollary discharge across multiple speech production paradigms loc"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_t2_search",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 13,
+    "phase_name": "Daimon",
+    "bridge_rationale": "Daimonic voice \u2014 voice-hearing continuum, inner speech misattribution, corollary discharge."
+  },
+  "evaluation": "Marginal (score=1.7)"
+}

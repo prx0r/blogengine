@@ -1,0 +1,53 @@
+{
+  "co_id": "co:uno_therapy2_t1876_t1888_isolation_t5",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy2_t1876_t1888_isolation_affect_resume",
+  "turn_index": 5,
+  "lineage": "Therapeutic",
+  "student_state": "somatic_activation",
+  "behavior_tags": [
+    "unconscious_expression"
+  ],
+  "pedagogy": {
+    "phase": "SELF-MAKING",
+    "function_id": "SM_01",
+    "function_name": "SM_01",
+    "mechanism_shape": "COMPARISON_CONTRAST",
+    "teaching_actions": [
+      "points_to_somatic_marker"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.62,
+      "attunement": 0.5,
+      "style": 0.15,
+      "depth": 0.38,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_01",
+      "depth_discrete": "PD_02",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "Final turn: '[A fist forms.]'. Reached somatic_activation after 6 turns. Episode demonstrates comparison_contrast effectiveness in SELF-MAKING work. Teaching complete for this sequence.",
+  "accumulated_insight": "T6 (Final): Student: '[A fist forms.]'. Final state: somatic_activation. Episode complete with 6 turns. Arc shows progression through SELF-MAKING phase using comparison_contrast interventions. Teaching sequence addressed unconscious_expression pattern.",
+  "abstract_pattern": "",
+  "visible_response": "Do you notice that fist?\nHow do you feel your anger right there?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

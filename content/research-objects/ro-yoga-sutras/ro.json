@@ -1,0 +1,185 @@
+{
+  "ro_id": "ro:yoga-sutras",
+  "schema_version": 1,
+  "title": "The Yoga Sutras of Patanjali: The Eight Limbs and the Science of Samadhi",
+  "subtitle": "Extracted sutras and commentary on the eight limbs, kleshas, vrittis, samadhi, and kaivalya (Charles Johnston trans.)",
+  "family": "source-study",
+  "status": "draft",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "Key passages from Patanjali's Yoga Sutras on the eight limbs (ashtanga), the five kleshas, the five vrittis, kriya yoga, samadhi, and kaivalya, from Charles Johnston's interpretive translation.",
+    "scope": "Covers all four books: spiritual consciousness, the means of growth, the powers of the spiritual man, and liberation. Johnston's edition provides both sutra text and extensive commentary.",
+    "traditions": ["yoga", "patanjali", "sankhya", "hinduism"]
+  },
+  "sources": [
+    {
+      "source_id": "yoga-sutras-johnston",
+      "tier": 1,
+      "label": "The Yoga Sutras of Patanjali: The Book of the Spiritual Man — Charles Johnston (1912), Project Gutenberg #2526",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": ["eight_limbs", "kleshas", "vrittis", "kriya_yoga", "samadhi", "kaivalya", "sanyama"],
+      "sections_affected": ["ashtanga", "kleshas", "samadhi", "practice", "liberation"],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "ashtanga",
+      "subsection": "eight_limbs",
+      "kind": "source",
+      "text": "The eight means of Yoga are: the Commandments, the Rules, right Poise, right Control of the life-force, Withdrawal, Attention, Meditation, Contemplation. ... The Commandments are these: non-injury, truthfulness, abstaining from stealing, from impurity, from covetousness. ... The Rules are these: purity, serenity, fervent aspiration, spiritual reading, and perfect obedience to the Master.",
+      "source_ids": ["yoga-sutras-johnston"],
+      "topics": ["ashtanga", "yama", "niyama", "asana", "pranayama", "pratyahara", "dharana", "dhyana", "samadhi"],
+      "line_refs": ["1148-1195"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "kleshas",
+      "subsection": "five_hindrances",
+      "kind": "source",
+      "text": "These are the hindrances: the darkness of unwisdom (avidya), self-assertion (asmita), lust (raga), hate (dvesha), attachment (abhinivesha). The darkness of unwisdom is the field of the others. These hindrances may be dormant, or worn thin, or suspended, or expanded. The darkness of ignorance is: holding that which is unenduring, impure, full of pain, not the Soul, to be eternal, pure, full of joy, the Soul. Self-assertion comes from thinking of the Seer and the instrument of vision as forming one self. Lust is the resting in the sense of enjoyment. Hate is the resting in the sense of pain. Attachment is the desire toward life, even in the wise, carried forward by its own energy.",
+      "source_ids": ["yoga-sutras-johnston"],
+      "topics": ["kleshas", "avidya", "asmita", "raga", "dvesha", "abhinivesha", "hindrances"],
+      "line_refs": ["806-911"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "vrittis",
+      "subsection": "five_psychic_activities",
+      "kind": "source",
+      "text": "The psychic activities are five; they are either subject or not subject to the five hindrances. These activities are: Sound intellection (pramana), unsound intellection (viparyaya), predication (vikalpa), sleep (nidra), memory (smriti).",
+      "source_ids": ["yoga-sutras-johnston"],
+      "topics": ["vrittis", "pramana", "viparyaya", "vikalpa", "nidra", "smriti", "psychic_nature"],
+      "line_refs": ["184-198"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "samadhi",
+      "subsection": "nirodha_and_seer",
+      "kind": "source",
+      "text": "OM: Here follows Instruction in Union. Union, spiritual consciousness, is gained through control of the versatile psychic nature. Then the Seer comes to consciousness in his proper nature. Heretofore the Seer has been enmeshed in the activities of the psychic nature.",
+      "source_ids": ["yoga-sutras-johnston"],
+      "topics": ["nirodha", "seer", "yoga", "union", "spiritual_consciousness"],
+      "line_refs": ["142-182"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "practice",
+      "subsection": "kriya_yoga",
+      "kind": "source",
+      "text": "The practices which make for union with the Soul are: fervent aspiration (tapas), spiritual reading (svadhyaya), and complete obedience to the Master (Ishvara pranidhana). Their aim is, to bring soul-vision, and to wear away hindrances.",
+      "source_ids": ["yoga-sutras-johnston"],
+      "topics": ["kriya_yoga", "tapas", "svadhyaya", "ishvara_pranidhana", "practice"],
+      "line_refs": ["768-804"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_006",
+      "section": "sanyama",
+      "subsection": "dharana_dhyana_samadhi",
+      "kind": "source",
+      "text": "The binding of the perceiving consciousness to a certain region is attention (dharana). A prolonged holding of the perceiving consciousness in that region is meditation (dhyana). When the perceiving consciousness in this meditation is wholly given to illuminating the essential meaning of the object contemplated, and is freed from the sense of separateness and personality, this is contemplation (samadhi). When these three, Attention, Meditation, Contemplation, are exercised at once, this is perfectly concentrated Meditation (sanyama).",
+      "source_ids": ["yoga-sutras-johnston"],
+      "topics": ["dharana", "dhyana", "samadhi", "sanyama", "concentration", "meditation"],
+      "line_refs": ["1653-1710"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_007",
+      "section": "liberation",
+      "subsection": "seer_and_seen",
+      "kind": "source",
+      "text": "The cause of what is to be warded off, the root of misery, is the absorption of the Seer in things seen. Things seen have as their property manifestation, action, inertia. ... The Seer is pure vision. Though pure, he looks out through the vesture of the mind. The bringing of this association to an end, by bringing the darkness of unwisdom to an end, is the great liberation; this is the Seer's attainment of his own pure being.",
+      "source_ids": ["yoga-sutras-johnston"],
+      "topics": ["seer", "seen", "liberation", "purusha", "prakriti", "discernment"],
+      "line_refs": ["1006-1096"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_008",
+      "section": "liberation",
+      "subsection": "kaivalya",
+      "kind": "source",
+      "text": "The perfected spiritual man stands in his own nature, as purity and light. ... The spiritual man, thus extricated and standing on his feet, viewing life with open eyes, attains to illuminated perception. ... His illumination is sevenfold, rising in successive stages. Freed from these potencies, the spiritual man stands forth in his own nature as purity and light.",
+      "source_ids": ["yoga-sutras-johnston"],
+      "topics": ["kaivalya", "liberation", "spiritual_man", "illumination", "freedom"],
+      "line_refs": ["1120-1136", "1741-1747"],
+      "status": "active"
+    }
+  ],
+  "coverage": {
+    "ashtanga": {
+      "status": "good",
+      "sources": ["yoga-sutras-johnston"],
+      "passage_count": 1,
+      "estimated_completeness": 0.6,
+      "gaps": ["Sutras on asana (II.46), pranayama (II.49-53), and pratyahara (II.54-55) need separate extraction with their commentaries."]
+    },
+    "kleshas": {
+      "status": "good",
+      "sources": ["yoga-sutras-johnston"],
+      "passage_count": 1,
+      "estimated_completeness": 0.7,
+      "gaps": ["The detailed interaction between kleshas and karma (II.12-14) could be expanded."]
+    },
+    "samadhi": {
+      "status": "good",
+      "sources": ["yoga-sutras-johnston"],
+      "passage_count": 3,
+      "estimated_completeness": 0.6,
+      "gaps": ["The full typology of samadhi (samprajnata, asamprajnata, sabija, nirbija) from Book I needs more detailed extraction."]
+    },
+    "liberation": {
+      "status": "good",
+      "sources": ["yoga-sutras-johnston"],
+      "passage_count": 2,
+      "estimated_completeness": 0.5,
+      "gaps": ["Book IV (Kaivalya Pada) is only lightly covered. Full extraction of the final sutras on kaivalya needed."]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "interpretation",
+      "title": "Johnston's translation is heavily interpretive",
+      "description": "Johnston's edition is a commentary as much as a translation, using Christian mystical terminology ('the spiritual man', 'Oversoul', 'Master'). A pure sutra text (e.g., Bryant's translation) should be consulted for philological accuracy.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    },
+    {
+      "id": "issue-002",
+      "type": "coverage_gap",
+      "title": "Samapatti and the higher samadhi states not fully extracted",
+      "description": "The four types of samapatti (savitarka, nirvitarka, savichara, nirvichara) from Book I:42-46 are not represented in current passages.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial RO created from Johnston's interpretive translation of all four books. Eight passages cover the eight limbs, five kleshas, five vrittis, kriya yoga, dharana-dhyana-samadhi, the Seer and the Seen, and kaivalya.",
+      "sources_added": ["yoga-sutras-johnston"],
+      "passage_count": 8,
+      "status": "draft"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created in draft state from Johnston's Yoga Sutras edition",
+      "sources_total": 1,
+      "passages_total": 8
+    }
+  ]
+}

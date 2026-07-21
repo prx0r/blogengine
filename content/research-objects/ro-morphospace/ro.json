@@ -1,0 +1,90 @@
+{
+  "ro_id": "ro-morphospace",
+  "schema_version": 1,
+  "title": "Morphospace \u2014 Collected Papers",
+  "subtitle": "Collected papers in the archive",
+  "family": "thinker-topic",
+  "status": "stub",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "Papers collected in this topic area.",
+    "scope": "Collected for future extraction.",
+    "traditions": [
+      "science"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "ro-morphospace",
+      "tier": 1,
+      "label": "Collected papers.",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [],
+      "sections_affected": [
+        "theory"
+      ],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "theory",
+      "subsection": "overview",
+      "kind": "source",
+      "text": "Papers collected in this area. Full extraction pending.",
+      "source_ids": [
+        "ro-morphospace"
+      ],
+      "topics": [],
+      "status": "active"
+    }
+  ],
+  "coverage": {
+    "theory": {
+      "status": "minimal",
+      "sources": [
+        "ro-morphospace"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 0.1,
+      "gaps": [
+        "Full extraction needed"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "coverage_gap",
+      "title": "Full extraction needed",
+      "description": "Papers collected but not extracted.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial placeholder RO.",
+      "sources_added": [
+        "ro-morphospace"
+      ],
+      "passage_count": 1,
+      "status": "draft"
+    }
+  ],
+  "appendices": [],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created.",
+      "sources_total": 1,
+      "passages_total": 1
+    }
+  ]
+}

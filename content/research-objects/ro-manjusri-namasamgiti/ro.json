@@ -1,0 +1,139 @@
+{
+  "ro_id": "ro:manjusri-namasamgiti",
+  "schema_version": 1,
+  "title": "\u0100rya-Ma\u00f1ju\u015br\u012b-N\u0101ma-Sa\u1e45g\u012bti \u2014 Chanting the Names of Noble Ma\u00f1ju\u015br\u012b",
+  "subtitle": "A Buddhist tantric liturgical text from the words of the Buddha, chanted at Lhungtok Choekhorling Monastery. Tibetan text with English translation.",
+  "family": "tradition",
+  "status": "stub",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "The \u0100rya-Ma\u00f1ju\u015br\u012b-N\u0101ma-Sa\u1e45g\u012bti ('Chanting the Names of Noble Ma\u00f1ju\u015br\u012b') is a Buddhist tantric text in which Ma\u00f1ju\u015br\u012b is invoked through a series of epithets and mantras, revealing the nature of enl...",
+    "scope": "Covers the full liturgical text of the Ma\u00f1ju\u015br\u012b-n\u0101ma-sa\u1e45g\u012bti in Tibetan (Wylie transliteration) and English translation. Ma\u00f1ju\u015br\u012b as the bodhisattva of wisdom, Vajradhara as the source, the homages to the five Buddha families, and the mantra recitation. The text is chanted as a daily practice in Tibetan Buddhist monasteries.",
+    "traditions": [
+      "vajrayana",
+      "buddhist-tantra",
+      "mantrayana",
+      "mahayana"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "manjusri-namasamgiti",
+      "tier": 1,
+      "label": "\u0100rya-Ma\u00f1ju\u015br\u012b-N\u0101ma-Sa\u1e45g\u012bti \u2014 Chanting the Names of Noble Ma\u00f1ju\u015br\u012b (Lhungtok Choekhorling Monastery edition). PDF with Tibetan and English.",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "manjusri_invocation",
+        "five_buddha_families",
+        "vajradhara",
+        "prajna_paramita",
+        "mantra"
+      ],
+      "sections_affected": [
+        "practice"
+      ],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "practice",
+      "subsection": "invocation_of_manjusri",
+      "kind": "source",
+      "text": "The text begins with homage to ever-youthful Ma\u00f1ju\u015br\u012b (ma\u00f1ju\u015br\u012b kum\u0101rabh\u016bta), setting the tone of devotional veneration. Vajradhara is invoked as the source \u2014 'Vajradhara, ever glorious, supreme subduer of the hard to tame, the hero conquering the triple world.' Ma\u00f1ju\u015br\u012b embodies the wisdom of all Buddhas, and chanting his names is both a practice of devotion and a meditation on the nature of enlightened cognition. The text is traditionally chanted as a daily sadhana in Tibetan Buddhist monasteries, particularly in the Gelug and Kagy\u00fc traditions.",
+      "source_ids": [
+        "manjusri-namasamgiti"
+      ],
+      "topics": [
+        "manjusri",
+        "vajradhara",
+        "invocation",
+        "praise"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "theory",
+      "subsection": "manjusri_as_wisdom",
+      "kind": "source",
+      "text": "Ma\u00f1ju\u015br\u012b is the bodhisattva of wisdom (praj\u00f1\u0101), depicted with a sword cutting through ignorance and a text (the Praj\u00f1\u0101p\u0101ramit\u0101 S\u016btra) on a lotus at his heart. His name means 'Gentle Glory' \u2014 the union of gentleness (the compassion of all Buddhas) and glory (the wisdom of all Buddhas). In the tantric context, Ma\u00f1ju\u015br\u012b is not merely a deity but the personification of enlightened intelligence itself. Chanting his names is a method of realizing that one's own mind, at its deepest level, IS Ma\u00f1ju\u015br\u012b.",
+      "source_ids": [
+        "manjusri-namasamgiti"
+      ],
+      "topics": [
+        "manjusri",
+        "prajna",
+        "wisdom",
+        "bodhisattva"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "practice",
+      "subsection": "the_five_buddha_families",
+      "kind": "source",
+      "text": "The text connects Ma\u00f1ju\u015br\u012b to the five Buddha families (pa\u00f1catath\u0101gata): Vairocana (center, dharma-dh\u0101tu wisdom), Ak\u1e63obhya (east, mirror-like wisdom), Ratnasambhava (south, equalizing wisdom), Amit\u0101bha (west, discriminating wisdom), Amoghasiddhi (north, all-accomplishing wisdom). Each of Ma\u00f1ju\u015br\u012b's aspects corresponds to one of these wisdoms, and chanting his names activates the corresponding wisdom in the practitioner. This maps to the five wisdoms of the Chakrasambhara Tantra (Avalon ed.) and the transformation of the five skandhas into the five Buddhas.",
+      "source_ids": [
+        "manjusri-namasamgiti"
+      ],
+      "topics": [
+        "five_buddhas",
+        "wisdoms",
+        "skandhas",
+        "vairocana",
+        "aksobhya"
+      ],
+      "status": "active"
+    }
+  ],
+  "coverage": {
+    "practice": {
+      "status": "minimal",
+      "sources": [
+        "manjusri-namasamgiti"
+      ],
+      "passage_count": 2,
+      "estimated_completeness": 0.4,
+      "gaps": [
+        "Full Tibetan text extraction; complete English translation; ritual instructions for chanting"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "coverage_gap",
+      "title": "Full Tibetan text extraction needed",
+      "description": "The PDF contains Tibetan text that could not be fully extracted. The RO currently covers the English portions only.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial RO created for the Ma\u00f1ju\u015br\u012b-n\u0101ma-sa\u1e45g\u012bti chanting text. 3 passages covering the invocation, Ma\u00f1ju\u015br\u012b as wisdom, and the five Buddha families.",
+      "sources_added": [
+        "manjusri-namasamgiti"
+      ],
+      "passage_count": 3,
+      "status": "draft"
+    }
+  ],
+  "appendices": [],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created from liturgical PDF (540K, 78 pages). Tibetan/English chanting text.",
+      "sources_total": 1,
+      "passages_total": 3
+    }
+  ]
+}

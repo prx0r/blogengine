@@ -1,0 +1,57 @@
+{
+  "co_id": "co:uno_therapy2_t1713_t1725_denial_fa_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy2_t1713_t1725_denial_fantasy_son",
+  "turn_index": 0,
+  "lineage": "Therapeutic",
+  "student_state": "naive_disappointment",
+  "behavior_tags": [
+    "shock",
+    "denial"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_02",
+    "function_name": "UM_02",
+    "mechanism_shape": "SUBJECT_OBJECT_INVERSION",
+    "teaching_actions": [
+      "mirrors_fantasy",
+      "exposes_contradiction"
+    ],
+    "traps_avoided": [
+      "false_paradox"
+    ],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.92,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_06",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "no_clear_effect",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "'He said he was not drinking anymore, so I was shocked to learn th'—student presents as naive disappointment. Teacher's move uses subject_object_inversion: 'I expect my son who lies to tell me the truth.'. Strategy: mirrors fantasy, exposes contradiction. Hypothesis: subject_object_inversion mechanism will create no_clear_effect. Watching how student responds to this intervention.",
+  "accumulated_insight": "T1: Student says 'He said he was not drinking anymore, so I was shocked to learn th' showing naive_disappointment via shock, denial. Teacher responds 'I expect my son who lies to tell me the truth.' using subject_object_inversion to mirrors fantasy, exposes contradiction. Opening UNMAKING move addresses naive_disappointment. Predicting no_clear_effect because subject_object_inversion interventions typically produce this response pattern.",
+  "abstract_pattern": "",
+  "visible_response": "I expect my son who lies to tell me the truth.",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

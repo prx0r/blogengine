@@ -1,0 +1,264 @@
+{
+  "ro_id": "ro:nanananda-papanca",
+  "schema_version": 1,
+  "title": "Papañca and Nāma-Rūpa — The Construction of Experience",
+  "subtitle": "Ñāṇananda's Sermon 1 on nāma-rūpa as name-and-form (not mind-and-matter), dependent arising as present-moment structure, and papañca as conceptual proliferation",
+  "family": "topic-across-thinkers",
+  "status": "draft",
+  "current_version": "0.2.0",
+  "summary": {
+    "one_line": "Ñāṇananda's recovery of nāma-rūpa as the pre-verbal world of raw contact, feeling, perception, intention, and attention — the construction of experience through name and form.",
+    "scope": "Covers the child-and-rubber-ball simile, the fire simile for dependent arising, nāma-rūpa as name-and-form vs mind-and-matter, paṭigha and rūpasaññā as the bump-and-recognition structure, Nibbāna as extinction of the fire of grasping, karma as habitual pathway conditioning, and the three meditations derived from the sermon.",
+    "traditions": [
+      "buddhism",
+      "theravada",
+      "early_buddhism"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "sermon1",
+      "tier": 1,
+      "label": "Bhikkhu K. Ñāṇananda — Nibbāna: The Mind Stilled, Sermon 1 (full text). Nissarana Vanaya, Sri Lanka.",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.2.0",
+      "contribution": ["nama_rupa_recovery", "child_and_ball", "fire_simile", "commentarial_critique", "taṇhakkhayo_as_nibbana", "sariputta_definition", "firewood_fire_simile", "tetralemma", "papanca_tangle"],
+      "sections_affected": ["theory", "practice", "meditation"],
+      "status": "active"
+    },
+    {
+      "source_id": "sermon3",
+      "tier": 1,
+      "label": "Bhikkhu K. Ñāṇananda — Nibbāna: The Mind Stilled, Sermon 3. Cross-section and banana trunk simile for dependent arising.",
+      "first_added_in": "0.2.0",
+      "last_reviewed_in": "0.2.0",
+      "contribution": ["banana_trunk_simile", "cross_section_doctrine", "timeless_dependent_arising"],
+      "sections_affected": ["theory"],
+      "status": "active"
+    },
+    {
+      "source_id": "day1-notes",
+      "tier": 2,
+      "label": "Day 1 practice notes — Child's meditation, fire simile, karma as habitual pathway, samsara as cyclic relief-seeking.",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": ["karma_as_pathway", "samsara_as_cycle", "nibbana_as_healing", "relief_vs_freedom"],
+      "sections_affected": ["practice", "meditation"],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "theory",
+      "subsection": "nama_rupa_as_name_and_form",
+      "kind": "source",
+      "text": "Ñāṇananda's central claim: nāma-rūpa means 'name-and-form,' not 'mind-and-matter.' The commentaries redefined nāma as 'bending' (towards an object), obscuring the simple, profound meaning. Ñāṇananda shows from the suttas that nāma means 'name' — but 'name' in a deeper, pre-verbal sense: the act of naming through feeling, perception, intention, contact, and attention. The Sammādiṭṭhisutta defines nāma as vedanā (feeling), saññā (perception), cetanā (intention), phasso (contact), manasikāro (attention). These five factors constitute the act of naming an object before the conventional word is applied. [sermon1.md lines 35-71]",
+      "source_ids": ["sermon1"],
+      "topics": ["nama_rupa", "name_and_form", "commentarial_critique", "sammaditthisutta"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "theory",
+      "subsection": "child_and_rubber_ball",
+      "kind": "source",
+      "text": "The child and the rubber ball: a toddler who cannot yet speak or understand language is given a rubber ball for the first time. He does not know the word 'ball' — but he knows the object through feeling (touching it), perception (recognizing its shape), intention (rolling it), contact (bumping into it), attention (focusing on it). These five factors are the most elementary constituents of 'name' — the prototype of naming. A meditator must return to this child-like state, unlearning conventional names to see the raw construction of experience. The equanimity involved is not based on ignorance but on knowledge. [sermon1.md lines 63-80; day1 lines 1-6]",
+      "source_ids": ["sermon1", "day1-notes"],
+      "topics": ["child_and_ball", "pre_verbal_naming", "meditative_unlearning"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "theory",
+      "subsection": "paṭigha_and_rupasañña",
+      "kind": "source",
+      "text": "The worldling is blind until the Dhamma-eye arises — he recognizes objects only by the resistance (paṭigha) experienced when knocking against them. Paṭigha and rūpasaññā form a pair: paṭigha is the raw experience of resistance (the bump), and rūpasaññā is the resulting perception of form ('hard,' 'soft,' 'hot,' 'cold'). These are the raw categories of form-perception before the conventional name is applied. The entangled mass (jaṭā) of name-and-form, resistance, and perception of form is cut where name-and-form, as well as paṭigha and rūpasaññā, are completely cut off — reference to Nibbāna. [sermon1.md lines 93-107]",
+      "source_ids": ["sermon1"],
+      "topics": ["patigha", "rupasanna", "resistance", "tangle"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "theory",
+      "subsection": "fire_simile",
+      "kind": "source",
+      "text": "The fire simile is the Buddha's answer to accusations of nihilism. A fire burns dependent on fuel (upādāna, meaning both 'fuel' and 'grasping'). When the fuel is exhausted, the fire goes out — not into non-existence (it never had an independent existence) but into cessation of burning. The same with 'existence' (bhava): existence is a fire kept up by the fuel of grasping. When the fire goes out, it 'comes to be reckoned as gone out' — a mere designation, not a metaphysical statement. This dissolves the tetralemma (exists/does not exist/both/neither) about the Tathāgata after death. [sermon1.md lines 123-151]",
+      "source_ids": ["sermon1"],
+      "topics": ["fire_simile", "upadana", "dependent_arising", "tetralemma"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "theory",
+      "subsection": "papañca_as_conceptual_proliferation",
+      "kind": "source",
+      "text": "Names and concepts, particularly nouns, perpetuate ignorance. The world is in a tangle because knowing the name of a thing is mistaken for knowing the thing itself. Insight — not more concepts — is the path of release. Papañca (conceptual proliferation) is the mind's tendency to spin out from raw experience into a web of names, stories, and identities. The meditator cuts through this by returning to the bare elements of name-and-form: the bump before the label, the feeling before the story, the perception before the concept. The tangle is disentangled where name and form are completely cut off. [sermon1.md lines 93-107; day1 lines 7-17]",
+      "source_ids": ["sermon1", "day1-notes"],
+      "topics": ["papanca", "conceptual_proliferation", "insight", "tangle"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_006",
+      "section": "practice",
+      "subsection": "karma_as_habitual_pathway",
+      "kind": "source",
+      "text": "Karma is not a metaphysical law of cosmic justice but the conditioning of habitual pathways. When craving arises, the mind finds a solution (e.g., smoking to relieve discomfort). This creates a pathway that becomes increasingly automatic. Each repetition strengthens the conditioned response — the pathway 'solidifies into behaviour and a felt sense of self.' Next time the same stimulus arises, the mind unconsciously follows the same route. This mechanism continues outside conscious awareness, constituting the initial reaction to pleasant and unpleasant sensations. The path is to stay with the raw discomfort before it turns into the urge, rather than feeding the cycle. [sermon1.md lines 228-231 (implicit); day1 lines 34-56]",
+      "source_ids": ["sermon1", "day1-notes"],
+      "topics": ["karma", "habitual_pathways", "conditioning", "relief_cycle"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_007",
+      "section": "practice",
+      "subsection": "nibbana_as_extinction_here_and_now",
+      "kind": "source",
+      "text": "Nibbāna is not a place, a thing to see, or a state to enter after death. It is what happens when the fuel of grasping runs out — here and now. The Arahants said: 'Sītibhūto'smi nibbuto' — 'I am grown cool, extinguished as I am.' Not 'I have reached extinction' but 'I am extinguished.' The Buddha told Rādha that the holy life is merged in Nibbāna — when the path is perfected, Nibbāna is attained then and there. The destruction of craving (taṇhakkhayo) is called the highest bliss; it is not a mere negation. The bliss of the destruction of craving is worth more than one-sixteenth of any worldly or heavenly bliss. [sermon1.md lines 167-232]",
+      "source_ids": ["sermon1"],
+      "topics": ["nibbana", "extinction", "tanhakkhayo", "here_and_now"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_008",
+      "section": "practice",
+      "subsection": "meditation_methods",
+      "kind": "source",
+      "text": "Three meditation methods from the sermon. (1) The Child's Meditation: take an object, close your eyes, do not name it — explore through contact (phassa), feeling (vedanā), perception (saññā), intention (cetanā), attention (manasikāra). This reveals that the 'thing' is assembled moment by moment from these five factors. (2) The Resistance Meditation: slowly touch surfaces, first feeling only the bump (paṭigha), then the raw quality (rūpasaññā), then watch the conventional name rush in. The gap between bump and label is where the tangle can be cut. (3) The Fire Meditation: observe every moment of experience as a fire burning with fuel — thoughts burn with the fuel of attention, feelings burn with the fuel of contact, the sense of being a person burns with the fuel of grasping. [sermon1.md lines 281-337; day1 lines 58-104]",
+      "source_ids": ["sermon1", "day1-notes"],
+      "topics": ["meditation", "nama_rupa_practice", "patigha_practice", "fire_practice"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_009",
+      "section": "theory",
+      "subsection": "sariputta_definition",
+      "kind": "source",
+      "text": "Ñāṇananda cites the Venerable Sāriputta's definition from the Sammādiṭṭhisutta (Majjhima Nikāya): 'Vedanā, saññā, cetanā, phasso, manasikāro — idaṃ vuccatāvuso, nāmaṃ; cattāri ca mahābhūtāni, catunnañca mahābhūtānaṃ upādāyarūpaṃ — idaṃ vuccatāvuso, rūpaṃ. Iti idañca nāmaṃ idañca rūpaṃ — idam vuccatāvuso nāma-rūpaṃ. Feeling, perception, intention, contact, attention — this, friend, is called 'name'. The four great primaries and form dependent on the four great primaries — this, friend, is called 'form'. So this is 'name' and this is 'form' — this, friend, is called 'name-and-form'.' Ñāṇananda: 'This seems lucid enough as a definition... The definition of nāma in nāma-rūpa takes us back to the most fundamental notion of 'name', to something like its prototype.' The child with the rubber ball illustrates: the child knows the ball through feeling, perception, intention, contact, attention — the most elementary constituents of name — before any conventional word is learned. [sermon1.md lines 57-71]",
+      "source_ids": ["sermon1"],
+      "topics": ["nama_rupa", "sariputta", "sammaditthisutta", "definition"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_010",
+      "section": "theory",
+      "subsection": "firewood_fire_simile",
+      "kind": "source",
+      "text": "Ñāṇananda on the firewood/fire simile: 'When a fire burns, it does so with the help of firewood. When a fire is burning, if someone were to ask us: 'What is burning?' — what shall we say as a reply? Is it the wood that is burning or the fire that is burning? The truth of the matter is that the wood burns because of the fire and the fire burns because of the wood. So it seems we already have here a case of relatedness of this to that, idappaccayatā.' The Buddha: 'Now if a fire is burning in front of you dependent on grass and twigs as fuel, you would know that it is burning dependently and not independently, that there is no fire in the abstract. And when the fire goes out, with the exhaustion of that fuel, you would know that it has gone out because the conditions for its existence are no more.' The Pāli word upādāna has the sense of both 'fuel' and 'grasping'. Upādānapaccayā bhavo — 'dependent on grasping is existence.' Existence (bhava) is a fire kept up by the fuel of grasping; when the fuel of grasping is removed, the fire goes out — not because it was annihilated, but because it never had independent existence. [sermon1.md lines 123-137]",
+      "source_ids": ["sermon1"],
+      "topics": ["fire_simile", "firewood", "upadana", "idappaccayata", "dependent_arising"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_011",
+      "section": "theory",
+      "subsection": "tetralemma_gone_out",
+      "kind": "source",
+      "text": "Ñāṇananda on the tetralemma and Nibbāna: 'The fire simile holds the answer to the tetralemma included among the ten unexplained points very often found mentioned in the suttas. It concerns the state of the Tathāgata after death, whether he exists, does not exist, both or neither. The presumption of the questioner is that one or the other of these four must be and could be answered in the affirmative. The Buddha solves or dissolves this presumptuous tetralemma by bringing in the fire simile. He points out that when a fire goes out with the exhaustion of the fuel, it is absurd to ask in which direction the fire has gone. All that one can say about it, is that the fire has gone out: 'Nibbuto tveva saṅkhaṃ gacchati' — 'it comes to be reckoned as gone out.' It is just a reckoning, an idiom, a worldly usage, which is not to be taken too literally. So this illustration through the fire simile drives home to the worldling the absurdity of his presumptuous tetralemma of the Tathāgata.' The tetralemma (exists/does not exist/both/neither) dissolves because the fire never had independent existence — there was never a 'thing' to which the four propositions could apply. [sermon1.md lines 139-151]",
+      "source_ids": ["sermon1"],
+      "topics": ["tetralemma", "nibbana", "gone_out", "tathagata"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_012",
+      "section": "theory",
+      "subsection": "papanca_tangle",
+      "kind": "source",
+      "text": "Ñāṇananda on the tangle of papañca, citing the verse: 'Yattha nāmañca rūpañca, asesaṃ uparujjhati, paṭighaṃ rūpasaññā ca, etthesā chijjate jaṭā. Where name and form, as well as resistance and the perception of form, are completely cut off, it is there that the tangle gets snapped.' The reference here is to Nibbāna. Paṭigha does not mean 'repugnance' but 'resistance' — the bump that comes when one knocks against something. The worldling is blind until the Dhamma-eye arises; he recognizes an object only by the resistance experienced in knocking against it. 'The Buddha has said that the worldling is blind until at least the Dhamma-eye arises in him. So the blind worldling recognizes an object by the very resistance he experiences in knocking against that object.' 'Knowledge and understanding are very often associated with words and concepts, so much so that if one knows the name of a thing, one is supposed to know it. Because of this misconception the world is in a tangle. Names and concepts, particularly the nouns, perpetuate the ignorance in the world. Therefore insight is the only path of release.' [sermon1.md lines 93-107]",
+      "source_ids": ["sermon1"],
+      "topics": ["papanca", "tangle", "jata", "patigha", "insight"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_013",
+      "section": "theory",
+      "subsection": "banana_trunk_cross_section",
+      "kind": "source",
+      "text": "Ñāṇananda uses the banana trunk simile to show that dependent arising is a cross-section, not a timeline. Sermon 3: 'In order to ascertain whether a banana trunk is pith-less, it is not necessary to go on removing its bark, layer after layer, from top to bottom. We only have to take a sharp sword and cut the trunk in the middle, so that the cross-section will reveal to us its pith-less nature. Similarly, if we cut in the middle the banana trunk of preparations with the sharp sword of wisdom, paññāmayaṃ tikhiṇamasiṃ gahetvā, its internal structure as revealed by the cross-section will convince us of the essence-less nature of the group of preparations. Whatever existence there was in the past, that too had the same essence-less nature. And whatever existence there will be in the future, will have this same essencelessness. And I see it now, in my own mental continuum, as something visible here and now, not involving time.' Dependent arising is not a three-life timeline (as the commentaries interpret it) but a structure visible here and now in present experience — the mutual dependence of consciousness and name-and-form, cut through by wisdom. [sermon3.md lines 43-48, 57]",
+      "source_ids": ["sermon3"],
+      "topics": ["banana_trunk", "dependent_arising", "cross_section", "timelessness"],
+      "status": "active"
+    }
+  ],
+  "coverage": {
+    "theory": {
+      "status": "comprehensive",
+      "sources": ["sermon1", "sermon3"],
+      "passage_count": 9,
+      "estimated_completeness": 0.95,
+      "gaps": ["Cross-references to SN 35 (Saḷāyatana) and MN 1 (Mūlapariyāya) would strengthen the papañca analysis"]
+    },
+    "practice": {
+      "status": "comprehensive",
+      "sources": ["sermon1", "day1-notes"],
+      "passage_count": 3,
+      "estimated_completeness": 0.85,
+      "gaps": ["Detailed japa or vipassanā instructions from other sermons could supplement"]
+    },
+    "meditation": {
+      "status": "good",
+      "sources": ["sermon1", "day1-notes"],
+      "passage_count": 1,
+      "estimated_completeness": 0.75,
+      "gaps": ["Audio recordings of guided meditations could be referenced"]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "placeholder",
+      "title": "Sermon 2-10 passages on papañca not yet integrated",
+      "description": "This RO covers only Sermon 1 and 3. The remaining sermons contain further developments of papañca, nāma-rūpa, and the fire simile that should be added in future versions.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    },
+    {
+      "id": "issue-002",
+      "type": "coverage_gap",
+      "title": "Primary sutta references not yet extracted",
+      "description": "The Sammādiṭṭhisutta, Aggivacchagottasutta, and Rādhasaṃyutta passages are referenced through Ñāṇananda but should be added as direct kind:source extractions.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial RO created from Sermon 1 full text and Day 1 practice notes. 8 passages covering nāma-rūpa theory, child-and-ball simile, paṭigha/rūpasaññā, fire simile, papañca, karma pathways, Nibbāna, and meditation methods.",
+      "sources_added": [
+        "sermon1", "day1-notes"
+      ],
+      "passage_count": 8,
+      "status": "draft"
+    },
+    {
+      "version": "0.2.0",
+      "date": "2026-07-14",
+      "type": "expansion",
+      "summary": "Added 5 direct source passages: Sāriputta's nāma-rūpa definition with full Pāli quotation from Sammādiṭṭhisutta (p_009), firewood/fire simile with idappaccayatā analysis (p_010), tetralemma dissolution with 'Nibbuto tveva saṅkhaṃ gacchati' (p_011), papañca/tangle definition with jaṭā verse (p_012), and banana trunk cross-section simile from Sermon 3 (p_013). Added Sermon 3 as source.",
+      "sources_added": [
+        "sermon3"
+      ],
+      "passage_count": 13,
+      "status": "draft"
+    }
+  ],
+  "appendices": [],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created from Ñāṇananda Sermon 1 and Day 1 notes",
+      "sources_total": 2,
+      "passages_total": 8
+    },
+    {
+      "date": "2026-07-14",
+      "event": "Expanded with 5 direct source passages from Sermons 1 and 3: Sāriputta definition, firewood simile, tetralemma, papañca tangle, banana trunk",
+      "sources_total": 3,
+      "passages_total": 13
+    }
+  ]
+}

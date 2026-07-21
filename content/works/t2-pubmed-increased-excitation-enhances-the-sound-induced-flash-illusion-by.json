@@ -1,0 +1,46 @@
+{
+  "work_id": "work:t2-pubmed-increased-excitation-enhances-the-sound-induced-flash-illusion-by",
+  "schema_version": 2,
+  "title": "Increased excitation enhances the sound-induced flash illusion by impairing multisensory causal inference in the schizophrenia spectrum.",
+  "authors": [
+    {
+      "name": "Paredes, Renato"
+    },
+    {
+      "name": "Ferri, Francesca"
+    },
+    {
+      "name": "Romei, Vincenzo"
+    },
+    {
+      "name": "Seri\u00e8s, Peggy"
+    }
+  ],
+  "identifiers": {
+    "pmid": "40614552",
+    "doi": "10.1016/j.schres.2025.06.007"
+  },
+  "publication": {
+    "journal": "Schizophrenia research",
+    "year": ""
+  },
+  "abstract": "The spectrum of schizophrenia is characterised by an altered sense of self with known impairments in tactile sensitivity, proprioception, body-self boundaries, and self-recognition. These are thought to be produced by failures in multisensory integration mechanisms, commonly observed as enlarged temporal binding windows during audiovisual illusion tasks. To our knowledge, there is an absence of computational explanations for multisensory integration deficits in patients with schizophrenia and individuals with high schizotypy, particularly at the neurobiological level. We implemented a multisensory causal inference network to reproduce the responses of individuals who scored low in schizotypy in a simulated double flash illusion task. Next, we explored the effects of recurrent excitation, cross-modal and feedback weights, and synaptic density on the visual illusory responses of the network. Using quantitative fitting to empirical data, we found that an increase in the weights of the recurrent excitatory connectivity in the network enlarges the temporal binding window and increases the overall proneness to experience the illusion, matching the responses of individuals scoring high in schizotypy. Moreover, we found that an increase in excitation increases the probability of inferring a common cause from the stimuli. We propose an E/I imbalance account of reduced temporal discrimination in the SCZ spectrum and discuss possible links with Bayesian theories of schizophrenia. We highlight the importance of adopting a multisensory causal inference perspective to address body-related symptomatology of schizophrenia.",
+  "phase_mapping": {
+    "phase": 6,
+    "phase_name": "Dependent-arising"
+  },
+  "bridge_tags": [
+    "predictive-processing",
+    "dependent-arising",
+    "causality",
+    "computational psychiatry",
+    "double flash illusion",
+    "multisensory integration"
+  ],
+  "evaluation": "Quality pass v3 (score=17) \u2014 Dependent-arising bridge.",
+  "assets": {
+    "pdf_path": null,
+    "nxml_path": null
+  },
+  "tier": 2
+}

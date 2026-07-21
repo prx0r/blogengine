@@ -1,0 +1,53 @@
+{
+  "co_id": "co:uno_therapy3_t3037_t3043_vine_tree_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3_t3037_t3043_vine_tree_metaphor",
+  "turn_index": 0,
+  "lineage": "Therapeutic",
+  "student_state": "compliant_admission",
+  "behavior_tags": [
+    "recognition"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_02",
+    "function_name": "RM_02",
+    "mechanism_shape": "NONE",
+    "teaching_actions": [
+      "reinforces_pattern_recognition"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.15,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.35,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_01",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_02",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "no_clear_effect",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "'I do that a lot.'—student presents as compliant admission. Teacher's move uses none: 'You notice that pattern here as a way to deal with your anger.'. Strategy: reinforces pattern recognition. Hypothesis: none mechanism will create no_clear_effect. Watching how student responds to this intervention.",
+  "accumulated_insight": "T1: Student says 'I do that a lot.' showing compliant_admission via recognition. Teacher responds 'You notice that pattern here as a way to deal with your anger.' using none to reinforces pattern recognition. Opening REMAKING move addresses compliant_admission. Predicting no_clear_effect because none interventions typically produce this response pattern.",
+  "abstract_pattern": "",
+  "visible_response": "You notice that pattern here as a way to deal with your anger.",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

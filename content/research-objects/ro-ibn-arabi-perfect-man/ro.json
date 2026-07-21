@@ -1,0 +1,358 @@
+{
+  "ro_id": "ro:ibn-arabi-perfect-man",
+  "schema_version": 1,
+  "title": "Ibn Arabi on Unity of Being and the Perfect Man",
+  "subtitle": "Wahdat al-Wujud, the Perfect Man (al-Insan al-Kamil), theophany (tajalli), immutable entities (a'yan thabita), and imagination (khayal) as the intermediate world",
+  "family": "thinker-topic",
+  "status": "draft",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "Ibn Arabi's metaphysical system of wahdat al-wujud (transcendental unity of being), the Perfect Man as the complete daimonic being, the a'yan thabita as archetypes of individual souls, and khayal (...",
+    "scope": "Primary: Corbin's analysis in Man of Light and the Fusus al-Hikam text. Secondary: Chittick papers, Futuhat al-Makkiyya extracts.",
+    "traditions": [
+      "ibn_arabi",
+      "sufism",
+      "wahdat_al_wujud",
+      "perfect_man",
+      "imaginal"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "corbin-man-of-light",
+      "tier": 1,
+      "label": "Henry Corbin \u2014 The Man of Light in Iranian Sufism (references to Ibn Arabi)",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "wahdat_al_wujud",
+        "tajalli",
+        "shahid"
+      ],
+      "sections_affected": [
+        "unity_of_being",
+        "theophany",
+        "imagination"
+      ],
+      "passages_used": 5,
+      "status": "active"
+    },
+    {
+      "source_id": "fusus_al_hikam",
+      "tier": 1,
+      "label": "Ibn Arabi \u2014 Fusus al-Hikam (Bezels of Wisdom), Bursevi trans.",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "perfect_man",
+        "a_yan_thabita",
+        "prophet_archetypes"
+      ],
+      "sections_affected": [
+        "perfect_man",
+        "archetypes"
+      ],
+      "passages_used": 0,
+      "status": "pending"
+    },
+    {
+      "source_id": "chittick-sufi-path-knowledge",
+      "tier": 1,
+      "label": "William Chittick \u2014 The Sufi Path of Knowledge: Ibn Arabi's Metaphysics of Imagination",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "imagination",
+        "ontology",
+        "perfect_man"
+      ],
+      "sections_affected": [
+        "imagination",
+        "ontology"
+      ],
+      "passages_used": 0,
+      "status": "pending"
+    },
+    {
+      "source_id": "chittick-imaginal-worlds",
+      "tier": 2,
+      "label": "William Chittick \u2014 Imaginal Worlds: Ibn al-Arabi and the Problem of Religious Diversity",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "imaginal_worlds",
+        "religious_diversity"
+      ],
+      "sections_affected": [
+        "imagination"
+      ],
+      "passages_used": 0,
+      "status": "pending"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "unity_of_being",
+      "subsection": "wahdat_al_wujud",
+      "kind": "source",
+      "text": "The famous expression wahdat al-wojud does not signify an 'existential monism' (it has no connection either with Hegel or with Haeckel), but refers to the transcendental unity of being. The act of being does not take on different meanings; it remains unique, while multiplying itself in the actualities of the beings that it causes to be; an unconditioned Subject which is never itself caused-to-be.",
+      "source_id": "corbin-man-of-light",
+      "page_ref": "115",
+      "topics": [
+        "wahdat_al_wujud",
+        "transcendental_unity",
+        "ontology"
+      ],
+      "notes": "Corbin corrects the misinterpretation of wahdat al-wujud as existential monism"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "theophany",
+      "subsection": "tajalli",
+      "kind": "source",
+      "text": "I created perception in Thee only that therein I might become the object of my perception.",
+      "source_id": "corbin-man-of-light",
+      "page_ref": "21",
+      "topics": [
+        "tajalli",
+        "theophany",
+        "self_disclosure"
+      ],
+      "notes": "Ibn Arabi's formula for the theophanic self-disclosure of the Real"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "imagination",
+      "subsection": "khayal_mundus",
+      "kind": "source",
+      "text": "The world of Hurqalya is the place of transfigurations, the place where the imaginative power (Imaginatrix) operates to produce scenes in which there is no tinge of demonic, twilight 'fantasy.'",
+      "source_id": "corbin-man-of-light",
+      "page_ref": "80-81",
+      "topics": [
+        "khayal",
+        "imagination",
+        "hurqalya",
+        "mundus_imaginalis"
+      ],
+      "notes": "The imagination (khayal) as the operative faculty in the imaginal world \u2014 Ibn Arabi and Corbin converge"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "man_of_light",
+      "subsection": "sufi_anthropology",
+      "kind": "source",
+      "text": "Man in Ibn 'Arabi's anthropogony is likewise intermediate: situated between being and non-being, between Light and Darkness, at the same time responsible and respondent to both sides; he is responsible for the Darkness to the extent that he intercepts the Light, but he is responsible for the Light to the extent that he prevents the Darkness from invading and governing it.",
+      "source_id": "corbin-man-of-light",
+      "page_ref": "95-96",
+      "topics": [
+        "anthropology",
+        "intermediary",
+        "light_darkness"
+      ],
+      "notes": "Ibn Arabi's view of the human as the intermediate being between Light and Darkness"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "shahid",
+      "subsection": "divine_form",
+      "kind": "source",
+      "text": "God has no like (mithl), but He has an Image, a typification (mithal), declares Lahiji. This is the secret of the Prophet's vision tirelessly meditated upon by so many Sufis: 'I have seen my God in the most beautiful of forms,' attesting that the divine Being, without form or modality, is present to the eye of the heart in a particular form, modality, and individuation.",
+      "source_id": "corbin-man-of-light",
+      "page_ref": "119",
+      "topics": [
+        "shahid",
+        "divine_form",
+        "theophany",
+        "vision"
+      ],
+      "notes": "The secret of the shahid: God has an Image (mithal) but no like (mithl)"
+    },
+    {
+      "passage_id": "p_006",
+      "section": "black_light",
+      "subsection": "fana_islam",
+      "kind": "source",
+      "text": "The perfection of contingent being is to regress to its basic negativity, and to come to know through its own unknowingness. It means to know with the certainty of experience that the summum of knowledge is unknowingness, for here there is infinite disproportion... In reality, there is no knowledge of God by another than God, for another than God is not.",
+      "source_id": "corbin-man-of-light",
+      "page_ref": "117",
+      "topics": [
+        "fana",
+        "unknowing",
+        "negativity",
+        "poverty"
+      ],
+      "notes": "The Lahliji commentary on Ibn Arabi: the path of metaphysical poverty"
+    },
+    {
+      "passage_id": "p_007",
+      "section": "perfect_man",
+      "subsection": "insan_kamil",
+      "kind": "source",
+      "text": "Absolute non-being is manifested only in and through absolute being. For any other than Perfect Man access to this degree is difficult, for Perfect Man is the most perfect of beings and the very cause of the coming into existence of the world.",
+      "source_id": "corbin-man-of-light",
+      "page_ref": "118",
+      "topics": [
+        "perfect_man",
+        "insan_kamil",
+        "creation"
+      ],
+      "notes": "The Perfect Man as the cause of the world's existence"
+    },
+    {
+      "passage_id": "p_008",
+      "section": "seven_prophets",
+      "subsection": "inner_imam",
+      "kind": "source",
+      "text": "He who has become conscious of this latifa, who has reached it by journeying, step by step, by winged flight or ecstasy, who has allowed the powers of all his subtle organs to open in freedom from the taint of illusion and relativity... he it is who can truly be called a Mohammadan.",
+      "source_id": "corbin-man-of-light",
+      "page_ref": "130",
+      "topics": [
+        "seven_prophets",
+        "inner_imam",
+        "spiritual_self"
+      ],
+      "notes": "The achievement of the Perfect Man as the 'Mohammad of your being'"
+    },
+    {
+      "passage_id": "p_009",
+      "section": "angelology",
+      "subsection": "individual_angel",
+      "kind": "source",
+      "text": "From ascent to ascent, the return of the man of light to his original pleroma postulates the idea of a non-specific individual, of archetypal individuality whose soaring flight and power, by assuming all the virtualities of a species, itself becomes a unique example. The idea of an individual who is himself his species is the idea of the Angel.",
+      "source_id": "corbin-man-of-light",
+      "page_ref": "97",
+      "topics": [
+        "angel",
+        "individuality",
+        "species",
+        "archetype"
+      ],
+      "notes": "The Angel as the individual who is his own species \u2014 central to Ibn Arabi's a'yan thabita"
+    },
+    {
+      "passage_id": "p_010",
+      "section": "hermeneutics",
+      "subsection": "ta_wil_time",
+      "kind": "source",
+      "text": "Each time you hear in the Book words addressed to Adam, listen to them through the organ of the subtle body... Meditate on that with which they symbolize, and be very sure that the esoteric aspect of the passage relates to you, just as the exoteric aspect relates to Adam in that it concerns the horizons... Only then will you be able to apply the teaching of the divine Word to yourself and to cull it as you would a branch laden with freshly opened flowers.",
+      "source_id": "corbin-man-of-light",
+      "page_ref": "126",
+      "topics": [
+        "ta_wil",
+        "hermeneutics",
+        "semnani",
+        "inner_meaning"
+      ],
+      "notes": "The ta'wil method of Semnani \u2014 every prophet in scripture is a faculty of your own being"
+    }
+  ],
+  "coverage": {
+    "unity_of_being": {
+      "status": "minimal",
+      "sources": [
+        "corbin-man-of-light"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 0.3,
+      "gaps": [
+        "Direct extraction from Fusus al-Hikam",
+        "Ibn Arabi's own formulation of wahdat al-wujud",
+        "The five divine presences"
+      ]
+    },
+    "perfect_man": {
+      "status": "minimal",
+      "sources": [
+        "corbin-man-of-light",
+        "fusus_al_hikam"
+      ],
+      "passage_count": 2,
+      "estimated_completeness": 0.2,
+      "gaps": [
+        "Full doctrine from Fusus",
+        "Chittick's work on the Perfect Man"
+      ]
+    },
+    "imagination": {
+      "status": "minimal",
+      "sources": [
+        "corbin-man-of-light",
+        "chittick-sufi-path-knowledge"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 0.15,
+      "gaps": [
+        "Ibn Arabi's own theory of khayal from Futuhat",
+        "The barzakh doctrine"
+      ]
+    },
+    "archetypes": {
+      "status": "minimal",
+      "sources": [
+        "fusus_al_hikam"
+      ],
+      "passage_count": 0,
+      "estimated_completeness": 0.1,
+      "gaps": [
+        "Full a'yan thabita extraction needed"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "coverage_gap",
+      "title": "Fusus al-Hikam not directly extracted",
+      "description": "The Fusus al-Hikam text (Bursevi trans.) is available as an Anna's Archive markdown file but has not been passage-extracted into this RO.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    },
+    {
+      "id": "issue-002",
+      "type": "coverage_gap",
+      "title": "Chittick papers not extracted",
+      "description": "Multiple William Chittick papers on Ibn Arabi available in /root/content-sources/sufism/ibn-arabi/ but not yet passage-extracted.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    },
+    {
+      "id": "issue-003",
+      "type": "coverage_gap",
+      "title": "No comparative analysis with daimon tradition",
+      "description": "The Perfect Man as daimon/HGA has not been systematically extracted.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial RO with 10 passages from Corbin's Man of Light on Ibn Arabi and related tradition",
+      "sources_added": [
+        "corbin-man-of-light",
+        "fusus_al_hikam",
+        "chittick-sufi-path-knowledge",
+        "chittick-imaginal-worlds"
+      ],
+      "passage_count": 10,
+      "test_pass_rate": null,
+      "skill_id": null
+    }
+  ],
+  "dependencies": [],
+  "outputs": [],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created",
+      "sources_total": 4,
+      "passages_total": 10
+    }
+  ]
+}

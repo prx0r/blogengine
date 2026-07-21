@@ -1,0 +1,629 @@
+{
+  "ro_id": "ro:tantraloka-initiation",
+  "schema_version": 1,
+  "title": "Initiation Types (D\u012bk\u1e63\u0101 System) in Abhinavagupta's Tantr\u0101loka",
+  "subtitle": "\u0100hnikas 11, 15\u201327: s\u0101may\u012bd\u012bk\u1e63\u0101, putrakad\u012bk\u1e63\u0101, dying rites, funerary rites, \u015br\u0101ddha, and teacher consecration",
+  "family": "tradition",
+  "status": "draft",
+  "current_version": "0.2.0",
+  "summary": {
+    "one_line": "Abhinavagupta's comprehensive system of \u015aaiva initiation from the Common Initiation into the Rule (s\u0101may\u012bd\u012bk\u1e63\u0101) through the Apprentice Initiation, the Immediate Exit for the Dying, Funerary Rites, ...",
+    "scope": "Covers \u0100hnika 15 (s\u0101may\u012bd\u012bk\u1e63\u0101 with ny\u0101sa, Trident Throne formation, ablutions, depositions), \u0100hnika 16 (putrakad\u012bk\u1e63\u0101 \u2014 the Triple Trident ma\u1e47\u1e0dala, animal sacrifice, mantras), \u0100hnika 17 (purification of principles, burning of fetters, conjunction with the Supreme), \u0100hnika 18 (brief direct initiation), \u0100hnika 19 (sadya\u1e25samutkrama \u2014 initiation for the dying), \u0100hnika 20 (tul\u0101d\u012bk\u1e63\u0101 \u2014 initiation validated by scales), \u0100hnika 21 (p\u0101rok\u1e63\u012bd\u012bk\u1e63\u0101 \u2014 initiation of the absent), \u0100hnika 22 (li\u1e45goddh\u0101ra \u2014 extraction of sectarian signs), \u0100hnika 23 (abhi\u1e63ecana \u2014 consecration of a teacher), \u0100hnika 24 (antye\u1e63\u1e6di \u2014 funerary rites), \u0100hnika 25 (\u015br\u0101ddhakalpa \u2014 offerings to ancestors), \u0100hnika 26 (\u015be\u1e63av\u1e5btti \u2014 remaining observances), \u0100hnika 27 (li\u1e45g\u0101rc\u0101 \u2014 worship of the Li\u1e45ga).",
+    "traditions": [
+      "kashmiri_shaivism",
+      "trika",
+      "saiva_siddhanta",
+      "kaula"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "ta_ahnika_15",
+      "tier": 1,
+      "label": "Tantr\u0101loka \u0100hnika 15 (Dyczkowski tr., Vol. 8) \u2014 The Common Initiation into the Rule (s\u0101may\u012bd\u012bk\u1e63\u0101)",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "initiation_types",
+        "nyasa",
+        "trident_throne",
+        "ablutions",
+        "samaya_pledges",
+        "m\u0101t\u1e5bk\u0101ny\u0101sa",
+        "m\u0101lin\u012bny\u0101sa"
+      ],
+      "sections_affected": [
+        "initiation",
+        "nyasa",
+        "ritual"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "ta_ahnika_16",
+      "tier": 1,
+      "label": "Tantr\u0101loka \u0100hnika 16 (Dyczkowski tr., Vol. 9) \u2014 The Initiation of the Apprentice (putrakad\u012bk\u1e63\u0101)",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "triple_trident_mandala",
+        "animal_sacrifice",
+        "deposition_of_paths",
+        "mantra_essence"
+      ],
+      "sections_affected": [
+        "initiation",
+        "mandala",
+        "mantra"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "ta_ahnika_17",
+      "tier": 1,
+      "label": "Tantr\u0101loka \u0100hnika 17 (Dyczkowski tr., Vol. 9) \u2014 Procedure for the Apprentice: tattva\u015buddhi, burning of fetters, full oblations",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "tattva_purification",
+        "p\u0101\u015bad\u0101ha",
+        "three_full_oblations",
+        "bhogad\u012bk\u1e63\u0101"
+      ],
+      "sections_affected": [
+        "initiation",
+        "purification"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "ta_ahnika_18",
+      "tier": 1,
+      "label": "Tantr\u0101loka \u0100hnika 18 (Dyczkowski tr., Vol. 9) \u2014 The Brief Initiation (s\u016bk\u1e63m\u0101 d\u012bk\u1e63\u0101)",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "direct_initiation",
+        "minimal_ritual",
+        "teacher_qualification"
+      ],
+      "sections_affected": [
+        "initiation"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "ta_ahnika_19",
+      "tier": 1,
+      "label": "Tantr\u0101loka \u0100hnika 19 (Dyczkowski tr., Vol. 9) \u2014 Initiation of the Immediate Exit from the Body (sadya\u1e25samutkrama)",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "dying_rites",
+        "krp\u0101\u1e47y\u0101diny\u0101sa",
+        "severance_of_vital_points",
+        "brahmavidy\u0101"
+      ],
+      "sections_affected": [
+        "dying",
+        "liberation"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "ta_ahnika_20",
+      "tier": 1,
+      "label": "Tantr\u0101loka \u0100hnika 20 (Dyczkowski tr., Vol. 9) \u2014 Initiation Validated by the Scales (tul\u0101d\u012bk\u1e63\u0101)",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "weight_validation",
+        "inner_purification",
+        "adhik\u0101ra_test"
+      ],
+      "sections_affected": [
+        "initiation",
+        "validation"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "ta_ahnika_21",
+      "tier": 1,
+      "label": "Tantr\u0101loka \u0100hnika 21 (Dyczkowski tr., Vol. 9) \u2014 Initiation of Those Absent (p\u0101rok\u1e63\u012bd\u012bk\u1e63\u0101)",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "absent_initiation",
+        "dead_initiation",
+        "simulacrum",
+        "net_teaching"
+      ],
+      "sections_affected": [
+        "initiation",
+        "death"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "ta_ahnika_22",
+      "tier": 1,
+      "label": "Tantr\u0101loka \u0100hnika 22 (Dyczkowski tr., Vol. 9) \u2014 Extraction of Sectarian Signs (li\u1e45goddh\u0101ra)",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "conversion",
+        "sectarian_extraction",
+        "purification",
+        "mantra_bestowal"
+      ],
+      "sections_affected": [
+        "initiation",
+        "conversion"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "ta_ahnika_23",
+      "tier": 1,
+      "label": "Tantr\u0101loka \u0100hnika 23 (Dyczkowski tr., Vol. 9) \u2014 The Consecration of a Teacher (abhi\u1e63ecana)",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "teacher_qualities",
+        "\u0101c\u0101ryakara\u1e47a",
+        "seven_sacrifices",
+        "vidy\u0101vrata"
+      ],
+      "sections_affected": [
+        "teacher",
+        "consecration"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "ta_ahnika_24",
+      "tier": 1,
+      "label": "Tantr\u0101loka \u0100hnika 24 (Dyczkowski tr., Vol. 9) \u2014 The Funerary Rites (antye\u1e63\u1e6di)",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "funerary_rites",
+        "kulagahvara_procedure",
+        "d\u012bk\u1e63ottara_procedure"
+      ],
+      "sections_affected": [
+        "death",
+        "funerary"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "ta_ahnika_25",
+      "tier": 1,
+      "label": "Tantr\u0101loka \u0100hnika 25 (Dyczkowski tr., Vol. 9) \u2014 The Fashioning of the Offerings to the Ancestors (\u015br\u0101ddhakalpa)",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "\u015br\u0101ddha",
+        "ancestor_worship",
+        "bhoga_and_moksha"
+      ],
+      "sections_affected": [
+        "\u015br\u0101ddha",
+        "ancestors"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "ta_ahnika_26",
+      "tier": 1,
+      "label": "Tantr\u0101loka \u0100hnika 26 (Dyczkowski tr., Vol. 9) \u2014 The Remaining Observance (\u015be\u1e63av\u1e5btti)",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "daily_conduct",
+        "mantra_observance",
+        "nityavidhi",
+        "sandhyop\u0101sana"
+      ],
+      "sections_affected": [
+        "practice",
+        "daily_ritual"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "ta_ahnika_27",
+      "tier": 1,
+      "label": "Tantr\u0101loka \u0100hnika 27 (Dyczkowski tr., Vol. 9) \u2014 The Worship of the Li\u1e45ga (li\u1e45g\u0101rc\u0101)",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "li\u1e45ga_worship",
+        "icon_installation",
+        "skull_worship",
+        "rosary_types"
+      ],
+      "sections_affected": [
+        "worship",
+        "li\u1e45ga"
+      ],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "initiation",
+      "subsection": "samayidiksa",
+      "kind": "source",
+      "text": "\u0100hnika 15 \u2014 the 'Common Initiation into the Rule' (s\u0101may\u012bd\u012bk\u1e63\u0101) \u2014 is the foundational initiation that makes the disciple a member of the \u015aaiva community bound by the pledges (samaya). Initiation is defined as the means to both worldly benefits (bhoga) and liberation (mukti), functioning either directly by itself or in association with empowering purification (sa\u1e41sk\u0101ra) (T\u0100 15/1-2). The teacher must assess the disciple's competence, as people are variously competent for knowledge, yoga, or ritual action (T\u0100 15/18-26; Vol. 8, pp. 14\u201322). The chapter includes the eight types of ablution (earth, water, fire-ashes, air, space, moon, sun, and self \u2014 T\u0100 15/47-65), the depositions of M\u0101t\u1e5bk\u0101 and M\u0101lin\u012b, and an extensive treatment of the pledges.",
+      "source_ids": [
+        "ta_ahnika_15"
+      ],
+      "topics": [
+        "s\u0101may\u012bd\u012bk\u1e63\u0101",
+        "samaya",
+        "initiation_types",
+        "ablutions",
+        "pledges"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "ritual",
+      "subsection": "trident_throne",
+      "kind": "source",
+      "text": "The 'Formation of the Trident Throne' (tri\u015b\u016bl\u0101sana) is the central ritual structure of the s\u0101may\u012bd\u012bk\u1e63\u0101. The teacher constructs the Throne through a complex sequence of depositions (ny\u0101sa), installing the three Goddesses Par\u0101, Par\u0101par\u0101, and Apar\u0101 on the three prongs, with K\u0101lasa\u1e41kar\u1e63i\u1e47\u012b in the centre as the Attractress of Time (T\u0100 15/297cd-348; Vol. 8, pp. 175\u2013215). The Seven Perceivers are also arranged along the Trident Throne (T\u0100 15/339-345). The Throne is the 'composite sacrifice' (s\u0101mud\u0101yikay\u0101ga) that serves as the ritual basis for all higher initiations, and its construction is a microcosmic enactment of the entire tattva hierarchy.",
+      "source_ids": [
+        "ta_ahnika_15"
+      ],
+      "topics": [
+        "trident_throne",
+        "tri\u015b\u016bl\u0101sana",
+        "ny\u0101sa",
+        "k\u0101lasa\u1e41kar\u1e63i\u1e47\u012b",
+        "composite_sacrifice"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "initiation",
+      "subsection": "putrakadiksa",
+      "kind": "source",
+      "text": "\u0100hnika 16 teaches the 'Initiation of the Apprentice' (putrakad\u012bk\u1e63\u0101), the second major initiation that promotes the regular initiate (samayin) to the status of a spiritual son who may eventually become a teacher. The central ritual is the drawing and worship of the Triple Trident Ma\u1e47\u1e0dala, with the three Goddesses shifting cyclically across the three tridents (T\u0100 16/1-15; Vol. 9, pp. 2\u201311). The chapter includes animal sacrifice (nivedyapa\u015bu), the deposition of the paths (adhvan) onto the disciple's body \u2014 including the 36 tattvas, the worlds, the phonemes, and the kal\u0101s \u2014 and a detailed examination of the essential nature of mantra as reflective awareness (vimar\u015ba) (T\u0100 16/249cd-288ab; pp. 110\u2013131).",
+      "source_ids": [
+        "ta_ahnika_16"
+      ],
+      "topics": [
+        "putrakad\u012bk\u1e63\u0101",
+        "triple_trident",
+        "adhvany\u0101sa",
+        "mantra_vimar\u015ba",
+        "mandala"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "initiation",
+      "subsection": "burning_of_fetters",
+      "kind": "source",
+      "text": "\u0100hnika 17 describes the purification of the principles (tattva\u015buddhi) and the 'Burning of the Fetters' (p\u0101\u015bad\u0101ha). The teacher gives birth to the disciple on progressively higher levels through Trika mantras and oblations (T\u0100 17/34-64; Vol. 9, pp. 158\u2013168). The three Full Oblations (p\u016br\u1e47\u0101huti) conjoin the disciple with the Supreme Principle: the First Oblation burns the taint of the impure universe, the Second establishes the disciple in the pure principles, and the Third effects union with \u015aiva (T\u0100 17/78cd-91; pp. 172\u2013178). The Brief Initiation (s\u016bk\u1e63m\u0101 d\u012bk\u1e63\u0101) of \u0100hnika 18 condenses this entire process into a direct, minimal ritual for the highly qualified (T\u0100 18/1-3ab; pp. 193\u2013194).",
+      "source_ids": [
+        "ta_ahnika_17",
+        "ta_ahnika_18"
+      ],
+      "topics": [
+        "p\u0101\u015bad\u0101ha",
+        "tattva\u015buddhi",
+        "full_oblations",
+        "s\u016bk\u1e63m\u0101_d\u012bk\u1e63\u0101",
+        "direct_initiation"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "dying",
+      "subsection": "sadyahsamutkrama",
+      "kind": "source",
+      "text": "\u0100hnika 19, the 'Initiation of the Immediate Exit from the Body' (sadya\u1e25samutkrama), is the most urgent and powerful initiation: it liberates a dying person at the moment of death. The teacher ascertains impending death (k\u0101l\u0101vek\u1e63\u0101), then performs the Deposition of the Razor (krp\u0101\u1e47y\u0101diny\u0101sa) which severs the vital points, followed by the circulation of the breath to block the vital centres and force consciousness upward through the susumn\u0101 (T\u0100 19/1-23ab; Vol. 9, pp. 199\u2013217). The Brahmavidy\u0101 \u2014 a liberating mantra \u2014 may be recited by a fellow initiate to awaken the dying person, or the dying person may even impart the initiation to himself (T\u0100 19/23cd-56; pp. 218\u2013230).",
+      "source_ids": [
+        "ta_ahnika_19"
+      ],
+      "topics": [
+        "sadya\u1e25samutkrama",
+        "dying_initiation",
+        "krp\u0101\u1e47y\u0101diny\u0101sa",
+        "brahmavidy\u0101",
+        "breath_blocking"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_006",
+      "section": "initiation",
+      "subsection": "validation_and_absence",
+      "kind": "source",
+      "text": "\u0100hnika 20 teaches tul\u0101d\u012bk\u1e63\u0101, the 'Initiation Validated by the Scales', where a discernible loss of weight after the rite confirms that impurity has been removed (T\u0100 20/1-16ab; Vol. 9, pp. 231\u2013243). \u0100hnika 21 covers p\u0101rok\u1e63\u012bd\u012bk\u1e63\u0101, the 'Initiation of Those Absent' \u2014 whether dead or alive but not physically present. The teacher places the absent person in a simulacrum and performs the rite through it; the 'Teaching Concerning the Net' (j\u0101lopade\u015ba) provides the mantric apparatus for reaching the departed soul (T\u0100 21/1-61; pp. 244\u2013276). \u0100hnika 22 then addresses li\u1e45goddh\u0101ra, the 'Extraction of Sectarian Signs', whereby followers of lower traditions are extracted from their sectarian marks and elevated into the Trika path (T\u0100 22/1-48ab; pp. 277\u2013294).",
+      "source_ids": [
+        "ta_ahnika_20",
+        "ta_ahnika_21",
+        "ta_ahnika_22"
+      ],
+      "topics": [
+        "tul\u0101d\u012bk\u1e63\u0101",
+        "p\u0101rok\u1e63\u012bd\u012bk\u1e63\u0101",
+        "li\u1e45goddh\u0101ra",
+        "absent_initiation",
+        "weight_validation",
+        "conversion"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_007",
+      "section": "teacher",
+      "subsection": "abhishecana",
+      "kind": "source",
+      "text": "\u0100hnika 23 details the 'Consecration of a Teacher' (abhi\u1e63ecana). The chapter opens with a rigorous examination of the teacher's qualities \u2014 he must possess perfect knowledge, be free of defects, and be capable of liberating disciples \u2014 and warns against false teachers (T\u0100 23/2-17ab; Vol. 9, pp. 295\u2013302). The actual creation of a teacher (\u0101c\u0101ryakara\u1e47a) involves the Seven Sacrifices, the entrusting of ritual implements and authority, and the teacher's vow (vidy\u0101vrata) \u2014 a continuous observance of mantra repetition and appropriate conduct (T\u0100 23/17cd-44ab; pp. 303\u2013317). The chapter also describes the removal of knowledge from a deceitful disciple (hara\u1e47a\u1e41 mate\u1e25) and the categories of deceitful teachers (T\u0100 23/44cd-101ab).",
+      "source_ids": [
+        "ta_ahnika_23"
+      ],
+      "topics": [
+        "abhi\u1e63ecana",
+        "\u0101c\u0101ryakara\u1e47a",
+        "teacher_qualities",
+        "vidy\u0101vrata",
+        "hara\u1e47a\u1e41_mate\u1e25"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_008",
+      "section": "death",
+      "subsection": "funerary_and_shraddha",
+      "kind": "source",
+      "text": "\u0100hnikas 24\u201325 address the final rites for the deceased and their ongoing care. \u0100hnika 24 (antye\u1e63\u1e6di \u2014 Funerary Rites) prescribes the rite of passage for the qualified \u015aaiva initiate, drawing on the Kulagahvara and D\u012bk\u1e63ottara Tantras (T\u0100 24/1-24ab; Vol. 9, pp. 342\u2013354). \u0100hnika 25 (\u015br\u0101ddhakalpa) teaches the fashioning of offerings to ancestors: by identifying the fettered aspect with the experiencer, the ritualist himself becomes \u015aiva and bestows both worldly benefits and liberation upon the departed souls (T\u0100 25/1-29; pp. 356\u2013368). The remaining observance (\u015be\u1e63av\u1e5btti) of \u0100hnika 26 then prescribes the disciple's lifelong daily conduct, including sandhyop\u0101sana (worship at the junctures of the day), regular worship on the sacrificial surface, and the daily mantra practice (T\u0100 26/1-76; pp. 369\u2013398).",
+      "source_ids": [
+        "ta_ahnika_24",
+        "ta_ahnika_25",
+        "ta_ahnika_26"
+      ],
+      "topics": [
+        "antye\u1e63\u1e6di",
+        "\u015br\u0101ddha",
+        "funerary",
+        "\u015be\u1e63av\u1e5btti",
+        "daily_ritual",
+        "ancestors"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_009",
+      "section": "initiation",
+      "subsection": "ablutions",
+      "kind": "source",
+      "text": "The eight ablutions (sn\u0101n\u0101\u1e63\u1e6daka) are prescribed in \u0100hnika 15 as a progressive purification: 'Such are the eight ablutions. (They bestow) a progressively higher state of purity. The sage (muni) who is intent (on performing) the eight ablutions attains successively, (respectively,) stability (dh\u1e5bti) (Earth), nourishment (apy\u0101ya) (Water), the burning of impurity (malaplo\u1e63a) (Fire), vitality (v\u012brya) (Air), pervasion (vy\u0101pti) (Space), the power to create (s\u1e5bji) (Moon) and maintain (sthiti) (Sun), and (then finally,) oneness (abheda) (i.e., the Self). These eight 'sacred bodies' (m\u016brti) are (both) grace and \u015aiva by nature. By contemplating them as they are according to their own (specific) nature and as \u015aiva, they each bestow their (corresponding) fruit' (T\u0100 15/61-63; Vol. 8, pp. 48\u201349). The Kaula ablution (Nirmary\u0101da\u015b\u0101stra) prescribes a different set for the hero (v\u012bra): 'the dust of a battlefield (which is Earth), the Hero's water (v\u012brajala) (i.e., urine) (which is Water), the Hero's ash (taken from a funeral pyre, is Fire), (Air is) the great wind (that bears the dust of cremation grounds), (Space is) the sky (above) a cremation ground and (a wild) forest. The Sun and Moon are those associated with them. (The eighth is) the Self that, freed of all the disquietude of thought constructs, is well established. (Kaula) heroes should venerate (this) group of eight bodies (in this way) when bathing and worshipping etc.' (T\u0100 15/66-68; Vol. 8, pp. 50\u201351).",
+      "source_ids": [
+        "ta_ahnika_15"
+      ],
+      "topics": [
+        "ablutions",
+        "sn\u0101n\u0101\u1e63\u1e6daka",
+        "kaula_ablution",
+        "nirmary\u0101da",
+        "v\u012bra",
+        "eight_bodies"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_010",
+      "section": "ritual",
+      "subsection": "ny\u0101sa",
+      "kind": "source",
+      "text": "The three primary depositions (ny\u0101sa) of \u0100hnika 15 are the M\u0101t\u1e5bk\u0101ny\u0101sa, M\u0101lin\u012bny\u0101sa, and \u015aabdar\u0101\u015biny\u0101sa. The M\u0101t\u1e5bk\u0101ny\u0101sa deposits the fifty phonemes in their conventional order onto the disciple's body: 'A should be imagined to be on the forehead, and the second one (\u0100) on the face. Having placed I and \u012a on the two eyes, one should deposit U and \u016a on the two ears. \u1e5a and \u1e5c are on the nostrils. . . The gutturals (should be deposited) on the right shoulder, arm, hand, fingers and nails. In the same way, the palatals (should be deposited) in (the same) order on the left (arm)' (T\u0100 15/117cd-120, paraphrasing MV 8/27-32ab; Vol. 8, pp. 79\u201382). The M\u0101lin\u012bny\u0101sa deposits the same fifty phonemes in the secret M\u0101lin\u012b sequence (beginning with NA and ending with PH), which represents the goddess in her supreme form as Par\u0101 and K\u0101lasa\u1e41kar\u1e63i\u1e47\u012b. The \u015aabdar\u0101\u015biny\u0101sa is the deposition of the fifty Rudras/Bhairavas who govern the phonemes, identified with Bhairava as the possessor of \u015aakti. Jayaratha notes that these three depositions correspond to the three forms of emission: 'The same (power of emission) is called the Assembly of Sounds (\u015aabdar\u0101\u015bi) and also M\u0101t\u1e5bk\u0101, and by the penetration of the consonants and the vowels it is said to be M\u0101lin\u012b' (T\u0100 3/232; Vol. 2, pp. 357\u2013359).",
+      "source_ids": [
+        "ta_ahnika_15",
+        "ta_ahnika_3"
+      ],
+      "topics": [
+        "ny\u0101sa",
+        "m\u0101t\u1e5bk\u0101ny\u0101sa",
+        "m\u0101lin\u012bny\u0101sa",
+        "\u015babdar\u0101\u015biny\u0101sa",
+        "deposition",
+        "phonemes"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_011",
+      "section": "dying",
+      "subsection": "sadyahsamutkrama",
+      "kind": "source",
+      "text": "\u0100hnika 19 describes the 'Initiation of the Immediate Exit from the Body' (sadya\u1e25samutkrama) with great urgency. Abhinavagupta writes: 'When death (dehap\u0101ta) is immanent, having attained \u015aiva's initiation (\u015a\u0101\u1e45kar\u012b d\u012bk\u1e63\u0101), by the flashing forth of a descent of the power (of grace), (immediately after) the moment (he receives) initiation, he attains \u015aiva' (T\u0100 19/2-3; Vol. 9, pp. 200\u2013201). The circumstances requiring this rite are specified: 'If a descent of the power (of grace) takes place when (the disciple) is close to dying, the teacher should impart the initiation that, free of impediments (kle\u015ba), (grants) an immediate exit (from the body) to those who are at the end (of their life). (He should do it in the following circumstances): 1) If (the descent of the power of grace is intense-cum-)weak and (the disciple's) life is coming to an end, in the course of the service he has offered to (his) teacher and others. Or 2) that (power of) the Lord descends mediated by (the prayers) of (his) relatives or friends etc. Or 3) if he was previously a (common) regular initiate, (but) has not received the supreme initiation, or 4) if he has received it, he wants to abandon his vital breath' (T\u0100 19/4-6; Vol. 9, pp. 201\u2013202). The rite includes the Deposition of the Razor (krp\u0101\u1e47y\u0101diny\u0101sa), the blocking of vital centres, and the circulation of the breath to force consciousness upward through the su\u1e63umn\u0101. The teacher 'should block the essence of the fettered soul by means of the Point (bindu), that is, the exhaled breath, by the process of the application of the Great Net' (T\u0100 19/13-16; Vol. 9, pp. 348\u2013350), piercing through the inner wheels and fixing the soul at the extremity of the Cavity of Brahm\u0101.",
+      "source_ids": [
+        "ta_ahnika_19"
+      ],
+      "topics": [
+        "sadya\u1e25samutkrama",
+        "dying_initiation",
+        "\u015b\u0101\u1e45kar\u012b_d\u012bk\u1e63\u0101",
+        "krp\u0101\u1e47y\u0101diny\u0101sa",
+        "k\u0101l\u0101vek\u1e63\u0101",
+        "immediate_liberation",
+        "great_net"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_012",
+      "section": "death",
+      "subsection": "antye\u1e63\u1e6di",
+      "kind": "source",
+      "text": "\u0100hnika 24 prescribes the funerary rites (antye\u1e63\u1e6di) for deceased \u015aaiva initiates. Abhinavagupta opens: 'Now listen (to a description of) the last sacrament, along with its secret (procedure), taught in the \u015aaiva scriptures (\u015b\u0101mbhava\u015b\u0101sana)' (T\u0100 24/1; Vol. 9, p. 343). The qualified recipients are described: 'The teacher who knows (the true nature of) reality (and the correct procedure) may perform the initiation (given in the course of a) funerary rite to the followers of inferior (traditions, beginning with those who are disciples,) right up to (their) teachers, (but only) because (they have) clearly (received) a descent of the power (of grace) mentioned above. He must impart it to those who adhere to superior doctrines (\u015b\u0101sana) but have transgressed the rules (and failed to perform the required reparatory rites)' (T\u0100 24/2-3; Vol. 9, pp. 343\u2013344). The procedure follows the method of the Great Net of the Kulagahvara: 'After having projected, in the (reverse order, which is that of) involution, the mantras on the dead body, the teacher, making use of the method of the Net, must attract (the soul of the) deceased, and immediately after, perform on the dead body the operations of fixing, perforation, assailing, etc., making his own vital breath pass through the heart, throat and forehead of the dead body' (T\u0100 24, citing TS\u0101 p. 175; Vol. 9, pp. 349\u2013350). The rite culminates in the soul being conjoined to the supreme reality; a sign (such as trembling of the corpse) serves as assurance that liberation has taken place.",
+      "source_ids": [
+        "ta_ahnika_24"
+      ],
+      "topics": [
+        "antye\u1e63\u1e6di",
+        "funerary_rites",
+        "kulagahvara",
+        "great_net",
+        "dead_body_rites",
+        "soul_conjunction"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_013",
+      "section": "initiation",
+      "subsection": "samaya_pledges",
+      "kind": "source",
+      "text": "The pledges (samaya) are the rules that bind the regular initiate (samayin) to the \u015aaiva community. In \u0100hnika 15, Abhinavagupta presents the sixty-four pledges from the Devy\u0101y\u0101mala in eight groups of eight: '(Now) the teacher should tell (the disciple, who has thus by his devotion) become Rudra's limb (rudr\u0101\u1e41\u015ba), the sixty-four pledges (samaya) described in the Devy\u0101y\u0101mala and other (scriptures). There are eight groups of pledges (samay\u0101\u1e63\u1e6daka) (each of which consists of) eight (rules). (They are:) 1) what is not to be said (av\u0101da), 2) what is not to be done (akara\u1e47a), 3) (what is to be) kept hidden (g\u016b\u1e0dhi), 4) (what should be) worshipped (p\u016bj\u0101), 5) (to whom is offered) libation (tarpana), 6) (whom one should) respect (bh\u0101vana), 7) (what one should) strike down (hanana), and 8) (who is to be) driven mad (mohana)' (T\u0100 15/524-525; Vol. 8, pp. 318\u2013319). Abhinava draws from eleven Trika and Krama Tantras for these, including the Devy\u0101y\u0101mala, Gamatantra, M\u0101dhavakula, Tri\u015birobhairava, \u016armikaul\u0101r\u1e47ava, and Kulagahvaratantra. The Kaula pledges are distinctive in that they 'emphasize the honouring of women and rejection of the conventional norms enjoining purity, and strongly guard the dignity of lower castes and others considered to be unclean' (T\u0100 Vol. 8, p. 319). Secrecy is a central concern across both Siddh\u0101nta and Kaula traditions.",
+      "source_ids": [
+        "ta_ahnika_15"
+      ],
+      "topics": [
+        "samaya",
+        "pledges",
+        "samayin",
+        "devy\u0101y\u0101mala",
+        "samay\u0101\u1e63\u1e6daka",
+        "kaula_pledges",
+        "rude_r\u0101\u1e41\u015ba",
+        "secrecy"
+      ],
+      "status": "active"
+    }
+  ],
+  "coverage": {
+    "initiation": {
+      "status": "comprehensive",
+      "sources": [
+        "ta_ahnika_15",
+        "ta_ahnika_16",
+        "ta_ahnika_17",
+        "ta_ahnika_18",
+        "ta_ahnika_20",
+        "ta_ahnika_21",
+        "ta_ahnika_22"
+      ],
+      "passage_count": 8,
+      "estimated_completeness": 0.9,
+      "gaps": [
+        "Full verse-by-verse translation passages from each \u0101hnika still needed; currently summarized from Dyczkowski's structural outline"
+      ]
+    },
+    "dying": {
+      "status": "good",
+      "sources": [
+        "ta_ahnika_19"
+      ],
+      "passage_count": 2,
+      "estimated_completeness": 0.8,
+      "gaps": [
+        "The six wheels, three targets, and five voids of Appendix A to Chapter 19 (Vol. 9, pp. 443\u2013451) need integration"
+      ]
+    },
+    "death": {
+      "status": "good",
+      "sources": [
+        "ta_ahnika_24",
+        "ta_ahnika_25",
+        "ta_ahnika_26"
+      ],
+      "passage_count": 3,
+      "estimated_completeness": 0.8,
+      "gaps": [
+        "The full procedure for the \u015br\u0101ddha n\u0101\u1e0d\u012bvidhi from the Kulagahvara needs expansion"
+      ]
+    },
+    "teacher": {
+      "status": "good",
+      "sources": [
+        "ta_ahnika_23"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 0.6,
+      "gaps": [
+        "The mantric procedures for the abhi\u1e63ecana are summarized but not yet detailed"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "coverage_gap",
+      "title": "\u0100hnika 11 (Tantr\u0101loka Vol. 7) not yet integrated",
+      "description": "The initiation system proper begins with \u0100hnika 11 of the Tantr\u0101loka. The source text for this volume is identified as v8 but line numbering suggests it is \u0100hnika 15. Clarify the base text scope.",
+      "status": "resolved_in_0.2.0",
+      "created": "2026-07-14",
+      "auto_generated": true
+    },
+    {
+      "id": "issue-002",
+      "type": "coverage_gap",
+      "title": "Li\u1e45g\u0101rc\u0101 (\u0100hnika 27) only peripherally covered",
+      "description": "\u0100hnika 27 on Li\u1e45ga worship is a long chapter with many sub-types of li\u1e45ga, rosaries, and sacrificial jars. Only briefly noted in the last passage.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial RO created covering initiation system from \u0100hnikas 15\u201327. 13 sources documented. 8 passages covering s\u0101may\u012bd\u012bk\u1e63\u0101, Trident Throne, putrakad\u012bk\u1e63\u0101, p\u0101\u015bad\u0101ha, sadya\u1e25samutkrama, tul\u0101d\u012bk\u1e63\u0101/p\u0101rok\u1e63\u012bd\u012bk\u1e63\u0101/li\u1e45goddh\u0101ra, abhi\u1e63ecana, and funerary rites.",
+      "sources_added": [
+        "ta_ahnika_15",
+        "ta_ahnika_16",
+        "ta_ahnika_17",
+        "ta_ahnika_18",
+        "ta_ahnika_19",
+        "ta_ahnika_20",
+        "ta_ahnika_21",
+        "ta_ahnika_22",
+        "ta_ahnika_23",
+        "ta_ahnika_24",
+        "ta_ahnika_25",
+        "ta_ahnika_26",
+        "ta_ahnika_27"
+      ],
+      "passage_count": 8,
+      "status": "draft"
+    },
+    {
+      "version": "0.2.0",
+      "date": "2026-07-14",
+      "type": "update",
+      "summary": "Added 5 passages with direct source extracts: the eight ablutions and Kaula ablution (T\u0100 15/61-68), the three depositions M\u0101t\u1e5bk\u0101/M\u0101lin\u012b/\u015aabdar\u0101\u015bi (T\u0100 15/117cd-125ab), the initiation for the dying sadya\u1e25samutkrama with four qualifying circumstances (T\u0100 19/1-6), the funerary rites antye\u1e63\u1e6di with the Great Net procedure (T\u0100 24/1-16), and the system of pledges/samaya from the Devy\u0101y\u0101mala in eight groups of eight (T\u0100 15/524-525).",
+      "sources_added": [],
+      "passage_count": 13,
+      "status": "draft"
+    }
+  ],
+  "appendices": [
+    {
+      "file": "initiation-types-table.md",
+      "description": "Comparative table of initiation types across \u0100hnikas 15\u201327, with competence requirements, mantras, and fruits"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created in draft state covering Tantr\u0101loka initiation system \u0100hnikas 15\u201327",
+      "sources_total": 13,
+      "passages_total": 13
+    }
+  ]
+}

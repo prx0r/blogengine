@@ -1,0 +1,52 @@
+{
+  "work_id": "work:t2-pubmed-active-inference-demystified-and-compared",
+  "schema_version": 2,
+  "title": "Active Inference: Demystified and Compared.",
+  "authors": [
+    {
+      "name": "Sajid N"
+    },
+    {
+      "name": "Ball PJ"
+    },
+    {
+      "name": "Parr T"
+    },
+    {
+      "name": "Friston KJ"
+    }
+  ],
+  "publication": {
+    "year": 2021,
+    "journal": "Neural Comput",
+    "source": "PubMed/MEDLINE",
+    "language": "en"
+  },
+  "identifiers": {
+    "pmid": "33400903",
+    "doi": "10.1162/neco_a_01357"
+  },
+  "topics": [
+    "phase-6-dependent-arising",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "assets": {
+    "pdf_path": null,
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/33400903/",
+    "abstract": "Active inference is a first principle account of how autonomous agents operate in dynamic, nonstationary environments. This problem is also considered in reinforcement learning, but limited work exists on comparing the two approaches on the same discrete-state environments. In this letter, we provide (1) an accessible overview of the discrete-state formulation of active inference, highlighting natural behaviors in active inference that are generally engineered in reinforcement learning, and (2) "
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_alt17_acquisition",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 6,
+    "phase_name": "Dependent-arising",
+    "bridge_rationale": "Bridge paper score=10.0: links Dependent-arising concept to mechanistic neuroscience"
+  },
+  "evaluation": "Score 10: Excellent bridge signal",
+  "tier": 2
+}

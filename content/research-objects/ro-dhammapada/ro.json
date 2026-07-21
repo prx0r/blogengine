@@ -1,0 +1,163 @@
+{
+  "ro_id": "ro:dhammapada",
+  "schema_version": 1,
+  "title": "The Dhammapada: The Buddha's Path of Wisdom",
+  "subtitle": "Key passages on mind, the path, the arahant, craving, and nibbana (F. Max M\u00fcller trans.)",
+  "family": "source-study",
+  "status": "draft",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "Extracted verses from the Dhammapada on mind as forerunner, the path, the arahant, craving (tanha), the Tathagata, nibbana as the highest bliss, and the characteristics of the wise.",
+    "scope": "Covers chapters: Twin Verses, The Venerable (Arhat), The Buddha, Happiness, The Way, and Thirst. Max M\u00fcller's translation from the Pali.",
+    "traditions": ["buddhism", "theravada", "dhammapada"]
+  },
+  "sources": [
+    {
+      "source_id": "dhammapada-muller",
+      "tier": 1,
+      "label": "Dhammapada, a Collection of Verses — Translated by F. Max M\u00fcller (1881), Project Gutenberg #2017",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": ["twin_verses", "mind", "arahant", "tathagata", "craving", "nibbana", "path", "eightfold_path"],
+      "sections_affected": ["mind_and_path", "arahant", "craving_and_nibbana", "buddha"],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "mind_and_path",
+      "subsection": "twin_verses",
+      "kind": "source",
+      "text": "All that we are is the result of what we have thought: it is founded on our thoughts, it is made up of our thoughts. If a man speaks or acts with an evil thought, pain follows him, as the wheel follows the foot of the ox that draws the carriage. All that we are is the result of what we have thought: it is founded on our thoughts, it is made up of our thoughts. If a man speaks or acts with a pure thought, happiness follows him, like a shadow that never leaves him. ... For hatred does not cease by hatred at any time: hatred ceases by love, this is an old rule.",
+      "source_ids": ["dhammapada-muller"],
+      "topics": ["mind", "thought", "karma", "hatred", "love", "twin_verses"],
+      "line_refs": ["94-98", "99-102", "110-111"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "arahant",
+      "subsection": "the_venerable",
+      "kind": "source",
+      "text": "There is no suffering for him who has finished his journey, and abandoned grief, who has freed himself on all sides, and thrown off all fetters. ... Men who have no riches, who live on recognised food, who have perceived void and unconditioned freedom (Nirvana), their path is difficult to understand, like that of birds in the air. He whose appetites are stilled, who is not absorbed in enjoyment, who has perceived void and unconditioned freedom (Nirvana), his path is difficult to understand, like that of birds in the air. The gods even envy him whose senses, like horses well broken in by the driver, have been subdued, who is free from pride, and free from appetites.",
+      "source_ids": ["dhammapada-muller"],
+      "topics": ["arahant", "freedom", "nirvana", "passionlessness", "sage"],
+      "line_refs": ["442-477"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "buddha",
+      "subsection": "the_awakened_one",
+      "kind": "source",
+      "text": "He whose conquest is not conquered again, into whose conquest no one in this world enters, by what track can you lead him, the Awakened, the Omniscient, the trackless? ... Not to commit any sin, to do good, and to purify one's mind, that is the teaching of (all) the Awakened. ... He who takes refuge with Buddha, the Law, and the Church; he who, with clear understanding, sees the four holy truths: viz. pain, the origin of pain, the destruction of pain, and the eightfold holy way that leads to the quieting of pain;\u2014that is the safe refuge, that is the best refuge; having gone to that refuge, a man is delivered from all pain.",
+      "source_ids": ["dhammapada-muller"],
+      "topics": ["buddha", "tathagata", "four_noble_truths", "eightfold_path", "refuge", "dhamma"],
+      "line_refs": ["788-794", "804-805", "827-834"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "craving_and_nibbana",
+      "subsection": "nibbana_as_highest_bliss",
+      "kind": "source",
+      "text": "Let us live happily then, though we call nothing our own! We shall be like the bright gods, feeding on happiness! Victory breeds hatred, for the conquered is unhappy. He who has given up both victory and defeat, he, the contented, is happy. There is no fire like passion; there is no losing throw like hatred; there is no pain like this body; there is no happiness higher than rest. ... Hunger is the worst of diseases, the body the greatest of pains; if one knows this truly, that is Nirvana, the highest happiness. Health is the greatest of gifts, contentedness the best riches; trust is the best of relationships, Nirvana the highest happiness.",
+      "source_ids": ["dhammapada-muller"],
+      "topics": ["nibbana", "happiness", "contentment", "peace", "highest_bliss"],
+      "line_refs": ["863-877"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "the_path",
+      "subsection": "the_eightfold_way",
+      "kind": "source",
+      "text": "The best of ways is the eightfold; the best of truths the four words; the best of virtues passionlessness; the best of men he who has eyes to see. This is the way, there is no other that leads to the purifying of intelligence. Go on this way! Everything else is the deceit of Mara (the tempter). If you go on this way, you will make an end of pain! The way was preached by me, when I had understood the removal of the thorns (in the flesh). You yourself must make an effort. The Tathagatas (Buddhas) are only preachers. The thoughtful who enter the way are freed from the bondage of Mara.",
+      "source_ids": ["dhammapada-muller"],
+      "topics": ["eightfold_path", "the_way", "effort", "tathagata", "self_reliance"],
+      "line_refs": ["1133-1147"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_006",
+      "section": "craving_and_nibbana",
+      "subsection": "the_root_of_thirst",
+      "kind": "source",
+      "text": "The thirst of a thoughtless man grows like a creeper; he runs from life to life, like a monkey seeking fruit in the forest. Whomsoever this fierce thirst overcomes, full of poison, in this world, his sufferings increase like the abounding Birana grass. He who overcomes this fierce thirst, difficult to be conquered in this world, sufferings fall off from him, like water-drops from a lotus leaf. ... I have conquered all, I know all, in all conditions of life I am free from taint; I have left all, and through the destruction of thirst I am free; having learnt myself, whom shall I teach? The gift of the law exceeds all gifts; the sweetness of the law exceeds all sweetness; the delight in the law exceeds all delights; the extinction of thirst overcomes all pain.",
+      "source_ids": ["dhammapada-muller"],
+      "topics": ["tanha", "craving", "thirst", "passionlessness", "freedom", "arahant"],
+      "line_refs": ["1378-1387", "1454-1460"],
+      "status": "active"
+    }
+  ],
+  "coverage": {
+    "mind_and_path": {
+      "status": "good",
+      "sources": ["dhammapada-muller"],
+      "passage_count": 1,
+      "estimated_completeness": 0.6,
+      "gaps": ["Chapters II (Earnestness), III (Thought), and IV (Flowers) could provide additional passages on heedfulness and mind training."]
+    },
+    "arahant": {
+      "status": "good",
+      "sources": ["dhammapada-muller"],
+      "passage_count": 1,
+      "estimated_completeness": 0.5,
+      "gaps": ["Chapter XXVI (The Brahmana/Arhat) contains 41 additional verses on the arahant that could be extracted."]
+    },
+    "craving_and_nibbana": {
+      "status": "good",
+      "sources": ["dhammapada-muller"],
+      "passage_count": 2,
+      "estimated_completeness": 0.6,
+      "gaps": ["Chapter XXIV (Thirst) has 26 verses; only the first 6 and last 4 are covered here."]
+    },
+    "buddha": {
+      "status": "good",
+      "sources": ["dhammapada-muller"],
+      "passage_count": 2,
+      "estimated_completeness": 0.6,
+      "gaps": ["Chapter XIV (The Buddha) has 18 verses; the four noble truths and the three jewels are covered."]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "interpretation",
+      "title": "Max M\u00fcller's translation uses 19th-century Christian terminology",
+      "description": "Terms like 'the Law' for Dhamma, 'the Church' for Sangha, and 'sin' reflect Victorian Christian categories. A modern translation (e.g., Buddharakkhita or Fronsdal) should be consulted for accuracy.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    },
+    {
+      "id": "issue-002",
+      "type": "coverage_gap",
+      "title": "Missing verses on the Bhikshu and Brahmana",
+      "description": "Chapters XXV (The Bhikshu) and XXVI (The Brahmana/Arhat) contain important passages on the monastic ideal and the true holy man that are not yet extracted.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial RO created from Max M\u00fcller's translation. Six passages cover the twin verses, the arahant, the Buddha and the four noble truths, nibbana as the highest bliss, the eightfold way, and the root of thirst (tanha).",
+      "sources_added": ["dhammapada-muller"],
+      "passage_count": 6,
+      "status": "draft"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created in draft state from Max M\u00fcller's Dhammapada",
+      "sources_total": 1,
+      "passages_total": 6
+    }
+  ]
+}

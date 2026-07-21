@@ -1,0 +1,57 @@
+{
+  "co_id": "co:uno_discourses_b1_c2_priscus_vespa_t2",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "discourses_b1_c2_priscus_vespasian",
+  "turn_index": 2,
+  "lineage": "Realist",
+  "student_state": "unwavering_commitment",
+  "behavior_tags": [
+    "moral_necessity"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_04",
+    "function_name": "UM_04",
+    "mechanism_shape": "THRESHOLDING",
+    "teaching_actions": [
+      "escalates_threat"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.85,
+      "intimacy": 0.15,
+      "attunement": 0.2,
+      "style": 0.35,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_04",
+      "intimacy_discrete": "IN_01",
+      "attunement_discrete": "AT_01",
+      "style_discrete": "LS_02",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "accepts_mortality",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "They said 'I must say what I think right'—role commitment. Perfect. Now ultimate threat: death. They'll accept mortality ('When then did I tell you that I am immortal?') and assert role anyway ('You will do your part, and I will do mine'). The 'it is your part to kill; it is mine to die' is perfect—role separation. Episode complete.",
+  "accumulated_insight": "T3: They said 'I must say what I think right'—role commitment. Perfect. Now ultimate threat: death. They'll accept mortality ('When then did I tell you that I am immortal?') and assert role anyway ('You will do your part, and I will do mine'). Four-turn arc: role → compromise → system → death. Clean.",
+  "abstract_pattern": "",
+  "visible_response": "But if you do, I shall put you to death.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:kybalion",
+    "ro:grimoires-decoded",
+    "ro:hermes-proof-system"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

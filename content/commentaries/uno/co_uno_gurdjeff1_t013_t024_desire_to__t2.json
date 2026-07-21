@@ -1,0 +1,60 @@
+{
+  "co_id": "co:uno_gurdjeff1_t013_t024_desire_to__t2",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gurdjeff1_t013_t024_desire_to_be_free_and_change",
+  "turn_index": 2,
+  "lineage": "Gurdjieffian",
+  "student_state": "stuck_on_paradox",
+  "behavior_tags": [
+    "requests_clarification",
+    "cites_paradox"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_03",
+    "function_name": "RM_03",
+    "mechanism_shape": "COMPARISON_CONTRAST",
+    "teaching_actions": [
+      "clarifies_paradox",
+      "emphasizes_immediate_action"
+    ],
+    "traps_avoided": [
+      "false_paradox"
+    ],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.5,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "go_along_compliantly",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The resolution works: slow internal change vs. immediate action change (distinction). The student cited paradox (stuck on paradox), which shows they understand: contradiction needs resolution. They'll likely accept the distinction. The episode is complete: negation → exception → differentiation → action → model → paradox → resolution. Pattern complete.",
+  "accumulated_insight": "Three-turn pattern: T1: Student resisted total negation (resisting total negation)—differentiation: desire can mask weakness. T2: Student asked about action (focusing on action as salvation)—model: self = desires + plans, multiple lines needed. T3: Student cited paradox ('we cannot change anything but we must act differently')—stuck on paradox via requests clarification and cites paradox. They understand: contradiction between 'cannot change' and 'must act differently'. The comparison_contrast mechanism resolves: slow internal change vs. immediate action change ('Try to think: while we still remain as we are, we have to act differently. You cannot change at once, change is slow. But you have many things to do, and if you do them in a wrong way you will never change'). Pattern complete: total negation → positive exception → differentiation → action question → model → paradox question → resolution. They've shifted: change = slow internal, action = immediate (distinction).",
+  "abstract_pattern": "",
+  "visible_response": "Try to think: while we still remain as we are, we have to act differently.\nYou\ncannot change at once, change is slow. But you have many things to do, and if you do\nthem in a wrong way you will never change.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:sufi-comparative-analysis",
+    "ro:steiner-tantraloka-parallels"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

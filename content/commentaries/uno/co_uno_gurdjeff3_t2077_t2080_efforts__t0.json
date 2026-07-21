@@ -1,0 +1,60 @@
+{
+  "co_id": "co:uno_gurdjeff3_t2077_t2080_efforts__t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gurdjeff3_t2077_t2080_efforts_not_theory",
+  "turn_index": 0,
+  "lineage": "Gurdjieffian",
+  "student_state": "seeking_practical_link_to_theory",
+  "behavior_tags": [
+    "asks_technical_question",
+    "measures_utility_by_practice"
+  ],
+  "pedagogy": {
+    "phase": "SELF-MAKING",
+    "function_id": "SM_04",
+    "function_name": "SM_04",
+    "mechanism_shape": "CONSTRAINT_COLLAPSE",
+    "teaching_actions": [
+      "demands_action",
+      "rejects_theory",
+      "links_energy_to_effort",
+      "redirects_focus_to_action"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.85,
+      "intimacy": 0.62,
+      "attunement": 0.5,
+      "style": 0.65,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_04",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_04",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The action demand works: action (efforts! efforts!), rejects: theory (um), links: energy to effort, redirects: focus to action. The student asks practical question (seeking practical link to theory), which shows they understand: accumulator = needs practical understanding (utility measure). They'll likely comply with the action demand. Single-turn episode: practical question → action demand → complete. Hypothesis: high-intensity action demands lead to compliance in single-turn episodes—testable by tracking whether high-intensity demands end episodes.",
+  "accumulated_insight": "T1: Student asks practical question ('I want to ask about the big accumulator. I do not understand that practically')—seeking practical link to theory via asks technical question and measures utility by practice. They understand: accumulator = needs practical understanding (utility measure). The constraint_collapse mechanism demands: action (efforts! efforts!), rejects: theory (um), links: energy to effort, redirects: focus to action. Pattern: practical question → action demand → [complete]. Low confidence because action demands can lead to compliance or deeper questions.",
+  "abstract_pattern": "",
+  "visible_response": "Efforts! Efforts!\nThe more efforts you make, the more energy you can\nget. Without efforts you cannot get energy.\nEven if it is in you, it may be\nin the wrong place.\nDo not think about it theoretically;\nthink simply that\nyou have much energy in you that you never use, and you must make\nmore efforts to use it.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:sufi-comparative-analysis",
+    "ro:steiner-tantraloka-parallels"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

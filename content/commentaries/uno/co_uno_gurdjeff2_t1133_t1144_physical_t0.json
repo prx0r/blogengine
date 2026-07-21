@@ -1,0 +1,59 @@
+{
+  "co_id": "co:uno_gurdjeff2_t1133_t1144_physical_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gurdjeff2_t1133_t1144_physical_work_is_emotional",
+  "turn_index": 0,
+  "lineage": "Gurdjieffian",
+  "student_state": "seeking_functional_difference",
+  "behavior_tags": [
+    "asks_for_distinction",
+    "seeks_criterion"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_03",
+    "function_name": "RM_03",
+    "mechanism_shape": "COMPARISON_CONTRAST",
+    "teaching_actions": [
+      "defines_ordinary_work",
+      "asserts_difference_in_self-will",
+      "defines_school_work_by_struggle"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.65,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_04",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "go_along_compliantly",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The will-based definition works: ordinary work = self-will (mechanical), school work = struggle (against self-will), asserts: difference = quality of will (self-will vs. struggle). The student asks for distinction (seeking functional difference), which shows they're seeking criterion (difference). They'll likely accept the will-based definition. Single-turn episode: distinction question → will-based definition → complete. Hypothesis: will-based definitions lead to compliance in single-turn episodes—testable by tracking whether will-based definitions end episodes.",
+  "accumulated_insight": "T1: Student asks for distinction ('What is the difference between physical work in ordinary life and organized physical work in a school?')—seeking functional difference via asks for distinction and seeks criterion. They're seeking criterion (difference). The comparison_contrast mechanism defines: ordinary work = self-will (mechanical), school work = struggle (against self-will), asserts: difference = quality of will (self-will vs. struggle). Pattern: distinction question → will-based definition → [complete]. Low confidence because distinction questions can lead to compliance or deeper questions.",
+  "abstract_pattern": "",
+  "visible_response": "Working anywhere else is much easier: you give yourself more freedom to choose\nthe way to do it... You will choose your own tools, your own\ntime, your own weather, everything.\nSo you introduce very much self-will into it. In\norganized work you have not only physical results, you also struggle with your selfwill.\n\nBesides, organized physical work needs emotional effort.\nThat is why physical\nwork cannot really be called physical, because it is emotional as well.\nIf it were only\nphysical it would not be so profitable... Try to do some physical work harder and longer\nthan you can do it with ease and you will see that it requires an emotional effort.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:sufi-comparative-analysis",
+    "ro:steiner-tantraloka-parallels"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

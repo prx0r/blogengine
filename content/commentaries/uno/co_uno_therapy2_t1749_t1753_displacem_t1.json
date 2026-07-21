@@ -1,0 +1,53 @@
+{
+  "co_id": "co:uno_therapy2_t1749_t1753_displacem_t1",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy2_t1749_t1753_displacement_desk",
+  "turn_index": 1,
+  "lineage": "Therapeutic",
+  "student_state": "sober_realization",
+  "behavior_tags": [
+    "recognition"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_02",
+    "function_name": "RM_02",
+    "mechanism_shape": "SUBJECT_OBJECT_INVERSION",
+    "teaching_actions": [
+      "redirects_to_source"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.35,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_02",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "Turn 2: 'No.'. Student now in sober_realization. Continuing with subject_object_inversion approach. Building on previous turn's foundation.",
+  "accumulated_insight": "T2: Student: 'No.'. Shift from reactive_anger to sober_realization. Teacher applies subject_object_inversion mechanism with redirects to source. Mid-episode progression in REMAKING phase.",
+  "abstract_pattern": "",
+  "visible_response": "Obviously this anger wasn’t intended for the desk, was it?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

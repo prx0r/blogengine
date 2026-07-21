@@ -1,0 +1,205 @@
+{
+  "ro_id": "ro:alchemy-confessio",
+  "schema_version": 1,
+  "title": "Confessio Fraternitatis (The Confession of the Rosy Cross)",
+  "subtitle": "The second Rosicrucian manifesto (1615) \u2014 the Fraternity's declaration of its philosophy, reformation of knowledge, and prophetic vision for a new age",
+  "family": "theme",
+  "status": "draft",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "The Rosicrucian Confession expounding the Fraternity's reformed philosophy, the 'book of nature' as divine scripture, the magical language of Adam and Enoch, and the coming restoration of Adamic tr...",
+    "scope": "Covers the Fraternity's critique of existing philosophy, the doctrine of the 'sixth Candelbrium' (age of the Holy Spirit), the magical language of characters, the reading of the Bible as the compendium of the world, and the alchemical transmutation as a spiritual gate.",
+    "traditions": [
+      "rosicrucian",
+      "alchemy",
+      "christian_mysticism",
+      "hermetica",
+      "kabbalah"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "confessio-1615",
+      "tier": 1,
+      "label": "Confessio Fraternitatis (1615, Latin original; English translation by Thomas Vaughan, 1652)",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "sixth_age",
+        "book_of_nature",
+        "adamic_language",
+        "magic_characters",
+        "bible_as_compendium"
+      ],
+      "sections_affected": [
+        "prophecy",
+        "philosophy",
+        "language",
+        "scripture"
+      ],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "prophecy",
+      "subsection": "sixth_age",
+      "kind": "source",
+      "text": "It is the Lord Jehovah (who seeing the Lord's Sabbath is almost at hand, and hastened again, his period or course being finished, to his first beginning) doth turn about the course of Nature; and what heretofore hath been sought with great pains, and daily labour, is now manifested unto those who make small account, or scarcely once think upon it... God hath certainly and most assuredly concluded to send and grant to the world before her end, which presently thereupon shall ensue, such a truth, light, life, and glory, as the first man Adam had, which he lost in Paradise.",
+      "source_ids": [
+        "confessio-1615"
+      ],
+      "topics": [
+        "sixth_age",
+        "restoration",
+        "adamic_truth",
+        "prophecy"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "prophecy",
+      "subsection": "sixth_age",
+      "kind": "commentary",
+      "text": "The Confessio's prophecy of a 'sixth age' restoring Adamic truth is the Rosicrucian version of the Tantraloka's doctrine of the 'sixth stage' (shashtha avastha) \u2014 the state beyond the five elements where pure consciousness dawns. Steiner's 'sixth epoch' (the epoch of the Holy Spirit) in his cosmological lectures (Occult Science) directly parallels this: both describe a time when spiritual knowledge becomes direct and universal rather than mediated. In Layayoga, the sixth chakra (ajna) is the place where the three nadis (ida, pingala, sushumna) meet, restoring the 'Adamic' condition of unified perception before the fall into duality. The daimon path's 'Phase 4' (Integration) is this sixth age in miniature: the practitioner lives from the daimon as Adam lived from the Elohim \u2014 in direct, unmediated communion.",
+      "source_ids": [
+        "confessio-1615"
+      ],
+      "topics": [
+        "sixth_age",
+        "steiner",
+        "tantraloka",
+        "daimon"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "philosophy",
+      "subsection": "reformed_philosophy",
+      "kind": "source",
+      "text": "No other Philosophy we have, than that which is the head and sum, the foundations and contents of all faculties, sciences, and arts, the which (if we will behold our age) containeth much of Theology and medicine, but little of the wisdom of the law, and doth diligently search both heaven and earth: or, to speak briefly thereof, which doth manifest and declare sufficiently Man, whereof all learned who will make themselves known unto us, and come into our brotherhood, shall find more wonderful secrets by us than heretofore they did attain unto.",
+      "source_ids": [
+        "confessio-1615"
+      ],
+      "topics": [
+        "philosophy",
+        "reformation",
+        "science",
+        "wisdom"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "philosophy",
+      "subsection": "reformed_philosophy",
+      "kind": "commentary",
+      "text": "The Confessio's claim that true philosophy 'doth manifest and declare sufficiently Man' prefigures Steiner's anthroposophy \u2014 the wisdom that knows Man as the measure and mediator of all things. This is the Tantraloka's 'manana' (that which makes one know) \u2014 the reflective intelligence that, when purified, reveals the identity of the individual self with Shiva. In PGM terms, this is the systasis \u2014 the ritual that manifests the true man (the daimonic self) through the purification of the mortal nature. The 'head and sum of all faculties' is the sahasrara chakra in Layayoga, where all knowledge is synthesized into the single point of unity-consciousness. The daimon path's 'book of nature' is the practitioner's own life \u2014 every event becomes a revealed secret when read through the daimonic lens.",
+      "source_ids": [
+        "confessio-1615"
+      ],
+      "topics": [
+        "anthroposophy",
+        "tantraloka",
+        "pgm",
+        "daimon"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "language",
+      "subsection": "adamic_magic",
+      "kind": "source",
+      "text": "These characters and letters, as God hath here and there incorporated them in the Holy Scriptures, the Bible, so hath he imprinted them in all beasts. So that like as the mathematician and astronomer can long before see and know the eclipses which are to come, so we may verily foreknow and foresee the darkness of obscurations of the Church... From the which characters or letters we have borrowed our magic writing, and have found out, and made, a new language for ourselves, in the which withal is expressed and declared the nature of all things. So that it is no wonder that we are not so eloquent in other languages, the which we know that they are altogether disagreeing to the language of our forefathers, Adam and Enoch, and were through the Babylonical confusion wholly hidden.",
+      "source_ids": [
+        "confessio-1615"
+      ],
+      "topics": [
+        "adamic_language",
+        "magic_writing",
+        "characters",
+        "enoch"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_006",
+      "section": "language",
+      "subsection": "adamic_magic",
+      "kind": "commentary",
+      "text": "The Rosicrucian 'magic writing' \u2014 a language that expresses the nature of things directly \u2014 is the exact parallel of the Tantraloka's 'malini' and 'matrika' shaktis: the subtle sound-forms that are the actual substance of reality. In Layayoga, the bija mantras (seed syllables) are this Adamic language \u2014 each syllable (lam, vam, ram, yam, ham) is the actual vibration of a chakra, not a symbol for it. PGM employs this same principle: the barbarous names (voces magicae) derive their power from being utterances in the daimonic language, not from semantic meaning. Steiner's 'lecture on the Lord's Prayer' shows each petition as a cosmic character. The Confessio's magic writing is the daimon path's 'Name' \u2014 the personal Name revealed in the systasis is a fragment of this Adamic language, the practitioner's own Enochian glyph in the book of nature.",
+      "source_ids": [
+        "confessio-1615"
+      ],
+      "topics": [
+        "mantra",
+        "tantraloka",
+        "pgm",
+        "steiner"
+      ],
+      "status": "active"
+    }
+  ],
+  "coverage": {
+    "prophecy": {
+      "status": "good",
+      "sources": [
+        "confessio-1615"
+      ],
+      "passage_count": 2,
+      "estimated_completeness": 0.7,
+      "gaps": [
+        "Further prophetic passages on the fall of the Pope, the Lion's coming, and the end of the age"
+      ]
+    },
+    "philosophy": {
+      "status": "good",
+      "sources": [
+        "confessio-1615"
+      ],
+      "passage_count": 2,
+      "estimated_completeness": 0.7,
+      "gaps": [
+        "The Fraternity's critique of false alchemists and the emphasis on the Holy Bible as rule of life"
+      ]
+    },
+    "language": {
+      "status": "good",
+      "sources": [
+        "confessio-1615"
+      ],
+      "passage_count": 2,
+      "estimated_completeness": 0.8,
+      "gaps": [
+        "The doctrine of the two instruments for seeing, hearing, smelling, and one for speaking \u2014 the esoteric sensorium"
+      ]
+    }
+  },
+  "issues": [],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial RO with 6 passages (3 source, 3 commentary) from the Confessio Fraternitatis. Covers sixth age prophecy, reformed philosophy, and Adamic language doctrine.",
+      "sources_added": [
+        "confessio-1615"
+      ],
+      "passage_count": 6,
+      "status": "draft"
+    }
+  ],
+  "appendices": [],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created in draft state with 6 passages from the Confessio Fraternitatis",
+      "sources_total": 1,
+      "passages_total": 6
+    }
+  ]
+}

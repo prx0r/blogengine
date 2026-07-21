@@ -1,0 +1,119 @@
+{
+  "ro_id": "ro:alexander-notes-synthesis",
+  "schema_version": 1,
+  "title": "Notes on the Synthesis of Form (Christopher Alexander)",
+  "subtitle": "The pioneering work on pattern languages and the logic of design in complex systems",
+  "family": "thinker-topic",
+  "status": "stub",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "Alexander's 1964 work on the logic of design: how form emerges from the interaction of constraints in complex systems, anticipating pattern theory, complexity science, and the constraint space form...",
+    "scope": "Covers the diagrams/patterns as the key to creating form, the decomposition of design problems into solvable subsystems, and the interaction of constraints that shape emergent structure.",
+    "traditions": [
+      "design-theory",
+      "complexity-science",
+      "pattern-language"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "alexander-notes-synthesis",
+      "tier": 1,
+      "label": "Christopher Alexander \u2014 Notes on the Synthesis of Form (Harvard University Press, 1964). PDF, 225 pages.",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "patterns",
+        "form",
+        "constraints",
+        "design_logic"
+      ],
+      "sections_affected": [
+        "theory"
+      ],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "theory",
+      "subsection": "patterns_as_constraint_spaces",
+      "kind": "source",
+      "text": "Alexander's key insight: the diagrams or patterns are the key to creating form. A pattern is not a template but a configuration of constraints that produces a specific quality. This IS the constraint space (S, C, A): S is the space of possible forms, C is the interaction of constraints that determine which forms are viable, A is the set of stable pattern-solutions that satisfy the constraints. The same structure appears in biological morphospace (Levin), musical scales (Loy), and the 36 tattvas (Tantraloka).",
+      "source_ids": [
+        "alexander-notes-synthesis"
+      ],
+      "topics": [
+        "patterns",
+        "constraints",
+        "form",
+        "design"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "theory",
+      "subsection": "decomposition_and_emergence",
+      "kind": "source",
+      "text": "Alexander argues that complex design problems must be decomposed into subsystems that can be solved independently, then reintegrated. This is structurally identical to the four levels of the constraint space (L0-L3): each level constrains the next; the solution at each level is independent of the details of the levels below. The Tantraloka's six paths (sadadhvan) are the same decomposition: three objective paths (forces, principles, worlds) and three subjective paths (phonemes, mantras, words). Each must be purified independently before reintegration.",
+      "source_ids": [
+        "alexander-notes-synthesis"
+      ],
+      "topics": [
+        "decomposition",
+        "emergence",
+        "levels",
+        "constraints"
+      ],
+      "status": "active"
+    }
+  ],
+  "coverage": {
+    "theory": {
+      "status": "minimal",
+      "sources": [
+        "alexander-notes-synthesis"
+      ],
+      "passage_count": 2,
+      "estimated_completeness": 0.3,
+      "gaps": [
+        "Full extraction needed"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "coverage_gap",
+      "title": "Full extraction needed",
+      "description": "96 readable lines extracted.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial RO for Alexander's Notes on the Synthesis of Form.",
+      "sources_added": [
+        "alexander-notes-synthesis"
+      ],
+      "passage_count": 2,
+      "status": "draft"
+    }
+  ],
+  "appendices": [],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created.",
+      "sources_total": 1,
+      "passages_total": 2
+    }
+  ]
+}

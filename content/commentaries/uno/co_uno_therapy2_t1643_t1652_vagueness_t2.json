@@ -1,0 +1,56 @@
+{
+  "co_id": "co:uno_therapy2_t1643_t1652_vagueness_t2",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy2_t1643_t1652_vagueness_relationship",
+  "turn_index": 2,
+  "lineage": "Therapeutic",
+  "student_state": "defensive_attribution",
+  "behavior_tags": [
+    "projection"
+  ],
+  "pedagogy": {
+    "phase": "META",
+    "function_id": "UNKNOWN",
+    "function_name": "UNKNOWN",
+    "mechanism_shape": "CAUSAL_CHAIN",
+    "teaching_actions": [
+      "establishes_consequence",
+      "links_to_failure"
+    ],
+    "traps_avoided": [
+      "vagueness"
+    ],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.35,
+      "depth": 0.15,
+      "meta_mode": 0.75,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_02",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_02"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "Final turn: 'I’m vague, but the problem is vague I think.'. Reached defensive_attribution after 3 turns. Episode demonstrates causal_chain effectiveness in META work. Teaching complete for this sequence.",
+  "accumulated_insight": "T3 (Final): Student: 'I’m vague, but the problem is vague I think.'. Final state: defensive_attribution. Episode complete with 3 turns. Arc shows progression through META phase using causal_chain interventions. Teaching sequence addressed projection pattern.",
+  "abstract_pattern": "",
+  "visible_response": "But the problem is that as long as you are vague, we won’t get a clear picture of your difficulties.\nAnd if we don’t get a clear picture of your difficulties, I won’t be able to help you.",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

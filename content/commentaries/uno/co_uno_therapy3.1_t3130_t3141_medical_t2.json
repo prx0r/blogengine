@@ -1,0 +1,56 @@
+{
+  "co_id": "co:uno_therapy3.1_t3130_t3141_medical_t2",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3.1_t3130_t3141_medical_leave_denial",
+  "turn_index": 2,
+  "lineage": "Therapeutic",
+  "student_state": "objective_report",
+  "behavior_tags": [
+    "factual_reporting"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_02",
+    "function_name": "UM_02",
+    "mechanism_shape": "COMPARISON_CONTRAST",
+    "teaching_actions": [
+      "contrasts_facts",
+      "exposes_absurdity"
+    ],
+    "traps_avoided": [
+      "false_paradox"
+    ],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.35,
+      "attunement": 0.2,
+      "style": 0.35,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_01",
+      "style_discrete": "LS_02",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "Turn 3: 'I’ve got fifty percent lung function, according to the doctors, and I'. Student now in objective_report. Continuing with comparison_contrast approach. Building on previous turn's foundation.",
+  "accumulated_insight": "T3: Student: 'I’ve got fifty percent lung function, according to the doctors, and I'. Shift from guilty_uncertainty to objective_report. Teacher applies comparison_contrast mechanism with contrasts facts, exposes absurdity. Mid-episode progression in UNMAKING phase.",
+  "abstract_pattern": "",
+  "visible_response": "You have fifty percent lung function, and you can’t carry more than twenty pounds when you are required to carry how much?\n\nYou can carry twenty but are required to carry eighty. And you have doubts about your ability to do this?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

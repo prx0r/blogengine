@@ -1,0 +1,57 @@
+{
+  "co_id": "co:uno_discourses_b1_c2_priscus_vespa_t1",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "discourses_b1_c2_priscus_vespasian",
+  "turn_index": 1,
+  "lineage": "Realist",
+  "student_state": "tactical_submission",
+  "behavior_tags": [
+    "conditional_obedience"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_02",
+    "function_name": "UM_02",
+    "mechanism_shape": "SYSTEM_DYNAMICS",
+    "teaching_actions": [
+      "asserts_role_constraint"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.15,
+      "attunement": 0.2,
+      "style": 0.35,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_01",
+      "attunement_discrete": "AT_01",
+      "style_discrete": "LS_02",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "moral_necessity",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "They tried to compromise—'don't ask my opinion, and I will be silent.' But I'm revealing my own role constraint: 'I must ask your opinion' (Emperor must consult). The system requires both roles. They'll assert their role back ('I must say what I think right'). Then I'll escalate to death—that's the final test.",
+  "accumulated_insight": "T2: They tried to compromise ('don't ask my opinion, and I will be silent'). But I'm revealing my own role constraint: 'I must ask your opinion' (Emperor must consult). The system requires both roles to function. They'll assert their role back ('I must say what I think right'). Then I'll escalate to death.",
+  "abstract_pattern": "",
+  "visible_response": "But I must ask your opinion.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:kybalion",
+    "ro:grimoires-decoded",
+    "ro:hermes-proof-system"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

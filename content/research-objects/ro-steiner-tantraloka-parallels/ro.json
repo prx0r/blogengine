@@ -1,0 +1,231 @@
+{
+  "ro_id": "ro:steiner-tantraloka-parallels",
+  "schema_version": 1,
+  "title": "Comparative Metaphysics — Steiner's Threefold Body and the 36 Tattvas",
+  "subtitle": "Systematic comparison between Rudolf Steiner's Occult Science and Abhinavagupta's Tantrāloka: śārīra-traya, cosmic evolution, and the Three Means",
+  "family": "topic-across-thinkers",
+  "status": "draft",
+  "current_version": "0.2.0",
+  "summary": {
+    "one_line": "A comparative compilation mapping Steiner's sevenfold human constitution and cosmic evolution (Saturn→Earth) onto the Tantrāloka's 36 tattvas, śārīra-traya, and the Three Upāyas.",
+    "scope": "Covers the correspondence of physical/ether/astral bodies ↔ śārīra-traya, the cosmic evolution sequence ↔ tattva descent, Steiner's Imagination/Inspiration/Intuition ↔ Śāmbhava/Śākta/Āṇava upāyas, and the Five Kañcukas ↔ the Guardian of the Threshold.",
+    "traditions": [
+      "anthroposophy",
+      "kashmir_shaivism",
+      "tantra",
+      "comparative_esotericism"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "steiner-occult-science",
+      "tier": 1,
+      "label": "Steiner, Rudolf — An Outline of Occult Science (trans. Maas, 1972), esp. Ch. 2 (Human Constitution), Ch. 4 (Cosmic Evolution), Ch. 5 (Initiation)",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": ["sevenfold_constitution", "cosmic_evolution", "three_initiation_stages", "guardian_threshold"],
+      "sections_affected": ["comparative_metaphysics", "threefold_body", "initiation_path"],
+      "status": "active"
+    },
+    {
+      "source_id": "tantraloka-volume1",
+      "tier": 1,
+      "label": "Tantrāloka, Vol. 1 (Dyczkowski trans.) — Āhnika 1: Three Upāyas, 36 Tattvas, Levels of Sound",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": ["three_upayas", "36_tattvas", "pratibha", "sound_levels"],
+      "sections_affected": ["comparative_metaphysics", "tattvas", "upayas"],
+      "status": "active"
+    },
+    {
+      "source_id": "tantraloka-volume6",
+      "tier": 1,
+      "label": "Tantrāloka, Vol. 6 (Dyczkowski trans.) — Āhnika 10: Seven Perceivers, Consciousness States, Five Kañcukas",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": ["seven_perceivers", "consciousness_states", "five_kancukas"],
+      "sections_affected": ["comparative_metaphysics", "consciousness", "coverings"],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "comparative_metaphysics",
+      "subsection": "threefold_body_map",
+      "kind": "source",
+      "text": "Steiner's sevenfold human constitution maps onto the Tantrāloka's śārīra-traya (three bodies) with remarkable precision. The physical body (Steiner) = the sthūla-śarīra (gross body); the ether/life body = the prāṇamaya-kośa (life-sheath) and the sūkṣma-śarīra's prāṇic substrate; the astral body = the subtle body's cognitive/affective layer (the mental apparatus of the 36 tattvas). Steiner's ego (the 'I') corresponds to the puruṣa or the 'perceiver' (pramātṛ) of Tantrāloka Āhnika 10. In the daimon tradition, Steiner's spirit self (manas) = the HGA / the daimon, which is the transformed astral body. The Tantrāloka's cicchakti (consciousness power) operates at the same level: it is the reflective awareness that stands between the ego and pure consciousness. Steiner's life spirit (buddhi) and spirit man (ātma) correspond to the higher reaches of the tattva hierarchy from śuddhavidyā through śiva-śakti union.",
+      "source_ids": ["steiner-occult-science", "tantraloka-volume1", "tantraloka-volume6"],
+      "topics": ["threefold_body", "sharira_traya", "sevenfold_constitution", "pramatri"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "comparative_metaphysics",
+      "subsection": "cosmic_evolution_and_tattva_descent",
+      "kind": "source",
+      "text": "Steiner's cosmic evolution (Saturn → Sun → Moon → Earth → Jupiter → Venus → Vulcan) finds its structural parallel in the Tantrāloka's tattva descent (śiva → śakti → sadāśiva → īśvara → śuddhavidyā → māyā → the five kañcukas → the 24 material tattvas). Both describe a progressive densification from pure Spirit to solid matter. But Steiner's system is temporal-evolutionary (stages that succeed one another in cosmic time), while the Tantrāloka's is hierarchical-emanational (levels of being that coexist as a vertical ladder). The Tantrāloka's 36 tattvas function as 'the ladder between matter and pure consciousness' (Tantraloka Reference Guide, §Comparative Notes). Each tattva is a level of being that must be traversed in ascent — just as Steiner's evolutionary stages must be recapitulated in initiation. The descent through the five kañcukas (limitations) — kalā, vidyā, rāga, kāla, niyati — corresponds to the emergence of the Doppelganger/Guardian in Steiner: the veils that create the separate ego.",
+      "source_ids": ["steiner-occult-science", "tantraloka-volume1", "tantraloka-volume6"],
+      "topics": ["cosmic_evolution", "tattva_descent", "kancukas", "guardian_threshold", "steiner_cosmology"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "comparative_metaphysics",
+      "subsection": "three_means_and_three_initiation_stages",
+      "kind": "source",
+      "text": "The three upāyas (means) of Tantrāloka map directly onto Steiner's three stages of initiation. Āṇavopāya (individual means) corresponds to Imagination (Steiner's first stage) — working with symbols, purification of thought-constructs (vikalpasaṃskāra), building picture-consciousness independent of the physical brain. Śāktopāya (empowered means) corresponds to Inspiration (Steiner's second stage) — wordless, concept-free knowing, the purification of thinking through meditation, holding tension until beings communicate directly. Śāmbhavopāya (divine means) corresponds to Intuition (Steiner's third stage) — direct union with spiritual beings, the identity of consciousness. As the Tantraloka Reference Guide notes: 'The three upāyas map to the three stages of Steiner's initiation: Śāmbhava = Intuition (direct union), Śākta = Inspiration (purified thinking), Āṇava = Imagination (symbol meditation)' (§Comparative Notes). The anupāya (no means) of Tantrāloka Āhnika 2 — direct realization without any means, consciousness as self-luminous — has no exact Steiner equivalent but corresponds to the unus-ambo realization of the daimon tradition.",
+      "source_ids": ["steiner-occult-science", "tantraloka-volume1"],
+      "topics": ["three_upayas", "imagination_inspiration_intuition", "vikalpasamskara", "anupaya"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "comparative_metaphysics",
+      "subsection": "consciousness_states_mapping",
+      "kind": "source",
+      "text": "Tantrāloka Āhnika 10 describes five consciousness states: waking (jāgrat), dream (svapna), deep sleep (suṣupti), the Fourth (turīya), and beyond the Fourth (turīyātīta). Steiner describes the same fivefold structure: ordinary day consciousness, dream consciousness (the remnant of the Moon evolution — picture-consciousness), deep sleep (astral body withdrawn), imaginative cognition (turīya — the state of daimon contact, beyond waking/dream/sleep), and intuitive cognition (turīyātīta — pure union). The parallels are precise: 'Waking/dream/deep sleep/Fourth/Beyond = exactly the five states Steiner describes: ordinary consciousness, dream consciousness, deep sleep, imaginative consciousness, intuitive consciousness' (Tantraloka Reference Guide, §Comparative Notes). Turīya (the Fourth) is the threshold state where daimon contact becomes possible — corresponding to Steiner's Imaginative cognition, the stage at which the Guardian of the Threshold appears (Steiner-Daimon Commentary, §5).",
+      "source_ids": ["steiner-occult-science", "tantraloka-volume6"],
+      "topics": ["consciousness_states", "turīya", "fourth_state", "guardian_threshold"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "comparative_metaphysics",
+      "subsection": "five_kancukas_and_guardian_of_threshold",
+      "kind": "source",
+      "text": "The Five Kañcukas (coverings/limitations) of Tantrāloka — kalā (limited agency), vidyā (limited knowledge), rāga (attachment), kāla (time), niyati (causality) — are the structural constraints that create the bounded ego. The Steiner-Daimon Commentary identifies these with the Guardian of the Threshold: 'The Five Kañcukas = the \"sheaths\" or \"veils\" that separate the ego from the daimon — correspond to Steiner's description of the Doppelganger / Guardian of the Threshold' (§9.2). Stripping these kañcukas in reverse order is the work of the Resistance (Section G) in Liber Samekh — the progressive dissolution of the false self that confronts the Adept at the threshold. In Steiner's framework, the Doppelganger is what the ether body has not yet transformed; the daimon is what it has transformed. The kañcukas are the metaphysical description of what separates the ego from its own divine source — precisely the same territory the Guardian occupies in the Western initiatic path.",
+      "source_ids": ["steiner-occult-science", "tantraloka-volume6"],
+      "topics": ["five_kancukas", "guardian_threshold", "doppelganger", "resistance", "liber_samekh"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_006",
+      "section": "comparative_metaphysics",
+      "subsection": "pratibha_and_the_daimonic_flash",
+      "kind": "source",
+      "text": "The Tantrāloka's concept of pratibhā (creative imagination/intuitive flash) has a direct parallel in Steiner's description of imaginative cognition and in the daimon tradition's moment of contact. Pratibhā is the spontaneous flash of recognition that transcends discursive thought — what the Tantraloka Reference Guide calls 'theurgic \"divine madness\" (Plato's mania) and the daimonic flash' (§Comparative Notes). For Steiner, this is the moment when the consciousness soul — the point where the spirit flashes up and the daimon becomes perceptible — recognizes its own divine ground: 'The daimon appears to the consciousness soul, not to the sentient or intellectual soul' (Steiner-Daimon Commentary, §9.3). The unus-ambo formula (Corbin's 1×1) — 'two become one without ceasing to be two' — is the culminating experience of both systems: the identification of the knower and the known that pratibhā initiates and Intuition consummates.",
+      "source_ids": ["steiner-occult-science", "tantraloka-volume1"],
+      "topics": ["pratibha", "imaginative_cognition", "daimonic_flash", "unus_ambo", "consciousness_soul"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_007",
+      "section": "comparative_metaphysics",
+      "subsection": "sevenfold_human_36_tattvas",
+      "kind": "source",
+      "text": "Steiner's sevenfold human constitution maps onto the Tantrāloka's 36 tattvas as a graduated descent of consciousness into matter. The Tantrāloka Reference Guide (§Comparative Notes) states: 'The 36 tattvas = the \"ladder\" between matter and pure consciousness. Each tattva is a level of the daimonic hierarchy (Proclus) — a level of being that must be traversed.' The physical body corresponds to the 24 material tattvas (earth through pradhāna); the ether body corresponds to the prāṇic substrate of the subtle body; the astral body corresponds to the cognitive-affective layer (manas, buddhi, ahaṅkāra); the ego corresponds to puruṣa (the perceiver); spirit self (manas) corresponds to śuddhavidyā and the pure principles; life spirit (buddhi) corresponds to īśvara/sadāśiva; and spirit man (ātma) corresponds to śiva-śakti union. The seven perceivers (pramātṛ) of Tantrāloka Āhnika 10 correspond to the seven stages of the Steiner initiation path — from physical body to spirit man (Tantraloka Reference Guide, §Volume 6, Comparative Notes).",
+      "source_ids": ["steiner-occult-science", "tantraloka-volume1", "tantraloka-volume6"],
+      "topics": ["sevenfold_constitution", "36_tattvas", "pramatri", "consciousness_descent"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_008",
+      "section": "comparative_metaphysics",
+      "subsection": "guardian_threshold_five_kancukas_detailed",
+      "kind": "source",
+      "text": "The Five Kañcukas (coverings/limitations) of Tantrāloka — kalā (limited agency), vidyā (limited knowledge), rāga (attachment), kāla (time), niyati (causality) — are the structural constraints that create the bounded ego. The Steiner-Daimon Commentary (§9.2) elaborates: 'The Five Kañcukas = the \"sheaths\" or \"veils\" that separate the ego from the daimon — correspond to Steiner's description of the Doppelganger / Guardian of the Threshold.' Steiner describes the Guardian as the 'Doppelganger (double or twin likeness) of man' that 'must, according to a law of the spiritual world, emerge prior to everything else as his first impression in that world' (Steiner, Ch. 5). Stripping these kañcukas in reverse order is the work of the Resistance in Liber Samekh — the progressive dissolution of the false self. The Tantrāloka Reference Guide continues: 'The Five Kañcukas = the \"sheaths\" or \"veils\" that separate the ego from the daimon — correspond to Steiner's description of the Doppelganger / Guardian of the Threshold' (§Comparative Notes, Vol. 5). In Steiner's framework, the Doppelganger is what the ether body has not yet transformed; the daimon is what it has transformed.",
+      "source_ids": ["steiner-occult-science", "tantraloka-volume6"],
+      "topics": ["five_kancukas", "guardian_threshold", "doppelganger", "resistance", "liber_samekh"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_009",
+      "section": "comparative_metaphysics",
+      "subsection": "cosmic_evolution_tattva_descent_detailed",
+      "kind": "source",
+      "text": "The Tantrāloka's Bhuvanādhvan (Āhnika 8) and Steiner's cosmic evolution (Saturn → Sun → Moon → Earth) describe structurally parallel descents. The Tantraloka Reference Guide (§Vol. 5, Comparative Notes) states: 'Bhuvanādhvan = Steiner's cosmic evolution (Saturn → Sun → Moon → Earth → Jupiter → Venus → Vulcan) as a hierarchical path of worlds — but Tantraloka gives the microcosmic descent into the body, not the macrocosmic ascent.' The 36 tattvas describe the descent of consciousness into matter and the ascent back to source; the daimon path reverses this descent. The daimon path maps onto the tattva range as: 'Earth → Pradhāna (tattvas 1-24) = Physical + elemental world; purification work. Māyā → Kalā (tattvas 25-30) = The five kañcukas; the Resistance — stripping the false self. Śuddhavidyā → Śiva (tattvas 31-36) = Pure principles; the Systasis — union with the daimon' (Tantraloka Reference Guide, §Theme 4). The descent through the kañcukas corresponds to the emergence of the Doppelganger in Steiner: the veils that create the separate ego. Steiner's system is temporal-evolutionary (stages succeeding one another in cosmic time), while the Tantrāloka's is hierarchical-emanational (levels coexisting as a vertical ladder), yet both require recapitulation in reverse order in the initiatic ascent.",
+      "source_ids": ["steiner-occult-science", "tantraloka-volume1", "tantraloka-volume6"],
+      "topics": ["cosmic_evolution", "bhuvanadhvan", "tattva_descent", "initiatic_ascent", "macrocosm_microcosm"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_010",
+      "section": "comparative_metaphysics",
+      "subsection": "imagination_pratibha_detailed",
+      "kind": "source",
+      "text": "Steiner's imaginative cognition (the first stage of initiation, in which symbols become alive and picture-consciousness develops independently of the physical brain) corresponds precisely to the Tantrāloka's concept of pratibhā. The Tantraloka Reference Guide notes that pratibhā is 'creative imagination/intuitive flash' and is identified as 'theurgic \"divine madness\" (Plato's mania) and the daimonic flash' (§Comparative Notes). The Steiner-Daimon Commentary (§9.3) specifies: 'The daimon appears to the consciousness soul, not to the sentient or intellectual soul. The daimon is recognized in the moment of pure self-awareness (consciousness soul) — it IS the self-aware self encountering its own divine ground.' For Steiner, Imagination is the first of three stages: 'Picture-consciousness independent of brain; symbols become alive' (Steiner-Daimon Commentary, §4). The Tantrāloka's pratibhā is the spontaneous flash of recognition that transcends discursive thought — parallel to what Steiner calls the moment when 'the spirit flashes up' in the consciousness soul. The unus-ambo formula (Corbin's 1×1) is the culminating experience of both: the identification of the knower and the known that pratibhā initiates and Intuition consummates.",
+      "source_ids": ["steiner-occult-science", "tantraloka-volume1"],
+      "topics": ["pratibha", "imagination", "consciousness_soul", "unus_ambo", "daimonic_flash"],
+      "status": "active"
+    }
+  ],
+  "coverage": {
+    "comparative_metaphysics": {
+      "status": "comprehensive",
+      "sources": ["steiner-occult-science", "tantraloka-volume1", "tantraloka-volume6"],
+      "passage_count": 10,
+      "estimated_completeness": 0.85,
+      "gaps": ["Full ritual correspondences between Tantrāloka initiation and daimon path systasis not yet mapped"]
+    },
+    "threefold_body": {
+      "status": "good",
+      "sources": ["steiner-occult-science", "tantraloka-volume1"],
+      "passage_count": 1,
+      "estimated_completeness": 0.7,
+      "gaps": ["Detailed mapping of each of Steiner's seven members to individual tattva groups"]
+    },
+    "initiation_path": {
+      "status": "good",
+      "sources": ["steiner-occult-science", "tantraloka-volume1"],
+      "passage_count": 1,
+      "estimated_completeness": 0.75,
+      "gaps": ["Full ritual correspondences not extracted"]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "coverage_gap",
+      "title": "Bhuvanādhvan and Steiner's macrocosm not yet systematically mapped",
+      "description": "Tantrāloka Āhnika 8 cosmology (Bhuvanādhvan) offers a hierarchy of worlds that parallels Steiner's planetary evolution but requires detailed comparative extraction.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    },
+    {
+      "id": "issue-002",
+      "type": "coverage_gap",
+      "title": "The daimon path resonance with the Twelve Kālīs not yet integrated",
+      "description": "The Twelve Kālīs of Tantrāloka Āhnika 4 — consuming objectivity, then means of knowledge, then subjectivity — map onto the daimon path's three phases but are not yet extracted here.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial RO created comparing Steiner's Occult Science and Abhinavagupta's Tantrāloka. Six passages covering threefold body, cosmic evolution/tattvas, Three Means/initiation stages, consciousness states, Five Kañcukas/Guardian, and pratibhā/daimonic flash.",
+      "sources_added": ["steiner-occult-science", "tantraloka-volume1", "tantraloka-volume6"],
+      "passage_count": 6,
+      "status": "draft"
+    },
+    {
+      "version": "0.2.0",
+      "date": "2026-07-14",
+      "type": "update",
+      "summary": "Added 4 passages: sevenfold human constitution vs 36 tattvas (detailed ladder mapping), Guardian of the Threshold vs Five Kañcukas (Doppelganger/daimon distinction), cosmic evolution vs tattva descent (Bhuvanādhvan parallel), and Steiner's Imagination vs Tantrāloka's pratibhā (consciousness soul and the daimonic flash).",
+      "sources_added": [],
+      "passage_count": 10,
+      "status": "draft"
+    }
+  ],
+  "appendices": [],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created in draft state",
+      "sources_total": 3,
+      "passages_total": 6
+    },
+    {
+      "date": "2026-07-14",
+      "event": "Updated to v0.2.0 — added 4 passages on 7-fold vs 36 tattvas, Guardian vs Kañcukas, cosmic evolution vs tattva descent, and Imagination vs pratibhā",
+      "sources_total": 3,
+      "passages_total": 10
+    }
+  ]
+}

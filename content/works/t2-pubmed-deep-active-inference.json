@@ -1,0 +1,47 @@
+{
+  "work_id": "work:t2-pubmed-deep-active-inference",
+  "schema_version": 2,
+  "title": "Deep active inference.",
+  "authors": [
+    {
+      "name": "Ueltzhöffer K"
+    }
+  ],
+  "publication": {
+    "year": 2018,
+    "type": "article",
+    "source": "PubMed/MEDLINE",
+    "language": "en",
+    "journal": "Biol Cybern"
+  },
+  "identifiers": {
+    "pmid": "30350226",
+    "doi": "10.1007/s00422-018-0785-7"
+  },
+  "topics": [
+    "phase-6-6",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "tradition": [
+    "contemporary_science"
+  ],
+  "tier": 2,
+  "assets": {
+    "pdf_path": null,
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/30350226/",
+    "abstract": "This work combines the free energy principle and the ensuing active inference dynamics with recent advances in variational inference in deep generative models, and evolution strategies to introduce the \"deep active inference\" agent. This agent minimises a variational free energy bound on the average surprise of its sensations, which is motivated by a homeostatic argument. It does so by optimising the parameters of a generative latent variable model of its sensory inputs, together with a variatio"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_t2_search",
+    "retrieved_at": "2026-07-11"
+  },
+  "phase_mapping": {
+    "phase": 6,
+    "phase_name": "Dependent Arising",
+    "bridge_rationale": "Predictive processing — free energy principle, Bayesian brain, active inference, neural causality."
+  },
+  "evaluation": "Excellent (score=3.8)"
+}

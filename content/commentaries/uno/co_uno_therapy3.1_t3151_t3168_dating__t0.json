@@ -1,0 +1,53 @@
+{
+  "co_id": "co:uno_therapy3.1_t3151_t3168_dating__t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3.1_t3151_t3168_dating_judge_projection",
+  "turn_index": 0,
+  "lineage": "Therapeutic",
+  "student_state": "simple_admission",
+  "behavior_tags": [
+    "ownership"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_02",
+    "function_name": "RM_02",
+    "mechanism_shape": "NONE",
+    "teaching_actions": [
+      "identifies_projection_target"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.35,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_02",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "'All men are judgmental'—totalizing projection. Teacher tests: 'all or some?' This questions absolute. Can't be ALL. Testing if they'll revise to 'some' or defend 'all.'",
+  "accumulated_insight": "T1: Student projects: 'All men are judgmental'—generalizes from dating experience. Teacher questions: 'All men or some men?' Challenges overgeneralization. Predicting go_along_compliantly as generalization gets tested.",
+  "abstract_pattern": "",
+  "visible_response": "And who is accused of having those thoughts?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

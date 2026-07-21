@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Energy Principle: Brain Constructing Reality</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.77/Tone.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow: hidden;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+        }
+        canvas { display: block; background: transparent; }
+        #container {
+            width: 100vw; height: 100vh;
+            display: flex; justify-content: center; align-items: center;
+        }
+        #canvas-wrapper {
+            position: relative; width: 95%; max-width: 1200px; aspect-ratio: 16/9;
+            box-shadow: 0 0 40px rgba(255, 215, 0, 0.3); border-radius: 1rem; overflow: hidden;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+        }
+        #mainCanvas { width: 100%; height: 100%; }
+        #subtitles {
+            position: absolute; bottom: 5%; left: 5%; right: 5%;
+            color: #eee2cc; font-size: 1.5vw; text-align: center;
+            background: rgba(26, 26, 46, 0.85); padding: 12px 24px; border-radius: 12px;
+            opacity: 0; transition: opacity 0.5s ease-in-out;
+            text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+            border: 1px solid rgba(238, 226, 204, 0.3); backdrop-filter: blur(10px);
+        }
+        @media (max-width: 768px) { #subtitles { font-size: 2.8vw; } }
+        #equation {
+            position: absolute; top: 3%; left: 3%;
+            color: #ffd700; font-size: 1.2vw; font-family: 'Courier New', monospace;
+            background: rgba(26, 26, 46, 0.9); padding: 12px 18px; border-radius: 8px;
+            opacity: 0; transition: opacity 0.3s ease-in-out;
+            border: 1px solid #ffd700; line-height: 1.4;
+        }
+        @media (max-width: 768px) { #equation { font-size: 2.2vw; } }
+        #harmony-meter {
+            position: absolute; top: 3%; right: 3%;
+            color: #ffd700; font-size: 1.2vw; font-weight: bold;
+            background: rgba(26, 26, 46, 0.9); padding: 12px 18px; border-radius: 8px;
+            border: 1px solid #ffd700; text-align: center;
+        }
+        .harmony-bar { width: 80px; height: 8px; background: #333; border-radius: 4px; margin: 6px 0; overflow: hidden; }
+        .harmony-fill { height: 100%; background: linear-gradient(90deg, #ff4757 0%, #ffa726 50%, #4caf50 100%); width: 0%; transition: width 0.1s ease; }
+        .highlight { color: #ff6b6b; font-weight: bold; }
+        .harmony-text { color: #4caf50; }
+        #replayButton {
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            padding: 1rem 2rem; font-size: 1.25rem; font-weight: 600; color: white;
+            background: linear-gradient(45deg, #ffd700, #ffab00); border: none;
+            border-radius: 0.75rem; cursor: pointer;
+            box-shadow: 0 4px 20px rgba(255, 215, 0, 0.4);
+            transition: all 0.3s ease; opacity: 0; visibility: hidden;
+        }
+        #replayButton:hover { transform: translate(-50%, -50%) scale(1.05); }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="canvas-wrapper">
+            <canvas id="mainCanvas"></canvas>
+            <div id="subtitles"></div>
+            <div id="equation"></div>
+            <div id="harmony-meter">
+                <div>Harmony</div>
+                <div class="harmony-bar"><div class="harmony-fill" id="harmonyFill"></div></div>
+                <div>F = <span id="fValue">1.00</span></div>
+            </div>
+            <button id="replayButton">Watch Reality Emerge</button>
+        </div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('mainCanvas');
+        const ctx = canvas.getContext('2d');
+        const subtitlesEl = document.getElementById('subtitles');
+        const equationEl = document.getElementById('equation');
+        const replayButton = document.getElementById('replayButton');
+        const wrapper = document.getElementById('canvas-wrapper');
+        const fValueSpan = document.getElementById('fValue');
+        const harmonyFill = document.getElementById('harmonyFill');
+
+        let width, height;
+        let piano = { keys: [] };
+        let harmonyParticles = [];
+        let harmonyRings = [];
+        let audioReady = false;
+        let synth;
+        let noteInterval;
+
+        const TARGET_MELODY = [7, 9, 12, 9, 7, 5, 7, 7, 9, 12, 14, 12, 9, 7, 5, 7, 9, 7, 5, 4, 2, 0, 2, 5, 7, 5, 2, 0];
+        const ALL_NOTES = ['C4','C#4','D4','D#4','E4','F4','F#4','G4','G#4','A4','A#4','B4','C5','C#5','D5','D#5','E5','F5','F#5','G5','G#5','A5','A#5','B5','C6','C#6','D6'];
+
+        let animationState = { startTime: 0, currentTime: 0, isRunning: false, noteCount: 0, harmonyLevel: 0, predictionError: 1.0 };
+        const DURATION = 30000;
+        const NOTE_INTERVAL = 180;
+
+        class HarmonyParticle {
+            constructor() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * height * 0.6;
+                this.vx = (Math.random() - 0.5) * 4;
+                this.vy = (Math.random() - 0.5) * 4;
+                this.size = Math.random() * 4 + 2;
+                this.hue = Math.random() * 60;
+                this.noteIndex = Math.floor(Math.random() * TARGET_MELODY.length);
+            }
+            update(harmonyLevel, targetKey) {
+                if (targetKey) {
+                    this.targetX = targetKey.x + targetKey.width/2;
+                    this.targetY = piano.keyY - 30 - Math.sin(animationState.currentTime * 0.005 + this.noteIndex) * 20;
+                } else {
+                    this.targetX = width * 0.5;
+                    this.targetY = height * 0.3;
+                }
+                if (harmonyLevel < 0.3) {
+                    this.x += this.vx; this.y += this.vy;
+                    this.vx += (Math.random() - 0.5) * 0.5;
+                    this.vy += (Math.random() - 0.5) * 0.5;
+                } else {
+                    const attractionStrength = (harmonyLevel - 0.3) * 0.15;
+                    this.x += (this.targetX - this.x) * attractionStrength + this.vx * (1 - harmonyLevel);
+                    this.y += (this.targetY - this.y) * attractionStrength + this.vy * (1 - harmonyLevel);
+                    this.vx *= 0.95; this.vy *= 0.95;
+                }
+                this.hue = (1 - harmonyLevel) * 20 + harmonyLevel * 180;
+            }
+            draw(harmonyLevel) {
+                const alpha = this.life * (0.4 + harmonyLevel * 0.5);
+                const saturation = 60 + harmonyLevel * 30;
+                const lightness = 50 + harmonyLevel * 20;
+                ctx.save();
+                ctx.globalAlpha = alpha;
+                if (harmonyLevel > 0.6) { ctx.shadowBlur = 8 + harmonyLevel * 12; ctx.shadowColor = `hsl(${this.hue}, ${saturation}%, ${lightness}%)`; }
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size * (0.5 + harmonyLevel * 0.5), 0, Math.PI * 2);
+                ctx.fillStyle = `hsl(${this.hue}, ${saturation}%, ${lightness}%)`;
+                ctx.fill();
+                ctx.restore();
+            }
+        }
+
+        class HarmonyRing {
+            constructor(x, y, isCorrect) {
+                this.x = x; this.y = y; this.radius = 0;
+                this.maxRadius = width * 0.15;
+                this.opacity = 1.0;
+                this.isCorrect = isCorrect;
+                this.hue = isCorrect ? 120 : 0;
+            }
+            update() { this.radius += 2.5; this.opacity = 1 - (this.radius / this.maxRadius); }
+            draw() {
+                if (this.opacity <= 0) return;
+                ctx.save();
+                ctx.strokeStyle = `hsla(${this.hue}, 70%, 60%, ${this.opacity * 0.8})`;
+                ctx.lineWidth = 2;
+                if (this.isCorrect) { ctx.shadowBlur = 10; ctx.shadowColor = `hsla(${this.hue}, 70%, 60%, ${this.opacity})`; }
+                ctx.beginPath(); ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2); ctx.stroke();
+                ctx.restore();
+            }
+        }
+
+        function setupPiano() {
+            const whiteKeys = 14;
+            piano.whiteKeyWidth = width * 0.7 / whiteKeys;
+            piano.keyHeight = height * 0.25;
+            piano.keyY = height - piano.keyHeight;
+            const startX = width * 0.15;
+            piano.keys = [];
+            const whiteKeyNotes = [0, 2, 4, 5, 7, 9, 11, 12, 14, 16, 17, 19, 21, 23];
+            for (let i = 0; i < whiteKeys; i++) {
+                piano.keys.push({
+                    type: 'white', x: startX + i * piano.whiteKeyWidth,
+                    width: piano.whiteKeyWidth - 2,
+                    noteIndex: whiteKeyNotes[i], note: ALL_NOTES[whiteKeyNotes[i]],
+                    pressed: false, glow: 0, isCorrect: false
+                });
+            }
+        }
+
+        function initializeHarmonyParticles() {
+            harmonyParticles = [];
+            for (let i = 0; i < 120; i++) harmonyParticles.push(new HarmonyParticle());
+        }
+
+        function drawPiano() {
+            ctx.fillStyle = '#2c2c2c';
+            ctx.fillRect(width * 0.1, piano.keyY - 15, width * 0.8, piano.keyHeight + 30);
+            piano.keys.forEach(key => {
+                ctx.save();
+                let keyColor = '#ffffff';
+                if (key.pressed) keyColor = key.isCorrect ? '#e8f5e8' : '#ffe8e8';
+                ctx.fillStyle = keyColor;
+                ctx.fillRect(key.x, piano.keyY, key.width, piano.keyHeight);
+                ctx.strokeStyle = '#333'; ctx.lineWidth = 1;
+                ctx.strokeRect(key.x, piano.keyY, key.width, piano.keyHeight);
+                if (key.glow > 0) {
+                    const glowColor = key.isCorrect ? 'rgba(76, 175, 80, ' : 'rgba(255, 87, 87, ';
+                    ctx.shadowBlur = 25;
+                    ctx.shadowColor = glowColor + key.glow + ')';
+                    ctx.fillStyle = glowColor + (key.glow * 0.4) + ')';
+                    ctx.fillRect(key.x, piano.keyY, key.width, piano.keyHeight);
+                }
+                key.glow = Math.max(0, key.glow - 0.06);
+                key.pressed = false;
+                ctx.restore();
+            });
+        }
+
+        function playNextNote() {
+            if (!audioReady || !animationState.isRunning) return;
+            const progress = Math.min(1, animationState.currentTime / DURATION);
+            const easedProgress = progress < 0.5 ? 4 * progress * progress * progress : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+            let noteIndex, isCorrectNote = false;
+            if (Math.random() < easedProgress) {
+                noteIndex = TARGET_MELODY[animationState.noteCount % TARGET_MELODY.length];
+                isCorrectNote = true;
+                animationState.predictionError = Math.max(0, animationState.predictionError - 0.06);
+            } else {
+                noteIndex = Math.floor(Math.random() * 24);
+                isCorrectNote = false;
+                animationState.predictionError = Math.min(1, animationState.predictionError + 0.03);
+            }
+            const note = ALL_NOTES[noteIndex];
+            synth.triggerAttackRelease(note, "8n");
+            const key = piano.keys.find(k => k.noteIndex === noteIndex);
+            if (key) { key.pressed = true; key.glow = 1.0; key.isCorrect = isCorrectNote; harmonyRings.push(new HarmonyRing(key.x + key.width/2, piano.keyY, isCorrectNote)); }
+            animationState.harmonyLevel = 1 - animationState.predictionError;
+            animationState.noteCount++;
+        }
+
+        function updateEquation() {
+            const progress = animationState.currentTime / DURATION;
+            const predictionError = animationState.predictionError;
+            if (progress < 0.25) {
+                equationEl.innerHTML = `<span class="highlight">F = -ln p(s̃)</span><br>F = surprise when reality doesn't<br>match brain's predictions<br>F = <span class="highlight">${predictionError.toFixed(2)}</span>`;
+            } else if (progress < 0.5) {
+                equationEl.innerHTML = `<span class="highlight">F ≈ D<sub>KL</sub>[q(θ)||p(θ|s̃)]</span><br>Gap between brain's model q(θ)<br>and true reality p(θ|s̃)<br>F = <span class="highlight">${predictionError.toFixed(2)}</span>`;
+            } else if (progress < 0.75) {
+                equationEl.innerHTML = `Perception: <span class="highlight">∂F/∂μ = 0</span><br>Brain updates its model μ<br>Coherent reality emerging...<br>F = <span class="harmony-text">${predictionError.toFixed(2)}</span>`;
+            } else {
+                equationEl.innerHTML = `Action: <span class="highlight">∂F/∂a = 0</span><br>Brain selects actions a to confirm<br><span class="harmony-text">Beautiful reality achieved!</span><br>F = <span class="harmony-text">${predictionError.toFixed(2)}</span>`;
+            }
+        }
+
+        function update(time) {
+            if (!animationState.isRunning) return;
+            animationState.currentTime = time - animationState.startTime;
+            const progress = Math.min(animationState.currentTime / DURATION, 1);
+            ctx.clearRect(0, 0, width, height);
+            harmonyParticles.forEach(particle => {
+                const targetKey = piano.keys[Math.floor(particle.noteIndex * piano.keys.length / TARGET_MELODY.length)];
+                particle.update(animationState.harmonyLevel, targetKey);
+                particle.draw(animationState.harmonyLevel);
+            });
+            harmonyRings = harmonyRings.filter(ring => { ring.update(); ring.draw(); return ring.opacity > 0; });
+            drawPiano();
+            updateEquation();
+            fValueSpan.textContent = animationState.predictionError.toFixed(2);
+            harmonyFill.style.width = (animationState.harmonyLevel * 100) + '%';
+            if (progress < 0.2) subtitlesEl.innerText = "Sensory chaos - your brain struggles to make sense of reality";
+            else if (progress < 0.5) subtitlesEl.innerText = "Brain building internal models - patterns emerging from noise...";
+            else if (progress < 0.8) subtitlesEl.innerText = "Reality crystallizing - your brain's predictions becoming accurate";
+            else if (progress < 1) subtitlesEl.innerText = "Perfect reality model - brain minimizes surprise about the world!";
+            else {
+                subtitlesEl.innerText = "Your brain constructs reality through prediction";
+                setTimeout(() => { animationState.isRunning = false; clearInterval(noteInterval); replayButton.style.opacity = 1; replayButton.style.visibility = 'visible'; }, 1000);
+            }
+            equationEl.style.opacity = 1; subtitlesEl.style.opacity = 1;
+            if (animationState.isRunning) requestAnimationFrame(update);
+        }
+
+        function setup() {
+            const rect = wrapper.getBoundingClientRect();
+            width = rect.width; height = rect.height;
+            canvas.width = width; canvas.height = height;
+            setupPiano();
+            initializeHarmonyParticles();
+            animationState.noteCount = 0; animationState.harmonyLevel = 0; animationState.predictionError = 1.0;
+            harmonyRings = [];
+        }
+
+        function startAnimation() {
+            if (!audioReady) { Tone.start(); synth = new Tone.Synth({ oscillator: { type: "triangle" }, envelope: { attack: 0.05, decay: 0.1, sustain: 0.4, release: 0.3 } }).toDestination(); audioReady = true; }
+            setup();
+            animationState.startTime = performance.now();
+            animationState.isRunning = true;
+            if (noteInterval) clearInterval(noteInterval);
+            noteInterval = setInterval(playNextNote, NOTE_INTERVAL);
+            subtitlesEl.style.opacity = 0; equationEl.style.opacity = 0;
+            replayButton.style.opacity = 0; replayButton.style.visibility = 'hidden';
+            requestAnimationFrame(update);
+        }
+
+        replayButton.addEventListener('click', startAnimation);
+        window.addEventListener('resize', () => { if (animationState.isRunning) startAnimation(); else setup(); });
+        window.onload = () => { setup(); replayButton.style.opacity = 1; replayButton.style.visibility = 'visible'; subtitlesEl.innerText = "Watch how your brain transforms chaos into beautiful, coherent reality"; subtitlesEl.style.opacity = 1; };
+    </script>
+</body>
+</html>

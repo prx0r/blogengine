@@ -1,0 +1,59 @@
+{
+  "co_id": "co:uno_gorgias_ep016_callicles_hypocr_t1",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gorgias_ep016_callicles_hypocrisy_exposed",
+  "turn_index": 1,
+  "lineage": "Socratic",
+  "student_state": "defensive_rationalization",
+  "behavior_tags": [
+    "pushes_back"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_02",
+    "function_name": "UM_02",
+    "mechanism_shape": "CONSTRAINT_COLLAPSE",
+    "teaching_actions": [
+      "forces_contradiction"
+    ],
+    "traps_avoided": [
+      "hypocrisy_blindness"
+    ],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.62,
+      "attunement": 0.8,
+      "style": 0.5,
+      "depth": 0.62,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_03",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_03",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "resist_intellectually",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "He's trying to have both. Next move: present a clear fork?either endorse limits (discipline) or admit indulgence isn't the good. Expect resistance but the contradiction is now explicit.",
+  "accumulated_insight": "Two-turn pattern: T1 discipline admission ? T2 hedge ('Yes, but? not constantly') to protect indulgence. He understands the contradiction but tries to soften it. Next: sharpen either/or to make him choose.",
+  "abstract_pattern": "",
+  "visible_response": "Then you admit your doctrine contradicts your own way of living.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:proclus-elements",
+    "ro:platonism-decoded",
+    "ro:chaldean-oracles"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

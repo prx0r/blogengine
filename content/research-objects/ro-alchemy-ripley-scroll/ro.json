@@ -1,0 +1,247 @@
+{
+  "ro_id": "ro:alchemy-ripley-scroll",
+  "schema_version": 1,
+  "title": "The Ripley Scroll: Emblematic Alchemy of the Philosopher's Stone",
+  "subtitle": "Verses from the Ripley Scrowle, the Ripley Scroll Emblems, and Philalethes' Exposition of Ripley's Vision \u2014 the Toad, the Bird of Hermes, and the Serpent of Arabia",
+  "family": "theme",
+  "status": "draft",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "The Ripley Scroll verses and Philalethes' exposition of Ripley's 'Vision' \u2014 the emblematic journey of the Toad, the Bird of Hermes, and the Serpent of Arabia through nigredo, albedo, and rubedo.",
+    "scope": "Includes the verses from the Ripley Scrowle (Ashmole's Theatrum Chemicum Britannicum, 1652), the emblematic verses (Omogeni, Magnesia, Azot, Kibrick, the Serpent of Arabia), and Philalethes' line-by-line exposition of Ripley's Vision. Covers the full sequence from the ruddy Toad drinking the juice of grapes through putrefaction, the Peacock's Tail, to the White and Red Stone.",
+    "traditions": [
+      "alchemy",
+      "hermetica",
+      "emblematic"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "ripley-scroll-ashmole",
+      "tier": 1,
+      "label": "Verses from the Ripley Scrowle \u2014 Elias Ashmole, Theatrum Chemicum Britannicum (1652); Philalethes, Ripley Reviv'd (1678)",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "full_text",
+        "ripley_scroll_verses",
+        "ripley_vision_exposition",
+        "emblematic_sequence"
+      ],
+      "sections_affected": [
+        "theory",
+        "practice"
+      ],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "theory",
+      "subsection": "the_generacion",
+      "kind": "source",
+      "text": "I shall you tell with plaine declaracion, Where, how, and what is my generacion: Omogeni is my Father, And Magnesia is my Mother: And Azot truly is my Sister: And Kibrick forsooth is my Brother: The Serpent of Arabia is my name, The which is leader of all this game: That sometyme was both wood and wild, And now I am both meeke and mild; The Sun and the Moone with their might, Have chastised me that was so light: My Wings that me brought, Hither and thither where I thought Now with their might they downe me pull, And bring me where they woll. Thou must part him in three, And then knit him as the Trinity: And make them all but one, Loe here is the Philosophers Stone.",
+      "source_ids": [
+        "ripley-scroll-ashmole"
+      ],
+      "topics": [
+        "omogeni",
+        "magnesia",
+        "azot",
+        "kibrick",
+        "serpent_of_arabia",
+        "trinity",
+        "philosophers_stone"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "theory",
+      "subsection": "the_bird_of_hermes",
+      "kind": "source",
+      "text": "The Bird of Hermes is my name, Eating my wings to make me tame. In the Sea withouten lesse, Standeth the Bird of Hermes: Eating his Wings variable, And thereby maketh himself more stable; When all his Fethers be agon, He standeth still there as a stone; Here is now both White and Red, And also the Stone to quicken the dead.",
+      "source_ids": [
+        "ripley-scroll-ashmole"
+      ],
+      "topics": [
+        "bird_of_hermes",
+        "wings",
+        "volatilization",
+        "fixation",
+        "white_and_red",
+        "quicken_the_dead"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "practice",
+      "subsection": "the_toad_and_putrefaction",
+      "kind": "source",
+      "text": "A Toad full Ruddy I saw, did drink the juice of Grapes so fast, Till over-charged with the broth, his Bowels all to brast: And after that, from poyson'd Bulk he cast his Venom fell, For Grief and Pain whereof his Members all began to swell; With drops of Poysoned sweat approaching thus his secret Den, His Cave with blasts of fumous Air he all bewhited then: And from the which in space a Golden Humour did ensue, Whose falling drops from high did stain the soyl with ruddy hue. And when his Corps the force of vital breath began to lack, This dying Toad became forthwith like Coal for colour Black: Thus drowned in his proper veins of poysoned flood; For term of Eighty days and Four he rotting stood. Then of the Venom handled thus a Medicine I did make; Which Venom kills, and saveth such as Venom chance to take.",
+      "source_ids": [
+        "ripley-scroll-ashmole"
+      ],
+      "topics": [
+        "ruddy_toad",
+        "juice_of_grapes",
+        "putrefaction",
+        "nigredo",
+        "eighty_four_days",
+        "venom_medicine"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "practice",
+      "subsection": "the_serpent_in_the_well",
+      "kind": "source",
+      "text": "On the Ground there is a Hill, Also a Serpent within a Well: His Tayle is long with Wings wide, All ready to fly on every side, Repaire the Well round about, That the Serpent pas not out; For if that he be there agone, Thou loosest the vertue of the Stone. The Well must brenne in Water cleare, Take goog heede for this thy Fyre, The Fire with Water brent shalbe, And Water with Fire wash shall he; Then Earth on Fire shalbe put, And Water with Air shalbe knit, Thus ye shall go to Putrefaccion, And bring the Serpent to reduction. First he shalbe Black as any Crow, And downe in his Den shall lye full lowe: They shall to brast and lye full plaine, And thus with craft the Serpent is slaine: He shall shew Collours there many a one, And tourne as White as wilbe the bone.",
+      "source_ids": [
+        "ripley-scroll-ashmole"
+      ],
+      "topics": [
+        "serpent_in_well",
+        "four_elements",
+        "putrefaction",
+        "nigredo",
+        "albedo",
+        "colour_sequence"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "theory",
+      "subsection": "commentary_serpent_arabia_as_daimonic_medium",
+      "kind": "commentary",
+      "text": "The Serpent of Arabia \u2014 'leader of all this game' \u2014 is the astral body (linga sharira) in its unregenerate state, the same 'poisoned Mercury' that Freher, following Boehme, describes as the creatural life gone forth out of eternity into time. In the language of the Tantraloka, this is the malina-mala, the stain of limitation that binds the purusha to the cycle of transmutation. The 'wings' that the Sun and Moon 'pull down' are the sattvic and tamasic currents (ida and pingala) that must be brought into equilibrium before the serpent-fire (kundalini) can be awakened. Philalethes identifies this Serpent as 'our Mercury' \u2014 precisely the medium through which daimonic impressions pass, as Synesius describes the pneuma as the vehicle of daimonic contact. To 'part him in three and knit him as the Trinity' is the triadic structure of the subtle body: the three nadis (susumna, ida, pingala) converging into the central channel of liberation.",
+      "source_ids": [
+        "ripley-scroll-ashmole"
+      ],
+      "topics": [
+        "serpent_of_arabia",
+        "astral_body",
+        "kundalini",
+        "daimonic_medium",
+        "triplicity"
+      ],
+      "status": "draft"
+    },
+    {
+      "passage_id": "p_006",
+      "section": "theory",
+      "subsection": "commentary_bird_hermes_as_pneuma",
+      "kind": "commentary",
+      "text": "The Bird of Hermes 'eating his wings to make him tame' is the volatile pneuma (the astral light) consuming its own centrifugal tendency to achieve fixation \u2014 the same process that Layayoga calls pranayama, where the pranic winds are 'eaten' by being drawn into the susumna. The bird standing 'still there as a stone' when all feathers are gone is the stabilized prana in kevala kumbhaka, the breathless state. This is the condition Steiner describes as 'thinking without the body' \u2014 pure imaginal cognition where the etheric body is no longer dispersed through sense-impressions. The 'White and Red' and the 'Stone to quicken the dead' correspond to the bija-svabhava (seed-essence) of the two lunar and solar tattvas that, when fused, produce the amrita (immortal nectar) of the sixth chakra.",
+      "source_ids": [
+        "ripley-scroll-ashmole"
+      ],
+      "topics": [
+        "bird_of_hermes",
+        "pneuma",
+        "pranayama",
+        "kumbhaka",
+        "etheric_body",
+        "amrita"
+      ],
+      "status": "draft"
+    },
+    {
+      "passage_id": "p_007",
+      "section": "practice",
+      "subsection": "commentary_toad_as_nigredo_consciousness",
+      "kind": "commentary",
+      "text": "The ruddy Toad drinking the 'juice of Grapes' \u2014 the Mercurial water \u2014 corresponds to the first stage of alchemical nigredo as understood in the daimon path: the confrontation with the shadow-content of the psyche. The PGM calls this the 'purification by fire and water' that precedes any theurgic ascent. In Layayoga, this is the muladhara awakening where the coiled serpent-force 'drinks' the lunar nectar of the ida. The eighty-four days of rotting (which Philalethes computes as Saturn's reign of forty-two days followed by Jupiter's colours and Luna's whiteness) map precisely onto the 84,000 nadis of the subtle body described in the Sat-cakra-nirupana \u2014 each requiring purification. The Toad that becomes 'like Coal for colour Black' is the initial state of muladhara as dark, tamasic earth-element before the fire-kindling.",
+      "source_ids": [
+        "ripley-scroll-ashmole"
+      ],
+      "topics": [
+        "nigredo",
+        "toad",
+        "muladhara",
+        "purification",
+        "daimon_path",
+        "eighty_four_days"
+      ],
+      "status": "draft"
+    },
+    {
+      "passage_id": "p_008",
+      "section": "practice",
+      "subsection": "commentary_serpent_well_and_elemental_circulation",
+      "kind": "commentary",
+      "text": "The Serpent in the Well whose tail is 'long with Wings wide' is the same Ouroboros that appears in the Chrysopoeia of Cleopatra \u2014 the unity of the opus circulatorium. 'The Well must brenne in Water cleare, The Fire with Water brent shalbe' describes the alchemical mortificatio that is also the Tantric practice of bhuta-shuddhi (elemental purification): fire is dissolved in water (tejas into apas), water into air (apas into vayu), air into ether (vayu into akasha), and earth into fire (prithivi into tejas), until the serpent of elemental consciousness is 'reduced' \u2014 i.e., resolved into its unmanifest seed-state. This is the same fivefold purification that Steiner describes in his 'evolution of the world and humanity' lectures, where each element must return to its spiritual archetype. The colour sequence \u2014 black, colours, white \u2014 mirrors the bhuta-shuddhi progression from tamas through rajas to sattva.",
+      "source_ids": [
+        "ripley-scroll-ashmole"
+      ],
+      "topics": [
+        "serpent_in_well",
+        "bhuta_shuddhi",
+        "elemental_purification",
+        "ouroboros",
+        "tamas_rajas_sattva"
+      ],
+      "status": "draft"
+    }
+  ],
+  "coverage": {
+    "theory": {
+      "status": "good",
+      "sources": [
+        "ripley-scroll-ashmole"
+      ],
+      "passage_count": 4,
+      "estimated_completeness": 0.6,
+      "gaps": [
+        "Full analysis of the visual emblems described in the Ripley Scroll (the laboratory scene, the tree, the king and queen) not yet extracted"
+      ]
+    },
+    "practice": {
+      "status": "good",
+      "sources": [
+        "ripley-scroll-ashmole"
+      ],
+      "passage_count": 4,
+      "estimated_completeness": 0.5,
+      "gaps": [
+        "The fire regimen and time calculations from Philalethes' full exposition need further extraction"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "placeholder",
+      "title": "Passages are extracts not full verbatim text",
+      "description": "Scroll verses are excerpted. Full text of the Ripley Scrowle and Philalethes' complete exposition should be added with line references.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial RO created from the Ripley Scroll verses, the scroll emblem verses, and Philalethes' exposition of Ripley's Vision. Eight passages cover: the Generacion, Bird of Hermes, the Toad and Putrefaction, and the Serpent in the Well.",
+      "sources_added": [
+        "ripley-scroll-ashmole"
+      ],
+      "passage_count": 8,
+      "status": "draft"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created in draft state from the Ripley Scroll materials",
+      "sources_total": 1,
+      "passages_total": 8
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "ro_id": "ro:loy-musimathics",
+  "schema_version": 1,
+  "title": "Musimathics \u2014 The Mathematical Foundations of Music (Gareth Loy)",
+  "subtitle": "The mathematics of sound, frequency, scales, harmony, and perception \u2014 bridging physics and music theory",
+  "family": "thinker-topic",
+  "status": "stub",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "Loy's two-volume work on the mathematics of music: frequency and amplitude, scales and temperament, Fourier analysis, sound perception, and digital audio processing.",
+    "scope": "Covers musical notation and intervals, physical properties of sound, human perception of sound, Fourier transforms, tuning systems, and digital synthesis. Relevant to the Tantraloka corpus for the mathematical structure of the 50 phonemes (Matrka) and the four levels of speech as harmonic series.",
+    "traditions": [
+      "mathematics",
+      "music-theory",
+      "acoustics"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "loy-musimathics",
+      "tier": 1,
+      "label": "Gareth Loy \u2014 Musimathics: The Mathematical Foundations of Music (MIT Press, 2006/2011). PDF, 501 pages.",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "fourier_analysis",
+        "scales_and_temperament",
+        "sound_perception",
+        "frequency_amplitude"
+      ],
+      "sections_affected": [
+        "theory"
+      ],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "theory",
+      "subsection": "fourier_and_timbre",
+      "kind": "source",
+      "text": "Loy explains Fourier's theorem: any complex sound can be decomposed into a sum of sine waves at integer multiples of the fundamental frequency. Timbre \u2014 what distinguishes a flute from a violin playing the same note \u2014 IS the harmonic series. The 50 Matrka phonemes of the Tantraloka can be understood as specific configurations of the harmonic series \u2014 each phoneme a unique spectral fingerprint. The four levels of speech (vaikhari, madhyama, pasyanti, para) correspond to four levels of Fourier resolution: from the full harmonic complexity of audible speech down to the fundamental frequency (the ground tone) that is para (transcendent speech).",
+      "source_ids": [
+        "loy-musimathics"
+      ],
+      "topics": [
+        "fourier",
+        "harmonics",
+        "timbre",
+        "speech"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "theory",
+      "subsection": "scales_as_cultural_constraint_spaces",
+      "kind": "source",
+      "text": "Loy demonstrates that tuning systems (Pythagorean, just intonation, equal temperament) are constraint spaces \u2014 not discovered but constructed by cultures to balance harmonic purity against transposability. The 22 sruti of Indian music theory is one such constraint space, directly relevant to the phoneme-emergence theory of Tantraloka Ahnika 6: the 50 phonemes emerge from the breath at different subtlety levels, each a specific sruti of consciousness.",
+      "source_ids": [
+        "loy-musimathics"
+      ],
+      "topics": [
+        "scales",
+        "temperament",
+        "sruti",
+        "constraint_space"
+      ],
+      "status": "active"
+    }
+  ],
+  "coverage": {
+    "theory": {
+      "status": "minimal",
+      "sources": [
+        "loy-musimathics"
+      ],
+      "passage_count": 2,
+      "estimated_completeness": 0.3,
+      "gaps": [
+        "Full extraction of the 500+ page text needed"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "coverage_gap",
+      "title": "Full text extraction needed",
+      "description": "Only 54 readable lines extracted. The PDF may need better parsing.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial RO for Musimathics. 2 passages covering Fourier/harmonics and scale constraint spaces.",
+      "sources_added": [
+        "loy-musimathics"
+      ],
+      "passage_count": 2,
+      "status": "draft"
+    }
+  ],
+  "appendices": [],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created from Loy's Musimathics PDF (12 MB, 501 pages).",
+      "sources_total": 1,
+      "passages_total": 2
+    }
+  ]
+}

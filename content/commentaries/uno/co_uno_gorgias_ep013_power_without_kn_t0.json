@@ -1,0 +1,59 @@
+{
+  "co_id": "co:uno_gorgias_ep013_power_without_kn_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gorgias_ep013_power_without_knowledge",
+  "turn_index": 0,
+  "lineage": "Socratic",
+  "student_state": "cooperative_engagement",
+  "behavior_tags": [
+    "affirms_value_claim"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_06",
+    "function_name": "UM_06",
+    "mechanism_shape": "CONSTRAINT_COLLAPSE",
+    "teaching_actions": [
+      "tests_power_claim"
+    ],
+    "traps_avoided": [
+      "category_conflation"
+    ],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.62,
+      "attunement": 0.8,
+      "style": 0.5,
+      "depth": 0.62,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_03",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_03",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "resist_intellectually",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The consequence test is set up: honor the \"greatest power\" claim, then show harm without knowledge. Expect intellectual resistance once harm is explicit; if they double down, use a concrete misuse case to force concession or reframe.",
+  "accumulated_insight": "T1: Student calls rhetoric \"the greatest of human powers\" - cooperative engagement but firm value claim (affirms_value_claim). They understand: rhetoric = greatest power (value claim), power = supremacy (no scrutiny of use). The constraint_collapse mechanism tests: power without knowledge = can cause harm, forces choice between power and good use, threatens to collapse the \"greatest\" claim if knowledge is required. Pattern: bold claim + consequence test queued + [next: defense or concession]. Medium confidence because value claims often resist consequence framing, but pressing knowledge usually exposes the contradiction.",
+  "abstract_pattern": "",
+  "visible_response": "Does he know what is truly good and what is bad?",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:proclus-elements",
+    "ro:platonism-decoded",
+    "ro:chaldean-oracles"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

@@ -1,0 +1,101 @@
+{
+  "ro_id": "ro:tegmark-perceptronium",
+  "schema_version": 1,
+  "title": "Max Tegmark \u2014 Consciousness as a State of Matter (Collected)",
+  "subtitle": "4 papers on consciousness as a state of matter, the mathematical universe hypothesis, and the physics of information",
+  "family": "thinker-topic",
+  "status": "stub",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "Tegmark's 'perceptronium' hypothesis \u2014 consciousness as a state of matter characterized by integrated information and self-awareness \u2014 provides a physical framework for understanding the up\u0101ya syst...",
+    "scope": "Covers perceptronium, the mathematical universe hypothesis, quantum decoherence in the brain.",
+    "traditions": [
+      "physics",
+      "consciousness",
+      "information"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "tegmark-collected",
+      "tier": 1,
+      "label": "Max Tegmark \u2014 Collected Papers. 4 PDFs in /root/projects/blog/library/science/authors/tegmark/.",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "perceptronium",
+        "mathematical_universe",
+        "consciousness_matter"
+      ],
+      "sections_affected": [
+        "theory"
+      ],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "theory",
+      "subsection": "perceptronium_as_siva",
+      "kind": "synthesis",
+      "text": "Tegmark defines perceptronium as 'the most general substance that feels self-aware' \u2014 a state of matter characterized by high integrated information and the capacity for self-modeling. This IS \u015aiva tattva (1), the condition of self-aware consciousness. The 'phase transitions' between forms of perceptronium IS the up\u0101ya system: a shift from low-integration (\u0100\u1e47avop\u0101ya) to high-integration (\u015a\u0101mbhavop\u0101ya) consciousness.",
+      "source_ids": [
+        "tegmark-collected"
+      ],
+      "topics": [
+        "perceptronium",
+        "siva",
+        "self_awareness",
+        "phase_transition"
+      ],
+      "status": "active"
+    }
+  ],
+  "coverage": {
+    "theory": {
+      "status": "minimal",
+      "sources": [
+        "tegmark-collected"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 0.2,
+      "gaps": [
+        "Full extraction needed"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "coverage_gap",
+      "title": "Full extraction needed",
+      "description": "4 papers collected.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial RO.",
+      "sources_added": [
+        "tegmark-collected"
+      ],
+      "passage_count": 1,
+      "status": "draft"
+    }
+  ],
+  "appendices": [],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created.",
+      "sources_total": 1,
+      "passages_total": 1
+    }
+  ]
+}

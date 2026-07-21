@@ -1,0 +1,60 @@
+{
+  "co_id": "co:uno_gurdjeff2_t987_t1000_leaking_b_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gurdjeff2_t987_t1000_leaking_balloon",
+  "turn_index": 0,
+  "lineage": "Gurdjieffian",
+  "student_state": "impulse_to_evangelize",
+  "behavior_tags": [
+    "reports_difficulty",
+    "expresses_altruistic_impulse"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_06",
+    "function_name": "UM_06",
+    "mechanism_shape": "COMPARISON_CONTRAST",
+    "teaching_actions": [
+      "denies_capacity_to_use",
+      "predicts_distortion",
+      "sets_knowledge_threshold",
+      "defines_consequence_of_sharing"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.62,
+      "attunement": 0.5,
+      "style": 0.65,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_04",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "resist_intellectually",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The denial/prediction works: cannot use knowledge (inadequate), predicts: distortion + negative consequences (produces disbelievers), sets threshold: knowledge = insufficient. The student expresses altruistic impulse (impulse to evangelize), which shows they understand: knowledge = should share (altruistic impulse). They'll likely report expression difficulty next. Hypothesis: altruistic denials trigger expression reports—testable by tracking whether altruistic denials lead to expression inquiries.",
+  "accumulated_insight": "T1: Student expresses altruistic impulse ('I find it almost impossible not to utilize the knowledge so far gained to assist one's friends')—impulse to evangelize via reports difficulty and expresses altruistic impulse. They understand: knowledge = should share (altruistic impulse). The comparison_contrast mechanism denies: cannot use knowledge (inadequate), predicts: distortion + negative consequences (produces disbelievers), sets threshold: knowledge = insufficient. Pattern: altruistic impulse → denial/prediction → [next: expression report]. Low confidence because altruistic denials can lead to resistance or expression reports.",
+  "abstract_pattern": "",
+  "visible_response": "It cannot be utilized yet, because if you try to do something with the amount of\nknowledge you have, you will distort it.\nIt is necessary to have more, because only\nthen will you be able to judge whether you can do something with it in a given case or\nnot... For us many things are facts, or at least should\nbe facts.\nIf you tell them to people who have not gone slowly through this study, for\nthem it will be something like faith.\nThey will either believe or not believe... So why should we produce more disbelievers?",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:sufi-comparative-analysis",
+    "ro:steiner-tantraloka-parallels"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

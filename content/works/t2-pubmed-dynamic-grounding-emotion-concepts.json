@@ -1,0 +1,53 @@
+{
+  "work_id": "work:t2-pubmed-dynamic-grounding-emotion-concepts",
+  "schema_version": 2,
+  "title": "Dynamic grounding of emotion concepts.",
+  "authors": [
+    {
+      "name": "Winkielman P"
+    },
+    {
+      "name": "Coulson S"
+    },
+    {
+      "name": "Niedenthal P"
+    }
+  ],
+  "publication": {
+    "year": 2018,
+    "type": "article",
+    "source": "PubMed/MEDLINE",
+    "language": "en",
+    "journal": "Philos Trans R Soc Lond B Biol Sci"
+  },
+  "identifiers": {
+    "pmid": "29914995",
+    "doi": "10.1098/rstb.2017.0127"
+  },
+  "topics": [
+    "phase-3-3",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "tradition": [
+    "contemporary_science"
+  ],
+  "tier": 2,
+  "assets": {
+    "pdf_path": null,
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/29914995/",
+    "abstract": "Emotion concepts are important. They help us to understand, experience and predict human behaviour. Emotion concepts also link the realm of the abstract with the realm of bodily experience and actions. Accordingly, the key question is how such concepts are created, represented and used. Embodied cognition theories hold that concepts are grounded in neural systems that produce experiential and motor states. Concepts are also contextually situated and thus engage sensorimotor resources in a dynami"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_t2_search",
+    "retrieved_at": "2026-07-11"
+  },
+  "phase_mapping": {
+    "phase": 3,
+    "phase_name": "Mind as Computer Critique",
+    "bridge_rationale": "4E cognition — embodied, enactive, extended, embedded mind."
+  },
+  "evaluation": "Good (score=2.6)"
+}

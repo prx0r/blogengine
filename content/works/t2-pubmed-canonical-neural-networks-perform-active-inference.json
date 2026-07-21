@@ -1,0 +1,53 @@
+{
+  "work_id": "work:t2-pubmed-canonical-neural-networks-perform-active-inference",
+  "schema_version": 2,
+  "title": "Canonical neural networks perform active inference.",
+  "authors": [
+    {
+      "name": "Isomura T"
+    },
+    {
+      "name": "Shimazaki H"
+    },
+    {
+      "name": "Friston KJ"
+    }
+  ],
+  "publication": {
+    "year": 2022,
+    "type": "article",
+    "source": "PubMed/MEDLINE",
+    "language": "en",
+    "journal": "Commun Biol"
+  },
+  "identifiers": {
+    "pmid": "35031656",
+    "doi": "10.1038/s42003-021-02994-2"
+  },
+  "topics": [
+    "phase-6-canonical-neural-net",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "tradition": [
+    "contemporary_science"
+  ],
+  "tier": 2,
+  "assets": {
+    "pdf_path": "t2-PMC8760273_Canonical_neural_networks_perform_active.pdf",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/35031656/",
+    "abstract": "This work considers a class of canonical neural networks comprising rate coding models, wherein neural activity and plasticity minimise a common cost function-and plasticity is modulated with a certain delay. We show that such neural networks implicitly perform active inference and learning to minimise the risk associated with future outcomes. Mathematical analyses demonstrate that this biological optimisation can be cast as maximisation of model evidence, or equivalently minimisation of variati"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_t2_search",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 6,
+    "phase_name": "Dependent-arising",
+    "bridge_rationale": "Dependent arising \u2014 predictive processing, free energy principle, active inference, Bayesian brain, prediction error in perception and action."
+  },
+  "evaluation": "Excellent (score=12.0)"
+}

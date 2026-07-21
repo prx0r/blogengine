@@ -1,0 +1,54 @@
+{
+  "co_id": "co:uno_therapy3_t1002_t1006_portrayal_t1",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3_t1002_t1006_portrayal_identification_victim",
+  "turn_index": 1,
+  "lineage": "Therapeutic",
+  "student_state": "destructive_rage",
+  "behavior_tags": [
+    "self_destruction"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_01",
+    "function_name": "RM_01",
+    "mechanism_shape": "STRUCTURAL_ANALOGY",
+    "teaching_actions": [
+      "links_imagery_to_life",
+      "interprets_metaphor"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.62,
+      "attunement": 0.8,
+      "style": 0.5,
+      "depth": 0.62,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_03",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_03",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "T1 predicted ask_deeper_question. Now student: 'I burn it.'. The subject_object_inversion intervention produced shift to destructive_rage. Using structural_analogy now. Watching how this develops.",
+  "accumulated_insight": "T2: Shift from pathological_guilt to destructive_rage. Student: 'I burn it.'. Previous subject_object_inversion intervention produced this response. Now using structural_analogy. Pattern: pathological_guilt to destructive_rage.",
+  "abstract_pattern": "",
+  "visible_response": "Isn’t this what you’ve done in your life—burn it up?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

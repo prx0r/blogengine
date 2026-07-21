@@ -1,0 +1,142 @@
+{
+  "ro_id": "ro:ro-path-samekh",
+  "schema_version": 1,
+  "title": "The Liber Samekh Path",
+  "subtitle": "Eleven-month escalating invocation \u2014 the 'Invoke Often' formula",
+  "family": "tradition",
+  "status": "draft",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "Eleven-month escalating invocation \u2014 the 'Invoke Often' formula",
+    "scope": "",
+    "traditions": [
+      "occult",
+      "daimon"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "liber-samekh",
+      "tier": 1,
+      "label": "liber-samekh",
+      "status": "active",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [],
+      "sections_affected": [],
+      "passages_used": 0
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "point_1_invocation",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [
+        "liber-samekh"
+      ],
+      "topics": [],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "point_2_ars_congressus",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [
+        "liber-samekh"
+      ],
+      "topics": [],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "point_3_scholion",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [
+        "liber-samekh"
+      ],
+      "topics": [],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "invoke_often",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [
+        "liber-samekh"
+      ],
+      "topics": [],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "barbarous_names",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [
+        "liber-samekh"
+      ],
+      "topics": [],
+      "status": "placeholder"
+    }
+  ],
+  "total_duration": "~11 months",
+  "difficulty": "High",
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-13",
+      "type": "initial",
+      "summary": "Initial draft. 5 sections outlined.",
+      "sources_added": [
+        "liber-samekh"
+      ],
+      "passage_count": 5,
+      "status": "draft"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-07-13",
+      "event": "RO created",
+      "sources_total": 1,
+      "passages_total": 5
+    }
+  ],
+  "coverage": {
+    "invoke_often": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    },
+    "point_3_scholion": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    },
+    "barbarous_names": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    },
+    "point_2_ars_congressus": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    },
+    "point_1_invocation": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    }
+  }
+}

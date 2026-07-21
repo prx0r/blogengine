@@ -1,0 +1,57 @@
+{
+  "co_id": "co:uno_therapy3.1_t2977_t2997_mirrori_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3.1_t2977_t2997_mirroring_the_superego_psychotic",
+  "turn_index": 0,
+  "lineage": "Therapeutic",
+  "student_state": "despairing_conviction",
+  "behavior_tags": [
+    "psychotic_depression",
+    "moral_masochism"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_03",
+    "function_name": "UM_03",
+    "mechanism_shape": "STRUCTURAL_ANALOGY",
+    "teaching_actions": [
+      "mirrors_logic",
+      "uses_paradox"
+    ],
+    "traps_avoided": [
+      "recursion_loop"
+    ],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.85,
+      "attunement": 0.8,
+      "style": 0.92,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_04",
+      "attunement_discrete": "AT_03",
+      "style_discrete": "LS_06",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "'I’m terrible. God does not love me. I know he could not love me.'—student presents as despairing conviction. Teacher's move uses structural_analogy: 'Since I haven’t cured you yet, I must be bad too. How should I pu'. Strategy: mirrors logic, uses paradox. Hypothesis: structural_analogy mechanism will create ask_deeper_question. Watching how student responds to this intervention.",
+  "accumulated_insight": "T1: Student says 'I’m terrible. God does not love me. I know he could not love me.' showing despairing_conviction via psychotic_depression, moral_masochism. Teacher responds 'Since I haven’t cured you yet, I must be bad too. How should I pu' using structural_analogy to mirrors logic, uses paradox. Opening UNMAKING move addresses despairing_conviction. Predicting ask_deeper_question because structural_analogy interventions typically produce this response pattern.",
+  "abstract_pattern": "",
+  "visible_response": "Since I haven’t cured you yet, I must be bad too. How should I punish myself, do you think?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

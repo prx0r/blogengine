@@ -1,0 +1,59 @@
+{
+  "co_id": "co:uno_gurdjeff2_t1255_t1260_tramps_a_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gurdjeff2_t1255_t1260_tramps_and_lunatics",
+  "turn_index": 0,
+  "lineage": "Gurdjieffian",
+  "student_state": "seeking_functional_definition",
+  "behavior_tags": [
+    "proposes_definition",
+    "seeks_confirmation"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_03",
+    "function_name": "RM_03",
+    "mechanism_shape": "NONE",
+    "teaching_actions": [
+      "provides_functional_definition",
+      "links_lunatic_to_false_values",
+      "links_lunatic_to_formatory_thinking"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.65,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_04",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "request_clarification",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The functional definition works: lunatic = false values + formatory thinking (technical definition), links: false values (imaginary qualities), formatory thinking (mechanical). The student proposes definition (seeking functional definition), which shows they understand: lunatic = wants things out of proportion (definition). They'll likely ask about archetypal definition next. Hypothesis: functional definitions trigger archetypal questions—testable by tracking whether functional definitions lead to archetypal inquiries.",
+  "accumulated_insight": "T1: Student proposes definition ('Is one of the features of a lunatic that he wants certain things out of proportion to other things, in such a way that it will be bad for him as A whole?')—seeking functional definition via proposes definition and seeks confirmation. They understand: lunatic = wants things out of proportion (definition). The none mechanism provides: lunatic = false values + formatory thinking (technical definition), links: false values (imaginary qualities), formatory thinking (mechanical). Pattern: definition proposal → functional definition → [next: archetypal question]. Low confidence because definition proposals can lead to clarification requests or compliance.",
+  "abstract_pattern": "",
+  "visible_response": "'Lunatic' means a man who always runs after false values, who has no right\ndiscrimination.\nHe is always formatory... lunatics are particularly devoted to formatory thinking: that is their chief affection in\none way or another.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:sufi-comparative-analysis",
+    "ro:steiner-tantraloka-parallels"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

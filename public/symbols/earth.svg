@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="earthG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#16a34a"/>
+      <stop offset="100%" stop-color="#22c55e"/>
+    </linearGradient>
+  </defs>
+  <!-- Downward triangle with horizontal line - Alchemical symbol for Earth -->
+  <polygon points="8,15 92,15 50,92" stroke="url(#earthG)" stroke-width="3" fill="url(#earthG)" fill-opacity="0.15"/>
+  <line x1="18" y1="45" x2="82" y2="45" stroke="url(#earthG)" stroke-width="3" stroke-linecap="round"/>
+</svg>

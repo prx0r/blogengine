@@ -1,0 +1,745 @@
+ <!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PPMEF Interactive Model Demo</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.77/Tone.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        body { margin: 0; overflow: hidden; background: #000000; font-family: 'Inter', sans-serif; color: white; }
+
+        canvas { display: block; }
+
+        .ui-panel {
+
+            position: absolute;
+
+            bottom: 2rem;
+
+            padding: 1rem 1.5rem;
+
+            background: rgba(17, 24, 39, 0.6);
+
+            backdrop-filter: blur(12px);
+
+            border-radius: 0.75rem;
+
+            border: 1px solid rgba(255, 255, 255, 0.1);
+
+            z-index: 100;
+
+            transition: opacity 0.5s ease;
+
+        }
+
+        #controls-panel { left: 2rem; }
+
+        #data-panel { right: 2rem; }
+
+        .button-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; }
+
+        .button-grid button {
+
+            background: rgba(255, 255, 255, 0.1);
+
+            border: 1px solid rgba(255, 255, 255, 0.2);
+
+            color: white;
+
+            padding: 0.75rem 1rem;
+
+            border-radius: 0.5rem;
+
+            cursor: pointer;
+
+            font-size: 0.9rem;
+
+            font-weight: 500;
+
+            transition: all 0.2s ease;
+
+        }
+
+        .button-grid button:hover { background: rgba(255, 255, 255, 0.2); }
+
+        .button-grid button.active { background: #3b82f6; border-color: #3b82f6; }
+
+        .data-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; text-align: center; width: 300px; }
+
+        .data-item p:first-child { font-size: 0.8rem; color: #9CA3AF; margin-bottom: 0.25rem; text-transform: uppercase; }
+
+        .data-item p:last-child { font-size: 1.5rem; font-weight: 700; color: #F9FAFB; }
+
+        .header {
+
+            position: absolute;
+
+            top: 2rem;
+
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            text-align: center;
+
+            z-index: 50;
+
+        }
+
+        .header h1 { font-size: 1.5rem; font-weight: 700; margin: 0; }
+
+        .header p { color: #D1D5DB; margin-top: 0.25rem; }
+
+        #start-message {
+
+            position: absolute;
+
+            top: 50%;
+
+            left: 50%;
+
+            transform: translate(-50%, -50%);
+
+            font-size: 1.5rem;
+
+            cursor: pointer;
+
+            background: #3b82f6;
+
+            padding: 1rem 2rem;
+
+            border-radius: 0.5rem;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div id="canvas-container"></div>
+
+
+
+    <div id="start-message">Click to Start Audio</div>
+
+
+
+    <div class="header">
+
+        <h1 id="progression-title">PPMEF Interactive Model</h1>
+
+        <p id="chord-display">Select a progression to begin</p>
+
+    </div>
+
+
+
+    <div id="controls-panel" class="ui-panel">
+
+        <div class="button-grid">
+
+            <button id="prog1" data-prog="ii-V-I">ii-V-I</button>
+
+            <button id="prog2" data-prog="Pop">Pop</button>
+
+            <button id="prog3" data-prog="Deceptive">Deceptive</button>
+
+            <button id="prog4" data-prog="Autumn Leaves">Autumn Leaves</button>
+
+        </div>
+
+    </div>
+
+   
+
+    <div id="data-panel" class="ui-panel">
+
+        <div class="data-grid">
+
+            <div class="data-item">
+
+                <p>Valence</p>
+
+                <p id="valence-val">0.00</p>
+
+            </div>
+
+            <div class="data-item">
+
+                <p>Arousal</p>
+
+                <p id="arousal-val">0.00</p>
+
+            </div>
+
+            <div class="data-item">
+
+                <p>Surprisal</p>
+
+                <p id="surprisal-val">0.00</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <script>
+
+        // --- SCENE SETUP ---
+
+        const canvasContainer = document.getElementById('canvas-container');
+
+        const scene = new THREE.Scene();
+
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+
+        const renderer = new THREE.WebGLRenderer({ antialias: true });
+
+        renderer.setSize(window.innerWidth, window.innerHeight);
+
+        canvasContainer.appendChild(renderer.domElement);
+
+        camera.position.z = 8;
+
+        scene.add(new THREE.AmbientLight(0xffffff, 0.3));
+
+        const pointLight = new THREE.PointLight(0xffffff, 1.5);
+
+        pointLight.position.set(10, 10, 10);
+
+        scene.add(pointLight);
+
+
+
+        // --- CORE OBJECT VISUALIZATION ---
+
+        const coreGeom = new THREE.IcosahedronGeometry(2, 64);
+
+        coreGeom.setAttribute('originalPosition', coreGeom.attributes.position.clone());
+
+        const coreMat = new THREE.MeshStandardMaterial({ color: 0xffffff, emissive: 0x000000, metalness: 0.1, roughness: 0.2 });
+
+        const core = new THREE.Mesh(coreGeom, coreMat);
+
+        scene.add(core);
+
+
+
+        // --- PREDICTIVE PROCESSING MUSICAL EMOTION FRAMEWORK (PPMEF) IMPLEMENTATION ---
+
+       
+
+        // Stage 2: The Generative Model (Simplified Transition Probability Matrix)
+
+        // This TPM represents a basic model of Western tonal harmony.
+
+        // Keys are Roman numerals (I, ii, iii, IV, V, vi, viidim).
+
+        const chordStates = ['I', 'ii', 'iii', 'IV', 'V', 'vi', 'viidim'];
+
+        const TPM = {
+
+            // From I (Tonic), most likely to go to pre-dominants or dominant.
+
+            'I':      { 'I': 0.1, 'ii': 0.2, 'iii': 0.1, 'IV': 0.3, 'V': 0.2, 'vi': 0.1, 'viidim': 0.0 },
+
+            // From ii (Supertonic, a pre-dominant), very likely to go to V.
+
+            'ii':     { 'I': 0.05, 'ii': 0.0, 'iii': 0.0, 'IV': 0.0, 'V': 0.8, 'vi': 0.05, 'viidim': 0.1 },
+
+            'iii':    { 'I': 0.0, 'ii': 0.1, 'iii': 0.0, 'IV': 0.4, 'V': 0.1, 'vi': 0.4, 'viidim': 0.0 },
+
+            // From IV (Subdominant, a pre-dominant), very likely to go to V or ii.
+
+            'IV':     { 'I': 0.1, 'ii': 0.3, 'iii': 0.0, 'IV': 0.0, 'V': 0.5, 'vi': 0.0, 'viidim': 0.1 },
+
+            // From V (Dominant), overwhelmingly likely to go to I (Tonic).
+
+            'V':      { 'I': 0.8, 'ii': 0.0, 'iii': 0.0, 'IV': 0.05, 'V': 0.0, 'vi': 0.15, 'viidim': 0.0 },
+
+            'vi':     { 'I': 0.0, 'ii': 0.4, 'iii': 0.0, 'IV': 0.5, 'V': 0.1, 'vi': 0.0, 'viidim': 0.0 },
+
+            'viidim': { 'I': 0.8, 'ii': 0.0, 'iii': 0.2, 'IV': 0.0, 'V': 0.0, 'vi': 0.0, 'viidim': 0.0 },
+
+        };
+
+       
+
+        // Stage 2 also requires mapping functional chords to actual notes.
+
+        const progressions = {
+
+            'ii-V-I': {
+
+                labels: ['Dm7 (ii)', 'G7 (V)', 'Cmaj7 (I)'],
+
+                functions: ['ii', 'V', 'I'],
+
+                chords: [['D3', 'F3', 'A3', 'C4'], ['G3', 'B3', 'D4', 'F4'], ['C4', 'E4', 'G4', 'B4']],
+
+            },
+
+            'Pop': {
+
+                labels: ['Cmaj7 (I)', 'Am7 (vi)', 'Fmaj7 (IV)', 'G7 (V)'],
+
+                functions: ['I', 'vi', 'IV', 'V'],
+
+                chords: [['C4', 'E4', 'G4', 'B4'], ['A3', 'C4', 'E4', 'G4'], ['F3', 'A3', 'C4', 'E4'], ['G3', 'B3', 'D4', 'F4']],
+
+            },
+
+            'Deceptive': {
+
+                labels: ['Dm7 (ii)', 'G7 (V)', 'Am7 (vi)'],
+
+                functions: ['ii', 'V', 'vi'],
+
+                chords: [['D3', 'F3', 'A3', 'C4'], ['G3', 'B3', 'D4', 'F4'], ['A3', 'C4', 'E4', 'G4']],
+
+            },
+
+            'Autumn Leaves': {
+
+                labels: ['Cm7 (ii)', 'F7 (V)', 'Bbmaj7 (I)', 'Ebmaj7 (IV)', 'Am7b5 (ii°)', 'D7 (V)', 'Gm (i)'],
+
+                functions: ['ii', 'V', 'I', 'IV', 'ii', 'V', 'I'], // Simplified for this model
+
+                chords: [
+
+                    ['C3', 'Eb3', 'G3', 'Bb3'], ['F3', 'A3', 'C4', 'Eb4'], ['Bb2', 'D3', 'F3', 'A3'],
+
+                    ['Eb3', 'G3', 'Bb3', 'D4'], ['A2', 'C3', 'Eb3', 'G3'], ['D3', 'F#3', 'A3', 'C4'], ['G2', 'Bb2', 'D3']
+
+                ],
+
+            }
+
+        };
+
+
+
+        // This maps chords to their intrinsic sensory consonance (a psychoacoustic property).
+
+        const intrinsicValence = {
+
+            'I': 0.9, 'ii': 0.5, 'iii': 0.5, 'IV': 0.7, 'V': 0.3, 'vi': 0.6, 'viidim': 0.1
+
+        };
+
+
+
+        // Stage 3: Information-Theoretic Calculations
+
+        function log2(n) { return Math.log(n) / Math.log(2); }
+
+
+
+        function calculateEntropy(distribution) {
+
+            let entropy = 0;
+
+            for (const state in distribution) {
+
+                const p = distribution[state];
+
+                if (p > 0) {
+
+                    entropy -= p * log2(p);
+
+                }
+
+            }
+
+            // Normalize by max entropy for a [0,1] range
+
+            return entropy / log2(chordStates.length);
+
+        }
+
+
+
+        function calculateSurprisal(distribution, outcome) {
+
+            const probability = distribution[outcome];
+
+            if (probability === 0) return 5; // Assign high surprisal for impossible events
+
+            const surprisal = -log2(probability);
+
+            // Normalize by max entropy for a comparable scale
+
+            return surprisal / log2(chordStates.length);
+
+        }
+
+
+
+        // --- AUDIO ENGINE ---
+
+        const piano = new Tone.Sampler({
+
+            urls: { A1: "A1.mp3", C4: "C4.mp3", 'F#3': 'Fs3.mp3', G2: 'G2.mp3' },
+
+            baseUrl: "https://tonejs.github.io/audio/salamander/",
+
+            release: 1,
+
+        }).toDestination();
+
+        piano.volume.value = -6;
+
+
+
+        // --- STATE MANAGEMENT ---
+
+        let state = {
+
+            currentEmotion: { v: 0, a: 0, s: 0 },
+
+            targetEmotion: { v: 0, a: 0, s: 0 },
+
+            previousSurprisal: 0,
+
+            activeProg: null,
+
+            sequence: null
+
+        };
+
+       
+
+        // --- UI ELEMENTS ---
+
+        const uiElements = {
+
+            progTitle: document.getElementById('progression-title'),
+
+            chordDisplay: document.getElementById('chord-display'),
+
+            valence: document.getElementById('valence-val'),
+
+            arousal: document.getElementById('arousal-val'),
+
+            surprisal: document.getElementById('surprisal-val'),
+
+            buttons: document.querySelectorAll('.button-grid button'),
+
+            startMessage: document.getElementById('start-message'),
+
+            controlsPanel: document.getElementById('controls-panel'),
+
+            dataPanel: document.getElementById('data-panel')
+
+        };
+
+       
+
+        uiElements.controlsPanel.style.opacity = '0';
+
+        uiElements.dataPanel.style.opacity = '0';
+
+
+
+        // --- CORE LOGIC ---
+
+        function playProgression(progName) {
+
+            if (state.sequence) {
+
+                state.sequence.stop();
+
+                Tone.Transport.cancel();
+
+            }
+
+
+
+            state.activeProg = progName;
+
+            const data = progressions[progName];
+
+            let currentStep = 0;
+
+            let lastChordFunction = 'I'; // Assume starting from a resolved state
+
+
+
+            state.sequence = new Tone.Sequence((time, chord) => {
+
+                // 1. Get current chord's functional role
+
+                const chordFunction = data.functions[currentStep];
+
+               
+
+                // 2. GENERATE PREDICTION: What did the model expect?
+
+                // Get the probability distribution for the NEXT chord, based on the LAST chord played.
+
+                const priorDistribution = TPM[lastChordFunction];
+
+
+
+                // 3. CALCULATE PREDICTION ERROR (SURPRISAL)
+
+                // How surprising was the chord we are NOW playing (the outcome)?
+
+                const surprisal = calculateSurprisal(priorDistribution, chordFunction);
+
+
+
+                // 4. CALCULATE UNCERTAINTY (ENTROPY / TENSION for the NEXT step)
+
+                // Based on the chord we are NOW playing, how uncertain are we about the FUTURE?
+
+                const futureDistribution = TPM[chordFunction];
+
+                const uncertainty = calculateEntropy(futureDistribution);
+
+
+
+                // Stage 4: Map Prediction Dynamics to Affective Space
+
+               
+
+                // AROUSAL: Driven by surprisal (prediction error) and uncertainty.
+
+                // A high surprisal gives a jolt, high uncertainty creates anticipatory tension.
+
+                const arousal = (surprisal * 0.6) + (uncertainty * 0.4);
+
+
+
+                // VALENCE: A composite of intrinsic consonance and predictive payoff.
+
+                // Predictive Payoff: Pleasure comes from the *reduction* of surprisal.
+
+                const predictiveValence = (state.previousSurprisal - surprisal) * 0.5;
+
+                const intrinsic = intrinsicValence[chordFunction] || 0.5;
+
+                // Combine intrinsic pleasantness with the pleasure of resolved prediction error.
+
+                const valence = (intrinsic * 0.4) + (predictiveValence * 0.6);
+
+
+
+                // Update state for the next chord and for the visual animation
+
+                state.targetEmotion = { v: valence, a: arousal, s: surprisal };
+
+                state.previousSurprisal = surprisal;
+
+
+
+                // Play the sound
+
+                piano.triggerAttackRelease(chord, '1n', time);
+
+
+
+                // Schedule UI updates to be in sync with audio
+
+                Tone.Draw.schedule(() => {
+
+                    uiElements.progTitle.textContent = progName;
+
+                    uiElements.chordDisplay.textContent = data.labels[currentStep];
+
+                    uiElements.valence.textContent = valence.toFixed(2);
+
+                    uiElements.arousal.textContent = arousal.toFixed(2);
+
+                    uiElements.surprisal.textContent = surprisal.toFixed(2);
+
+                }, time);
+
+
+
+                // Advance state for the next iteration
+
+                lastChordFunction = chordFunction;
+
+                currentStep = (currentStep + 1) % data.chords.length;
+
+
+
+            }, data.chords, '1n').start(0);
+
+           
+
+            Tone.Transport.bpm.value = 80;
+
+            Tone.Transport.start();
+
+
+
+            // Update button styles
+
+            uiElements.buttons.forEach(btn => {
+
+                btn.classList.toggle('active', btn.dataset.prog === progName);
+
+            });
+
+        }
+
+
+
+        // --- EVENT LISTENERS ---
+
+        function initializeAudio() {
+
+            Tone.context.resume();
+
+            uiElements.startMessage.style.display = 'none';
+
+            uiElements.controlsPanel.style.opacity = '1';
+
+            uiElements.dataPanel.style.opacity = '1';
+
+        }
+
+        uiElements.startMessage.addEventListener('click', initializeAudio, { once: true });
+
+       
+
+        uiElements.buttons.forEach(button => {
+
+            button.addEventListener('click', () => {
+
+                if (Tone.context.state !== 'running') {
+
+                    console.error("Audio context not running. Please interact with the page first.");
+
+                    return;
+
+                }
+
+                playProgression(button.dataset.prog);
+
+            });
+
+        });
+
+
+
+        // --- ANIMATION LOOP ---
+
+        const clock = new THREE.Clock();
+
+        function animate() {
+
+            requestAnimationFrame(animate);
+
+            const time = clock.getElapsedTime();
+
+
+
+            const lerpFactor = 0.05;
+
+            state.currentEmotion.v += (state.targetEmotion.v - state.currentEmotion.v) * lerpFactor;
+
+            state.currentEmotion.a += (state.targetEmotion.a - state.currentEmotion.a) * lerpFactor;
+
+            state.currentEmotion.s += (state.targetEmotion.s - state.currentEmotion.s) * lerpFactor;
+
+
+
+            // --- VISUAL MAPPING ---
+
+            const pos = core.geometry.attributes.position;
+
+            const originalPos = core.geometry.attributes.originalPosition;
+
+            const noiseAmp = state.currentEmotion.s * 1.5; // Surprisal causes distortion
+
+            const noiseFreq = 0.5 + state.currentEmotion.a * 1.5; // Arousal increases frequency
+
+
+
+            for (let i = 0; i < pos.count; i++) {
+
+                const ox = originalPos.getX(i);
+
+                const oy = originalPos.getY(i);
+
+                const oz = originalPos.getZ(i);
+
+                const noiseVal = 0.1 * (Math.sin(ox * noiseFreq + time) + Math.cos(oy * noiseFreq - time));
+
+                const displacement = 1 + noiseVal * noiseAmp;
+
+                pos.setXYZ(i, ox * displacement, oy * displacement, oz * displacement);
+
+            }
+
+            pos.needsUpdate = true;
+
+            core.geometry.computeVertexNormals();
+
+           
+
+            // Valence maps to color (Green=Positive, Red=Negative)
+
+            const hue = 0.33 + state.currentEmotion.v * 0.33;
+
+            coreMat.color.setHSL(hue, 0.9, 0.55);
+
+
+
+            // Arousal maps to brightness/emissivity
+
+            coreMat.emissive.setHSL(hue, 0.9, state.currentEmotion.a * 0.4);
+
+
+
+            core.rotation.y += (0.001 + state.currentEmotion.a * 0.005);
+
+            pointLight.intensity += (1.5 + state.currentEmotion.s * 5 - pointLight.intensity) * 0.1;
+
+
+
+            renderer.render(scene, camera);
+
+        }
+
+       
+
+        animate();
+
+
+
+        window.addEventListener('resize', () => {
+
+            camera.aspect = window.innerWidth / window.innerHeight;
+
+            camera.updateProjectionMatrix();
+
+            renderer.setSize(window.innerWidth, window.innerHeight);
+
+        });
+
+    </script>
+
+</body>
+
+</html>

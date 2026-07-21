@@ -1,0 +1,92 @@
+{
+  "ro_id": "ro:fields3",
+  "schema_version": 1,
+  "title": "Fields3 \u2014 Collected Papers on Quantum Foundations and Biology (Chris Fields)",
+  "subtitle": "Quantum entanglement, measurement, the classical-quantum boundary, and the nature of physical reality",
+  "family": "thinker-topic",
+  "status": "stub",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "A collection of Chris Fields' papers on quantum information, the measurement problem, quantum biology, the classical-quantum boundary, and the implications of quantum mechanics for the nature of re...",
+    "scope": "Covers quantum measurement and decoherence, the role of the observer in quantum mechanics, quantum biology and entanglement in biological systems, the classical-quantum boundary, Fields' work with Levin and Glazebrook on quantum cognition and biological information processing.",
+    "traditions": [
+      "quantum-foundations",
+      "quantum-biology",
+      "information-theory"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "fields3",
+      "tier": 1,
+      "label": "Chris Fields \u2014 Fields3: Collected Papers (C.N. Yang Institute for Theoretical Physics). PDF, 4.1 MB.",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "quantum_measurement",
+        "quantum_biology",
+        "classical_quantum_boundary",
+        "entanglement"
+      ],
+      "sections_affected": [
+        "theory"
+      ],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "theory",
+      "subsection": "the_measurement_problem",
+      "kind": "source",
+      "text": "Fields' work addresses the measurement problem from an information-theoretic perspective. Quantum measurement is not a physical interaction but the establishment of a classical record \u2014 an irreversible information transfer that resolves quantum superpositions into definite outcomes. This maps directly to the constraint space formalism: measurement is S0 committing to a specific configuration within C. The observer does not cause collapse; the observer IS the system for which collapse is registered.",
+      "source_ids": [
+        "fields3"
+      ],
+      "topics": [
+        "measurement",
+        "classical",
+        "quantum",
+        "information"
+      ],
+      "status": "active"
+    }
+  ],
+  "coverage": {
+    "theory": {
+      "status": "minimal",
+      "sources": [
+        "fields3"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 0.2,
+      "gaps": [
+        "Full extraction of all collected papers needed"
+      ]
+    }
+  },
+  "issues": [],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial RO for Fields' collected papers.",
+      "sources_added": [
+        "fields3"
+      ],
+      "passage_count": 1,
+      "status": "draft"
+    }
+  ],
+  "appendices": [],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created.",
+      "sources_total": 1,
+      "passages_total": 1
+    }
+  ]
+}

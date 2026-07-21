@@ -1,0 +1,138 @@
+{
+  "ro_id": "ro:friston-free-energy",
+  "schema_version": 1,
+  "title": "Karl Friston \u2014 Free Energy Principle and Active Inference (Collected Papers)",
+  "subtitle": "25 papers on the free energy principle, active inference, variational Bayes, Markov blankets, and the physics of belief \u2014 the formal architecture of the karmic update rule",
+  "family": "thinker-topic",
+  "status": "stub",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "Friston's free energy principle formalizes how adaptive systems minimize surprise through active inference \u2014 structurally identical to the karmic update rule I(n+1) = \u03a8(P, K_n, \u03b5), where free energ...",
+    "scope": "Covers 25 papers (2016-2025) spanning: the free energy principle as a unified brain theory, active inference and learning, the variational principles of action, Markov blanket formalisms, sentience and the origins of consciousness, and applications to emotion, social cognition, and psychopathology.",
+    "traditions": [
+      "computational-neuroscience",
+      "free-energy-principle",
+      "active-inference",
+      "predictive-processing"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "friston-collected",
+      "tier": 1,
+      "label": "Karl Friston et al. \u2014 Collected Papers (2016-2025). 25 PDFs in /root/projects/blog/science/authors/friston/. ArXiv IDs: 1610.05564 through 2512.21129.",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "free_energy_principle",
+        "active_inference",
+        "variational_bayes",
+        "markov_blankets",
+        "sentience"
+      ],
+      "sections_affected": [
+        "theory"
+      ],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "theory",
+      "subsection": "fep_as_karmic_update",
+      "kind": "synthesis",
+      "text": "The free energy principle states that any adaptive system minimizes a quantity called variational free energy \u2014 the difference between its internal model of the world and the sensory data it receives. This IS the karmic update rule: I(n+1) = \u03a8(P, K_n, \u03b5). The free energy IS the error signal (suffering as information, not punishment). The system updates its model to reduce free energy, just as karma updates the configuration to reduce misalignment with the pattern. Friston has formalized what the Tantraloka calls karmic momentum: the tendency of all configurations to evolve toward states that minimize surprise.",
+      "source_ids": [
+        "friston-collected"
+      ],
+      "topics": [
+        "free_energy",
+        "karma",
+        "update_rule",
+        "error_signal"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "theory",
+      "subsection": "markov_blankets_as_kancukas",
+      "kind": "synthesis",
+      "text": "A Markov blanket is the boundary that separates a system from its environment \u2014 the set of states that mediate all interactions between the internal and external. This IS the ka\u00f1cukas: the five coverings that define the boundary of the individual configuration (Kal\u0101 = limited agency = what the system can affect; Vidy\u0101 = limited knowledge = what the system can sense; R\u0101ga = limited attachment = the system's preferred states; K\u0101la = time = the temporal boundary of the Markov blanket; Niyati = causality = the causal structure of the blanket). Friston has formalized the ka\u00f1cukas as information-theoretic boundaries.",
+      "source_ids": [
+        "friston-collected"
+      ],
+      "topics": [
+        "markov_blanket",
+        "kancukas",
+        "boundary",
+        "information"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "theory",
+      "subsection": "active_inference_as_upaya",
+      "kind": "synthesis",
+      "text": "Active inference is the process by which a system acts on its environment to make it match its predictions. This IS the up\u0101yas: \u0100\u1e47avop\u0101ya (acting on the environment through external supports to align with the goal), \u015a\u0101ktop\u0101ya (updating the internal model through knowledge to reduce uncertainty), \u015a\u0101mbhavop\u0101ya (direct recognition that the model and the modeled are the same \u2014 the free energy IS zero because there is no boundary), Anup\u0101ya (no model needed because the system IS the environment).",
+      "source_ids": [
+        "friston-collected"
+      ],
+      "topics": [
+        "active_inference",
+        "upayas",
+        "model",
+        "environment"
+      ],
+      "status": "active"
+    }
+  ],
+  "coverage": {
+    "theory": {
+      "status": "minimal",
+      "sources": [
+        "friston-collected"
+      ],
+      "passage_count": 3,
+      "estimated_completeness": 0.25,
+      "gaps": [
+        "Full extraction of all 25 papers needed; detailed mapping of each paper to specific tattva range"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "coverage_gap",
+      "title": "Full corpus extraction needed",
+      "description": "25 papers collected but not fully extracted. Only three structural mappings created.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial RO for Friston's collected papers. 3 passages mapping free energy to karma, Markov blankets to ka\u00f1cukas, active inference to up\u0101yas.",
+      "sources_added": [
+        "friston-collected"
+      ],
+      "passage_count": 3,
+      "status": "draft"
+    }
+  ],
+  "appendices": [],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created for 25 Friston papers.",
+      "sources_total": 1,
+      "passages_total": 3
+    }
+  ]
+}

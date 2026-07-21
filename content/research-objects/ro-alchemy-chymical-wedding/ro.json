@@ -1,0 +1,256 @@
+{
+  "ro_id": "ro:alchemy-chymical-wedding",
+  "schema_version": 1,
+  "title": "The Chymical Wedding of Christian Rosenkreutz",
+  "subtitle": "Johann Valentin Andreae's Rosicrucian allegory of the soul's journey through death, dream, and wedding-feast to rebirth \u2014 First Day",
+  "family": "theme",
+  "status": "draft",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "The Rosicrucian allegory of Christian Rosenkreutz's initiatory journey through the seven-day wedding of the King and Queen, beginning with the Easter Eve vision, the letter, the dungeon dream, and ...",
+    "scope": "Covers the First Day of the Chymical Wedding: the Easter Eve meditation, the winged lady with the trumpet, the letter with the IN HOC SIGNO VINCES seal, the dungeon dream of fettered humanity, the sevenfold cord redemption, and the awakening.",
+    "traditions": [
+      "rosicrucian",
+      "alchemy",
+      "hermetic",
+      "christian_mysticism",
+      "initiatory"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "chymwed1-text",
+      "tier": 1,
+      "label": "The Chymical Wedding of Christian Rosenkreutz, First Day (Foxcroft 1690, modernised by McLean and Green)",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "easter_vision",
+        "winged_messenger",
+        "dungeon_dream",
+        "sevenfold_cord",
+        "invitation_letter"
+      ],
+      "sections_affected": [
+        "vision",
+        "initiation",
+        "symbolism"
+      ],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "vision",
+      "subsection": "the_easter_eve_meditation_and_the_tempest",
+      "kind": "source",
+      "text": "On an evening before Easter Day, I sat at a table, and having (as my custom was) in my humble prayer sufficiently conversed with my Creator, and considered many great mysteries ... all of a sudden arose so horrible a tempest, that I imagined no other but that through its mighty force, the hill on which my little house was founded would fly into pieces. ... I took courage, and persisted in my meditation, till somebody in an unusual manner touched me on the back; whereupon I was so hugely terrified ... I looked back, and behold it was a fair and glorious lady, whose garments were all sky-coloured, and curiously (like Heaven) bespangled with golden stars; in her right hand she bore a trumpet of beaten gold, on which a Name was engraved which I could well read but am as yet forbidden to reveal it.",
+      "source_ids": [
+        "chymwed1-text"
+      ],
+      "topics": [
+        "easter",
+        "meditation",
+        "tempest",
+        "angelic_messenger",
+        "trumpet"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "vision",
+      "subsection": "the_letter_and_its_warning",
+      "kind": "source",
+      "text": "I fell upon my knees and besought my Creator ... I went to the letter, which was now so heavy, that had it been mere gold it could hardly have been so weighty. ... a little seal, on which a curious cross with this inscription, IN HOC SIGNO VINCES, was engraved. ... This day, today / Is the Royal Wedding day. / For this thou wast born / And chosen of God for joy / Thou mayest go to the mountain / Whereon three temples stand, / And see there this affair. / Keep watch / Inspect thyself / And shouldst thou not bathe thoroughly / The Wedding may work thy bane. / Bane comes to him who faileth here / Let him beware who is too light.",
+      "source_ids": [
+        "chymwed1-text"
+      ],
+      "topics": [
+        "seal",
+        "invitation",
+        "three_temples",
+        "self_examination",
+        "warning"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "initiation",
+      "subsection": "the_dungeon_dream_of_fettered_humanity",
+      "kind": "source",
+      "text": "I was yet scarcely fallen asleep, when I thought that I, together with an innumerable multitude of men, lay fettered with great chains in a dark dungeon, in which, without the least glimpse of light, we swarmed like bees one over another ... we heard many trumpets sounding together and kettle drums beating ... the cover of the dungeon was lifted up from above, and a little light let down to us. Then first might truly have been discerned the bustle we kept, for all went pell-mell, and he who perchance had heaved himself up too much, was forced down again under the others' feet. In brief, each one strove to be uppermost. Neither did I myself linger, but with my weighty fetters slipped up from under the rest, and then heaved myself upon a stone, which I laid hold of.",
+      "source_ids": [
+        "chymwed1-text"
+      ],
+      "topics": [
+        "dungeon",
+        "chains",
+        "multitude",
+        "struggle",
+        "stone",
+        "light"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "initiation",
+      "subsection": "the_sevenfold_cord_and_redemption",
+      "kind": "source",
+      "text": "He had scarcely finished speaking when an ancient matron commanded her servants to let down the cord seven times into the dungeon, and draw up whosoever could hang upon it. ... at the first pull the servants drew up four. ... I could not get very near the cord ... The cord was let down the second time, but many, because their chains were too heavy, and their hands too tender, could not keep their hold ... At those five times very few were drawn up. ... When the cord came down the sixth time, some of them hung themselves fast upon it; and whilst being drawn up, the cord swung from one side to the other, and (perhaps by the will of God) came to me, and I suddenly caught it, uppermost above all the rest, and so at length beyond hope came out.",
+      "source_ids": [
+        "chymwed1-text"
+      ],
+      "topics": [
+        "seven_cord",
+        "redemption",
+        "hope",
+        "rescue",
+        "matron"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "vision",
+      "subsection": "the_wedding_call_as_hga_summoning",
+      "kind": "commentary",
+      "text": "The winged lady with the trumpet of gold and the unutterable Name is the HGA making contact \u2014 exactly as described in Frater Acher's four-stage path (Trust \u2192 Joy \u2192 Darkness \u2192 Encounter). The Name that Rosenkreutz could read but was 'forbidden to reveal' is the daimonic Name that, in the PGM systasis ritual, is communicated in the egg and must be kept secret. The cross with IN HOC SIGNO VINCES is Constantine's vision but also the crux ansata, the symbol of the HGA's authority. The tempest that shakes the house is the Saturn retreat stage described by Acher: the shaking of the foundations before contact. The three temples correspond to the three worlds of the Kabbalah (Briah, Yetzirah, Assiah) or the three bodies of the Tibetan tradition (nirm\u0101\u1e47ak\u0101ya, sambhogak\u0101ya, dharmak\u0101ya) that the initiate must navigate.",
+      "source_ids": [
+        "chymwed1-text"
+      ],
+      "topics": [
+        "daimon_path",
+        "hga",
+        "acher",
+        "pgm",
+        "kabbalah",
+        "tibetan"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_006",
+      "section": "initiation",
+      "subsection": "the_dungeon_as_bardo_state",
+      "kind": "commentary",
+      "text": "The dungeon dream is a precise description of the first bardo of dying (chikhai bardo) in the Tibetan Book of the Dead. The darkness, the chains (karmic bonds), the 'swarming like bees one over another' (the confusion of the intermediate state), the sound of trumpets (the dharmata sounds), and the lowering of light (the Clear Light of the second bardo) match the Bardo Th\u00f6dol's stages exactly. The sevenfold cord corresponds to the seven weeks of the intermediate state. Those who 'could not keep their hold' due to 'heavy chains' are those overwhelmed by karmic impressions. Rosenkreutz catching the cord at the sixth lowering \u2014 'by the will of God' \u2014 describes the moment of recognition of the Clear Light, which liberates. The wounds on his feet from the fetters are the stigmata of the initiatory ordeal, as the matron says: 'keep these wounds for my sake'.",
+      "source_ids": [
+        "chymwed1-text"
+      ],
+      "topics": [
+        "tibetan_book_of_dead",
+        "bardo",
+        "karma",
+        "clear_light",
+        "initiatory_wounds"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_007",
+      "section": "vision",
+      "subsection": "the_self_examination_and_steiner's_threshold",
+      "kind": "commentary",
+      "text": "Rosenkreutz's self-examination \u2014 'I found also that my bodily behaviour, and outward good conversation, and brotherly love towards my neighbour, was not duly purged and cleansed' \u2014 corresponds exactly to Steiner's description of the Guardian of the Threshold. In Steiner's anthroposophy, before entering the supersensible world, the aspirant must confront their own shadow, the double, which shows them all their unpurified impulses. The 'carnal designs' of 'pomp and bravery, and worldly pride' are precisely the astral husks that Steiner describes as falling away in the first stage of initiation. The 'unleavened, undefiled cake' Rosenkreutz prepares is the purified etheric body that Steiner calls the 'lotus flowers' \u2014 the sense organs of the soul that must be cleansed before the wedding can take place.",
+      "source_ids": [
+        "chymwed1-text"
+      ],
+      "topics": [
+        "steiner",
+        "guardian_of_threshold",
+        "shadow",
+        "etheric_body",
+        "initiation"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_008",
+      "section": "initiation",
+      "subsection": "the_white_linen_coat_and_red_ribbon_as_tantric_body",
+      "kind": "commentary",
+      "text": "Rosenkreutz's preparation \u2014 white linen coat, blood-red ribbon bound cross-ways, four red roses in his hat, bread and salt and water \u2014 encodes a complete tantric s\u0101dhana. The white coat is the purified sattvic body corresponding to the tantric guru's white garments. The red ribbon cross-ways is the ku\u1e47\u1e0dalin\u012b serpent (red) that rises through the central channel (the cross, which in Tantraloka is the intersection of vertical su\u1e63um\u1e47\u0101 and horizontal i\u1e0d\u0101/pi\u1e45gal\u0101). The four red roses represent the four lower cakras (m\u016bl\u0101dh\u0101ra, sv\u0101dhi\u1e63\u1e6dh\u0101na, ma\u1e47ip\u016bra, an\u0101hata) activated by the red energy. The bread (earth/prithv\u012b), salt (fire/agni \u2014 salt is from the sea but crystalline like fire), and water (water/apas) are the three of the five mah\u0101bh\u016btas, with air and ether being the subtle mediators. The vow \u2014 to use revelation only for God's Name and neighbor's service \u2014 is the tantric samaya (commitment) that seals the practice.",
+      "source_ids": [
+        "chymwed1-text"
+      ],
+      "topics": [
+        "tantraloka",
+        "layayoga",
+        "kundalini",
+        "sadhana",
+        "samaya",
+        "pancha_mahabhuta"
+      ],
+      "status": "active"
+    }
+  ],
+  "coverage": {
+    "vision": {
+      "status": "comprehensive",
+      "sources": [
+        "chymwed1-text"
+      ],
+      "passage_count": 3,
+      "estimated_completeness": 0.8,
+      "gaps": [
+        "Days 2-7 not yet incorporated from chymwed2-7.html files"
+      ]
+    },
+    "initiation": {
+      "status": "comprehensive",
+      "sources": [
+        "chymwed1-text"
+      ],
+      "passage_count": 3,
+      "estimated_completeness": 0.8,
+      "gaps": [
+        "The full hall of the wedding and later trials not yet excerpted"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "coverage_gap",
+      "title": "Only First Day covered \u2014 Days 2 through 7 not yet incorporated",
+      "description": "The Chymical Wedding has 7 days corresponding to the 7 stages of the alchemical opus. Only Day 1 (the call and first redemption) is covered here.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    },
+    {
+      "id": "issue-002",
+      "type": "interpretation",
+      "title": "Identity of the winged lady remains obscure",
+      "description": "She is sometimes identified as Sophia, sometimes as the Virgin of the World, sometimes as the HGA. The trumpet with the unutterable Name suggests the HGA, but her role as a messenger delivering letters of invitation suggests a psychopomp figure.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial RO covering the First Day of the Chymical Wedding: the Easter Eve vision, the winged messenger, the letter, the dungeon dream, and the sevenfold cord redemption.",
+      "sources_added": [
+        "chymwed1-text"
+      ],
+      "passage_count": 8,
+      "status": "draft"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created in draft state from Chymical Wedding First Day HTML source",
+      "sources_total": 1,
+      "passages_total": 8
+    }
+  ]
+}

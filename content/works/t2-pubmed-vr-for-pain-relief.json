@@ -1,0 +1,49 @@
+{
+  "work_id": "work:t2-pubmed-vr-for-pain-relief",
+  "schema_version": 2,
+  "title": "VR for Pain Relief.",
+  "authors": [
+    {
+      "name": "Matamala-Gomez M"
+    },
+    {
+      "name": "Donegan T"
+    },
+    {
+      "name": "Świdrak J"
+    }
+  ],
+  "publication": {
+    "year": 2023,
+    "journal": "Curr Top Behav Neurosci",
+    "source": "PubMed/MEDLINE",
+    "language": "en"
+  },
+  "identifiers": {
+    "pmid": "36592274",
+    "doi": "10.1007/7854_2022_402"
+  },
+  "topics": [
+    "phase-1-birth-body",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "assets": {
+    "pdf_path": "t2-pubmed-vr-for-pain-relief.pdf",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/36592274/",
+    "abstract": "The present chapter explores how immersive virtual reality (VR) systems can be used for pain research and treatment. Pain is a universal, yet entirely subjective and multifaceted unpleasant experience. One of the earliest VR studies on pain highlighted the role of attention in pain modulation. However, the role of body representation in pain modulation has also been described as a crucial factor. Through virtual reality systems, it is possible to modulate both attention to pain and body represen"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_alt17_acquisition",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 1,
+    "phase_name": "Birth/Body",
+    "bridge_rationale": "Bridge paper score=14.5: links Birth/Body concept to mechanistic neuroscience"
+  },
+  "evaluation": "Score 14: Excellent bridge signal",
+  "tier": 2
+}

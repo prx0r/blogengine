@@ -1,0 +1,60 @@
+{
+  "co_id": "co:uno_asitis_t1023_t1040_difficulty__t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "asitis_t1023_t1040_difficulty_check",
+  "turn_index": 0,
+  "lineage": "Buddhist",
+  "student_state": "discouraged_reporting",
+  "behavior_tags": [
+    "practice_struggle",
+    "duration_fixation"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_06",
+    "function_name": "UM_06",
+    "mechanism_shape": "COMPARISON_CONTRAST",
+    "teaching_actions": [
+      "checks_state",
+      "interrogates_difficulty",
+      "tests_fabrication"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.62,
+      "attunement": 0.5,
+      "style": 0.65,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_04",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "resist_intellectually",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "My intent says 'Shift their frame...' but the student is in discouraged_reporting. Am I trying to shift their frame or are they already shifting? The comparison_contrast mechanism suggests I'm doing something, but maybe they're doing it to themselves and I'm just naming it.",
+  "accumulated_insight": "T1: Student says 'It's difficult; it is very short.'—discouraged reporting via practice struggle, duration fixation. Teacher responds '' using comparison contrast to checks state, interrogates difficulty, tests fabrication. Opening UNMAKING move addresses discouraged reporting. Predicting resist intellectually because comparison contrast interventions typically produce this response.",
+  "abstract_pattern": "",
+  "visible_response": "Are you recognizing mind essence?\n\nWhat's the trouble you're experiencing?\nWhat is the difficulty, exacdy? If it's very short, what is the problem in repeating it many times?\n\nIs this short moment something you create by meditating?",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:nagarjuna-mulamadhyamaka",
+    "ro:dhammapada",
+    "ro:buddhism-decoded"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

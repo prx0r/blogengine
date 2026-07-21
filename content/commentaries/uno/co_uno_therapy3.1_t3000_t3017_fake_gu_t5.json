@@ -1,0 +1,52 @@
+{
+  "co_id": "co:uno_therapy3.1_t3000_t3017_fake_gu_t5",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3.1_t3000_t3017_fake_guilt_self_attack",
+  "turn_index": 5,
+  "lineage": "Therapeutic",
+  "student_state": "unknown",
+  "behavior_tags": [],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_06",
+    "function_name": "UM_06",
+    "mechanism_shape": "CONSTRAINT_COLLAPSE",
+    "teaching_actions": [
+      "challenges_motivation",
+      "removes_pressure"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.35,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_02",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "Turn 6: 'Are you thinking I should have?'. Student now in unknown. Continuing with constraint_collapse approach. Building on previous turn's foundation.",
+  "accumulated_insight": "T6: Student: 'Are you thinking I should have?'. Shift from caught_out to unknown. Teacher applies constraint_collapse mechanism with challenges motivation, removes pressure. Mid-episode progression in UNMAKING phase.",
+  "abstract_pattern": "",
+  "visible_response": "Given that you think you were perfectly awful to her, only you can know whether you want to make it up to her or not. That may not be something you need to repair.",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

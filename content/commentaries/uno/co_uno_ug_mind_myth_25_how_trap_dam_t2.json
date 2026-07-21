@@ -1,0 +1,63 @@
+{
+  "co_id": "co:uno_ug_mind_myth_25_how_trap_dam_t2",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "ug_mind_myth_25_how_trap_dam",
+  "turn_index": 2,
+  "lineage": "Realist",
+  "student_state": "detached_curiosity",
+  "behavior_tags": [
+    "curiosity",
+    "analysis"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_02",
+    "function_name": "UM_02",
+    "mechanism_shape": "SYSTEM_DYNAMICS",
+    "teaching_actions": [
+      "closes_loop",
+      "redefines_question_as_accumulation"
+    ],
+    "traps_avoided": [
+      "ego_defense",
+      "none",
+      "problem_solving_stance"
+    ],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.65,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_04",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "resist_intellectually",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "Unmaking UM_02. The student's detached_curiosity suggests they're holding something. The system_dynamics mechanism is supposed to collapse it. But what if the holding itself is what needs to be seen, not collapsed? Maybe unmaking isn't destruction but recognition.",
+  "accumulated_insight": "T3 (Final): Student 'How does this process of accumulation work?'—now detached curiosity. Episode complete after 3 turns, moving from intellectual maneuver to detached curiosity. Teaching arc used system dynamics in UNMAKING phase to address curiosity, analysis. Student progressed through 3-turn teaching sequence.",
+  "abstract_pattern": "",
+  "visible_response": "The only way the self can add more and more knowledge and experience is to endlessly ask itself the meaningless question \"How? How am I to live?\" ... You are merely asking for the same kind of knowledge.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:kybalion",
+    "ro:grimoires-decoded",
+    "ro:hermes-proof-system"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

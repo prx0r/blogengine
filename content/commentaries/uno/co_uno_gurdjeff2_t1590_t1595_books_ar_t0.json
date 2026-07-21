@@ -1,0 +1,60 @@
+{
+  "co_id": "co:uno_gurdjeff2_t1590_t1595_books_ar_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gurdjeff2_t1590_t1595_books_are_safe",
+  "turn_index": 0,
+  "lineage": "Gurdjieffian",
+  "student_state": "testing_value_of_external_knowledge",
+  "behavior_tags": [
+    "asks_for_conclusion",
+    "seeks_quantification"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_03",
+    "function_name": "RM_03",
+    "mechanism_shape": "COMPARISON_CONTRAST",
+    "teaching_actions": [
+      "qualifies_utility",
+      "uses_analogy",
+      "asserts_safety_of_secrets",
+      "defines_understanding_relationally"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.5,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "go_along_compliantly",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The qualification/definition works: books = safe (secrets protected), understanding = relational (being = necessary condition), uses: analogy, defines: understanding relationally (knowledge ≠ understanding without being). The student asks for conclusion (testing value of external knowledge), which shows they understand: books = limited value (conclusion). They'll likely accept the qualification/definition. Single-turn episode: conclusion question → qualification/definition → complete. Hypothesis: book value qualifications lead to compliance in single-turn episodes—testable by tracking whether book value qualifications end episodes.",
+  "accumulated_insight": "T1: Student asks for conclusion ('Then one cannot get much from books?')—testing value of external knowledge via asks for conclusion and seeks quantification. They understand: books = limited value (conclusion). The comparison_contrast mechanism qualifies: books = safe (secrets protected), understanding = relational (being = necessary condition), uses: analogy, defines: understanding relationally (knowledge ≠ understanding without being). Pattern: conclusion question → qualification/definition → [complete]. Low confidence because conclusion questions can lead to compliance or deeper questions.",
+  "abstract_pattern": "",
+  "visible_response": "One can get some ideas, but a person will get one thing and miss ten other things.\nYou must realize that truth is in pieces. As a matter of fact, there are books in which very deep secrets are written, but people\ncan read them and never get these secrets.\nIt is quite safe. Again, this is connected\nwith the fundamental idea that understanding depends not only on knowledge but also\non being.\n\nThat is why one needs a school.\nIn school you cannot deceive yourself, and\nin school it can be explained to you why you cannot understand.\nIt means there is\nsomething in you that you have to conquer in order to understand more.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:sufi-comparative-analysis",
+    "ro:steiner-tantraloka-parallels"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

@@ -1,0 +1,54 @@
+{
+  "co_id": "co:uno_therapy2_t1611_t1620_retractio_t4",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy2_t1611_t1620_retraction_anger",
+  "turn_index": 4,
+  "lineage": "Therapeutic",
+  "student_state": "total_denial",
+  "behavior_tags": [
+    "negation"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_04",
+    "function_name": "UM_04",
+    "mechanism_shape": "SYSTEM_DYNAMICS",
+    "teaching_actions": [
+      "summarizes_process",
+      "labels_erasure"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.35,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_02",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "Final turn: 'Maybe I didn’t feel angry at all.'. Reached total_denial after 5 turns. Episode demonstrates system_dynamics effectiveness in UNMAKING work. Teaching complete for this sequence.",
+  "accumulated_insight": "T5 (Final): Student: 'Maybe I didn’t feel angry at all.'. Final state: total_denial. Episode complete with 5 turns. Arc shows progression through UNMAKING phase using system_dynamics interventions. Teaching sequence addressed negation pattern.",
+  "abstract_pattern": "",
+  "visible_response": "Now you try to erase your anger.\nFirst you say you were angry, then you try to take it back, and then you try to erase it.\nDo you see how you avoid your anger?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

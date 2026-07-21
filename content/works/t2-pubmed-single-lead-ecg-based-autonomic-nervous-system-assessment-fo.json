@@ -1,0 +1,49 @@
+{
+  "work_id": "work:t2-pubmed-single-lead-ecg-based-autonomic-nervous-system-assessment-fo",
+  "schema_version": 2,
+  "title": "Single-lead ECG based autonomic nervous system assessment for meditation monitoring.",
+  "authors": [
+    {
+      "name": "Park C"
+    },
+    {
+      "name": "Youn I"
+    },
+    {
+      "name": "Han S"
+    }
+  ],
+  "publication": {
+    "year": 2022,
+    "journal": "Sci Rep",
+    "source": "PubMed/MEDLINE",
+    "language": "en"
+  },
+  "identifiers": {
+    "pmid": "36581715",
+    "doi": "10.1038/s41598-022-27121-x"
+  },
+  "topics": [
+    "phase-2-breath-soul",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "assets": {
+    "pdf_path": "t2-9800362-single-lead-ecg-based-autonomic-nervous-system-assessment-fo.pdf",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/36581715/",
+    "abstract": "We propose a single-lead ECG-based heart rate variability (HRV) analysis algorithm to quantify autonomic nervous system activity during meditation. Respiratory sinus arrhythmia (RSA) induced by breathing is a dominant component of HRV, but its frequency depends on an individual's breathing speed. To address this RSA issue, we designed a novel HRV tachogram decomposition algorithm and new HRV indices. The proposed method was validated by using a simulation, and applied to our experimental (mindfu"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_alt17_acquisition",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 2,
+    "phase_name": "Breath/Soul",
+    "bridge_rationale": "Bridge paper score=19.0: links Breath/Soul concept to mechanistic neuroscience"
+  },
+  "evaluation": "Score 19: Excellent bridge signal",
+  "tier": 2
+}

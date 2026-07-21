@@ -1,0 +1,57 @@
+{
+  "co_id": "co:uno_therapy2_t1624_t1629_ruminatio_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy2_t1624_t1629_rumination_neurotransmitters",
+  "turn_index": 0,
+  "lineage": "Therapeutic",
+  "student_state": "detached_reporting",
+  "behavior_tags": [
+    "externalization",
+    "intellectualization"
+  ],
+  "pedagogy": {
+    "phase": "SELF-MAKING",
+    "function_id": "SM_04",
+    "function_name": "SM_04",
+    "mechanism_shape": "SUBJECT_OBJECT_INVERSION",
+    "teaching_actions": [
+      "redirects_to_self",
+      "demands_ownership"
+    ],
+    "traps_avoided": [
+      "looking_outward"
+    ],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.15,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_01",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "no_clear_effect",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "'Other therapists have said that I have a tendency to be passiveag'—student presents as detached reporting. Teacher's move uses subject_object_inversion: 'And you? Is it your opinion that you are passive-aggressive?'. Strategy: redirects to self, demands ownership. Hypothesis: subject_object_inversion mechanism will create no_clear_effect. Watching how student responds to this intervention.",
+  "accumulated_insight": "T1: Student says 'Other therapists have said that I have a tendency to be passiveag' showing detached_reporting via externalization, intellectualization. Teacher responds 'And you? Is it your opinion that you are passive-aggressive?' using subject_object_inversion to redirects to self, demands ownership. Opening SELF-MAKING move addresses detached_reporting. Predicting no_clear_effect because subject_object_inversion interventions typically produce this response pattern.",
+  "abstract_pattern": "",
+  "visible_response": "And you?\nIs it your opinion that you are passive-aggressive?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

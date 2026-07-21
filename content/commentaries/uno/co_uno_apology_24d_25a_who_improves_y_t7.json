@@ -1,0 +1,57 @@
+{
+  "co_id": "co:uno_apology_24d_25a_who_improves_y_t7",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "apology_24d_25a_who_improves_youth",
+  "turn_index": 7,
+  "lineage": "Socratic",
+  "student_state": "cooperative_engagement",
+  "behavior_tags": [
+    "short_affirmation"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_01",
+    "function_name": "UM_01",
+    "mechanism_shape": "CONSTRAINT_COLLAPSE",
+    "teaching_actions": [
+      "highlights_absurdity"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.35,
+      "attunement": 0.8,
+      "style": 0.5,
+      "depth": 0.62,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_03",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_03",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "go_along_compliantly",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "apology_24d_25a_who_improves_youth T8: Using constraint_collapse/UM_01 with intensity=PR_03, intimacy=IN_02, attunement=AT_03 on 'I do say this, most vehemently'. Response shows agreeing without elaboration; expecting go_along_compliantly next. If not, lower PR and re-anchor the hinge.",
+  "accumulated_insight": "T8: Student says 'I do say this, most vehemently.'?agreeing without elaboration (cooperative_engagement) via short_affirmation. Focus: I do say this, most vehemently. The constraint_collapse/UM_01 move applies shift their frame: standard function application. Pattern: go_along_compliantly ? go_along_compliantly ? go_along_compliantly ? go_along_compliantly. Confidence high.",
+  "abstract_pattern": "",
+  "visible_response": "Then all the Athenians, as it appears, make them noble and good except me, and I alone corrupt them. Is this what you are saying?",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:proclus-elements",
+    "ro:platonism-decoded",
+    "ro:chaldean-oracles"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

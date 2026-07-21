@@ -1,0 +1,52 @@
+{
+  "work_id": "work:t2-pubmed-toward-enhanced-teleoperation-through-embodiment",
+  "schema_version": 2,
+  "title": "Toward Enhanced Teleoperation Through Embodiment.",
+  "authors": [
+    {
+      "name": "Toet A"
+    },
+    {
+      "name": "Kuling IA"
+    },
+    {
+      "name": "Krom BN"
+    },
+    {
+      "name": "van Erp JBF"
+    }
+  ],
+  "publication": {
+    "year": 2020,
+    "journal": "Front Robot AI",
+    "source": "PubMed/MEDLINE",
+    "language": "en"
+  },
+  "identifiers": {
+    "pmid": "33501183",
+    "doi": "10.3389/frobt.2020.00014"
+  },
+  "topics": [
+    "phase-1-birth-body",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "assets": {
+    "pdf_path": null,
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/33501183/",
+    "abstract": "Telerobotics aims to transfer human manipulation skills and dexterity over an arbitrary distance and at an arbitrary scale to a remote workplace. A telerobotic system that is transparent enables a natural and intuitive interaction. We postulate that embodiment (with three sub-components: sense of ownership, agency, and self-location) of the robotic system leads to optimal perceptual transparency and increases task performance. However, this has not yet been investigated directly. We reason along"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_alt17_acquisition",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 1,
+    "phase_name": "Birth/Body",
+    "bridge_rationale": "Bridge paper score=5.5: links Birth/Body concept to mechanistic neuroscience"
+  },
+  "evaluation": "Score 5: Marginal bridge signal",
+  "tier": 2
+}

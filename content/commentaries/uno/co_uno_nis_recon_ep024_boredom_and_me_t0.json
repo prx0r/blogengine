@@ -1,0 +1,63 @@
+{
+  "co_id": "co:uno_nis_recon_ep024_boredom_and_me_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "nis_recon_ep024_boredom_and_meaninglessness",
+  "turn_index": 0,
+  "lineage": "Advaita",
+  "student_state": "existential_nihilism",
+  "behavior_tags": [
+    "meaning_crisis",
+    "existential_despair"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_05",
+    "function_name": "RM_05",
+    "mechanism_shape": "STRUCTURAL_ANALOGY",
+    "teaching_actions": [
+      "validates_state",
+      "uses_analogy",
+      "provides_functional_reframe"
+    ],
+    "traps_avoided": [
+      "meaning_crisis"
+    ],
+    "register": {
+      "intensity": 0.15,
+      "intimacy": 0.62,
+      "attunement": 0.8,
+      "style": 0.5,
+      "depth": 0.85,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_01",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_03",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_04",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The response mentions 'Good. begin child.'. But I'm noticing the student asked about meaning_crisis, existential_despair and I'm using structural_analogy. There's a gap between their question and my mechanism—is that gap intentional or am I missing something?",
+  "accumulated_insight": "Initial observation: Student in existential_nihilism showing meaning_crisis, existential_despair. Beginning pattern tracking.",
+  "abstract_pattern": "",
+  "visible_response": "Good.\nWhen your toys bore you, you begin to look at the child.\nWhen all meanings feel empty, you are close to what does not need meaning.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:upanishads",
+    "ro:yoga-vasistha",
+    "ro:bhagavad-gita",
+    "ro:yoga-sutras"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

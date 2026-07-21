@@ -1,0 +1,154 @@
+{
+  "ro_id": "ro:ro-path-abramelin",
+  "schema_version": 1,
+  "title": "The Abramelin Path",
+  "subtitle": "Six-month purification retreat culminating in HGA apparition",
+  "family": "tradition",
+  "status": "draft",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "Six-month purification retreat culminating in HGA apparition",
+    "scope": "",
+    "traditions": [
+      "occult",
+      "daimon"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "abramelin-mathers",
+      "tier": 1,
+      "label": "abramelin-mathers",
+      "status": "active",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [],
+      "sections_affected": [],
+      "passages_used": 0
+    },
+    {
+      "source_id": "abramelin-dehn",
+      "tier": 1,
+      "label": "abramelin-dehn",
+      "status": "active",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [],
+      "sections_affected": [],
+      "passages_used": 0
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "preparation",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [
+        "abramelin-mathers"
+      ],
+      "topics": [],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "first_two_moons",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [
+        "abramelin-mathers"
+      ],
+      "topics": [],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "middle_two_moons",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [
+        "abramelin-mathers"
+      ],
+      "topics": [],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "last_two_moons",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [
+        "abramelin-mathers"
+      ],
+      "topics": [],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "three_day_contact",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [
+        "abramelin-mathers"
+      ],
+      "topics": [],
+      "status": "placeholder"
+    }
+  ],
+  "total_duration": "~6 months",
+  "difficulty": "Extreme",
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-13",
+      "type": "initial",
+      "summary": "Initial draft. 5 sections outlined.",
+      "sources_added": [
+        "abramelin-mathers",
+        "abramelin-dehn"
+      ],
+      "passage_count": 5,
+      "status": "draft"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-07-13",
+      "event": "RO created",
+      "sources_total": 2,
+      "passages_total": 5
+    }
+  ],
+  "coverage": {
+    "first_two_moons": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    },
+    "middle_two_moons": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    },
+    "three_day_contact": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    },
+    "preparation": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    },
+    "last_two_moons": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    }
+  }
+}

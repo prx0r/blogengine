@@ -1,0 +1,63 @@
+{
+  "co_id": "co:uno_gurdjeff3_t2019_t2025_drugs_an_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gurdjeff3_t2019_t2025_drugs_and_dreams",
+  "turn_index": 0,
+  "lineage": "Gurdjieffian",
+  "student_state": "seeking_instant_access",
+  "behavior_tags": [
+    "asks_for_shortcut",
+    "proposes_chemical_means"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_02",
+    "function_name": "UM_02",
+    "mechanism_shape": "CAUSAL_CHAIN",
+    "teaching_actions": [
+      "validates_mechanism",
+      "states_objection",
+      "defines_functional_failure",
+      "links_result_to_consciousness"
+    ],
+    "traps_avoided": [
+      "answer_hunting",
+      "none"
+    ],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.65,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_04",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The validation/objection works: mechanism (drugs = contact with higher centres), states: objection (no consciousness = no memory/result), defines: functional failure (no consciousness → no result), links: result to consciousness. The student asks shortcut question (seeking instant access), which shows they understand: drugs = shortcut to higher centres (instant access). They'll likely accept the validation/objection. Single-turn episode: shortcut question → validation/objection → complete. Hypothesis: shortcut objections lead to compliance in single-turn episodes—testable by tracking whether shortcut objections end episodes.",
+  "accumulated_insight": "T1: Student asks shortcut question ('Cannot drugs put us in touch with higher centres?')—seeking instant access via asks for shortcut and proposes chemical means. They understand: drugs = shortcut to higher centres (instant access). The causal_chain mechanism validates: mechanism (drugs = contact with higher centres), states: objection (no consciousness = no memory/result), defines: functional failure (no consciousness → no result), links: result to consciousness. Pattern: shortcut question → validation/objection → [complete]. Low confidence because validations can lead to deeper questions or compliance.",
+  "abstract_pattern": "",
+  "visible_response": "The idea of drugs is not new... It was found that interesting states result from a\nclever use of drugs.\nBut the system objects to drugs. The use of drugs does not give\ngood results because drugs cannot affect consciousness, they cannot add\nconsciousness.\nBy stupefying lower centres they can put us into contact with higher\ncentres;\nbut it would be of no use to us, because we can remember only as much as we\nhave consciousness.\nSince we have no consciousness, connection with higher centres\nwill only result in dreams or in unconsciousness.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:sufi-comparative-analysis",
+    "ro:steiner-tantraloka-parallels"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

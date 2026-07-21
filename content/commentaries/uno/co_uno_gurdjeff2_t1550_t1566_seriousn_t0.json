@@ -1,0 +1,59 @@
+{
+  "co_id": "co:uno_gurdjeff2_t1550_t1566_seriousn_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gurdjeff2_t1550_t1566_seriousness_paradox",
+  "turn_index": 0,
+  "lineage": "Gurdjieffian",
+  "student_state": "seeking_behavioral_guidance",
+  "behavior_tags": [
+    "conceptual_inquiry",
+    "definitional_seeking"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_03",
+    "function_name": "RM_03",
+    "mechanism_shape": "COMPARISON_CONTRAST",
+    "teaching_actions": [
+      "distinguishes_state_from_attitude",
+      "uses_paradox",
+      "defines_seriousness_negatively"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.65,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_04",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "request_clarification",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The paradoxical definition works: seriousness = paradoxically (taking nothing seriously except the aim), distinguishes: state vs. attitude, defines negatively (not taking things seriously). The student asks for definition (seeking behavioral guidance), which shows they're seeking definition (seriousness). They'll likely ask about precondition next. Hypothesis: paradoxical definitions trigger precondition questions—testable by tracking whether paradoxical definitions lead to precondition inquiries.",
+  "accumulated_insight": "T1: Student asks for definition ('You said once that it is necessary to be serious in relation to the work. What does being serious mean?')—seeking behavioral guidance via conceptual inquiry and definitional seeking. They're seeking definition (seriousness). The comparison_contrast mechanism defines: seriousness = paradoxically (taking nothing seriously except the aim), distinguishes: state vs. attitude, defines negatively (not taking things seriously). Pattern: definition question → paradoxical definition → [next: precondition question]. Low confidence because paradoxical definitions can lead to clarification requests or compliance.",
+  "abstract_pattern": "",
+  "visible_response": "First it is necessary to divide two things: being serious and taking things seriously.\nIn thinking about this, people usually think about how to take things seriously, and\nwhich things, but never about what it means to be serious.\nI will tell you what it\nmeans. To be serious means to take nothing seriously—with the exception of things\nabout which you know for certain that they are important in relation to what you want.\nThis looks too small, but when you apply it in practice you will see that it is the only\nsolution and the most necessary thing.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:sufi-comparative-analysis",
+    "ro:steiner-tantraloka-parallels"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

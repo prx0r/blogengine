@@ -1,0 +1,57 @@
+{
+  "co_id": "co:uno_therapy3_t658_t669_projection__t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3_t658_t669_projection_virtue_trap",
+  "turn_index": 0,
+  "lineage": "Therapeutic",
+  "student_state": "righteous_defense",
+  "behavior_tags": [
+    "moralizing_defense",
+    "projection"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_05",
+    "function_name": "UM_05",
+    "mechanism_shape": "SUBJECT_OBJECT_INVERSION",
+    "teaching_actions": [
+      "uses_irony",
+      "agrees_with_defense"
+    ],
+    "traps_avoided": [
+      "moral_blackmail"
+    ],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.92,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_06",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "no_clear_effect",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "'I know you think...'—projection. They're arguing with position I haven't taken. 'But I think you're wrong'—defensive. The 'waiting' is presented as virtue (patience) not symptom (avoidance). Teacher's move: paradoxical agreement. 'How wonderful you found a solution' treats waiting-as-solution seriously. If it's a solution, problem solved. But they're IN THERAPY, so obviously not solved. The paradox exposes: if waiting worked, why are you here? Hypothesis: this will create anxiety (defense exposed) or they'll double down. Watching.",
+  "accumulated_insight": "T1: Student projects: 'I know you think this is self-neglect, but I think you're wrong'—defends waiting/inaction as virtue while projecting judgment onto teacher. Teacher uses paradox: 'How wonderful you found a solution.' Agrees with their claim ironically, exposing it as non-solution. If waiting solved it, why still struggling? Predicting surface_emotion because paradoxical agreement often produces anxiety (defense exposed).",
+  "abstract_pattern": "",
+  "visible_response": "How wonderful that you have found a solution to your difficulties.\nHow long would you like to wait?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

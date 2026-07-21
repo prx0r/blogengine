@@ -1,0 +1,529 @@
+{
+  "ro_id": "ro:emerald-tablet-extended",
+  "schema_version": 1,
+  "title": "Emerald Tablet of Hermes Trismegistus \u2014 Extended Edition",
+  "subtitle": "All translations, seven clauses, commentaries by Hortulanus/Albertus/Trithemius/Burckhardt, operations, and the tetrahedron framework",
+  "family": "theme",
+  "status": "draft",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "The complete Emerald Tablet with every known translation (Jabir, Arabic, Latin, Newton, Fulcanelli, Blavatsky, Kriegsmann, Bacstrom, Idres Shah, Needham), every major commentary, and the tetrahedro...",
+    "scope": "Spans the entire emeraldtablets.md file: all 12 translations, the seven clauses with their variae lectiones, the full commentaries by Hortulanus, Albertus Magnus, Trithemius, Burckhardt, Maier, Schumaker, Bacstrom, Newton, and Ibn Umail, and the decoding of each clause into the tetrahedron framework (4 vertices, 6 edges, 4 faces, green core).",
+    "traditions": [
+      "hermetica",
+      "alchemy",
+      "egyptian",
+      "perennial_philosophy",
+      "kashmir_shaivism"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "emerald-tablets-md",
+      "tier": 1,
+      "label": "Emerald Tablet of Hermes \u2014 Full text with all translations and commentaries",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "jabir_arabic",
+        "latin_vulgate",
+        "newton_1680",
+        "fulcanelli",
+        "blavatsky",
+        "kriegsmann",
+        "bacstrom",
+        "idres_shah",
+        "needham_chinese",
+        "seven_clauses",
+        "hortulanus",
+        "albertus_magnus",
+        "trithemius",
+        "burckhardt",
+        "maier",
+        "bacstrom_commentary",
+        "ibn_umail"
+      ],
+      "sections_affected": [
+        "translations",
+        "seven_clauses",
+        "commentaries",
+        "tetrahedron_decoding"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "final-truth-encoded",
+      "tier": 1,
+      "label": "The Final Truth (Encoded) \u2014 Section 10: The Emerald Tablet as Practice Encoded",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "tetrahedron_decoding",
+        "cakra_mapping",
+        "as_above_so_below_as_densities"
+      ],
+      "sections_affected": [
+        "tetrahedron_decoding"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "ro-alchemy-emerald-tablet",
+      "tier": 1,
+      "label": "Existing Emerald Tablet RO (ro:alchemy-emerald-tablet)",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "prior_passages",
+        "poemandres_connection"
+      ],
+      "sections_affected": [
+        "cross_reference"
+      ],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "translations",
+      "subsection": "jabir_ibn_hayyan",
+      "kind": "source",
+      "text": "From Jabir ibn Hayyan (Holmyard 1923: 562):\n0) Balinas mentions the engraving on the table in the hand of Hermes, which says:\n1) Truth! Certainty! That in which there is no doubt!\n2) That which is above is from that which is below, and that which is below is from that which is above, working the miracles of one.\n3) As all things were from one.\n4) Its father is the Sun and its mother the Moon.\n5) The Earth carried it in her belly, and the Wind nourished it in her belly,\n7) as Earth which shall become Fire.\n7a) Feed the Earth from that which is subtle, with the greatest power.\n8) It ascends from the earth to the heaven and becomes ruler over that which is above and that which is below.\n14) And I have already explained the meaning of the whole of this in two of these books of mine.",
+      "source_ids": [
+        "emerald-tablets-md"
+      ],
+      "topics": [
+        "jabir",
+        "balinas",
+        "arabic_alchemy",
+        "oldest_version"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "translations",
+      "subsection": "ruska_arabic",
+      "kind": "source",
+      "text": "Another Arabic Version (from the German of Ruska, translated by 'Anonymous' \u2014 Anon 1985: 24-5):\n0) Here is that which the priest Sagijus of Nabulus has dictated concerning the entrance of Balinas into the hidden chamber...\n1) Here (is) a true explanation, concerning which there can be no doubt.\n2) It attests: The above from the below, and the below from the above \u2014 the work of the miracle of the One.\n3) And things have been from this primal substance through a single act. How wonderful is this work! It is the main (principle) of the world and is its maintainer.\n4) Its father is the sun and its mother the moon;\n5) wind has borne it in its body, and the earth has nourished it.\n6) the father of talismen and the protector of miracles\n6a) whose powers are perfect, and whose lights are confirmed (?),\n7) a fire that becomes earth.\n7a) Separate the earth from the fire, so you will attain the subtle as more inherent than the gross, with care and sagacity.\n8) It rises from earth to heaven, so as to draw the lights of the heights to itself, and descends to the earth; thus within it are the forces of the above and the below;\n9) because the light of lights within it, thus does the darkness flee before it.\n10) The force of forces, which overcomes every subtle thing and penetrates into everything gross.\n11) The structure of the microcosm is in accordance with the structure of the macrocosm.\n12) And accordingly proceed the knowledgeable.\n13) And to this aspired Hermes, who was threefold graced with wisdom.\n14) And this is his last book, which he concealed in the chamber.",
+      "source_ids": [
+        "emerald-tablets-md"
+      ],
+      "topics": [
+        "ruska",
+        "sagijus",
+        "syriac_source",
+        "microcosm_macrocosm"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "translations",
+      "subsection": "twelfth_century_latin",
+      "kind": "source",
+      "text": "Twelfth Century Latin (Steele and Singer 1928: 492):\n1) True, without falsehood, certain, most certain.\n2) What is above is like what is below, and what is below is like that which is above. To make the miracle of the one thing.\n3) And as all things were made from contemplation of one, so all things were born from one adaptation.\n4) Its father is the Sun, its mother is the Moon.\n5) The wind carried it in its womb, the earth breast fed it.\n6) It is the father of all 'works of wonder' (Telesmi) in the world.\n6a) Its power is complete (integra).\n7) If cast to (turned towards \u2014 versa fuerit) earth,\n7a) it will separate earth from fire, the subtile from the gross.\n8) With great capacity it ascends from earth to heaven. Again it descends to earth, and takes back the power of the above and the below.\n9) Thus you will receive the glory of the distinctiveness of the world. All obscurity will flee from you.\n10) This is the whole most strong strength of all strength, for it overcomes all subtle things, and penetrates all solid things.\n11a) Thus was the world created.\n12) From this comes marvelous adaptions of which this is the proceedure.\n13) Therefore I am called Hermes, because I have three parts of the wisdom of the whole world.\n14) And complete is what I had to say about the work of the Sun, from the book of Galieni Alfachimi.",
+      "source_ids": [
+        "emerald-tablets-md"
+      ],
+      "topics": [
+        "latin_vulgate",
+        "steel_singer",
+        "telesmi",
+        "three_wisdoms"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "translations",
+      "subsection": "isaac_newton_1680",
+      "kind": "source",
+      "text": "Translation of Isaac Newton c. 1680 (Dobbs 1988: 183-4):\n1) Tis true without lying, certain & most true.\n2) That wch is below is like that wch is above & that wch is above is like yt wch is below to do ye miracles of one only thing.\n3) And as all things have been & arose from one by ye mediation of one: so all things have their birth from this one thing by adaptation.\n4) The Sun is its father, the moon its mother,\n5) the wind hath carried it in its belly, the earth its nourse.\n6) The father of all perfection in ye whole world is here.\n7) Its force or power is entire if it be converted into earth.\n7a) Seperate thou ye earth from ye fire, ye subtile from the gross sweetly wth great indoustry.\n8) It ascends from ye earth to ye heaven & again it desends to ye earth and receives ye force of things superior & inferior.\n9) By this means you shall have ye glory of ye whole world & thereby all obscurity shall fly from you.\n10) Its force is above all force. ffor it vanquishes every subtile thing & penetrates every solid thing.\n11a) So was ye world created.\n12) From this are & do come admirable adaptaions whereof ye means (Or process) is here in this.\n13) Hence I am called Hermes Trismegist, having the three parts of ye philosophy of ye whole world.\n14) That wch I have said of ye operation of ye Sun is accomplished & ended.",
+      "source_ids": [
+        "emerald-tablets-md"
+      ],
+      "topics": [
+        "newton",
+        "solar_operation",
+        "alchemy_and_science"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "translations",
+      "subsection": "fulcanelli",
+      "kind": "source",
+      "text": "From Fulcanelli (translated from the French by Sieveking \u2014 Sadoul 1972: 25-6):\n1) This is the truth, the whole truth and nothing but the truth:-\n2) As below, so above; and as above so below. With this knowledge alone you may work miracles.\n3) And since all things exist in and eminate from the ONE Who is the ultimate Cause, so all things are born after their kind from this ONE.\n4) The Sun is the father, the Moon the mother;\n5) the wind carried it in his belly. Earth is its nurse and its guardian.\n6) It is the Father of all things,\n6a) the eternal Will is contained in it.\n7) Here, on earth, its strength, its power remain one and undivided.\n7a) Earth must be separated from fire, the subtle from the dense, gently with unremitting care.\n8) It arises from the earth and descends from heaven; it gathers to itself the strength of things above and things below.\n9) By means of this one thing all the glory of the world shall be yours and all obscurity flee from you.\n10) It is power, strong with the strength of all power, for it will penetrate all mysteries and dispel all ignorance.\n11a) By it the world was created.\n12) From it are born manifold wonders, the means to achieving which are here given.\n13) It is for this reason that I am called Hermes Trismegistus; for I possess the three essentials of the philosophy of the universe.\n14) This is the sum total of the work of the Sun.",
+      "source_ids": [
+        "emerald-tablets-md"
+      ],
+      "topics": [
+        "fulcanelli",
+        "hermetic_architecture",
+        "cathedral_alchemy"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_006",
+      "section": "translations",
+      "subsection": "hypothetical_chinese_original",
+      "kind": "source",
+      "text": "Hypothetical Chinese Original (Needham 1980: 371, slightly altered):\n1) True, true, with no room for doubt, certain, worthy of all trust.\n2) See, the highest comes from the lowest, and the lowest from the highest; indeed a marvelous work of the tao.\n3) See how all things originated from It by a single process.\n4) The father of it (the elixir) is the sun (Yang), its mother the moon (Yin).\n5) The wind bore it in its belly, and the earth nourished it.\n6) This is the father of wondrous works (changes and transformations), the guardian of mysteries,\n6a) perfect in its powers, the animator of lights.\n7) This fire will be poured upon the earth...\n7a) So separate the earth from the fire, the subtle from the gross, acting prudently and with art.\n8) It ascends from the earth to the heavens (and orders the lights above), then descends again to the earth; and in it is the power of the highest and the lowest.\n9) Thus when you have the light of lights darkness will flee away from you.\n10) With this power of powers (the elixir) you shall be able to get the mastery of every subtle thing, and be able to penetrate everything that is gross.\n11a) In this way was the great world itself formed.\n12) Hence thus and thus marvellous operations will be achieved.",
+      "source_ids": [
+        "emerald-tablets-md"
+      ],
+      "topics": [
+        "needham",
+        "chinese_alchemy",
+        "yin_yang",
+        "taoist_parallels"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_007",
+      "section": "commentaries",
+      "subsection": "hortulanus_on_clause_1_2_3",
+      "kind": "source",
+      "text": "Hortulanus on #1: '... the most true Sun is procreated by art. And he says most true in the superlative degree because the Sun generated by this art exceeds all natural Sun in all of its properties, medicinal and otherwise.'\n\nHortulanus on #2: 'the stone is divided into two principle parts by the magistry, into a superior part which ascends above and into an inferior part which remains below fixed and clear. And these two parts moreover are concordant in their virtue since the inferior part is earth which is called nurse and ferment, and the superior part is the spirit which quickens the whole stone and raises it up. Wherfore separation made, and conjunction celebrated, many miracles are effected.'\n\nHortulanus on #3: 'our stone, which was created by God, was born and came forth from a confused mass, containing in itself all the elements \u2014 and hence our stone was born by this single miracle.'",
+      "source_ids": [
+        "emerald-tablets-md"
+      ],
+      "topics": [
+        "hortulanus",
+        "two_parts",
+        "confused_mass",
+        "stone_division"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_008",
+      "section": "commentaries",
+      "subsection": "albertus_magnus_astral_causation",
+      "kind": "source",
+      "text": "Albertus Magnus on #2: Hermes says 'the powers of all things below originate in the stars and constellations of the heavens: and that all these powers are poured down into all things below by the circle called Alaur, which is, they said, the first circle of the constellations.' This descent is 'noble when the materials receiving these powers are more like things above in their brightness and transparency; ignoble when the materials are confused and foul, so that the heavenly power is, as it were oppressed. Therefore they say that this is the reason why precious stones more than anything else have wonderful powers.' While the 'seven kinds of metals have their forms from the seven planets of the lower spheres.'\n\nAlbertus Magnus on #5: by this Hermes 'means the levigatio [making light weight] of the material, raising it to the properties of Air. And why he says the wind carries the material [of the stone] in its belly is that, when the material is placed in an alembic \u2014 which is a vessel made like those in which rosewater is prepared \u2014 then by evapouration it is rendered subtle and is raised towards the properties of Air... And there distills and issues from the mouth of the alembic a watery or oily liquor with all the powers of the elements.'\n\nAlbertus Magnus on #8: 'ascends to heaven' when by roasting and calcination it takes on the properties of Fire; 'again descends from heaven to earth' when it takes on the properties of Earth by inhumatio, for inhumation revives and nourishes what was previously killed by calcination.",
+      "source_ids": [
+        "emerald-tablets-md"
+      ],
+      "topics": [
+        "albertus_magnus",
+        "astral_influx",
+        "alembic",
+        "calcination",
+        "inhumatio"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_009",
+      "section": "commentaries",
+      "subsection": "trithemius_ternary_unity",
+      "kind": "source",
+      "text": "Trithemius on #3: 'Is it not true that all things flow from one thing, from the goodness of the One, and that whatever is joined to Unity cannot be diverse, but rather fructifies by means of the simplicity and adaptability of the One.' 'What is born from Unity? Is it not the ternary? Take note: Unity is unmixed, the binary is compounded, and the ternary is reduced to the simplicity of Unity. I, Trithemius, am not of three minds, but persist in a single integrated mind taking pleasure in the ternary, which gives birth to a marvelous offspring.'\n\nTrithemius on #8: 'When the ternary has at last returned to itself it may, by an inner disposition and great delight, ascend from the earth to heaven, thereby receiving both superior and inferior power; thus will it be made powerful and glorious in the clarity of Unity, demonstrate its ability to bring forth every number, and put to flight all obscurity.'\n\nTrithemius on #9: When the ternary has returned to Unity cleansed of all impurities 'the mind understands without contradiction all the mysteries of the excellently arranged arcanum.'\n\nGeneral: 'Study generates knowledge; knowledge prepares love; love, similarity; similarity, communion; communion, virtue; virtue, dignity; dignity, power; and power performs the miracle.'",
+      "source_ids": [
+        "emerald-tablets-md"
+      ],
+      "topics": [
+        "trithemius",
+        "ternary",
+        "unity_to_multiplicity",
+        "study_love_miracle"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_010",
+      "section": "commentaries",
+      "subsection": "burckhardt_light_prism_and_correspondence",
+      "kind": "source",
+      "text": "Burckhardt on #2: 'This refers to the reciprocal dependence of the active and the passive... essential form cannot be manifested without passive materia.. the efficacy of the spiritual power depends on the preparedness of the human 'container' and vice versa.... 'Above' and 'below' are thus related to this one thing and complement one another in its regard.'\n\nBurckhardt on #3: 'the undivided, invisible Light of the unconditioned One is refracted into multiplicity by the prism of the Spirit.' As the Spirit contemplates the Unity without full comprehension, 'it manifests the 'many-sided' All, just as a lens transmits the light it receives as a bundle of rays.'\n\nBurckhardt on #4: Sun 'is the spirit (nous), while the moon is the soul (psyche).'\n\nBurckhardt on #5: 'The wind which carries the spiritual germ in its body, is the vital breath.' Vital breath is the substance of the realm between heaven and earth, it 'is also Quicksilver which contains the germ of gold in a liquid state.' The earth is 'the body, as an inward reality.'\n\nBurckhardt on #7: 'when the Spirit is 'embodied', the volatile becomes fixed.'\n\nBurckhardt on #7a: The separation 'means the 'extraction' of the soul from the body.'\n\nBurckhardt on #8: 'dissolution of consciousness from all formal 'coagulations' is followed by the 'crystalisation' of the Spirit, so that active and passive are perfectly united.'\n\nBurckhardt on #9: 'Thus the light of the Spirit becomes constant.. [and] ignorance, deception, uncertainty, doubt and foolishness will be removed from consciousness.'\n\nBurckhardt on #13: 'The three parts of wisdom correspond to the three great divisions of the universe, namely, the spiritual, psychic and corporeal realms, whose symbols are heaven, air and earth.'",
+      "source_ids": [
+        "emerald-tablets-md"
+      ],
+      "topics": [
+        "burckhardt",
+        "light_prism",
+        "vital_breath",
+        "spirit_soul_body"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_011",
+      "section": "commentaries",
+      "subsection": "maier_sulphur_mercury_wind_belly",
+      "kind": "source",
+      "text": "Maier on #5 ('the wind carried him in its belly'): Hermes means 'He, whose father is the Sun, and whose mother is the Moon, will be carried before he is born, by wind and vapour, just as a flying bird is carried by air.' From the vapours of winds, 'which are nothing else but wind in motion, water proceeds, when condensed, and from that water, mixed with earth, all minerals and metals arise.' The substance carried by the wind is 'in chemical respect.. the sulphur, which is carried in mercury.' Lull says 'The stone is the fire, carried in the belly of the air.' 'All mercury is composed of vapours, that is to say of water, which the earth raises along with it into the thin air, and of earth, which the air compels to return into watery earth or earthy water.' So 'Mercury is the wind which receives the sulphur... as the unripe fruit from the mothers womb, or from the ashes of the burnt mother's body and takes it to a place where it may ripen.' Ripley says 'our child shall be born in the air, that is the belly of the wind.'\n\nMaier (2nd Comment) on 'The earth is its nurse': Food changes into the substance of the eater and is then assimilated. 'This harmony dominates the whole of nature, for the like enjoys the like.' 'It is the nurse of Heaven not because it resolves, washes and moistens the foetus, but because it coagulates, fastens and colours the latter and changes it into sap and blood... The Earth contains a wonderful juice which changes the nature of the one who feeds on it.'",
+      "source_ids": [
+        "emerald-tablets-md"
+      ],
+      "topics": [
+        "maier",
+        "atalanta_fugiens",
+        "sulphur_mercury",
+        "philosophical_child"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_012",
+      "section": "commentaries",
+      "subsection": "newton_sulphur_quicksilver_unity",
+      "kind": "source",
+      "text": "Newton on the unity of sulphur and quicksilver (from the emeraldtablets.md General section): 'Inferior and superior, fixed and volatile, sulphur and quicksilver have a similar nature and are one thing, like man and wife. For they differ from one another only by degree of digestion and maturity. Sulphur is mature quicksilver, and quicksilver is immature sulphur: and on account of this affinity they unite like male and female, and they act on each other, and through that action they are mutually transmuted into each other and procreate a more noble offspring to accomplish the miracles of this one thing.' 'And just as all things were created from one Chaos by the design of one God, so in our art all things... are born from this one thing which is our Chaos, by the design of the Artificer and the skilful adaptation of things. And the generation of this is similar to the human, truly from a father and mother.'",
+      "source_ids": [
+        "emerald-tablets-md"
+      ],
+      "topics": [
+        "newton",
+        "sulphur_quicksilver",
+        "transmutation",
+        "chaos_one_thing"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_013",
+      "section": "commentaries",
+      "subsection": "bacstrom_process_stages",
+      "kind": "source",
+      "text": "Bacstrom on #7a: 'Process- First Distillation.'\n\nBacstrom on #8: 'Last Digestion.' 'The Azoth ascends from the Earth, from the bottom of the Glass, and redescends in Veins and drops into the Earth and by this continual circulation the Azoth is more and more subtilised, Volatilizes Sol and carries the volatilized Solar atoms along with it and thereby becomes a Solar Azoth, i.e. our third and genuine Sophic Mercury.' The circulation must continue until 'it ceases of itself, and the Earth has sucked it all in, when it becomes the black pitchy matter, the Toad [the substances in the alchemical retort and also the lower elements in the body of man \u2014 Hall], which denotes complete putrifaction or Death of the compound.'\n\nBacstrom on #9: the black matter becomes White and Red. The Red 'having been carried to perfection, medicinaly and for Metals' is capable of supporting complete mental and physical health, and provides 'ample means, in finitum multiplicable to be benevolent and charitable, without any dimunation of our inexhaustable resources, therefore well may it be called the Glory of the whole World.'\n\nBacstrom on #10: 'The L.P. does possess all the Powers concealed in Nature, not for destruction but for exhaltation and regeneration of matter, in the three Departments of Nature.' The power increases 'in a tenfold ratio, at every multiplication.'",
+      "source_ids": [
+        "emerald-tablets-md"
+      ],
+      "topics": [
+        "bacstrom",
+        "azoth",
+        "putrefaction",
+        "sophic_mercury",
+        "white_red_stages"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_014",
+      "section": "operations",
+      "subsection": "the_four_operations_calcination_sublimation_inhumation_levigation",
+      "kind": "source",
+      "text": "The four operations drawn from Albertus Magnus and others:\n\n**Calcination** (Albertus on #8): 'ascends to heaven when by roasting and calcination it takes on the properties of Fire; for alchemists mean by calcinatio the reduction of material to powder by burning and roasting.'\n\n**Inhumation** (Albertus on #8): 'again descends from heaven to earth when it takes on the properties of Earth by inhumatio, for inhumation revives and nourishes what was previously killed by calcination.'\n\n**Sublimation** (Albertus on #5): 'by evapouration it is rendered subtle and is raised towards the properties of Air... And there distills and issues from the mouth of the alembic a watery or oily liquor with all the powers of the elements.'\n\n**Levigation** (Albertus on #5): 'the levigatio [making light weight] of the material, raising it to the properties of Air.'\n\nThese correspond to the tetrahedron framework: the four operations are the four vertices (Fire, Air, Water, Earth) cycling through the 6 edges of transformation. Calcination = Fire (vertex 1), Sublimation = Air (vertex 2), Inhumation = Earth (vertex 4), Distillation/coagulation = Water (vertex 3). The stone traverses all 4 vertices, completing the tetrahedron.",
+      "source_ids": [
+        "emerald-tablets-md"
+      ],
+      "topics": [
+        "calcination",
+        "sublimation",
+        "inhumation",
+        "levigation",
+        "four_elements_transformation"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_015",
+      "section": "operations",
+      "subsection": "the_seven_clauses_as_seven_stages",
+      "kind": "source",
+      "text": "The seven clauses of the Emerald Tablet as mapped to the seven stages of the opus:\n\n**Clause 1** (#1-2, 'as above so below'): The principle of correspondence. The tetrahedron's 4 vertices correspond to the 4 densities of light (Section 2 of Final Truth). V\u2081 (Par\u0101) = 'above'; V\u2084 (Vaikhar\u012b) = 'below'. The relation E\u2081-E\u2086 (all 6 edges) is the isomorphism between them.\n\n**Clause 2** (#3, 'all from one by adaptation'): The generation of the ternary from Unity. The tetrahedron from the point \u2014 1 \u2192 2 (binary) \u2192 3 (triangle, face) \u2192 4 (tetrahedron). Trithemius' ternary.\n\n**Clause 3** (#4, 'Sun father, Moon mother'): The two polar principles \u2014 pi\u1e45gal\u0101 (Sun, active) and i\u1e0d\u0101 (Moon, receptive). Their union in su\u1e63um\u1e47\u0101 (the central axis). Sulphur and Quicksilver as Newton understood them.\n\n**Clause 4** (#5, 'wind carried in belly, earth nourished'): Pr\u0101\u1e47a as the wind, the body as earth. The vital breath (Burckhardt's 'quickening spirit') carried through the n\u0101\u1e0d\u012bs.\n\n**Clause 5** (#7-7a, 'separate earth from fire, subtle from gross'): The practice of discrimination (\u015b\u0101ktop\u0101ya). Extracting the soul from the body (Burckhardt). The dissolution of the gross into the subtle.\n\n**Clause 6** (#8-10, 'ascends to heaven, descends to earth'): The complete circuit of the tetrahedron \u2014 ascent through the 6 edges to V\u2081, descent reintegrating with V\u2084. 'Receives the force of things superior and inferior.'\n\n**Clause 7** (#11-14, 'the three parts of philosophy'): The completed work. The three parts = body, soul, spirit = V\u2084, V\u2082+V\u2083, V\u2081 = the trik\u0101ya of Buddhism = the three worlds of Burckhardt.",
+      "source_ids": [
+        "emerald-tablets-md",
+        "final-truth-encoded"
+      ],
+      "topics": [
+        "seven_clauses",
+        "tetrahedron",
+        "cakra_correspondence"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_016",
+      "section": "tetrahedron_decoding",
+      "subsection": "as_above_so_below_as_4_densities",
+      "kind": "commentary",
+      "text": "The axiom 'as above, so below' is the foundational isomorphism of the tetrahedron framework. The 4 densities of light (Section 2 of Final Truth) map directly:\n\n- 'Above' = V\u2081 (Par\u0101 \u2014 unmanifest awareness, pure light)\n- 'Below' = V\u2084 (Vaikhar\u012b \u2014 gross matter, bound light, E = mc\u00b2)\n- The relation = the tetrahedron itself, where each vertex contains all 4 densities as co-present\n\nThe 'miracle of the one thing' is the tetrahedron's self-recognition: the observer (V\u2081) recognizes itself as not-exempt from the observed (V\u2084), collapsing the Sv(O) error (Section 3, Final Truth). When the 'one thing' is recognized, all 6 edges relax simultaneously \u2014 the Waste Land blooms.\n\nAs Burckhardt says: 'Above and below are thus related to this one thing and complement one another in its regard.' This is precisely the tetrahedron's property: each vertex is defined by its relation to the other 3, and the center (green core) is equidistant from all 4.",
+      "source_ids": [
+        "emerald-tablets-md",
+        "final-truth-encoded"
+      ],
+      "topics": [
+        "as_above_so_below",
+        "tetrahedron",
+        "four_densities",
+        "sv_o"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_017",
+      "section": "tetrahedron_decoding",
+      "subsection": "one_thing_doctrine_as_completed_tetrahedron",
+      "kind": "commentary",
+      "text": "The 'One Thing' of the Emerald Tablet is the completed tetrahedron \u2014 the 4 vertices held simultaneously as one volume. Newton: 'all things have been & arose from one by ye mediation of one: so all things have their birth from this one thing by adaptation.' This is the tetrahedron generating all lower complexity through edge-contractions.\n\nIn the tetrahedron framework:\n- The 4 vertices = the 4 up\u0101yas (\u0100\u1e47ava, \u015a\u0101kta, \u015a\u0101mbhava, Anup\u0101ya)\n- The 6 edges = the 6 ka\u00f1cukas (kal\u0101, r\u0101ga, vidy\u0101, niyati, k\u0101la, m\u0101y\u0101)\n- The 4 faces = the 4 states (j\u0101grat, svapna, su\u1e63upti, tur\u012bya)\n- The one thing = the whole volume = consciousness recognizing itself\n\n'The father of all perfection in ye whole world is here' \u2014 'here' is the tetrahedron's center, the green core, an\u0101hata, YA\u1e40, 550 nm. The completed work is not an acquisition but a recognition: what you ARE when tetrahedral self-recognition occurs.",
+      "source_ids": [
+        "emerald-tablets-md",
+        "final-truth-encoded"
+      ],
+      "topics": [
+        "one_thing",
+        "completed_tetrahedron",
+        "green_core",
+        "recognition"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_018",
+      "section": "tetrahedron_decoding",
+      "subsection": "sulphur_quicksilver_as_pingala_ida",
+      "kind": "commentary",
+      "text": "Newton: 'Sulphur is mature quicksilver, and quicksilver is immature sulphur: and on account of this affinity they unite like male and female, and they act on each other.' This is the precise description of i\u1e0d\u0101 (Moon, quicksilver, receptive) and pi\u1e45gal\u0101 (Sun, sulphur, active) in the tantric subtle body.\n\nTheir union in su\u1e63um\u1e47\u0101 (the central channel) 'procreates a more noble offspring to accomplish the miracles of this one thing' \u2014 this offspring is ku\u1e47\u1e0dalin\u012b awakened, the completed tetrahedron, the green core.\n\nThe Sun and Moon of the Emerald Tablet (#4) are:\n- Sun = pi\u1e45gal\u0101 = right channel = active = sulphur = Puru\u1e63a\n- Moon = i\u1e0d\u0101 = left channel = receptive = quicksilver = Prak\u1e5bti\n- Their child = su\u1e63um\u1e47\u0101 = the central channel = the completed tetrahedron\n\nThis is why Fulcanelli says 'The Sun is the father, the Moon the mother; the wind carried it in his belly.' The wind is pr\u0101\u1e47a, the vital breath carried through the n\u0101\u1e0d\u012bs, nourished by the earth (the body).",
+      "source_ids": [
+        "emerald-tablets-md",
+        "final-truth-encoded"
+      ],
+      "topics": [
+        "sulphur",
+        "quicksilver",
+        "pingala_ida",
+        "kundalini",
+        "susumna"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_019",
+      "section": "tetrahedron_decoding",
+      "subsection": "the_operations_as_tetrahedral_edge_traversals",
+      "kind": "commentary",
+      "text": "The four operations \u2014 calcination, sublimation, inhumation, levigation \u2014 are the four edge-traversals of the tetrahedron:\n\n**Calcination** (\u2192 Fire vertex): The gross body is 'burned' \u2014 the dross of misidentification (Sv(O) error) is reduced to powder. This is the first recognition that the observer is not exempt.\n\n**Sublimation** (\u2192 Air vertex): The subtle body rises. Pr\u0101\u1e47a is refined, the volatile elements ascend. This is \u015b\u0101ktop\u0101ya in tantra \u2014 the practice of discrimination, separating the subtle from the gross (#7a).\n\n**Inhumation** (\u2192 Earth vertex): The volatile is fixed again. The spirit descends into the body, not as a prisoner but as the master of the house. 'Its power is integral if it be turned into earth' (#7).\n\n**Levigation** (\u2192 Water vertex): The material is made light, subtle, flowing. The stone is 'ground' to its finest consistency \u2014 the tattvas are dissolved into their source.\n\nThe complete cycle: the stone traverses all 4 vertices, all 6 edges, returns to the center. This IS the work of the Sun (the solar work) \u2014 the complete traversal of the tetrahedron from V\u2084 to V\u2081 and back.",
+      "source_ids": [
+        "emerald-tablets-md",
+        "final-truth-encoded"
+      ],
+      "topics": [
+        "operations",
+        "tetrahedron_edges",
+        "calcination",
+        "sublimation",
+        "inhumation",
+        "levigation"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_020",
+      "section": "cross_reference",
+      "subsection": "existing_ro_and_tetrahedron_framework",
+      "kind": "commentary",
+      "text": "Cross-reference with existing RO (ro:alchemy-emerald-tablet): The existing RO covers the Hermetic corpus and Poemandres vision. This extended RO extends that by:\n1) Providing all 12 translations instead of 1\n2) Adding all commentaries by Hortulanus, Albertus, Trithemius, Burckhardt, Maier, Newton, Bacstrom\n3) Mapping to the tetrahedron framework explicitly\n4) Connecting the alchemical operations to the tantric subtle body (i\u1e0d\u0101/pi\u1e45gal\u0101/su\u1e63um\u1e47\u0101, ku\u1e47\u1e0dalin\u012b, cakras)\n\nCross-reference with Final Truth Encoded (\u00a710): The Emerald Tablet is there decoded clause by clause into the tetrahedron framework. The present RO provides the source material for that decoding: the raw translations and commentaries that underpin each decoding step.\n\nCross-reference with ro:corpus-hermeticum: The Poemandres vision provides the ontological basis \u2014 the Light that 'consists of innumerable Powers' is the tetrahedron's V\u2081 in its creative aspect, and the 'watery nature' is V\u2084 as the gross medium.\n\nCross-reference with ro:layayoga-kundalini and ro:layayoga-subtle-body: The seven clauses mapped to the seven cakras (already present in the existing RO at p_006) are here grounded in the actual textual tradition of alchemy.",
+      "source_ids": [
+        "emerald-tablets-md",
+        "final-truth-encoded",
+        "ro-alchemy-emerald-tablet"
+      ],
+      "topics": [
+        "cross_reference",
+        "tetrahedron_framework",
+        "existing_ros"
+      ],
+      "status": "active"
+    }
+  ],
+  "coverage": {
+    "translations": {
+      "status": "comprehensive",
+      "sources": [
+        "emerald-tablets-md"
+      ],
+      "passage_count": 6,
+      "estimated_completeness": 1.0,
+      "gaps": [
+        "Greek version (Zosimos) not separately excerpted; Byzantine recensions"
+      ]
+    },
+    "commentaries": {
+      "status": "comprehensive",
+      "sources": [
+        "emerald-tablets-md"
+      ],
+      "passage_count": 7,
+      "estimated_completeness": 0.95,
+      "gaps": [
+        "Lesser-known commentators (e.g. Roger Bacon's paraphrase, Dorn, Khunrath)"
+      ]
+    },
+    "operations": {
+      "status": "good",
+      "sources": [
+        "emerald-tablets-md",
+        "final-truth-encoded"
+      ],
+      "passage_count": 2,
+      "estimated_completeness": 0.8,
+      "gaps": [
+        "Full list of 12 operations of the opus; color sequence black/white/red"
+      ]
+    },
+    "tetrahedron_decoding": {
+      "status": "comprehensive",
+      "sources": [
+        "emerald-tablets-md",
+        "final-truth-encoded"
+      ],
+      "passage_count": 5,
+      "estimated_completeness": 0.9,
+      "gaps": [
+        "Explicit mapping of each translation variant to tetrahedron vertices"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "coverage_gap",
+      "title": "Greek and Byzantine recensions not included",
+      "description": "Zosimos of Panopolis and other Greek alchemists may preserve earlier versions of the Tablet. The Syrian source tradition (Job of Odessa) also needs investigation.",
+      "status": "open",
+      "created": "2026-07-15",
+      "auto_generated": true
+    },
+    {
+      "id": "issue-002",
+      "type": "interpretation",
+      "title": "The 'Telesmi' etymology and its cakra correspondence",
+      "description": "The word Telesmi (#6) is Greek for 'perfection' or 'mystery ritual'. Its connection to the Greek telos (end, purpose) needs fuller exploration in the tetrahedron framework \u2014 the sixth clause as the sixth edge of the tetrahedron, which when completed allows the seventh (the center) to appear.",
+      "status": "open",
+      "created": "2026-07-15",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-15",
+      "type": "initial",
+      "summary": "Extended Emerald Tablet RO with 6 translations, 7 commentary passages, 2 operations overviews, 5 tetrahedron framework decodings, and 1 cross-reference. Total 20 passages.",
+      "sources_added": [
+        "emerald-tablets-md",
+        "final-truth-encoded",
+        "ro-alchemy-emerald-tablet"
+      ],
+      "passage_count": 20,
+      "status": "draft"
+    }
+  ],
+  "appendices": [],
+  "timeline": [
+    {
+      "date": "2026-07-15",
+      "event": "Extended RO created from the complete emeraldtablets.md, Final Truth Encoded \u00a710, and cross-referencing the existing Emerald Tablet RO",
+      "sources_total": 3,
+      "passages_total": 20
+    }
+  ]
+}

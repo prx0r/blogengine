@@ -1,0 +1,62 @@
+{
+  "co_id": "co:uno_gurdjeff1_t1312_t1329_imaginat_t2",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gurdjeff1_t1312_t1329_imagination_as_uncontrolled_activity",
+  "turn_index": 2,
+  "lineage": "Gurdjieffian",
+  "student_state": "defending_analytic_approach",
+  "behavior_tags": [
+    "defends_observation",
+    "questions_dismissal"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_05",
+    "function_name": "RM_05",
+    "mechanism_shape": "SYSTEM_DYNAMICS",
+    "teaching_actions": [
+      "states_result_of_observation",
+      "defines_imagination_functionally",
+      "links_imagination_to_false_values"
+    ],
+    "traps_avoided": [
+      "recursion_loop",
+      "conceptual_reification"
+    ],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.5,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "request_clarification",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The definition works: imagination = self-sustaining circle, creates false values, no value from observation. The student defended observation (defending analytic approach), which shows they understand: observation = value. They'll likely ask about escape next.",
+  "accumulated_insight": "T3: Student defended observation ('Why is it of no value to observe and study imagination as a means to self-knowledge?')—defending analytic approach via defends observation and questions dismissal. They understand: observation = value (analytic approach). The system_dynamics mechanism defines: imagination = self-sustaining circle, creates false values, no value from observation ('You will very soon see that it does not give anything. Imagination always turns in the same circle. It is an uncontrolled mind activity, and by imagination we create many false values, keep to them and use them in our thinking'). Pattern: obstacle identification → differentiation → analytic question → rejection → observation question → definition → [next: escape question]. They're grasping: imagination = circular, observation = futile (definition).",
+  "abstract_pattern": "",
+  "visible_response": "You will very soon see that it does not give anything. Imagination always turns in the\nsame circle.\nIt is an uncontrolled mind activity, and by imagination we create many false\nvalues, keep to them and use them in our thinking.\nThis is why imagination is\ndangerous. We do not verify things.\nWe imagine things either because we like them, or\nsometimes because we dislike them and are afraid of them.\nWe live in an imaginary\nworld.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:sufi-comparative-analysis",
+    "ro:steiner-tantraloka-parallels"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

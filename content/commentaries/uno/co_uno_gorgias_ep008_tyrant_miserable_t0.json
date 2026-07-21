@@ -1,0 +1,51 @@
+{
+  "co_id": "co:uno_gorgias_ep008_tyrant_miserable_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gorgias_ep008_tyrant_miserable",
+  "turn_index": 0,
+  "lineage": "Socratic",
+  "student_state": "seeking_clarity",
+  "behavior_tags": [
+    "requests_clarification"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_06",
+    "function_name": "UM_06",
+    "mechanism_shape": "SUBJECT_OBJECT_INVERSION",
+    "teaching_actions": [
+      "provides_inversion"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.5,
+      "attunement": 0.5,
+      "style": 0.5,
+      "depth": 0.38,
+      "meta_mode": 0.2,
+      "provenance": "default"
+    },
+    "predicted_impact": "request_clarification",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The inversion works: 'No—the one who does injustice and escapes punishment is the most miserable of all' inverts the common assumption. This is counter-intuitive—most people think freedom = good, but here freedom without justice = worst. The student challenges claim (seeking clarity), which shows they understand: tyrant = gets what he wants (contradicts claim). They'll likely ask for clarification about the inversion next. Hypothesis: counter-intuitive inversions trigger clarification requests—testable by tracking whether inversions that contradict common assumptions lead to clarification inquiries more than straightforward claims.",
+  "accumulated_insight": "T1: Student challenges claim ('How can that be? He gets whatever he wants')—seeking clarity via requests clarification. They understand: tyrant = gets what he wants (contradicts claim of misery). The subject_object_inversion mechanism provides: inversion ('No—the one who does injustice and escapes punishment is the most miserable of all'), inverts: assumption (freedom = good) → (freedom without justice = worst), explains: tyrant = most miserable (corrupts soul, no healing). Pattern: challenge → inversion → [next: clarification request]. Medium confidence because inversions typically trigger clarification requests, especially when they contradict common assumptions.",
+  "abstract_pattern": "",
+  "visible_response": "No—the one who does injustice and escapes punishment is the most miserable of all.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:proclus-elements",
+    "ro:platonism-decoded",
+    "ro:chaldean-oracles"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

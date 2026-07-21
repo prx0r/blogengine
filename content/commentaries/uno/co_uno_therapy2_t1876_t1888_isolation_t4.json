@@ -1,0 +1,53 @@
+{
+  "co_id": "co:uno_therapy2_t1876_t1888_isolation_t4",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy2_t1876_t1888_isolation_affect_resume",
+  "turn_index": 4,
+  "lineage": "Therapeutic",
+  "student_state": "logical_deduction",
+  "behavior_tags": [
+    "rationalization"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_04",
+    "function_name": "RM_04",
+    "mechanism_shape": "CAUSAL_CHAIN",
+    "teaching_actions": [
+      "re-presents_stimulus"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.35,
+      "depth": 0.38,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_02",
+      "depth_discrete": "PD_02",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "Turn 5: 'If I don’t feel angry, maybe I’m not angry.'. Student now in logical_deduction. Continuing with causal_chain approach. Building on previous turn's foundation.",
+  "accumulated_insight": "T5: Student: 'If I don’t feel angry, maybe I’m not angry.'. Shift from uncertainty to logical_deduction. Teacher applies causal_chain mechanism with re-presents stimulus. Mid-episode progression in REMAKING phase.",
+  "abstract_pattern": "",
+  "visible_response": "But you said you are angry that she threw your resume in the trash.\nHow do you experience that anger now as you remember her throwing the resume in the trash?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

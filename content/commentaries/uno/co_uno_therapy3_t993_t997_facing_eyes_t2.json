@@ -1,0 +1,54 @@
+{
+  "co_id": "co:uno_therapy3_t993_t997_facing_eyes_t2",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3_t993_t997_facing_eyes_guilt",
+  "turn_index": 2,
+  "lineage": "Therapeutic",
+  "student_state": "active_refusal",
+  "behavior_tags": [
+    "avoidance"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_04",
+    "function_name": "RM_04",
+    "mechanism_shape": "NONE",
+    "teaching_actions": [
+      "blocks_avoidance",
+      "amplifies_imagery"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.62,
+      "attunement": 0.5,
+      "style": 0.5,
+      "depth": 0.62,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_03",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "'Maybe fear?'—they're testing the distinction. Teacher reinforces: fear of consequence vs guilt about act. Different problems. Fear = external threat. Guilt = internal judgment. If fear, need safety. If guilt, need permission. Distinction guides intervention.",
+  "accumulated_insight": "T3: Student considers: 'Maybe fear?' Accepted distinction, testing it. Teacher validates: 'Fear of consequences for having anger is different from guilt about anger.' Solidifies distinction. Predicting go_along_compliantly as clarity emerges.",
+  "abstract_pattern": "",
+  "visible_response": "If you don’t avoid his eyes, what is the feeling in you as you look at his dead eyes looking up at you lifelessly?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

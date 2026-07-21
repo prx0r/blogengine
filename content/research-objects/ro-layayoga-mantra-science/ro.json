@@ -1,0 +1,258 @@
+{
+  "ro_id": "ro:layayoga-mantra-science",
+  "schema_version": 1,
+  "title": "Mantra Science — Sound as Supra-Power in Layayoga and Tantraloka",
+  "subtitle": "The four forms of sound, mantra as supra-sound power, Mātṛkā phonemes as energies of consciousness, and seed mantras SAUḤ and KHPHREṀ",
+  "family": "topic-across-thinkers",
+  "status": "draft",
+  "current_version": "0.2.0",
+  "summary": {
+    "one_line": "The Tantric science of mantra: from the four levels of sound (para/pashyanti/madhyama/vaikhari) through Mātṛkā phonemes to seed mantras SAUḤ (emanation) and KHPHREṀ (withdrawal).",
+    "scope": "Covers the four forms of sound and their emanation from Kuṇḍalinī as Śabdabrahman, mantra formation at the madhyama level, Mātṛkā as 50 phonemic energies of consciousness, the guru's transmission of living mantra, SAUḤ as the seed of Parā (Trika emanation) and KHPHREṀ as the seed of Kālasaṁkarṣiṇī (Krama withdrawal), and the Tantraloka levels of sound from A to the Transmental (Netratantra/Svacchanda schema).",
+    "traditions": [
+      "tantra",
+      "layayoga",
+      "kashmir_shaivism",
+      "trika",
+      "krama"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "layayoga-mantra",
+      "tier": 1,
+      "label": "Shyam Sundar Goswami — Layayoga: The Definitive Guide to the Chakras and Kundalini. Sections on the four forms of sound, Mātṛkā, and mantra as supra-sound power.",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": ["four_forms_of_sound", "matrika_phonemes", "mantra_at_madhyama", "guru_akshara_transmission", "ishtadewata_manifestation"],
+      "sections_affected": ["theory", "practice"],
+      "status": "active"
+    },
+    {
+      "source_id": "tantraloka-appendix-a",
+      "tier": 1,
+      "label": "Tantraloka of Abhinavagupta, Appendix A to Chapter One — The Levels of Sound according to the Netratantra (SV 4/254cd-256, NT 22/21-23). Trans. Mark Dyczkowski.",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": ["twelve_levels_of_sound", "om_as_sequence", "kaundali_as_sakti", "samananta_fetter", "transmental_beyond"],
+      "sections_affected": ["theory"],
+      "status": "active"
+    },
+    {
+      "source_id": "tantraloka-seed-mantras",
+      "tier": 1,
+      "label": "Tantraloka of Abhinavagupta — SAUḤ as the seed-syllable of Parā (emission) and KHPHREṀ as Piṇḍanātha (withdrawal).",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": ["sauḥ_as_sṛṣṭibīja", "khphreṁ_as_saṃhārabīja", "trika_krama_integration", "heart_seed"],
+      "sections_affected": ["theory"],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "theory",
+      "subsection": "four_forms_of_sound",
+      "kind": "source",
+      "text": "Sound exists in four forms, as the Ṛgveda (1.22.164.45) states: 'Sound is in four forms; the Brāhmaṇas who have controlled their minds fully know these four forms.' The forms are: Para (supreme) — unmanifested sound-substance (dhwani), the causal sound principle; Pashyantī (radiant) — the first manifestation, two-leafed sprout from para; Madhyamā (subliminal) — sound budding in the region of the heart (anāhata), where specialization and plurality appear; Vaikharī (audible) — sound fully bloomed, produced by the vocal apparatus. The Yogakuṇḍalyupaniṣad (3.18-19) describes the sequence: 'Sound is about to sprout in para form; it becomes two-leafed in pashyantī form; it buds in madhyamā form; and it blooms in vaikharī form.' The yogi reverses this order in samādhi, tracing sound back to its source. [layayoga-text.txt lines 9417-9496]",
+      "source_ids": ["layayoga-mantra"],
+      "topics": ["four_forms_of_sound", "para", "pashyanti", "madhyama", "vaikhari"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "theory",
+      "subsection": "sound_emanation_from_kundalini",
+      "kind": "source",
+      "text": "Kundalini as Śabdabrahman is the source of all sound. Supreme Brahman appears as Śabdabrahman when Mahākuṇḍalinī 'wills' to express the kinetic counterpart of static reality. The power in Śabdabrahman is Bindu — supremely concentrated power, non-magnitudinous and non-positional, which when magnified appears as splendorous and permeated with sonority without manifested sound. From Kuṇḍalinī arises pashyantī nāda; pashyantī becomes more pronounced and particularized in anāhata and is called madhyamā; madhyamā is expressed as voice — vaikharī. The Tantrarājatantra (26.5-9) maps these to the cakras: para in mūlādhāra, pashyantī in svādiṣṭhāna, madhyamā in anāhata, vaikharī in viśuddha. [layayoga-text.txt lines 9455-9479, 9497-9546]",
+      "source_ids": ["layayoga-mantra"],
+      "topics": ["sabdabrahman", "kundalini", "bindu", "cakra_mapping"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "theory",
+      "subsection": "matrika_phonemes",
+      "kind": "source",
+      "text": "At the madhyamā level, the original homogeneity of praṇava (OṀ) differentiates into the fifty mātṛkā phonemes (from A to Kṣa). Mātṛkā literally means 'mother' — here, the 'little mothers' or primary sound-units that are the energies of consciousness. Each phoneme is a bīja (seed-sound), a specialized power in sound-form. The Kāmadhenutantra states: 'A to Kṣa sounds which are mātṛkā are in the nature of bīja.' These are not lifeless letters; they are consciousness and power: 'The varṇas from A to Kṣa are Śiva and Śakti; these varṇas are Śabdabrahman and exist always.' Mātṛkā is living power in mantra-form, and the fifty phonemes constitute the garland of spiritual knowledge (jñānamālā). [layayoga-text.txt lines 9662-9717]",
+      "source_ids": ["layayoga-mantra"],
+      "topics": ["matrika", "fifty_phonemes", "bija", "siva_sakti"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "practice",
+      "subsection": "mantra_as_supra_sound_power",
+      "kind": "source",
+      "text": "Mantras are formed at the madhyamā level, where they exhibit creative omnipotence under the control of Īśvara. Beyond this level there are no mantras. When a mantra is made living (mantra-caitanya), Kuṇḍalinī-power awakens and appears in a divine form linked to the mantra as Iṣṭadevatā. The mere vaikharī form of mantra — the audible sound — is without spiritual power unless transmitted by a guru who has 'heard' the mantra-sound at the śabda-tanmātra level. The guru, through deep concentration, reduces the five tanmātras to the sound-tanmātra, hears the mantra-sounds (Veda, Gāyatrī, bīja, mātṛkā, praṇava), and then follows the course of sounds in reverse to reach their origin in Kuṇḍalinī. He then imparts both the sound and the living power to the disciple. [layayoga-text.txt lines 10467-10641]",
+      "source_ids": ["layayoga-mantra"],
+      "topics": ["mantra_formation", "guru_transmission", "sabda_tanmatra", "ishtadevata"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "theory",
+      "subsection": "sauḥ_as_emission_seed",
+      "kind": "source",
+      "text": "SAUḤ is the seed-syllable (bīja) of Parā, the supreme goddess of the Trika — the seed of emanation (sṛṣṭibīja). Abhinavagupta teaches that SAUḤ encompasses all thirty-six principles (tattvas). Its four letters (S-A-U-Ḥ) pervade the four Eggs (brahmāṇḍas). The final visarga (Ḥ) is the Principle of Passion (kāmakalā), the creative emission of the universe from nondual consciousness. SAUḤ is also the Heart-seed (hṛdayabīja), the sonic form of Parā's reflective awareness. Jayaratha explains that Abhinava reads SAUḤ from two perspectives: emission (sṛṣṭikrama) — the projection of the universe out of nonduality; and reabsorption (saṃhārakrama) — the coming to rest of the universe within the transcendental subject. [tantraloka-v1.txt lines 37055-37100; tantraloka-v2.txt lines 15526-15529, 20423-20489; tantraloka-v3.txt lines 21525-21531]",
+      "source_ids": ["tantraloka-seed-mantras", "tantraloka-appendix-a"],
+      "topics": ["sauḥ", "parā", "emission", "hṛdayabīja", "trika"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_006",
+      "section": "theory",
+      "subsection": "khphreṁ_as_withdrawal_seed",
+      "kind": "source",
+      "text": "KHPHREṀ (Piṇḍanātha) is the seed-syllable of Kālī Kālasaṁkarṣiṇī, the supreme goddess of the Krama school — the seed of withdrawal (saṃhārabīja). While SAUḤ emits oneness, KHPHREṀ consumes duality. Abhinavagupta integrates both in his Anuttara Trika: Kālī consciousness consumes duality (Krama), Parā consciousness emits oneness (Trika), and they are on the same supreme level. SAUḤ is 'the heart in emission' (sṛṣṭau hṛt); KHPHREṀ is 'the heart in resorption' (saṃhārahṛdayam). The KHPHREṀ seed is associated with the Krama school's fourfold reality (catuṣṭayārtha) and the Piṇḍanātha lineage, also appearing in the Mātṛsadbhāva and Devīyāmala traditions. [tantraloka-v3.txt lines 21525-21560; tantraloka-v2.txt lines 12248-12256]",
+      "source_ids": ["tantraloka-seed-mantras"],
+      "topics": ["khphreṁ", "kalasamkarshini", "withdrawal", "krama", "samharabija"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_007",
+      "section": "theory",
+      "subsection": "twelve_levels_of_sound",
+      "kind": "source",
+      "text": "The Tantraloka (Appendix A) presents the twelve levels of sound from the Śvacchandatantra and Netratantra, through which the utterance of OṀ ascends from the heart to the Transmental. The eleven parts moving within the vital breath are: A, U, M, the Point (bindu), Half Moon (ardhacandra), the Obstructress (nirodhikā), Sound (nāda), End of Sound (nādānta), Power (śakti), the Pervasive One (vyāpinī), and the Equal One (samanā). The Transmental (unmanā) is beyond that, and beyond that is the Untainted Absolute (nirāmaya). These stages retract and reverse the downward flow of the cosmogonic energy of Speech from parā vāc to vaikharī vāc. Kṣemarāja identifies stage 9 — Śakti — with Kuṇḍalinī, integrating the deity with the sonic ascent. [tantraloka-v1.txt lines 37055-37100]",
+      "source_ids": ["tantraloka-appendix-a", "layayoga-mantra"],
+      "topics": ["twelve_levels", "om_ascension", "netratantra", "svacchanda", "unmana"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_008",
+      "section": "theory",
+      "subsection": "guru_mantra_yoga_teaching",
+      "kind": "source",
+      "text": "The Guru's teaching on the four great systems of yoga, imparted during the initiation, includes this definition of mantra-yoga: 'Mantrayoga is that form of yoga, in which word-thought forms, associated with the multiform consciousness, are transformed into supra-word form, that is mantra. Mantra effects the concentrated form of consciousness which leads to samadhi. Mantra is the suprasound power in word form. When the mantra is rightly worked upon, it becomes a living power from which arises the living Ishtadewata — God in form. Now concentration becomes very deep.' The internal purification accomplished through prāṇāyāma (nāḍīśuddhi) produces health, vitality, absence of unpleasant body odours, wholesome breath, cheerfulness, calmness and concentratedness of the mind — the foundation on which mantra-sādhana is built (Layayoga, pp. 11-12).",
+      "source_ids": ["layayoga-mantra"],
+      "topics": ["guru_teaching", "mantra_yoga", "four_yoga_systems", "nadishuddhi"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_009",
+      "section": "practice",
+      "subsection": "matrika_letters_in_breath_control",
+      "kind": "source",
+      "text": "The fifty Mātṛkā-letters are used as mantra in Tantrika breath-control in regular and reverse order. In one form, inspiration is done through the left nostril for 16 measures with the first 16 Mātṛkā-letters; breath-suspension for 32 measures with the letters from 'Ka' to 'Sa'; expiration through the right nostril for 16 measures using the letters from 'Ka' to 'Ta' (Gāyatrītantra, 1.203-204). In another form, the 50 Mātṛkā-letters as mantra, said in regular order with concentration and initiation-mantra, are used for inspiration; the 50 Mātṛkā-letters first in reverse order and then in regular order with concentration and initiation-mantra for breath-suspension; finally the 50 Mātṛkā-letters in reverse order for expiration (Kāmadhenutantra, ch. 9, p. 10). A further form uses 'A' to 'Kṣa' (50 letters) for inspiration, 'Ka' to 'Ma' (25 letters) for suspension, and 'Ya' to 'Kṣa' (9 letters) for expiration, with relative measures 50-25-9 (Viśvasāratantra, ch. 1, p. 10). Thus the entire Mātṛkā alphabet becomes the sonic substance of the breath-control practice (Layayoga, pp. 53-54).",
+      "source_ids": ["layayoga-mantra"],
+      "topics": ["matrika_letters", "breath_control", "regular_reverse_order", "pranayama_mantra"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_010",
+      "section": "theory",
+      "subsection": "mantra_as_kundalini_ishtadevata",
+      "kind": "source",
+      "text": "When the mantra is rightly worked upon, the sound aspect gradually becomes more and more rarefied and is ultimately absorbed into Kuṇḍalinī. At this stage Kuṇḍalinī herself assumes the form of Iṣṭadevatā. 'Ishtadewata is that divine form which arises from the bija-mantra when it is absorbed into Kundalini. When the latent mantra-power in the bija is aroused by the mantra-process, the sound is absorbed at a certain stage of concentration into kundalini; and kundalini manifests herself as the dewata linked to the bija. So Ishtadewata is the divine form of mantra. Ishtadewata is the manifested kundali-power in form.' The divine form is not imaginary; it is a form which Kuṇḍalinī herself has assumed. 'In deep concentration, mantra-sounds are recoiled into kundalini and Kundalini appears as Ishtadewata' (Layayoga, pp. 111-112).",
+      "source_ids": ["layayoga-mantra"],
+      "topics": ["kundalini_ishtadevata", "mantra_absorption", "bija_mantra", "divine_form"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_011",
+      "section": "theory",
+      "subsection": "three_bindus_mantra_structure",
+      "kind": "source",
+      "text": "The three bindus (power-points) — nāda, bindu, and bija — are the structural units of mantra. Prāṇava (OṀ) is a complex organization of powers in which the prāṇa-force, in motion, makes the three bindus operate and the sound-potentials begin to be actualized as Mātṛkā-varṇa (sound-units). 'Of the three bindus (power-points), nada is the centre of pranic force, which is the fundamental sound-factor and from which occurs an emission of a super-refined ray (rashmi) of red colour.' The red-power at the bindu becomes yellow radiant consci-dynamism (sattwa); the sound factor of the red-ray becomes a specific sound at the bija. The red-ray emission creates a red-line (rajas-line) releasing sixteen sound-units; similarly yellow- and black-lines (sattwa- and tamas-lines) each release sixteen sound-units, forming an equilateral triangle — the three forms of power termed Vāmā, Jyeṣṭhā, and Raudrī (Layayoga, pp. 103-104). Nāda is the subtle centre of prāṇic force in mantra, bindu is the conscious form, and bija is the sound-specificity.",
+      "source_ids": ["layayoga-mantra"],
+      "topics": ["three_bindus", "nada", "bindu", "bija", "mantra_structure", "pranava"],
+      "status": "active"
+    }
+  ],
+  "coverage": {
+    "four_forms_of_sound": {
+      "status": "comprehensive",
+      "sources": ["layayoga-mantra"],
+      "passage_count": 2,
+      "estimated_completeness": 0.9,
+      "gaps": ["Primary Ṛgveda and Upaniṣad quotations could be added as direct sources"]
+    },
+    "matrika": {
+      "status": "comprehensive",
+      "sources": ["layayoga-mantra"],
+      "passage_count": 4,
+      "estimated_completeness": 0.9,
+      "gaps": ["Mālīnīvijayottara and other Tantric alphabet traditions not yet cross-referenced"]
+    },
+    "seed_mantras": {
+      "status": "good",
+      "sources": ["tantraloka-seed-mantras"],
+      "passage_count": 2,
+      "estimated_completeness": 0.8,
+      "gaps": ["SAUḤ and KHPHREṀ ritual applications from Tantraloka chapters 4-5 not yet extracted"]
+    },
+    "levels_of_sound": {
+      "status": "good",
+      "sources": ["tantraloka-appendix-a"],
+      "passage_count": 1,
+      "estimated_completeness": 0.75,
+      "gaps": ["Full twelve-level table with tantra-by-tantra comparison not yet compiled"]
+    },
+    "practice": {
+      "status": "good",
+      "sources": ["layayoga-mantra"],
+      "passage_count": 2,
+      "estimated_completeness": 0.75,
+      "gaps": ["Detailed japa methodology and nyasa procedures could be expanded"]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "coverage_gap",
+      "title": "Additional seed mantras from Tantraloka not yet included",
+      "description": "HRĪṀ (as alternate Vidyā of Parā), HSKHPHREṀ, and other compound seed-syllables from the Krama should be added.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    },
+    {
+      "id": "issue-002",
+      "type": "coverage_gap",
+      "title": "Practical mantra-sādhana details from Layayoga need expansion",
+      "description": "The mantra-purification process (purashcaraṇa), nyāsa, and japa methodology in layayoga-text.txt lines 10722-10749 should be added as practice passages.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial RO created from Layayoga text (sound forms, Mātṛkā, mantra formation) and Tantraloka (Appendix A levels of sound, SAUḤ and KHPHREṀ seed mantras). 7 passages.",
+      "sources_added": [
+        "layayoga-mantra", "tantraloka-appendix-a", "tantraloka-seed-mantras"
+      ],
+      "passage_count": 7,
+      "status": "draft"
+    },
+    {
+      "version": "0.2.0",
+      "date": "2026-07-14",
+      "type": "update",
+      "summary": "Added 5 passages: Guru's teaching on mantra-yoga from the initiation story, Mātṛkā-letters as mantra in breath-control (regular and reverse order), mantra as Kuṇḍalinī transformed into Iṣṭadevatā, and the three bindus (nāda/bindu/bija) as structural units of mantra.",
+      "sources_added": [],
+      "passage_count": 11,
+      "status": "draft"
+    }
+  ],
+  "appendices": [],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created from Layayoga mantra sections and Tantraloka Appendix A + seed mantra passages",
+      "sources_total": 3,
+      "passages_total": 7
+    },
+    {
+      "date": "2026-07-14",
+      "event": "Updated to v0.2.0 — added 4 passages on Guru's mantra-yoga teaching, Mātṛkā-letters in breath-control, mantra as Kuṇḍalinī/Iṣṭadevatā, and three bindus as mantra structure",
+      "sources_total": 3,
+      "passages_total": 11
+    }
+  ]
+}

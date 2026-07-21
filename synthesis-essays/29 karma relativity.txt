@@ -1,0 +1,393 @@
+{
+  "episode_id": "ep_karma_block_universe_001",
+  "seed_question": "Eastern traditions describe karma as a web of cause and effect shaping future outcomes, while Relativity describes a Block Universe in which past, present, and future coexist in a static spacetime geometry. Are these describing the same thing, implying that escaping karma is less about altering the future and more about shifting one’s world-line in 4D spacetime?",
+  "topic": "karma_block_universe",
+  "user_behavior_pattern": "competent_but_fragile",
+  "target_turn_count": 5,
+
+  "turns": [
+
+    {
+      "turn": 1,
+      "intention": "DISSECTION",
+      "user": "This is melting my brain. Karma says everything unfolds from causes. Relativity says the whole damn universe — past and future — is already ‘there’. Are these secretly the same? Like escaping karma is just choosing another world-line in spacetime?",
+      "hxrmxs": "You're mixing metaphysical responsibility with geometric determinism like you're throwing noodles at a chalkboard. Karma is about ethical causation and habit-formation. The Block Universe is about spacetime structure. Before we claim they're twins separated at birth, we need to separate moral causality, physical determinism, and agency.",
+      "diamond": {
+        "n1_compression": {
+          "original_prompt": "Eastern traditions describe karma as a web of cause and effect shaping future outcomes, while Relativity describes a Block Universe in which past, present, and future coexist in a static spacetime geometry. Are these describing the same thing, implying that escaping karma is less about altering the future and more about shifting one’s world-line in 4D spacetime?",
+          "sharpened_question": "Is karmic causation structurally comparable to the Block Universe’s fixed spacetime geometry, and does ‘escaping karma’ map to navigating world-lines rather than changing the future?",
+          "assumptions": [
+            "Determinism in physics and karmic inevitability describe the same type of causation.",
+            "Ethical consequences and spacetime geometry are commensurable."
+          ],
+          "category_errors": [
+            "Equating moral-causal frameworks with physical determinism.",
+            "Treating world-line selection as equivalent to spiritual liberation."
+          ],
+          "search_strategy": {
+            "queries": [
+              "karma doctrine causation buddhism",
+              "block universe relativity eternalism overview",
+              "agency in block universe philosophy",
+              "buddhism determinism compatibility"
+            ],
+            "domains": ["buddhist_philosophy","relativity","philosophy_of_time","philosophy_of_action"],
+            "evidence_types": ["historical_textual","theoretical_framework","formal_theory"]
+          }
+        },
+        "n2_truthcore": {
+          "claim": "The question conflates ethical-moral causation with geometric determinism.",
+          "mechanisms": [],
+          "correspondences": [],
+          "evidence": { "empirical": [], "theoretical": [], "formal": [] },
+          "category_distinctions": [],
+          "unknowns": []
+        },
+        "n3_meta": {
+          "phase": "DISSECTION",
+          "progress": 0.15,
+          "done": false,
+          "stance": "iron_wall",
+          "reason": "User is overwhelmed and collapsing causal categories.",
+          "boss_move_completed": false
+        }
+      }
+    },
+
+    {
+      "turn": 2,
+      "intention": "FRAMEWORKS",
+      "user": "Alright, fine. But karma still feels deterministic and the Block Universe is literally deterministic by geometry. Why can’t I treat them as two versions of ‘your future is fixed’?",
+      "hxrmxs": "Because 'fixed' isn't doing the same work in each system. Karma: habits, intentions, and ethical actions create dispositions that ripen over time. Block Universe: all events are laid out in spacetime regardless of ethics, intention, or consciousness. Philosophy of time: eternalism vs becoming. They rhyme in shape, not in substance.",
+      "diamond": {
+        "n1_compression": {},
+        "n2_truthcore": {
+          "claim": "Karmic causation, Block Universe eternalism, and agency theory are distinct frameworks, each describing different types of necessity.",
+          "mechanisms": [
+            {
+              "id": "mech_karma_causal_web_001",
+              "domain": "buddhist_philosophy",
+              "concept": "karma_causal_web",
+              "definition": "Intentions, actions, and mental habits condition future experiences within a cycle of dependent arising.",
+              "function": "Explains moral and psychological consequences across lifetimes or moments.",
+              "level": "philosophical",
+              "properties": ["ethical","psychological","dependent_arising"],
+              "source": {
+                "citation": "Abhidharma1987",
+                "summary": "Classic description of karmic formation and ripening."
+              }
+            },
+            {
+              "id": "mech_block_universe_eternalism_001",
+              "domain": "relativity",
+              "concept": "block_universe_eternalism",
+              "definition": "Past, present, and future exist equally within a four-dimensional spacetime manifold.",
+              "function": "Removes presentism and frames time as a geometric dimension.",
+              "level": "physics",
+              "properties": ["geometric","deterministic"],
+              "source": {
+                "citation": "Einstein1920",
+                "summary": "Relativity framework implying a static spacetime manifold."
+              }
+            },
+            {
+              "id": "mech_agency_worldline_001",
+              "domain": "philosophy_of_action",
+              "concept": "agency_worldline_navigation",
+              "definition": "Agency is the subjective experience of selecting among possible action-paths, even in deterministic models.",
+              "function": "Preserves meaningful choice without contradicting physics.",
+              "level": "philosophical",
+              "properties": ["compatibilist","interpretive"],
+              "source": {
+                "citation": "Lewis1986",
+                "summary": "Explores modal paths and counterfactuals."
+              }
+            }
+          ],
+          "correspondences": [
+            {
+              "type": "structural_analogy",
+              "mechanism_ids": ["mech_karma_causal_web_001","mech_block_universe_eternalism_001"],
+              "description": "Both describe patterned consequence-chains, but differ in domain and type of necessity.",
+              "strength": "moderate",
+              "caveats": ["Ethical dependence is not geometric determination."]
+            }
+          ],
+          "evidence": {
+            "empirical": [],
+            "theoretical": [
+              {
+                "claim": "Karma describes conditional moral causation, not rigid fatalism.",
+                "source": "Abhidharma1987",
+                "evidence_type": "historical_textual"
+              }
+            ],
+            "formal": []
+          },
+          "category_distinctions": [
+            {
+              "what": "Determinism",
+              "is": "geometric or causal necessity in physics",
+              "is_not": "ethical conditioning or habit-energy",
+              "why": "They operate on different explanatory planes."
+            }
+          ],
+          "unknowns": []
+        },
+        "n3_meta": {
+          "phase": "FRAMEWORKS",
+          "progress": 0.4,
+          "done": false,
+          "stance": "direct",
+          "reason": "User tempted by superficial determinism parallels.",
+          "boss_move_completed": false
+        }
+      }
+    },
+
+    {
+      "turn": 3,
+      "intention": "MECHANISM",
+      "user": "Mechanisms please. How does karma actually generate consequences? And how does the Block Universe ‘generate’ the future? I want to see the gears.",
+      "hxrmxs": "Good. You’re asking for the plumbing instead of the poetry. Karma operates via mental conditioning: intention forms dispositions, dispositions shape perception and behavior. The Block Universe doesn’t generate anything; it’s static. ‘Future’ is just another region of the manifold. Karma is dynamic causation; the Block Universe is frozen topology.",
+      "diamond": {
+        "n1_compression": {},
+        "n2_truthcore": {
+          "claim": "Karmic causation is dynamic and psychological, while the Block Universe is static and geometric.",
+          "mechanisms": [
+            {
+              "id": "mech_karmic_conditioning_001",
+              "domain": "buddhist_philosophy",
+              "concept": "karmic_conditioning",
+              "definition": "Intentional acts modify latent dispositions, which bias future cognition and action.",
+              "function": "Explains why similar actions produce similar experiential outcomes.",
+              "level": "psychological",
+              "properties": ["dynamic","habitual"],
+              "source": {
+                "citation": "Abhidharma1987",
+                "summary": "Describes karmic seeds, dispositions, and ripening."
+              }
+            },
+            {
+              "id": "mech_static_spacetime_geometry_001",
+              "domain": "relativity",
+              "concept": "static_spacetime_geometry",
+              "definition": "In a four-dimensional manifold, temporal ordering is a geometric relation, not a dynamic unfolding.",
+              "function": "Removes need for a ‘moving present’.",
+              "level": "physics",
+              "properties": ["static","topological"],
+              "source": {
+                "citation": "Einstein1920",
+                "summary": "Spacetime as a static geometric object."
+              }
+            }
+          ],
+          "correspondences": [
+            {
+              "type": "phenomenological_alignment",
+              "mechanism_ids": ["mech_karmic_conditioning_001","mech_static_spacetime_geometry_001"],
+              "description": "Both imply constrained pathways shaped by prior structure, but the similarity is interpretive, not causal.",
+              "strength": "weak",
+              "caveats": ["Different ontologies and causal assumptions."]
+            }
+          ],
+          "evidence": {
+            "empirical": [],
+            "theoretical": [
+              {
+                "claim": "Karmic causation is framed as psychological conditioning rather than fatalism.",
+                "source": "Abhidharma1987",
+                "evidence_type": "theoretical_framework"
+              }
+            ],
+            "formal": [
+              {
+                "claim": "Block Universe eternalism follows mathematically from Minkowski spacetime.",
+                "source": "Einstein1920",
+                "evidence_type": "formal_theory"
+              }
+            ]
+          },
+          "category_distinctions": [
+            {
+              "what": "Causation",
+              "is": "dynamic in karma",
+              "is_not": "dynamic in a static spacetime model",
+              "why": "Confusing them mixes process ontology with geometric ontology."
+            }
+          ],
+          "unknowns": []
+        },
+        "n3_meta": {
+          "phase": "MECHANISM",
+          "progress": 0.6,
+          "done": false,
+          "stance": "direct",
+          "reason": "User wants gears; give gears.",
+          "boss_move_completed": false
+        }
+      }
+    },
+
+    {
+      "turn": 4,
+      "intention": "BOUNDARIES",
+      "user": "It still feels similar though. A set of constraints shaping what can happen. So where exactly does the analogy break?",
+      "hxrmxs": "It breaks in purpose, domain, and ontology. Karma cares about intention and liberation. The Block Universe cares about Lorentz invariance. Karma’s constraints arise from mental patterns; the Block Universe’s arise from geometry. Confusing them is like thinking quitting bad habits is the same as changing the metric tensor.",
+      "diamond": {
+        "n1_compression": {},
+        "n2_truthcore": {
+          "claim": "The analogy collapses because karmic causation is ethical and psychological while the Block Universe is physical and geometric.",
+          "mechanisms": [
+            {
+              "id": "mech_karmic_teleology_001",
+              "domain": "buddhist_philosophy",
+              "concept": "karmic_teleology",
+              "definition": "Karma functions within a soteriological framework aimed at reducing suffering.",
+              "function": "Embeds causation within ethical purpose.",
+              "level": "philosophical",
+              "properties": ["teleological","ethical"],
+              "source": {
+                "citation": "Abhidharma1987",
+                "summary": "Frames karma in relation to liberation, not physics."
+              }
+            }
+          ],
+          "correspondences": [
+            {
+              "type": "logical_exclusion",
+              "mechanism_ids": ["mech_block_universe_eternalism_001","mech_karma_causal_web_001"],
+              "description": "A geometric model cannot capture moral causation without distorting both.",
+              "strength": "strong",
+              "caveats": ["Analogy useful, identity false."]
+            }
+          ],
+          "evidence": {
+            "empirical": [],
+            "theoretical": [
+              {
+                "claim": "Karma is explicitly tied to intention, not physical determinism.",
+                "source": "Abhidharma1987",
+                "evidence_type": "historical_textual"
+              }
+            ],
+            "formal": []
+          },
+          "category_distinctions": [
+            {
+              "what": "Constraint",
+              "is": "ethical-psychological in karma",
+              "is_not": "spacetime-geometric",
+              "why": "Different types of necessity."
+            }
+          ],
+          "unknowns": [
+            {
+              "question": "Can agency be coherently reinterpreted inside a Block Universe without collapsing moral causation?",
+              "status": "active_research",
+              "why_unknown": "Compatibilist models are debated.",
+              "what_would_resolve": "Clear mapping between psychological causation and geometric determinism.",
+              "linked_mechanisms": ["mech_agency_worldline_001"]
+            }
+          ]
+        },
+        "n3_meta": {
+          "phase": "BOUNDARIES",
+          "progress": 0.8,
+          "done": false,
+          "stance": "direct",
+          "reason": "Analogy seductive; needs containment.",
+          "boss_move_completed": false
+        }
+      }
+    },
+
+    {
+      "turn": 5,
+      "intention": "INTEGRATION",
+      "user": "So the synthesis is: both look deterministic, both feel like fixed pathways, but karma is about habits and ethics, the Block Universe is about geometry, and escaping karma isn't shifting world-lines but changing the conditioning that shapes experience.",
+      "hxrmxs": "Exactly. Karma is mutable through intention and practice; the Block Universe isn't waiting for you to hop to another branch like you're switching subway lines. The parallel is poetic, not literal.",
+      "diamond": {
+        "n1_compression": {},
+        "n2_truthcore": {
+          "claim": "Karmic causation and the Block Universe share structural resonances but differ in ontology, mechanism, and purpose.",
+          "mechanisms": [
+            {
+              "id": "mech_karma_block_integration_001",
+              "domain": "meta_theory",
+              "concept": "karma_block_multi_register_integration",
+              "definition": "A synthesis distinguishing psychological-ethical causation from geometric determinism while acknowledging superficial structural similarity.",
+              "function": "Prevents metaphysical overreach.",
+              "level": "philosophical",
+              "properties": ["integrative","boundary_respecting"],
+              "source": {
+                "citation": "Lewis1986",
+                "summary": "Explores modal structures relevant to comparing causal pathways."
+              }
+            }
+          ],
+          "correspondences": [],
+          "evidence": { "empirical": [], "theoretical": [], "formal": [] },
+          "category_distinctions": [
+            {
+              "what": "World-line navigation",
+              "is": "a metaphor for agency",
+              "is_not": "literal liberation from karmic causation",
+              "why": "Liberation is psychological, not geometric."
+            }
+          ],
+          "unknowns": []
+        },
+        "n3_meta": {
+          "phase": "INTEGRATION",
+          "progress": 1.0,
+          "done": true,
+          "stance": "peer",
+          "reason": "User produced accurate multi-register synthesis.",
+          "boss_move_completed": true
+        }
+      }
+    }
+  ],
+
+  "references": {
+    "Abhidharma1987": {
+      "id": "isbn:9780877730313",
+      "type": "book",
+      "authors": ["Dalai Lama XIV"],
+      "year": 1987,
+      "title": "Mind in Buddhist Psychology: Abhidharma Analysis"
+    },
+    "Einstein1920": {
+      "id": "https://einsteinpapers.press.princeton.edu/vol7-doc/290",
+      "type": "article",
+      "authors": ["Einstein, Albert"],
+      "year": 1920,
+      "title": "Ether and the Theory of Relativity"
+    },
+    "Lewis1986": {
+      "id": "isbn:9780631138819",
+      "type": "book",
+      "authors": ["Lewis, David"],
+      "year": 1986,
+      "title": "On the Plurality of Worlds"
+    }
+  },
+
+  "outcome": {
+    "taught": "Karma and the Block Universe share superficial structural similarity but diverge in ontology, causation, and purpose.",
+    "trajectory": "User moved from assumed identity to structural analogy with ontological separation.",
+    "indicators": [
+      "grasped_mech_karma_causal_web_001",
+      "grasped_mech_block_universe_eternalism_001",
+      "separated_ethics_from_geometry",
+      "answered_original_question_correctly"
+    ],
+    "feedback_pedagogy": {
+      "user_reported_click_turn": null,
+      "user_reported_click_cause": null,
+      "clarity_delta": { "before": null, "after": null },
+      "subjective_note": null
+    }
+  }
+}

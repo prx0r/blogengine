@@ -1,0 +1,54 @@
+{
+  "co_id": "co:uno_therapy3_t322_t334_nonverbal_t_t1",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3_t322_t334_nonverbal_transference_resistance",
+  "turn_index": 1,
+  "lineage": "Therapeutic",
+  "student_state": "justification",
+  "behavior_tags": [
+    "rationalization"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_01",
+    "function_name": "UM_01",
+    "mechanism_shape": "NONE",
+    "teaching_actions": [
+      "mirrors_statement",
+      "highlights_consequence"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.35,
+      "depth": 0.38,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_02",
+      "depth_discrete": "PD_02",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "go_along_compliantly",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "'I find it easier to think when I look away'—that's rationalization. Not 'I don't like eye contact' (honest) or 'I didn't notice' (denial), but 'it helps me think' (justification as virtue). The mirroring is clever: teacher takes their words but changes frame from thinking-aid ('look away') to relational-avoidance ('avoid my eyes'). Same behavior, different meaning. Will they accept the reframe or defend the rationalization? The sigh and window-looking next suggests they're stuck—can't acknowledge but can't deny.",
+  "accumulated_insight": "T2: Student rationalizes: 'I find it easier to think when I look away'—justification replaces defensiveness. From guarded_irritation (T1) to justification (T2): they shifted from defensive question to rational explanation. Teacher mirrors back ('You find it easier to think when you avoid my eyes'), changing 'look away' to 'avoid my eyes'—makes relational, not just spatial. Predicting unknown because mirroring could go several ways: awareness, more rationalization, or irritation at being contradicted.",
+  "abstract_pattern": "",
+  "visible_response": "You find it easier to think when you avoid my eyes.",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

@@ -1,0 +1,54 @@
+{
+  "co_id": "co:uno_therapy2_t1573_t1587_generaliz_t4",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy2_t1573_t1587_generalization_problem",
+  "turn_index": 4,
+  "lineage": "Therapeutic",
+  "student_state": "agreement",
+  "behavior_tags": [
+    "concession"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_02",
+    "function_name": "RM_02",
+    "mechanism_shape": "CAUSAL_CHAIN",
+    "teaching_actions": [
+      "establishes_cost",
+      "resets_question"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.35,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_02",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "Final turn: 'Vague? Yes, I’m vague.'. Reached agreement after 5 turns. Episode demonstrates causal_chain effectiveness in REMAKING work. Teaching complete for this sequence.",
+  "accumulated_insight": "T5 (Final): Student: 'Vague? Yes, I’m vague.'. Final state: agreement. Episode complete with 5 turns. Arc shows progression through REMAKING phase using causal_chain interventions. Teaching sequence addressed concession pattern.",
+  "abstract_pattern": "",
+  "visible_response": "As long as we talk in these vague generalities, we won’t get a clear idea of your internal difficulties... If you don’t go off to these generalities, what’s the problem you would like me to help you with?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

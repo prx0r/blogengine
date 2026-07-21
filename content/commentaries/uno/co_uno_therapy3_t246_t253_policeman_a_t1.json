@@ -1,0 +1,54 @@
+{
+  "co_id": "co:uno_therapy3_t246_t253_policeman_a_t1",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3_t246_t253_policeman_anxiety_causality",
+  "turn_index": 1,
+  "lineage": "Therapeutic",
+  "student_state": "dawning_awareness",
+  "behavior_tags": [
+    "insight_acquisition"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_01",
+    "function_name": "RM_01",
+    "mechanism_shape": "STRUCTURAL_ANALOGY",
+    "teaching_actions": [
+      "uses_metaphor",
+      "personifies_defense"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.5,
+      "depth": 0.38,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_02",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "T1 predicted ask_deeper_question. Now student: 'I didn’t see it before.'. The system_dynamics intervention produced shift to dawning_awareness. Using structural_analogy now. Watching how this develops.",
+  "accumulated_insight": "T2: Shift from fearful_disclosure to dawning_awareness. Student: 'I didn’t see it before.'. Previous system_dynamics intervention produced this response. Now using structural_analogy. Pattern: fearful_disclosure to dawning_awareness.",
+  "abstract_pattern": "",
+  "visible_response": "But notice now how this punitive mechanism comes in here to punish you?\nIt’s as if a policeman comes in to Taser you with anxiety, as if you broke the law by taking your side.\nDo you notice that?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

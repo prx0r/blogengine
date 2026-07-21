@@ -1,0 +1,56 @@
+{
+  "work_id": "work:t2-pubmed-baseline-functional-connectivity-of-the-basal-forebrain-cortical-circu",
+  "schema_version": 2,
+  "title": "Baseline functional connectivity of the basal forebrain-cortical circuit predict taVNS treatment response in primary insomnia: a randomized controlled trial and fMRI study.",
+  "authors": [
+    {
+      "name": "Qi, Meng"
+    },
+    {
+      "name": "Huang, Yiting"
+    },
+    {
+      "name": "Mai, Runru"
+    },
+    {
+      "name": "Yan, Zhaoxian"
+    },
+    {
+      "name": "Xu, Biyun"
+    },
+    {
+      "name": "Liu, Bo"
+    },
+    {
+      "name": "Zhang, Yue"
+    }
+  ],
+  "identifiers": {
+    "pmid": "40629377",
+    "doi": "10.1186/s12916-025-04126-7"
+  },
+  "publication": {
+    "journal": "BMC medicine",
+    "year": "2025"
+  },
+  "abstract": "Dysfunctional basal forebrain (BF) connectivity contributes to primary insomnia (PI). This study investigated whether transcutaneous auricular vagus nerve stimulation (taVNS) modulates BF functional connectivity (FC) in patients with PI and whether baseline FC predicts taVNS treatment response. Seventy patients with PI were randomized to real or sham taVNS for 4\u00a0weeks. Clinical assessments-including Pittsburgh Sleep Quality Index (PSQI], Insomnia Severity Index (ISI] and Zung's Self-Rating Anxiety (SAS], and Depression Scale (SDS)-and resting-state fMRI data were collected at baseline and after treatment. FC of the bilateral BF subregions (Ch_123, Ch_4) was analyzed, and pre-to-post intervention changes in FC and clinical scores were compared between groups. Baseline FC was used to predict treatment response using a support vector regression (SVR) model, validated on an independent dataset. Sixty-seven patients completed the study (33 real taVNS, 34 sham taVNS). Changes in clinical outcomes showed that real taVNS significantly reduce PSQI, ISI, and SAS scores compared to sham. FC analysis revealed reduced connectivity between bilateral BF and areas involved in visual (superior occipital gyrus, SOG; middle occipital gyrus, MOG; fusiform gyrus, FFG), somatosensory (supplementary motor area, SMA) cortex and medial prefrontal cortex (mPFC) after taVNS treatment. Reduced FC between bilateral BF and left MOG correlated positively with ISI improvement (r\u2009=\u20090.490, p\u2009=\u20090.008, Bonferroni correction). The SVR model effectively predicted treatment response based on BF-visual circuit connectivity (r\u2009=\u20090.520, p\u2009=\u20090.0014, 5000 permutation test) and generalized well to an independent dataset (r\u2009=\u20090.443, p\u2009=\u20090.0354, 5000 permutation test). Our findings suggest that taVNS may alleviate symptoms of primary insomnia through modulation of basal forebrain connectivity with visual, sensorimotor, and medial prefrontal cortical regions. Preliminary investigations indicate that baseline functional connectivity in the BF-visual circuit could represent a candidate biomarker for taVNS response, potentially informing personalized treatment strategies. The study was registered with the China Clinical Trial Registry (Clinical Trial No. ChiCTR1900022535).",
+  "phase_mapping": {
+    "phase": 11,
+    "phase_name": "Body-energy"
+  },
+  "bridge_tags": [
+    "interoception",
+    "body-energy",
+    "spiritus",
+    "embodied-cognition",
+    "functional-connectivity-of-basal-forebrain",
+    "primary-insomnia",
+    "transcutaneous-auricular-vagus-nerve-stimulation"
+  ],
+  "evaluation": "Quality pass v3 (score=44) \u2014 High-signal bridge paper for Body-energy.",
+  "assets": {
+    "pdf_path": null,
+    "nxml_path": null
+  },
+  "tier": 2
+}

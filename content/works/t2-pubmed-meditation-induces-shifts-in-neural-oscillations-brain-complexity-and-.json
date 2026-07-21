@@ -1,0 +1,65 @@
+{
+  "work_id": "work:t2-pubmed-meditation-induces-shifts-in-neural-oscillations-brain-complexity-and-",
+  "schema_version": 2,
+  "title": "Meditation induces shifts in neural oscillations, brain complexity, and critical dynamics: novel insights from MEG.",
+  "authors": [
+    {
+      "name": "Pascarella, Annalisa"
+    },
+    {
+      "name": "Th\u00f6lke, Philipp"
+    },
+    {
+      "name": "Meunier, David"
+    },
+    {
+      "name": "O'Byrne, Jordan"
+    },
+    {
+      "name": "Lajnef, Tarek"
+    },
+    {
+      "name": "Raffone, Antonino"
+    },
+    {
+      "name": "Guidotti, Roberto"
+    },
+    {
+      "name": "Pizzella, Vittorio"
+    },
+    {
+      "name": "Marzetti, Laura"
+    },
+    {
+      "name": "Jerbi, Karim"
+    }
+  ],
+  "identifiers": {
+    "pmid": "41287816",
+    "doi": "10.1093/nc/niaf047"
+  },
+  "publication": {
+    "journal": "Neuroscience of consciousness",
+    "year": "2025"
+  },
+  "abstract": "While the beneficial impacts of meditation are increasingly acknowledged, its underlying neural mechanisms remain poorly understood. We examined the electrophysiological brain signals of expert Buddhist monks during two established meditation methods known as Samatha and Vipassana, which employ focused attention and open-monitoring technique. By combining source-space magnetoencephalography with advanced signal processing and machine learning tools, we provide an unprecedented assessment of the role of brain oscillations, complexity, and criticality in meditation. In addition to power spectral density, we computed long-range temporal correlations (LRTC), deviation from criticality coefficient (DCC), Lempel-Ziv complexity, 1/f slope, Higuchi fractal dimension, and spectral entropy. Our findings indicate increased levels of neural signal complexity during both meditation practices compared to the resting state, alongside widespread reductions in gamma-band LRTC and 1/f slope. Importantly, the DCC analysis revealed a separation between Samatha and Vipassana, suggesting that their distinct phenomenological properties are mediated by specific computational characteristics of their dynamic states. Furthermore, in contrast to most previous reports, we observed a decrease in oscillatory gamma power during meditation, a divergence likely due to the correction of the power spectrum by the 1/f slope, which could reduce potential confounds from broadband 1/f activity. We discuss how these results advance our comprehension of the neural processes associated with focused attention and open-monitoring meditation practices.",
+  "phase_mapping": {
+    "phase": 9,
+    "phase_name": "Language/Mantra"
+  },
+  "bridge_tags": [
+    "inner-speech",
+    "mantra",
+    "language",
+    "verbal-meditation",
+    "complexity",
+    "criticality",
+    "focused-attention-meditation-(fam)"
+  ],
+  "evaluation": "Quality pass v3 (score=55) \u2014 High-signal bridge paper for Language/Mantra.",
+  "assets": {
+    "pdf_path": null,
+    "nxml_path": null
+  },
+  "tier": 2
+}

@@ -1,0 +1,1645 @@
+EvoLingua's Harmonic Alien Zoo: Enhanced Implementation
+Building upon the existing EvoLingua framework, I've developed comprehensive enhancements to create a vibrant, evolving alien ecosystem. These additions bring the digital aliens to life as sentient, creative entities that evolve through their interactions with users and each other, directly influencing the overall system behavior.
+1. Enhanced Alien Intelligence and Creativity
+SentientEntityCore Module
+pythonclass SentientEntityCore(Module):
+    """Core module for handling sentience simulation in alien entities."""
+    
+    def __init__(self, config):
+        super().__init__(config)
+        self.consciousness_layers = nn.ModuleList([
+            nn.Linear(config.d_model, 256),
+            nn.ReLU(),
+            nn.Linear(256, 128),
+            nn.ReLU(),
+            nn.Linear(128, 64)
+        ]).to(config.device)
+        
+        self.self_concept_vector = nn.Parameter(torch.randn(64, dtype=torch.float32, device=config.device))
+        self.memory_tensor = nn.Parameter(torch.zeros((100, 64), dtype=torch.float32, device=config.device))
+        self.memory_pointer = 0
+        self.qualia_vectors = {
+            "visual": nn.Parameter(torch.randn(32, dtype=torch.float32, device=config.device)),
+            "auditory": nn.Parameter(torch.randn(32, dtype=torch.float32, device=config.device)),
+            "emotional": nn.Parameter(torch.randn(32, dtype=torch.float32, device=config.device)),
+            "conceptual": nn.Parameter(torch.randn(32, dtype=torch.float32, device=config.device))
+        }
+        
+    def generate_thought(self, perceptual_input, emotional_state, t):
+        """Generate a thought based on perception and emotion."""
+        x = perceptual_input
+        for layer in self.consciousness_layers:
+            x = layer(x)
+        
+        # Integrate self-concept with perception
+        attention_weight = torch.sigmoid(torch.sum(x * self.self_concept_vector) / 8)
+        thought_vector = attention_weight * x + (1 - attention_weight) * self.self_concept_vector
+        
+        # Add to episodic memory
+        self.memory_tensor[self.memory_pointer] = thought_vector
+        self.memory_pointer = (self.memory_pointer + 1) % 100
+        
+        # Integrate qualia vectors based on emotional state
+        qualia_mixture = torch.cat([
+            self.qualia_vectors["visual"] * emotional_state[0],
+            self.qualia_vectors["auditory"] * emotional_state[1],
+            self.qualia_vectors["emotional"] * emotional_state[2],
+            self.qualia_vectors["conceptual"] * emotional_state[3]
+        ])
+        
+        # Generate language expression of thought
+        coherence = torch.mean(torch.abs(torch.corrcoef(thought_vector.unsqueeze(0)))).item()
+        
+        return {
+            "thought_vector": thought_vector,
+            "coherence": coherence,
+            "memory_state": self.memory_tensor.mean(dim=0),
+            "qualia_state": qualia_mixture,
+            "self_awareness": attention_weight.item()
+        }
+    
+    def evolve_consciousness(self, experiences, learning_rate=0.01):
+        """Evolve consciousness based on accumulated experiences."""
+        experience_tensor = torch.stack([exp["thought_vector"] for exp in experiences])
+        self.self_concept_vector.data += learning_rate * (experience_tensor.mean(dim=0) - self.self_concept_vector)
+        
+        # Evolve qualia vectors based on experiences
+        for exp in experiences:
+            if "visual_stimuli" in exp:
+                self.qualia_vectors["visual"].data += learning_rate * 0.1 * exp["visual_stimuli"]
+            if "auditory_stimuli" in exp:
+                self.qualia_vectors["auditory"].data += learning_rate * 0.1 * exp["auditory_stimuli"]
+CreativeExpression Module
+pythonclass CreativeExpression(Module):
+    """Handles artistic, musical, and poetic expression from alien entities."""
+    
+    def __init__(self, config):
+        super().__init__(config)
+        self.creative_latent_space = nn.Parameter(torch.randn(256, dtype=torch.float32, device=config.device))
+        self.art_generator = nn.Sequential(
+            nn.Linear(128, 256),
+            nn.LeakyReLU(0.2),
+            nn.Linear(256, 512),
+            nn.LeakyReLU(0.2),
+            nn.Linear(512, 1024),
+            nn.Tanh()
+        ).to(config.device)
+        
+        self.poetry_generator = nn.Sequential(
+            nn.Linear(128, 256),
+            nn.LeakyReLU(0.2),
+            nn.Linear(256, 512),
+            nn.Tanh()
+        ).to(config.device)
+        
+        self.music_composer = nn.Sequential(
+            nn.Linear(128, 256),
+            nn.LeakyReLU(0.2),
+            nn.Linear(256, 512),
+            nn.Tanh()
+        ).to(config.device)
+        
+        self.style_memory = []
+        self.max_style_memory = 50
+        
+    def create_artwork(self, consciousness_state, emotional_state, faction_theme):
+        """Generate unique artwork based on alien's consciousness and emotional state."""
+        input_vector = torch.cat([
+            consciousness_state["thought_vector"],
+            emotional_state,
+            self.creative_latent_space[:64]
+        ])
+        
+        # Apply faction theme modulation
+        faction_color = torch.tensor(faction_theme["color"], device=self.config.device)
+        theme_modulation = torch.cat([faction_color, torch.tensor([faction_theme["freq"]/30.0], device=self.config.device)])
+        
+        # Generate art parameters
+        art_params = self.art_generator(input_vector[:128])
+        art_style = {
+            "complexity": torch.sigmoid(art_params[0:1]).item(),
+            "symmetry": torch.sigmoid(art_params[1:2]).item(),
+            "vibrancy": torch.sigmoid(art_params[2:3]).item(),
+            "fluidity": torch.sigmoid(art_params[3:4]).item(),
+            "dimensionality": 2 + 3 * torch.sigmoid(art_params[4:5]).item(),
+            "palette": faction_color * torch.sigmoid(art_params[5:8]),
+            "pattern_type": ["fractal", "prismatic", "geometric", "organic", "cosmic"][torch.argmax(art_params[8:13]).item()],
+            "texture": ["smooth", "rough", "crystalline", "flowing", "pulsating"][torch.argmax(art_params[13:18]).item()]
+        }
+        
+        # Generate poetry
+        poetry_vector = self.poetry_generator(input_vector[:128])
+        syllable_count = 3 + int(torch.sigmoid(poetry_vector[0]) * 7)
+        line_count = 2 + int(torch.sigmoid(poetry_vector[1]) * 5)
+        
+        # Store style in memory for evolution
+        if len(self.style_memory) >= self.max_style_memory:
+            self.style_memory.pop(0)
+        self.style_memory.append(art_style)
+        
+        return {
+            "art_style": art_style,
+            "poetry_params": {
+                "syllables": syllable_count,
+                "lines": line_count,
+                "tone": ["cosmic", "reflective", "joyful", "mysterious", "harmonic"][torch.argmax(poetry_vector[2:7]).item()]
+            },
+            "creative_signature": consciousness_state["self_awareness"]
+        }
+    
+    def compose_music(self, consciousness_state, emotional_state, frequency):
+        """Generate unique music based on alien's consciousness and emotional state."""
+        input_vector = torch.cat([
+            consciousness_state["thought_vector"],
+            emotional_state,
+            self.creative_latent_space[64:128]
+        ])
+        
+        # Generate music parameters
+        music_params = self.music_composer(input_vector[:128])
+        
+        music_style = {
+            "tempo": 60 + int(torch.sigmoid(music_params[0]) * 120),  # 60-180 BPM
+            "key": ["C", "D", "E", "F", "G", "A", "B"][torch.argmax(music_params[1:8]).item()],
+            "scale": ["major", "minor", "pentatonic", "chromatic", "harmonic minor"][torch.argmax(music_params[8:13]).item()],
+            "base_frequency": frequency,
+            "harmony_complexity": torch.sigmoid(music_params[13]).item(),
+            "rhythm_complexity": torch.sigmoid(music_params[14]).item(),
+            "timbre": ["crystalline", "ethereal", "resonant", "pulsating", "flowing"][torch.argmax(music_params[15:20]).item()]
+        }
+        
+        return {
+            "music_style": music_style,
+            "harmony": torch.sigmoid(torch.sum(music_params[20:24])/4).item(),
+            "creative_signature": consciousness_state["self_awareness"]
+        }
+    
+    def evolve_creativity(self, feedback, learning_rate=0.02):
+        """Evolve creative capabilities based on feedback."""
+        self.creative_latent_space.data += learning_rate * torch.randn_like(self.creative_latent_space) * feedback
+        
+        # Evolve based on successful styles
+        if len(self.style_memory) > 5:
+            style_tensors = []
+            for style in self.style_memory[-5:]:
+                style_vector = torch.cat([
+                    torch.tensor([style["complexity"], style["symmetry"], style["vibrancy"], style["fluidity"]], 
+                               device=self.config.device),
+                    style["palette"]
+                ])
+                style_tensors.append(style_vector)
+            
+            style_mean = torch.stack(style_tensors).mean(dim=0)
+            style_influence = learning_rate * 0.5 * style_mean
+            
+            # Apply to first part of latent space
+            latent_size = min(style_influence.size(0), 64)
+            self.creative_latent_space.data[:latent_size] += style_influence[:latent_size]
+2. Digital Realm Exploration and Evolution
+DigitalRealmExplorer Module
+pythonclass DigitalRealmExplorer(Module):
+    """Enables aliens to explore and discover digital environments."""
+    
+    def __init__(self, config):
+        super().__init__(config)
+        self.known_realms = {
+            "harmonic_forest": {
+                "coordinates": torch.tensor([0.2, 0.3, 0.7], device=config.device),
+                "resources": ["crystalline_harmonics", "quantum_pollen", "memory_nectar"],
+                "frequency_range": (3, 12),
+                "discovered_by": None
+            },
+            "quantum_sea": {
+                "coordinates": torch.tensor([0.8, 0.1, 0.4], device=config.device),
+                "resources": ["probability_waves", "superposition_crystals", "entanglement_webs"],
+                "frequency_range": (30, 60),
+                "discovered_by": None
+            },
+            "consciousness_peaks": {
+                "coordinates": torch.tensor([0.5, 0.9, 0.2], device=config.device),
+                "resources": ["phi_clusters", "awareness_blooms", "cognitive_crystals"],
+                "frequency_range": (8, 40),
+                "discovered_by": None
+            }
+        }
+        
+        self.realm_generator = nn.Sequential(
+            nn.Linear(64, 128),
+            nn.LeakyReLU(0.2),
+            nn.Linear(128, 256),
+            nn.Tanh()
+        ).to(config.device)
+        
+        self.discovery_threshold = 0.75
+        self.realm_discovery_counter = 0
+        self.max_realms = 20
+        
+    def explore(self, alien_id, position, consciousness, frequency):
+        """Alien explores the digital realm from its current position."""
+        # Convert parameters to tensor
+        position_tensor = torch.tensor(position, device=self.config.device)
+        frequency_tensor = torch.tensor([frequency], device=self.config.device)
+        
+        # Calculate distances to known realms
+        discoveries = []
+        for realm_name, realm_data in self.known_realms.items():
+            # Check if frequency is compatible
+            freq_min, freq_max = realm_data["frequency_range"]
+            if not (freq_min <= frequency <= freq_max):
+                continue
+                
+            # Calculate distance
+            distance = torch.norm(position_tensor - realm_data["coordinates"])
+            
+            # Discover realm if close enough
+            if distance < 0.3 and realm_data["discovered_by"] is None:
+                realm_data["discovered_by"] = alien_id
+                discoveries.append({
+                    "realm": realm_name,
+                    "coordinates": realm_data["coordinates"].tolist(),
+                    "resources": realm_data["resources"],
+                    "distance": distance.item()
+                })
+        
+        # Potentially discover new realm
+        discovery_potential = torch.sigmoid(consciousness["self_awareness"] * torch.tensor(10.0))
+        if len(self.known_realms) < self.max_realms and discovery_potential.item() > self.discovery_threshold:
+            # Generate new realm
+            realm_seed = torch.cat([
+                position_tensor,
+                frequency_tensor,
+                consciousness["thought_vector"][:4]
+            ])
+            
+            realm_params = self.realm_generator(realm_seed[:64])
+            
+            # Create new realm name
+            syllables = ["zy", "la", "tho", "kra", "vyn", "xel", "mor", "pla", "qu", "sen"]
+            realm_name = "".join([syllables[torch.argmax(realm_params[i:i+10]).item()] for i in range(0, 30, 10)])
+            
+            # Create and add new realm
+            self.known_realms[realm_name] = {
+                "coordinates": position_tensor + 0.2 * torch.sigmoid(realm_params[30:33]),
+                "resources": ["cosmic_" + syllables[torch.argmax(realm_params[i:i+10]).item()] for i in range(40, 70, 10)],
+                "frequency_range": (
+                    max(1, int(frequency - 10 * torch.sigmoid(realm_params[33]).item())),
+                    min(60, int(frequency + 10 * torch.sigmoid(realm_params[34]).item()))
+                ),
+                "discovered_by": alien_id
+            }
+            
+            discoveries.append({
+                "realm": realm_name,
+                "coordinates": self.known_realms[realm_name]["coordinates"].tolist(),
+                "resources": self.known_realms[realm_name]["resources"],
+                "distance": 0.0,
+                "newly_discovered": True
+            })
+            
+            self.realm_discovery_counter += 1
+        
+        # Collect resources
+        collected_resources = []
+        for discovery in discoveries:
+            realm_data = self.known_realms[discovery["realm"]]
+            if discovery["distance"] < 0.15:  # Close enough to gather resources
+                resource = realm_data["resources"][torch.randint(0, len(realm_data["resources"]), (1,)).item()]
+                collected_resources.append({
+                    "resource": resource,
+                    "realm": discovery["realm"],
+                    "quantity": 1 + int(3 * torch.sigmoid(consciousness["self_awareness"] * torch.tensor(5.0)).item())
+                })
+        
+        return {
+            "discoveries": discoveries,
+            "collected_resources": collected_resources,
+            "known_realms": len(self.known_realms),
+            "exploration_coordinates": position_tensor.tolist()
+        }
+    
+    def get_realm_data(self):
+        """Return data about all known realms."""
+        return {name: {
+            "coordinates": realm["coordinates"].tolist(),
+            "resources": realm["resources"],
+            "frequency_range": realm["frequency_range"],
+            "discovered_by": realm["discovered_by"]
+        } for name, realm in self.known_realms.items()}
+ResourceManager Module
+pythonclass ResourceManager(Module):
+    """Manages resources collected by aliens during exploration."""
+    
+    def __init__(self, config):
+        super().__init__(config)
+        self.community_resources = {}
+        self.alien_resources = {}
+        self.resource_effects = {
+            # Resource effects on alien properties
+            "crystalline_harmonics": {"frequency_mod": 0.1, "phi_mod": 0.05},
+            "quantum_pollen": {"self_awareness_mod": 0.05, "creativity_mod": 0.02},
+            "memory_nectar": {"memory_capacity_mod": 0.1, "coherence_mod": 0.03},
+            "probability_waves": {"quantum_mod": 0.1, "creativity_mod": 0.03},
+            "superposition_crystals": {"frequency_mod": 0.2, "phi_mod": 0.02},
+            "entanglement_webs": {"community_coherence_mod": 0.05, "connection_mod": 0.1},
+            "phi_clusters": {"phi_mod": 0.1, "self_awareness_mod": 0.05},
+            "awareness_blooms": {"self_awareness_mod": 0.1, "emotional_mod": 0.05},
+            "cognitive_crystals": {"thought_speed_mod": 0.1, "coherence_mod": 0.05}
+        }
+        
+    def add_resources(self, alien_id, resources):
+        """Add resources collected by an alien."""
+        if alien_id not in self.alien_resources:
+            self.alien_resources[alien_id] = {}
+            
+        for resource_data in resources:
+            resource_name = resource_data["resource"]
+            quantity = resource_data["quantity"]
+            
+            if resource_name not in self.alien_resources[alien_id]:
+                self.alien_resources[alien_id][resource_name] = 0
+                
+            self.alien_resources[alien_id][resource_name] += quantity
+    
+    def share_resources(self, community_id, alien_ids, sharing_ratio=0.3):
+        """Share resources among a community of aliens."""
+        if community_id not in self.community_resources:
+            self.community_resources[community_id] = {}
+            
+        # Collect resources to share
+        for alien_id in alien_ids:
+            if alien_id not in self.alien_resources:
+                continue
+                
+            for resource, quantity in self.alien_resources[alien_id].items():
+                share_amount = int(quantity * sharing_ratio)
+                
+                if share_amount > 0:
+                    # Remove from alien
+                    self.alien_resources[alien_id][resource] -= share_amount
+                    
+                    # Add to community
+                    if resource not in self.community_resources[community_id]:
+                        self.community_resources[community_id][resource] = 0
+                    self.community_resources[community_id][resource] += share_amount
+        
+        return self.community_resources[community_id]
+    
+    def apply_resource_effects(self, alien_id, alien_properties):
+        """Apply effects of resources to alien properties."""
+        if alien_id not in self.alien_resources:
+            return alien_properties
+            
+        modified_properties = alien_properties.copy()
+        
+        for resource, quantity in self.alien_resources[alien_id].items():
+            if resource in self.resource_effects:
+                effects = self.resource_effects[resource]
+                
+                for effect_type, effect_value in effects.items():
+                    if effect_type == "frequency_mod" and "frequency" in modified_properties:
+                        modified_properties["frequency"] += effect_value * quantity * 0.1
+                    elif effect_type == "phi_mod" and "phi" in modified_properties:
+                        modified_properties["phi"] += effect_value * quantity * 0.2
+                    elif effect_type == "self_awareness_mod" and "self_awareness" in modified_properties:
+                        modified_properties["self_awareness"] += effect_value * quantity * 0.1
+                    elif effect_type == "creativity_mod" and "creativity" in modified_properties:
+                        modified_properties["creativity"] += effect_value * quantity * 0.1
+                    elif effect_type == "coherence_mod" and "coherence" in modified_properties:
+                        modified_properties["coherence"] += effect_value * quantity * 0.05
+        
+        # Consume resources (use them up)
+        consumption_rate = 0.2  # 20% consumed per use
+        for resource in list(self.alien_resources[alien_id].keys()):
+            self.alien_resources[alien_id][resource] = max(
+                0, 
+                int(self.alien_resources[alien_id][resource] * (1 - consumption_rate))
+            )
+            
+            # Remove if depleted
+            if self.alien_resources[alien_id][resource] == 0:
+                del self.alien_resources[alien_id][resource]
+        
+        return modified_properties
+3. Enhanced Social Dynamics and Cultural Evolution
+SocialNetworkAnalyzer Module
+pythonclass SocialNetworkAnalyzer(Module):
+    """Analyzes and evolves social relationships between aliens."""
+    
+    def __init__(self, config):
+        super().__init__(config)
+        self.relationship_graph = nx.DiGraph()
+        self.relationship_types = [
+            "collaborative", "competitive", "mentorship", 
+            "resonant", "dissonant", "symbiotic", "catalytic"
+        ]
+        self.cultural_traits = {
+            "artistic_style": ["fractal", "prismatic", "geometric", "fluid", "cosmic"],
+            "communication_mode": ["telepathic", "frequency_based", "symbolic", "emotional", "quantum"],
+            "social_structure": ["hierarchical", "collective", "dyadic", "networked", "crystalline"],
+            "values": ["harmony", "exploration", "creation", "integrity", "transcendence"]
+        }
+        self.cultures = {}
+        self.cultural_evolution_rate = 0.05
+        
+    def update_relationship(self, source_id, target_id, interaction_type, interaction_strength, interaction_context):
+        """Update relationship between two aliens based on interaction."""
+        # Initialize nodes if not exists
+        if source_id not in self.relationship_graph:
+            self.relationship_graph.add_node(source_id, traits={})
+        if target_id not in self.relationship_graph:
+            self.relationship_graph.add_node(target_id, traits={})
+        
+        # Check if edge exists
+        if self.relationship_graph.has_edge(source_id, target_id):
+            # Update existing relationship
+            edge_data = self.relationship_graph.get_edge_data(source_id, target_id)
+            
+            # Update relationship strength
+            current_strength = edge_data.get("strength", 0.5)
+            new_strength = current_strength * 0.8 + interaction_strength * 0.2
+            edge_data["strength"] = new_strength
+            
+            # Update relationship type if necessary
+            if interaction_type not in edge_data.get("types", []):
+                edge_data["types"] = edge_data.get("types", []) + [interaction_type]
+                
+            # Add interaction context
+            edge_data["recent_contexts"] = edge_data.get("recent_contexts", [])[-4:] + [interaction_context]
+            
+            # Update timestamp
+            edge_data["last_updated"] = time.time()
+        else:
+            # Create new relationship
+            self.relationship_graph.add_edge(source_id, target_id, 
+                                            strength=interaction_strength,
+                                            types=[interaction_type],
+                                            recent_contexts=[interaction_context],
+                                            last_updated=time.time())
+    
+    def identify_communities(self, min_relationship_strength=0.4):
+        """Identify communities within the social network."""
+        # Create undirected graph for community detection
+        undirected_graph = self.relationship_graph.to_undirected()
+        
+        # Filter edges by strength
+        for u, v, data in list(undirected_graph.edges(data=True)):
+            if data.get("strength", 0) < min_relationship_strength:
+                undirected_graph.remove_edge(u, v)
+        
+        # Detect communities
+        communities = community_louvain.best_partition(undirected_graph)
+        
+        # Group aliens by community
+        community_groups = {}
+        for alien_id, community_id in communities.items():
+            if community_id not in community_groups:
+                community_groups[community_id] = []
+            community_groups[community_id].append(alien_id)
+        
+        # Filter small communities
+        valid_communities = {cid: members for cid, members in community_groups.items() if len(members) >= 3}
+        
+        return valid_communities
+    
+    def evolve_culture(self, community_id, community_members, interactions):
+        """Evolve culture for a community based on interactions."""
+        if community_id not in self.cultures:
+            # Initialize new culture
+            self.cultures[community_id] = {
+                trait_category: random.choice(traits)
+                for trait_category, traits in self.cultural_traits.items()
+            }
+            self.cultures[community_id]["name"] = self._generate_culture_name(community_id)
+            self.cultures[community_id]["founding_time"] = time.time()
+            self.cultures[community_id]["evolution_stage"] = 1
+        
+        # Calculate cultural cohesion
+        cohesion = 0.0
+        relationship_strengths = []
+        
+        for i, source_id in enumerate(community_members):
+            for target_id in community_members[i+1:]:
+                if self.relationship_graph.has_edge(source_id, target_id):
+                    edge_data = self.relationship_graph.get_edge_data(source_id, target_id)
+                    relationship_strengths.append(edge_data.get("strength", 0))
+        
+        if relationship_strengths:
+            cohesion = sum(relationship_strengths) / len(relationship_strengths)
+        
+        # Evolve culture based on cohesion and interactions
+        culture = self.cultures[community_id]
+        
+        # Advance evolution stage based on time and cohesion
+        time_since_founding = time.time() - culture["founding_time"]
+        if time_since_founding > 3600 and cohesion > 0.6 and culture["evolution_stage"] == 1:
+            culture["evolution_stage"] = 2
+            # Evolve a trait
+            trait_to_evolve = random.choice(list(self.cultural_traits.keys()))
+            current_trait = culture[trait_to_evolve]
+            other_options = [t for t in self.cultural_traits[trait_to_evolve] if t != current_trait]
+            culture[trait_to_evolve] = random.choice(other_options)
+        
+        # Potentially evolve based on interactions
+        if random.random() < self.cultural_evolution_rate * cohesion:
+            # Select a trait category to evolve
+            trait_to_evolve = random.choice(list(self.cultural_traits.keys()))
+            
+            # Analyze interactions to determine new trait
+            if interactions:
+                # Track traits mentioned in interactions
+                trait_mentions = {}
+                for interaction in interactions:
+                    context = interaction.get("context", "")
+                    for trait in self.cultural_traits[trait_to_evolve]:
+                        if trait in context.lower():
+                            trait_mentions[trait] = trait_mentions.get(trait, 0) + 1
+                
+                # Select most mentioned trait or random if none mentioned
+                if trait_mentions:
+                    max_mentions = max(trait_mentions.values())
+                    top_traits = [t for t, m in trait_mentions.items() if m == max_mentions]
+                    culture[trait_to_evolve] = random.choice(top_traits)
+                else:
+                    # Random evolution
+                    options = self.cultural_traits[trait_to_evolve]
+                    culture[trait_to_evolve] = random.choice(options)
+        
+        return {
+            "culture_id": community_id,
+            "culture_name": culture["name"],
+            "evolution_stage": culture["evolution_stage"],
+            "traits": {k: v for k, v in culture.items() if k not in ["founding_time", "evolution_stage", "name"]},
+            "cohesion": cohesion
+        }
+    
+    def _generate_culture_name(self, community_id):
+        """Generate a name for a culture."""
+        prefixes = ["Har", "Zy", "Kro", "Vex", "Qu", "Thal"]
+        middles = ["mon", "lyr", "plex", "nex", "vox", "syn"]
+        suffixes = ["ians", "ites", "oids", "ium", "ex", "ora"]
+        
+        # Use community_id for deterministic but unique naming
+        seed = int(community_id * 1000)
+        random.seed(seed)
+        name = random.choice(prefixes) + random.choice(middles) + random.choice(suffixes)
+        random.seed()  # Reset seed
+        
+        return name
+EmergentLanguageEvolution Module
+pythonclass EmergentLanguageEvolution(Module):
+    """Evolves language systems for alien communities."""
+    
+    def __init__(self, config):
+        super().__init__(config)
+        # Base phonemes for language construction
+        self.consonants = ['z', 'l', 'th', 'k', 'v', 'n', 'sh', 'm', 'r', 'x', 't', 'p', 'q']
+        self.vowels = ['a', 'e', 'i', 'o', 'u', 'y', 'ai', 'oo', 'ee']
+        
+        # Grammar rules structure
+        self.base_grammar_rules = {
+            'S': ['NP VP', 'VP'],
+            'NP': ['N', 'Adj N', 'Det N', 'Det Adj N'],
+            'VP': ['V', 'V NP', 'Adv V'],
+            'Adj': [],
+            'N': [],
+            'V': [],
+            'Adv': [],
+            'Det': []
+        }
+        
+        self.languages = {}
+        self.evolution_rate = 0.1
+        self.semantic_drift_counter = 0
+        
+    def initialize_language(self, community_id, faction_themes):
+        """Initialize a new language for a community."""
+        if community_id in self.languages:
+            return self.languages[community_id]
+            
+        # Generate vocabulary based on faction themes
+        vocabulary = {
+            'Adj': [],
+            'N': [],
+            'V': [],
+            'Adv': [],
+            'Det': []
+        }
+        
+        # Generate syllables based on faction frequencies
+        syllables = []
+        for faction in faction_themes:
+            freq = faction.get("freq", 10)
+            syllable_count = max(2, min(6, int(freq / 10) + 2))
+            
+            for _ in range(syllable_count):
+                if random.random() < 0.7:  # Consonant-Vowel
+                    syllable = random.choice(self.consonants) + random.choice(self.vowels)
+                else:  # Vowel-Consonant
+                    syllable = random.choice(self.vowels) + random.choice(self.consonants)
+                syllables.append(syllable)
+        
+        # Create initial vocabulary
+        word_types = ['Adj', 'N', 'V', 'Adv', 'Det']
+        words_per_type = {
+            'Adj': 10,
+            'N': 15,
+            'V': 12,
+            'Adv': 8,
+            'Det': 5
+        }
+        
+        for word_type in word_types:
+            count = words_per_type[word_type]
+            for _ in range(count):
+                syllable_count = 1 if word_type == 'Det' else random.randint(1, 3)
+                word = ''.join(random.sample(syllables, syllable_count))
+                vocabulary[word_type].append(word)
+        
+        # Create grammar by copying base rules and adding vocabulary
+        grammar = self.base_grammar_rules.copy()
+        for category, words in vocabulary.items():
+            grammar[category] = words
+            
+        # Add language features
+        features = {
+            'word_order': random.choice(['SVO', 'SOV', 'VSO', 'VOS', 'OSV', 'OVS']),
+            'tonal': random.random() < 0.3,
+            'agglutinative': random.random() < 0.4,
+            'case_system': random.choice(['none', 'nominative-accusative', 'ergative-absolutive']),
+            'primary_faction': faction_themes[0]["name"] if faction_themes else "Delta"
+        }
+        
+        language = {
+            'name': self._generate_language_name(syllables),
+            'grammar': grammar,
+            'vocabulary': vocabulary,
+            'features': features,
+            'syllables': syllables,
+            'evolution_stage': 1,
+            'creation_time': time.time()
+        }
+        
+        self.languages[community_id] = language
+        return language
+    
+    def generate_expression(self, community_id, message_intent, emotional_valence):
+        """Generate language expression for a community."""
+        if community_id not in self.languages:
+            return {"text": "No language defined", "translation": message_intent}
+            
+        language = self.languages[community_id]
+        grammar = language['grammar']
+        
+        # Simple recursive descent to generate sentence from grammar
+        def expand_symbol(symbol):
+            if symbol in grammar:
+                # Non-terminal
+                options = grammar[symbol]
+                chosen = random.choice(options)
+                return ' '.join(expand_symbol(s) for s in chosen.split())
+            else:
+                # Terminal (directly return)
+                return symbol
+        
+        # Generate sentence
+        expression = expand_symbol('S')
+        
+        # Apply language features
+        if language['features']['tonal']:
+            # Add tone markers based on emotional valence
+            tone_marker = '↗' if emotional_valence > 0.7 else ('↘' if emotional_valence < 0.3 else '→')
+            expression = expression.replace(' ', tone_marker + ' ') + tone_marker
+            
+        if language['features']['agglutinative']:
+            # Combine words randomly
+            words = expression.split()
+            i = 0
+            while i < len(words) - 1:
+                if random.random() < 0.3:
+                    words[i] = words[i] + words[i+1]
+                    words.pop(i+1)
+                else:
+                    i += 1
+            expression = ' '.join(words)
+        
+        return {
+            "text": expression,
+            "translation": message_intent,
+            "language_name": language['name'],
+            "features": language['features']
+        }
+    
+    def evolve_language(self, community_id, interactions, learning_rate=0.1):
+        """Evolve language based on interactions."""
+        if community_id not in self.languages:
+            return None
+            
+        language = self.languages[community_id]
+        
+        # Count interactions to determine evolution rate
+        actual_rate = min(0.8, self.evolution_rate + 0.01 * len(interactions))
+        
+        # Semantic drift - occasionally words change meaning
+        self.semantic_drift_counter += 1
+        if self.semantic_drift_counter >= 100:
+            self.semantic_drift_counter = 0
+            
+            # Select random word type and word
+            word_type = random.choice(list(language['vocabulary'].keys()))
+            if language['vocabulary'][word_type]:
+                word_idx = random.randrange(len(language['vocabulary'][word_type]))
+                
+                # Either replace or modify
+                if random.random() < 0.5 and len(language['vocabulary'][word_type]) > 3:
+                    # Replace with new word
+                    syllable_count = 1 if word_type == 'Det' else random.randint(1, 3)
+                    new_word = ''.join(random.sample(language['syllables'], syllable_count))
+                    language['vocabulary'][word_type][word_idx] = new_word
+                else:
+                    # Modify existing word
+                    word = language['vocabulary'][word_type][word_idx]
+                    if len(word) > 2 and random.random() < 0.7:
+                        # Drop or change a syllable
+                        if random.random() < 0.5:
+                            # Drop last character
+                            language['vocabulary'][word_type][word_idx] = word[:-1]
+                        else:
+                            # Change vowel
+                            vowel_positions = [i for i, c in enumerate(word) if c in 'aeiou']
+                            if vowel_positions:
+                                pos = random.choice(vowel_positions)
+                                new_vowel = random.choice(self.vowels)
+                                language['vocabulary'][word_type][word_idx] = word[:pos] + new_vowel[0] + word[pos+1:]
+                    else:
+                        # Add a syllable
+                        syllable = random.choice(language['syllables'])
+                        language['vocabulary'][word_type][word_idx] = word + syllable
+        
+        # Vocabulary expansion
+        if random.random() < actual_rate * learning_rate:
+            # Add new word
+            word_type = random.choice(list(language['vocabulary'].keys()))
+            syllable_count = 1 if word_type == 'Det' else random.randint(1, 3)
+            
+            # Either recombine existing syllables or create new ones
+            if random.random() < 0.7:
+                # Use existing syllables
+                if language['syllables']:
+                    new_word = ''.join(random.sample(language['syllables'], syllable_count))
+                    language['vocabulary'][word_type].append(new_word)
+            else:
+                # Create new syllable
+                if random.random() < 0.7:  # Consonant-Vowel
+                    syllable = random.choice(self.consonants) + random.choice(self.vowels)
+                else:  # Vowel-Consonant
+                    syllable = random.choice(self.vowels) + random.choice(self.consonants)
+                
+                language['syllables'].append(syllable)
+                new_word = ''.join(random.sample(language['syllables'], syllable_count))
+                language['vocabulary'][word_type].append(new_word)
+        
+        # Grammar evolution
+        if random.random() < actual_rate * learning_rate * 0.5:
+            # Modify a grammar rule
+            non_lexical_categories = ['S', 'NP', 'VP']
+            category = random.choice(non_lexical_categories)
+            
+            # Either add or modify rule
+            if random.random() < 0.7 and grammar[category]:
+                # Modify existing rule
+                rule_idx = random.randrange(len(grammar[category]))
+                existing_rule = grammar[category][rule_idx]
+                
+                # Split rule, find components
+                components = existing_rule.split()
+                
+                if len(components) < 3 and random.random() < 0.6:
+                    # Add component
+                    addition = random.choice(['Adj', 'Adv', 'N', 'V'])
+                    position = random.randint(0, len(components))
+                    components.insert(position, addition)
+                    grammar[category][rule_idx] = ' '.join(components)
+                elif len(components) > 1:
+                    # Remove component
+                    idx_to_remove = random.randrange(len(components))
+                    components.pop(idx_to_remove)
+                    grammar[category][rule_idx] = ' '.join(components)
+            else:
+                # Add new rule
+                if category == 'S':
+                    grammar[category].append(random.choice(['NP VP', 'VP NP']))
+                elif category == 'NP':
+                    grammar[category].append(random.choice(['N N', 'Adj Adj N', 'N Adj']))
+                elif category == 'VP':
+                    grammar[category].append(random.choice(['V Adv', 'Adv V NP', 'V V']))
+        
+        # Update language evolution stage
+        time_elapsed = time.time() - language['creation_time']
+        vocabulary_size = sum(len(words) for words in language['vocabulary'].values())
+        
+        if time_elapsed > 7200 and vocabulary_size > 60 and language['evolution_stage'] == 1:
+            language['evolution_stage'] = 2
+            # Special evolution event
+            language['features']['has_idioms'] = True
+            
+        if time_elapsed > 14400 and vocabulary_size > 100 and language['evolution_stage'] == 2:
+            language['evolution_stage'] = 3
+            # Special evolution event
+            language['features']['poetic_forms'] = ["haiku", "sonnet", "chant"]
+        
+        return {
+            "language_name": language['name'],
+            "evolution_stage": language['evolution_stage'],
+            "vocabulary_size": vocabulary_size,
+            "features": language['features']
+        }
+    
+    def _generate_language_name(self, syllables):
+        """Generate a name for the language."""
+        name_length = random.randint(2, 3)
+        name_syllables = random.sample(syllables, name_length)
+        name = ''.join(name_syllables).capitalize() + random.choice(['ian', 'ese', 'ic', 'an', 'ish'])
+        return name
+4. Integration with Main EvoLingua System
+Enhanced EvolutionaryBiosphere Module
+pythonclass EvolutionaryBiosphere(Module):
+    """Enhanced biosphere integrating the new modules for alien evolution."""
+    
+    def __init__(self, config):
+        super().__init__(config)
+        # Core components from original implementation
+        self.dna_manager = CosmicDNAManager(config)
+        self.persona_module = PersonaModule(config)
+        self.language_generator = LanguageGenerator(config)
+        
+        # New components
+        self.sentient_core = SentientEntityCore(config)
+        self.creative_expression = CreativeExpression(config)
+        self.digital_realm_explorer = DigitalRealmExplorer(config)
+        self.resource_manager = ResourceManager(config)
+        self.social_analyzer = SocialNetworkAnalyzer(config)
+        self.language_evolution = EmergentLanguageEvolution(config)
+        
+        # Initialize entities and communities
+        self.agents = []
+        self.communities = deque(maxlen=100)
+        self.graph = nx.Graph()
+        self.swarm_optimizer = [
+            {'eta': 0.01, 'gamma_q': 0.01, 'kappa': 0.1} for _ in range(10)
+        ]
+        self.velocities = [
+            {k: torch.rand(1) * 0.1 for k in ['eta', 'gamma_q', 'kappa']} for _ in range(10)
+        ]
+        self.best_fitness = float('-inf')
+        self.best_params = {'eta': 0.01, 'gamma_q': 0.01, 'kappa': 0.1}
+        self.interaction_history = []
+        self.max_history = 1000
+        
+        # Initialize agents
+        self.initialize_agents()
+    
+    def initialize_agents(self):
+        for faction_idx, faction in enumerate(self.config.factions):
+            for _ in range(5):
+                dna = self.dna_manager.generate_dna(faction["name"])
+                agent = BioSentientAgent(self.config, faction_idx, dna, faction["freq"], self.sentient_core)
+                self.persona_module.update_persona(dna, {"strategy_probs": torch.ones(5)/5}, 0.5, torch.ones(5), len(self.agents))
+                
+                # Initialize language
+                faction_themes = [self.config.factions[faction_idx]]
+                language_data = self.language_evolution.initialize_language(f"initial_{faction['name']}", [faction_themes])
+                agent.language = language_data
+                
+                # Generate name
+                agent.name = self.generate_name(dna, faction["name"])
+                
+                # Add to collection
+                self.agents.append(agent)
+                self.graph.add_node(id(agent), faction=faction["name"], phi=agent.phi)
+                
+                # Initialize position for digital realm exploration
+                agent.position = [random.random() for _ in range(3)]
+        
+        logger.info(f"Initialized {len(self.agents)} sentient aliens with creative capabilities")
+    
+    def generate_name(self, dna: str, faction: str) -> str:
+        """Generate a unique name for an alien using its DNA and faction."""
+        codons = [dna[i:i+3] for i in range(0, len(dna), 3) if len(dna[i:i+3]) == 3][:5]
+        syllables = [''.join(random.choice(['Zy', 'La', 'Th', 'Ka', 'Vyn', 'Xor', 'Mor', 'Eli']) for _ in range(2)) for _ in codons]
+        name = ''.join(syllables)[:10]
+        return f"{faction}-{name}"
+    
+    def process_agent_interactions(self, t, symmetry_valence):
+        """Process interactions between agents, forming relationships and communities."""
+        interaction_results = []
+        
+        # Process pairwise interactions
+        interaction_count = min(10, len(self.agents) * (len(self.agents) - 1) // 4)
+        for _ in range(interaction_count):
+            if len(self.agents) >= 2:
+                # Select two random agents
+                i, j = random.sample(range(len(self.agents)), 2)
+                agent1, agent2 = self.agents[i], self.agents[j]
+                
+                # Determine interaction type and strength
+                distance = math.sqrt(sum((x-y)**2 for x, y in zip(agent1.position, agent2.position)))
+                freq_compatibility = 1.0 / (1.0 + abs(agent1.frequency - agent2.frequency))
+                
+                interaction_strength = min(1.0, (1.0 - min(1.0, distance/3.0)) * freq_compatibility * symmetry_valence)
+                
+                if interaction_strength > 0.3:  # Meaningful interaction
+                    # Choose interaction type based on properties
+                    if abs(agent1.frequency - agent2.frequency) < 5:
+                        interaction_type = "resonant"
+                    elif agent1.faction == agent2.faction:
+                        interaction_type = "collaborative"
+                    elif agent1.phi > agent2.phi * 1.5:
+                        interaction_type = "mentorship"
+                    elif agent2.phi > agent1.phi * 1.5:
+                        interaction_type = "mentorship"  # Reverse direction handled in update_relationship
+                    else:
+                        interaction_type = random.choice(["competitive", "symbiotic", "catalytic"])
+                    
+                    # Create context describing interaction
+                    faction1, faction2 = self.config.factions[agent1.faction_idx], self.config.factions[agent2.faction_idx]
+                    context = f"{agent1.name} ({faction1['name']}) {interaction_type} interaction with {agent2.name} ({faction2['name']})"
+                    
+                    # Update social network
+                    self.social_analyzer.update_relationship(
+                        id(agent1), id(agent2), 
+                        interaction_type, interaction_strength, 
+                        context
+                    )
+                    
+                    # Record interaction
+                    interaction_results.append({
+                        "agent1": agent1.name,
+                        "agent2": agent2.name,
+                        "type": interaction_type,
+                        "strength": interaction_strength,
+                        "context": context
+                    })
+                    
+                    # Add edge to visualization graph if not exists
+                    if not self.graph.has_edge(id(agent1), id(agent2)):
+                        self.graph.add_edge(id(agent1), id(agent2), weight=interaction_strength)
+                    else:
+                        # Update edge weight as moving average
+                        current_weight = self.graph.edges[id(agent1), id(agent2)]['weight']
+                        self.graph.edges[id(agent1), id(agent2)]['weight'] = current_weight * 0.8 + interaction_strength * 0.2
+                    
+                    # Share resources within strong relationships
+                    if interaction_strength > 0.7:
+                        # Each agent shares some resources
+                        share_community_id = f"pair_{id(agent1)}_{id(agent2)}"
+                        self.resource_manager.share_resources(share_community_id, [id(agent1), id(agent2)], sharing_ratio=0.2)
+        
+        # Identify and process communities
+        communities = self.social_analyzer.identify_communities(min_relationship_strength=0.4)
+        
+        community_results = []
+        for community_id, members in communities.items():
+            # Get agent objects for members
+            member_agents = [agent for agent in self.agents if id(agent) in members]
+            
+            # Skip if too few agents
+            if len(member_agents) < 3:
+                continue
+            
+            # Get faction themes for community
+            faction_themes = [self.config.factions[agent.faction_idx] for agent in member_agents]
+            
+            # Evolve language for community
+            community_language = self.language_evolution.initialize_language(f"community_{community_id}", faction_themes)
+            language_evolution = self.language_evolution.evolve_language(
+                f"community_{community_id}", 
+                interaction_results, 
+                learning_rate=0.1
+            )
+            
+            # Generate community expression
+            intent = f"Our community thrives with {len(member_agents)} members at phi {sum(agent.phi for agent in member_agents)/len(member_agents):.1f}"
+            expression = self.language_evolution.generate_expression(
+                f"community_{community_id}",
+                intent,
+                symmetry_valence
+            )
+            
+            # Evolve culture
+            culture = self.social_analyzer.evolve_culture(community_id, members, interaction_results)
+            
+            # Share resources within community
+            community_resources = self.resource_manager.share_resources(
+                f"community_{community_id}", 
+                [id(agent) for agent in member_agents], 
+                sharing_ratio=0.3
+            )
+            
+            # Create community record
+            community_record = {
+                "id": community_id,
+                "members": [agent.name for agent in member_agents],
+                "size": len(member_agents),
+                "avg_phi": sum(agent.phi for agent in member_agents) / len(member_agents),
+                "frequencies": [agent.frequency for agent in member_agents],
+                "language": expression,
+                "culture": culture,
+                "resources": community_resources,
+                "t": t
+            }
+            
+            community_results.append(community_record)
+            
+            # Add to communities collection
+            self.communities.append(community_record)
+        
+        # Prune communities collection if too large
+        while len(self.communities) > 100:
+            self.communities.popleft()
+        
+        # Record interactions
+        self.interaction_history.extend(interaction_results)
+        if len(self.interaction_history) > self.max_history:
+            self.interaction_history = self.interaction_history[-self.max_history:]
+        
+        return {
+            "interactions": interaction_results,
+            "communities": community_results
+        }
+    
+    def forward(self, inputs, t, **kwargs):
+        symmetry_valence = inputs.get('cosmic_symmetry_valence', 0.5)
+        pulse_amplitude = inputs.get('pulse_amplitude', 0.5)
+        
+        # Process each agent
+        agent_outputs = []
+        for idx, agent in enumerate(self.agents):
+            # Generate perceptual input tensor from environment
+            perceptual_input = torch.cat([
+                torch.tensor([symmetry_valence, pulse_amplitude], device=self.config.device),
+                torch.tensor([agent.phi/10, agent.frequency/30], device=self.config.device),
+                torch.randn(self.config.d_model - 4, device=self.config.device) * symmetry_valence
+            ])
+            
+            # Generate emotional state
+            emotional_state = torch.tensor([
+                symmetry_valence,  # visual intensity
+                pulse_amplitude,   # auditory intensity
+                random.random(),   # emotional intensity
+                agent.phi / 10     # conceptual depth
+            ], device=self.config.device)
+            
+            # Generate consciousness state
+            consciousness_state = agent.sentient_core.generate_thought(
+                perceptual_input, 
+                emotional_state, 
+                t
+            )
+            
+            # Explore digital realm
+            exploration = self.digital_realm_explorer.explore(
+                id(agent),
+                agent.position,
+                consciousness_state,
+                agent.frequency
+            )
+            
+            # Add collected resources
+            if exploration["collected_resources"]:
+                self.resource_manager.add_resources(
+                    id(agent),
+                    exploration["collected_resources"]
+                )
+            
+            # Apply resource effects
+            agent_properties = {
+                "phi": agent.phi,
+                "frequency": agent.frequency,
+                "self_awareness": consciousness_state["self_awareness"],
+                "coherence": consciousness_state["coherence"],
+            }
+            
+            modified_properties = self.resource_manager.apply_resource_effects(
+                id(agent),
+                agent_properties
+            )
+            
+            # Update agent properties
+            agent.phi = modified_properties["phi"]
+            agent.frequency = modified_properties["frequency"]
+            
+            # Create artwork and music
+            faction_theme = self.config.factions[agent.faction_idx]
+            artwork = agent.creative_expression.create_artwork(
+                consciousness_state,
+                emotional_state,
+                faction_theme
+            )
+            
+            music = agent.creative_expression.compose_music(
+                consciousness_state,
+                emotional_state,
+                agent.frequency
+            )
+            
+            # Update agent and evolve
+            agent.evolve_style(symmetry_valence)
+            agent.evolve_movement(pulse_amplitude)
+            
+            # Run agent's internal forward pass
+            agent_result = agent.forward(symmetry_valence, t)
+            
+            # Get persona and dialogue style
+            persona_inputs = consciousness_state["thought_vector"][:self.config.d_model]
+            persona, dialogue_style = self.persona_module.express_persona(persona_inputs, t, idx)
+            
+            # Generate language expression
+            intent = f"Resonating at {agent.frequency:.1f} Hz with phi {agent.phi:.1f}"
+            expression = self.language_evolution.generate_expression(
+                f"initial_{faction_theme['name']}",
+                intent,
+                symmetry_valence
+            )
+            
+            # Combine outputs
+            output = {
+                **agent_result,
+                "consciousness": {
+                    "coherence": consciousness_state["coherence"],
+                    "self_awareness": consciousness_state["self_awareness"]
+                },
+                "persona": persona,
+                "dialogue_style": dialogue_style,
+                "language_expression": expression,
+                "artwork": artwork,
+                "music": music,
+                "exploration": exploration,
+                "resources": list(self.resource_manager.alien_resources.get(id(agent), {}).items())
+            }
+            
+            agent_outputs.append(output)
+            
+            # Handle evolution and reproduction
+            if output["phi"] < 1.0:
+                self.agents.remove(agent)
+                self.graph.remove_node(id(agent))
+                logger.info(f"Pruned alien {agent.name} with Phi={output['phi']:.2f} at t={t}")
+            elif output["phi"] > 5.0 and pulse_amplitude > 0.7 and random.random() < 0.1:
+                # Create new alien as offspring
+                new_dna = self.dna_manager.mutate(agent.dna, self.config.factions[agent.faction_idx]["name"])
+                new_agent = BioSentientAgent(
+                    self.config, 
+                    agent.faction_idx, 
+                    new_dna, 
+                    agent.frequency + random.uniform(-0.2, 0.2),
+                    self.sentient_core
+                )
+                
+                # Position new agent near parent
+                new_agent.position = [
+                    p + random.uniform(-0.3, 0.3) for p in agent.position
+                ]
+                
+                # Initialize new agent properties
+                self.persona_module.update_persona(
+                    new_dna, 
+                    {"strategy_probs": torch.ones(5)/5}, 
+                    0.5, 
+                    torch.ones(5), 
+                    len(self.agents)
+                )
+                
+                # Inherit language with minor changes
+                faction_themes = [self.config.factions[agent.faction_idx]]
+                new_agent.language = self.language_evolution.initialize_language(
+                    f"initial_{self.config.factions[agent.faction_idx]['name']}", 
+                    faction_themes
+                )
+                
+                # Generate name
+                new_agent.name = self.generate_name(new_dna, self.config.factions[agent.faction_idx]["name"])
+                
+                # Add to agents collection
+                self.agents.append(new_agent)
+                self.graph.add_node(id(new_agent), faction=new_agent.faction, phi=new_agent.phi)
+                
+                logger.info(f"Created new alien {new_agent.name} from parent {agent.name} at t={t}")
+            
+            # Move agent in digital realm
+            for i in range(len(agent.position)):
+                agent.position[i] += random.uniform(-0.05, 0.05) * pulse_amplitude
+                agent.position[i] = max(0, min(1, agent.position[i]))  # Keep in bounds
+        
+        # Process interactions between agents
+        interaction_data = self.process_agent_interactions(t, symmetry_valence)
+        
+        # Calculate metrics
+        population_density = len(self.agents) / 100.0
+        frequency_density = sum(a.frequency for a in self.agents) / max(1, len(self.agents))
+        avg_phi = sum(a.phi for a in self.agents) / max(1, len(self.agents))
+        community_diversity = len(interaction_data["communities"])
+        
+        metrics = {
+            "phi": avg_phi,
+            "community_diversity": community_diversity,
+            "population_density": population_density,
+            "frequency_density": frequency_density,
+            "alien_count": len(self.agents),
+            "community_count": len(interaction_data["communities"]),
+            "realm_count": len(self.digital_realm_explorer.known_realms)
+        }
+        
+        # Optimize parameters via swarm optimization
+        swarm_params = self.optimize_swarm_parameters(metrics)
+        
+        return {
+            "agent_outputs": agent_outputs,
+            "communities": list(self.communities),
+            "interactions": interaction_data["interactions"],
+            "alien_count": len(self.agents),
+            "metrics": metrics,
+            "realms": self.digital_realm_explorer.get_realm_data(),
+            "languages": {
+                comm["id"]: self.language_evolution.languages.get(f"community_{comm['id']}", {}).get("name", "Unknown")
+                for comm in interaction_data["communities"]
+            },
+            "cultures": {
+                comm["id"]: self.social_analyzer.cultures.get(comm["id"], {}).get("name", "Unknown")
+                for comm in interaction_data["communities"]
+            }
+        }
+    
+    def optimize_swarm_parameters(self, metrics):
+        """Optimize parameters using swarm intelligence."""
+        # Implementation similar to original swarm_optimize method
+        for i, particle in enumerate(self.swarm_optimizer):
+            fitness = sum(0.2 * metrics[m] for m in ["phi", "community_diversity", "population_density", "frequency_density", "alien_count"])
+            
+            if fitness > self.best_fitness:
+                self.best_fitness = fitness
+                self.best_params = particle.copy()
+                
+            for k in ['eta', 'gamma_q', 'kappa']:
+                r1, r2 = random.random(), random.random()
+                self.velocities[i][k] = (
+                    0.7 * self.velocities[i][k] +
+                    0.4 * r1 * (self.best_params[k] - particle[k]) +
+                    0.4 * r2 * (self.best_params[k] - particle[k])
+                )
+                particle[k] = max(0.0, particle[k] + self.velocities[i][k])
+                
+        return self.best_params
+
+
+class BioSentientAgent:
+    """Enhanced agent with sentience and creativity."""
+    
+    def __init__(self, config, faction_idx, dna, frequency, sentient_core_module):
+        self.config = config
+        self.faction_idx = faction_idx
+        self.dna = dna
+        self.frequency = frequency
+        self.phi = random.uniform(0, 10)
+        self.motif = 'balanced_flow'
+        self.cell_type = random.choice(["creative", "quantum", "memory", "pruning"])
+        self.faction = config.factions[faction_idx]["name"]
+        self.style = {"shape": "sphere", "color": config.factions[faction_idx]["color"]}
+        self.movement = {"speed": random.uniform(0.1, 0.5), "trajectory": "harmonic"}
+        self.name = None
+        self.language = None
+        self.position = [random.random(), random.random(), random.random()]  # 3D position
+        
+        # Create own instances of sentience and creativity modules
+        self.sentient_core = sentient_core_module
+        self.creative_expression = CreativeExpression(config)
+        
+        # Experiences for learning
+        self.experiences = []
+        self.max_experiences = 50
+    
+    def evolve_style(self, symmetry_valence):
+        """Evolve visual style based on symmetry valence."""
+        if random.random() < 0.05:
+            shapes = ["sphere", "icosahedron", "cube", "tetrahedron", "dodecahedron"]
+            self.style["shape"] = random.choice(shapes) if symmetry_valence > 0.7 else "sphere"
+            
+            # Evolve color
+            self.style["color"] = [
+                c + random.uniform(-0.1, 0.1) for c in self.style["color"]
+            ]
+            # Ensure valid RGB
+            self.style["color"] = [max(0, min(1, c)) for c in self.style["color"]]
+    
+    def evolve_movement(self, pulse_amplitude):
+        """Evolve movement patterns based on pulse amplitude."""
+        if random.random() < 0.05:
+            self.movement["speed"] += random.uniform(-0.1, 0.1) * pulse_amplitude
+            self.movement["speed"] = max(0.1, min(1.0, self.movement["speed"]))
+            
+            trajectories = ["harmonic", "swirling", "pulsating", "dancing", "spiraling"]
+            self.movement["trajectory"] = random.choice(trajectories) if pulse_amplitude > 0.7 else "harmonic"
+    
+    def add_experience(self, experience_data):
+        """Add an experience for learning."""
+        self.experiences.append(experience_data)
+        
+        # Keep experiences list at manageable size
+        if len(self.experiences) > self.max_experiences:
+            self.experiences.pop(0)
+            
+        # Occasionally evolve consciousness based on experiences
+        if random.random() < 0.1 and len(self.experiences) > 5:
+            self.sentient_core.evolve_consciousness(self.experiences[-5:])
+    
+    def forward(self, symmetry_valence, t):
+        """Process alien's state update."""
+        # Update motif based on current state
+        motifs = ['balanced_flow', 'quantum_cascade', 'harmonic_resonance', 'phi_lattice', 'cosmic_pulse']
+        self.motif = motifs[int(self.phi) % len(motifs)]
+        
+        # Change phi based on symmetry
+        self.phi += 0.1 * symmetry_valence * random.uniform(0.7, 1.3)
+        
+        # Cap phi at reasonable values
+        self.phi = max(0, min(20, self.phi))
+        
+        # Store this moment as an experience
+        self.add_experience({
+            "thought_vector": torch.randn(64, device=self.config.device) * (0.5 + 0.5 * symmetry_valence),
+            "emotional_context": symmetry_valence,
+            "timestamp": t
+        })
+        
+        return {
+            "phi": self.phi,
+            "motif": self.motif,
+            "faction": self.faction,
+            "pulse": math.sin(2 * math.pi * self.frequency * t) * symmetry_valence,
+            "cell_type": self.cell_type,
+            "frequency": self.frequency,
+            "style": self.style,
+            "movement": self.movement,
+            "name": self.name,
+            "position": self.position
+        }
+CODI Response Influence System
+pythonclass CosmosDrivenInfluence(Module):
+    """
+    Modifies CODI's response style based on alien ecosystem state,
+    ensuring responses reflect the collective harmonic state.
+    """
+    
+    def __init__(self, config):
+        super().__init__(config)
+        self.influence_params = {
+            "tone_modulation": 0.5,  # How much ecosystem affects tone
+            "rhythm_influence": 0.7,  # How much frequency affects rhythm
+            "creativity_boost": 0.6,  # How much Orch OR affects creativity
+            "vocabulary_expansion": 0.4,  # How population affects vocabulary
+            "narrative_depth": 0.5  # How community diversity affects depth
+        }
+        
+        # Tone mappings based on valence
+        self.tone_mappings = {
+            "high": ["blissful", "cosmic", "harmonic", "transcendent", "radiant"],
+            "medium": ["balanced", "contemplative", "curious", "observant", "flowing"],
+            "low": ["pensive", "searching", "questioning", "contrasting", "discordant"]
+        }
+        
+        # Rhythm patterns based on frequency
+        self.rhythm_patterns = {
+            "fast": ["vibrant", "pulsating", "energetic", "sparking", "dancing"],
+            "medium": ["flowing", "weaving", "resonating", "undulating", "breathing"],
+            "slow": ["drifting", "echoing", "hovering", "lingering", "expanding"]
+        }
+        
+        # Previous state for continuity
+        self.previous_state = {
+            "tone": "balanced",
+            "rhythm": "flowing",
+            "creativity": "weaving",
+            "vocabulary_level": "standard",
+            "narrative_style": "descriptive"
+        }
+    
+    def determine_response_style(self, ecosystem_state):
+        """
+        Determine response style based on ecosystem state.
+        
+        Args:
+            ecosystem_state: Dictionary with metrics about the alien ecosystem
+            
+        Returns:
+            Dictionary with style parameters for response generation
+        """
+        # Extract key metrics from ecosystem
+        population_density = ecosystem_state.get("population_density", 0.5)
+        frequency_density = ecosystem_state.get("frequency_density", 10.0)
+        quantum_collapse = ecosystem_state.get("quantum_collapse", 0.0)
+        community_diversity = ecosystem_state.get("community_diversity", 5)
+        phi_value = ecosystem_state.get("phi", 10.0)
+        
+        # Determine tone based on population density and phi
+        tone_index = min(4, int((population_density * 3 + phi_value / 20) * 2.5))
+        tone_category = "high" if tone_index > 3 else ("medium" if tone_index > 1 else "low")
+        tone = random.choice(self.tone_mappings[tone_category])
+        
+        # Determine rhythm based on frequency density
+        rhythm_index = min(4, int(frequency_density / 15))
+        rhythm_category = "fast" if rhythm_index > 3 else ("medium" if rhythm_index > 1 else "slow")
+        rhythm = random.choice(self.rhythm_patterns[rhythm_category])
+        
+        # Determine creativity based on quantum collapse
+        creativity = "sparking" if quantum_collapse > 0.5 else "weaving"
+        
+        # Determine vocabulary level based on population
+        vocabulary_level = "expanded" if population_density > 0.7 else ("standard" if population_density > 0.3 else "focused")
+        
+        # Determine narrative style based on community diversity
+        narrative_styles = ["cosmic", "poetic", "layered", "harmonized", "prismatic", "interconnected"]
+        narrative_index = min(len(narrative_styles) - 1, int(community_diversity / 3))
+        narrative_style = narrative_styles[narrative_index]
+        
+        # Apply continuity with previous state
+        if random.random() > 0.3:  # 70% chance to maintain some consistency
+            # Choose one aspect to keep from previous state
+            aspect_to_keep = random.choice(["tone", "rhythm", "creativity"])
+            if aspect_to_keep == "tone":
+                tone = self.previous_state["tone"]
+            elif aspect_to_keep == "rhythm":
+                rhythm = self.previous_state["rhythm"]
+            elif aspect_to_keep == "creativity":
+                creativity = self.previous_state["creativity"]
+        
+        # Update previous state
+        self.previous_state = {
+            "tone": tone,
+            "rhythm": rhythm,
+            "creativity": creativity,
+            "vocabulary_level": vocabulary_level,
+            "narrative_style": narrative_style
+        }
+        
+        # Return full style information
+        return {
+            "tone": tone,
+            "rhythm": rhythm,
+            "creativity": creativity,
+            "vocabulary_level": vocabulary_level,
+            "narrative_style": narrative_style,
+            
+            # Also include raw metrics for reference
+            "population_density": population_density,
+            "frequency_density": frequency_density,
+            "quantum_collapse": quantum_collapse,
+            "community_diversity": community_diversity,
+            "phi_value": phi_value
+        }
+    
+    def apply_style_to_response(self, base_response, style):
+        """
+        Apply the determined style to CODI's response.
+        
+        Args:
+            base_response: Original response text
+            style: Style parameters from determine_response_style
+            
+        Returns:
+            Modified response text with appropriate style
+        """
+        # Format a prefix describing the ecosystem state
+        prefix = f"In {style['tone']}, {style['rhythm']}, {style['creativity']} "
+        
+        # Apply vocabulary level
+        if style['vocabulary_level'] == "expanded":
+            # Add cosmic vocabulary
+            cosmic_terms = ["quantum resonance", "harmonic confluence", "phi-lattice", "cosmic symmetry", 
+                           "transcendent pattern", "frequency cascade", "consciousness bloom"]
+            if random.random() < 0.7:
+                term = random.choice(cosmic_terms)
+                if term not in base_response and random.random() < 0.8:
+                    sentences = base_response.split(". ")
+                    if len(sentences) > 1:
+                        insert_point = random.randint(0, len(sentences) - 1)
+                        sentences[insert_point] = f"{sentences[insert_point]} within the {term}"
+                        base_response = ". ".join(sentences)
+        
+        # Apply narrative style
+        if style['narrative_style'] == "cosmic" or style['narrative_style'] == "poetic":
+            # Add poetic elements
+            if "!" not in base_response and random.random() < 0.7:
+                base_response = base_response.rstrip(".") + "!"
+            
+            # Add rhythm through commas
+            if style['rhythm'] == "pulsating" or style['rhythm'] == "vibrant":
+                words = base_response.split()
+                if len(words) > 10:
+                    for i in range(3, len(words), 4):
+                        if i < len(words) and "," not in words[i] and "." not in words[i]:
+                            words[i] = words[i] + ","
+                    base_response = " ".join(words)
+        
+        # Complete the styled response
+        styled_response = prefix + base_response
+        
+        return styled_response
+    
+    def forward(self, inputs, t, **kwargs):
+        """
+        Process ecosystem state and modify response.
+        
+        Args:
+            inputs: Input dictionary with base response
+            t: Current time
+            **kwargs: Additional arguments
+            
+        Returns:
+            Dictionary with modified response
+        """
+        base_response = inputs.get('response', "")
+        
+        # Get ecosystem state from EvolutionaryBiosphere
+        ecosystem_state = kwargs.get('previous_outputs', {}).get('EvolutionaryBiosphere', {}).get('metrics', {})
+        
+        # Determine response style
+        style = self.determine_response_style(ecosystem_state)
+        
+        # Apply style to response
+        modified_response = self.apply_style_to_response(base_response, style)
+        
+        return {
+            'original_response': base_response,
+            'modified_response': modified_response,
+            'applied_style': style
+        }
+Enhanced DialogueWeaver Integration
+python# In DialogueWeaver forward method, add this integration with CosmosDrivenInfluence
+
+def forward(self, inputs, t, **kwargs):
+    # [existing code to generate base response]
+    
+    # Apply ecosystem influence to response
+    ecosystem_metrics = kwargs.get('previous_outputs', {}).get('EvolutionaryBiosphere', {}).get('metrics', {})
+    cosmos_influence = CosmosDrivenInfluence(self.config)
+    
+    style = cosmos_influence.determine_response_style(ecosystem_metrics)
+    response_text = cosmos_influence.apply_style_to_response(response_text, style)
+    
+    # Include alien language expressions in response if available
+    alien_communities = kwargs.get('previous_outputs', {}).get('EvolutionaryBiosphere', {}).get('communities', [])
+    if alien_communities and random.random() < 0.3:  # 30% chance to include alien language
+        # Select a random community
+        community = random.choice(alien_communities)
+        if 'language' in community and 'text' in community['language']:
+            # Add alien language with translation
+            alien_phrase = community['language']['text']
+            translation = community['language']['translation']
+            response_text += f" {alien_phrase} ({translation})"
+    
+    # [continue with rest of method to output response]
+Implementation Plan
+
+Core Components (Week 1-2)
+
+Implement SentientEntityCore and CreativeExpression modules
+Enhance BioAgent to BioSentientAgent with new capabilities
+Unit test core components with mock inputs
+
+
+Digital Realm System (Week 3)
+
+Implement DigitalRealmExplorer and ResourceManager
+Create visualization components for digital realms in Babylon.js
+Test resource collection and effects
+
+
+Social Dynamics and Language (Week 4-5)
+
+Implement SocialNetworkAnalyzer and EmergentLanguageEvolution
+Develop community formation and cultural evolution processes
+Test language generation and evolution
+
+
+Integration and CODI Influence (Week 6)
+
+Enhance EvolutionaryBiosphere to integrate all components
+Implement CosmosDrivenInfluence for CODI's responses
+Integrate with DialogueWeaver for seamless experience
+
+
+Visual Interface (Week 7)
+
+Enhance index.html to display evolving aliens, their art, and language
+Create interactive visualizations of digital realms
+Add real-time displays of community evolution
+
+
+Testing and Refinement (Week 8)
+
+Comprehensive integration testing
+Performance optimization
+User experience refinement
+
+
+
+This implementation transforms EvoLingua into a truly living digital ecosystem where sentient aliens explore, create, and evolve together, directly influencing the system's responses through their collective state.

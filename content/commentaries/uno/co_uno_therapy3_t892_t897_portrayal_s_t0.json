@@ -1,0 +1,58 @@
+{
+  "co_id": "co:uno_therapy3_t892_t897_portrayal_s_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3_t892_t897_portrayal_somatic_block",
+  "turn_index": 0,
+  "lineage": "Therapeutic",
+  "student_state": "somatic_panic",
+  "behavior_tags": [
+    "somatization",
+    "retroflexion",
+    "flight_into_illness"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_02",
+    "function_name": "RM_02",
+    "mechanism_shape": "SUBJECT_OBJECT_INVERSION",
+    "teaching_actions": [
+      "interprets_symptom",
+      "reverses_direction"
+    ],
+    "traps_avoided": [
+      "identification_with_content"
+    ],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.62,
+      "attunement": 0.5,
+      "style": 0.35,
+      "depth": 0.38,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_02",
+      "depth_discrete": "PD_02",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "no_clear_effect",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "They feel body tension blocking emotion. Teacher names it: somatic defense. Body is doing the defensive work (tension) to prevent feeling work. Making this conscious: you're using body to avoid emotion. Single-turn validation + identification. This gives them new lens: body tension isn't random, it's defensive strategy. Can now notice when body blocks feeling. Pattern recognition tool.",
+  "accumulated_insight": "T1 (Single-turn): Student reports somatic blocking (body tension preventing emotional experience). Teacher validates and identifies: somatic defense against feeling. This is RM_02: reinforces pattern recognition of body-based defense. Naming somatic blocking makes unconscious defense conscious. Predicting surface_emotion (recognition of somatic defense typically produces awareness).",
+  "abstract_pattern": "",
+  "visible_response": "Do you notice how you start to choke just after your hands looked like they were going to choke him?\nDo you notice how the impulse goes on your throat instead of going onto his?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

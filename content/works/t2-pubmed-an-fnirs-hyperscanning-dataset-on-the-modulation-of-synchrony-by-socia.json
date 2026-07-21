@@ -1,0 +1,62 @@
+{
+  "work_id": "work:t2-pubmed-an-fnirs-hyperscanning-dataset-on-the-modulation-of-synchrony-by-socia",
+  "schema_version": 2,
+  "title": "An fNIRS hyperscanning dataset on the modulation of synchrony by social relationship during social touch.",
+  "authors": [
+    {
+      "name": "Chen, Yanan"
+    },
+    {
+      "name": "Niu, Huihui"
+    },
+    {
+      "name": "Ao, Na"
+    },
+    {
+      "name": "Xu, Jingwen"
+    },
+    {
+      "name": "Ming, Qiyue"
+    },
+    {
+      "name": "Teng, Xiyue"
+    },
+    {
+      "name": "Yang, Bo"
+    },
+    {
+      "name": "Lian, Ziyi"
+    },
+    {
+      "name": "Jiang, Xiaowei"
+    },
+    {
+      "name": "Yang, Yunkai"
+    }
+  ],
+  "identifiers": {
+    "pmid": "41372223",
+    "doi": "10.1038/s41597-025-06233-9"
+  },
+  "publication": {
+    "journal": "Scientific data",
+    "year": "2025"
+  },
+  "abstract": "Social touch from a close companion, such as a friend, can effectively buffer stress, an effect modulated by the nature of the social relationship. However, the neural mechanisms underlying this modulation, particularly the dynamics between interacting brains, remain poorly understood due to a lack of suitable open data. We present a functional near-infrared spectroscopy (fNIRS) hyperscanning dataset from 47 female dyads (24 friend pairs, 23 stranger pairs) who jointly viewed negative and neutral images under touching and no-touching conditions. The dataset includes raw and preprocessed fNIRS data, trial-by-trial emotional valence and arousal ratings, and extensive trait- and state-based questionnaire data. Technical validation, including power spectral density analysis, confirms our preprocessing pipeline effectively yields high-quality signals. A preliminary validation analysis of the dataset confirms that interpersonal touch effectively buffers against negative emotional experiences by enhancing inter-brain synchrony. This rich, multi-modal dataset is publicly available on the Open Science Framework and provides a unique resource for investigating how social relationships shape the neurobehavioral dynamics of social support.",
+  "phase_mapping": {
+    "phase": 12,
+    "phase_name": "Ritual"
+  },
+  "bridge_tags": [
+    "ritual",
+    "interpersonal-synchrony",
+    "collective",
+    "hyperscanning"
+  ],
+  "evaluation": "Quality pass v3 (score=56) \u2014 High-signal bridge paper for Ritual.",
+  "assets": {
+    "pdf_path": null,
+    "nxml_path": null
+  },
+  "tier": 2
+}

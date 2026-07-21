@@ -1,0 +1,58 @@
+{
+  "co_id": "co:uno_therapy3_t551_t554_do_i_have_t_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3_t551_t554_do_i_have_to_share",
+  "turn_index": 0,
+  "lineage": "Therapeutic",
+  "student_state": "stubborn_refusal",
+  "behavior_tags": [
+    "defiance",
+    "identity_statement"
+  ],
+  "pedagogy": {
+    "phase": "META",
+    "function_id": "UNKNOWN",
+    "function_name": "UNKNOWN",
+    "mechanism_shape": "CAUSAL_CHAIN",
+    "teaching_actions": [
+      "removes_demand",
+      "highlights_consequence",
+      "uses_paradox"
+    ],
+    "traps_avoided": [
+      "retreat"
+    ],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.92,
+      "depth": 0.15,
+      "meta_mode": 0.75,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_06",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_02"
+    },
+    "predicted_impact": "no_clear_effect",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "'I just don't share feelings'—identity claim, not resistance. They're not saying 'I won't today' but 'this is who I am.' The teacher's move is perfect: 'The good news is you don't have to.' This removes power struggle (no demand = nothing to resist). Then shows consequence: 'I'll be another useless therapist.' Not 'therapy won't work' (abstract) but 'I'll be useless' (makes teacher the casualty, not student). Then shifts responsibility: 'Why do that to yourself?' Now THEY'RE doing it to themselves, not being forced. Single turn so we don't see response, but the reframe is complete: from 'you're making me share' to 'you're making yourself have useless therapy.' Freedom + consequence.",
+  "accumulated_insight": "T1 (Single-turn): Student declares 'I just don't share feelings'—stubborn refusal as identity statement ('I don't' = who I am, not 'I won't' = what I choose). Teacher uses META_01 paradox: removes demand ('you don't have to'), establishes consequence ('I'll just be another useless therapist'), asks why ('Why do that to yourself?'). The paradox: giving freedom while showing cost. This is causal chain teaching: no obligation BUT here's what happens. Predicting no_clear_effect because single-turn episodes don't show response—this plants seed for future.",
+  "abstract_pattern": "",
+  "visible_response": "The good news is you don’t have to.\nThere is no rule that says you have to share your feelings with me.\nIt’s just that as long as you don’t share your feelings with me, I’ll just be another useless therapist.\nWhy do that to yourself?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

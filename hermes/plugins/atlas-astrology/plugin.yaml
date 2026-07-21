@@ -1,0 +1,26 @@
+name: atlas-astrology
+description: Hermes plugin for the Re-Rendering Atlas astrology engine
+version: 1.0.0
+author: Thomas Prior
+license: MIT
+
+tools:
+  - name: astrology_today
+    description: Compute today's astrological reading from birth data
+    entrypoint: tools.astrology.astrology_tool
+
+  - name: astrology_graph
+    description: Traverse the knowledge graph
+    entrypoint: tools.graph.graph_traverse
+
+  - name: journal_write
+    description: Save a diary/journal entry
+    entrypoint: tools.journal.journal_write
+
+  - name: snapshot_save
+    description: Save a daily snapshot for historical comparison
+    entrypoint: tools.snapshot.snapshot_save
+
+  - name: snapshot_list
+    description: Retrieve past snapshots
+    entrypoint: tools.snapshot.snapshot_list

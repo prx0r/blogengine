@@ -1,0 +1,59 @@
+{
+  "co_id": "co:uno_gorgias_ep015_what_life_do_you_t1",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gorgias_ep015_what_life_do_you_defend",
+  "turn_index": 1,
+  "lineage": "Socratic",
+  "student_state": "defensive_rationalization",
+  "behavior_tags": [
+    "pushes_back"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_03",
+    "function_name": "UM_03",
+    "mechanism_shape": "CONSTRAINT_COLLAPSE",
+    "teaching_actions": [
+      "forces_absurd_consequence"
+    ],
+    "traps_avoided": [
+      "category_conflation"
+    ],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.62,
+      "attunement": 0.8,
+      "style": 0.5,
+      "depth": 0.62,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_03",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_03",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "resist_intellectually",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "Defense arrived; now name the endless-filling punishment. Ask if that is still 'good.' Expect either recoil (ideal to pivot) or strained defense.",
+  "accumulated_insight": "Two-turn pattern: T1 hedonist thesis ('indulge desires freely') ? T2 defense ('Because pleasure is the good'). They understand: pleasure as sole good; they're ready to be shown the cost. Constraint_collapse is poised to equate endless indulging with punishment.",
+  "abstract_pattern": "",
+  "visible_response": "Then you must defend that principle to its end. Are you prepared to?",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:proclus-elements",
+    "ro:platonism-decoded",
+    "ro:chaldean-oracles"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

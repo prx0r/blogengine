@@ -1,0 +1,122 @@
+{
+  "ro_id": "ro:penrose-road-to-reality",
+  "schema_version": 1,
+  "title": "The Road to Reality (Roger Penrose)",
+  "subtitle": "A complete guide to the laws of the universe \u2014 from mathematics to physics to consciousness",
+  "family": "thinker-topic",
+  "status": "stub",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "Penrose's 1,000+ page magnum opus covering the mathematics of reality, from the foundations of geometry and algebra through general relativity and quantum mechanics to the nature of consciousness a...",
+    "scope": "Covers the mathematical foundations (geometry, algebra, calculus, manifolds), classical physics (space-time, Maxwell, GR), quantum mechanics (formalism, spin, QFT), quantum gravity (twistor theory, spin networks, loop quantum gravity), cosmology (the Big Bang, black holes, the arrow of time), and consciousness (ORCH-OR, non-computability, Godel).",
+    "traditions": [
+      "physics",
+      "mathematics",
+      "foundations",
+      "consciousness"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "penrose-road-to-reality",
+      "tier": 1,
+      "label": "Roger Penrose \u2014 The Road to Reality: A Complete Guide to the Laws of the Universe (Knopf, 2004). PDF, 14 MB.",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "mathematical_foundations",
+        "general_relativity",
+        "quantum_mechanics",
+        "twistor_theory",
+        "orch_or",
+        "consciousness"
+      ],
+      "sections_affected": [
+        "theory"
+      ],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "theory",
+      "subsection": "non_computable_physics",
+      "kind": "source",
+      "text": "Penrose's central claim: there are aspects of physical reality that are non-computable \u2014 not merely unknown but in principle not simulable by any Turing machine. The Godel incompleteness theorem shows that formal systems cannot capture all mathematical truth; Penrose extends this to physics, arguing that quantum state reduction (collapse) is a non-computable physical process. This non-computability is the gap through which consciousness enters. In the constraint space framework, the non-computable collapse is S0 expressing through O \u2014 the architect selecting a configuration that cannot be predicted from prior states.",
+      "source_ids": [
+        "penrose-road-to-reality"
+      ],
+      "topics": [
+        "non_computable",
+        "godel",
+        "consciousness",
+        "measurement"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "theory",
+      "subsection": "twistor_theory",
+      "kind": "source",
+      "text": "Twistor theory is Penrose's approach to quantum gravity: replacing space-time points with twistors (complex geometric objects) that encode both the location and momentum of a particle. Twistor space is a more fundamental description than space-time \u2014 space-time emerges from twistor interactions. This maps to the level hierarchy: space-time (L2) emerges from twistor interactions (L1) which are configurations of mathematical structure (L0).",
+      "source_ids": [
+        "penrose-road-to-reality"
+      ],
+      "topics": [
+        "twistor",
+        "quantum_gravity",
+        "emergence",
+        "geometry"
+      ],
+      "status": "active"
+    }
+  ],
+  "coverage": {
+    "theory": {
+      "status": "minimal",
+      "sources": [
+        "penrose-road-to-reality"
+      ],
+      "passage_count": 2,
+      "estimated_completeness": 0.1,
+      "gaps": [
+        "Full extraction of 1,000+ page volume requires OCR \u2014 scanned PDF."
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "coverage_gap",
+      "title": "Scanned PDF needs OCR",
+      "description": "Road to Reality PDF is scanned. Full extraction requires OCR.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial RO for Penrose's Road to Reality.",
+      "sources_added": [
+        "penrose-road-to-reality"
+      ],
+      "passage_count": 2,
+      "status": "draft"
+    }
+  ],
+  "appendices": [],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created from scanned PDF (14 MB).",
+      "sources_total": 1,
+      "passages_total": 2
+    }
+  ]
+}

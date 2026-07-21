@@ -1,0 +1,54 @@
+{
+  "co_id": "co:uno_therapy3_t171_t183_self_tortur_t5",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3_t171_t183_self_torture_distinction",
+  "turn_index": 5,
+  "lineage": "Therapeutic",
+  "student_state": "cognitive_resistance",
+  "behavior_tags": [
+    "rationalization",
+    "moral_defense"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_03",
+    "function_name": "UM_03",
+    "mechanism_shape": "COMPARISON_CONTRAST",
+    "teaching_actions": [
+      "asks_factual_question"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.15,
+      "attunement": 0.2,
+      "style": 0.15,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_01",
+      "attunement_discrete": "AT_01",
+      "style_discrete": "LS_01",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "'But shouldn't I think about mistakes?'—perfect rationalization. They're not abusing, they're LEARNING. Teacher's move: quantify. 'How many times did you make that mistake?' This will set up the distinction: thinking about mistake (once) vs torturing yourself about it (hundreds). The trap: they'll say 'once.' Then teacher asks how many times they reminded themselves. Hundreds. Distinction emerges: 1 mistake vs 100 self-attacks. That ratio exposes torture, not learning.",
+  "accumulated_insight": "T6: Student rationalizes: 'But shouldn't I think about my mistakes?'—defends self-attack as necessary for learning. Classic rationalization: abuse disguised as growth. Teacher distinguishes: 'How many times did you make that mistake?' Quantifies actual error. Predicting ask_deeper_question because quantification questions typically produce realization when student calculates frequency.",
+  "abstract_pattern": "",
+  "visible_response": "How many times did you make that mistake?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

@@ -1,0 +1,61 @@
+{
+  "co_id": "co:uno_gurdjeff1_t071_t082_sleep_aim__t1",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gurdjeff1_t071_t082_sleep_aim_effort",
+  "turn_index": 1,
+  "lineage": "Gurdjieffian",
+  "student_state": "seeking_excuse_for_inaction",
+  "behavior_tags": [
+    "questions_precondition",
+    "assumes_binary_state"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_01",
+    "function_name": "RM_01",
+    "mechanism_shape": "STRUCTURAL_ANALOGY",
+    "teaching_actions": [
+      "redefines_prerequisite",
+      "uses_analogy",
+      "normalizes_partial_state"
+    ],
+    "traps_avoided": [
+      "perfectionist_preconditions"
+    ],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.5,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "request_clarification",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The dismissal works: half-sleep understanding sufficient (like finding way home), not full awakening needed. The student questioned precondition (seeking excuse for inaction), which shows they understand: full awakening = precondition. They'll likely ask about diagnostic next.",
+  "accumulated_insight": "T2: Student questioned precondition ('Is it not necessary to be fairly awake to formulate one's aim?')—seeking excuse for inaction via questions precondition and assumes binary state. They understand: full awakening = precondition (perfectionist). The structural_analogy mechanism dismisses: half-sleep understanding sufficient (like finding way home), not full awakening needed ('Realizing and understanding are possible in a kind of half-sleep; just as one can find one's way home, so we can find the way to our aim. Awakening is a long process'). Pattern: peak optimization → reorientation → precondition question → dismissal → [next: diagnostic question]. They're grasping: half-sleep = sufficient, full awakening = not required.",
+  "abstract_pattern": "",
+  "visible_response": "This is another thing. Realizing and understanding are possible in a kind of half-\nsleep;\njust as one can find one's way home, so we can find the way to our aim.\nAwakening is a long process.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:sufi-comparative-analysis",
+    "ro:steiner-tantraloka-parallels"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

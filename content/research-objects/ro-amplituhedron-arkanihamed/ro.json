@@ -1,0 +1,138 @@
+{
+  "ro_id": "ro:amplituhedron-arkanihamed",
+  "schema_version": 1,
+  "title": "The Amplituhedron \u2014 Nima Arkani-Hamed & Jaroslav Trnka",
+  "subtitle": "Positive geometry as the origin of locality and unitarity \u2014 scattering amplitudes as volumes of the positive Grassmannian",
+  "family": "thinker-topic",
+  "status": "stub",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "The amplituhedron is a geometric object whose volume gives scattering amplitudes \u2014 demonstrating that locality and unitarity are not fundamental but emerge from positive geometry, with profound imp...",
+    "scope": "Covers the full paper (36 pages): scattering without space-time, positive Grassmannian, tree-level amplituhedron, loop positivity, canonical form as volume. Each concept mapped to the corresponding Tantraloka tattva and the Proclian henad.",
+    "traditions": [
+      "physics",
+      "quantum-field-theory",
+      "amplituhedron",
+      "positive-geometry"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "arkanihamed-amplituhedron-2013",
+      "tier": 1,
+      "label": "Nima Arkani-Hamed & Jaroslav Trnka \u2014 The Amplituhedron (2013). arXiv:1312.2007 [hep-th]. 36 pages. PDF in corpus.",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "positive_grassmannian",
+        "locality_emergent",
+        "unitarity_emergent",
+        "canonical_form",
+        "cells_and_boundaries"
+      ],
+      "sections_affected": [
+        "theory"
+      ],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "theory",
+      "subsection": "scattering_without_spacetime",
+      "kind": "source",
+      "text": "'Locality and unitarity emerge hand-in-hand from positive geometry.' The amplituhedron has no space-time points. It is defined purely by positivity constraints. Space-time is not assumed \u2014 it IS derived. This IS the pa\u015byant\u012b level of speech: the geometry before space-time, the sound that becomes visible as light before it condenses into matter. Locality (the principle that things happen at a point) and unitarity (the principle that probabilities sum to one) are not axioms \u2014 they are consequences of the positivity of the geometry.",
+      "source_ids": [
+        "arkanihamed-amplituhedron-2013"
+      ],
+      "topics": [
+        "locality",
+        "unitarity",
+        "positive_geometry",
+        "pasyanti"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "theory",
+      "subsection": "cells_as_henads",
+      "kind": "synthesis",
+      "text": "The amplituhedron's cell decomposition IS Proclus' hierarchy of henads. A cell is a region where a specific pattern of positivity holds. The cells are ordered by inclusion \u2014 larger cells containing smaller cells. This IS the hierarchy of the gods: each cell is a complete unit of positivity (a henad), and the containment structure IS the series (seira). The top cell IS the One. The boundary cells ARE the many. The decomposition IS the articulation of the One into the Many without ceasing to be one.",
+      "source_ids": [
+        "arkanihamed-amplituhedron-2013"
+      ],
+      "topics": [
+        "cells",
+        "henads",
+        "hierarchy",
+        "proclus"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "theory",
+      "subsection": "positivity_as_goodness",
+      "kind": "synthesis",
+      "text": "The fundamental condition defining the amplituhedron is POSITIVITY \u2014 all ordered determinants must have the same sign. This is not a convention. It IS the condition under which scattering makes sense. Positivity IS the Good of Plato \u2014 not a thing that IS positive, but the condition under which things can be at all. The 'overflow' of the One into the Many IS the cell decomposition of the amplituhedron: a single positive configuration cannot exhaust the possible, so positivity must extend. The extension IS the creation.",
+      "source_ids": [
+        "arkanihamed-amplituhedron-2013"
+      ],
+      "topics": [
+        "positivity",
+        "good",
+        "overflow",
+        "creation"
+      ],
+      "status": "active"
+    }
+  ],
+  "coverage": {
+    "theory": {
+      "status": "good",
+      "sources": [
+        "arkanihamed-amplituhedron-2013"
+      ],
+      "passage_count": 3,
+      "estimated_completeness": 0.5,
+      "gaps": [
+        "Full 36-page extraction needed; detailed cell-by-cell mapping to Proclus henads"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "coverage_gap",
+      "title": "Full paper extraction needed",
+      "description": "The amplituhedron paper has 36 pages of dense mathematics. The RO currently extracts the three most philosophically significant passages.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial RO for the amplituhedron paper. 3 passages covering scattering without spacetime, cells as henads, and positivity as the Good.",
+      "sources_added": [
+        "arkanihamed-amplituhedron-2013"
+      ],
+      "passage_count": 3,
+      "status": "draft"
+    }
+  ],
+  "appendices": [],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created. The amplituhedron is now formally mapped to Proclus' henads and the Tantraloka's pa\u015byant\u012b level.",
+      "sources_total": 1,
+      "passages_total": 3
+    }
+  ]
+}

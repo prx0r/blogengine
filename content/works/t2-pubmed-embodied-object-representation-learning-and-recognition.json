@@ -1,0 +1,42 @@
+{
+  "work_id": "work:t2-pubmed-embodied-object-representation-learning-and-recognition",
+  "schema_version": 2,
+  "title": "Embodied Object Representation Learning and Recognition.",
+  "publication": {
+    "year": 2022,
+    "type": "article",
+    "source": "PubMed/MEDLINE",
+    "language": "en",
+    "journal": "Front Neurorobot"
+  },
+  "identifiers": {
+    "pmid": "35496899",
+    "doi": "10.3389/fnbot.2022.840658"
+  },
+  "topics": [
+    "phase-3-mind-as-computer-critique",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "tradition": [
+    "contemporary_science"
+  ],
+  "tier": 2,
+  "assets": {
+    "pdf_path": "t2-pubmed-pmc9049856_Embodied_Object_Representation_Learning_and_Recogn.pdf",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/35496899/",
+    "abstract": "Scene understanding and decomposition is a crucial challenge for intelligent systems, whether it is for object manipulation, navigation, or any other task. Although current machine and deep learning approaches for object detection and classification obtain high accuracy, they typically do not leverage interaction with the world and are limited to a set of objects seen during training. Humans on the other hand learn to recognize and classify different objects by actively engaging with them on fir"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_t2_search",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 3,
+    "phase_name": "Mind as Computer Critique",
+    "bridge_rationale": "4E cognition \u2014 embodied, embedded, enactive, extended mind; critique of computationalism."
+  },
+  "evaluation": "Low signal (score=0.0)"
+}

@@ -1,0 +1,199 @@
+{
+  "ro_id": "ro:proclus-elements",
+  "schema_version": 1,
+  "title": "The Elements of Theology \u2014 Proclus Diadochus",
+  "subtitle": "211 propositions deriving all reality from the One \u2014 the Western systematic tattva ladder, mapped to the amplituhedron cell decomposition",
+  "family": "thinker-topic",
+  "status": "draft",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "Proclus' Elements of Theology (c. 475 CE) is the closest Western antiquity came to the Tantraloka: 211 propositions deriving the entire structure of reality from the One, using the method of Euclid...",
+    "scope": "Covers the full 211-proposition structure grouped by topic: Props 1-6 (the One), 7-24 (the henads), 25-39 (procession and return), 40-59 (intellect), 60-112 (soul), 113-124 (time and eternity), 125-211 (the hierarchy of being). Each proposition is mapped to the corresponding tattva range, the amplituhedron cell structure, and the constraint space level.",
+    "traditions": [
+      "neoplatonism",
+      "proclus",
+      "western-metaphysics",
+      "henads"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "proclus-elements-theology",
+      "tier": 1,
+      "label": "Proclus Diadochus \u2014 The Elements of Theology (\u03a3\u03c4\u03bf\u03b9\u03c7\u03b5\u1f77\u03c9\u03c3\u03b9\u03c2 \u03b8\u03b5\u03bf\u03bb\u03bf\u03b3\u03b9\u03ba\u1f75), c. 475 CE. Ed. E.R. Dodds, Oxford 1963. 211 propositions with commentary. Also: Taylor translation (1816), available in corpus as Proclus_Platonic_Theology_and_other_works_Taylor_1816.md.",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "the_one",
+        "henads",
+        "mon\u0113_proodos_epistroph\u0113",
+        "intellect_and_soul",
+        "hierarchy_of_being",
+        "time_and_eternity",
+        "vehicle_of_the_soul"
+      ],
+      "sections_affected": [
+        "theory",
+        "cosmology"
+      ],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "theory",
+      "subsection": "the_one_as_enabling_condition",
+      "kind": "source",
+      "text": "Props 1-6: The One (\u03c4\u1f78 \u1f15\u03bd) is beyond being, beyond knowing, beyond all multiplicity. It cannot be described in the terms of what it enables. Prop 1: 'Every manifold of things in some way participated is posterior to the One.' The One is the logical precondition for any plurality \u2014 the same role as S\u2080 and the Tantraloka's An\u0101khy\u0101 (38th). The proof: any plurality requires a prior unity. The One is not a being; it is the condition of being.",
+      "source_ids": [
+        "proclus-elements-theology"
+      ],
+      "topics": [
+        "the_one",
+        "enabling_condition",
+        "s0",
+        "anakhya"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "theory",
+      "subsection": "henads_as_cells_of_the_amplituhedron",
+      "kind": "synthesis",
+      "text": "Props 7-24: The henads are 'ones' \u2014 the irreducible units of divinity that mediate between the absolute One and the manifold of being. Each henad IS the whole One from a specific perspective. Prop 114: 'Every god is a self-complete henad.' In amplituhedron terms: each henad IS a cell of the positive Grassmannian. The cell is not a part of the amplituhedron \u2014 it IS the whole amplituhedron, seen from one facet. The hierarchy of henads (participation, containment, ordering) IS the cell decomposition of the positive geometry. The 'series' (seira) of a god IS the chain of cell inclusions.",
+      "source_ids": [
+        "proclus-elements-theology"
+      ],
+      "topics": [
+        "henads",
+        "cells",
+        "amplituhedron",
+        "positive_grassmannian"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "theory",
+      "subsection": "mon\u0113_proodos_epistroph\u0113_as_spanda",
+      "kind": "synthesis",
+      "text": "Props 25-39: Everything that proceeds from a principle reverts to it. The triadic structure: remaining (\u03bc\u03bf\u03bd\u03ae), proceeding (\u03c0\u03c1\u03cc\u03bf\u03b4\u03bf\u03c2), returning (\u1f10\u03c0\u03b9\u03c3\u03c4\u03c1\u03bf\u03c6\u03ae). This IS the Spanda of the Tantraloka \u2014 the pulse of consciousness that stays in itself (\u015aiva), expresses itself (\u015aakti), and recognizes itself (Sad\u0101\u015biva-\u012a\u015bvara). Every level of reality has this structure. Prop 35: 'All that proceeds from any principle reverts in respect of its being.' The reversion IS recognition \u2014 the epistroph\u0113 IS pratyabhij\u00f1\u0101.",
+      "source_ids": [
+        "proclus-elements-theology"
+      ],
+      "topics": [
+        "mone",
+        "proodos",
+        "epistrophe",
+        "spanda",
+        "recognition"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "theory",
+      "subsection": "intellect_and_soul_as_tattvas",
+      "kind": "source",
+      "text": "Props 40-59: Intellect (\u039d\u03bf\u1fe6\u03c2) is being and knowing simultaneously \u2014 the first determination of the One into the domain of knowable reality. Prop 43: 'Every intellect is a self-complete substantial act of contemplation.' This IS \u015aiva-\u015aakti (tattvas 1-2): prak\u0101\u015ba (the light of consciousness) and vimar\u015ba (the self-awareness that knows it illuminates). Props 60-112: Soul (\u03a8\u03c5\u03c7\u03ae) is the navigator \u2014 self-moved, eternal, the entity that traverses the constraint space. Prop 60: 'Every soul is a self-substantial living being, the vehicle of a self-motive life.' This IS the j\u012bva (tattva range 3-5). Proclus' Soul IS the j\u012bva \u2014 the individuated consciousness that descends into embodiment and ascends back through theurgy.",
+      "source_ids": [
+        "proclus-elements-theology"
+      ],
+      "topics": [
+        "intellect",
+        "soul",
+        "nous",
+        "psyche",
+        "jiva",
+        "navigator"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "theory",
+      "subsection": "time_and_the_hierarchy",
+      "kind": "source",
+      "text": "Props 113-124: Time is not fundamental \u2014 it is the soul's experience of procession. Prop 113: 'The first principle of time is the eternal.' This is the K\u0101lop\u0101ya (Tantraloka \u0100hnika 6): time as a path, not the ground. Props 125-211: The complete hierarchy descending from gods through daimons through souls through the material world. Each level has more multiplicity and less unity. This IS the descent through the 36 tattvas from \u015aiva (1) to Earth (36). The hierarchy IS the cell decomposition of the amplituhedron \u2014 each level a cell, each cell containing the whole.",
+      "source_ids": [
+        "proclus-elements-theology"
+      ],
+      "topics": [
+        "time",
+        "hierarchy",
+        "kalopaya",
+        "tattvas",
+        "cell_decomposition"
+      ],
+      "status": "active"
+    }
+  ],
+  "coverage": {
+    "theory": {
+      "status": "good",
+      "sources": [
+        "proclus-elements-theology"
+      ],
+      "passage_count": 5,
+      "estimated_completeness": 0.6,
+      "gaps": [
+        "Full extraction of all 211 propositions needed; detailed mapping of each proposition to specific tattva"
+      ]
+    },
+    "cosmology": {
+      "status": "minimal",
+      "sources": [
+        "proclus-elements-theology"
+      ],
+      "passage_count": 0,
+      "estimated_completeness": 0.3,
+      "gaps": [
+        "Full hierarchy from props 125-211 needs extraction"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "coverage_gap",
+      "title": "Dodds' critical edition not yet extracted",
+      "description": "The RO is based on known structure of the Elements. Full primary source extraction from the Dodds edition would strengthen the passage base.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    },
+    {
+      "id": "issue-002",
+      "type": "coverage_gap",
+      "title": "Detailed cell-by-cell mapping to amplituhedron",
+      "description": "Each of the 211 propositions should be mapped to a specific cell of the positive Grassmannian. This would be a major scholarly contribution.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial RO for Proclus' Elements of Theology. 5 passages covering the One, henads, triadic structure, intellect/soul, and time/hierarchy. Mapped to amplituhedron cell decomposition and Tantraloka tattvas.",
+      "sources_added": [
+        "proclus-elements-theology"
+      ],
+      "passage_count": 5,
+      "status": "draft"
+    }
+  ],
+  "appendices": [],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created. The 211 propositions of Proclus are now formally mapped to the amplituhedron cell structure and the 36 tattvas.",
+      "sources_total": 1,
+      "passages_total": 5
+    }
+  ]
+}

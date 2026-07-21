@@ -1,0 +1,60 @@
+{
+  "co_id": "co:uno_gurdjeff3_t1969_t1974_diagrams_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gurdjeff3_t1969_t1974_diagrams_not_struggle",
+  "turn_index": 0,
+  "lineage": "Gurdjieffian",
+  "student_state": "disappointed_by_intellectual_limit",
+  "behavior_tags": [
+    "expresses_frustration",
+    "states_insufficiency",
+    "measures_utility_by_will"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_03",
+    "function_name": "RM_03",
+    "mechanism_shape": "COMPARISON_CONTRAST",
+    "teaching_actions": [
+      "recalibrates_tool_function",
+      "defines_tool_limits",
+      "defines_utility_as_mapping"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.65,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_04",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "go_along_compliantly",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The recalibration/definition works: tool function (diagrams = intellectual mapping, not volitional aid), defines: tool limits (mapping ≠ struggle), defines: utility as mapping (not struggle). The student expresses frustration (disappointed by intellectual limit), which shows they understand: diagrams = only knowledge (insufficient for struggle). They'll likely accept the recalibration/definition. Single-turn episode: frustration report → recalibration/definition → complete. Hypothesis: tool recalibrations lead to compliance in single-turn episodes—testable by tracking whether tool recalibrations end episodes.",
+  "accumulated_insight": "T1: Student expresses frustration ('To me diagrams are only knowledge—I do not get any understanding out of them that helps me to struggle')—disappointed by intellectual limit via expresses frustration, states insufficiency and measures utility by will. They understand: diagrams = only knowledge (insufficient for struggle). The comparison_contrast mechanism recalibrates: tool function (diagrams = intellectual mapping, not volitional aid), defines: tool limits (mapping ≠ struggle), defines: utility as mapping (not struggle). Pattern: frustration report → recalibration/definition → [complete]. Low confidence because recalibrations can lead to compliance or deeper questions.",
+  "abstract_pattern": "",
+  "visible_response": "They cannot help with struggling, but they can help your thinking.\nEven now, in\nthis initial form, diagrams can help you to solve many of your troubles and problems... They may not\ngive an answer, but they will give you knowledge about where and how you can look\nfor an answer.\nThis is the real meaning of diagrams. They speak in a language that\nyou learn a little ahead.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:sufi-comparative-analysis",
+    "ro:steiner-tantraloka-parallels"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

@@ -1,0 +1,62 @@
+{
+  "co_id": "co:uno_gurdjeff1_t300_t314_formatory__t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gurdjeff1_t300_t314_formatory_thinking_and_perception",
+  "turn_index": 0,
+  "lineage": "Gurdjieffian",
+  "student_state": "vulnerable_helplessness",
+  "behavior_tags": [
+    "admits_incapacity",
+    "requests_instruction"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_04",
+    "function_name": "RM_04",
+    "mechanism_shape": "COMPARISON_CONTRAST",
+    "teaching_actions": [
+      "gives_instruction",
+      "redirects_to_empirical_test",
+      "criticizes_definition_seeking",
+      "uses_analogy"
+    ],
+    "traps_avoided": [
+      "answer_hunting"
+    ],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.5,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "request_clarification",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The protocol works: think to best ability, compare results (when thinking gives results vs. when it doesn't), reject definition-seeking. The student is vulnerable (vulnerable helplessness), which shows they're seeking method. They'll likely ask about causal sequence next. Hypothesis: practical protocols trigger causal sequence questions—testable by tracking whether protocol responses lead to causal inquiries.",
+  "accumulated_insight": "T1: Student admits incapacity ('I do not in the least know how to think not formatorily')—vulnerable helplessness via admits incapacity and requests instruction. They're seeking method/instruction. The comparison_contrast mechanism provides protocol: think to best ability, compare results (when thinking gives results vs. when it doesn't), reject definition-seeking. Pattern: incapacity admission → practical protocol → [next: causal question]. Medium confidence because practical protocols typically trigger clarification requests.",
+  "abstract_pattern": "",
+  "visible_response": "Think to the best of your ability and compare results—when your thinking gives\nresults and when it does not.\nIn that way you will come to a better understanding, at\nany rate better than just wondering about it.\nDefinitions will not help you: desire for\ndefinitions is only an excuse.\nIf you find yourself in a very difficult position, you will\nthink to the best of your ability how to get out of it.\nThink in the same way.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:sufi-comparative-analysis",
+    "ro:steiner-tantraloka-parallels"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

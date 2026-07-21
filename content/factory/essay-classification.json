@@ -1,0 +1,65 @@
+{
+  "schema": "essay-classification-v1",
+  "last_updated": "2026-07-20",
+  "statuses": {
+    "concept": "Idea or stub. <5 blocks or <1500 chars. Not ready for review.",
+    "first_draft": "Complete structurally but lacking. 5-14 blocks, needs audio/concepts/RO trace.",
+    "final_draft": "Substantial and nearly complete. 15+ blocks, may lack audio or RO trace.",
+    "published": "Fully finished. Has audio, concepts, 15+ blocks. RO-traced if applicable.",
+    "bridge_paper": "Auto-imported science paper. Not factory-produced."
+  },
+  "counts": {
+    "published": 35,
+    "final_draft": 102,
+    "first_draft": 56,
+    "concept": 27,
+    "bridge_paper": 1576,
+    "total_content": 220,
+    "total_all": 1796
+  },
+  "by_status": {
+    "published": [
+      "a-methodology-of-the-imagination",
+      "archetypal-psychology-dreamwork-and-neop",
+      "becoming_an_angel",
+      "becoming_an_angel_beautiful_edition_v6",
+      "containing-ecstasy-the-strategies-o",
+      "corbin_alone_creative_imagination_v6",
+      "mundus-imaginalis-corbin",
+      "corbin-mundus-imaginalis",
+      "you-died-already"
+    ],
+    "final_draft": [
+      "2001_suhrawardi_al_maqtul_the_martyr_of",
+      "2011_suhrawardis_realm_of_the_imaginal",
+      "corbin_alone_creation_is_not_an_object_the_universe_as_theophany",
+      "corbin_alone_sophia_in_mecca_nizm_beauty_and_the_theophany_of_desire",
+      "corbin_alone_the_face_that_cannot_be_seen_vision_form_and_the_danger_of_idolatry",
+      "corbin_alone_the_god_who_longs_to_be_known_divine_passion_compassion_and_the_birth_of_theophany",
+      "corbin_alone_the_heart_that_makes_worlds_real_imagination_mirrors_and_the_subtile_organ",
+      "corbin_alone_the_map_the_veil_and_the_method_how_corbin_teaches_us_to_read_ibn_arab",
+      "corbin_alone_when_man_prays_god_into_presence_the_method_of_theophanic_prayer",
+      "corbin_imago_templi_v6",
+      "tantra-death-systems",
+      "ficino_on_the_daimon"
+    ],
+    "first_draft": [
+      "corbin_attar_v6",
+      "corbin_avicenna_angel_v6",
+      "corbin_blake_v6",
+      "corbin_hillman_v6",
+      "corbin_imago_templi_type_b",
+      "corbin_jung_v6",
+      "corbin_plotinus_beauty_v6",
+      "corbin_steiner_imagination_v6",
+      "corbin_swedenborg_v6"
+    ],
+    "concept": [
+      "ficino_lunar_medicine",
+      "ficino_medicine_cabinet_of_the_soul",
+      "ficino_planetary_old_age",
+      "t2-2a61341800aa",
+      "t2-oareviewofvijnabhairavath1783769"
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "work_id": "work:t2-pubmed-remote-multimodal-study-case-om-chant",
+  "schema_version": 2,
+  "title": "Remote Multimodal Study - Case: OM Chant.",
+  "authors": [
+    {
+      "name": "Ruokolainen J"
+    }
+  ],
+  "publication": {
+    "year": 2025,
+    "type": "article",
+    "source": "PubMed/MEDLINE",
+    "language": "en",
+    "journal": "Stud Health Technol Inform"
+  },
+  "identifiers": {
+    "pmid": "40775839",
+    "doi": "10.3233/SHTI250821"
+  },
+  "topics": [
+    "phase-9-remote-multimodal-st",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "tradition": [
+    "contemporary_science"
+  ],
+  "tier": 2,
+  "assets": {
+    "pdf_path": null,
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/40775839/",
+    "abstract": "This paper delves into the remote multimodal data collection from sensors attached to smart mobile devices (SMD). Mobilemicroservices Architecture (MMAs) facilitates this data collection through Mobilemicroservices (MM). This paper presents a practical framework for collecting data from SMD sensors in a time-series database. External sensors are often connected to SMDs using the Bluetooth Low Energy (BLE) protocol. This paper introduces a tool that supports the multimodal use of various SMDs' BL"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "unknown",
+    "source": "pubmed_t2_search",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 9,
+    "phase_name": "Language/Mantra",
+    "bridge_rationale": "Language as mantra — mantra meditation, inner speech, focused attention, verbal repetition."
+  },
+  "evaluation": "Good (score=2.7)"
+}

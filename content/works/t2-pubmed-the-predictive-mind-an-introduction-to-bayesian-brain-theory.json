@@ -1,0 +1,42 @@
+{
+  "work_id": "work:t2-pubmed-the-predictive-mind-an-introduction-to-bayesian-brain-theory",
+  "schema_version": 2,
+  "title": "[The predictive mind: An introduction to Bayesian Brain Theory].",
+  "publication": {
+    "year": 2022,
+    "type": "article",
+    "source": "PubMed/MEDLINE",
+    "language": "en",
+    "journal": "Encephale"
+  },
+  "identifiers": {
+    "pmid": "35012898",
+    "doi": "10.1016/j.encep.2021.09.011"
+  },
+  "topics": [
+    "phase-6-dependent-arising",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "tradition": [
+    "contemporary_science"
+  ],
+  "tier": 2,
+  "assets": {
+    "pdf_path": null,
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/35012898/",
+    "abstract": "The question of how the mind works is at the heart of cognitive science. It aims to understand and explain the complex processes underlying perception, decision-making and learning, three fundamental areas of cognition. Bayesian Brain Theory, a computational approach derived from the principles of Predictive Processing (PP), offers a mechanistic and mathematical formulation of these cognitive processes. This theory assumes that the brain encodes beliefs (probabilistic states) to generate predict"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_t2_search",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 6,
+    "phase_name": "Dependent Arising",
+    "bridge_rationale": "Dependent arising — predictive processing, free energy principle, active inference as causal cognition."
+  },
+  "evaluation": "Good (score=3.4)"
+}

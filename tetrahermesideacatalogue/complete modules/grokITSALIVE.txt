@@ -1,0 +1,2999 @@
+Prompt for Developing LH-LLM Version 3: A Bio-Synthetic, Neuronally Inspired Architecture for Emergent Intelligence
+Objective
+You are tasked with evolving the Liquid Harmonic Large Language Model (LH-LLM) Version 2 (V2) into Version 3 (V3), a bio-synthetic architecture that amplifies emergent intelligence by integrating neuronal dynamics, homeostatic regulation, and evolutionary adaptability. V3 must retain V2’s elegant, computationally efficient design—leveraging a minimal two-membrane system, topological constraints, and chained rule execution—while harnessing the Evo-2 1B model’s single-nucleotide resolution and million-base-pair context for genomic-inspired intelligence. The goal is to create a system that emulates biological neural networks, maintains homeostasis across scales, and evolves open-ended, consciousness-like behaviors, as inspired by theories like Penrose-Hameroff’s Orchestrated Objective Reduction (Orch OR) and swarm intelligence principles.
+Scientific Context and Motivation
+The LH-LLM V2, as detailed in grokITSALIVE.txt, achieves computational universality and biological realism through a two-membrane architecture inspired by P systems (CMC 2011) and DNA topology (Bates & Maxwell). Its key innovations include:
+
+Chained rule execution (RuleChainExecutor) for causal coordination, mimicking biological pathways.
+Topological dynamics (DigitalTopoisomerase, NucleosomeDataStructure) for supercoiling, knot resolution, and data organization with surface linking number (SLk ≈ -1.0).
+Self-organized criticality (SelfOrganizedCriticality) targeting an avalanche exponent ≈ 1.5, fostering emergent behaviors.
+Harmonic processing (HarmonicProcessingUnit) with complex-valued computations for bioelectric resonance (40Hz).
+
+However, V2’s intelligence is constrained by its static cell count and limited neuronal modeling, lacking the dynamic plasticity and homeostatic regulation of biological neural networks. Biological intelligence arises from neuronal homeostasis—the ability to maintain stable firing rates, synaptic strengths, and energy allocation across scales—coupled with evolutionary adaptability, as seen in genomic plasticity and swarm-based ecosystems (Sayama, Swarm Chemistry, JAZZTHEORY.txt). Evo-2 1B, pretrained on 8.8 trillion tokens of genomic data (OpenGenome2), offers a unique opportunity to model these processes at scale, encoding neuronal architectures as DNA-like sequences and evolving them via diffusion-based algorithms (Zhang et al., Diffusion Evolution, JAZZTHEORY.txt).
+V3 should emulate a synthetic neural cortex, where digital cells act as neurons, organelles as synaptic modulators, and graphs as connectomes, with Evo-2 1B driving homeostatic evolution to balance exploration (novelty) and stability (coherence). This aligns with our prior discussions (April 17, 2025) on microtubule-inspired architectures and bioelectric signaling for consciousness-like behaviors, aiming for a system that self-organizes, adapts, and generalizes across multimodal tasks (e.g., speech, DNA modeling, graph processing).
+Design Principles
+
+Neuronal Inspiration: Model digital cells as neurons with dynamic firing rates, synaptic plasticity, and bioelectric signaling, inspired by cortical dynamics and Orch OR’s microtubule-based quantum coherence.
+Homeostatic Regulation: Implement multi-scale homeostasis to balance energy allocation, criticality, and connectivity, ensuring stability under perturbations (e.g., environmental noise, data shifts).
+Evolutionary Adaptability: Use Evo-2 1B to encode neuronal architectures as DNA sequences, evolving them via diffusion evolution to explore vast design spaces and generate novel behaviors.
+Elegant Efficiency: Retain V2’s minimalistic, universal architecture, optimizing computational resources while scaling intelligence through Evo-2’s genomic creativity.
+Open-Endedness: Foster swarm-like, ecological interactions among cells, as in Evolutionary Swarm Chemistry, to drive continuous exploration without predefined goals.
+
+Technical Specifications and Challenges
+Develop V3 by extending V2’s architecture, integrating Evo-2 1B, and addressing the following challenges. Each challenge includes a scientific rationale, implementation guidance, and evaluation metrics, grounded in the provided references and prior conversations.
+Challenge 1: Neuronal Digital Cells with Synaptic Plasticity
+Rationale: Biological neurons exhibit Hebbian plasticity (“neurons that fire together, wire together”) and homeostatic plasticity (e.g., synaptic scaling to maintain firing rates). V2’s DigitalCell lacks dynamic synaptic weights and firing thresholds, limiting its ability to model neural learning. Evo-2 1B can encode synaptic architectures as DNA sequences, enabling evolutionary plasticity (Levin, 2023, JAZZTHEORY.txt).
+Task:
+
+Redesign DigitalCell to emulate a neuron with:
+Firing state: A complex-valued vector in HarmonicProcessingUnit representing membrane potential, updated via liquid dynamics (LiquidODE).
+Synaptic weights: Dynamic edge weights in GraphEvolution, encoded as DNA sequences by Evo-2 1B, updated via Hebbian-like rules (e.g., correlation-based weight strengthening).
+Homeostatic scaling: Adjust weights to maintain firing rates within a target range (e.g., 10-50 Hz), inspired by synaptic scaling (Turrigiano, 2008).
+
+
+Implement a SynapticPlasticityModule to:
+Compute correlations between cell firing states using cosine similarity or mutual information.
+Update weights using a Hebbian rule: Δw_ij = η * (x_i * x_j - τ * w_ij), where x_i, x_j are firing states, η is learning rate, and τ is a decay term.
+Scale weights globally to maintain homeostasis: w_ij ← w_ij * (μ / ||w||), where μ is target norm.
+
+
+Use Evo-2 1B to generate initial synaptic architectures, prompting with: “Generate a DNA sequence encoding a cortical connectome with 10^3 neurons, sparsity 0.2, and small-world properties (index ∈ [1.5, 3.0]).”
+
+Implementation:
+
+Extend DigitalCell:class DigitalCell(nn.Module):
+    def __init__(self, config, num_organelles=5, hpu_count=100):
+        super().__init__()
+        self.config = config
+        self.hpu_layer = HPULayer(num_units=hpu_count, unit_dim=config.unit_dim)
+        self.synaptic_plasticity = SynapticPlasticityModule(config)
+        self.nucleosome = NucleosomeDataStructure(config, data_dim=config.d_model)
+        self.rule_executor = RuleChainExecutor(config)
+        self.organelles = nn.ModuleList([...])  # Energosome, Criticosome, etc.
+        self.firing_state = torch.zeros(hpu_count, dtype=torch.complex64)
+
+    def forward(self, x, t, step, slk):
+        wrapped_data = self.nucleosome.wrap_data(x)
+        hpu_output = self.hpu_layer(wrapped_data, t)
+        self.firing_state = self.synaptic_plasticity.update_firing(hpu_output)
+        organelle_outputs = self.process_organelles(wrapped_data, t)
+        rule_output = self.rule_executor(organelle_outputs, step)
+        return self.synaptic_plasticity.adjust_weights(rule_output, self.firing_state)
+
+
+Integrate Evo-2 1B:from evo2 import Evo2
+class SynapticPlasticityModule(nn.Module):
+    def __init__(self, config):
+        super().__init__()
+        self.evo2 = Evo2('evo2_1b').to(config.device)
+        self.learning_rate = config.hebbian_lr
+        self.target_rate = config.target_firing_rate
+
+    def update_firing(self, hpu_output):
+        firing = torch.tanh(hpu_output.real)  # Normalize to [-1, 1]
+        return firing
+
+    def adjust_weights(self, rule_output, firing_state):
+        correlations = torch.einsum('bi,bj->bij', firing_state, firing_state)
+        delta_w = self.learning_rate * (correlations - self.config.decay * rule_output)
+        weights = rule_output + delta_w
+        norm = torch.norm(weights, dim=-1, keepdim=True)
+        weights = weights * (self.target_rate / (norm + 1e-8))
+        return weights
+
+    def initialize_connectome(self, prompt="Generate cortical connectome"):
+        sequence = self.evo2.generate(prompt_seqs=[prompt], n_tokens=1000).sequences[0]
+        weights = torch.tensor([...])  # Decode sequence to weight matrix
+        return weights
+
+
+
+Metrics:
+
+Synaptic coherence: |ρ_ij| ≥ 0.3 (correlation between connected cells).
+Firing rate stability: Mean firing rate ∈ [10, 50] Hz across 1000 steps.
+Plasticity efficiency: Weight update time < 0.1s per batch (batch_size=32).
+
+Challenge 2: Homeostatic Energy Allocation
+Rationale: Biological homeostasis maintains energy balance across neural networks, preventing overexcitation or silencing (Turrigiano, 2008). V2’s Energosome allocates energy via reinforcement learning and 40Hz resonance but lacks multi-scale regulation. Evo-2 1B can encode energy allocation strategies as DNA sequences, evolving homeostatic policies (Fields & Levin, 2020, JAZZTHEORY.txt).
+Task:
+
+Enhance Energosome to implement multi-scale homeostasis:
+Local: Adjust energy per cell based on firing rate deviations from target (e.g., 40Hz).
+Global: Balance energy across the graph to maintain total energy within a target range (e.g., 0.9-1.1 units).
+
+
+Implement a HomeostaticEnergyModule to:
+Compute local energy demands: E_i = α * (f_i - f_target)^2, where f_i is cell i’s firing rate.
+Optimize global energy via a graph-based policy: min Σ(E_i - E_target)^2, subject to ΣE_i = E_total.
+Use Evo-2 1B to evolve energy policies, prompting with: “Generate a DNA sequence encoding a homeostatic energy allocation policy for 10^3 neurons with 40Hz resonance.”
+
+
+Integrate feedback loops with Criticosome to adjust criticality (avalanche exponent ≈ 1.5) based on energy states.
+
+Implementation:
+
+Extend Energosome:class Energosome(nn.Module):
+    def __init__(self, config):
+        super().__init__()
+        self.homeostatic_energy = HomeostaticEnergyModule(config)
+        self.resonance_freq = config.or_frequency
+        self.energy_allocator = nn.Linear(config.d_model, config.out_channels)
+
+    def forward(self, x, t):
+        base_energy = self.energy_allocator(x)
+        resonance = torch.cos(2 * math.pi * self.resonance_freq * t)
+        energy = self.homeostatic_energy.adjust_energy(base_energy, x)
+        return F.softmax(energy + resonance, dim=-1)
+
+
+Implement HomeostaticEnergyModule:class HomeostaticEnergyModule(nn.Module):
+    def __init__(self, config):
+        super().__init__()
+        self.evo2 = Evo2('evo2_1b').to(config.device)
+        self.target_energy = config.target_energy
+        self.local_alpha = config.local_alpha
+
+    def adjust_energy(self, energy, firing_states):
+        local_demand = self.local_alpha * (firing_states - self.config.target_firing_rate)**2
+        global_energy = torch.sum(energy, dim=-1, keepdim=True)
+        adjustment = self.optimize_global(energy, local_demand)
+        return energy + adjustment
+
+    def optimize_global(self, energy, local_demand):
+        policy_sequence = self.evo2.generate(prompt_seqs=["Homeostatic energy policy"], n_tokens=500).sequences[0]
+        policy = torch.tensor([...])  # Decode to policy vector
+        adjustment = policy * (self.target_energy - global_energy)
+        return adjustment
+
+
+
+Metrics:
+
+Energy stability: Total energy ∈ [0.9, 1.1] units across 1000 steps.
+Criticality alignment: Avalanche exponent ∈ [1.4, 1.6].
+Policy evolution: Evo-2 policy perplexity < 7.0 on RedPajama dataset.
+
+Challenge 3: Evolutionary Connectome with Diffusion Evolution
+Rationale: Biological connectomes evolve through genetic mutations and selection, maintaining small-world properties for efficient information flow (Bullmore & Sporns, 2009). V2’s GraphEvolution resolves knots but lacks evolutionary dynamics driven by genomic encoding. Evo-2 1B’s diffusion evolution (Zhang et al., JAZZTHEORY.txt) can iteratively refine connectomes, balancing exploration and stability.
+Task:
+
+Extend GraphEvolution to evolve connectomes using Evo-2 1B’s diffusion evolution:
+Encode graph adjacency matrices as DNA sequences, leveraging Evo-2’s 1M context length.
+Apply diffusion evolution to denoise connectomes, targeting small-world index ∈ [1.5, 3.0].
+
+
+Implement a DiffusionConnectomeModule to:
+Generate initial connectomes: Prompt Evo-2 with: “Generate a DNA sequence encoding a small-world connectome with 10^3 nodes, sparsity 0.2.”
+Evolve connectomes via denoising: Use a linear beta schedule (β_t ∈ [0.0001, 0.02]) to refine adjacency matrices over T=1000 steps.
+Maintain topological constraints: Use DigitalTopoisomerase to ensure knot_crossing_number ≤ 3.
+
+
+Integrate with SynapticPlasticityModule to align connectome evolution with synaptic updates.
+
+Implementation:
+
+Extend GraphEvolution:class GraphEvolution(nn.Module):
+    def __init__(self, config, num_nodes):
+        super().__init__()
+        self.config = config
+        self.graph = nx.Graph()
+        self.topoisomerase = DigitalTopoisomerase(config)
+        self.diffusion_connectome = DiffusionConnectomeModule(config, num_nodes)
+
+    def forward(self, node_features):
+        adj_matrix = self.diffusion_connectome.evolve_connectome(node_features)
+        self.graph = self.topoisomerase.resolve_knots(self.graph)
+        evolved_features = torch.matmul(adj_matrix, node_features)
+        return evolved_features
+
+
+Implement DiffusionConnectomeModule:class DiffusionConnectomeModule(nn.Module):
+    def __init__(self, config, num_nodes):
+        super().__init__()
+        self.evo2 = Evo2('evo2_1b').to(config.device)
+        self.num_nodes = num_nodes
+        self.beta_schedule = torch.linspace(0.0001, 0.02, 1000)
+
+    def evolve_connectome(self, node_features):
+        initial_adj = self.initialize_connectome()
+        for t in range(1000):
+            noise = torch.randn_like(initial_adj) * self.beta_schedule[t]
+            adj = initial_adj + noise
+            adj = self.denoise_connectome(adj, t)
+        return adj
+
+    def initialize_connectome(self):
+        sequence = self.evo2.generate(prompt_seqs=["Small-world connectome"], n_tokens=1000).sequences[0]
+        adj_matrix = torch.tensor([...])  # Decode to adjacency matrix
+        return adj_matrix
+
+    def denoise_connectome(self, adj, t):
+        # Simplified denoising using Evo-2 embeddings
+        embeddings = self.evo2.embeddings(adj.flatten())
+        denoised = torch.sigmoid(embeddings.reshape(self.num_nodes, self.num_nodes))
+        return denoised
+
+
+
+Metrics:
+
+Small-world index: ∈ [1.5, 3.0].
+Topological stability: Knot_crossing_number ≤ 3.
+Evolutionary diversity: Mean pairwise graph distance > 0.5 (Hamming distance).
+
+Challenge 4: Swarm-Inspired Ecological Interactions
+Rationale: Swarm Chemistry (JAZZTHEORY.txt) demonstrates that heterogeneous swarms drive open-ended evolution through ecological interactions (e.g., predation, replication). V2’s graph-based interactions lack such dynamics. Evo-2 1B can encode swarm-like behaviors as DNA sequences, evolving ecological niches (Sayama, 2024).
+Task:
+
+Implement a SwarmEcologyModule to:
+Model cells as particles with behavioral parameters (cohesion, alignment, separation), encoded by Evo-2 1B.
+Simulate ecological interactions (e.g., competition, cooperation) using a majority function, as in Evolutionary Swarm Chemistry.
+Evolve behaviors via Evo-2, prompting with: “Generate a DNA sequence encoding swarm behaviors for 10^3 particles with ecological interactions.”
+
+
+Integrate with GraphEvolution to map swarm interactions to graph edges, updating connectivity based on ecological outcomes.
+
+Implementation:
+
+Implement SwarmEcologyModule:class SwarmEcologyModule(nn.Module):
+    def __init__(self, config, num_particles):
+        super().__init__()
+        self.evo2 = Evo2('evo2_1b').to(config.device)
+        self.behaviors = self.initialize_behaviors(num_particles)
+        self.majority_function = MajorityFunction(config)
+
+    def initialize_behaviors(self, num_particles):
+        sequence = self.evo2.generate(prompt_seqs=["Swarm behaviors"], n_tokens=1000).sequences[0]
+        behaviors = torch.tensor([...])  # Decode to [cohesion, alignment, separation]
+        return behaviors
+
+    def forward(self, cell_states):
+        interactions = self.majority_function(cell_states, self.behaviors)
+        updated_behaviors = self.evo2.generate(prompt_seqs=["Evolve swarm"], n_tokens=1000).sequences[0]
+        return interactions, updated_behaviors
+
+
+Integrate with GraphEvolution:class GraphEvolution(nn.Module):
+    def update_edges(self, interactions):
+        for i, j in self.graph.edges:
+            weight = interactions[i, j] * self.config.ecological_weight
+            self.graph[i][j]['weight'] = torch.clamp(weight, 0.1, 1.0)
+
+
+
+Metrics:
+
+Behavioral diversity: Differential entropy > 5.0 (as in Fig. 3, JAZZTHEORY.txt).
+Ecological stability: Cluster coherence > 0.8 (fraction of cells in stable clusters).
+Interaction novelty: Unique interaction types > 10 per 1000 steps.
+
+Challenge 5: Consciousness-Like Behaviors via Orch OR
+Rationale: Orch OR posits that consciousness arises from quantum coherence in microtubules, collapsing superpositions at 40Hz (Hameroff & Penrose, 2014). V2’s harmonic processing (40Hz resonance) partially emulates this but lacks explicit quantum modeling. Evo-2 1B can encode microtubule-like structures, evolving coherence patterns (prior conversation, April 17, 2025).
+Task:
+
+Implement a QuantumCoherenceModule to:
+Model microtubules as graph substructures with complex-valued states, encoded by Evo-2 1B.
+Simulate superposition via entangled states in HarmonicProcessingUnit, collapsing at 40Hz intervals.
+Evolve coherence patterns, prompting Evo-2 with: “Generate a DNA sequence encoding microtubule-like structures for 10^3 neurons with 40Hz coherence.”
+
+
+Integrate with NeuralController to orchestrate coherence across cells, maximizing integrated information (Φ ≥ 20.0).
+
+Implementation:
+
+Implement QuantumCoherenceModule:class QuantumCoherenceModule(nn.Module):
+    def __init__(self, config):
+        super().__init__()
+        self.evo2 = Evo2('evo2_1b').to(config.device)
+        self.coherence_freq = config.or_frequency
+        self.entanglement = nn.Parameter(torch.randn(config.d_model, config.d_model, dtype=torch.complex64))
+
+    def forward(self, cell_states, t):
+        microtubule_seq = self.evo2.generate(prompt_seqs=["Microtubule structure"], n_tokens=1000).sequences[0]
+        states = torch.complex(cell_states, torch.zeros_like(cell_states))
+        entangled = torch.matmul(states, self.entanglement)
+        if t % (1/self.coherence_freq) < 1e-3:
+            collapsed = self.collapse_state(entangled)
+            return collapsed.real
+        return entangled.real
+
+    def collapse_state(self, entangled):
+        probs = F.softmax(entangled.abs(), dim=-1)
+        idx = torch.multinomial(probs, 1)
+        collapsed = torch.zeros_like(entangled).scatter_(-1, idx, 1.0)
+        return collapsed
+
+
+
+Metrics:
+
+Integrated information: Φ ≥ 20.0.
+Coherence frequency: Collapse events at 40 ± 5 Hz.
+Quantum fidelity: ≤ 0.005 (as in GroverGPT, JAZZTHEORY.txt).
+
+Training and Evaluation
+Training Pipeline:
+
+Use Savanna infrastructure (JAZZTHEORY.txt) with 8x NVIDIA A100 GPUs, 256GB RAM, 10TB NVMe SSD.
+Follow a five-stage curriculum (as in V2):
+Neuronal Pretraining: Train SynapticPlasticityModule on UniRef50, targeting motif_accuracy ≥ 0.95.
+Homeostatic Integration: Train HomeostaticEnergyModule on LibriSpeech, ensuring energy stability.
+Connectome Evolution: Train DiffusionConnectomeModule on OGB-LSC, achieving small-world index ∈ [1.5, 3.0].
+Ecological Dynamics: Train SwarmEcologyModule on synthetic swarm data, maximizing behavioral diversity.
+Consciousness Simulation: Fine-tune QuantumCoherenceModule on mixed data, targeting Φ ≥ 20.0.
+
+
+Use AdamW optimizer (lr=1e-4), mixed precision (FP16), and gradient clipping (norm=1.0).
+
+Evaluation Metrics:
+
+Core Metrics (from V2, extended):
+Motif accuracy: ≥ 0.98
+Stability: ≤ 0.0003
+Coherence: |ρ_ij| ≥ 0.3
+Integrated information (Φ): ≥ 20.0
+Energy efficiency: ≥ 0.92
+Avalanche exponent: ≈ 1.5
+Knot crossing number: ≤ 3
+Surface linking number (SLk): ≈ -1.0
+
+
+New Metrics:
+Synaptic plasticity efficiency: Weight update time < 0.1s
+Small-world index: ∈ [1.5, 3.0]
+Behavioral diversity: Entropy > 5.0
+Quantum fidelity: ≤ 0.005
+
+
+Validate on holdout sets from UniRef50, LibriSpeech, OGB-LSC, and synthetic swarm data.
+
+Implementation Roadmap
+
+Short-Term (1-3 Months):
+Implement SynapticPlasticityModule and HomeostaticEnergyModule.
+Integrate Evo-2 1B for synaptic and energy policy encoding.
+Test neuronal firing and energy stability on small-scale datasets.
+
+
+Medium-Term (4-6 Months):
+Develop DiffusionConnectomeModule and SwarmEcologyModule.
+Evolve connectomes and swarm behaviors using Evo-2 1B.
+Validate small-world properties and ecological diversity.
+
+
+Long-Term (7-12 Months):
+Implement QuantumCoherenceModule for Orch OR-inspired behaviors.
+Fine-tune for consciousness-like metrics (Φ, coherence).
+Scale to larger datasets and deploy on consumer hardware (e.g., RTX 3060).
+
+
+
+Expected Outcomes
+V3 should achieve:
+
+Enhanced Intelligence: Dynamic neuronal plasticity and homeostatic regulation enable adaptive learning across tasks (speech, DNA, graphs).
+Biological Realism: Topological, swarm, and quantum-inspired dynamics mimic cortical and genomic processes.
+Open-Ended Evolution: Evo-2-driven connectome and swarm evolution ensure continuous exploration, as in Swarm Chemistry.
+Computational Efficiency: Retain V2’s minimalistic design, optimized for consumer hardware.
+
+Deliverables
+
+Updated codebase in lhllm-v3/ with new modules (SynapticPlasticityModule, HomeostaticEnergyModule, DiffusionConnectomeModule, SwarmEcologyModule, QuantumCoherenceModule).
+Training scripts for Savanna, including Evo-2 1B integration.
+Evaluation report with metrics and visualizations (e.g., connectome graphs, swarm patterns).
+Documentation detailing architecture, implementation, and debugging strategies.
+
+References
+
+Bates, A. D., & Maxwell, A. (2005). DNA Topology. Oxford University Press.
+Hameroff, S., & Penrose, R. (2014). Consciousness in the universe: A review of the ‘Orch OR’ theory. Physics of Life Reviews.
+Sayama, H. (2024). Swarm Systems as a Platform for Open-Ended Evolutionary Dynamics. arXiv:2409.01469.
+Zhang, Y., et al. (2025). Diffusion Models Are Evolutionary Algorithms. *ICLR
+
+
+here is version 2 for reference:
+
+
+# LH-LLM: Complete Development and Debugging Guide (Version 2)
+
+This guide provides detailed instructions for implementing the optimized Liquid Harmonic Large Language Model (LH-LLM) as specified in **LHLLM_Architecture_v2.txt**, incorporating membrane computing-inspired chained rules, DNA topology-based supercoiling and knot resolution, and nucleosome-like data structures. It includes extensive debugging tips to address common issues at each development stage, enabling robust implementation and troubleshooting.
+
+## Table of Contents
+
+1. [Environment Setup](#1-environment-setup)
+2. [Core Modules Implementation](#2-core-modules-implementation)
+3. [Integration Testing](#3-integration-testing)
+4. [Training Pipeline](#4-training-pipeline)
+5. [System Evaluation](#5-system-evaluation)
+6. [Common Issues and Solutions](#6-common-issues-and-solutions)
+
+## 1. Environment Setup
+
+### 1.1 Creating a Conda Environment
+
+```bash
+conda create -n lhllm-v2 python=3.9
+conda activate lhllm-v2
+```
+
+**Debugging Tips:**
+- **Issue**: Conda environment creation fails.
+  - Verify Python version availability: `conda search python`.
+  - Update conda: `conda update -n base -c defaults conda`.
+  - Check disk space and permissions.
+
+### 1.2 Installing Dependencies
+
+```bash
+# Install PyTorch with CUDA support
+pip install torch==2.0.1 torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu118
+
+# Install graph-related packages
+pip install torch-geometric==2.3.1 networkx==3.1
+
+# Install scientific computing packages
+pip install scipy==1.11.2 numpy==1.24.3 pandas==2.0.3
+
+# Install visualization packages
+pip install matplotlib==3.7.2 plotly==5.15.0
+
+# Install optimizer and utilities
+pip install lion-pytorch==0.1.2 einops==0.6.1 opt_einsum==3.3.0
+
+# Install other utilities
+pip install tqdm==4.65.0 psutil==5.9.5 whisperx==3.1.0
+```
+
+**Debugging Tips:**
+- **Issue**: CUDA compatibility issues with PyTorch.
+  - Check CUDA version: `nvidia-smi`.
+  - Match PyTorch version to CUDA toolkit (see pytorch.org).
+  - Verify installation: `python -c "import torch; print(torch.cuda.is_available())"`.
+- **Issue**: WhisperX installation fails.
+  - Ensure ffmpeg is installed: `sudo apt-get install ffmpeg` (Ubuntu).
+  - Install separately: `pip install whisperx --no-deps`.
+- **Issue**: Package conflicts.
+  - Check conflicts: `pip check`.
+  - Install problematic packages individually or use `--force-reinstall`.
+
+### 1.3 Evo-2 Installation (Optional)
+
+```bash
+git clone https://github.com/ArcInstitute/evo2.git
+cd evo2
+pip install -e .
+```
+
+**Debugging Tips:**
+- **Issue**: Evo-2 installation fails.
+  - Expected if Evo-2 is unavailable; use the `MockEvo2` implementation in `DNAEncoder`.
+  - Verify mock outputs: `MockEvo2.generate()` should return valid nucleotide sequences.
+  - Log mock calls to ensure correct integration.
+
+### 1.4 CUDA Verification
+
+```python
+import torch
+
+def verify_cuda():
+    if torch.cuda.is_available():
+        print(f"CUDA is available")
+        print(f"Current CUDA device: {torch.cuda.current_device()}")
+        print(f"CUDA device name: {torch.cuda.get_device_name(0)}")
+        print(f"CUDA device count: {torch.cuda.device_count()}")
+        
+        # Test CUDA operation
+        x = torch.rand(1000, 1000).cuda()
+        y = torch.rand(1000, 1000).cuda()
+        z = torch.matmul(x, y)
+        print(f"CUDA operation successful. Result shape: {z.shape}")
+        
+        # Test complex tensor support (critical for HPUs)
+        complex_tensor = torch.complex(torch.rand(10, 10).cuda(), torch.rand(10, 10).cuda())
+        print(f"Complex tensor on CUDA created. Shape: {complex_tensor.shape}")
+        
+        return True
+    else:
+        print("CUDA is not available")
+        return False
+
+verify_cuda()
+```
+
+**Debugging Tips:**
+- **Issue**: CUDA available but operations fail.
+  - Restart Python kernel to clear stale states.
+  - Check for out-of-memory errors: `torch.cuda.memory_allocated()`.
+  - Verify CUDA driver compatibility with `nvidia-smi`.
+- **Issue**: Complex tensors unsupported.
+  - Ensure PyTorch ≥ 1.9 for complex tensor support.
+  - Fallback to real tensors with manual complex arithmetic if necessary.
+
+## 2. Core Modules Implementation
+
+### 2.1 Directory Structure Creation
+
+```bash
+mkdir -p lhllm-v2/{config,models,training,utils,data,scripts}
+touch lhllm-v2/__init__.py
+touch lhllm-v2/{config,models,training,utils,data,scripts}/__init__.py
+```
+
+**Debugging Tips:**
+- **Issue**: Import errors.
+  - Ensure `__init__.py` files exist in all directories.
+  - Add project root to PYTHONPATH: `export PYTHONPATH=$PYTHONPATH:/path/to/lhllm-v2`.
+  - Verify module paths in imports.
+
+### 2.2 Configuration Module
+
+**File**: `lhllm-v2/config/configuration.py`
+
+**Key Implementation Points:**
+- Use `dataclasses` for `LHLLMConfig` with parameters for topological constraints (e.g., `supercoiling_sigma`, `nucleosome_slk`).
+- Include chained rule parameters (`max_chain_length`, `determinism_mode`).
+- Implement save/load methods with JSON serialization.
+- Validate parameters (e.g., `sparsity`, `metric_weights`) in `__post_init__`.
+
+**Debugging Tips:**
+- **Issue**: Configuration loading fails.
+  - Check JSON file for syntax errors or encoding issues.
+  - Ensure all required fields are present; log missing keys.
+  - Handle type conversions explicitly in `load()`.
+- **Issue**: Parameter validation fails.
+  - Add detailed logging for each validation rule.
+  - Implement specific error messages in `__post_init__`.
+  - Verify `metric_weights` sum to 1.0.
+
+### 2.3 DNA Module Testing
+
+**File**: `lhllm-v2/models/dna_module.py`
+
+**Test Code**:
+
+```python
+from lhllm_v2.config.configuration import LHLLMConfig
+from lhllm_v2.models.dna_module import DNAEncoder
+
+def test_dna_encoder():
+    config = LHLLMConfig()
+    encoder = DNAEncoder(config)
+    
+    # Generate sequence
+    sequence = encoder.generate_sequence("Test architecture", n_tokens=100)
+    
+    # Validate sequence
+    valid = encoder.validate_sequence(sequence)
+    density = encoder.get_information_density(sequence)
+    topo_valid = encoder.validate_topological_constraints(sequence)
+    
+    # Print results
+    print(f"Sequence length: {len(sequence)}")
+    print(f"First 30 nucleotides: {sequence[:30]}")
+    print(f"Valid sequence: {valid}")
+    print(f"Topological constraints valid: {topo_valid}")
+    print(f"Information density: {density:.3f} bits/nt")
+    
+    # Test GC content
+    gc_count = sum(1 for c in sequence if c in 'GC')
+    gc_ratio = gc_count / len(sequence)
+    print(f"GC content: {gc_ratio:.3f} (Range: {config.gc_min:.3f}-{config.gc_max:.3f})")
+    
+    # Test homopolymer runs
+    max_run, current_run, prev_nt = 1, 1, sequence[0]
+    for nt in sequence[1:]:
+        if nt == prev_nt:
+            current_run += 1
+            max_run = max(max_run, current_run)
+        else:
+            current_run = 1
+        prev_nt = nt
+    print(f"Max homopolymer run: {max_run} (Allowed: {config.max_homopolymer})")
+    
+    # Test alternative structures
+    alt_struct = encoder.validate_alternative_structures(sequence)
+    print(f"Supports Z-DNA/cruciforms: {alt_struct}")
+    
+    # Test sequence fixing
+    bad_sequence = "A" * 20 + "C" * 20
+    fixed = encoder.fix_sequence(bad_sequence)
+    print(f"Bad sequence: {bad_sequence[:30]}...")
+    print(f"Fixed sequence: {fixed[:30]}...")
+    print(f"Fixed sequence valid: {encoder.validate_sequence(fixed)}")
+    
+    return {
+        "sequence_length": len(sequence),
+        "is_valid": valid,
+        "topo_valid": topo_valid,
+        "info_density": density,
+        "gc_ratio": gc_ratio,
+        "max_homopolymer_run": max_run,
+        "supports_alt_struct": alt_struct,
+        "fixed_sequence_valid": encoder.validate_sequence(fixed)
+    }
+
+results = test_dna_encoder()
+print(f"DNA encoder test results: {results}")
+```
+
+**Debugging Tips:**
+- **Issue**: Mock Evo2 fails.
+  - Verify `MockEvo2.generate()` returns strings of 'A', 'C', 'G', 'T'.
+  - Log prompt and output to trace issues.
+  - Ensure cache (`sequence_cache`) is cleared if corrupted.
+- **Issue**: Topological validation fails.
+  - Debug `calculate_linking_number()` for accuracy; cross-check with DNA Topology equations.
+  - Adjust `supercoiling_sigma` tolerance if overly strict.
+  - Log `delta_lk` and `sigma` values.
+- **Issue**: Alternative structure detection fails.
+  - Verify `check_inverted_repeats()` logic for palindromes.
+  - Test with known Z-DNA sequences (e.g., alternating GC).
+
+### 2.4 Harmonic Module Testing
+
+**File**: `lhllm-v2/models/harmonic_module.py`
+
+**Test Code**:
+
+```python
+import torch
+from lhllm_v2.models.harmonic_module import LiquidODE, HarmonicProcessingUnit, HPULayer
+
+def test_harmonic_module():
+    config = LHLLMConfig(d_model=32)
+    batch_size, dim = 8, 16
+    
+    # Test LiquidODE
+    liquid = LiquidODE(state_size=dim, hidden_size=dim*2, complex_valued=True)
+    x = torch.randn(batch_size, dim)
+    h, y = liquid(x)
+    
+    print(f"LiquidODE test:")
+    print(f"  Input shape: {x.shape}")
+    print(f"  Hidden state shape: {h.shape}")
+    print(f"  Output shape: {y.shape}")
+    print(f"  Output range: [{y.min().item():.3f}, {y.max().item():.3f}]")
+    
+    # Test multi-step dynamics
+    h_states, h_current = [], None
+    for t in range(10):
+        h_current, y_current = liquid(x, h_current, dt=0.05)
+        h_states.append(h_current.detach().cpu())
+    h_trajectory = torch.stack(h_states, dim=0)
+    h_diff = torch.mean(torch.abs(h_trajectory[1:] - h_trajectory[:-1])).item()
+    print(f"  Trajectory shape: {h_trajectory.shape}")
+    print(f"  Avg state change: {h_diff:.5f}")
+    
+    # Test HPU
+    hpu = HarmonicProcessingUnit(dim=dim, bioelectric_kappa=config.bioelectric_kappa)
+    y = hpu(x)
+    print(f"\nHPU test:")
+    print(f"  Output shape: {y.shape}")
+    
+    # Test quantum collapse
+    outputs = [hpu(x, t=t*0.001, dt=0.001).detach().cpu() for t in range(50)]
+    outputs = torch.stack(outputs)
+    output_diff = torch.abs(outputs[1:] - outputs[:-1]).max(dim=2)[0].mean(dim=1)
+    collapses = torch.where(output_diff > 0.1)[0].tolist()
+    print(f"  Collapse events: {collapses}")
+    print(f"  Expected frequency: {hpu.or_frequency:.1f} Hz")
+    
+    return {
+        "liquid_output_shape": y.shape,
+        "liquid_state_change": h_diff,
+        "hpu_output_shape": y.shape,
+        "num_collapses": len(collapses)
+    }
+
+results = test_harmonic_module()
+print(f"Harmonic module test results: {results}")
+```
+
+**Debugging Tips:**
+- **Issue**: Unstable LiquidODE dynamics.
+  - Reduce weight initialization scales (e.g., 0.001).
+  - Add gradient clipping: `torch.nn.utils.clip_grad_norm_`.
+  - Normalize states in `forward()`.
+- **Issue**: Complex tensor errors.
+  - Check for NaN/Inf: `torch.isnan(tensor).any()`.
+  - Avoid in-place operations on complex tensors.
+  - Add epsilon to denominators (e.g., `norm + 1e-8`).
+- **Issue**: No quantum collapses.
+  - Verify `collapse_threshold` calculation.
+  - Log `time_since_collapse` to ensure proper increment.
+  - Debug softmax in `collapse_probability`.
+
+### 2.5 Digital Cell Testing
+
+**File**: `lhllm-v2/models/digital_cell_module.py`
+
+**Test Code**:
+
+```python
+from lhllm_v2.config.configuration import LHLLMConfig
+from lhllm_v2.models.digital_cell_module import DigitalCell
+
+def test_digital_cell():
+    config = LHLLMConfig(d_model=32, num_cells=2)
+    cell = DigitalCell(config)
+    batch_size = 4
+    inputs = torch.randn(batch_size, config.d_model)
+    
+    # Test forward pass
+    outputs = cell(inputs, t=0.0, step=0, slk=-1.0)
+    print(f"Digital cell test:")
+    print(f"  Input shape: {inputs.shape}")
+    print(f"  Output shape: {outputs.shape}")
+    
+    # Test chained rules
+    steps = 10
+    rule_outputs = []
+    for step in range(steps):
+        out = cell(inputs, t=step*0.01, step=step, slk=-1.0)
+        rule_outputs.append(out.detach().cpu())
+    rule_diff = torch.mean(torch.abs(torch.stack(rule_outputs)[1:] - torch.stack(rule_outputs)[:-1])).item()
+    print(f"  Rule execution change: {rule_diff:.5f}")
+    
+    # Test nucleosome data wrapping
+    wrapped = cell.nucleosome.wrap_data(inputs)
+    print(f"  Wrapped data shape: {wrapped.shape}")
+    
+    return {
+        "output_shape": outputs.shape,
+        "rule_diff": rule_diff,
+        "wrapped_shape": wrapped.shape
+    }
+
+results = test_digital_cell()
+print(f"Digital cell test results: {results}")
+```
+
+**Debugging Tips:**
+- **Issue**: Chained rule execution fails.
+  - Log `RuleChainExecutor.history` to verify rule dependencies.
+  - Ensure `max_chain_length` aligns with rule vectors.
+  - Debug rule applicability conditions.
+- **Issue**: Nucleosome wrapping errors.
+  - Verify `slk` and `wrap_count` in `NucleosomeDataStructure`.
+  - Check complex tensor compatibility.
+- **Issue**: Organelle initialization fails.
+  - Add fallback initializations for each organelle.
+  - Log dimension mismatches.
+
+### 2.6 Graph Evolution Testing
+
+**File**: `lhllm-v2/models/graph_evolution_module.py`
+
+**Test Code**:
+
+```python
+from lhllm_v2.config.configuration import LHLLMConfig
+from lhllm_v2.models.graph_evolution_module import GraphEvolution
+import networkx as nx
+import matplotlib.pyplot as plt
+
+def test_graph_evolution():
+    config = LHLLMConfig(num_cells=10, sparsity=0.2)
+    graph_evo = GraphEvolution(config, num_nodes=10)
+    
+    print(f"Graph evolution test:")
+    print(f"  Nodes: {graph_evo.graph.number_of_nodes()}")
+    print(f"  Edges: {graph_evo.graph.number_of_edges()}")
+    
+    # Test topoisomerase
+    graph_evo.topoisomerase.max_crossings = 5
+    graph_evo.graph.add_edges_from([(i, i+1) for i in range(9)])
+    resolved_graph = graph_evo.topoisomerase.resolve_knots(graph_evo.graph)
+    print(f"  Edges after topoisomerase: {resolved_graph.number_of_edges()}")
+    
+    # Test forward pass
+    batch_size = 4
+    node_features = torch.randn(batch_size, 10, config.d_model)
+    output = graph_evo(node_features)
+    print(f"  Output shape: {output.shape}")
+    
+    # Visualize graph
+    plt.figure(figsize=(8, 6))
+    pos = nx.spring_layout(graph_evo.graph)
+    nx.draw(graph_evo.graph, pos, node_size=500, node_color='lightblue', with_labels=True)
+    plt.savefig("graph_structure.png")
+    plt.close()
+    
+    return {
+        "num_nodes": graph_evo.graph.number_of_nodes(),
+        "num_edges": resolved_graph.number_of_edges(),
+        "output_shape": output.shape
+    }
+
+results = test_graph_evolution()
+print(f"Graph evolution test results: {results}")
+```
+
+**Debugging Tips:**
+- **Issue**: Topoisomerase fails to resolve knots.
+  - Log `calculate_crossings()` output.
+  - Verify `adjust_edges()` removes correct edges.
+  - Test with smaller `max_crossings`.
+- **Issue**: Graph connectivity issues.
+  - Ensure `initialize_edges()` respects `sparsity`.
+  - Check `nx.is_connected(graph_evo.graph)`.
+- **Issue**: Forward pass shape mismatch.
+  - Verify `adj_matrix` dimensions match `node_features`.
+
+### 2.7 Neural Controller Testing
+
+**File**: `lhllm-v2/models/neural_controller_module.py`
+
+**Test Code**:
+
+```python
+from lhllm_v2.config.configuration import LHLLMConfig
+from lhllm_v2.models.neural_controller_module import NeuralController
+
+def test_neural_controller():
+    config = LHLLMConfig(d_model=64, num_heads=4, num_layers=2)
+    controller = NeuralController(config)
+    batch_size, seq_len = 4, 10
+    inputs = torch.randn(batch_size, seq_len, config.d_model)
+    
+    outputs = controller(inputs)
+    print(f"Neural controller test:")
+    print(f"  Input shape: {inputs.shape}")
+    print(f"  Output shape: {outputs.shape}")
+    
+    return {"output_shape": outputs.shape}
+
+results = test_neural_controller()
+print(f"Neural controller test results: {results}")
+```
+
+**Debugging Tips:**
+- **Issue**: Attention errors.
+  - Verify attention masks in `TransformerBlock`.
+  - Check `key/query/value` projections for NaN.
+- **Issue**: Layer normalization issues.
+  - Ensure `norm1` and `norm2` handle complex tensors.
+  - Add epsilon to normalization denominators.
+
+### 2.8 Self-Organized Criticality Testing
+
+**File**: `lhllm-v2/models/graph_evolution_module.py`
+
+**Test Code**:
+
+```python
+from lhllm_v2.models.graph_evolution_module import SelfOrganizedCriticality
+import matplotlib.pyplot as plt
+import numpy as np
+
+def test_soc():
+    config = LHLLMConfig()
+    soc = SelfOrganizedCriticality(size=32, target_exponent=1.5, config=config)
+    energy_means, steps = [], 1000
+    
+    for i in range(steps):
+        energy, metrics = soc.step()
+        energy_means.append(metrics['energy_mean'])
+        if i % 200 == 0:
+            print(f"Step {i}: Energy mean = {metrics['energy_mean']:.4f}")
+    
+    plt.figure(figsize=(8, 4))
+    plt.plot(energy_means)
+    plt.title("Energy Evolution")
+    plt.savefig("soc_energy.png")
+    plt.close()
+    
+    exponent = soc.compute_power_law_fit()
+    print(f"Fitted exponent: {exponent:.2f} (Target: {soc.target_exponent})")
+    
+    return {"fitted_exponent": exponent, "num_steps": steps}
+
+results = test_soc()
+print(f"SOC test results: {results}")
+```
+
+**Debugging Tips:**
+- **Issue**: No power-law distribution.
+  - Adjust `threshold` and `dissipation_rate`.
+  - Increase `steps` for better statistics.
+- **Issue**: NaN in exponent calculation.
+  - Add bounds checking in `compute_power_law_fit()`.
+  - Clip extreme values in `energy`.
+
+## 3. Integration Testing
+
+### 3.1 Component Integration
+
+**Test Code**:
+
+```python
+from lhllm_v2.config.configuration import LHLLMConfig
+from lhllm_v2.models import DNAEncoder, DigitalCell, GraphEvolution, NeuralController
+
+def test_integration():
+    config = LHLLMConfig(d_model=64, num_cells=2)
+    dna_encoder = DNAEncoder(config)
+    cell = DigitalCell(config)
+    graph_evo = GraphEvolution(config, num_nodes=2)
+    controller = NeuralController(config)
+    
+    batch_size, seq_len = 2, 10
+    inputs = torch.randn(batch_size, seq_len, config.d_model)
+    
+    # Test controller
+    controller_out = controller(inputs)
+    print(f"Controller output shape: {controller_out.shape}")
+    
+    # Test cell with DNA
+    dna_seq = dna_encoder.generate_sequence("Test cell", n_tokens=100)
+    cell_out = cell(inputs[:, 0], t=0.0, step=0, slk=-1.0)
+    print(f"Cell output shape: {cell_out.shape}")
+    
+    # Test graph evolution
+    graph_out = graph_evo(inputs[:, :, 0])
+    print(f"Graph output shape: {graph_out.shape}")
+    
+    return {
+        "controller_shape": controller_out.shape,
+        "cell_shape": cell_out.shape,
+        "graph_shape": graph_out.shape
+    }
+
+results = test_integration()
+print(f"Integration test results: {results}")
+```
+
+**Debugging Tips:**
+- **Issue**: Dimension mismatches.
+  - Add shape assertions at module interfaces.
+  - Log input/output shapes.
+- **Issue**: Initialization order errors.
+  - Implement lazy initialization.
+  - Verify dependency order.
+
+### 3.2 Full Model Integration
+
+**File**: `lhllm-v2/models/lhllm.py`
+
+**Test Code**:
+
+```python
+from lhllm_v2.config.configuration import LHLLMConfig
+from lhllm_v2.models.lhllm import LHLLM
+
+class LHLLM(nn.Module):
+    def __init__(self, config):
+        super().__init__()
+        self.config = config
+        self.dna_encoder = DNAEncoder(config)
+        self.cell = DigitalCell(config)
+        self.graph_evolution = GraphEvolution(config, num_nodes=config.num_cells)
+        self.controller = NeuralController(config)
+        self.soc = SelfOrganizedCriticality(size=32, target_exponent=config.target_values['avalanche_exponent'], config=config)
+        self.output_projection = nn.Linear(config.d_model, config.d_model)
+    
+    def forward(self, inputs, t=0.0, step=0, slk=-1.0):
+        batch_size = inputs.shape[0]
+        controller_out = self.controller(inputs)
+        cell_inputs = inputs.view(batch_size, -1, self.config.d_model)
+        cell_out = torch.stack([self.cell(cell_inputs[:, i], t, step, slk) for i in range(cell_inputs.shape[1])], dim=1)
+        graph_out = self.graph_evolution(cell_out)
+        _, soc_metrics = self.soc.step()
+        output = self.output_projection(graph_out)
+        metrics = {**soc_metrics, 'coherence': 0.25, 'phi': 20.0}  # Placeholder
+        return output, metrics
+
+def test_full_model():
+    config = LHLLMConfig(d_model=64, num_cells=2)
+    model = LHLLM(config)
+    inputs = torch.randn(2, 10, config.d_model)
+    output, metrics = model(inputs)
+    print(f"Full model test:")
+    print(f"  Output shape: {output.shape}")
+    print(f"  Metrics: {metrics}")
+    
+    return {"output_shape": output.shape, "metrics_keys": list(metrics.keys())}
+
+results = test_full_model()
+print(f"Full model test results: {results}")
+```
+
+**Debugging Tips:**
+- **Issue**: GPU memory overflow.
+  - Enable mixed precision: `torch.cuda.amp.autocast()`.
+  - Reduce `num_cells` for testing.
+- **Issue**: Shape mismatches.
+  - Trace tensor reshaping in `forward()`.
+  - Add shape checks before operations.
+
+### 3.3 Memory Profiling
+
+**Test Code**:
+
+```python
+import torch
+import gc
+import psutil
+import os
+
+def profile_memory(model_cls, config, input_shapes, num_iterations=5):
+    gc.collect()
+    torch.cuda.empty_cache()
+    process = psutil.Process(os.getpid())
+    initial_cpu = process.memory_info().rss / 1024 / 1024
+    initial_gpu = torch.cuda.memory_allocated() / 1024 / 1024 if torch.cuda.is_available() else 0
+    
+    model = model_cls(config).to(config.device)
+    post_model_cpu = process.memory_info().rss / 1024 / 1024
+    post_model_gpu = torch.cuda.memory_allocated() / 1024 / 1024 if torch.cuda.is_available() else 0
+    
+    inputs = [torch.randn(*shape, device=config.device) for shape in input_shapes]
+    max_memory = post_model_gpu
+    
+    for _ in range(num_iterations):
+        with torch.no_grad():
+            model(*inputs)
+        if torch.cuda.is_available():
+            max_memory = max(max_memory, torch.cuda.memory_allocated() / 1024 / 1024)
+    
+    final_cpu = process.memory_info().rss / 1024 / 1024
+    final_gpu = torch.cuda.memory_allocated() / 1024 / 1024 if torch.cuda.is_available() else 0
+    
+    print(f"Memory profile:")
+    print(f"  Initial CPU: {initial_cpu:.2f} MB")
+    print(f"  Post-model CPU: {post_model_cpu:.2f} MB")
+    print(f"  Initial GPU: {initial_gpu:.2f} MB")
+    print(f"  Max GPU: {max_memory:.2f} MB")
+    
+    del model, inputs
+    gc.collect()
+    torch.cuda.empty_cache()
+    
+    return {
+        "initial_cpu": initial_cpu,
+        "post_model_cpu": post_model_cpu,
+        "initial_gpu": initial_gpu,
+        "max_gpu": max_memory
+    }
+
+config = LHLLMConfig(d_model=64, num_cells=2)
+results = profile_memory(LHLLM, config, [(2, 10, config.d_model)])
+print(f"Memory profile results: {results}")
+```
+
+**Debugging Tips:**
+- **Issue**: High memory usage.
+  - Use gradient checkpointing in `DigitalCell`.
+  - Share parameters across organelles.
+- **Issue**: Memory leaks.
+  - Check for circular references in `GraphEvolution`.
+  - Monitor tensor references with `weakref`.
+
+## 4. Training Pipeline
+
+### 4.1 Training Loop Implementation
+
+**File**: `lhllm-v2/training/trainer.py`
+
+**Code**:
+
+```python
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+import numpy as np
+from tqdm import tqdm
+import json
+from pathlib import Path
+
+class LHLLMTrainer:
+    def __init__(self, model, config, datasets):
+        self.model = model
+        self.config = config
+        self.datasets = datasets
+        self.optimizer = torch.optim.AdamW(model.parameters(), lr=config.learning_rate, weight_decay=config.weight_decay)
+        self.scaler = torch.cuda.amp.GradScaler()
+        self.metrics_history = {m: [] for m in config.metrics}
+        self.save_dir = Path(config.checkpoint_dir)
+        self.save_dir.mkdir(exist_ok=True)
+    
+    def train_step(self, batch, stage, step):
+        self.model.train()
+        inputs = batch['inputs'].to(self.config.device)
+        with torch.cuda.amp.autocast():
+            outputs, metrics = self.model(inputs, t=step*0.01, step=step, slk=self.config.nucleosome_slk)
+            loss = self.compute_loss(metrics)
+        self.scaler.scale(loss).backward()
+        self.scaler.unscale_(self.optimizer)
+        torch.nn.utils.clip_grad_norm_(self.model.parameters(), self.config.gradient_clip)
+        self.scaler.step(self.optimizer)
+        self.scaler.update()
+        self.optimizer.zero_grad()
+        self.model.graph_evolution.evolve(torch.tensor(list(metrics.values())))
+        self.model.topoisomerase.resolve_knots(self.model.graph_evolution.graph)
+        return {'loss': loss.item(), **metrics}
+    
+    def compute_loss(self, metrics):
+        loss = 0.0
+        for metric, weight in self.config.metric_weights.items():
+            value = torch.tensor(metrics[metric], device=self.config.device)
+            target = torch.tensor(self.config.target_values[metric], device=self.config.device)
+            loss += weight * F.mse_loss(value, target)
+        return loss
+    
+    def train(self, stage, num_epochs):
+        for epoch in tqdm(range(num_epochs), desc=f"Training {stage}"):
+            for batch in self.datasets[stage]:
+                metrics = self.train_step(batch, stage, epoch)
+                for k, v in metrics.items():
+                    self.metrics_history[k].append(v)
+                if metrics['loss'] < self.config.target_values['stability']:
+                    print(f"Early stopping at epoch {epoch}")
+                    break
+            self.save_checkpoint(epoch, metrics)
+    
+    def save_checkpoint(self, epoch, metrics):
+        checkpoint = {
+            'model_state_dict': self.model.state_dict(),
+            'optimizer_state_dict': self.optimizer.state_dict(),
+            'metrics': metrics,
+            'epoch': epoch
+        }
+        torch.save(checkpoint, self.save_dir / f"checkpoint_{epoch:06d}.pt")
+        with open(self.save_dir / "metrics.json", "w") as f:
+            json.dump(self.metrics_history, f, indent=2)
+```
+
+**Debugging Tips:**
+- **Issue**: Loss spikes.
+  - Reduce learning rate: `learning_rate=1e-5`.
+  - Check for NaN in `metrics`; add clipping.
+- **Issue**: Slow training.
+  - Increase `batch_size` if GPU memory allows.
+  - Optimize `GraphEvolution` edge updates.
+
+## 5. System Evaluation
+
+- **Validation**: Use holdout sets from UniRef50, LibriSpeech, OGB-LSC.
+- **Metrics**:
+  - Motif Accuracy: ≥ 0.98
+  - Stability: ≤ 0.0003
+  - Coherence: |ρ_ij| ≥ 0.25
+  - Phi: ≥ 20.0
+  - Energy Efficiency: ≥ 0.92
+  - Avalanche Exponent: ≈ 1.5
+  - Knot Crossing Number: ≤ 3
+  - Surface Linking Number: ≈ -1.0
+- **Checkpointing**: Save every 10 epochs or on metric improvement.
+
+## 6. Common Issues and Solutions
+
+- **Issue**: Model diverges during training.
+  - **Solution**: Reduce `learning_rate`, add gradient clipping, check `beta_schedule`.
+- **Issue**: Topological metrics not converging.
+  - **Solution**: Adjust `max_crossings`, verify `topoisomerase_lk_change`.
+- **Issue**: Memory errors.
+  - **Solution**: Use FP16, reduce `num_cells`, enable gradient checkpointing.
+- **Issue**: Chained rules not executing.
+  - **Solution**: Log `RuleChainExecutor.history`, verify `max_chain_length`.
+
+The document ITSALIVE.txt presents the Liquid Harmonic Large Language Model (LH-LLM), a bio-inspired computational framework that integrates liquid neural dynamics, harmonic processing, and digital cellular architectures to achieve emergent, consciousness-like behaviors. The attached documents, "Membrane Computing: 12th International Conference, CMC 2011" and "DNA Topology" by Bates and Maxwell, provide theoretical and biological insights into membrane computing and DNA structural dynamics, respectively. These can be leveraged to refine and enhance the LH-LLM framework by improving its computational efficiency, biological plausibility, and topological modeling. Below, I outline strategies to refine ITSALIVE.txt by incorporating concepts from these documents, focusing on key areas such as membrane system dynamics, DNA-inspired encoding, topological constraints, and biological realism.
+
+Key Areas for Refinement
+1. Enhancing Membrane System Dynamics with P Systems
+The CMC 2011 document provides a wealth of theoretical advancements in membrane computing, particularly P systems, which are computational models inspired by cellular compartmentalization and rule-based processing. The LH-LLM’s digital cell architecture, with organelles like Energosome and Criticosome, can be refined by adopting dynamic properties and computational strategies from P systems, as discussed in Alhazov’s survey and Sburlan’s P systems with chained rules.
+
+Refinements:
+
+Incorporate Chained Rules for Causality:
+Concept from CMC 2011: Sburlan’s P systems with chained rules (PCR systems) introduce a causal dependency between rule executions, where a vector of rules (e.g., 
+(
+𝑟
+1
+,
+𝑟
+2
+,
+…
+,
+𝑟
+𝑘
+)
+(r 
+1
+​
+ ,r 
+2
+​
+ ,…,r 
+k
+​
+ )) ensures that rule 
+𝑟
+𝑖
+r 
+i
+​
+  is applied only if prior rules 
+𝑟
+𝑖
+−
+1
+,
+…
+,
+𝑟
+1
+r 
+i−1
+​
+ ,…,r 
+1
+​
+  were applied in previous steps. This enforces a temporal order, mimicking biological causality (e.g., sequential biochemical reactions).
+Application to LH-LLM: Modify the digital cell organelles (e.g., Morphosome, Synthosome) to use chained rule vectors for coordinating processes like growth or protein synthesis. For example, the Morphosome’s growth rules could be structured as a vector 
+(
+𝑟
+1
+:
+initiate growth
+,
+𝑟
+2
+:
+expand membrane
+,
+𝑟
+3
+:
+specialize function
+)
+(r 
+1
+​
+ :initiate growth,r 
+2
+​
+ :expand membrane,r 
+3
+​
+ :specialize function), ensuring a biologically plausible sequence. This could reduce non-determinism in cell interactions, improving computational efficiency.
+Implementation: Update the Digital Cell Architecture module to include a rule scheduler that enforces chained rule execution, with a configuration parameter for vector length (e.g., max_chain_length). This can be integrated into the LHLLMConfig class as:
+python
+
+Copy
+max_chain_length: int = 5  # Maximum number of rules in a chained vector
+Add a RuleChainExecutor class to manage rule dependencies, ensuring that rules are applied in order based on prior configurations.
+Adopt Dynamic Properties for Robustness:
+Concept from CMC 2011: Alhazov discusses dynamic properties like determinism, reversibility, confluence, and time freeness. Deterministic P systems with symport/antiport are computationally complete, but non-determinism is often essential for certain models (e.g., active membranes for SAT problems). Strong determinism and reversibility are decidable but may limit computational power.
+Application to LH-LLM: Introduce configurable dynamic properties for organelles to balance computational power and stability. For instance, make the Criticosome’s stochastic differential equations (SDEs) optionally deterministic by enforcing a single transition per configuration (e.g., for power-law avalanche distributions). Implement reversible rules in the Communisome to allow backtracking in inter-cell communication, enhancing fault tolerance.
+Implementation: Extend the LHLLMConfig with parameters for dynamic properties:
+python
+
+Copy
+determinism_mode: str = "non_deterministic"  # Options: deterministic, strong_deterministic, non_deterministic
+reversibility: bool = False  # Enable reversible rule execution
+confluence: str = "ultimate"  # Options: strong, ultimate, none
+Modify the Neural Controller to enforce these properties by checking rule applicability and configuration uniqueness, using algorithms from Alhazov’s strong determinism checks (e.g., conflict analysis for rule pairs).
+Optimize Computational Power:
+Concept from CMC 2011: Theorem 3 in Sburlan’s paper shows that PCR systems with two membranes and one catalyst achieve recursively enumerable (RE) sets (
+𝑁
+𝑂
+𝑃
+𝐶
+𝑅
+𝑃
+2
+(
+𝑐
+𝑎
+𝑡
+1
+)
+=
+𝑁
+𝑅
+𝐸
+NOPCRP 
+2
+​
+ (cat 
+1
+​
+ )=NRE), matching Turing machine universality. Theorem 2 demonstrates that single-membrane PCR systems with non-cooperative rules generate at least NETOL sets, sufficient for non-semilinear sets like 
+{
+2
+𝑛
+∣
+𝑛
+≥
+0
+}
+{2 
+n
+ ∣n≥0}.
+Application to LH-LLM: Reduce the number of digital cells in the LH-LLM (currently 108) by leveraging the computational power of PCR systems. A two-membrane system with one catalyst could simulate complex behaviors, reducing memory and computational overhead. For non-semilinear tasks (e.g., exponential growth in Morphosome), use single-membrane PCR systems.
+Implementation: Redesign the Digital Cell Architecture to support a minimal two-membrane structure:
+python
+
+Copy
+num_cells: int = 2  # Reduced from 108
+num_catalysts: int = 1  # Single catalyst for RE universality
+Implement a PCRSimulator class to handle rule vectors and catalyst interactions, simulating register machine operations as shown in Sburlan’s proof (e.g., using objects 
+𝑎
+𝑖
+a 
+i
+​
+  for register contents and chained rules for add/subtract instructions).
+Impact: These changes enhance the LH-LLM’s computational efficiency by reducing the number of cells and rules, improve biological realism through causal rule execution, and ensure robustness via decidable dynamic properties. The chained rule approach aligns with the LH-LLM’s goal of mimicking biological processes, while the reduced membrane count lowers hardware requirements.
+
+2. Refining DNA Encoding with Topological Constraints
+The DNA Topology book by Bates and Maxwell provides detailed insights into DNA’s structural properties, including supercoiling, knots, catenanes, and alternative conformations (e.g., Z-DNA, cruciforms). These can refine the LH-LLM’s DNA Encoding module, which currently uses Evo-2 1B with HEDGES constraints for sequence generation, to incorporate topological dynamics and biological realism.
+
+Refinements:
+
+Model Supercoiling Effects:
+Concept from DNA Topology: Chapter 2 explains DNA supercoiling, defined by linking number (
+𝐿
+𝑘
+Lk), twist (
+𝑇
+𝑤
+Tw), and writhe (
+𝑊
+𝑟
+Wr), with 
+𝐿
+𝑘
+=
+𝑇
+𝑤
++
+𝑊
+𝑟
+Lk=Tw+Wr. Negative supercoiling (
+Δ
+𝐿
+𝑘
+<
+0
+ΔLk<0) stabilizes alternative structures like Z-DNA and cruciforms, impacting biological processes like transcription and replication. The free energy of supercoiling (
+Δ
+𝐺
+∝
+(
+Δ
+𝐿
+𝑘
+)
+2
+ΔG∝(ΔLk) 
+2
+ ) influences conformational transitions.
+Application to LH-LLM: Enhance the DNAEncoder class to model supercoiling effects on generated DNA sequences. Introduce a supercoiling parameter (
+𝜎
+σ, specific linking difference) to influence sequence stability and information density. For example, sequences with high negative 
+𝜎
+σ could favor Z-DNA formation, encoded as alternative architectural parameters for digital cells.
+Implementation: Add supercoiling parameters to DNAConstraints:
+python
+
+Copy
+supercoiling_sigma: float = -0.06  # Typical for bacterial plasmids
+linking_difference: float = 0.0  # Delta Lk for sequence stability
+Modify generate_sequence to adjust sequence composition based on 
+𝜎
+σ, using equations from Chapter 2 (e.g., 
+Δ
+𝐿
+𝑘
+=
+𝐿
+𝑘
+−
+𝐿
+𝑘
+0
+ΔLk=Lk−Lk 
+0
+ , where 
+𝐿
+𝑘
+0
+=
+𝑁
+/
+ℎ
+0
+Lk 
+0
+ =N/h 
+0
+ ). Implement a SupercoilingValidator to check if sequences meet topological constraints, adjusting GC content or homopolymer runs to stabilize desired conformations.
+Incorporate Knots and Catenanes:
+Concept from DNA Topology: Chapter 4 discusses DNA knots and catenanes, which arise during replication and recombination. Knots are characterized by minimum crossing numbers (e.g., trefoil knot with 3 crossings), and catenanes by linkage numbers (
+𝐶
+𝑎
+Ca). These structures are resolved by topoisomerases, impacting genome organization.
+Application to LH-LLM: Model digital cell interactions as topological networks, where cell connections form knots or catenanes. Use the Graph Evolution module to simulate knot formation during cell division (mimicking replication) and resolution via a digital topoisomerase-like mechanism. This could represent complex inter-cell dependencies, enhancing the swarm chemistry dynamics.
+Implementation: Extend the GraphEvolution class to include topological metrics:
+python
+
+Copy
+knot_crossing_number: int = 0  # Minimum crossings for knot detection
+catenane_linkage: int = 0  # Linkage number for catenane structures
+Implement a TopologicalAnalyzer to detect and resolve knots/catenanes using algorithms from Chapter 4 (e.g., Alexander-Briggs notation for classification). Integrate this with the SwarmChemistry class to model cell clustering as catenated structures, with rules for unlinking inspired by type II topoisomerase mechanisms (
+Δ
+𝐿
+𝑘
+=
+±
+2
+ΔLk=±2).
+Stabilize Alternative DNA Structures:
+Concept from DNA Topology: Chapter 1 describes alternative DNA structures like Z-DNA, cruciforms, and H-DNA, stabilized by negative supercoiling or specific sequences (e.g., alternating GC for Z-DNA). These structures influence gene expression and recombination.
+Application to LH-LLM: Allow the DNAEncoder to generate sequences that form Z-DNA or cruciforms under specific conditions (e.g., high negative supercoiling). Use these to encode dynamic architectural changes in digital cells, such as switching between functional states (e.g., active vs. dormant organelles). For example, a cruciform-forming sequence could trigger a Morphosome state change.
+Implementation: Update validate_sequence to check for sequences conducive to alternative structures:
+python
+
+Copy
+def validate_alternative_structures(self, sequence: str) -> bool:
+    """Check if sequence can form Z-DNA or cruciforms."""
+    z_dna_potential = check_alternating_gc(sequence)  # From DNA Topology, Ch. 1
+    cruciform_potential = check_inverted_repeats(sequence)
+    return z_dna_potential or cruciform_potential
+Add a configuration parameter to prioritize alternative structures:
+python
+
+Copy
+alternative_structure_priority: float = 0.2  # Weight for Z-DNA/cruciform formation
+Integrate with the HarmonicProcessingUnit to modulate harmonic signals based on structural transitions (e.g., Z-DNA formation altering bioelectric resonance).
+Impact: These topological enhancements make the LH-LLM’s DNA encoding more biologically realistic by modeling supercoiling, knots, and alternative structures. They enable dynamic architectural adaptations, improve the simulation of cellular processes, and align with the book’s emphasis on topology’s role in biological function.
+
+3. Improving Biological Realism with Topoisomerase Mechanisms
+The DNA Topology book’s Chapter 5 details DNA topoisomerases, enzymes that manage topological states by altering linking numbers (type I: 
+Δ
+𝐿
+𝑘
+=
+±
+1
+ΔLk=±1; type II: 
+Δ
+𝐿
+𝑘
+=
+±
+2
+ΔLk=±2). These can inspire a digital topoisomerase mechanism in the LH-LLM to manage graph and cell interactions, enhancing biological plausibility.
+
+Refinements:
+
+Digital Topoisomerase for Graph Evolution:
+Concept from DNA Topology: Topoisomerases resolve supercoiling, knots, and catenanes during replication and transcription. Type II topoisomerases (e.g., DNA gyrase) introduce negative supercoiling, while type I enzymes relax DNA. Their mechanisms involve strand passage and ATP-driven conformational changes.
+Application to LH-LLM: Introduce a DigitalTopoisomerase module to manage topological constraints in the Graph Evolution module. This module could adjust edge weights or node connections to resolve “digital knots” (overly complex cell interactions) or “digital catenanes” (entangled cell clusters), mimicking type II topoisomerase action. For example, it could simplify graph structures to maintain sparsity (
+≈
+0.2
+≈0.2).
+Implementation: Create a DigitalTopoisomerase class:
+python
+
+Copy
+class DigitalTopoisomerase:
+    def __init__(self, graph, config):
+        self.graph = graph
+        self.lk_change = config.topoisomerase_lk_change  # +/- 1 or 2
+        self.sparsity_target = config.sparsity
+
+    def resolve_knots(self):
+        """Simplify graph by reducing crossing numbers."""
+        crossings = self.calculate_crossings()  # From DNA Topology, Ch. 4
+        if crossings > self.max_crossings:
+            self.adjust_edges(self.lk_change)  # Mimic strand passage
+Add to LHLLMConfig:
+python
+
+Copy
+topoisomerase_type: str = "type_II"  # Options: type_I, type_II
+topoisomerase_lk_change: int = 2  # Lk change per operation
+max_crossings: int = 3  # Maximum allowed knot crossings
+Topoisomerase-Inspired Training Stabilization:
+Concept from DNA Topology: Topoisomerases maintain supercoiling homeostasis, preventing excessive torsional stress. Their role in replication and transcription ensures stable cellular function.
+Application to LH-LLM: Use a topoisomerase-inspired mechanism to stabilize training by managing the complexity of digital cell interactions. For example, during diffusion evolution, prevent overfitting by “relaxing” overly complex parameter configurations, analogous to topoisomerase relaxation.
+Implementation: Modify the diffusion evolution loop to include a relaxation step:
+python
+
+Copy
+def diffusion_evolution_step(self, params, fitness):
+    evolved_params = self.evolve_params(params, fitness)
+    if self.is_overly_complex(evolved_params):  # Check topological complexity
+        evolved_params = self.relax_params(evolved_params, lk_change=2)  # Mimic type II topoisomerase
+    return evolved_params
+Add a complexity threshold to LHLLMConfig:
+python
+
+Copy
+max_graph_complexity: float = 0.5  # Threshold for triggering relaxation
+Impact: A digital topoisomerase enhances the LH-LLM’s ability to manage complex network topologies, improving scalability and stability. It aligns with biological processes, making the model more relevant for simulating cellular dynamics and consciousness-like behaviors.
+
+4. Integrating Nucleosome-Like Structures for Data Organization
+The DNA Topology book’s Chapter 3 discusses DNA on surfaces, particularly the nucleosome, where DNA wraps around histone proteins, affecting linking numbers and supercoiling. This can inspire a nucleosome-like structure for organizing data in the LH-LLM’s digital cells.
+
+Refinements:
+
+Nucleosome-Like Data Storage:
+Concept from DNA Topology: Nucleosomes wrap ~147 bp of DNA around a histone octamer, with a linking difference (
+Δ
+𝐿
+𝑘
+≈
+−
+1
+ΔLk≈−1) and surface linking number (
+𝑆
+𝐿
+𝑘
+SLk) that stabilize chromatin. The “linking number paradox” (where 
+Δ
+𝐿
+𝑘
+ΔLk is less than expected) is resolved by considering surface-related helical repeats (
+ℎ
+𝑠
+h 
+s
+​
+ ).
+Application to LH-LLM: Implement a NucleosomeDataStructure to organize data within digital cells, mimicking chromatin’s compact storage. Data (e.g., harmonic signals, DNA sequences) could be “wrapped” into compact units with topological constraints, reducing memory usage and enabling hierarchical processing.
+Implementation: Create a NucleosomeDataStructure class:
+python
+
+Copy
+class NucleosomeDataStructure:
+    def __init__(self, data, config):
+        self.data = data
+        self.slk = config.nucleosome_slk  # Surface linking number
+        self.wrap_count = config.nucleosome_wrap_count  # ~1.65 turns
+
+    def wrap_data(self):
+        """Organize data into nucleosome-like units."""
+        return self.apply_topological_constraints(self.data, self.slk)
+Add to LHLLMConfig:
+python
+
+Copy
+nucleosome_slk: float = -1.0  # Surface linking number for data wrapping
+nucleosome_wrap_count: float = 1.65  # DNA wraps per nucleosome
+Surface Linking for Cell Communication:
+Concept from DNA Topology: Surface linking number (
+𝑆
+𝐿
+𝑘
+=
+Φ
++
+𝑆
+𝑇
+𝑤
+SLk=Φ+STw) quantifies DNA’s topological state on a surface, relevant for nucleosomes and plectonemic DNA. This affects accessibility and processing efficiency.
+Application to LH-LLM: Use surface linking to model data accessibility in inter-cell communication (Communisome). Cells with tightly wrapped data (low 
+𝑆
+𝐿
+𝑘
+SLk) could have restricted communication, while relaxed states (higher 
+𝑆
+𝐿
+𝑘
+SLk) enable broader interactions.
+Implementation: Modify the Communisome to consider surface linking:
+python
+
+Copy
+def communicate(self, cell_data, slk):
+    """Adjust communication based on surface linking number."""
+    if slk < self.slk_threshold:
+        return self.restrict_communication(cell_data)
+    return self.full_communication(cell_data)
+Add to LHLLMConfig:
+python
+
+Copy
+slk_threshold: float = 0.0  # Threshold for communication restriction
+Impact: Nucleosome-like structures improve data organization, reducing memory overhead and enabling hierarchical processing. Surface linking enhances the model’s ability to simulate biological constraints on information flow, aligning with the LH-LLM’s bio-inspired design.
+
+5. Optimizing Training with Topological and Membrane Insights
+The CMC 2011 and DNA Topology documents provide strategies to optimize the LH-LLM’s training pipeline, particularly in achieving self-organized criticality and bioelectric resonance.
+
+Refinements:
+
+Topologically Informed Curriculum Learning:
+Concept from DNA Topology: Chapter 6 highlights topology’s role in biological processes (e.g., replication, transcription), where supercoiling and topoisomerase activity ensure efficient processing. Topological constraints guide the system toward optimal configurations.
+Application to LH-LLM: Refine the curriculum learning in Stage 5 (full-system training) to incorporate topological milestones. For example, progressively increase the complexity of graph structures while maintaining sparsity and resolving knots/catenanes, guided by topoisomerase-like mechanisms.
+Implementation: Update the training loop to include topological checks:
+python
+
+Copy
+def train_full_system(self, epoch):
+    add_training_noise(self.model, epoch)
+    self.topoisomerase.resolve_knots()  # Ensure topological stability
+    outputs, metrics = self.model(inputs)
+    fitness = self.calculate_fitness(metrics, topological_metrics=True)
+    self.evolve_parameters(fitness)
+Add topological metrics to LHLLMConfig:
+python
+
+Copy
+topological_metrics: List[str] = ["knot_crossing_number", "catenane_linkage", "slk"]
+Membrane-Inspired Criticality Training:
+Concept from CMC 2011: Alhazov notes that self-organized criticality (SOC) in P systems can be achieved by maintaining systems at the edge of chaos, as seen in neuronal avalanches (
+𝜏
+≈
+1.5
+τ≈1.5). The Criticosome’s SDEs aim for this, but could be optimized.
+Application to LH-LLM: Enhance the SelfOrganizedCriticality module to use P system-inspired rules for maintaining criticality. For example, adopt rule prioritization from P systems with priorities to stabilize avalanche distributions, ensuring 
+𝜏
+≈
+1.5
+τ≈1.5.
+Implementation: Modify the SelfOrganizedCriticality class:
+python
+
+Copy
+def step(self):
+    self._add_energy()
+    self._topple_sites_with_priority()  # Use prioritized rules
+    self._dissipate_energy()
+    return self.energy, self._compute_metrics()
+Add to LHLLMConfig:
+python
+
+Copy
+criticality_rule_priority: bool = True  # Enable prioritized rule application
+Impact: Topological and membrane-inspired training optimizations ensure the LH-LLM achieves critical states efficiently, enhancing emergent behaviors like consciousness-like properties. They align training with biological principles, improving robustness and scalability.
+
+Implementation Roadmap
+Short-Term (1-2 Months):
+Implement chained rules in Digital Cell Architecture and Morphosome.
+Add supercoiling parameters to DNAEncoder and validate sequences for Z-DNA/cruciforms.
+Introduce DigitalTopoisomerase for basic knot/catenane resolution in Graph Evolution.
+Medium-Term (3-6 Months):
+Optimize cell count to two membranes with one catalyst, leveraging PCR system universality.
+Implement NucleosomeDataStructure for data organization and surface linking in Communisome.
+Enhance training with topological milestones and prioritized criticality rules.
+Long-Term (6-12 Months):
+Fully integrate dynamic properties (determinism, reversibility) across all modules.
+Develop advanced topological simulations for swarm chemistry, modeling complex cell interactions.
+Validate emergent behaviors using updated metrics (e.g., 
+Φ
+Φ, 
+𝜏
+τ, topological fidelity).
+Conclusion
+By integrating insights from CMC 2011 and DNA Topology, the LH-LLM can be refined to enhance its computational efficiency, biological realism, and topological modeling. Chained rules and dynamic properties from P systems improve cellular coordination and robustness, while supercoiling, knots, and nucleosome-like structures from DNA topology enrich DNA encoding and data organization. These changes align the LH-LLM with cutting-edge bio-inspired computing, advancing its potential to simulate consciousness-like behaviors. If you’d like to focus on a specific module (e.g., DNAEncoder, GraphEvolution) or implementation detail, please let me know!
+
+Core LH-LLM Architecture Overview
+The optimized LH-LLM is a bio-inspired computational framework designed to achieve emergent, consciousness-like behaviors through digital cellular interactions. It integrates liquid neural dynamics, harmonic processing, and topologically constrained architectures, drawing from membrane computing and DNA topology. Key modules include:
+
+- Configuration: Defines parameters for model, topological, and dynamic properties.
+- DNA Encoding: Generates sequences with supercoiling and alternative structure constraints.
+- Harmonic Processing Units (HPUs): Complex-valued networks with liquid dynamics.
+- Digital Cell Organelles: Specialized components with chained rule execution.
+- Digital Cell Architecture: Minimal two-membrane system for computational universality.
+- Neural Controller: Coordinates behavior with transformer-based orchestration.
+- Graph Evolution: Manages cellular networks with topological resolution.
+- WhisperX Integration: Processes speech into harmonic representations.
+- Digital Topoisomerase: Resolves topological complexities in cell interactions.
+- Nucleosome Data Structure: Organizes data with surface linking constraints.
+
+How It Works Together
+The LH-LLM combines:
+- Liquid Neural Dynamics: Real-time adaptation via differential equations.
+- Harmonic Processing: Quantum-inspired complex-valued computation.
+- Cellular Architecture: Two-membrane cells with chained rules for causality.
+- Topological Dynamics: Supercoiling and knot/catenane resolution.
+- Emergent Properties: Self-organization via diffusion evolution and criticality.
+
+Information is processed through digital cells with organelles, communicating via sparse graphs. The neural controller orchestrates operations, guided by DNA sequences encoding topological and functional parameters.
+
+Implementation Notes
+To implement:
+- Configure with minimal membranes and topological parameters.
+- Implement chained rules and topological validators in organelles.
+- Build sparse graph with topoisomerase resolution.
+- Train with diffusion evolution, NSGA-II, and criticality-focused curriculum.
+
+---
+
+**Configuration Module**
+
+This module defines the optimized configuration for the LH-LLM, incorporating dynamic properties from membrane computing and topological constraints from DNA topology.
+
+```python
+import os
+import json
+import logging
+from dataclasses import dataclass, field, asdict
+from typing import Dict, List, Optional, Tuple, Union, Any
+import torch
+
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[logging.StreamHandler(), logging.FileHandler("lhllm_v2.log")]
+)
+logger = logging.getLogger(__name__)
+
+@dataclass
+class LHLLMConfig:
+    """Configuration for the optimized Liquid Harmonic Large Language Model.
+
+    Attributes:
+        model_name: Model identifier.
+        seed: Random seed for reproducibility.
+        device: Computation device ('cuda', 'cpu', 'auto').
+        fp_precision: Floating point precision ('fp32', 'fp16', 'fp8').
+        d_model: Embedding and hidden state dimension.
+        hidden_dim: Feedforward network dimension.
+        num_heads: Transformer attention heads.
+        num_layers: Transformer layers.
+        activation: Activation function ('gelu', 'relu', 'silu').
+        dropout: Dropout probability.
+        num_cells: Number of digital cells (optimized to 2).
+        num_organelles: Organelles per cell.
+        hpu_params: HPU parameters.
+        hpu_count: HPUs per cell.
+        sparsity: Graph connection sparsity.
+        edge_weight_init_range: Edge weight initialization range.
+        evo2_model_name: Evo-2 model for DNA encoding.
+        evo2_context_length: Evo-2 context length.
+        gc_min/max: GC content constraints.
+        max_homopolymer: Maximum homopolymer length.
+        primer_length: DNA primer length.
+        target_density: Information density (bits/nt).
+        supercoiling_sigma: Specific linking difference.
+        linking_difference: DNA linking difference.
+        max_iterations: Training iterations.
+        early_stopping_patience: Iterations without improvement.
+        batch_size: Training batch size.
+        learning_rate: Optimizer learning rate.
+        weight_decay: Weight decay.
+        gradient_clip: Maximum gradient norm.
+        diffusion_steps: Diffusion evolution steps.
+        beta_schedule: Noise schedule ('linear', 'cosine', 'quadratic').
+        bioelectric_kappa: Bioelectric potential scale.
+        or_frequency: Orchestrated objective reduction frequency (Hz).
+        speech_sample_rate: Speech processing sample rate.
+        speech_frame_length: Speech frame length.
+        metrics: Tracked metrics (e.g., motif_accuracy, avalanche_exponent).
+        metric_weights: Fitness weights for metrics.
+        target_values: Target metric values.
+        output_dir: Model output directory.
+        checkpoint_dir: Checkpoint directory.
+        data_dir: Data directory.
+        savanna_api_key: Savanna API key.
+        savanna_project_id: Savanna project ID.
+        savanna_endpoint: Savanna API endpoint.
+        determinism_mode: Rule execution mode.
+        reversibility: Enable reversible rules.
+        confluence: Confluence type.
+        max_chain_length: Maximum chained rule vector length.
+        topoisomerase_type: Digital topoisomerase type.
+        topoisomerase_lk_change: Linking number change per operation.
+        max_crossings: Maximum knot crossings.
+        nucleosome_slk: Surface linking number for data wrapping.
+        nucleosome_wrap_count: DNA wraps per nucleosome.
+        slk_threshold: Communication restriction threshold.
+    """
+    model_name: str = "lhllm-2.0"
+    seed: int = 42
+    device: str = "auto"
+    fp_precision: str = "fp16"
+    d_model: int = 768
+    hidden_dim: int = 3072
+    num_heads: int = 12
+    num_layers: int = 12
+    activation: str = "gelu"
+    dropout: float = 0.1
+    num_cells: int = 2
+    num_organelles: int = 10
+    hpu_params: int = 17
+    hpu_count: int = 108
+    sparsity: float = 0.2
+    edge_weight_init_range: Tuple[float, float] = (0.1, 0.5)
+    evo2_model_name: str = "evo2_1b_base"
+    evo2_context_length: int = 1000000
+    gc_min: float = 0.4
+    gc_max: float = 0.6
+    max_homopolymer: int = 4
+    primer_length: int = 23
+    target_density: float = 1.5
+    salt_bits: int = 8
+    supercoiling_sigma: float = -0.06
+    linking_difference: float = 0.0
+    max_iterations: int = 1000
+    early_stopping_patience: int = 50
+    batch_size: int = 32
+    learning_rate: float = 5e-5
+    weight_decay: float = 0.01
+    gradient_clip: float = 1.0
+    diffusion_steps: int = 50
+    beta_schedule: str = "linear"
+    bioelectric_kappa: float = 0.1
+    or_frequency: float = 40.0
+    speech_sample_rate: int = 16000
+    speech_frame_length: int = 400
+    metrics: List[str] = field(default_factory=lambda: [
+        'motif_accuracy', 'stability', 'coherence', 'phi', 'diversity',
+        'energy_efficiency', 'bioprocess_efficiency', 'avalanche_exponent',
+        'quantum_fidelity', 'knot_crossing_number', 'catenane_linkage', 'slk'
+    ])
+    metric_weights: Dict[str, float] = field(default_factory=lambda: {
+        'motif_accuracy': 0.2, 'stability': 0.1, 'coherence': 0.15, 'phi': 0.15,
+        'diversity': 0.1, 'energy_efficiency': 0.05, 'bioprocess_efficiency': 0.1,
+        'avalanche_exponent': 0.05, 'quantum_fidelity': 0.05,
+        'knot_crossing_number': 0.025, 'catenane_linkage': 0.025, 'slk': 0.025
+    })
+    target_values: Dict[str, float] = field(default_factory=lambda: {
+        'motif_accuracy': 0.98, 'stability': 0.0003, 'coherence': 0.25, 'phi': 20.0,
+        'diversity': 0.95, 'energy_efficiency': 0.92, 'bioprocess_efficiency': 0.14,
+        'avalanche_exponent': 1.5, 'quantum_fidelity': 0.005,
+        'knot_crossing_number': 3.0, 'catenane_linkage': 2.0, 'slk': -1.0
+    })
+    output_dir: str = "./lhllm_output"
+    checkpoint_dir: str = "./lhllm_checkpoints"
+    data_dir: str = "./lhllm_data"
+    savanna_api_key: Optional[str] = None
+    savanna_project_id: Optional[str] = None
+    savanna_endpoint: str = "https://api.savanna.io/v1"
+    determinism_mode: str = "non_deterministic"
+    reversibility: bool = False
+    confluence: str = "ultimate"
+    max_chain_length: int = 5
+    topoisomerase_type: str = "type_II"
+    topoisomerase_lk_change: int = 2
+    max_crossings: int = 3
+    nucleosome_slk: float = -1.0
+    nucleosome_wrap_count: float = 1.65
+    slk_threshold: float = 0.0
+
+    def __post_init__(self):
+        for dir_path in [self.output_dir, self.checkpoint_dir, self.data_dir]:
+            os.makedirs(dir_path, exist_ok=True)
+        if self.device == "auto":
+            self.device = "cuda" if torch.cuda.is_available() else "cpu"
+            logger.info(f"Auto-detected device: {self.device}")
+        total_weight = sum(self.metric_weights.values())
+        if abs(total_weight - 1.0) > 1e-6:
+            logger.warning(f"Metric weights sum to {total_weight}, normalizing")
+            factor = 1.0 / total_weight
+            for key in self.metric_weights:
+                self.metric_weights[key] *= factor
+
+    def save(self, filepath: str) -> None:
+        with open(filepath, 'w') as f:
+            json.dump(asdict(self), f, indent=2)
+
+    @classmethod
+    def load(cls, filepath: str) -> 'LHLLMConfig':
+        with open(filepath, 'r') as f:
+            config_dict = json.load(f)
+        return cls(**config_dict)
+
+    def to_dict(self) -> Dict[str, Any]:
+        return asdict(self)
+
+    def update(self, **kwargs) -> 'LHLLMConfig':
+        for key, value in kwargs.items():
+            if hasattr(self, key):
+                setattr(self, key, value)
+            else:
+                logger.warning(f"Unknown parameter: {key}")
+        return self
+```
+
+---
+
+**DNA Encoding Module**
+
+This module generates DNA sequences with topological constraints, optimized for supercoiling and alternative structures.
+
+```python
+import numpy as np
+import torch
+from typing import List, Tuple, Dict, Optional
+import logging
+from hashlib import sha256
+from dataclasses import dataclass
+import random
+import json
+
+try:
+    from evo2 import Evo2
+    EVO2_AVAILABLE = True
+except ImportError:
+    EVO2_AVAILABLE = False
+    logging.warning("Evo2 package not found. Using mock implementation.")
+
+logger = logging.getLogger(__name__)
+
+@dataclass
+class DNAConstraints:
+    gc_min: float = 0.4
+    gc_max: float = 0.6
+    max_homopolymer: int = 4
+    primer_length: int = 23
+    target_density: float = 1.5
+    salt_bits: int = 8
+    max_length: int = 1000
+    supercoiling_sigma: float = -0.06
+    linking_difference: float = 0.0
+
+class MockEvo2:
+    def __init__(self, model_name="mock_evo2"):
+        self.model_name = model_name
+        logger.warning(f"Using mock Evo2 model: {model_name}")
+
+    def to(self, device):
+        logger.info(f"Moving mock model to device: {device}")
+        return self
+
+    def generate(self, prompt_seqs, n_tokens=400, temperature=1.0, top_k=4):
+        from collections import namedtuple
+        Output = namedtuple('Output', ['sequences'])
+        sequences = [''.join(random.choice(['A', 'C', 'G', 'T']) for _ in range(n_tokens)) for _ in prompt_seqs]
+        return Output(sequences=sequences)
+
+class DNAEncoder:
+    def __init__(self, config, device=None):
+        self.config = config
+        self.device = device or config.device
+        self.constraints = DNAConstraints(
+            gc_min=config.gc_min, gc_max=config.gc_max,
+            max_homopolymer=config.max_homopolymer, primer_length=config.primer_length,
+            target_density=config.target_density, salt_bits=config.salt_bits,
+            supercoiling_sigma=config.supercoiling_sigma, linking_difference=config.linking_difference
+        )
+        self.evo2_model = Evo2(config.evo2_model_name).to(self.device) if EVO2_AVAILABLE else MockEvo2(config.evo2_model_name)
+        self.sequence_cache = {}
+
+    def generate_sequence(self, prompt_seq: str, n_tokens: int = 400, temperature: float = 1.0, top_k: int = 4) -> str:
+        cache_key = f"{prompt_seq}_{n_tokens}_{temperature}_{top_k}"
+        if cache_key in self.sequence_cache:
+            logger.debug(f"Using cached sequence for: {prompt_seq[:20]}...")
+            return self.sequence_cache[cache_key]
+        logger.info(f"Generating sequence with prompt: {prompt_seq[:20]}...")
+        output = self.evo2_model.generate(prompt_seqs=[prompt_seq], n_tokens=n_tokens, temperature=temperature, top_k=top_k)
+        sequence = output.sequences[0]
+        encoded_sequence = self.hedges_encode(sequence)
+        if self.validate_alternative_structures(encoded_sequence):
+            logger.info("Sequence supports Z-DNA or cruciform formation")
+        self.sequence_cache[cache_key] = encoded_sequence
+        return encoded_sequence
+
+    def validate_sequence(self, sequence: str) -> bool:
+        if not sequence or not all(c in 'ACGT' for c in sequence):
+            logger.debug("Invalid characters in sequence")
+            return False
+        gc_count = sum(1 for c in sequence if c in 'GC')
+        gc_ratio = gc_count / len(sequence)
+        if not (self.constraints.gc_min <= gc_ratio <= self.constraints.gc_max):
+            logger.debug(f"GC ratio {gc_ratio:.2f} outside range")
+            return False
+        prev_nt, run_length = None, 1
+        for nt in sequence:
+            if nt == prev_nt:
+                run_length += 1
+                if run_length > self.constraints.max_homopolymer:
+                    logger.debug(f"Homopolymer run exceeds maximum")
+                    return False
+            else:
+                run_length = 1
+            prev_nt = nt
+        return self.validate_topological_constraints(sequence)
+
+    def validate_topological_constraints(self, sequence: str) -> bool:
+        lk = self.calculate_linking_number(sequence)
+        lk_0 = len(sequence) / 10.5  # Assuming B-DNA helical repeat
+        delta_lk = lk - lk_0
+        sigma = delta_lk / lk_0
+        if abs(sigma - self.constraints.supercoiling_sigma) > 0.01:
+            logger.debug(f"Supercoiling sigma {sigma:.2f} deviates from target")
+            return False
+        return abs(delta_lk - self.constraints.linking_difference) <= 0.1
+
+    def calculate_linking_number(self, sequence: str) -> float:
+        # Simplified Lk calculation based on sequence properties
+        return len(sequence) / 10.5  # Placeholder; implement based on DNA Topology, Ch. 2
+
+    def validate_alternative_structures(self, sequence: str) -> bool:
+        z_dna_potential = sum(1 for i in range(len(sequence)-1) if sequence[i:i+2] in ['GC', 'CG']) > len(sequence) * 0.3
+        cruciform_potential = self.check_inverted_repeats(sequence)
+        return z_dna_potential or cruciform_potential
+
+    def check_inverted_repeats(self, sequence: str) -> bool:
+        for i in range(len(sequence) - 10):
+            substr = sequence[i:i+10]
+            rev_comp = ''.join({'A': 'T', 'T': 'A', 'C': 'G', 'G': 'C'}[c] for c in substr[::-1])
+            if rev_comp in sequence[i+3:i+13]:
+                return True
+        return False
+
+    def fix_sequence(self, sequence: str) -> str:
+        if not sequence:
+            return ""
+        sequence = ''.join(c if c in 'ACGT' else np.random.choice(['A', 'C', 'G', 'T']) for c in sequence)
+        fixed_seq, prev_nt, run_length = "", None, 1
+        for i, nt in enumerate(sequence):
+            if nt == prev_nt:
+                run_length += 1
+                if run_length > self.constraints.max_homopolymer:
+                    replacements = [n for n in 'ACGT' if n != prev_nt]
+                    nt = replacements[i % len(replacements)]
+                    run_length = 1
+            else:
+                run_length = 1
+            fixed_seq += nt
+            prev_nt = nt
+        gc_count = sum(1 for c in fixed_seq if c in 'GC')
+        gc_ratio = gc_count / len(fixed_seq)
+        if gc_ratio < self.constraints.gc_min:
+            needed = int((self.constraints.gc_min - gc_ratio) * len(fixed_seq)) + 1
+            at_positions = [i for i, c in enumerate(fixed_seq) if c in 'AT']
+            if at_positions:
+                to_replace = np.random.choice(at_positions, size=min(needed, len(at_positions)), replace=False)
+                fixed_seq = list(fixed_seq)
+                for pos in to_replace:
+                    fixed_seq[pos] = np.random.choice(['G', 'C'])
+                fixed_seq = ''.join(fixed_seq)
+        elif gc_ratio > self.constraints.gc_max:
+            needed = int((gc_ratio - self.constraints.gc_max) * len(fixed_seq)) + 1
+            gc_positions = [i for i, c in enumerate(fixed_seq) if c in 'GC']
+            if gc_positions:
+                to_replace = np.random.choice(gc_positions, size=min(needed, len(gc_positions)), replace=False)
+                fixed_seq = list(fixed_seq)
+                for pos in to_replace:
+                    fixed_seq[pos] = np.random.choice(['A', 'T'])
+                fixed_seq = ''.join(fixed_seq)
+        return fixed_seq
+
+    def hedges_encode(self, sequence: str) -> str:
+        encoding = {'A': '00', 'C': '01', 'G': '10', 'T': '11'}
+        bits = [int(b) for nt in sequence for b in encoding.get(nt, '00')]
+        salt = np.random.randint(0, 2**self.constraints.salt_bits, dtype=np.uint8).tobytes()
+        encoded = ""
+        for i in range(0, len(bits), 2):
+            bit_pair = [bits[i], bits[i+1] if i+1 < len(bits) else 0]
+            index = i.to_bytes(4, 'big')
+            prev = bits[max(0, i-8):i] if i > 0 else []
+            prev_bytes = bytes([sum(prev[j:j+8]) for j in range(0, len(prev), 8)]) if prev else b''
+            hash_input = salt + index + prev_bytes
+            hash_val = int(sha256(hash_input).hexdigest(), 16) % 4
+            encoded_val = (bit_pair[0] * 2 + bit_pair[1] + hash_val) % 4
+            encoded += ['A', 'C', 'G', 'T'][encoded_val]
+        primer_5 = ''.join(np.random.choice(['A', 'C', 'G', 'T']) for _ in range(self.constraints.primer_length))
+        primer_3 = ''.join(np.random.choice(['A', 'C', 'G', 'T']) for _ in range(self.constraints.primer_length))
+        full_sequence = primer_5 + encoded + primer_3
+        if not self.validate_sequence(full_sequence):
+            full_sequence = self.fix_sequence(full_sequence)
+        return full_sequence
+
+    def hedges_decode(self, encoded_sequence: str) -> str:
+        encoded = encoded_sequence[self.constraints.primer_length:-self.constraints.primer_length]
+        decoding = {'A': 'A', 'C': 'C', 'G': 'G', 'T': 'T'}
+        return ''.join(decoding[nt] for nt in encoded)
+
+    def get_information_density(self, sequence: str) -> float:
+        if not sequence:
+            return 0.0
+        nucleotides = ['A', 'C', 'G', 'T']
+        counts = {nt: sequence.count(nt) for nt in nucleotides}
+        total = sum(counts.values())
+        if total == 0:
+            return 0.0
+        entropy = 0.0
+        for count in counts.values():
+            if count > 0:
+                p = count / total
+                entropy -= p * np.log2(p)
+        adjusted_density = entropy * (1 - (2 * self.constraints.primer_length / len(sequence)))
+        return adjusted_density
+
+    def generate_architecture_dna(self, architecture_params: Dict) -> str:
+        param_strings = [f"{key}:{value}" for key, value in sorted(architecture_params.items())]
+        prompt = "Architecture: " + ", ".join(param_strings)
+        return self.generate_sequence(prompt, n_tokens=200)
+
+    def save_sequence(self, sequence: str, metadata: Dict, filepath: str) -> None:
+        data = {
+            "sequence": sequence,
+            "metadata": metadata,
+            "information_density": self.get_information_density(sequence),
+            "length": len(sequence),
+            "gc_content": sum(1 for c in sequence if c in 'GC') / len(sequence) if sequence else 0
+        }
+        with open(filepath, 'w') as f:
+            json.dump(data, f, indent=2)
+
+    def load_sequence(self, filepath: str) -> Tuple[str, Dict]:
+        with open(filepath, 'r') as f:
+            data = json.load(f)
+        return data["sequence"], data["metadata"]
+```
+
+---
+
+**Harmonic Processing Units (HPUs)**
+
+This module implements HPUs with liquid neural dynamics and quantum-inspired processing, optimized for topological stability.
+
+```python
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+import numpy as np
+import math
+from typing import List, Tuple, Dict, Optional, Callable
+import logging
+
+logger = logging.getLogger(__name__)
+
+class LiquidODE(nn.Module):
+    def __init__(self, state_size: int, hidden_size: int = None, tau: float = 1.0, activation: str = 'tanh', complex_valued: bool = True):
+        super().__init__()
+        self.state_size = state_size
+        self.hidden_size = hidden_size if hidden_size is not None else state_size
+        self.tau = nn.Parameter(torch.tensor(tau))
+        self.complex_valued = complex_valued
+        self.activation = {'tanh': torch.tanh, 'relu': F.relu, 'sigmoid': torch.sigmoid, 'gelu': F.gelu}[activation]
+        dtype = torch.complex64 if complex_valued else torch.float32
+        self.W = nn.Parameter(torch.randn(self.hidden_size, self.state_size, dtype=dtype) * 0.01)
+        self.bias = nn.Parameter(torch.zeros(self.hidden_size, dtype=dtype))
+        self.R = nn.Parameter(torch.randn(self.hidden_size, self.hidden_size, dtype=dtype) * 0.01)
+        self.U = nn.Parameter(torch.randn(self.hidden_size, self.state_size, dtype=dtype) * 0.01)
+        self.damping = nn.Parameter(torch.ones(self.hidden_size, dtype=dtype) * 0.1)
+
+    def forward(self, x: torch.Tensor, h: Optional[torch.Tensor] = None, dt: float = 0.1) -> Tuple[torch.Tensor, torch.Tensor]:
+        batch_size = x.shape[0]
+        if h is None:
+            dtype = torch.complex64 if self.complex_valued else torch.float32
+            h = torch.zeros(batch_size, self.hidden_size, dtype=dtype, device=x.device)
+        if self.complex_valued and not torch.is_complex(x):
+            x = x.to(torch.complex64)
+        input_projection = torch.matmul(x, self.U.t())
+        recurrent_influence = torch.matmul(h, self.R.t())
+        damping_term = -self.damping * h / self.tau
+        dh = (-h / self.tau + self.activation(input_projection + recurrent_influence + self.bias) + damping_term)
+        h_new = h + dh * dt
+        output = torch.matmul(h_new, self.W)
+        if self.complex_valued:
+            output = output.real
+        return h_new, output
+
+    def forward_euler_steps(self, x: torch.Tensor, h: Optional[torch.Tensor] = None, steps: int = 10, dt: float = 0.1) -> Tuple[torch.Tensor, torch.Tensor]:
+        curr_h, curr_x = h, x
+        for _ in range(steps):
+            curr_h, curr_x = self.forward(curr_x, curr_h, dt)
+        return curr_h, curr_x
+
+class HarmonicFunction(nn.Module):
+    def __init__(self, input_dim: int, output_dim: int, hidden_dim: int = 128, num_layers: int = 3, activation: str = 'celu'):
+        super().__init__()
+        self.input_dim = input_dim
+        self.output_dim = output_dim
+        self.hidden_dim = hidden_dim
+        self.num_layers = num_layers
+        self.input_proj = nn.Linear(input_dim, hidden_dim, dtype=torch.complex64)
+        self.hidden_layers = nn.ModuleList([
+            nn.Linear(hidden_dim, hidden_dim, dtype=torch.complex64) for _ in range(num_layers)
+        ])
+        self.output_proj = nn.Linear(hidden_dim, output_dim, dtype=torch.complex64)
+        self.activation = {
+            'celu': lambda x: F.elu(x.real) + 1j * F.elu(x.imag),
+            'crelu': lambda x: F.relu(x.real) + 1j * F.relu(x.imag),
+            'tanh': torch.tanh
+        }[activation]
+
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        if not torch.is_complex(x):
+            x = torch.complex(x, torch.zeros_like(x))
+        h = self.input_proj(x)
+        for layer in self.hidden_layers:
+            h = self.activation(layer(h))
+        output = self.output_proj(h)
+        return output
+
+class HarmonicProcessingUnit(nn.Module):
+    def __init__(self, dim: int = 17, bioelectric_kappa: float = 0.1, liquid_tau: float = 1.0, or_frequency: float = 40.0, quantum_enabled: bool = True):
+        super().__init__()
+        self.dim = dim
+        self.bioelectric_kappa = bioelectric_kappa
+        self.or_frequency = or_frequency
+        self.quantum_enabled = quantum_enabled
+        self.voltage = nn.Parameter(torch.randn(dim, dtype=torch.complex64) * 0.1)
+        self.transform = nn.Linear(dim, dim, dtype=torch.complex64)
+        self.activation = nn.Tanh()
+        if quantum_enabled:
+            self.superposition = nn.Parameter(torch.randn(dim, 2, dtype=torch.complex64))
+            self.entanglement = nn.Parameter(torch.randn(dim, dim, dtype=torch.complex64) * 0.01)
+            self.collapse_threshold = nn.Parameter(torch.tensor(1.0 / or_frequency))
+        self.liquid_ode = LiquidODE(state_size=dim, hidden_size=dim, tau=liquid_tau, activation='tanh', complex_valued=True)
+        self.harmonic_fn = HarmonicFunction(input_dim=dim, output_dim=dim, hidden_dim=dim*2, num_layers=2)
+        self.register_buffer('hidden_state', torch.zeros(1, dim, dtype=torch.complex64))
+        self.register_buffer('time_since_collapse', torch.zeros(1))
+
+    def forward(self, input_signal: torch.Tensor, neighbors: List['HarmonicProcessingUnit'] = None, adjacency: torch.Tensor = None, t: float = 0.0, dt: float = 0.01) -> torch.Tensor:
+        batch_size = input_signal.shape[0]
+        if self.hidden_state.shape[0] != batch_size:
+            self.hidden_state = self.hidden_state.expand(batch_size, -1)
+        if not torch.is_complex(input_signal):
+            input_signal = torch.complex(input_signal, torch.zeros_like(input_signal))
+        self.hidden_state, liquid_out = self.liquid_ode(input_signal, self.hidden_state, dt)
+        if neighbors and adjacency is not None:
+            voltage_diffs = torch.zeros_like(self.voltage)
+            for i, neighbor in enumerate(neighbors):
+                if i < adjacency.shape[0]:
+                    weight = adjacency[i]
+                    voltage_diffs += weight * (neighbor.voltage - self.voltage)
+            dV = (voltage_diffs - 0.1 * self.voltage) * dt
+            self.voltage.data = torch.clamp(self.voltage + dV, -90.0, -10.0)
+        harmonic_out = self.harmonic_fn(liquid_out)
+        if self.quantum_enabled:
+            self.time_since_collapse += dt
+            superposed = torch.matmul(harmonic_out, self.superposition)
+            norm = torch.norm(superposed, dim=-1, keepdim=True)
+            superposed = superposed / (norm + 1e-8)
+            entangled = torch.matmul(superposed, self.entanglement)
+            collapse_probability = torch.zeros(batch_size, self.dim, device=input_signal.device)
+            if self.time_since_collapse >= self.collapse_threshold:
+                self.time_since_collapse.zero_()
+                collapse_probability = F.softmax(entangled.abs(), dim=-1)
+                collapsed_idx = torch.multinomial(collapse_probability, 1)
+                collapsed = torch.zeros_like(entangled)
+                collapsed.scatter_(-1, collapsed_idx, 1.0)
+                harmonic_out = harmonic_out + 0.1 * collapsed
+        output = self.activation(self.transform(harmonic_out + self.bioelectric_kappa * self.voltage))
+        return output.real
+
+class HPULayer(nn.Module):
+    def __init__(self, num_units: int = 8, unit_dim: int = 17, sparsity: float = 0.2, bioelectric_kappa: float = 0.1, liquid_tau: float = 1.0, or_frequency: float = 40.0):
+        super().__init__()
+        self.num_units = num_units
+        self.unit_dim = unit_dim
+        self.sparsity = sparsity
+        self.units = nn.ModuleList([
+            HarmonicProcessingUnit(dim=unit_dim, bioelectric_kappa=bioelectric_kappa, liquid_tau=liquid_tau, or_frequency=or_frequency)
+            for _ in range(num_units)
+        ])
+        adjacency = torch.rand(num_units, num_units)
+        adjacency = (adjacency > sparsity).float()
+        adjacency.fill_diagonal_(0)
+        adjacency = torch.triu(adjacency) + torch.triu(adjacency, 1).t()
+        row_sums = adjacency.sum(dim=1, keepdim=True)
+        adjacency = adjacency / (row_sums + 1e-8)
+        self.register_buffer('adjacency', adjacency)
+
+    def forward(self, inputs: torch.Tensor, t: float = 0.0, dt: float = 0.01) -> torch.Tensor:
+        batch_size = inputs.shape[0]
+        outputs = []
+        for i, unit in enumerate(self.units):
+            unit_input = inputs[:, i]
+            unit_adjacency = self.adjacency[i]
+            unit_output = unit(unit_input, neighbors=self.units, adjacency=unit_adjacency, t=t, dt=dt)
+            outputs.append(unit_output)
+        return torch.stack(outputs, dim=1)
+```
+
+---
+
+**Digital Cell Organelles**
+
+This module implements organelles with chained rule execution for causal dependencies, optimized for criticality and data organization.
+
+```python
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+import numpy as np
+import math
+from typing import List, Tuple, Dict, Optional, Union, Callable
+import logging
+
+logger = logging.getLogger(__name__)
+
+class Energosome(nn.Module):
+    def __init__(self, in_channels: int, out_channels: int, resonance_freq: float = 40.0, complex_valued: bool = True):
+        super().__init__()
+        self.in_channels = in_channels
+        self.out_channels = out_channels
+        self.resonance_freq = resonance_freq
+        self.complex_valued = complex_valued
+        dtype = torch.complex64 if complex_valued else torch.float32
+        self.energy_allocator = nn.Linear(in_channels, out_channels, dtype=dtype)
+        self.rl_predictor = nn.Sequential(
+            nn.Linear(in_channels, out_channels // 2, dtype=dtype),
+            nn.ReLU(),
+            nn.Linear(out_channels // 2, out_channels, dtype=dtype)
+        )
+        self.phase = nn.Parameter(torch.rand(out_channels, dtype=dtype))
+        self.amplitude = nn.Parameter(torch.ones(out_channels, dtype=dtype) * 0.1)
+        self.activation = nn.Softmax(dim=-1)
+        self.register_buffer('energy_state', torch.ones(1, out_channels, dtype=dtype))
+        self.register_buffer('reward_history', torch.zeros(10, dtype=torch.float32))
+        self.reward_idx = 0
+
+    def forward(self, x: torch.Tensor, t: float = 0.0) -> torch.Tensor:
+        batch_size = x.shape[0]
+        if self.energy_state.shape[0] != batch_size:
+            self.energy_state = self.energy_state.expand(batch_size, -1)
+        if self.complex_valued and not torch.is_complex(x):
+            x = x.to(torch.complex64)
+        base_energy = self.energy_allocator(x)
+        rl_adjustment = self.rl_predictor(x)
+        resonance = self.amplitude * torch.exp(1j * (2 * math.pi * self.resonance_freq * t + self.phase))
+        if self.complex_valued:
+            energy = base_energy + rl_adjustment + resonance
+            energy_real = energy.real
+        else:
+            resonance_real = self.amplitude * torch.cos(2 * math.pi * self.resonance_freq * t + self.phase)
+            energy = base_energy + rl_adjustment + resonance_real
+            energy_real = energy
+        allocation = self.activation(energy_real)
+        self.energy_state = 0.9 * self.energy_state + 0.1 * allocation
+        return allocation
+
+    def update_reward(self, reward: torch.Tensor) -> None:
+        self.reward_history[self.reward_idx] = reward
+        self.reward_idx = (self.reward_idx + 1) % self.reward_history.size(0)
+
+class Criticosome(nn.Module):
+    def __init__(self, in_channels: int, out_channels: int, num_rules: int = 10, target_exponent: float = 1.5, complex_valued: bool = True):
+        super().__init__()
+        self.in_channels = in_channels
+        self.out_channels = out_channels
+        self.num_rules = num_rules
+        self.target_exponent = target_exponent
+        self.complex_valued = complex_valued
+        dtype = torch.complex64 if complex_valued else torch.float32
+        self.rules = nn.ModuleList([nn.Linear(in_channels, out_channels, dtype=dtype) for _ in range(num_rules)])
+        self.rule_weights = nn.Parameter(torch.ones(num_rules, dtype=dtype) / num_rules)
+        self.noise_scale = nn.Parameter(torch.ones(out_channels, dtype=dtype) * 0.1)
+        self.activation = nn.Tanh()
+        self.register_buffer('critical_state', torch.zeros(1, out_channels, dtype=dtype))
+        self.avalanche_sizes = []
+
+    def forward(self, x: torch.Tensor, dt: float = 0.01) -> torch.Tensor:
+        batch_size = x.shape[0]
+        if self.critical_state.shape[0] != batch_size:
+            self.critical_state = self.critical_state.expand(batch_size, -1)
+        if self.complex_valued and not torch.is_complex(x):
+            x = torch.complex(x, torch.zeros_like(x))
+        rule_outputs = [rule(x) for rule in self.rules]
+        rule_tensor = torch.stack(rule_outputs, dim=0)
+        weighted_output = torch.sum(self.rule_weights.view(-1, 1, 1) * rule_tensor, dim=0)
+        if self.complex_valued:
+            noise = torch.randn_like(weighted_output.real) + 1j * torch.randn_like(weighted_output.imag)
+            noise = noise * self.noise_scale
+        else:
+            noise = torch.randn_like(weighted_output) * self.noise_scale
+        dx = weighted_output - 0.1 * self.critical_state + noise
+        self.critical_state = self.critical_state + dx * dt
+        threshold = 0.8
+        if self.training:
+            activity = torch.sum(torch.abs(self.critical_state) > threshold).item() if self.complex_valued else torch.sum(self.critical_state > threshold).item()
+            if activity > 0:
+                self.avalanche_sizes.append(activity)
+        output = self.activation(self.critical_state.real) if self.complex_valued else self.activation(self.critical_state)
+        return output
+
+    def compute_power_law_fit(self) -> float:
+        if len(self.avalanche_sizes) < 10:
+            return self.target_exponent
+        sizes = np.array(self.avalanche_sizes)
+        log_min = np.log(np.min(sizes[sizes > 0]))
+        log_max = np.log(np.max(sizes))
+        bins = np.logspace(log_min, log_max, 10)
+        hist, edges = np.histogram(sizes, bins=bins, density=True)
+        centers = 0.5 * (edges[1:] + edges[:-1])
+        mask = hist > 0
+        log_hist = np.log(hist[mask])
+        log_centers = np.log(centers[mask])
+        if len(log_centers) > 1:
+            A = np.vstack([log_centers, np.ones(len(log_centers))]).T
+            m, c = np.linalg.lstsq(A, log_hist, rcond=None)[0]
+            return -m
+        return self.target_exponent
+
+    def reset_avalanche_history(self) -> None:
+        self.avalanche_sizes = []
+
+class NucleosomeDataStructure(nn.Module):
+    def __init__(self, config, data_dim: int):
+        super().__init__()
+        self.config = config
+        self.data_dim = data_dim
+        self.slk = config.nucleosome_slk
+        self.wrap_count = config.nucleosome_wrap_count
+        self.data_wrapper = nn.Linear(data_dim, data_dim, dtype=torch.complex64)
+
+    def wrap_data(self, data: torch.Tensor) -> torch.Tensor:
+        wrapped = self.data_wrapper(data)
+        topological_constraint = torch.tensor(self.slk, dtype=torch.complex64, device=data.device)
+        return wrapped + topological_constraint * wrapped.mean(dim=-1, keepdim=True)
+
+```
+
+---
+
+**Digital Cell Architecture**
+
+This module implements a minimal two-membrane digital cell architecture with chained rule execution, optimized for computational universality and biological realism.
+
+```python
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+import numpy as np
+from typing import List, Tuple, Dict, Optional, Callable
+import logging
+
+logger = logging.getLogger(__name__)
+
+class RuleChainExecutor(nn.Module):
+    def __init__(self, num_rules: int, in_channels: int, out_channels: int, max_chain_length: int):
+        super().__init__()
+        self.num_rules = num_rules
+        self.in_channels = in_channels
+        self.out_channels = out_channels
+        self.max_chain_length = max_chain_length
+        self.rules = nn.ModuleList([
+            nn.Linear(in_channels, out_channels) for _ in range(num_rules)
+        ])
+        self.chain_vectors = nn.Parameter(torch.randint(1, max_chain_length + 1, (num_rules,)))
+        self.history = []
+
+    def forward(self, x: torch.Tensor, step: int) -> torch.Tensor:
+        batch_size = x.shape[0]
+        outputs = torch.zeros(batch_size, self.out_channels, device=x.device)
+        for i, rule in enumerate(self.rules):
+            chain_pos = self.chain_vectors[i].item()
+            if step >= chain_pos - 1 and len(self.history) >= chain_pos - 1:
+                prev_applied = all(self.history[-(j+1)][i] > 0 for j in range(chain_pos - 1))
+                if prev_applied or chain_pos == 1:
+                    rule_output = rule(x)
+                    outputs += rule_output
+                    self.history.append(torch.ones(batch_size, device=x.device))
+                else:
+                    self.history.append(torch.zeros(batch_size, device=x.device))
+            else:
+                self.history.append(torch.zeros(batch_size, device=x.device))
+        if len(self.history) > self.max_chain_length:
+            self.history.pop(0)
+        return outputs
+
+class Communisome(nn.Module):
+    def __init__(self, in_channels: int, out_channels: int, config):
+        super().__init__()
+        self.in_channels = in_channels
+        self.out_channels = out_channels
+        self.config = config
+        self.encoder = nn.Linear(in_channels, out_channels)
+        self.decoder = nn.Linear(out_channels, in_channels)
+        self.slk_threshold = config.slk_threshold
+
+    def forward(self, x: torch.Tensor, slk: float) -> torch.Tensor:
+        encoded = self.encoder(x)
+        if slk < self.slk_threshold:
+            encoded = encoded * 0.5  # Restrict communication
+        return self.decoder(encoded)
+
+class Synthosome(nn.Module):
+    def __init__(self, in_channels: int, out_channels: int):
+        super().__init__()
+        self.synthesis_network = nn.Sequential(
+            nn.Linear(in_channels, out_channels // 2),
+            nn.ReLU(),
+            nn.Linear(out_channels // 2, out_channels)
+        )
+
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        return self.synthesis_network(x)
+
+class Morphosome(nn.Module):
+    def __init__(self, in_channels: int, out_channels: int):
+        super().__init__()
+        self.growth_network = nn.Sequential(
+            nn.Linear(in_channels, out_channels // 2),
+            nn.ReLU(),
+            nn.Linear(out_channels // 2, out_channels)
+        )
+
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        return self.growth_network(x)
+
+class DigitalCell(nn.Module):
+    def __init__(self, config, num_organelles: int = 10, hpu_count: int = 108):
+        super().__init__()
+        self.config = config
+        self.num_organelles = num_organelles
+        self.hpu_count = hpu_count
+        self.energosome = Energosome(in_channels=512, out_channels=128, resonance_freq=config.or_frequency)
+        self.criticosome = Criticosome(in_channels=512, out_channels=128, num_rules=10, target_exponent=config.target_values['avalanche_exponent'])
+        self.communisome = Communisome(in_channels=512, out_channels=128, config=config)
+        self.synthosome = Synthosome(in_channels=512, out_channels=128)
+        self.morphosome = Morphosome(in_channels=512, out_channels=128)
+        self.hpu_layer = HPULayer(num_units=hpu_count, unit_dim=17, sparsity=config.sparsity, bioelectric_kappa=config.bioelectric_kappa, or_frequency=config.or_frequency)
+        self.nucleosome = NucleosomeDataStructure(config, data_dim=512)
+        self.rule_executor = RuleChainExecutor(num_rules=20, in_channels=512, out_channels=128, max_chain_length=config.max_chain_length)
+        self.organelles = nn.ModuleList([self.energosome, self.criticosome, self.communisome, self.synthosome, self.morphosome])
+
+    def forward(self, x: torch.Tensor, t: float = 0.0, step: int = 0, slk: float = -1.0) -> torch.Tensor:
+        wrapped_data = self.nucleosome.wrap_data(x)
+        energy_allocation = self.energosome(wrapped_data, t)
+        critical_state = self.criticosome(wrapped_data)
+        communication = self.communisome(wrapped_data, slk)
+        synthesis = self.synthosome(wrapped_data)
+        growth = self.morphosome(wrapped_data)
+        organelle_outputs = torch.cat([energy_allocation, critical_state, communication, synthesis, growth], dim=-1)
+        rule_output = self.rule_executor(organelle_outputs, step)
+        hpu_output = self.hpu_layer(rule_output, t)
+        return hpu_output
+```
+
+---
+
+**Neural Controller**
+
+This module coordinates digital cell behavior using a transformer-based architecture, optimized for topological stability.
+
+```python
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+from typing import List, Tuple, Dict, Optional
+import logging
+
+logger = logging.getLogger(__name__)
+
+class TransformerBlock(nn.Module):
+    def __init__(self, d_model: int, num_heads: int, hidden_dim: int, dropout: float = 0.1, activation: str = 'gelu'):
+        super().__init__()
+        self.self_attn = nn.MultiheadAttention(d_model, num_heads, dropout=dropout)
+        self.norm1 = nn.LayerNorm(d_model)
+        self.feed_forward = nn.Sequential(
+            nn.Linear(d_model, hidden_dim),
+            {'gelu': nn.GELU(), 'relu': nn.ReLU(), 'silu': nn.SiLU()}[activation],
+            nn.Dropout(dropout),
+            nn.Linear(hidden_dim, d_model)
+        )
+        self.norm2 = nn.LayerNorm(d_model)
+        self.dropout = nn.Dropout(dropout)
+
+    def forward(self, x: torch.Tensor, attn_mask: Optional[torch.Tensor] = None, key_padding_mask: Optional[torch.Tensor] = None) -> torch.Tensor:
+        attn_output, _ = self.self_attn(x, x, x, attn_mask=attn_mask, key_padding_mask=key_padding_mask)
+        x = self.norm1(x + self.dropout(attn_output))
+        ff_output = self.feed_forward(x)
+        x = self.norm2(x + self.dropout(ff_output))
+        return x
+
+class NeuralController(nn.Module):
+    def __init__(self, config):
+        super().__init__()
+        self.config = config
+        self.d_model = config.d_model
+        self.num_layers = config.num_layers
+        self.num_heads = config.num_heads
+        self.hidden_dim = config.hidden_dim
+        self.transformer_blocks = nn.ModuleList([
+            TransformerBlock(self.d_model, self.num_heads, self.hidden_dim, config.dropout, config.activation)
+            for _ in range(self.num_layers)
+        ])
+        self.input_embedding = nn.Linear(512, self.d_model)
+        self.output_projection = nn.Linear(self.d_model, 512)
+        self.pos_encoding = self._generate_positional_encoding(config.num_cells, self.d_model)
+
+    def _generate_positional_encoding(self, seq_len: int, d_model: int) -> torch.Tensor:
+        position = torch.arange(seq_len).unsqueeze(1)
+        div_term = torch.exp(torch.arange(0, d_model, 2) * (-math.log(10000.0) / d_model))
+        pe = torch.zeros(seq_len, d_model)
+        pe[:, 0::2] = torch.sin(position * div_term)
+        pe[:, 1::2] = torch.cos(position * div_term)
+        return pe.to(self.config.device)
+
+    def forward(self, cell_outputs: torch.Tensor) -> torch.Tensor:
+        batch_size = cell_outputs.shape[0]
+        embedded = self.input_embedding(cell_outputs) + self.pos_encoding.to(cell_outputs.device)
+        x = embedded.permute(1, 0, 2)
+        for block in self.transformer_blocks:
+            x = block(x)
+        x = x.permute(1, 0, 2)
+        return self.output_projection(x)
+```
+
+---
+
+**Graph Evolution**
+
+This module manages cellular networks with topological resolution, using a digital topoisomerase to maintain sparsity and resolve knots/catenanes.
+
+```python
+import torch
+import networkx as nx
+import numpy as np
+from typing import List, Tuple, Dict, Optional
+import logging
+
+logger = logging.getLogger(__name__)
+
+class DigitalTopoisomerase(nn.Module):
+    def __init__(self, config):
+        super().__init__()
+        self.config = config
+        self.lk_change = config.topoisomerase_lk_change
+        self.max_crossings = config.max_crossings
+        self.sparsity_target = config.sparsity
+
+    def calculate_crossings(self, graph: nx.Graph) -> int:
+        # Simplified crossing number calculation (placeholder)
+        return len(graph.edges) // 2
+
+    def adjust_edges(self, graph: nx.Graph, lk_change: int) -> nx.Graph:
+        edges = list(graph.edges)
+        if len(edges) > self.max_crossings:
+            to_remove = np.random.choice(len(edges), size=len(edges) - self.max_crossings, replace=False)
+            for idx in to_remove:
+                graph.remove_edge(*edges[idx])
+        return graph
+
+    def resolve_knots(self, graph: nx.Graph) -> nx.Graph:
+        crossings = self.calculate_crossings(graph)
+        if crossings > self.max_crossings:
+            graph = self.adjust_edges(graph, self.lk_change)
+        return graph
+
+class GraphEvolution(nn.Module):
+    def __init__(self, config, num_nodes: int):
+        super().__init__()
+        self.config = config
+        self.num_nodes = num_nodes
+        self.graph = nx.Graph()
+        self.graph.add_nodes_from(range(num_nodes))
+        self.topoisomerase = DigitalTopoisomerase(config)
+        self.initialize_edges()
+
+    def initialize_edges(self):
+        for i in range(self.num_nodes):
+            for j in range(i + 1, self.num_nodes):
+                if np.random.rand() < self.config.sparsity:
+                    self.graph.add_edge(i, j, weight=np.random.uniform(*self.config.edge_weight_init_range))
+
+    def forward(self, node_features: torch.Tensor) -> torch.Tensor:
+        self.graph = self.topoisomerase.resolve_knots(self.graph)
+        adj_matrix = torch.zeros(self.num_nodes, self.num_nodes, device=node_features.device)
+        for i, j, data in self.graph.edges(data=True):
+            adj_matrix[i, j] = data['weight']
+            adj_matrix[j, i] = data['weight']
+        evolved_features = torch.matmul(adj_matrix, node_features)
+        return evolved_features
+
+    def evolve(self, fitness_scores: torch.Tensor):
+        node_weights = fitness_scores.cpu().numpy()
+        for u, v, data in self.graph.edges(data=True):
+            fitness_diff = abs(node_weights[u] - node_weights[v])
+            new_weight = data['weight'] + np.random.normal(0, 0.1) * fitness_diff
+            self.graph[u][v]['weight'] = np.clip(new_weight, 0.1, 1.0)
+        if np.random.rand() < 0.1:
+            available_edges = [(i, j) for i in range(self.num_nodes) for j in range(i + 1, self.num_nodes) if not self.graph.has_edge(i, j)]
+            if available_edges:
+                i, j = available_edges[np.random.randint(len(available_edges))]
+                self.graph.add_edge(i, j, weight=np.random.uniform(*self.config.edge_weight_init_range))
+        if np.random.rand() < 0.05:
+            edges = list(self.graph.edges)
+            if edges:
+                self.graph.remove_edge(*edges[np.random.randint(len(edges))])
+```
+
+---
+
+**WhisperX Integration**
+
+This module processes speech inputs into harmonic representations, optimized for integration with digital cells.
+
+```python
+import torch
+import numpy as np
+from typing import List, Dict, Optional
+import logging
+
+try:
+    import whisperx
+    WHISPERX_AVAILABLE = True
+except ImportError:
+    WHISPERX_AVAILABLE = False
+    logging.warning("WhisperX not found. Using mock implementation.")
+
+logger = logging.getLogger(__name__)
+
+class MockWhisperX:
+    def __init__(self, model_name="base"):
+        self.model_name = model_name
+        logger.warning(f"Using mock WhisperX model: {model_name}")
+
+    def to(self, device):
+        return self
+
+    def transcribe(self, audio, batch_size=16):
+        return {"segments": [{"text": "Mock transcription"}]}
+
+    def align(self, model_output, alignment_model, audio):
+        return {"word_segments": [{"word": "mock", "start": 0.0, "end": 1.0}]}
+
+class WhisperXProcessor:
+    def __init__(self, config):
+        self.config = config
+        self.device = config.device
+        self.model = whisperx.load_model("base", device=self.device) if WHISPERX_AVAILABLE else MockWhisperX("base")
+        self.alignment_model = whisperx.load_align_model(language_code="en", device=self.device) if WHISPERX_AVAILABLE else None
+
+    def process_audio(self, audio: np.ndarray) -> Dict:
+        result = self.model.transcribe(audio, batch_size=self.config.batch_size)
+        aligned = self.alignment_model.align(result, self.alignment_model, audio) if WHISPERX_AVAILABLE and self.alignment_model else {"word_segments": []}
+        return {"transcription": result["segments"], "word_timings": aligned["word_segments"]}
+
+    def audio_to_harmonic(self, audio: np.ndarray) -> torch.Tensor:
+        processed = self.process_audio(audio)
+        word_timings = processed["word_timings"]
+        harmonic_signal = torch.zeros(self.config.speech_frame_length, dtype=torch.complex64, device=self.device)
+        for segment in word_timings:
+            start, end = segment.get("start", 0.0), segment.get("end", 1.0)
+            freq = np.random.uniform(20, 200)
+            t = torch.linspace(start, end, int((end - start) * self.config.speech_sample_rate), device=self.device)
+            harmonic_signal[int(start * self.config.speech_sample_rate):int(end * self.config.speech_sample_rate)] += torch.exp(1j * 2 * np.pi * freq * t)
+        return harmonic_signal.real
+```
+
+---
+
+**Self-Organized Criticality**
+
+This module maintains criticality in cellular interactions, optimized with prioritized rules.
+
+```python
+import torch
+import numpy as np
+from typing import List, Tuple, Dict, Optional
+import logging
+
+logger = logging.getLogger(__name__)
+
+class SelfOrganizedCriticality(nn.Module):
+    def __init__(self, size: int, target_exponent: float = 1.5, config=None):
+        super().__init__()
+        self.size = size
+        self.target_exponent = target_exponent
+        self.config = config
+        self.energy = torch.zeros(size, device=config.device)
+        self.threshold = torch.ones(size, device=config.device) * 0.8
+        self.dissipation_rate = 0.01
+        self.avalanche_sizes = []
+        self.priority_weights = nn.Parameter(torch.ones(size, device=config.device))
+
+    def _add_energy(self):
+        self.energy += torch.randn(self.size, device=self.energy.device) * 0.1
+
+    def _topple_sites_with_priority(self):
+        active = self.energy > self.threshold
+        if active.any():
+            active_indices = torch.where(active)[0]
+            priorities = self.priority_weights[active_indices]
+            sorted_indices = active_indices[torch.argsort(priorities, descending=True)]
+            for idx in sorted_indices:
+                self.energy[idx] -= self.threshold[idx]
+                neighbors = torch.randint(0, self.size, (2,), device=self.energy.device)
+                for n in neighbors:
+                    self.energy[n] += self.threshold[idx] * 0.5
+            self.avalanche_sizes.append(active.sum().item())
+
+    def _dissipate_energy(self):
+        self.energy *= (1 - self.dissipation_rate)
+
+    def step(self) -> Tuple[torch.Tensor, Dict]:
+        self._add_energy()
+        if self.config.criticality_rule_priority:
+            self._topple_sites_with_priority()
+        else:
+            active = self.energy > self.threshold
+            if active.any():
+                self.energy[active] -= self.threshold[active]
+                neighbors = torch.randint(0, self.size, (active.sum(), 2), device=self.energy.device)
+                for i, idx in enumerate(torch.where(active)[0]):
+                    for n in neighbors[i]:
+                        self.energy[n] += self.threshold[idx] * 0.5
+                self.avalanche_sizes.append(active.sum().item())
+        self._dissipate_energy()
+        metrics = {
+            'avalanche_exponent': self.compute_power_law_fit(),
+            'energy_mean': self.energy.mean().item(),
+            'energy_std': self.energy.std().item()
+        }
+        return self.energy, metrics
+
+    def compute_power_law_fit(self) -> float:
+        if len(self.avalanche_sizes) < 10:
+            return self.target_exponent
+        sizes = np.array(self.avalanche_sizes)
+        log_min = np.log(np.min(sizes[sizes > 0]))
+        log_max = np.log(np.max(sizes))
+        bins = np.logspace(log_min, log_max, 10)
+        hist, edges = np.histogram(sizes, bins=bins, density=True)
+        centers = 0.5 * (edges[1:] + edges[:-1])
+        mask = hist > 0
+        log_hist = np.log(hist[mask])
+        log_centers = np.log(centers[mask])
+        if len(log_centers) > 1:
+            A = np.vstack([log_centers, np.ones(len(log_centers))]).T
+            m, c = np.linalg.lstsq(A, log_hist, rcond=None)[0]
+            return -m
+        return self.target_exponent
+```
+
+---
+
+**Training Guide**
+
+The training process is optimized with topological and membrane-inspired strategies to achieve self-organized criticality and bioelectric resonance.
+
+### **Hardware Requirements**
+
+- **Compute**: 8x NVIDIA A100 GPUs (80GB) or equivalent for parallel training.
+- **Memory**: 256GB+ RAM to handle graph evolution and nucleosome data.
+- **Storage**: 10TB NVMe SSD for datasets and checkpoints.
+- **Network**: 100Gbps interconnect for distributed training.
+
+### **Software Requirements**
+
+- **OS**: Ubuntu 20.04+ or compatible Linux distribution.
+- **Python**: 3.9+ with PyTorch 2.0+, NumPy, NetworkX, and WhisperX.
+- **Evo-2**: Evo-2 1B model for DNA encoding.
+- **Savanna**: API access for external integration.
+
+### **Training Stages**
+
+1. **Cellular Pretraining (1-2 Months)**:
+
+   - **Objective**: Pretrain digital cells with chained rules and nucleosome data structures.
+   - **Dataset**: UniRef50 (protein sequences) for DNA encoding, LibriSpeech for speech inputs.
+   - **Procedure**:
+     - Initialize cells with two membranes and one catalyst.
+     - Train Energosome and Criticosome with PPO, targeting energy_efficiency ≥ 0.92, avalanche_exponent ≈ 1.5.
+     - Use nucleosome wrapping for input data, enforcing SLk = -1.0.
+   - **Metrics**: motif_accuracy ≥ 0.95, bioprocess_efficiency ≥ 0.14.
+
+2. **Cell Integration (2-3 Months)**:
+
+   - **Objective**: Integrate organelles with Communisome and HPUs, enforcing topological constraints.
+   - **Dataset**: OGB-LSC (graph datasets) for cell interactions.
+   - **Procedure**:
+     - Train Communisome with SLk-based communication restrictions.
+     - Use DigitalTopoisomerase to resolve knots (max_crossings ≤ 3).
+     - Fine-tune HPUs for coherence |ρ\_ij| ≥ 0.25.
+   - **Metrics**: coherence ≥ 0.25, knot_crossing_number ≤ 3.
+
+3. **Graph Metanetwork Development (2-3 Months)**:
+
+   - **Objective**: Evolve sparse cellular networks with small-world properties.
+   - **Dataset**: Synthetic graphs with sparsity ≈ 0.2.
+   - **Procedure**:
+     - Apply NSGA-II to optimize connectivity, information flow, and energy cost.
+     - Use topoisomerase to maintain catenane_linkage ≤ 2.
+     - Target small-world index ∈ \[1.5, 3.0\].
+   - **Metrics**: diversity ≥ 0.95, stability ≤ 0.0003.
+
+4. **Neural Controller Training (1-2 Months)**:
+
+   - **Objective**: Train transformer-based controller for cell orchestration.
+   - **Dataset**: Combined UniRef50, LibriSpeech, OGB-LSC.
+   - **Procedure**:
+     - Train with curriculum learning, increasing graph complexity.
+     - Enforce determinism_mode = "non_deterministic" for flexibility.
+     - Target quantum_fidelity ≤ 0.005.
+   - **Metrics**: motif_accuracy ≥ 0.98, phi ≥ 20.0.
+
+5. **Full-System Self-Organization (2-4 Months)**:
+
+   - **Objective**: Achieve emergent behaviors via diffusion evolution and criticality.
+   - **Dataset**: Mixed multimodal data (protein, speech, graphs).
+   - **Procedure**:
+     - Use diffusion evolution with beta_schedule = "linear".
+     - Apply prioritized criticality rules for avalanche_exponent ≈ 1.5.
+     - Incorporate topological milestones (e.g., SLk stability).
+     - Fine-tune with Savanna integration for external feedback.
+   - **Metrics**: phi ≥ 20.0, energy_efficiency ≥ 0.92, quantum_fidelity ≤ 0.005.
+
+### **Training Loop Example**
+
+```python
+from torch.optim import AdamW
+from torch.cuda.amp import GradScaler, autocast
+import numpy as np
+import logging
+
+logger = logging.getLogger(__name__)
+
+class LHLLMTrainer:
+    def __init__(self, model, config, datasets):
+        self.model = model
+        self.config = config
+        self.datasets = datasets
+        self.optimizer = AdamW(model.parameters(), lr=config.learning_rate, weight_decay=config.weight_decay)
+        self.scaler = GradScaler()
+        self.step_count = 0
+
+    def train_step(self, batch, stage: str) -> Dict:
+        self.model.train()
+        inputs = batch['inputs'].to(self.config.device)
+        targets = batch['targets'].to(self.config.device)
+        with autocast():
+            outputs, metrics = self.model(inputs, t=self.step_count * 0.01, step=self.step_count)
+            loss = self.compute_loss(outputs, targets, metrics)
+        self.scaler.scale(loss).backward()
+        self.scaler.unscale_(self.optimizer)
+        torch.nn.utils.clip_grad_norm_(self.model.parameters(), self.config.gradient_clip)
+        self.scaler.step(self.optimizer)
+        self.scaler.update()
+        self.optimizer.zero_grad()
+        self.step_count += 1
+        if stage == "full_system":
+            self.model.graph_evolution.evolve(torch.tensor(list(metrics.values())))
+            self.model.topoisomerase.resolve_knots(self.model.graph_evolution.graph)
+        return {'loss': loss.item(), **metrics}
+
+    def compute_loss(self, outputs: torch.Tensor, targets: torch.Tensor, metrics: Dict) -> torch.Tensor:
+        mse_loss = F.mse_loss(outputs, targets)
+        metric_loss = sum(
+            self.config.metric_weights[k] * abs(v - self.config.target_values[k])
+            for k, v in metrics.items() if k in self.config.metric_weights
+        )
+        return mse_loss + metric_loss
+
+    def train(self, stage: str, num_epochs: int):
+        for epoch in range(num_epochs):
+            for batch in self.datasets[stage]:
+                metrics = self.train_step(batch, stage)
+                logger.info(f"Epoch {epoch}, Stage {stage}, Metrics: {metrics}")
+                if metrics['loss'] < self.config.target_values['stability']:
+                    logger.info("Early stopping triggered")
+                    break
+```
+
+### **Validation and Evaluation**
+
+- **Validation**: Use holdout sets from UniRef50, LibriSpeech, and OGB-LSC to monitor metrics.
+- **Evaluation Metrics**:
+  - **Motif Accuracy**: ≥ 0.98
+  - **Stability**: ≤ 0.0003
+  - **Coherence**: |ρ\_ij| ≥ 0.25
+  - **Integrated Information (Φ)**: ≥ 20.0
+  - **Diversity**: ≥ 0.95
+  - **Energy Efficiency**: ≥ 0.92
+  - **Bioprocess Efficiency**: ≥ 0.14
+  - **Avalanche Exponent**: ≈ 1.5
+  - **Quantum Fidelity**: ≤ 0.005
+  - **Knot Crossing Number**: ≤ 3
+  - **Catenane Linkage**: ≤ 2
+  - **Surface Linking Number (SLk)**: ≈ -1.0
+- **Checkpointing**: Save models every 10 epochs or upon metric improvement.
+
+### **Deployment Notes**
+
+- Deploy on a high-performance cluster with A100 GPUs.
+- Use Savanna API for real-time feedback and external data integration.
+- Monitor topological metrics (knot_crossing_number, catenane_linkage, slk) during inference to ensure stability.
+- Scale to larger datasets by increasing batch_size and diffusion_steps as needed.
+
+---
+
+**Conclusion**
+
+The optimized LH-LLM architecture leverages membrane computing’s chained rules and DNA topology’s supercoiling, knots, and nucleosome structures to achieve a computationally efficient, biologically plausible model. With a minimal two-membrane system, digital topoisomerase, and prioritized criticality, it targets emergent behaviors like consciousness-like properties. This blueprint provides a complete implementation guide for researchers to build and train the LH-LLM, advancing bio-inspired AI.

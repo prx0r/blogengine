@@ -1,0 +1,574 @@
+synthesise: **Algorithm: Super-Optimal Quantum-Topological Consciousness Framework (SOQTCF)**
+
+**Input**:
+- Sensory inputs: \( S(t) \in \mathbb{R}^m \), time-dependent vector of external stimuli.
+- Initial neural potentials: \( V(0) = \{V_i(0)\}_{i=1}^N \in \mathbb{R}^N \), for \( N \) neurons.
+- Initial gating variables: \( m(0), h(0), n(0) = \{m_i(0), h_i(0), n_i(0)\}_{i=1}^N \in [0,1]^N \).
+- Initial synaptic weights: \( W(0) = \{w_{ij}(0)\}_{i,j=1}^N \in \mathbb{R}^{N \times N} \).
+- Initial memory states: \( M(0) = \{M_s(0), M_l(0)\} \subset \mathbb{C}^d \times \mathbb{R}^d \), short-term (\( M_s \)) quantum and long-term (\( M_l \)) classical memory.
+- Initial semantic states: \( S_{\text{sem}}(0) = \{S_{\text{sem},i}(0)\}_{i=1}^N \in \mathbb{R}^d \).
+- Initial apobetic states: \( P(0) = \{P_i(0)\}_{i=1}^N \in \mathbb{R}^d \).
+- Initial field: \( \Psi(0) = \{\Psi_i^a(0)\}_{i=1, a=1}^{N,d} \in \mathbb{R}^{N \times d} \), for \( d \)-dimensional field components.
+- Initial excitonic states: \( E(0) = \{E_i(0)\}_{i=1}^N \subset \mathbb{C}^d \), microtubule tubulin dipole states.
+- Initial quantum statistical matrix: \( \rho(0) \in \mathbb{C}^{k \times k} \), density matrix on Hilbert space \( \mathcal{H} \) of dimension \( k \).
+- Initial simplicial complex: \( S(0) = (V, E(0), F(0)) \), with vertices \( V = \{1, \dots, N\} \), edges \( E(0) \subset V \times V \), faces \( F(0) \), and edge weights \( \omega(0) = \{\omega_{uv}(0)\}_{(u,v) \in E(0)} \in \mathbb{R}_+ \).
+- Initial transition probability matrix (TPM): \( \mathcal{T}_S(0) = \{p(\bar{s} | s)\}_{s,\bar{s} \in \Omega_S} \), for substrate state space \( \Omega_S \).
+- Neural parameters: \( \Theta = \{C_m, g_{Na}, g_K, g_L, E_{Na}, E_K, E_L, \eta, \eta_{\text{STDP}}, \tau_{\text{STDP}}, \lambda_{\text{decay}}, \alpha, \beta, \kappa_e, \eta_s, \beta_p, \gamma_p, \gamma_e, \gamma_{\Phi}, \kappa_{\theta}\} \), including capacitance, conductances, reversal potentials, learning rates, decay constants, coupling coefficients, IIT integration weight, and criterial causation threshold.
+- Quantum parameters: \( \hbar \), Planck’s constant; \( H_0 \), base Hamiltonian; \( \gamma_q \), quantum coupling; \( \gamma_d \), dissipation rate.
+- Field parameters: \( \kappa, \delta, D, \sigma, \beta_{\text{EM}} \), for reaction, dissipation, diffusion, noise, and EM coupling.
+- Topological parameters: \( \omega_{\text{threshold}} \), edge weight threshold.
+- Rhythm parameters: \( f = \{4, 8, 12, 20, 40\} \, \text{Hz} \), amplitudes \( a_f = [0.1, 0.1, 0.05, 0.03, 0.02] \).
+- P system parameters: Membrane structure \( \mu \), catalysts \( C_A \), and chained rules \( R_i \).
+- Time step: \( \Delta t > 0 \).
+- Simulation duration: \( T > 0 \).
+
+**Output**:
+- Conscious state: \( C(t) = (M_s(t), M_l(t), D(t), R(t)) \), comprising short-term memory, long-term memory, decision, and cortical rhythms at time \( t \).
+- IIT \(\Phi\)-structure: \( (D(t), R(t), \Phi(t)) \), with distinctions \( D(t) \), relations \( R(t) \), and integrated information \( \Phi(t) \).
+
+**Algorithm**:
+
+1. **Initialization**:
+   - Define P system: \( \Pi = (O, C, \mu, w_1, \ldots, w_m, R_1, \ldots, R_m, i_0) \), with objects \( O = \{V_i, s_i, w_{ij}, M_{s,i}, M_{l,i}, S_{\text{sem},i}, P_i, E_i, \Psi_{i a}, \rho, \mathcal{T}_S\} \), catalysts \( C_A \) (attentional promoters), membrane structure \( \mu \) (sensory, binding, decision-making regions), rules \( R_i \), and output region \( i_0 \).
+   - Define simplicial complex \( S(0) = (V, E(0), F(0)) \), with \( |V| = N \), edges \( E(0) \) sampled with probability \( p_{\text{sparse}} = 0.3 \), and faces \( F(0) \).
+   - Set edge weights: \( \omega_{uv}(0) \sim \text{Unif}(0.1, 0.2) \), for \( (u,v) \in E(0) \).
+   - Set neural potentials: \( V_i(0) = -65 \, \text{mV} \), \( i = 1, \dots, N \).
+   - Set gating variables: \( m_i(0) = 0.05 \), \( h_i(0) = 0.6 \), \( n_i(0) = 0.32 \).
+   - Set synaptic weights: \( w_{ij}(0) \sim \mathcal{N}(0, 10^{-2}) \).
+   - Initialize memory: \( M_s(0) = 0 \in \mathbb{C}^d \), \( M_l(0) = 0 \in \mathbb{R}^d \).
+   - Initialize semantic states: \( S_{\text{sem},i}(0) = 0 \in \mathbb{R}^d \).
+   - Initialize apobetic states: \( P_i(0) = 0 \in \mathbb{R}^d \).
+   - Initialize field: \( \Psi_i^a(0) \sim \mathcal{N}(0, 1) \), for \( i = 1, \dots, N \), \( a = 1, \dots, d \).
+   - Initialize excitonic states: \( E_i(0) \sim \mathcal{N}(0, 1) + i \mathcal{N}(0, 1) \in \mathbb{C}^d \).
+   - Initialize quantum state: \( \rho(0) = \frac{I_k}{k} \), for \( k = 2^4 \).
+   - Initialize TPM: \( \mathcal{T}_S(0) = \frac{1}{|\Omega_S|} \mathbf{1}_{|\Omega_S| \times |\Omega_S|} \).
+   - Initialize cortical rhythms: \( R(0) = \sum_{f \in \{4, 8, 12, 20, 40\}} a_f \sin(2 \pi f \cdot 0) \).
+
+2. **Time Evolution** (for \( t = 0 \) to \( T \), increment by \( \Delta t \)):
+   a. **Update Topological Structure (P System Rule)**:
+      - Rule: \( \omega_{ij} \to \omega_{ij}' \mid \Psi_i, \Psi_j, s_i, s_j, C_A \)
+      - Compute Ricci curvature:
+        \[
+        \text{Ric}_{uv}(t) = \frac{\sum_{a=1}^d (\Psi_u^a(t) - \Psi_v^a(t))^2}{\omega_{uv}(t)}, \quad (u,v) \in E(t)
+        \]
+      - Update edge weights:
+        \[
+        \omega_{uv}(t + \Delta t) = \max\left( \omega_{uv}(t) + 0.1 \left( \sum_{a=1}^d \Psi_u^a(t) \Psi_v^a(t) + s_u(t) s_v(t) - 0.1 \omega_{uv}(t) - 0.02 \text{Ric}_{uv}(t) \right), \omega_{\text{threshold}} \right)
+        \]
+        where \( s_i(t) = 1_{V_i(t) > \theta_i(t)} \), \( \theta_i(t) = -40 + \kappa_{\theta} \sum_j w_{ij}(t) s_j(t) \).
+      - Update edge set:
+        \[
+        E(t + \Delta t) = \{ (u,v) \in E(t) \mid \omega_{uv}(t + \Delta t) \geq \omega_{\text{threshold}} \}
+        \]
+      - Compute persistent homology: \( H_k(S(t), \mathbb{R}) \), using filtration over \( \omega_{uv}(t) \).
+      - Compute Betti numbers: \( \beta_k(t) = \dim H_k(S(t), \mathbb{R}) \).
+
+   b. **Update Cortical Rhythms (P System Rule)**:
+      - Rule: \( R \to R' \mid C_A \)
+      - Compute rhythm components:
+        \[
+        R(t) = \sum_{f \in \{4, 8, 12, 20, 40\}} a_f \sin(2 \pi f t)
+        \]
+
+   c. **Update Biophysical Dynamics (Neural Potentials, P System Rule)**:
+      - Rule: \( V_i, m_i, h_i, n_i \to V_i', m_i', h_i', n_i' \mid I_i, C_A \)
+      - For each neuron \( i = 1, \dots, N \):
+        - Compute external current:
+          \[
+          I_i(t) = \frac{1}{m} \sum_{k=1}^m S_k(t) + R(t) + \beta \sum_{a=1}^d \Psi_i^a(t) + \gamma_q \sum_{j=1}^k \text{Tr}(\rho(t) Z_j) + \kappa_e \sum_{a=1}^d \text{Re}(E_i^a(t)) + \sum_{j \in N(i)} w_{ij}(t) s_j(t)
+          \]
+          where \( Z_j \) is the Pauli-Z operator on qubit \( j \).
+        - Compute gating rates:
+          \[
+          \alpha_m(V) = \frac{0.1 (V + 40)}{1 - e^{-(V + 40)/10}}, \quad \beta_m(V) = 4 e^{-(V + 65)/18}
+          \]
+          \[
+          \alpha_h(V) = 0.07 e^{-(V + 65)/20}, \quad \beta_h(V) = \frac{1}{1 + e^{-(V + 35)/10}}
+          \]
+          \[
+          \alpha_n(V) = \frac{0.01 (V + 55)}{1 - e^{-(V + 55)/10}}, \quad \beta_n(V) = 0.125 e^{-(V + 65)/80}
+          \]
+        - Update gating variables:
+          \[
+          \frac{dx_i}{dt} = \alpha_x(V_i(t))(1 - x_i(t)) - \beta_x(V_i(t)) x_i(t), \quad x \in \{m, h, n\}
+          \]
+        - Update potential:
+          \[
+          \frac{dV_i}{dt} = \frac{1}{C_m} \left( I_i(t) - g_{Na} m_i^3 h_i (V_i - E_{Na}) - g_K n_i^4 (V_i - E_K) - g_L (V_i - E_L) \right) + \epsilon \xi_i(t)
+          \]
+          where \(\xi_i(t) \sim \mathcal{N}(0, \sigma^2)\), \(\sigma^2 = \sigma_q^2 \text{Tr}(\rho(t) Z_i^2)\), and \(\epsilon = \epsilon_0 \exp(|\lambda_{\text{max}}|/\lambda_0)(1 + \beta \text{Tr}(\rho(t) Q_{\text{meta}}))\), with \( Q_{\text{meta}} = \sum_{j=1}^k Z_j \).
+        - Solve using Runge-Kutta method:
+          \[
+          V_i(t + \Delta t) = V_i(t) + \Delta t \cdot \frac{dV_i}{dt}, \quad x_i(t + \Delta t) = x_i(t) + \Delta t \cdot \frac{dx_i}{dt}
+          \]
+        - Compute action potential: \( s_i(t) = 1_{V_i(t) > \theta_i(t)} \).
+
+   d. **Update Excitonic Dynamics (P System Rule)**:
+      - Rule: \( E_i \to E_i' \mid C_A \)
+      - For each neuron \( i = 1, \dots, N \):
+        - Update excitonic state:
+          \[
+          i \hbar \frac{d E_i}{dt} = (H_0 + \Delta - \frac{i}{2} G) E_i
+          \]
+          where \( H_0 = \text{diag}(0.5, \dots, 0.5) \), \( \Delta \sim \mathcal{N}(0, 0.1^2) \), \( G = \text{diag}(0.01, \dots, 0.01) \).
+        - Solve:
+          \[
+          E_i(t + \Delta t) = E_i(t) + \Delta t \cdot \frac{d E_i}{dt}
+          \]
+
+   e. **Update Computational Neural Network (P System Rule)**:
+      - Rule: \( w_{ij}, M_{s,i}, M_{l,i}, S_{\text{sem},i}, P_i \to w_{ij}', M_{s,i}', M_{l,i}', S_{\text{sem},i}', P_i' \mid s_i, s_j, S(t), E_i, \rho, \mathcal{T}_S, C_A \)
+      - For each synapse \((i,j)\):
+        - Compute STDP:
+          \[
+          \Delta t_{ij} = t_i - t_j, \quad \text{STDP}_{ij}(t) = \exp\left(-\frac{|\Delta t_{ij}|}{\tau_{\text{STDP}}}\right) \text{sign}(\Delta t_{ij})
+          \]
+        - Update weight:
+          \[
+          \frac{d w_{ij}}{dt} = \eta s_i(t) s_j(t) + \eta_{\text{STDP}} \text{STDP}_{ij}(t) - \lambda_{\text{decay}} w_{ij}(t)
+          \]
+      - Update memory:
+        \[
+        \frac{d M_{s,i}}{dt} = s_i(t) \left( \frac{1}{m} \sum_{k=1}^m S_k(t) + \gamma_e E_i(t) \right) - \alpha M_{s,i}(t)
+        \]
+        \[
+        \frac{d M_{l,i}}{dt} = \text{Re}(\text{Tr}(\rho(t) M_{s,i} P_i)) - \alpha M_{l,i}(t)
+        \]
+        where \( P_i \) is the projector onto state \( i \).
+      - Update semantic state:
+        \[
+        \frac{d S_{\text{sem},i}}{dt} = \eta_s \left( \sum_{a=1}^d \Psi_i^a(t) M_{l,i}^a(t) + \gamma_e \text{Re}(E_i(t)) + \gamma_{\Phi} \text{ii}(s, s_{\text{effect}}, t) - S_{\text{sem},i}(t) \right)
+        \]
+        where \(\text{ii}(s, s_{\text{effect}}, t) = p(s_{\text{effect}} | s, t) \log \left( \frac{p(s_{\text{effect}} | s, t)}{p(s_{\text{effect}}, t)} \right)\).
+      - Update apobetic state:
+        \[
+        \frac{d P_i}{dt} = \beta_p S_{\text{sem},i}(t) + \gamma_p \sum_{j \in N(i)} \omega_{ij}(t) S_{\text{sem},j}(t) + \gamma_e \text{Re}(E_i(t)) + \gamma_{\Phi} \Phi(t) - \alpha P_i(t)
+        \]
+      - Solve:
+        \[
+        w_{ij}(t + \Delta t) = w_{ij}(t) + \Delta t \cdot \frac{d w_{ij}}{dt}
+        \]
+        \[
+        M_{s,i}(t + \Delta t) = M_{s,i}(t) + \Delta t \cdot \frac{d M_{s,i}}{dt}, \quad M_{l,i}(t + \Delta t) = M_{l,i}(t) + \Delta t \cdot \frac{d M_{l,i}}{dt}
+        \]
+        \[
+        S_{\text{sem},i}(t + \Delta t) = S_{\text{sem},i}(t) + \Delta t \cdot \frac{d S_{\text{sem},i}}{dt}, \quad P_i(t + \Delta t) = P_i(t) + \Delta t \cdot \frac{d P_i}{dt}
+        \]
+
+   f. **Update Field Dynamics (P System Rule)**:
+      - Rule: \( \Psi_{i a} \to \Psi_{i a}' \mid s_i, E_i, \rho, E_{\text{EM}}, C_A \)
+      - For each vertex \( i = 1, \dots, N \), field component \( a = 1, \dots, d \):
+        - Compute diffusion:
+          \[
+          \mathcal{L}_{\Psi_i^a}(t) = D \sum_{j \in N(i)} \omega_{ij}(t) (\Psi_j^a(t) - \Psi_i^a(t))
+          \]
+        - Compute reaction:
+          \[
+          \mathcal{R}_{\Psi_i^a}(t) = \gamma \Psi_i^a(t) \left(1 - \frac{\sum_{b=1}^d (\Psi_i^b(t))^2}{K}\right) + \kappa s_i(t) + \gamma_q \sum_{j=1}^k \text{Tr}(\rho(t) Z_j) + \sum_{j \in N(i)} \alpha_{ij} \Psi_j^a(t) \Psi_i^a(t)
+          \]
+          where \( K = 2 \).
+        - Compute dissipation:
+          \[
+          \mathcal{D}_{\Psi_i^a}(t) = -\delta |\Psi_i^a(t)|^2 \left(2 + 0.5 \tanh\left(\frac{1}{|E(t)|} \sum_{(u,v) \in E(t)} \text{Ric}_{uv}(t)\right)\right)
+          \]
+        - Compute noise:
+          \[
+          \mathcal{N}_{\Psi_i^a}(t) = \sigma \eta_i^a(t) \left(1 + 0.1 \frac{1}{|E(t)|} \sum_{(u,v) \in E(t)} \text{Ric}_{uv}(t)\right)
+          \]
+          where \(\eta_i^a(t) \sim \mathcal{N}(0, \frac{\Gamma(\alpha(\text{Ric}))}{|t|^{2\alpha(\text{Ric})}})\), \(\alpha(\text{Ric}) = \tanh(\text{Ric}_{\text{mean}})/2 + 0.5\).
+        - Compute EM coupling:
+          \[
+          \mathcal{E}_{\Psi_i^a}(t) = \beta_{\text{EM}} E_{\text{EM},i}^a(t), \quad E_{\text{EM},i}^a(t) \sim \mathcal{N}(0, 0.1^2)
+          \]
+        - Update field:
+          \[
+          \frac{d\Psi_i^a}{dt} = \mathcal{L}_{\Psi_i^a}(t) + \mathcal{R}_{\Psi_i^a}(t) + \mathcal{D}_{\Psi_i^a}(t) + \mathcal{N}_{\Psi_i^a}(t) + \mathcal{E}_{\Psi_i^a}(t)
+          \]
+          \[
+          \Psi_i^a(t + \Delta t) = \Psi_i^a(t) + \Delta t \cdot \frac{d\Psi_i^a}{dt}
+          \]
+
+   g. **Update Quantum Dynamics (P System Rule)**:
+      - Rule: \( \rho \to \rho' \mid \Psi, V, Q_{\text{Bohm}}, C_A \)
+      - Compute Hamiltonian:
+        \[
+        H(t) = H_0 + \sum_{i=1}^N \sum_{a=1}^d \Psi_i^a(t) X_i^a + \sum_{i=1}^N V_i(t) Z_i + Q_{\text{Bohm}}(t)
+        \]
+        where \( Q_{\text{Bohm}}(t) = -\frac{\hbar^2}{2m} \sum_{i=1}^N \frac{\nabla^2 |\Psi_i(t)|}{|\Psi_i(t)|} \), approximated numerically.
+      - Evolve statistical matrix:
+        \[
+        i \hbar \frac{d\rho}{dt} = [H(t), \rho(t)] + L \rho(t) L^\dagger - \frac{1}{2} \{ L^\dagger L, \rho(t) \}
+        \]
+        where \( L = \sqrt{\gamma_d} I_k \).
+      - If Orch OR event occurs (\( t \mod \tau \approx \hbar / E_G = 0 \)):
+        - Select outcome \( a \) with probability \( P(a) = \text{Tr}(\rho(t) P_a) \).
+        - Collapse: \( \rho(t) \to \frac{P_a \rho(t) P_a}{\text{Tr}(P_a \rho(t) P_a)} \).
+      - Solve:
+        \[
+        \rho(t + \Delta t) = \exp\left(-\frac{i}{\hbar} H(t) \Delta t\right) \rho(t) \exp\left(\frac{i}{\hbar} H(t) \Delta t\right) + \Delta t \cdot \left( L \rho(t) L^\dagger - \frac{1}{2} \{ L^\dagger L, \rho(t) \} \right)
+        \]
+      - Compute entanglement entropy:
+        \[
+        S(t) = -\text{Tr}(\rho(t) \log \rho(t))
+        \]
+
+   h. **Update TPM and IIT \(\Phi\)-Structure (P System Rule)**:
+      - Rule: \( \mathcal{T}_S \to \mathcal{T}_S' \mid s, C_A \)
+      - Update TPM:
+        \[
+        p(\bar{s} | s, t) = \prod_{i=1}^N p(\bar{u}_i | u_i(t)), \quad \mathcal{T}_S(t) = \{ p(\bar{s} | s, t) \}_{s,\bar{s} \in \Omega_S}
+        \]
+        where \( p(\bar{u}_i | u_i(t)) = \text{softmax}(V_i(t), E_i(t), \Psi_i(t)) \).
+      - Compute intrinsic information:
+        \[
+        \text{ii}_{\text{effect}}(s, \bar{s}, t) = p(\bar{s} | s, t) \log \left( \frac{p(\bar{s} | s, t)}{p(\bar{s}, t)} \right), \quad p(\bar{s}, t) = \frac{1}{|\Omega_S|} \sum_{s \in \Omega_S} p(\bar{s} | s, t)
+        \]
+        \[
+        \text{ii}_{\text{cause}}(s, \bar{s}, t) = p(s | \bar{s}, t) \log \left( \frac{p(s | \bar{s}, t)}{p(s, t)} \right), \quad p(s | \bar{s}, t) = \frac{p(\bar{s} | s, t)}{\sum_{s' \in \Omega_S} p(\bar{s} | s', t)}
+        \]
+      - Compute integrated information:
+        \[
+        \varphi_c(s, t) = \text{ii}_{\text{cause}}(s, s_c^*, t) - \min_{\theta} \text{ii}_{\theta}(s, s_c^*, t), \quad \varphi_e(s, t) = \text{ii}_{\text{effect}}(s, s_e^*, t) - \min_{\theta} \text{ii}_{\theta}(s, s_e^*, t)
+        \]
+        \[
+        \varphi_s(t) = \min(\varphi_c(s, t), \varphi_e(s, t))
+        \]
+        where \( s_c^*, s_e^* \) maximize \(\text{ii}_{\text{cause}}, \text{ii}_{\text{effect}}\), and \(\theta\) is the minimum information partition.
+      - Identify complex: \( S^*(t) = \arg\max_{S \subseteq U} \varphi_s(t) \).
+      - Unfold \(\Phi\)-structure:
+        - Identify distinctions \( D(t) = \{ (M, Z, \varphi_d) \mid M \subseteq S^*(t), Z \subseteq S^*(t) \} \), with \(\varphi_d\):
+          \[
+          \varphi_d = \text{ii}(M, Z, t) - \min_{\theta} \text{ii}_{\theta}(M, Z, t)
+          \]
+        - Identify relations \( R(t) = \{ r \subseteq Z(\mathcal{T}_{S^*}, s) \mid |r| \geq 2 \} \), with \(\varphi_r\):
+          \[
+          \varphi_r = \min_{(z_d, \varphi_d) \in r} \frac{\varphi_d}{|z_d|}
+          \]
+        - Compute total structured information:
+          \[
+          \Phi(t) = \sum_{d \in D(t)} \varphi_d + \sum_{r \in R(t)} \varphi_r
+          \]
+
+   i. **Generate Volition (P System Rule)**:
+      - Rule: \( M_r, \rho, V \to P_d, P_d \to D \mid C_A \)
+      - Retrieve memory: \( M_r(t) = M_s(t) \cup M_l(t) \).
+      - Compute decision probabilities:
+        \[
+        P(d | \rho(t), M_r(t), V(t)) = \text{softmax}_d \left( s_i(t) + \gamma_q \sum_{j=1}^k \text{Tr}(\rho(t) Z_j) + \frac{1}{d} \sum_{a=1}^d M_{r,i}^a(t) \right)
+        \]
+      - Select decision:
+        \[
+        D(t) = \arg\max_d P(d | \rho(t), M_r(t), V(t))
+        \]
+      - Update long-term memory:
+        \[
+        M_l(t + \Delta t) = M_l(t) \cup \{ D(t) \}
+        \]
+
+   j. **Check Metastability (P System Rule)**:
+      - Rule: \( \epsilon \to \epsilon' \mid V, C_A \)
+      - Compute Lyapunov exponent:
+        \[
+        \lambda_{\text{max}} = \lim_{T \to \infty} \frac{1}{T} \int_0^T \log \left( \max\left( \left\| \frac{dV(t)}{dt} \right\|, 10^{-10} \right) \right) dt
+        \]
+        approximated over a finite window.
+      - If \( |\lambda_{\text{max}}| < 0.1 \), amplify noise:
+        \[
+        \epsilon = \epsilon_0 \cdot \exp\left( \frac{|\lambda_{\text{max}}|}{\lambda_0} \right) (1 + \beta \text{Tr}(\rho(t) Q_{\text{meta}}))
+        \]
+
+   k. **Evolutionary Adaptation (P System Rule)**:
+      - Rule: \( \Theta \to \Theta' \mid F, C_A \)
+      - Define fitness function:
+        \[
+        F = - \left( \text{KL}(D(t), \text{Unif}) + 0.3 |\text{Coh}(t) - 0.9| + 0.2 |C(t) - 100| + 0.2 |S(t) - 2.0| + 0.1 |\varphi_s^*(t) - 0.5| + 0.1 |\Phi(t) - 10.0| + 0.1 |E_N(t) - 0.5| + 0.1 |D_{\text{trace}}(t) - 0.1| \right)
+        \]
+        where:
+        - Coherence: \( \text{Coh}(t) = \frac{1}{N(N-1)} \sum_{i \neq j} |\text{corr}(V_i(t), V_j(t))| \)
+        - Complexity: \( C(t) = N \cdot \text{avg_clustering}(G(t)) \)
+        - Negativity: \( E_N(t) = \log_2(2 N(\rho(t)) + 1) \), with \( N(\rho(t)) = \sum_{\lambda_i < 0} |\lambda_i| \) from partial transpose eigenvalues.
+        - Trace distance: \( D_{\text{trace}}(t) = \frac{1}{2} \sum |\lambda_i| \) of \( \rho(t) - \rho_{\text{uniform}} \).
+      - Optimize \( \Theta \) using swarm-based optimization (e.g., particle swarm optimization) to maximize \( F \).
+
+3. **Output**:
+   - Return conscious state: \( C(t) = (M_s(t), M_l(t), D(t), R(t)) \).
+   - Return \(\Phi\)-structure: \( (D(t), R(t), \Phi(t)) \).
+
+**Termination**:
+- Continue until \( t \geq T \).
+
+**Notes**:
+- Numerical methods: Runge-Kutta for neural/field dynamics, Euler for excitonic/memory, sparse solvers for GNN/IIT calculations.
+- Quantum noise \(\xi_i(t)\) is calibrated to microtubule fluctuations, modulated by \(\rho(t)\).
+- Topological updates use discrete Ricci curvature and persistent homology.
+- P system rules ensure parallel, modular computation, with chained execution for criterial causation.
+- IIT calculations use approximate TPM and \(\Phi\)-structure computations for scalability.
+- Critical exponents (\(\beta = 0.36\), \(\nu = 0.63\), \( z = 2.1\)) are assumed, verifiable via simulation.
+- Validation compares \( R(t) \) to EEG rhythms (4–40 Hz), \( D(t) \) to behavioral data, \(\Phi(t)\) to neural correlates, and criterial causation to bursting patterns under NMDA blockade. ### Pure Mathematical Algorithm: Optimal Quantum-Topological Consciousness Framework (OQTCF)
+
+**Input**:
+- Sensory inputs: \( S(t) \in \mathbb{R}^m \)
+- Initial memory: \( M_0 = (M_s, M_l) \), where \( M_s \subseteq \mathbb{C}^k \), \( M_l \subseteq \mathbb{R}^k \)
+- Neural network: \( N = (V, E, W) \), with vertices \( V = \{1, \ldots, n\} \), edges \( E \subseteq V \times V \), weights \( W = (w_{ij}) \in \mathbb{R}^{n \times n} \)
+- Initial neural potentials: \( V(0) = (V_1(0), \ldots, V_n(0)) \in \mathbb{R}^n \)
+- Quantum statistical matrix: \( \rho(0) \in \mathbb{C}^{k \times k} \), Hermitian, positive semi-definite, \( \text{Tr}(\rho(0)) = 1 \)
+- Hamiltonian: \( H(t) \in \mathbb{C}^{k \times k} \), Hermitian
+- Excitonic states: \( |\psi_E(t)\rangle \in \mathbb{C}^d \), for each neuron
+- Dynamic simplicial complex: \( S(t) = (V, E(t), F(t)) \), with vertices \( V \), edges \( E(t) \), faces \( F(t) \), weights \( \omega_{ij}(t) \in \mathbb{R}^+ \)
+- Field: \( \Psi_{i a}: V \times \mathbb{R} \to \mathbb{R}^d \), \( a = 1, \ldots, d \)
+- Electromagnetic field: \( E_{\text{EM},i}(t) \in \mathbb{R}^d \)
+- Transition probability matrix (TPM): \( \mathcal{T}_S = p(\bar{s} | s) \), for system state \( s \in \Omega_S \)
+- P system: \( \Pi = (O, C, \mu, w_1, \ldots, w_m, R_1, \ldots, R_m, i_0) \), with objects \( O \), catalysts \( C \), membrane structure \( \mu \), multisets \( w_i \), rules \( R_i \), output region \( i_0 \)
+- Time step: \( \Delta t > 0 \)
+- Parameters:
+  - Hodgkin-Huxley: Capacitance \( C_m \), conductances \( g_{Na}, g_K, g_L \), reversal potentials \( E_{Na}, E_K, E_L \)
+  - Neural: Learning rates \( \eta, \eta_{\text{STDP}} \), STDP time constant \( \tau_{\text{STDP}} \), decay \( \lambda_{\text{decay}} \), synaptic strength \( \kappa \)
+  - Field: Diffusion \( D \), reaction \( \gamma \), dissipation \( \delta \), noise strength \( \sigma \), EM coupling \( \beta_{\text{EM}} \)
+  - Quantum: Noise variance \( \sigma_q \), quantum coupling \( \gamma_q \), dissipation rate \( \gamma_d \), Planck’s constant \( \hbar \)
+  - Excitonic: Coupling \( \kappa_e \), memory coupling \( \gamma_e \), decay \( \alpha \)
+  - Topological: Edge weight threshold \( \omega_{\text{threshold}} \)
+  - Information: Semantic coupling \( \eta_s \), pragmatic coupling \( \beta_p \), apobetic coupling \( \gamma_p \), IIT coupling \( \gamma_{\Phi} \)
+  - Rhythms: Frequencies \( f \in \{4, 8, 12, 20, 40\} \text{ Hz} \), amplitudes \( a_f \)
+  - Metastability: Noise amplification \( \epsilon_0, \beta, \lambda_0 \)
+  - P system: Attentional promoter strength \( \kappa_A \)
+
+**Output**:
+- Conscious state: \( C(t) = (M_s(t), M_l(t), D(t), R(t)) \), where:
+  - \( M_s(t) \): Short-term memory
+  - \( M_l(t) \): Long-term memory
+  - \( D(t) \): Decision
+  - \( R(t) \): Cortical rhythms
+- Integrated information: \( \varphi_s^* \), \( \Phi \)-structure \( (D(t), R(t), \Phi(t)) \)
+
+**Algorithm**:
+1. **Initialize**:
+   - Set P system: \( \Pi = (O, C, \mu, w_1, \ldots, w_m, R_1, \ldots, R_m, i_0) \), with:
+     - Objects: \( O = \{ N_i, V_i, S_i, W_{ij}, M_{s,i}, M_{l,i}, S_{\text{sem},i}, P_i, E_i, \Psi_{i a}, \rho, \mathcal{T}_S \} \)
+     - Catalysts: \( C = \{ C_A \} \), attentional promoters
+     - Membranes: \( \mu = [ [ \text{V1} ]_1 [ \text{V4} ]_2 [ \text{Frontoparietal} ]_3 ]_0 \)
+     - Multisets: \( w_1 = \{ V_i = -65, m_i = 0.05, h_i = 0.6, n_i = 0.32 \}, w_2 = \{ S_{\text{sem},i} = 0, P_i = 0 \}, w_3 = \{ D_i = 0 \} \)
+     - Rules: \( R_i \) defined below
+     - Output: \( i_0 = 3 \)
+   - Initialize neural: \( V_i(t) = -65 \), \( m_i(t) = 0.05 \), \( h_i(t) = 0.6 \), \( n_i(t) = 0.32 \).
+   - Initialize weights: \( W_{ij}(t) \sim \mathcal{N}(0, 10^{-2}) \).
+   - Initialize memory: \( M_{s,i}(t) = 0 \in \mathbb{C}^d \), \( M_{l,i}(t) = 0 \in \mathbb{R}^d \).
+   - Initialize semantic/apobetic: \( S_{\text{sem},i}(t) = 0 \), \( P_i(t) = 0 \).
+   - Initialize excitonic: \( E_i(t) \sim \mathcal{N}(0, 1) + i \mathcal{N}(0, 1) \).
+   - Initialize field: \( \Psi_{i a}(t) \sim \mathcal{N}(0, 1) \).
+   - Initialize quantum: \( \rho(t) = I_k / k \), \( k = 2^4 \).
+   - Initialize simplicial complex: \( S(t) \) with \( |V| = n \), edges \( E(t) \) sampled with sparsity \( p = 0.3 \), weights \( \omega_{ij}(0) \sim \mathcal{U}[0.1, 0.2] \), faces \( F(t) = \emptyset \).
+   - Initialize TPM: \( \mathcal{T}_S = (1 / |\Omega_S|) \mathbf{1}_{|\Omega_S| \times |\Omega_S|} \).
+   - Initialize rhythms: \( R(t) = \sum_{f \in \{4, 8, 12, 20, 40\}} a_f \sin(2\pi f t) \), \( a_f = [0.1, 0.1, 0.05, 0.03, 0.02] \).
+
+2. **For each time step** \( t = 0, \Delta t, 2\Delta t, \ldots \):
+   a. **Apply P System Rules in Parallel**:
+      - **Topology Update**:
+        - Rule: \( \omega_{ij} \to \omega_{ij}' | \Psi_i \Psi_j S_i S_j \):
+          \[
+          \omega_{ij}(t + \Delta t) = \max\left( \omega_{ij}(t) + 0.1 \left( \sum_a \Psi_{i a} \Psi_{j a} + S_i S_j - 0.1 \omega_{ij} - 0.02 \text{Ric}_{ij} \right), \omega_{\text{threshold}} \right)
+          \]
+          \[
+          \text{Ric}_{ij}(t) = \sum_a (\Psi_{i a} - \Psi_{j a})^2 / \omega_{ij}
+          \]
+        - Remove edges: If \( \omega_{ij} < \omega_{\text{threshold}} \), delete \( (i,j) \).
+        - Compute Betti numbers: \( \beta_k(t) = \dim H_k(S(t), \mathbb{R}) \).
+
+      - **Cortical Rhythms**:
+        - Rule: \( R \to R' \):
+          \[
+          R(t) = \sum_{f \in \{4, 8, 12, 20, 40\}} a_f \sin(2\pi f t)
+          \]
+        - Bursting Rule: \( S_i \to S_i^k | C_A \):
+          \[
+          S_i(t) = \mathbb{1}_{V_i(t) > -40} \cdot \kappa_A C_A
+          \]
+
+      - **Neural Potentials**:
+        - Compute inputs:
+          \[
+          I_{\text{sensory},i} = \frac{1}{m} \sum_k S_k(t), \quad I_{\text{synaptic},i} = \sum_{j \in N(i)} W_{ij} \sigma(V_j), \quad \sigma(x) = (1 + e^{-x})^{-1}
+          \]
+          \[
+          I_{\text{field},i} = \kappa \sum_a \Psi_{i a}, \quad I_{\text{quantum},i} = \gamma_q \sum_j \text{Tr}(\rho(t) Z_j)
+          \]
+          \[
+          I_{\text{excitonic},i} = \kappa_e \text{Re}(E_i), \quad I_{\text{rhythm},i} = R_i(t)
+          \]
+        - Rule: \( V_i \to V_i' | I_i \):
+          \[
+          \frac{d V_i}{dt} = \frac{1}{C_m} (I_{\text{sensory},i} + I_{\text{synaptic},i} + I_{\text{field},i} + I_{\text{quantum},i} + I_{\text{excitonic},i} + I_{\text{rhythm},i} - I_{Na,i} - I_{K,i} - I_{L,i}) + \epsilon \xi_i(t)
+          \]
+          \[
+          I_{Na,i} = g_{Na} m_i^3 h_i (V_i - E_{Na}), \quad I_{K,i} = g_K n_i^4 (V_i - E_K), \quad I_{L,i} = g_L (V_i - E_L)
+          \]
+          \[
+          \xi_i(t) \sim \mathcal{N}(0, \sigma_q^2 \text{Tr}(\rho(t) Z_i^2)), \quad \epsilon = \epsilon_0 \exp(|\lambda_{\text{max}}| / \lambda_0) (1 + \beta \text{Tr}(\rho(t) Q_{\text{meta}}))
+          \]
+        - Update gating variables:
+          \[
+          \frac{d x_i}{dt} = \alpha_x(V_i) (1 - x_i) - \beta_x(V_i) x_i, \quad x_i \in \{ m_i, h_i, n_i \}
+          \]
+        - Solve using Runge-Kutta:
+          \[
+          V_i(t + \Delta t) = V_i(t) + \Delta t \cdot \frac{d V_i}{dt}, \quad x_i(t + \Delta t) = x_i(t) + \Delta t \cdot \frac{d x_i}{dt}
+          \]
+
+      - **Excitonic Dynamics**:
+        - Rule: \( E_i \to E_i' \):
+          \[
+          i \hbar \frac{d E_i}{dt} = (H_0 + \Delta - \frac{i}{2} G) E_i
+          \]
+          \[
+          H_0 = \text{diag}(0.5, \ldots, 0.5), \quad \Delta \sim \mathcal{N}(0, 0.1^2), \quad G = \text{diag}(0.01, \ldots, 0.01)
+          \]
+        - Solve:
+          \[
+          E_i(t + \Delta t) = E_i(t) + \Delta t \cdot \frac{d E_i}{dt}
+          \]
+
+      - **Neural Network and Memory**:
+        - Rule: \( W_{ij} \to W_{ij}' | S_i S_j \):
+          \[
+          \frac{d W_{ij}}{dt} = \eta S_i S_j + \eta_{\text{STDP}} \exp\left(-\frac{|\Delta t_{ij}|}{\tau_{\text{STDP}}}\right) \text{sign}(\Delta t_{ij}) - \lambda_{\text{decay}} W_{ij}
+          \]
+          \[
+          \Delta t_{ij} = t_i - t_j
+          \]
+        - Rule: \( M_{s,i} \to M_{s,i}' | S_i E_i \):
+          \[
+          \frac{d M_{s,i}}{dt} = S_i \left( \frac{1}{m} \sum_k S_k(t) + \gamma_e E_i \right) - \alpha M_{s,i}
+          \]
+        - Rule: \( M_{l,i} \to M_{l,i}' | \rho M_{s,i} \):
+          \[
+          \frac{d M_{l,i}}{dt} = \text{Re}(\text{Tr}(\rho(t) M_{s,i} P_i)) - \alpha M_{l,i}
+          \]
+        - Rule: \( S_{\text{sem},i} \to S_{\text{sem},i}' | \Psi_i M_{l,i} E_i \):
+          \[
+          \frac{d S_{\text{sem},i}}{dt} = \eta_s \left( \sum_a \Psi_{i a} M_{l,i a} + \gamma_e \text{Re}(E_i) + \gamma_{\Phi} \text{ii}(s, s_{\text{effect}}) \right) - S_{\text{sem},i}
+          \]
+          \[
+          \text{ii}(s, s_{\text{effect}}) = p(s_{\text{effect}} | s) \log \left( \frac{p(s_{\text{effect}} | s)}{p(s_{\text{effect}})} \right)
+          \]
+        - Rule: \( P_i \to P_i' | S_{\text{sem},i} E_i \Phi \):
+          \[
+          \frac{d P_i}{dt} = \beta_p S_{\text{sem},i} + \gamma_p \sum_{j \in N(i)} \omega_{ij} S_{\text{sem},j} + \gamma_e \text{Re}(E_i) + \gamma_{\Phi} \Phi(t) - \alpha P_i
+          \]
+        - Solve using Euler method:
+          \[
+          W_{ij}(t + \Delta t) = W_{ij}(t) + \Delta t \cdot \frac{d W_{ij}}{dt}, \quad M_{s,i}(t + \Delta t) = M_{s,i}(t) + \Delta t \cdot \frac{d M_{s,i}}{dt}
+          \]
+          \[
+          M_{l,i}(t + \Delta t) = M_{l,i}(t) + \Delta t \cdot \frac{d M_{l,i}}{dt}, \quad S_{\text{sem},i}(t + \Delta t) = S_{\text{sem},i}(t) + \Delta t \cdot \frac{d S_{\text{sem},i}}{dt}
+          \]
+          \[
+          P_i(t + \Delta t) = P_i(t) + \Delta t \cdot \frac{d P_i}{dt}
+          \]
+
+      - **Field Dynamics**:
+        - Rule: \( \Psi_{i a} \to \Psi_{i a}' \):
+          \[
+          \frac{d \Psi_{i a}}{dt} = D \sum_{j \in N(i)} \omega_{ij} (\Psi_{j a} - \Psi_{i a}) + \gamma \Psi_{i a} \left(1 - \frac{1}{K} \sum_b \Psi_{i b}^2\right) + \kappa S_i + \gamma_q \sum_j \text{Tr}(\rho(t) Z_j) + \sum_{j \in N(i)} \alpha_{ij} \Psi_{j a} \Psi_{i a} - \delta |\Psi_{i a}|^2 \left(2 + 0.5 \tanh\left(\frac{1}{|E|} \sum_{(u,v) \in E} \text{Ric}_{uv}\right)\right) + \sigma \eta_{i a} + \beta_{\text{EM}} E_{\text{EM},i a}
+          \]
+          \[
+          \eta_{i a} \sim \mathcal{N}(0, \Gamma(\alpha(\text{Ric})) |t|^{2 \alpha(\text{Ric})}), \quad \alpha(\text{Ric}) = \tanh(\text{Ric}_{\text{mean}})/2 + 0.5
+          \]
+        - Solve:
+          \[
+          \Psi_{i a}(t + \Delta t) = \Psi_{i a}(t) + \Delta t \cdot \frac{d \Psi_{i a}}{dt}
+          \]
+
+      - **Quantum Dynamics**:
+        - Rule: \( \rho \to \rho' \):
+          \[
+          i \hbar \frac{d \rho}{dt} = [H(t), \rho(t)] + L \rho(t) L^\dagger - \frac{1}{2} \{ L^\dagger L, \rho(t) \}
+          \]
+          \[
+          H(t) = \sum_{i=1}^{N+1} \frac{\omega}{2} (2 \sigma_i^+ \sigma_i^- - \mathbb{1}_i) + \sum_{i \neq j} 2 g_{ij} (\sigma_i^+ \sigma_j^- + \sigma_i^- \sigma_j^+)
+          \]
+          \[
+          L = \sqrt{\gamma_d} \mathbb{1}_k
+          \]
+        - Orch OR event (every \( \tau \approx \hbar / E_G \)):
+          \[
+          P(a) = \text{Tr}(\rho(t) P_a), \quad \rho(t) \to \frac{P_a \rho(t) P_a}{P(a)}
+          \]
+        - Solve:
+          \[
+          \rho(t + \Delta t) = \exp\left(-\frac{i}{\hbar} H(t) \Delta t\right) \rho(t) \exp\left(\frac{i}{\hbar} H(t) \Delta t\right) + \Delta t \cdot \left( L \rho(t) L^\dagger - \frac{1}{2} \{ L^\dagger L, \rho(t) \} \right)
+          \]
+        - Compute entropy:
+          \[
+          S(t) = -\text{Tr}(\rho(t) \log \rho(t))
+          \]
+
+      - **TPM and IIT Metrics**:
+        - Rule: \( \mathcal{T}_S \to \mathcal{T}_S' \):
+          \[
+          p(\bar{s} | s, t) = \prod_i p(\bar{u}_i | u_i(t)), \quad p(\bar{u}_i | u_i(t)) = \text{softmax}(V_i(t), E_i(t), \Psi_i(t))
+          \]
+        - Compute intrinsic information:
+          \[
+          \text{ii}_{\text{effect}}(s, \bar{s}, t) = p(\bar{s} | s, t) \log \left( \frac{p(\bar{s} | s, t)}{p(\bar{s}, t)} \right), \quad \text{ii}_{\text{cause}}(s, \bar{s}, t) = p(s | \bar{s}, t) \log \left( \frac{p(s | \bar{s}, t)}{p(s, t)} \right)
+          \]
+        - Compute integrated information:
+          \[
+          \varphi_s(t) = \min_{\theta} [\text{ii}(s, s', t) - \text{ii}_\theta(s, s', t)]
+          \]
+        - Identify complex: \( S^*(t) = \arg\max_S \varphi_s(t) \).
+        - Compute \( \Phi \)-structure:
+          \[
+          \Phi(t) = \sum_{d \in D(t)} \varphi_d + \sum_{r \in R(t)} \varphi_r
+          \]
+          \[
+          \varphi_r = \sum_{n \in s_c' \cup s_e'} \sum_{j=1}^{|Z(n)|} \varphi(j) \frac{|z(j)| (2 |Z(n)| - j - 1)}{|z(j)|}
+          \]
+
+      - **Volition**:
+        - Rule: \( (M_r, \rho) \to P_d, P_d \to D \):
+          \[
+          P(d | \rho(t), M_r, V(t)) = \text{softmax}_d \left( S_i(t) + \gamma_q \sum_j \text{Tr}(\rho(t) Z_j) + \frac{1}{d} \sum_a M_{r,i a}(t) \right)
+          \]
+          \[
+          D(t) = \arg\max_d P(d)
+          \]
+        - Update long-term memory:
+          \[
+          M_l(t + \Delta t) = M_l(t) \cup \{ D(t) \}
+          \]
+
+      - **Metastability**:
+        - Compute Lyapunov exponent:
+          \[
+          \lambda_{\text{max}} = \lim_{T \to \infty} \frac{1}{T} \int_0^T \log \left( \max\left( \left| \frac{d V(t)}{dt} \right|, 10^{-10} \right) \right) dt
+          \]
+        - If \( |\lambda_{\text{max}}| < 0.1 \), amplify noise:
+          \[
+          \epsilon \to \epsilon \cdot (1 + \beta \text{Tr}(\rho(t) Q_{\text{meta}}))
+          \]
+
+      - **Evolutionary Adaptation**:
+        - Rule: \( \text{Params} \to \text{Params}' \):
+          - Compute fitness:
+            \[
+            F = \sum_t (|\lambda_{\text{max}}| + S(t) + \beta_k(t) + \Phi(t))
+            \]
+          - Update parameters (\( \eta, \gamma_q, \kappa \)) using swarm-based optimization:
+            - Initialize swarm: \( \{ \theta_i \}_{i=1}^N \), \( \theta_i = (\eta_i, \gamma_{q,i}, \kappa_i) \)
+            - Update positions via velocity updates based on \( F \)
+            - Select best \( \theta \) maximizing \( F \)
+
+   b. **Compute Consciousness Metrics**:
+      - Awareness: \( A = \frac{1}{n} \sum_i \| M_{s,i} \|^2 \)
+      - Volition: \( V = \frac{1}{n} \sum_i D_i \)
+      - Coherence: \( \text{Coh} = \frac{1}{n(n-1)} \sum_{i \neq j} |\text{corr}(V_i, V_j)| \)
+      - Entanglement entropy: \( S = -\text{Tr}(\rho(t) \log \rho(t)) \)
+      - Topological complexity: \( C = n \cdot \text{avg_clustering}(S(t)) \)
+      - Integrated information: \( \varphi_s^* \), \( \Phi \)
+      - Negativity: \( E_N = \log_2 (2 N(\rho_{AB}) + 1) \), \( N(\rho_{AB}) = \sum_{\lambda_i < 0} |\lambda_i| \)
+      - Trace distance: \( D(\rho_1, \rho_2) = \frac{1}{2} \sum_i |\lambda_i(\rho_1 - \rho_2)| \)
+
+3. **Output**:
+   - Return \( C(t) = (M_s(t), M_l(t), D(t), R(t)) \), \( \varphi_s^* \), \( (D(t), R(t), \Phi(t)) \).
+
+**Termination**:
+- Continue until time \( T \) or convergence of \( C(t) \).

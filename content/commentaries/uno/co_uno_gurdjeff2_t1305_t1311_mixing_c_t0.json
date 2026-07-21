@@ -1,0 +1,59 @@
+{
+  "co_id": "co:uno_gurdjeff2_t1305_t1311_mixing_c_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gurdjeff2_t1305_t1311_mixing_categories",
+  "turn_index": 0,
+  "lineage": "Gurdjieffian",
+  "student_state": "intellectually_synthesizing_categories",
+  "behavior_tags": [
+    "category_conflation",
+    "premature_synthesis"
+  ],
+  "pedagogy": {
+    "phase": "META",
+    "function_id": "ME_03",
+    "function_name": "ME_03",
+    "mechanism_shape": "COMPARISON_CONTRAST",
+    "teaching_actions": [
+      "rebukes_methodology",
+      "enforces_pedagogical_hygiene",
+      "demands_sequential_study"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.62,
+      "attunement": 0.5,
+      "style": 0.65,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_04",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "go_along_compliantly",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The rebuke/enforcement works: mixing concepts = error (methodology error), enforces: sequential study (don't mix), non-conflation (keep separate). The student asked synthesis question (intellectually synthesizing categories), which shows they understand: categories = mixable (synthesis). They'll likely accept the rebuke/enforcement. Single-turn episode: synthesis question → rebuke/enforcement → complete. Hypothesis: synthesis rebukes lead to compliance in single-turn episodes—testable by tracking whether synthesis rebukes end episodes.",
+  "accumulated_insight": "T1: Student asks synthesis question ('Are the distinctions between men 1, 2, 3 and 4 definite, or, like tramps, lunatics, householders, are we a bit of each?')—intellectually synthesizing categories via category conflation and premature synthesis. They understand: categories = mixable (synthesis). The comparison_contrast mechanism rebukes: mixing concepts = error (methodology error), enforces: sequential study (don't mix), non-conflation (keep separate). Pattern: synthesis question → rebuke/enforcement → [complete]. Low confidence because rebukes can lead to compliance or resistance.",
+  "abstract_pattern": "",
+  "visible_response": "You know, you absolutely spoil ideas for yourself when you take them like this and\nmix them up.\nThese ideas are very important. First you must take one, quite separately,\nand try to understand it.\nThen take another and try to understand that one. The division\nof men Nos. 1, 2, 3 and so on is one thing and it was not given parallel to anything\nelse.\nYou must study it as it is—what is meant by man No. 1, by man No. 2, by man\nNo.\n3, what are the various combinations of these, how they are mixed and so on.\nThen take this second idea... You cannot take them all together and talk about them in one breath.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:sufi-comparative-analysis",
+    "ro:steiner-tantraloka-parallels"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

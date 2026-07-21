@@ -1,0 +1,49 @@
+{
+  "work_id": "work:t2-pubmed-brain-inspired-bodily-self-perception-model-for-robot-rubber",
+  "schema_version": 2,
+  "title": "Brain-inspired bodily self-perception model for robot rubber hand illusion.",
+  "authors": [
+    {
+      "name": "Zhao Y"
+    },
+    {
+      "name": "Lu E"
+    },
+    {
+      "name": "Zeng Y"
+    }
+  ],
+  "publication": {
+    "year": 2023,
+    "journal": "Patterns (N Y)",
+    "source": "PubMed/MEDLINE",
+    "language": "en"
+  },
+  "identifiers": {
+    "pmid": "38106608",
+    "doi": "10.1016/j.patter.2023.100888"
+  },
+  "topics": [
+    "phase-1-birth-body",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "assets": {
+    "pdf_path": null,
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/38106608/",
+    "abstract": "The core of bodily self-consciousness involves perceiving ownership of one's body. A central question is how body illusions like the rubber hand illusion (RHI) occur. Existing theoretical models still lack satisfying computational explanations from connectionist perspectives, especially for how the brain encodes body perception and generates illusions from neuronal interactions. Moreover, the integration of disability experiments is also neglected. Here, we integrate biological findings of bodil"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_alt17_acquisition",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 1,
+    "phase_name": "Birth/Body",
+    "bridge_rationale": "Bridge paper score=14.5: links Birth/Body concept to mechanistic neuroscience"
+  },
+  "evaluation": "Score 14: Excellent bridge signal",
+  "tier": 2
+}

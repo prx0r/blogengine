@@ -1,0 +1,340 @@
+Universal Emotion Language Framework (UELF)
+Core Mathematics
+5D Universal Emotion Space
+python@dataclass(frozen=True)
+class UniversalEmotionCoordinates:
+    """Canonical 5D emotion representation"""
+    valence: float      # [-1, 1] Russell's pleasure/displeasure axis
+    arousal: float      # [-1, 1] Russell's activation/deactivation axis  
+    control: float      # [-1, 1] Geneva Emotion Wheel dominance axis
+    transcendence: float # [-1, 1] Spiritual/mundane dimension
+    tension: float      # [0, 1]  Musical/visual tension level
+    
+    def __post_init__(self):
+        assert -1 <= self.valence <= 1
+        assert -1 <= self.arousal <= 1
+        assert -1 <= self.control <= 1
+        assert -1 <= self.transcendence <= 1
+        assert 0 <= self.tension <= 1
+Universal Metrics (Cross-Modal)
+python@dataclass
+class UniversalMetrics:
+    """Metrics that exist in both audio and visual domains"""
+    tension: float          # Dissonance, visual density, conflict
+    release: float          # Resolution, expansion, consonance
+    rhythm: np.ndarray      # Temporal patterns (8-beat normalized)
+    momentum: float         # Rate of change, directional energy
+    density: float          # Information complexity per unit time
+    coherence: float        # Internal consistency, predictability
+    
+class UniversalMetricsExtractor:
+    def extract_from_audio(self, chord_progression: List[str]) -> UniversalMetrics:
+        """Extract universal metrics from musical data"""
+        return UniversalMetrics(
+            tension=self._calculate_harmonic_tension(chord_progression),
+            release=self._detect_resolution_moments(chord_progression),
+            rhythm=self._extract_chord_rhythm_pattern(chord_progression),
+            momentum=self._calculate_harmonic_momentum(chord_progression),
+            density=self._calculate_harmonic_density(chord_progression),
+            coherence=self._calculate_tonal_coherence(chord_progression)
+        )
+    
+    def extract_from_visual(self, visual_elements: VisualState) -> UniversalMetrics:
+        """Extract same metrics from visual domain"""
+        return UniversalMetrics(
+            tension=self._calculate_visual_density(visual_elements),
+            release=self._detect_expansion_moments(visual_elements),
+            rhythm=self._extract_motion_rhythm_pattern(visual_elements),
+            momentum=self._calculate_visual_flux(visual_elements),
+            density=self._calculate_visual_complexity(visual_elements),
+            coherence=self._calculate_spatial_coherence(visual_elements)
+        )
+Mathematical Feature Extraction
+Complete Musical DNA Extractor
+pythonclass MusicalDNAExtractor:
+    """Extract mathematical features from CHORDONOMICON data"""
+    
+    def extract_complete_signature(self, sample: CHORDONOMICONSample) -> MusicalDNA:
+        """Extract complete mathematical signature"""
+        
+        # Core harmonic features
+        harmonic_features = self._extract_harmonic_features(sample.chord_progression)
+        
+        # Temporal features
+        temporal_features = self._extract_temporal_features(sample.structural_parts)
+        
+        # Network features
+        network_features = self._extract_network_features(sample.chord_progression)
+        
+        # Spectral features
+        spectral_features = self._extract_spectral_features(sample.binary_chords)
+        
+        return MusicalDNA(
+            harmonic_complexity=harmonic_features.complexity,
+            voice_leading_smoothness=harmonic_features.voice_leading,
+            tonal_stability=harmonic_features.stability,
+            tension_curve=temporal_features.tension_over_time,
+            rhythmic_signature=temporal_features.rhythm_pattern,
+            network_centrality=network_features.centrality,
+            spectral_distribution=spectral_features.pitch_class_distribution,
+            universal_metrics=self._map_to_universal_metrics(harmonic_features, temporal_features)
+        )
+    
+    def _extract_harmonic_features(self, chord_progression: List[str]) -> HarmonicFeatures:
+        """Core harmonic analysis"""
+        
+        # Information entropy of chord transitions
+        transitions = list(zip(chord_progression[:-1], chord_progression[1:]))
+        transition_entropy = self._calculate_entropy(transitions)
+        
+        # Voice leading analysis using music21
+        voice_leading_cost = 0
+        for i in range(len(chord_progression) - 1):
+            chord1 = music21.harmony.ChordSymbol(chord_progression[i])
+            chord2 = music21.harmony.ChordSymbol(chord_progression[i + 1])
+            voice_leading_cost += self._calculate_voice_leading_cost(chord1, chord2)
+        
+        voice_leading_smoothness = 1.0 - (voice_leading_cost / len(chord_progression))
+        
+        # Tonal stability via circle of fifths
+        stability = self._calculate_circle_of_fifths_stability(chord_progression)
+        
+        return HarmonicFeatures(
+            complexity=transition_entropy,
+            voice_leading=voice_leading_smoothness,
+            stability=stability
+        )
+    
+    def _calculate_entropy(self, sequence: List) -> float:
+        """Information entropy calculation"""
+        counts = Counter(sequence)
+        probs = np.array(list(counts.values())) / len(sequence)
+        return -np.sum(probs * np.log2(probs + 1e-10))
+Density Peak Discovery Engine
+Core Algorithm
+pythonclass EmotionDensityAnalyzer:
+    """Discover emotion archetypes as density peaks in 5D space"""
+    
+    def __init__(self, bandwidth: float = 0.15):
+        self.bandwidth = bandwidth
+        self.kde_estimator = None
+        
+    def discover_archetypes(self, emotion_samples: np.ndarray, 
+                          musical_features: List[MusicalDNA]) -> List[EmotionArchetype]:
+        """Main discovery algorithm"""
+        
+        # 1. Fit kernel density estimator to 5D emotion space
+        self.kde_estimator = KernelDensity(kernel='gaussian', bandwidth=self.bandwidth)
+        self.kde_estimator.fit(emotion_samples)
+        
+        # 2. Find density peaks via multiple gradient ascents
+        peaks = self._find_density_peaks(emotion_samples)
+        
+        # 3. Extract musical/visual signatures at each peak
+        archetypes = []
+        for peak_location in peaks:
+            archetype = self._extract_archetype_at_peak(
+                peak_location, emotion_samples, musical_features
+            )
+            archetypes.append(archetype)
+        
+        return archetypes
+    
+    def _find_density_peaks(self, emotion_samples: np.ndarray) -> List[np.ndarray]:
+        """Find peaks using gradient ascent from multiple starting points"""
+        peaks = []
+        
+        # Grid search for initial points
+        grid_resolution = 5
+        for v in np.linspace(-0.8, 0.8, grid_resolution):
+            for a in np.linspace(-0.8, 0.8, grid_resolution):
+                for c in np.linspace(-0.8, 0.8, grid_resolution):
+                    for t in np.linspace(-0.8, 0.8, grid_resolution):
+                        for tension in np.linspace(0.1, 0.9, grid_resolution):
+                            start_point = np.array([v, a, c, t, tension])
+                            peak = self._gradient_ascent_to_peak(start_point)
+                            peaks.append(peak)
+        
+        # Merge nearby peaks
+        return self._merge_nearby_peaks(peaks, merge_threshold=0.2)
+    
+    def _gradient_ascent_to_peak(self, start_point: np.ndarray) -> np.ndarray:
+        """Gradient ascent to find local density maximum"""
+        point = start_point.copy()
+        learning_rate = 0.02
+        epsilon = 1e-6
+        
+        for iteration in range(500):
+            gradient = self._compute_density_gradient(point)
+            new_point = point + learning_rate * gradient
+            
+            # Clamp to valid emotion space
+            new_point[:4] = np.clip(new_point[:4], -1, 1)  # valence, arousal, control, transcendence
+            new_point[4] = np.clip(new_point[4], 0, 1)     # tension
+            
+            if np.linalg.norm(new_point - point) < epsilon:
+                break
+                
+            point = new_point
+            
+        return point
+    
+    def _extract_archetype_at_peak(self, peak_location: np.ndarray,
+                                  emotion_samples: np.ndarray,
+                                  musical_features: List[MusicalDNA]) -> EmotionArchetype:
+        """Extract complete archetype signature at density peak"""
+        
+        # Find samples within peak's influence radius
+        distances = np.linalg.norm(emotion_samples - peak_location, axis=1)
+        peak_radius = 0.3  # Adaptive based on local density
+        peak_sample_indices = np.where(distances < peak_radius)[0]
+        
+        # Extract musical signature from peak samples
+        peak_musical_features = [musical_features[i] for i in peak_sample_indices]
+        musical_signature = self._extract_musical_signature(peak_musical_features)
+        
+        # Generate visual signature from musical signature
+        visual_signature = self._derive_visual_signature(musical_signature, peak_location)
+        
+        # Calculate archetype properties
+        peak_density = self.kde_estimator.score_samples([peak_location])[0]
+        covariance = self._estimate_local_covariance(emotion_samples, peak_location)
+        
+        return EmotionArchetype(
+            id=self._generate_archetype_name(peak_location),
+            emotion_coordinates=UniversalEmotionCoordinates(*peak_location),
+            musical_signature=musical_signature,
+            visual_signature=visual_signature,
+            peak_density=peak_density,
+            covariance_matrix=covariance,
+            sample_count=len(peak_sample_indices)
+        )
+Archetype Signatures
+Musical Signature Definition
+python@dataclass
+class MusicalSignature:
+    """Complete musical DNA of an archetype"""
+    
+    # Harmonic characteristics
+    common_progressions: List[List[str]]     # Top chord progressions
+    harmonic_complexity_range: Tuple[float, float]
+    voice_leading_range: Tuple[float, float]
+    
+    # Temporal characteristics  
+    tempo_range: Tuple[float, float]
+    rhythmic_signature: np.ndarray           # 8-beat pattern
+    tension_curve_template: np.ndarray       # Normalized tension over time
+    
+    # Spectral characteristics
+    pitch_class_distribution: np.ndarray     # 12-tone weight distribution
+    consonance_preference: float             # Tendency toward consonance
+    
+    # Universal metrics signature
+    universal_metrics_profile: UniversalMetrics
+    
+    def generate_instance(self, emotion_point: np.ndarray) -> MusicalInstance:
+        """Generate specific musical instance from signature"""
+        
+        # Distance from archetype center affects parameter sampling
+        distance_from_center = np.linalg.norm(emotion_point - self.center_coordinates)
+        variance_scaling = min(1.0, distance_from_center * 2.0)
+        
+        # Sample parameters with variance proportional to distance
+        chosen_progression = random.choice(self.common_progressions)
+        tempo = random.uniform(*self.tempo_range)
+        complexity = random.uniform(*self.harmonic_complexity_range)
+        
+        return MusicalInstance(
+            chord_progression=chosen_progression,
+            tempo=tempo,
+            harmonic_complexity=complexity,
+            tension_curve=self.tension_curve_template * (1 + variance_scaling * 0.2)
+        )
+Visual Signature Definition
+python@dataclass
+class VisualSignature:
+    """Complete visual DNA derived from musical signature"""
+    
+    # Motion characteristics
+    motion_pattern: str                      # 'upward_spirals', 'downward_drift', etc.
+    energy_level: float                      # 0-1 overall energy
+    chaos_factor: float                      # 0-1 randomness vs structure
+    
+    # Spatial characteristics
+    preferred_geometry: str                  # 'organic', 'geometric', 'hybrid'
+    scale_behavior: str                      # 'expanding', 'contracting', 'stable'
+    density_preference: float                # Sparse vs dense arrangements
+    
+    # Color characteristics
+    color_temperature: float                 # Cool to warm bias
+    saturation_range: Tuple[float, float]    # Color intensity range
+    brightness_range: Tuple[float, float]    # Luminance range
+    
+    # Temporal characteristics
+    transition_style: str                    # 'smooth', 'abrupt', 'rhythmic'
+    persistence: float                       # How long elements remain visible
+    
+    def generate_instance(self, musical_instance: MusicalInstance) -> VisualInstance:
+        """Generate visual instance synchronized with musical instance"""
+        
+        # Map musical tension to visual density
+        visual_density = np.interp(musical_instance.tension_curve, [0, 1], 
+                                 [self.density_preference * 0.5, self.density_preference * 1.5])
+        
+        # Map harmonic complexity to visual complexity
+        visual_complexity = musical_instance.harmonic_complexity * self.chaos_factor
+        
+        # Map tempo to motion speed
+        motion_speed = musical_instance.tempo / 120.0  # Normalize to 120 BPM
+        
+        return VisualInstance(
+            particle_count=int(visual_density * 10000),
+            motion_speed=motion_speed,
+            complexity_factor=visual_complexity,
+            color_palette=self._generate_color_palette(musical_instance.chord_progression)
+        )
+Cross-Modal Translation Functions
+Core Translation Engine
+pythonclass CrossModalTranslator:
+    """Translate between text, audio, and visual using archetype space"""
+    
+    def __init__(self, discovered_archetypes: List[EmotionArchetype]):
+        self.archetypes = discovered_archetypes
+        self.text_emotion_extractor = TextEmotionExtractor()
+        
+    def text_to_audio_visual(self, text_prompt: str) -> AudioVisualPair:
+        """Complete text → audio+visual translation"""
+        
+        # 1. Extract 5D emotion coordinates from text
+        emotion_coords = self.text_emotion_extractor.extract(text_prompt)
+        
+        # 2. Find archetype probabilities via density evaluation
+        archetype_weights = self._evaluate_archetype_probabilities(emotion_coords)
+        
+        # 3. Generate weighted blend of archetype outputs
+        audio_instance = self._blend_musical_instances(archetype_weights, emotion_coords)
+        visual_instance = self._blend_visual_instances(archetype_weights, emotion_coords)
+        
+        return AudioVisualPair(audio_instance, visual_instance)
+    
+    def _evaluate_archetype_probabilities(self, emotion_coords: np.ndarray) -> Dict[int, float]:
+        """Evaluate probability of belonging to each archetype"""
+        probabilities = {}
+        
+        for i, archetype in enumerate(self.archetypes):
+            # Evaluate multivariate normal probability
+            diff = emotion_coords - archetype.emotion_coordinates
+            inv_cov = np.linalg.inv(archetype.covariance_matrix)
+            prob = np.exp(-0.5 * diff.T @ inv_cov @ diff)
+            probabilities[i] = prob
+        
+        # Normalize
+        total_prob = sum(probabilities.values())
+        return {k: v/total_prob for k, v in probabilities.items()}
+    
+    def _blend_musical_instances(self, archetype_weights: Dict[int, float],
+                               emotion_coords: np.ndarray) -> MusicalInstance:
+        """Blend multiple archetype musical outputs"""
+        
+        # Generate instance from dominant archetype
+        dominant_archetype_id = max(archetype_wei

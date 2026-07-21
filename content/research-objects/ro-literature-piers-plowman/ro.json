@@ -1,0 +1,223 @@
+{
+  "ro_id": "ro:literature-piers-plowman",
+  "schema_version": 1,
+  "title": "Piers Plowman \u2014 The Fair Field of the Tattvas",
+  "subtitle": "The 'fair field full of folk' as the 31 impure tattvas; the search for Do-Well/Do-Better/Do-Best as the three up\u0101yas",
+  "family": "literature",
+  "status": "draft",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "Langland's Piers Plowman read as a complete map of the tattvic universe: the fair field as the 31 impure tattvas, the tower and dungeon as the pure path and the contracted self, and the three Do's ...",
+    "scope": "Focuses on the fair field as the impure tattvic matrix, the tower and dungeon as \u015auddhavidy\u0101 and the bound soul, Piers as the Vidye\u015bvara/guru, the three Do's as the three up\u0101yas (\u0100\u1e47avop\u0101ya/\u015a\u0101ktop\u0101ya/\u015a\u0101mbhavop\u0101ya), and the Tree of Charity as the completed work.",
+    "traditions": [
+      "tantra",
+      "kashmiri_shaivism",
+      "literature",
+      "christian_mysticism"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "piers-plowman",
+      "tier": 1,
+      "label": "William Langland \u2014 Piers Plowman (B-Text, c. 1377\u201379) \u2014 Schmidt ed. (1978, revised 1995)",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "fair_field",
+        "tower_and_dungeon",
+        "three_dos",
+        "tree_of_charity"
+      ],
+      "sections_affected": [
+        "analysis"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "piers-schmidt-intro",
+      "tier": 2,
+      "label": "A.V.C. Schmidt \u2014 'The Vision of Piers Plowman: A Critical Edition' (introduction and notes)",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "textual_criticism",
+        "allegorical_structure"
+      ],
+      "sections_affected": [
+        "analysis"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "piers-tavuzzi",
+      "tier": 2,
+      "label": "Michael Tavuzzi \u2014 'Piers Plowman and the Three Lives' (analytical study of the Do-Dobet-Dobest progression)",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "three_lives_analysis",
+        "initiatory_structure"
+      ],
+      "sections_affected": [
+        "analysis"
+      ],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "analysis",
+      "subsection": "fair_field",
+      "kind": "source",
+      "text": "[The 'fair field full of folk' is the 31 impure tattvas \u2014 the entire human drama spread across the field between the tower and the dungeon. Langland describes 'alle manere of men, the meene and the riche, / Werchynge and wandrynge as the world asketh' \u2014 each figure a mode of entanglement in the impure tattvic matrix. The field is bounded by the tower (Truth/\u015auddhavidy\u0101) above and the dungeon (Wrong/the bound self) below \u2014 the poles between which the impure path oscillates.]",
+      "source_ids": [
+        "piers-plowman"
+      ],
+      "topics": [
+        "fair_field",
+        "impure_tattvas",
+        "human_drama"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "analysis",
+      "subsection": "tower_and_dungeon",
+      "kind": "source",
+      "text": "[The tower ('a toure on a toft, trieliche itaked') and the dungeon ('a deep dale, with derk and dredfulle water') are the pure path (\u015auddhavidy\u0101) and the contracted self (the bound soul in its state of p\u0101\u015ba). The tower holds Truth (Satya/\u015aiva) who is the goal; the dungeon holds Wrong (Adharma/\u0100\u1e47ava mala) who is the bound condition. The dreamer stands between them, in the field of the impure, seeking the way up.]",
+      "source_ids": [
+        "piers-plowman"
+      ],
+      "topics": [
+        "tower",
+        "dungeon",
+        "pure_path",
+        "bound_soul"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "analysis",
+      "subsection": "piers_as_guru",
+      "kind": "source",
+      "text": "[Piers the Plowman is the Vidye\u015bvara \u2014 the Lord of Knowledge, the guru who shows the way. He appears not as a transcendent figure but as a working man, a ploughman, because the Vidye\u015bvara operates within the impure tattvas to guide the soul toward the pure. His half-acre is the field of practice (s\u0101dhana); his ploughing is the cultivation of the tattvas; his palmer's staff is the transmission (\u015aaktip\u0101ta). 'I knowe hym as kyndely as clerk doth his bokes' \u2014 the direct knowledge of the guru.]",
+      "source_ids": [
+        "piers-plowman"
+      ],
+      "topics": [
+        "vidyesvara",
+        "guru",
+        "sadhana",
+        "saktipata"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "analysis",
+      "subsection": "three_upayas",
+      "kind": "source",
+      "text": "[The three Do's \u2014 Do-Well (Dowel), Do-Better (Dobet), Do-Best (Dobest) \u2014 are the three up\u0101yas of Kashmir Shaivism. Do-Well is \u0100\u1e47avop\u0101ya: the path of works, virtues, and individual effort ('to do wel is to worche as God bit' \u2014 to work as God commands). Do-Better is \u015a\u0101ktop\u0101ya: the path of knowledge and contemplation, the life of teaching and grace ('to do bette is to teche and to preche'). Do-Best is \u015a\u0101mbhavop\u0101ya: the path of absolute identity with the divine, the bishop's seat that is beyond all method \u2014 'is to do best, thynken and techen, and so to be a bisshop' \u2014 the office of the realised one.]",
+      "source_ids": [
+        "piers-plowman",
+        "piers-tavuzzi"
+      ],
+      "topics": [
+        "three_upayas",
+        "anavopaya",
+        "saktopaya",
+        "sambhavopaya"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "analysis",
+      "subsection": "tree_of_charity",
+      "kind": "source",
+      "text": "[The Tree of Charity (Passus XVI) is the completed work \u2014 the full unfoldment of the pure path within the soul. Its three props (the three Persons of the Trinity) are the three up\u0101yas that hold it upright. Its leaves are Do-Well, its blossoms Do-Better, its fruit Do-Best. The tree is the soul itself in its fully realised state \u2014 the 36 tattvas brought to perfection, the impure 31 supporting the pure 5. The apple (the fruit of the Fall) is also the fruit of redemption \u2014 the same fruit, transfigured by gnosis.]",
+      "source_ids": [
+        "piers-plowman"
+      ],
+      "topics": [
+        "tree_of_charity",
+        "completed_work",
+        "perfection",
+        "redemption"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_006",
+      "section": "analysis",
+      "subsection": "quest_for_dowel",
+      "kind": "source",
+      "text": "[The entire quest \u2014 Will's search for Do-Well through the confessions of the Seven Deadly Sins, the encounter with the friars, the debates with Reason and Conscience \u2014 is the progressive purification of the impure tattvas. Each episode is a cleaning of a specific tattvic layer: the sins are the ka\u00f1cukas (the covering sheaths), the friars are the malas mistaken for remedies, the debates are the discrimination (viveka) between the impure and the pure. The search ends when Will realises that Piers himself is the way \u2014 the guru is the up\u0101ya.]",
+      "source_ids": [
+        "piers-plowman",
+        "piers-schmidt-intro"
+      ],
+      "topics": [
+        "quest",
+        "purification",
+        "tattvas",
+        "viveka"
+      ],
+      "status": "placeholder"
+    }
+  ],
+  "coverage": {
+    "analysis": {
+      "status": "good",
+      "sources": [
+        "piers-plowman",
+        "piers-schmidt-intro",
+        "piers-tavuzzi"
+      ],
+      "passage_count": 6,
+      "estimated_completeness": 0.8,
+      "gaps": [
+        "Primary passages from the B-Text itself need extraction; comparative readings with the A-Text and C-Text revisions; detailed mapping of each episode to specific tattvas"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "placeholder",
+      "title": "All passages currently reference the analytical framework rather than primary text",
+      "description": "This RO is currently a meta-index of the interpretive framework. Real passages from Piers Plowman need extraction as proper kind:source passages.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial RO created for Piers Plowman as complete tattvic map. Six passages covering fair field, tower/dungeon, Piers as guru, three up\u0101yas, Tree of Charity, and the quest.",
+      "sources_added": [
+        "piers-plowman",
+        "piers-schmidt-intro",
+        "piers-tavuzzi"
+      ],
+      "passage_count": 6,
+      "status": "draft"
+    }
+  ],
+  "appendices": [],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created in draft state with analytical framework for Piers Plowman as tattvic map",
+      "sources_total": 3,
+      "passages_total": 6
+    }
+  ]
+}

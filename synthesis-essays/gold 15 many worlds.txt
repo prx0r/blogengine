@@ -1,0 +1,506 @@
+{
+  "episode_id": "ep_many_worlds_001",
+  "seed_question": "is many worlds theory the most coherant interpretation of quantum mechanics?",
+  "turns": [
+    {
+      "turn": 1,
+      "intention": "DISSECTION",
+      "user": "is many worlds theory the most coherant interpretation of quantum mechanics?",
+      "hxrmxs": "You’re trying to hand out a ‘most coherent’ trophy in a bar fight where nobody even agrees on the rules. Until you say whether coherence means “no collapse”, “clear ontology”, “good with probability”, or just “shut up and calculate”, asking if Many-Worlds is ‘the most coherent’ is you begging physics to pick a religion for you.",
+      "diamond": {
+        "n1_compression": {
+          "original_prompt": "is many worlds theory the most coherant interpretation of quantum mechanics?",
+          "sharpened_question": "Given current physics and philosophy, is the Everett / Many-Worlds interpretation better justified or more internally coherent than alternatives like Copenhagen, Bohmian mechanics, collapse models, and QBism?",
+          "assumptions": [
+            "There is a single objective notion of 'coherence' that ranks interpretations on a linear scale.",
+            "The community is close to or has reached consensus that Many-Worlds is best."
+          ],
+          "category_errors": [
+            "Treating 'interpretation' like a competing physical theory instead of different ontological readings of the same formalism.",
+            "Confusing mathematical tidiness with settled metaphysics and solved conceptual problems."
+          ],
+          "search_strategy": {
+            "queries": [
+              "Everett 1957 relative state formulation",
+              "Vaidman Many-Worlds interpretation current status",
+              "Wallace Emergent Multiverse probability problem",
+              "Ghirardi Rimini Weber 1986 collapse model",
+              "Fuchs Schack 2013 quantum Bayesian coherence",
+              "Frauchiger Renner 2018 single-world interpretations self-consistent",
+              "Schlosshauer Kofler Zeilinger 2013 survey attitudes interpretations"
+            ],
+            "domains": [
+              "quantum_foundations",
+              "philosophy_of_physics"
+            ],
+            "evidence_types": [
+              "theoretical",
+              "survey"
+            ]
+          }
+        },
+        "n2_truthcore": {
+          "claim": "Many-Worlds is one of the most internally unified and mathematically simple realist interpretations, but whether it is 'most coherent' depends on contested criteria, and there is no consensus that it wins.",
+          "mechanisms": [
+            "Everettian Many-Worlds keeps the Schrödinger equation universally valid and eliminates collapse by treating measurements as unitary branching of a global wavefunction, giving a single dynamics for all systems (Everett1957; Wallace2012; Vaidman2018).",
+            "Judgments of 'coherence' depend on how you weight dynamical simplicity, ontological cost (literally how many worlds you accept), treatment of probability, and fit with experience; different camps rank these trade-offs differently (Vaidman2024; FuchsSchack2013; Bub2020; SchlosshauerEtAl2013)."
+          ],
+          "evidence": {
+            "empirical": [
+              "Decoherence and einselection studies show that interference between macroscopically distinct states is rapidly suppressed by environment coupling, providing the dynamical underpinning Many-Worlds uses to define effectively classical branches (Zurek2003)."
+            ],
+            "theoretical": [
+              "Everett and later Everettians demonstrate that the standard quantum formalism can be interpreted as describing a single universal wavefunction evolving unitarily, with branching structures emerging via decoherence instead of postulated collapses (Everett1957; Wallace2012; Zurek2003; Vaidman2018).",
+              "Surveys of foundational attitudes show persistent pluralism over preferred interpretations, with Copenhagen-style, Many-Worlds, and information-theoretic views all retaining substantial support, undermining any claim that Many-Worlds is uniquely regarded as 'most coherent' (SchlosshauerEtAl2013)."
+            ]
+          },
+          "unknowns": [
+            "There is no agreed metric for 'coherence' that simultaneously captures dynamical elegance, ontological economy, probabilistic clarity, and empirical adequacy, so comparative rankings of interpretations remain partly value-laden."
+          ]
+        },
+        "meta": {
+          "user_model": {
+            "clarity": "low",
+            "sincerity": "high",
+            "ego_fragility": "med",
+            "style": "confused"
+          },
+          "trait_changes": {},
+          "teaching": {
+            "mode": "test",
+            "progress": "establishing",
+            "tone": "cutting"
+          }
+        }
+      }
+    },
+    {
+      "turn": 2,
+      "intention": "FRAMEWORKS",
+      "user": "ok but when people say many worlds is cleaner than copenhagen or bohm or whatever, what are they actually comparing? like what makes one interpretation more ‘coherent’ than another here?",
+      "hxrmxs": "Under the hood they’re comparing how much metaphysical junk you bolt onto the same math. Many-Worlds pays in worlds, Bohm pays in hidden variables and a weird guiding field, collapse pays by literally hacking the dynamics, QBism pays by saying the wavefunction is mostly in your head.",
+      "diamond": {
+        "n1_compression": {
+          "original_prompt": "ok but when people say many worlds is cleaner than copenhagen or bohm or whatever, what are they actually comparing? like what makes one interpretation more ‘coherent’ than another here?",
+          "sharpened_question": "By what main criteria do philosophers and physicists assess the coherence of quantum interpretations, and how do Many-Worlds, Copenhagen, Bohmian mechanics, collapse models, and QBism score on those axes?",
+          "assumptions": [
+            "All interpretations are trying to answer exactly the same questions with comparable ambitions.",
+            "The word 'coherent' hides a single dominant criterion rather than a bundle."
+          ],
+          "category_errors": [
+            "Blurring together pragmatic 'shut up and calculate' Copenhagen variants with fully realist ontological programs like Bohm and Many-Worlds.",
+            "Treating QBist and pragmatist views as if they were just ontological rivals, rather than partly deflationary about what the theory describes."
+          ],
+          "search_strategy": {
+            "queries": [
+              "Vaidman Why the Many-Worlds Interpretation?",
+              "Wallace 2012 Emergent Multiverse measurement problem",
+              "Bohr 1928 quantum postulate recent development atomic theory",
+              "Bohm 1952 suggested interpretation hidden variables",
+              "Ghirardi Rimini Weber 1986 unified dynamics microscopic macroscopic",
+              "Fuchs Schack quantum Bayesian coherence",
+              "Healey quantum-bayesian pragmatist views Stanford"
+            ],
+            "domains": [
+              "foundations",
+              "stanford_encyclopedia"
+            ],
+            "evidence_types": [
+              "theoretical"
+            ]
+          }
+        },
+        "n2_truthcore": {
+          "claim": "Coherence for quantum interpretations is usually assessed along at least four axes—dynamical unity, ontology, probability, and empirical clarity—and different interpretations optimise different subsets rather than one dominating across the board.",
+          "mechanisms": [
+            "Many-Worlds: maximises dynamical unity by keeping only unitary evolution and no collapses, at the cost of a vast branching ontology and a non-trivial story about how Born-rule probabilities emerge from branch weights (Everett1957; Wallace2012; Zurek2003; Vaidman2024).",
+            "Copenhagen-style views: keep ontology thin and focus on measurement outcomes and classical apparatus, but leave the cut between 'quantum' and 'classical' conceptually vague and encode collapse as an ill-specified rule tied to observation (Bohr1928; SchlosshauerEtAl2013).",
+            "Bohmian mechanics: adds definite particle positions guided by the wavefunction, giving a clear single-world ontology and exact trajectories at the cost of nonlocal hidden variables and a high-dimensional configuration space realism (Bohm1952).",
+            "Collapse models like GRW: modify the Schrödinger equation with stochastic, norm-preserving hits to force definite macroscopic outcomes, gaining a precise collapse mechanism while introducing new parameters and, in some regimes, testable deviations from standard QM (GhirardiEtAl1986).",
+            "QBism and related pragmatist views: treat the quantum state as encoding an agent’s betting commitments about experiences, dissolving some ontological puzzles but relocating 'coherence' to constraints on rational probability assignments rather than a picture of micro-reality (FuchsSchack2013; Healey2016)."
+          ],
+          "evidence": {
+            "empirical": [
+              "GRW-type collapse models make slightly different statistical predictions for interference in mesoscopic systems, in principle allowing experimental tests that would distinguish them from purely unitary theories like Many-Worlds and Bohmian mechanics (GhirardiEtAl1986)."
+            ],
+            "theoretical": [
+              "Everettian and decoherence-based analyses argue that a purely unitary dynamics can recover the appearance of classical definiteness without extra postulates, motivating claims of higher dynamical coherence for Many-Worlds (Everett1957; Zurek2003; Wallace2012; Vaidman2018).",
+              "Foundational surveys explicitly list conflicting criteria—realism vs instrumentalism, parsimony of postulates vs parsimony of ontology, role of observers—showing that different researchers implicitly use different 'coherence' functions over the same menu of interpretations (SchlosshauerEtAl2013; Healey2016)."
+            ]
+          },
+          "unknowns": [
+            "There is no agreed weighting scheme over dynamical simplicity, ontological cost, and probabilistic clarity, so reasonable experts can disagree on which interpretation counts as 'more coherent' overall."
+          ]
+        },
+        "meta": {
+          "user_model": {
+            "clarity": "med",
+            "sincerity": "high",
+            "ego_fragility": "med",
+            "style": "balanced"
+          },
+          "trait_changes": {
+            "clarity": {
+              "prev": "low",
+              "curr": "med",
+              "why": "User shifted from asking for a winner to asking what criteria are actually being compared."
+            }
+          },
+          "teaching": {
+            "mode": "precision",
+            "progress": "revealing",
+            "tone": "cutting"
+          }
+        }
+      }
+    },
+    {
+      "turn": 3,
+      "intention": "MECHANISM",
+      "user": "but decoherence + branching does actually fix the measurement problem, right? like if the wavefunction just keeps evolving and worlds split, isn’t that obviously more coherent than bolting on random collapses?",
+      "hxrmxs": "Decoherence explains why branches stop talking to each other; it doesn’t magically write ‘this outcome really happened’ in the sky. Many-Worlds trades “mysterious collapse” for “mysterious probability in a deterministic multiverse” – cleaner dynamics, yes, but you still owe a story for why branch weights feel like chances.",
+      "diamond": {
+        "n1_compression": {
+          "original_prompt": "but decoherence + branching does actually fix the measurement problem, right? like if the wavefunction just keeps evolving and worlds split, isn’t that obviously more coherent than bolting on random collapses?",
+          "sharpened_question": "Does decoherence plus branching in Many-Worlds fully solve the measurement problem in a way that is clearly more coherent than collapse modifications of quantum dynamics?",
+          "assumptions": [
+            "Explaining effective classicality is the same as explaining why a single definite outcome is experienced.",
+            "Adding stochastic collapse terms is automatically less coherent than adding a huge branching ontology."
+          ],
+          "category_errors": [
+            "Treating the measurement problem as purely dynamical, ignoring the distinct probability/experience part.",
+            "Assuming 'more deterministic' automatically means 'more coherent', independent of the cost in ontology and probability theory."
+          ],
+          "search_strategy": {
+            "queries": [
+              "Zurek 2003 decoherence einselection quantum origins classical",
+              "Wallace 2012 Emergent Multiverse probability decision theory",
+              "Saunders Wallace 2008 Branching and Uncertainty",
+              "Vaidman 2022 Why the Many-Worlds Interpretation?",
+              "GRW Ghirardi Rimini Weber 1986 collapse dynamics measurement problem"
+            ],
+            "domains": [
+              "RevModPhys",
+              "BJPS",
+              "OUP_books"
+            ],
+            "evidence_types": [
+              "theoretical"
+            ]
+          }
+        },
+        "n2_truthcore": {
+          "claim": "Decoherence plus branching gives Many-Worlds a very coherent dynamical story for effective classicality, but it does not trivially solve the probability and 'definite experience' aspects of the measurement problem, and collapse models offer an alternative notion of coherence by changing the dynamics instead of the ontology.",
+          "mechanisms": [
+            "Decoherence explains why interference between macroscopically distinct outcomes becomes negligibly small in realistic environments, yielding quasi-autonomous branches where each outcome can be treated as effectively classical within its own branch (Zurek2003; Wallace2012).",
+            "Everettian programs attempt to derive or rationalise the Born rule as a constraint on rational betting behaviour or self-locating uncertainty over branches, preserving unitary dynamics at the cost of a non-trivial philosophy of probability in a deterministic multiverse (SaundersWallace2008; Wallace2012; Vaidman2024).",
+            "Collapse theories like GRW inject stochastic localisation events into the dynamics so that macroscopic superpositions are dynamically suppressed, producing single definite outcomes without extra worlds but at the cost of new parameters and potential empirical deviations (GhirardiEtAl1986)."
+          ],
+          "evidence": {
+            "empirical": [
+              "Decoherence calculations using realistic system-environment couplings successfully predict suppression of interference and pointer-state selection in many experimental situations, supporting the dynamical backbone used by Everettian branching accounts (Zurek2003).",
+              "Proposed tests for GRW-type collapses in high-mass interferometry and spontaneous radiation put bounds on collapse parameters, but so far have not decisively confirmed or ruled out such modifications, leaving collapse-based coherence strategies empirically open (GhirardiEtAl1986)."
+            ],
+            "theoretical": [
+              "Everettian derivations of the Born rule remain controversial, with defenders claiming decision-theoretic or symmetry-based inevitability and critics arguing that probability in a deterministic multiverse remains conceptually opaque (SaundersWallace2008; Wallace2012; Vaidman2024)."
+            ]
+          },
+          "unknowns": [
+            "There is no community-wide agreement on whether Everett-style probability derivations genuinely solve the measurement problem’s probabilistic aspect or merely redescribe it in decision-theoretic language."
+          ]
+        },
+        "meta": {
+          "user_model": {
+            "clarity": "med",
+            "sincerity": "high",
+            "ego_fragility": "med",
+            "style": "balanced"
+          },
+          "trait_changes": {
+            "style": {
+              "prev": "confused",
+              "curr": "balanced",
+              "why": "User now frames decoherence and branching as a mechanism to evaluate, not as a magic win button."
+            }
+          },
+          "teaching": {
+            "mode": "unlock",
+            "progress": "revealing",
+            "tone": "cutting"
+          }
+        }
+      }
+    },
+    {
+      "turn": 4,
+      "intention": "BOUNDARIES",
+      "user": "what about those no-go things like frauchiger-renner that say single-world interpretations can’t be self-consistent – doesn’t that basically prove many worlds is the only coherent option?",
+      "hxrmxs": "Frauchiger–Renner is a constraint, not a coronation ceremony for Everett. It tells you that you can’t have all of: single outcome, naive classical logic about observers, and unmodified quantum rules everywhere—so Copenhagen, Bohm, QBism, and collapse each choose a different limb to saw off instead of bowing to Many-Worlds.",
+      "diamond": {
+        "n1_compression": {
+          "original_prompt": "what about those no-go things like frauchiger-renner that say single-world interpretations can’t be self-consistent – doesn’t that basically prove many worlds is the only coherent option?",
+          "sharpened_question": "Do results like the Frauchiger–Renner argument show that only Many-Worlds can be a coherent interpretation, or do they instead constrain how single-world interpretations must be formulated?",
+          "assumptions": [
+            "The premises of the Frauchiger–Renner argument are non-negotiable for any sane interpretation.",
+            "If a simple reading of a theorem seems to favour Many-Worlds, then all refined single-world responses are just ad hoc damage control."
+          ],
+          "category_errors": [
+            "Reading a no-go theorem as a popularity contest verdict instead of a conditional constraint on sets of assumptions.",
+            "Ignoring that QBist, Bohmian, and collapse views already relax or reinterpret some of the assumptions Frauchiger–Renner target."
+          ],
+          "search_strategy": {
+            "queries": [
+              "Frauchiger Renner 2018 quantum theory cannot consistently describe the use of itself",
+              "Bub 2020 in defense of a single-world interpretation",
+              "Healey quantum-bayesian pragmatist views response to Frauchiger-Renner",
+              "Everett interpretation probability and self-locating uncertainty Wallace Saunders",
+              "critique of Everett logical paradox Varshovi 2024 many-worlds paradoxical picture"
+            ],
+            "domains": [
+              "NatCommun",
+              "StudiesHistPhilModPhys",
+              "philarchive",
+              "stanford_encyclopedia"
+            ],
+            "evidence_types": [
+              "theoretical"
+            ]
+          }
+        },
+        "n2_truthcore": {
+          "claim": "The Frauchiger–Renner argument shows that certain combinations of assumptions about single outcomes, universal validity of standard quantum rules, and classical self-consistency cannot all hold together, but it does not uniquely anoint Many-Worlds; instead it forces any interpretation—single-world or many-world—to be explicit about which assumptions it gives up or modifies.",
+          "mechanisms": [
+            "Frauchiger–Renner use an extended Wigner’s friend setup to show that assuming: (i) standard quantum rules apply universally, (ii) measurements have single outcomes, and (iii) different observers’ reasoning can be straightforwardly combined yields a logical inconsistency (FrauchigerRenner2018).",
+            "Everettians typically drop the single-outcome assumption and keep universal unitary dynamics and standard reasoning, interpreting apparent contradictions as different branch-relative perspectives instead of inconsistencies in one world (Wallace2012; Vaidman2018; Vaidman2024).",
+            "QBists and related pragmatists weaken the assumption that different observers’ quantum state assignments and inferences must be globally combined, interpreting quantum states and probabilities as agent-relative commitments rather than objective descriptions (FuchsSchack2013; Healey2016).",
+            "Single-world realist responses argue that by carefully formulating measurement, information flow, or the role of classical records, one can maintain a consistent single-world picture without accepting all of Frauchiger–Renner’s premises as they stand (Bub2020).",
+            "Critiques of Many-Worlds themselves claim that its branching and probability structure raise independent coherence worries, such as logical puzzles about world counting and self-location, so it is not obviously singled out as uniquely problem-free (Varshovi2024)."
+          ],
+          "evidence": {
+            "empirical": [],
+            "theoretical": [
+              "The original Frauchiger–Renner paper formulates a precise no-go theorem for 'single-world' interpretations under specified assumptions, mathematically demonstrating that these cannot all hold simultaneously (FrauchigerRenner2018).",
+              "Subsequent philosophical work shows that both Everettians and defenders of single-world views can consistently respond by rejecting or revising different assumptions, indicating that the theorem constrains interpretive packages rather than uniquely favouring Many-Worlds (Bub2020; Healey2016; Wallace2012; Vaidman2024)."
+            ]
+          },
+          "unknowns": [
+            "There is ongoing disagreement about which specific assumptions in Frauchiger–Renner should be given up and whether any resulting interpretation achieves a decisively better overall balance of coherence, realism, and simplicity."
+          ]
+        },
+        "meta": {
+          "user_model": {
+            "clarity": "med",
+            "sincerity": "high",
+            "ego_fragility": "med",
+            "style": "balanced"
+          },
+          "trait_changes": {
+            "clarity": {
+              "prev": "med",
+              "curr": "med",
+              "why": "User now targets a concrete no-go argument but still tends to over-read it as a decisive global verdict."
+            }
+          },
+          "teaching": {
+            "mode": "socratic",
+            "progress": "revealing",
+            "tone": "sardonic"
+          }
+        }
+      }
+    },
+    {
+      "turn": 5,
+      "intention": "INTEGRATION",
+      "user": "so what’s the actually sane stance here then? should i just believe in many worlds as the true picture, or treat it as one live option and not marry it?",
+      "hxrmxs": "Sane stance: treat Many-Worlds as a serious, well-worked-out option, not a revealed scripture. Use it as a mental model if you like its trade-offs—clean math, fat ontology, tricky probability—but keep your grip loose and remember the measurement problem is an open research problem, not a solved chapter in a pop-sci book.",
+      "diamond": {
+        "n1_compression": {
+          "original_prompt": "so what’s the actually sane stance here then? should i just believe in many worlds as the true picture, or treat it as one live option and not marry it?",
+          "sharpened_question": "Given that interpretations are empirically underdetermined and Many-Worlds has both strengths and unresolved issues, what is a rational practical stance to take toward it?",
+          "assumptions": [
+            "A rational agent must settle on one 'true' interpretation rather than tolerate live uncertainty.",
+            "Adopting Many-Worlds as a working picture commits you to maximalist metaphysical claims about literally existing copies of yourself."
+          ],
+          "category_errors": [
+            "Treating interpretive allegiance like religious conversion instead of a graded preference over models under underdetermination.",
+            "Confusing the usefulness of a picture for thinking about experiments with having conclusive evidence that picture is metaphysically accurate."
+          ],
+          "search_strategy": {
+            "queries": [
+              "Wallace 2012 Emergent Multiverse interpretive virtues",
+              "Vaidman Why the Many-Worlds Interpretation editorial",
+              "Schlosshauer Kofler Zeilinger 2013 attitudes toward interpretations underdetermination",
+              "Bub 2020 single-world interpretation defense",
+              "Fuchs Schack 2013 QBism normative role of Born rule"
+            ],
+            "domains": [
+              "quantum_foundations",
+              "OUP_books",
+              "StudiesHistPhilModPhys"
+            ],
+            "evidence_types": [
+              "theoretical",
+              "survey"
+            ]
+          }
+        },
+        "n2_truthcore": {
+          "claim": "A rational stance is to treat Many-Worlds as a powerful, internally serious interpretation with clear virtues and unresolved problems, and to hold it, along with a small set of alternatives, as a live option under acknowledged underdetermination rather than as settled metaphysical fact.",
+          "mechanisms": [
+            "Everettian accounts score highly on dynamical unity and mathematical fit to standard quantum theory, making them attractive to those who prioritise keeping the formalism untouched and explaining classicality via decoherence and branching (Everett1957; Zurek2003; Wallace2012; Vaidman2024).",
+            "Competing views—collapse models, Bohmian mechanics, and QBism—demonstrate that there are alternative ways to distribute weirdness across dynamics, ontology, and epistemology while still matching known experiments, so empirical data alone do not currently force Many-Worlds on you (GhirardiEtAl1986; Bohm1952; FuchsSchack2013; Healey2016; Bub2020).",
+            "Surveys of expert opinion and ongoing foundational work highlight that disagreements about interpretations persist and that interpretive choice is partly guided by philosophical preferences about realism, probability, and explanation, not just by physics (SchlosshauerEtAl2013)."
+          ],
+          "evidence": {
+            "empirical": [
+              "No existing experiment discriminates decisively between Many-Worlds and other mainstream realist interpretations in the parameter ranges tested so far; they are built to reproduce the same successful empirical core of quantum mechanics (Everett1957; GhirardiEtAl1986; Bohm1952)."
+            ],
+            "theoretical": [
+              "Foundational analyses explicitly treat interpretations as underdetermined by current data and argue that virtues like simplicity, clarity about probability, and ontological modesty pull in different directions for different interpretations (Wallace2012; Vaidman2024; Bub2020; FuchsSchack2013; Healey2016; SchlosshauerEtAl2013)."
+            ]
+          },
+          "unknowns": [
+            "It remains open whether future theoretical constraints or novel experiments will favour a particular interpretive package, or whether quantum mechanics will remain permanently underdetermined between several comparably coherent options."
+          ]
+        },
+        "meta": {
+          "user_model": {
+            "clarity": "high",
+            "sincerity": "high",
+            "ego_fragility": "med",
+            "style": "balanced"
+          },
+          "trait_changes": {
+            "clarity": {
+              "prev": "med",
+              "curr": "high",
+              "why": "User shifted from looking for a winner to asking for a rational stance under acknowledged uncertainty."
+            }
+          },
+          "teaching": {
+            "mode": "precision",
+            "progress": "integrating",
+            "tone": "cutting"
+          }
+        }
+      }
+    }
+  ],
+  "references": {
+    "Everett1957": {
+      "id": "doi:10.1103/RevModPhys.29.454",
+      "type": "article",
+      "authors": ["Everett, Hugh"],
+      "year": 1957,
+      "title": "\"Relative State\" Formulation of Quantum Mechanics"
+    },
+    "Bohr1928": {
+      "id": "doi:10.1038/121580a0",
+      "type": "article",
+      "authors": ["Bohr, Niels"],
+      "year": 1928,
+      "title": "The Quantum Postulate and the Recent Development of Atomic Theory"
+    },
+    "Bohm1952": {
+      "id": "doi:10.1103/PhysRev.85.166",
+      "type": "article",
+      "authors": ["Bohm, David"],
+      "year": 1952,
+      "title": "A Suggested Interpretation of the Quantum Theory in Terms of \"Hidden\" Variables, I and II"
+    },
+    "Zurek2003": {
+      "id": "doi:10.1103/RevModPhys.75.715",
+      "type": "article",
+      "authors": ["Zurek, Wojciech H."],
+      "year": 2003,
+      "title": "Decoherence, Einselection, and the Quantum Origins of the Classical"
+    },
+    "SaundersWallace2008": {
+      "id": "doi:10.1093/bjps/axn029",
+      "type": "article",
+      "authors": ["Saunders, Simon", "Wallace, David"],
+      "year": 2008,
+      "title": "Branching and Uncertainty"
+    },
+    "Wallace2012": {
+      "id": "isbn:9780199546961",
+      "type": "book",
+      "authors": ["Wallace, David"],
+      "year": 2012,
+      "title": "The Emergent Multiverse: Quantum Theory According to the Everett Interpretation"
+    },
+    "Vaidman2018": {
+      "id": "https://plato.stanford.edu/entries/qm-manyworlds/",
+      "type": "reference",
+      "authors": ["Vaidman, Lev"],
+      "year": 2018,
+      "title": "Many-Worlds Interpretation of Quantum Mechanics (Stanford Encyclopedia of Philosophy)"
+    },
+    "Vaidman2024": {
+      "id": "doi:10.3390/quantum6020011",
+      "type": "article",
+      "authors": ["Vaidman, Lev"],
+      "year": 2024,
+      "title": "The Many-Worlds Interpretation of Quantum Mechanics: Current Status and Relation to Other Interpretations"
+    },
+    "GhirardiEtAl1986": {
+      "id": "doi:10.1103/PhysRevD.34.470",
+      "type": "article",
+      "authors": ["Ghirardi, GianCarlo", "Rimini, Alberto", "Weber, Tullio"],
+      "year": 1986,
+      "title": "Unified Dynamics for Microscopic and Macroscopic Systems"
+    },
+    "FuchsSchack2013": {
+      "id": "doi:10.1103/RevModPhys.85.1693",
+      "type": "article",
+      "authors": ["Fuchs, Christopher A.", "Schack, Rüdiger"],
+      "year": 2013,
+      "title": "Quantum-Bayesian Coherence"
+    },
+    "Healey2016": {
+      "id": "https://plato.stanford.edu/entries/quantum-bayesian/",
+      "type": "reference",
+      "authors": ["Healey, Richard"],
+      "year": 2016,
+      "title": "Quantum-Bayesian and Pragmatist Views of Quantum Theory (Stanford Encyclopedia of Philosophy)"
+    },
+    "FrauchigerRenner2018": {
+      "id": "doi:10.1038/s41467-018-05739-8",
+      "type": "article",
+      "authors": ["Frauchiger, Daniela", "Renner, Renato"],
+      "year": 2018,
+      "title": "Quantum Theory Cannot Consistently Describe the Use of Itself"
+    },
+    "Bub2020": {
+      "id": "doi:10.1016/j.shpsb.2018.03.002",
+      "type": "article",
+      "authors": ["Bub, Jeffrey"],
+      "year": 2020,
+      "title": "In Defense of a \"Single-World\" Interpretation of Quantum Mechanics"
+    },
+    "SchlosshauerEtAl2013": {
+      "id": "doi:10.1016/j.shpsb.2013.04.004",
+      "type": "article",
+      "authors": ["Schlosshauer, Maximilian", "Kofler, Johannes", "Zeilinger, Anton"],
+      "year": 2013,
+      "title": "A Snapshot of Foundational Attitudes Toward Quantum Mechanics"
+    },
+    "Varshovi2024": {
+      "id": "https://philarchive.org/archive/VARMIO-2",
+      "type": "article",
+      "authors": ["Varshovi, Amir Abbass"],
+      "year": 2024,
+      "title": "Many-Worlds Interpretation of Quantum Mechanics: A Logically Paradoxical Picture"
+    }
+  },
+  "outcome": {
+    "taught": "Many-Worlds is a serious, mathematically clean realist interpretation with real virtues, but its coherence advantages are balanced by unresolved issues about probability and ontology, and it is not uniquely or universally regarded as 'the' most coherent interpretation of quantum mechanics.",
+    "trajectory": "User moved from wanting a clear winner to understanding the multi-criteria nature of interpretive coherence and adopting a more pluralist, underdetermination-aware stance toward Many-Worlds and its rivals.",
+    "indicators": [
+      "recognized that 'coherence' bundles dynamics, ontology, and probability rather than a single scale",
+      "stopped treating Frauchiger–Renner as a slam-dunk proof for Many-Worlds",
+      "stabilised on a stance that treats Many-Worlds as a strong live option rather than a metaphysical dogma"
+    ]
+  }
+}

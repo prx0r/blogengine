@@ -1,0 +1,420 @@
+{
+  "episode_id": "ep_mind_moments_gamma_001",
+  "seed_question": "The ancient Abhidharma texts deconstruct consciousness into discrete \"mind moments\" or cittas that flicker at high speeds. Does the neuroscientific discovery of ~40 Hz gamma oscillations, which bind sensory data into cohesive frames, provide the physical clock-speed for these moments, suggesting our smooth experience of reality is actually a rapid cinematic frame-rate?",
+  "topic": "abhidharma_mind_moments_gamma",
+  "user_behavior_pattern": "smart_confused",
+  "target_turn_count": 5,
+
+  "turns": [
+
+    {
+      "turn": 1,
+      "intention": "DISSECTION",
+      "user": "So Abhidharma says consciousness is actually a stream of super-fast ‘mind moments’, and modern neuroscience talks about 40 Hz gamma binding stuff into frames. Did the monks basically guess the brain’s frame-rate, and our continuous experience is just a flickering slideshow?",
+      "hxrmxs": "You’re trying to turn a monastic phenomenology manual into an EEG readout. Abhidharma mind-moments are inferred, ethical-phenomenological units, not milliseconds on a lab timer. Gamma is one band in a messy zoo of brain rhythms, not an engraved ‘40 Hz = enlightenment’ plate. Before we marry them, we need to separate phenomenology, metaphysics, and circuit dynamics.",
+      "diamond": {
+        "n1_compression": {
+          "original_prompt": "The ancient Abhidharma texts deconstruct consciousness into discrete \"mind moments\" or cittas that flicker at high speeds. Does the neuroscientific discovery of ~40 Hz gamma oscillations, which bind sensory data into cohesive frames, provide the physical clock-speed for these moments, suggesting our smooth experience of reality is actually a rapid cinematic frame-rate?",
+          "sharpened_question": "Do Abhidharma mind-moments correspond to discrete neural epochs organized by gamma-band oscillations that underlie the apparent continuity of experience?",
+          "assumptions": [
+            "Abhidharma mind-moments refer to temporally discrete units with a stable duration.",
+            "Gamma oscillations provide a single global clock for conscious frames."
+          ],
+          "category_errors": [
+            "Equating conceptual-phenomenological units with specific frequency bands.",
+            "Treating one oscillatory band as a universal clock for all consciousness."
+          ],
+          "search_strategy": {
+            "queries": [
+              "Abhidharma citta momentariness temporal theory",
+              "gamma oscillations 40 Hz binding consciousness",
+              "discrete perception theories perceptual frames",
+              "neural oscillations multi-scale integration consciousness"
+            ],
+            "domains": ["buddhist_philosophy","cognitive_neuroscience","neurophysiology","philosophy_of_mind"],
+            "evidence_types": ["historical_textual","theoretical_framework","formal_theory"]
+          }
+        },
+        "n2_truthcore": {
+          "claim": "The question conflates Abhidharmic momentariness with a specific neural frequency as if they were the same construct.",
+          "mechanisms": [],
+          "correspondences": [],
+          "evidence": { "empirical": [], "theoretical": [], "formal": [] },
+          "category_distinctions": [],
+          "unknowns": []
+        },
+        "n3_meta": {
+          "phase": "DISSECTION",
+          "progress": 0.15,
+          "done": false,
+          "stance": "iron_wall",
+          "reason": "User is jumping from doctrinal phenomenology to a single neural band as if they were directly measured equivalents.",
+          "boss_move_completed": false
+        }
+      }
+    },
+
+    {
+      "turn": 2,
+      "intention": "FRAMEWORKS",
+      "user": "Alright, slice it. What are the actual options here? Is it ‘yes, gamma = citta’, ‘no, that’s cute but wrong’, or ‘they’re talking about different layers of the stack entirely?’",
+      "hxrmxs": "Three main stances. Classical Abhidharma: mind-moments are ultra-fast arising-and-passing events defined by mental factors and causality, not stopwatch values. Neural oscillation theory: gamma, theta, alpha, etc. coordinate cell assemblies and information integration at multiple time-scales. Philosophers of mind: some argue perception comes in frames, others in overlapping processes. You only get ‘gamma = citta’ if you bulldoze all the distinctions.",
+      "diamond": {
+        "n1_compression": {},
+        "n2_truthcore": {
+          "claim": "Abhidharma momentariness, neural oscillations, and discrete-perception theories form overlapping but distinct frameworks for temporal structure in experience.",
+          "mechanisms": [
+            {
+              "id": "mech_abhidharma_mind_moment_001",
+              "domain": "buddhist_philosophy",
+              "concept": "abhidharma_mind_moment",
+              "definition": "Cittas are brief, causally conditioned events comprising specific mental factors, arising and ceasing rapidly in streams.",
+              "function": "Explains change, karma, and non-substantiality of the self.",
+              "level": "philosophical",
+              "properties": ["momentary","causal","ethical"],
+              "source": {
+                "citation": "Abhidharma1993",
+                "summary": "Classical exposition of momentary mind events and factors."
+              }
+            },
+            {
+              "id": "mech_gamma_oscillation_binding_001",
+              "domain": "cognitive_neuroscience",
+              "concept": "gamma_oscillation_binding",
+              "definition": "30–80 Hz oscillatory activity coordinating distributed neural populations, often associated with feature binding and attention.",
+              "function": "Provides temporal windows for synchronizing neural assemblies.",
+              "level": "neurophysiological",
+              "properties": ["fast","local_to_mesoscale"],
+              "source": {
+                "citation": "Singer1999",
+                "summary": "Proposes gamma synchrony as a mechanism for feature binding."
+              }
+            },
+            {
+              "id": "mech_discrete_perception_theory_001",
+              "domain": "philosophy_of_mind",
+              "concept": "discrete_perception_theory",
+              "definition": "The view that conscious perception occurs in discrete, quasi-periodic episodes rather than continuous flow.",
+              "function": "Interprets temporal illusions and neural rhythms as evidence for perceptual frames.",
+              "level": "theoretical",
+              "properties": ["controversial","model_dependent"],
+              "source": {
+                "citation": "VanRullen2003",
+                "summary": "Argues for discrete perceptual cycles aligned with brain rhythms."
+              }
+            }
+          ],
+          "correspondences": [
+            {
+              "type": "structural_analogy",
+              "mechanism_ids": ["mech_abhidharma_mind_moment_001","mech_discrete_perception_theory_001"],
+              "description": "Both posit temporally segmented units in the stream of experience, though defined in different vocabularies.",
+              "strength": "moderate",
+              "caveats": ["Abhidharma units are ethical-causal constructs, not empirically timed frames."]
+            }
+          ],
+          "evidence": {
+            "empirical": [],
+            "theoretical": [
+              {
+                "claim": "Abhidharma sources describe momentary events but do not specify a physical frequency.",
+                "source": "Abhidharma1993",
+                "evidence_type": "historical_textual"
+              }
+            ],
+            "formal": []
+          },
+          "category_distinctions": [
+            {
+              "what": "Mind-moment",
+              "is": "a conceptual-phenomenological unit",
+              "is_not": "a directly measured 25 ms neural epoch",
+              "why": "Prevents forced one-to-one mapping without shared operational definition."
+            }
+          ],
+          "unknowns": []
+        },
+        "n3_meta": {
+          "phase": "FRAMEWORKS",
+          "progress": 0.4,
+          "done": false,
+          "stance": "direct",
+          "reason": "User needs clearly separated frameworks before any mapping.",
+          "boss_move_completed": false
+        }
+      }
+    },
+
+    {
+      "turn": 3,
+      "intention": "MECHANISM",
+      "user": "Mechanistically then, what does gamma actually do, and could it plausibly be the brain’s ‘frame clock’ even if the monks didn’t know the numbers? I’m okay with poetic resonance, I just don’t want to lie to myself about physics.",
+      "hxrmxs": "Mechanistically, gamma is one of several bands coordinating who talks to whom and when in the brain. It gates spikes, synchronizes assemblies, and rides on slower rhythms like a drum pattern over a tempo. Some theories say these cycles carve perception into chunks, but they don’t agree on one magic 40 Hz, and not every conscious episode rides gamma. The clean move: gamma helps shape temporal windows; calling it ‘the mind-moment’ is metaphor, not measurement.",
+      "diamond": {
+        "n1_compression": {},
+        "n2_truthcore": {
+          "claim": "Gamma oscillations provide one layer of temporal coordination that could contribute to perceptual chunking but do not uniquely define a universal conscious frame-rate.",
+          "mechanisms": [
+            {
+              "id": "mech_gamma_local_global_coordination_001",
+              "domain": "cognitive_neuroscience",
+              "concept": "gamma_local_global_coordination",
+              "definition": "Fast oscillations synchronize local neural ensembles and can couple to slower rhythms to coordinate larger-scale networks.",
+              "function": "Imposes temporal windows for effective communication between neurons and regions.",
+              "level": "neurophysiological",
+              "properties": ["coordinating","context_dependent"],
+              "source": {
+                "citation": "Fries2015",
+                "summary": "Describes communication-through-coherence framework for oscillations."
+              }
+            },
+            {
+              "id": "mech_cross_frequency_coupling_001",
+              "domain": "cognitive_neuroscience",
+              "concept": "cross_frequency_coupling",
+              "definition": "Nested organization where faster rhythms (gamma) are modulated by the phase of slower ones (theta/alpha).",
+              "function": "Creates multi-scale temporal structure for processing and integration.",
+              "level": "neurophysiological",
+              "properties": ["hierarchical","multi_scale"],
+              "source": {
+                "citation": "Fries2015",
+                "summary": "Reviews oscillatory hierarchy and cross-frequency coupling."
+              }
+            },
+            {
+              "id": "mech_perceptual_cycle_model_001",
+              "domain": "philosophy_of_mind",
+              "concept": "perceptual_cycle_model",
+              "definition": "Models in which perception updates in quasi-periodic cycles that may align with particular oscillatory frequencies.",
+              "function": "Explains temporal sampling of sensory input and attentional blink phenomena.",
+              "level": "theoretical",
+              "properties": ["model_based","non_universal"],
+              "source": {
+                "citation": "VanRullen2003",
+                "summary": "Links perceptual cycles to oscillatory activity."
+              }
+            }
+          ],
+          "correspondences": [
+            {
+              "type": "phenomenological_alignment",
+              "mechanism_ids": ["mech_abhidharma_mind_moment_001","mech_perceptual_cycle_model_001"],
+              "description": "Both suggest rapid, quasi-discrete updates in experience, but only the neuroscientific model ties this to specific frequencies.",
+              "strength": "weak",
+              "caveats": ["Alignment is coarse; details diverge and empirical support is mixed."]
+            }
+          ],
+          "evidence": {
+            "empirical": [],
+            "theoretical": [
+              {
+                "claim": "Gamma and other oscillations are implicated in feature binding and attention but not established as a single universal consciousness clock.",
+                "source": "Fries2015",
+                "evidence_type": "theoretical_framework"
+              }
+            ],
+            "formal": [
+              {
+                "claim": "Oscillatory models formalize communication-through-coherence without requiring a single fixed frame-rate.",
+                "source": "Fries2015",
+                "evidence_type": "formal_theory"
+              }
+            ]
+          },
+          "category_distinctions": [
+            {
+              "what": "Temporal coordination",
+              "is": "one function of oscillations",
+              "is_not": "proof of discrete consciousness frames at one fixed frequency",
+              "why": "Prevents overinterpreting a useful mechanism as a total theory of experience."
+            }
+          ],
+          "unknowns": []
+        },
+        "n3_meta": {
+          "phase": "MECHANISM",
+          "progress": 0.6,
+          "done": false,
+          "stance": "direct",
+          "reason": "User wants gears without self-flattering mystification.",
+          "boss_move_completed": false
+        }
+      }
+    },
+
+    {
+      "turn": 4,
+      "intention": "BOUNDARIES",
+      "user": "So where does this story actually break? If I say ‘mind-moments are just 25 ms gamma frames’, exactly how wrong am I, and on what levels?",
+      "hxrmxs": "Wrong in three directions. Historically: Abhidharma argues for momentariness from analysis of experience and doctrine, not from counting cycles; different schools even disagree about the details. Neuroscientifically: conscious processes ride multiple frequencies and time-scales; gamma is not a single metronome. Conceptually: a mind-moment is defined by factors and functions, not raw duration. So you can use the analogy as a teaching story, not as a literal equation.",
+      "diamond": {
+        "n1_compression": {},
+        "n2_truthcore": {
+          "claim": "Equating mind-moments with fixed gamma frames fails historically, empirically, and conceptually.",
+          "mechanisms": [
+            {
+              "id": "mech_momentariness_doctrinal_basis_001",
+              "domain": "buddhist_philosophy",
+              "concept": "momentariness_doctrinal_basis",
+              "definition": "The doctrine arises from arguments about impermanence and causality, not from temporal measurements.",
+              "function": "Supports non-substantiality and rapid change of phenomena.",
+              "level": "philosophical",
+              "properties": ["argumentative","non_empirical"],
+              "source": {
+                "citation": "Ronkin2005",
+                "summary": "Analyzes Abhidharma momentariness as a metaphysical thesis."
+              }
+            }
+          ],
+          "correspondences": [
+            {
+              "type": "logical_exclusion",
+              "mechanism_ids": ["mech_gamma_oscillation_binding_001","mech_abhidharma_mind_moment_001"],
+              "description": "A neural frequency cannot, by itself, instantiate ethical-causal structures described in Abhidharma.",
+              "strength": "strong",
+              "caveats": ["Neural dynamics might underlie some temporal aspects without exhausting the concept."]
+            }
+          ],
+          "evidence": {
+            "empirical": [],
+            "theoretical": [
+              {
+                "claim": "Abhidharma analyses focus on factors and functions of cittas, not on their physical implementation.",
+                "source": "Ronkin2005",
+                "evidence_type": "historical_textual"
+              }
+            ],
+            "formal": []
+          },
+          "category_distinctions": [
+            {
+              "what": "Metaphysical moment",
+              "is": "a unit in a theory of phenomena and causality",
+              "is_not": "identical to a neural oscillation cycle",
+              "why": "Different levels of description with different explanatory roles."
+            }
+          ],
+          "unknowns": [
+            {
+              "question": "Whether there is a characteristic temporal grain of conscious access that aligns with particular oscillatory regimes.",
+              "status": "active_research",
+              "why_unknown": "Mixed findings on discrete vs continuous perception and varying time-scales across tasks.",
+              "what_would_resolve": "Convergent evidence from psychophysics, neurophysiology, and modeling showing robust, task-general temporal quanta.",
+              "linked_mechanisms": ["mech_discrete_perception_theory_001","mech_gamma_local_global_coordination_001"]
+            }
+          ]
+        },
+        "n3_meta": {
+          "phase": "BOUNDARIES",
+          "progress": 0.8,
+          "done": false,
+          "stance": "direct",
+          "reason": "User is explicitly asking how far they can push the mapping; boundaries must be explicit.",
+          "boss_move_completed": false
+        }
+      }
+    },
+
+    {
+      "turn": 5,
+      "intention": "INTEGRATION",
+      "user": "So the adult take is: Abhidharma got that experience is granular and fast-changing, but it’s a phenomenological-metaphysical claim, not a measured frequency. Gamma and other rhythms give the brain temporal windows that could help implement that grain, but there’s no clean ‘40 Hz = citta’ identity—just a suggestive rhyme between Buddhist momentariness and oscillatory chunking.",
+      "hxrmxs": "Exactly. You can let the monk and the neuroscientist nod across the room without forcing them into the same lab coat. Mind-moments: a way to talk about how experience and causality come in pulses. Gamma: one piece of the timing machinery that might help build those pulses. Use the analogy to think better, not to pretend the Abhidharma secretly published an EEG paper.",
+      "diamond": {
+        "n1_compression": {},
+        "n2_truthcore": {
+          "claim": "Abhidharma momentariness and neural oscillations can be read as partially resonant accounts of temporal structuring without being literally identical.",
+          "mechanisms": [
+            {
+              "id": "mech_mind_moment_gamma_integration_001",
+              "domain": "meta_theory",
+              "concept": "mind_moment_gamma_multi_register_integration",
+              "definition": "A synthesis that treats mind-moments as phenomenological-metaphysical units and gamma rhythms as one possible neural substrate for temporal segmentation, without claiming one-to-one identity.",
+              "function": "Preserves cross-talk between traditions while avoiding category mistakes.",
+              "level": "philosophical",
+              "properties": ["integrative","boundary_respecting"],
+              "source": {
+                "citation": "Fries2015",
+                "summary": "Provides a model of temporal coordination consistent with, but not uniquely tied to, discrete-perception views."
+              }
+            }
+          ],
+          "correspondences": [],
+          "evidence": { "empirical": [], "theoretical": [], "formal": [] },
+          "category_distinctions": [
+            {
+              "what": "Resonance",
+              "is": "similar shapes in different languages",
+              "is_not": "secret identity across unrelated theories",
+              "why": "Keeps interdisciplinary synthesis honest instead of mystical."
+            }
+          ],
+          "unknowns": []
+        },
+        "n3_meta": {
+          "phase": "INTEGRATION",
+          "progress": 1.0,
+          "done": true,
+          "stance": "peer",
+          "reason": "User articulated a nuanced, multi-register synthesis without overclaiming.",
+          "boss_move_completed": true
+        }
+      }
+    }
+  ],
+
+  "references": {
+    "Abhidharma1993": {
+      "id": "isbn:9780791413628",
+      "type": "book",
+      "authors": ["Karunadasa, Y."],
+      "year": 1993,
+      "title": "The Buddhist Analysis of Matter"
+    },
+    "Ronkin2005": {
+      "id": "isbn:9780415331982",
+      "type": "book",
+      "authors": ["Ronkin, Noa"],
+      "year": 2005,
+      "title": "Early Buddhist Metaphysics: The Making of a Philosophical Tradition"
+    },
+    "Singer1999": {
+      "id": "doi:10.1016/S0896-6273(00)80832-5",
+      "type": "article",
+      "authors": ["Singer, Wolf"],
+      "year": 1999,
+      "title": "Neuronal Synchrony: A Versatile Code for the Definition of Relations?"
+    },
+    "VanRullen2003": {
+      "id": "doi:10.1016/S1364-6613(03)00120-6",
+      "type": "article",
+      "authors": ["VanRullen, Rufin", "Koch, Christof"],
+      "year": 2003,
+      "title": "Is perception discrete or continuous?"
+    },
+    "Fries2015": {
+      "id": "doi:10.1146/annurev-neuro-071013-014119",
+      "type": "article",
+      "authors": ["Fries, Pascal"],
+      "year": 2015,
+      "title": "Rhythms for Cognition: Communication through Coherence"
+    }
+  },
+
+  "outcome": {
+    "taught": "Abhidharma mind-moments and neural gamma oscillations can be seen as loosely resonant accounts of temporal structuring in experience, but they are not literally the same construct or clock-speed.",
+    "trajectory": "User moved from suspecting a direct ‘40 Hz = citta’ identity to a multi-register view where phenomenological, doctrinal, and neural models are related but non-identical.",
+    "indicators": [
+      "grasped_mech_abhidharma_mind_moment_001",
+      "grasped_mech_gamma_oscillation_binding_001",
+      "separated_phenomenology_from_neural_frequency",
+      "answered_original_question_correctly"
+    ],
+    "feedback_pedagogy": {
+      "user_reported_click_turn": null,
+      "user_reported_click_cause": null,
+      "clarity_delta": { "before": null, "after": null },
+      "subjective_note": null
+    }
+  }
+}

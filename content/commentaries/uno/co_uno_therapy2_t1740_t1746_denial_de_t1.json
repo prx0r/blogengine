@@ -1,0 +1,56 @@
+{
+  "co_id": "co:uno_therapy2_t1740_t1746_denial_de_t1",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy2_t1740_t1746_denial_deed_jennifer",
+  "turn_index": 1,
+  "lineage": "Therapeutic",
+  "student_state": "stubborn_hope",
+  "behavior_tags": [
+    "magical_thinking"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_02",
+    "function_name": "UM_02",
+    "mechanism_shape": "COMPARISON_CONTRAST",
+    "teaching_actions": [
+      "identifies_impulse",
+      "highlights_conflict"
+    ],
+    "traps_avoided": [
+      "false_paradox"
+    ],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.15,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_01",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "no_clear_effect",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "Turn 2: 'But how are we going to work this out?'. Student now in stubborn_hope. Continuing with comparison_contrast approach. Building on previous turn's foundation.",
+  "accumulated_insight": "T2: Student: 'But how are we going to work this out?'. Shift from indignant_confusion to stubborn_hope. Teacher applies comparison_contrast mechanism with identifies impulse, highlights conflict. Mid-episode progression in UNMAKING phase.",
+  "abstract_pattern": "",
+  "visible_response": "I want to work things out with a woman who doesn’t want to work things out with me.",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

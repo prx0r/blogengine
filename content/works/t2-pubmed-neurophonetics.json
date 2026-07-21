@@ -1,0 +1,50 @@
+{
+  "work_id": "work:t2-pubmed-neurophonetics",
+  "schema_version": 2,
+  "title": "Neurophonetics.",
+  "authors": [
+    {
+      "name": "Hertrich I"
+    },
+    {
+      "name": "Ackermann H"
+    }
+  ],
+  "publication": {
+    "year": 2013,
+    "type": "article",
+    "source": "PubMed/MEDLINE",
+    "language": "en",
+    "journal": "Wiley Interdiscip Rev Cogn Sci"
+  },
+  "identifiers": {
+    "pmid": "26304195",
+    "doi": "10.1002/wcs.1211"
+  },
+  "topics": [
+    "phase-3-neurophonetics",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "tradition": [
+    "contemporary_science"
+  ],
+  "tier": 2,
+  "assets": {
+    "pdf_path": null,
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/26304195/",
+    "abstract": "Neurophonetics aims at the elucidation of the brain mechanisms underlying speech communication in our species. Clinical observations in patients with speech impairments following cerebral disorders provided the initial vantage point of this research area and indicated distinct functional-neuroanatomic systems to support human speaking and listening. Subsequent approaches-considering speech production a motor skill-investigated vocal tract movements associated with spoken language by means of kin"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "unknown",
+    "source": "pubmed_t2_search",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 3,
+    "phase_name": "Mind as Computer Critique",
+    "bridge_rationale": "4E cognition — embodied, embedded, enactive, extended mind; critique of computationalism."
+  },
+  "evaluation": "Good (score=2.4)"
+}

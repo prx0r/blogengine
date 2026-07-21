@@ -1,0 +1,145 @@
+{
+  "ro_id": "ro:daimon-perfect-nature",
+  "schema_version": 1,
+  "title": "Perfect Nature and the Guide of Light",
+  "subtitle": "The daimon in Iranian Sufism and Illuminationist philosophy",
+  "family": "tradition",
+  "status": "draft",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "From Suhrawardi's Ishraq to Corbin's Man of Light: the daimon as Perfect Nature (Tabiat-e Tammah), the celestial Witness (shahid), the unus-ambo relationship of 1x1. The Guide appears as a person o...",
+    "scope": "",
+    "traditions": [
+      "general"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "corbin-man-of-light",
+      "tier": 1,
+      "label": "corbin-man-of-light",
+      "status": "active"
+    },
+    {
+      "source_id": "suhrawardi-philosophy-illumination",
+      "tier": 1,
+      "label": "suhrawardi-philosophy-illumination",
+      "status": "active"
+    },
+    {
+      "source_id": "suhrawardi-book-radiance",
+      "tier": 1,
+      "label": "suhrawardi-book-radiance",
+      "status": "active"
+    },
+    {
+      "source_id": "avicenna-visionary-recital",
+      "tier": 1,
+      "label": "avicenna-visionary-recital",
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "perfect_nature_doctrine",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [],
+      "topics": [],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "the_1x1_formula",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [],
+      "topics": [],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "shakhs_nurani",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [],
+      "topics": [],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "cosmic_north",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [],
+      "topics": [],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "na_koja_abad",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [],
+      "topics": [],
+      "status": "placeholder"
+    }
+  ],
+  "coverage": {
+    "na_koja_abad": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    },
+    "cosmic_north": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    },
+    "shakhs_nurani": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    },
+    "the_1x1_formula": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    },
+    "perfect_nature_doctrine": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    }
+  },
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-13",
+      "type": "initial",
+      "summary": "Initial draft. 5 sections outlined.",
+      "sources_added": [
+        "corbin-man-of-light",
+        "suhrawardi-philosophy-illumination",
+        "suhrawardi-book-radiance",
+        "avicenna-visionary-recital"
+      ],
+      "passage_count": 5,
+      "status": "draft"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-07-13",
+      "event": "RO created",
+      "sources_total": 4,
+      "passages_total": 5
+    }
+  ]
+}

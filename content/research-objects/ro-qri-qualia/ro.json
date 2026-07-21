@@ -1,0 +1,155 @@
+{
+  "ro_id": "ro:qri-qualia",
+  "schema_version": 1,
+  "title": "Qualia Research Institute \u2014 Collected Papers on Consciousness and Information",
+  "subtitle": "9 papers on integrated information, combinatorial state spaces, qualia computing, double-aspect theory, and the mathematical structure of conscious experience",
+  "family": "thinker-topic",
+  "status": "stub",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "QRI's framework treats consciousness as a combinatorial state space whose geometry determines the quality of experience (valence, qualia) \u2014 structurally identical to the Tantraloka's M\u0101t\u1e5bk\u0101-cakra t...",
+    "scope": "Covers 9 papers (2004-2025): integrated information theory (IIT), the double aspect of information, combinatorial state spaces for qualia, reflexive integrated information units, AI consciousness, and the mathematical formalization of conscious experience.",
+    "traditions": [
+      "consciousness-studies",
+      "integrated-information",
+      "qualia-computing",
+      "qri"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "qri-collected",
+      "tier": 1,
+      "label": "Qualia Research Institute \u2014 Collected Papers (2004-2025). 9 PDFs in /root/projects/blog/library/science/authors/qri/. Including: Is Consciousness Computable? (1405.0126), Double Aspect of Information (1807.02103), Reflexive IIT Unit (2506.13825), AI Consciousness (2410.11407).",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "integrated_information",
+        "qualia_combinatorial",
+        "double_aspect",
+        "valence_coding",
+        "phi_measure"
+      ],
+      "sections_affected": [
+        "theory"
+      ],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "theory",
+      "subsection": "combinatorial_state_space_as_matrika",
+      "kind": "synthesis",
+      "text": "QRI's core claim: qualia (the qualities of conscious experience) can be formalized as points in a combinatorial state space. The geometry of this space determines the nature of the experience \u2014 the 'shape' of the quale IS what it feels like. This IS the M\u0101t\u1e5bk\u0101-cakra: the 50 phonemes are the basis of the combinatorial state space of consciousness. Each phoneme is a dimension. The arrangement of these dimensions (the 'wheel' of the M\u0101t\u1e5bk\u0101) IS the geometry of the qualia space. Positive valence = positive curvature in this space. Negative valence = negative curvature.",
+      "source_ids": [
+        "qri-collected"
+      ],
+      "topics": [
+        "combinatorial_space",
+        "matrika",
+        "qualia",
+        "geometry"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "theory",
+      "subsection": "double_aspect_as_kashmir_shaivism",
+      "kind": "synthesis",
+      "text": "The Double Aspect of Information theory holds that consciousness and information are two aspects of the same underlying reality \u2014 not separate substances but the same thing viewed from inside (consciousness) and outside (information). This IS the Tantraloka's prak\u0101\u015ba-vimar\u015ba: the light of consciousness (prak\u0101\u015ba = information) and the self-awareness of consciousness (vimar\u015ba = experience) are not two things but one self-referential process. QRI has formalized what the Tantraloka described experientially.",
+      "source_ids": [
+        "qri-collected"
+      ],
+      "topics": [
+        "double_aspect",
+        "prakasa",
+        "vimarsa",
+        "information"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "theory",
+      "subsection": "phi_as_saktipata_measure",
+      "kind": "synthesis",
+      "text": "Integrated information (\u03a6 or phi) is a measure of the irreducibility of a system \u2014 how much the whole is more than the sum of its parts. High \u03a6 means high consciousness. The Reflexive IIT Unit paper (2506.13825) proposes a new foundational measure. This IS the degree of \u015baktip\u0101ta (grace). The five degrees of grace (t\u012bvrat\u012bvra \u2192 manda) correspond to five levels of integrated information. The non-computable aspect of consciousness (Penrose) IS the non-algorithmic nature of \u03a6.",
+      "source_ids": [
+        "qri-collected"
+      ],
+      "topics": [
+        "phi",
+        "saktipata",
+        "integrated_information",
+        "grace"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "theory",
+      "subsection": "valence_as_geometry",
+      "kind": "synthesis",
+      "text": "QRI identifies valence (pleasure/pain) with the geometric structure of the qualia state space. Positive experiences correspond to 'harmonious' or 'symphonic' patterns of information integration; negative experiences correspond to 'dissonant' or 'chaotic' patterns. This IS the Tantraloka's rasa theory: the 36 tattvas are degrees of wonder (camatk\u0101ra). Positive valence IS the experience of the amplituhedron's positivity \u2014 the geometry IS coherent. Negative valence IS the experience of violated positivity \u2014 the geometry IS incoherent.",
+      "source_ids": [
+        "qri-collected"
+      ],
+      "topics": [
+        "valence",
+        "rasa",
+        "camatkara",
+        "positivity"
+      ],
+      "status": "active"
+    }
+  ],
+  "coverage": {
+    "theory": {
+      "status": "minimal",
+      "sources": [
+        "qri-collected"
+      ],
+      "passage_count": 4,
+      "estimated_completeness": 0.3,
+      "gaps": [
+        "Full extraction of all 9 papers needed; the combinatorial state space papers are the highest priority as they map directly to the M\u0101t\u1e5bk\u0101"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "coverage_gap",
+      "title": "Full corpus extraction needed",
+      "description": "9 QRI papers collected but not fully extracted.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial RO for QRI papers. 4 passages mapping combinatorial state space to M\u0101t\u1e5bk\u0101, double aspect to prak\u0101\u015ba-vimar\u015ba, \u03a6 to \u015baktip\u0101ta, valence to rasa geometry.",
+      "sources_added": [
+        "qri-collected"
+      ],
+      "passage_count": 4,
+      "status": "draft"
+    }
+  ],
+  "appendices": [],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created for 9 QRI papers.",
+      "sources_total": 1,
+      "passages_total": 4
+    }
+  ]
+}

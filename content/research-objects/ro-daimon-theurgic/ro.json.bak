@@ -1,0 +1,152 @@
+{
+  "ro_id": "ro:daimon-theurgic",
+  "schema_version": 1,
+  "title": "Theurgic Daimon Contact in the PGM",
+  "subtitle": "Ritual texts for systasis, dream revelation, and daimonic assistance",
+  "family": "tradition",
+  "status": "draft",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "The PGM contains multiple spells for daimon contact: acquiring an assistant (I.1-42), meeting your own daimon (VII.505-528), dream revelation (VII.478-490), and the Helios systasis (III.494-611).",
+    "scope": "",
+    "traditions": [
+      "general"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "pgm-i-1-42",
+      "tier": 1,
+      "label": "pgm-i-1-42",
+      "status": "active"
+    },
+    {
+      "source_id": "pgm-iii-494-611",
+      "tier": 1,
+      "label": "pgm-iii-494-611",
+      "status": "active"
+    },
+    {
+      "source_id": "pgm-vii-478-490",
+      "tier": 1,
+      "label": "pgm-vii-478-490",
+      "status": "active"
+    },
+    {
+      "source_id": "pgm-vii-505-528",
+      "tier": 1,
+      "label": "pgm-vii-505-528",
+      "status": "active"
+    },
+    {
+      "source_id": "pgm-vii-644-651",
+      "tier": 1,
+      "label": "pgm-vii-644-651",
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "paredros_acquisition",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [],
+      "topics": [],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "systasis_to_helios",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [],
+      "topics": [],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "dream_revelation",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [],
+      "topics": [],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "meeting_your_daimon",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [],
+      "topics": [],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "agathos_daimon_prayer",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [],
+      "topics": [],
+      "status": "placeholder"
+    }
+  ],
+  "coverage": {
+    "agathos_daimon_prayer": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    },
+    "paredros_acquisition": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    },
+    "meeting_your_daimon": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    },
+    "dream_revelation": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    },
+    "systasis_to_helios": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    }
+  },
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-13",
+      "type": "initial",
+      "summary": "Initial draft. 5 sections outlined.",
+      "sources_added": [
+        "pgm-i-1-42",
+        "pgm-iii-494-611",
+        "pgm-vii-478-490",
+        "pgm-vii-505-528",
+        "pgm-vii-644-651"
+      ],
+      "passage_count": 5,
+      "status": "draft"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-07-13",
+      "event": "RO created",
+      "sources_total": 5,
+      "passages_total": 5
+    }
+  ]
+}

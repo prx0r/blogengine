@@ -1,0 +1,57 @@
+{
+  "co_id": "co:uno_apology_25c_26a_voluntary_harm_t2",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "apology_25c_26a_voluntary_harm",
+  "turn_index": 2,
+  "lineage": "Socratic",
+  "student_state": "cooperative_engagement",
+  "behavior_tags": [
+    "short_affirmation"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_03",
+    "function_name": "UM_03",
+    "mechanism_shape": "CONSTRAINT_COLLAPSE",
+    "teaching_actions": [
+      "proves_impossibility"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.35,
+      "attunement": 0.8,
+      "style": 0.5,
+      "depth": 0.62,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_03",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_03",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "go_along_compliantly",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "apology_25c_26a_voluntary_harm T3: Using constraint_collapse/UM_03 with intensity=PR_03, intimacy=IN_02, attunement=AT_03 on 'the hinge'. Response shows agreeing without elaboration; expecting go_along_compliantly next. If not, lower PR and re-anchor the hinge.",
+  "accumulated_insight": "T3: Student says ''?agreeing without elaboration (cooperative_engagement) via short_affirmation. Focus: the hinge. The constraint_collapse/UM_03 move applies shift their frame: standard function application. Pattern: go_along_compliantly ? go_along_compliantly ? go_along_compliantly. Confidence medium.",
+  "abstract_pattern": "",
+  "visible_response": "What then, Meletus? Are you so much wiser at your age than I at mine, that you have become cognizant that the bad always do something bad to those who are closest to them, and the good do something good; whereas I have come into so much ignorance that I am not even cognizant that if I ever do \nsomething wretched to any of my associates, I will risk getting back something bad from him? So that I do so much bad voluntarily, as you assert? Of this I am not convinced by you, Meletus, nor, do I suppose, is any other human being. But either I do not corrupt, or if I do corrupt, I do it involuntarily, so in both cases what you say is false.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:proclus-elements",
+    "ro:platonism-decoded",
+    "ro:chaldean-oracles"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

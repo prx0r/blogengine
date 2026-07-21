@@ -1,0 +1,61 @@
+{
+  "co_id": "co:uno_gurdjeff1_meta_t51_t58_discomf_t2",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gurdjeff1_meta_t51_t58_discomfort_youth_esotericism",
+  "turn_index": 2,
+  "lineage": "Gurdjieffian",
+  "student_state": "confused_by_lack_of_appeal",
+  "behavior_tags": [
+    "reports_observation",
+    "questions_selection_mechanism"
+  ],
+  "pedagogy": {
+    "phase": "META",
+    "function_id": "UNKNOWN",
+    "function_name": "UNKNOWN",
+    "mechanism_shape": "COMPARISON_CONTRAST",
+    "teaching_actions": [
+      "normalizes_difficulty",
+      "explains_low_appeal",
+      "defines_interest_as_exception"
+    ],
+    "traps_avoided": [
+      "realism_trap"
+    ],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.5,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "request_clarification",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The normalization works: esotericism = very difficult (low appeal normal), interest = exception (wrong attitudes/ideas, minds in confusion). The student reported observation (confused by lack of appeal), which shows they understand: happy/normal = no appeal to esotericism (observation). They'll likely attempt separation next.",
+  "accumulated_insight": "T3: Student reported observation ('I have been very puzzled by my observation of young people. If they are happy and thoroughly normal, the idea of esotericism does not seem to appeal to them')—confused by lack of appeal via reports observation and questions selection mechanism. They understand: happy/normal = no appeal to esotericism (observation). The comparison_contrast mechanism normalizes: esotericism = very difficult (low appeal normal), interest = exception (wrong attitudes/ideas, minds in confusion) ('The idea of esotericism is very difficult. Sometimes one can catch its meaning at an early age, but often one fails to see it from the right angle. We have so many wrong attitudes and wrong ideas that nothing can be expected. I think a person who becomes seriously interested in these ideas is an exception, because people's minds are in such a confusion with absurd and contradictory ideas'). Pattern: causal link proposal → rejection → utilitarian assertion → mechanical objection → observation question → normalization → [next: separation question]. They're grasping: esotericism = very difficult (low appeal normal), interest = exception (normalization).",
+  "abstract_pattern": "",
+  "visible_response": "The idea of esotericism is very difficult. Sometimes one can catch its meaning at an\nearly age, but often one fails to see it from the right angle.\nWe have so many wrong\nattitudes and wrong ideas that nothing can be expected.\nI think a person who becomes\nseriously interested in these ideas is an exception, because people's minds are in such a\nconfusion with absurd and contradictory ideas.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:sufi-comparative-analysis",
+    "ro:steiner-tantraloka-parallels"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

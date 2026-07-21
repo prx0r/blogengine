@@ -1,0 +1,43 @@
+{
+  "work_id": "work:t2-pubmed-central-control-of-body-temperature",
+  "schema_version": 2,
+  "title": "Central control of body temperature.",
+  "authors": [
+    {
+      "name": "Morrison SF"
+    }
+  ],
+  "publication": {
+    "year": 2016,
+    "journal": "F1000Res",
+    "source": "PubMed/MEDLINE",
+    "language": "en"
+  },
+  "identifiers": {
+    "pmid": "27239289",
+    "doi": "10.12688/f1000research.7958.1"
+  },
+  "topics": [
+    "phase-3-heat-fire",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "assets": {
+    "pdf_path": null,
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/27239289/",
+    "abstract": "Central neural circuits orchestrate the behavioral and autonomic repertoire that maintains body temperature during environmental temperature challenges and alters body temperature during the inflammatory response and behavioral states and in response to declining energy homeostasis. This review summarizes the central nervous system circuit mechanisms controlling the principal thermoeffectors for body temperature regulation: cutaneous vasoconstriction regulating heat loss and shivering and brown "
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_alt17_acquisition",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 3,
+    "phase_name": "Heat/Fire",
+    "bridge_rationale": "Bridge paper score=11.0: links Heat/Fire concept to mechanistic neuroscience"
+  },
+  "evaluation": "Score 11: Excellent bridge signal",
+  "tier": 2
+}

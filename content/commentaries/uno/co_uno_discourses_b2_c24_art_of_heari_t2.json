@@ -1,0 +1,60 @@
+{
+  "co_id": "co:uno_discourses_b2_c24_art_of_heari_t2",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "discourses_b2_c24_art_of_hearing",
+  "turn_index": 2,
+  "lineage": "Realist",
+  "student_state": "intellectual_concession",
+  "behavior_tags": [
+    "hesitant_agreement"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_05",
+    "function_name": "RM_05",
+    "mechanism_shape": "CONSTRAINT_COLLAPSE",
+    "teaching_actions": [
+      "closes_argument",
+      "assigns_responsibility"
+    ],
+    "traps_avoided": [
+      "looking_outward"
+    ],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.35,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_02",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "go_along_compliantly",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "They said 'It seems so'—hesitant but agreement. Now closing: music→musician, statue→statuary. Therefore hearing→skillful man. The conclusion: they're responsible. They came complaining 'you never gave me any answer'—now they know why. They weren't hearing skillfully. Episode complete. Clean three-turn remaking.",
+  "accumulated_insight": "T3 (Final): They agreed ('It seems so'). Now closing: music→musician, statue→statuary, speaking→skillful man. Therefore hearing→skillful man. The conclusion: they're responsible for how they hear. They came complaining 'you never gave me any answer'—now they know why. Three-turn arc: reframe → pivot → conclusion.",
+  "abstract_pattern": "",
+  "visible_response": "If you choose, consider the matter in this way also. The practice of music, to whom does it belong?\n\nAnd the proper making of a statue, to whom do you think that it belongs?\n\nThen if speaking properly is the business of the skillful man, do you see that to hear also with benefit is the business of the skillful man?",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:kybalion",
+    "ro:grimoires-decoded",
+    "ro:hermes-proof-system"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

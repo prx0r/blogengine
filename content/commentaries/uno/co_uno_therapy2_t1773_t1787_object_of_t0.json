@@ -1,0 +1,57 @@
+{
+  "co_id": "co:uno_therapy2_t1773_t1787_object_of_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy2_t1773_t1787_object_of_rage_identification",
+  "turn_index": 0,
+  "lineage": "Therapeutic",
+  "student_state": "guilty_retreat",
+  "behavior_tags": [
+    "self_blame",
+    "identification"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_05",
+    "function_name": "UM_05",
+    "mechanism_shape": "SUBJECT_OBJECT_INVERSION",
+    "teaching_actions": [
+      "tracks_shift",
+      "redirects_focus"
+    ],
+    "traps_avoided": [
+      "identification_with_content"
+    ],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.5,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "no_clear_effect",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "'I’m hardly one to talk. I have been holding feelings back.'—student presents as guilty retreat. Teacher's move uses subject_object_inversion: 'Do you notice you are describing your behavior now? A moment ago '. Strategy: tracks shift, redirects focus. Hypothesis: subject_object_inversion mechanism will create no_clear_effect. Watching how student responds to this intervention.",
+  "accumulated_insight": "T1: Student says 'I’m hardly one to talk. I have been holding feelings back.' showing guilty_retreat via self_blame, identification. Teacher responds 'Do you notice you are describing your behavior now? A moment ago ' using subject_object_inversion to tracks shift, redirects focus. Opening UNMAKING move addresses guilty_retreat. Predicting no_clear_effect because subject_object_inversion interventions typically produce this response pattern.",
+  "abstract_pattern": "",
+  "visible_response": "Do you notice you are describing your behavior now?\nA moment ago you were freer to talk about the fact that I didn’t help you last time.\nIf we don’t turn the camera back onto you, how do you experience this anger toward me?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

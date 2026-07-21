@@ -1,0 +1,60 @@
+{
+  "co_id": "co:uno_gurdjeff2_t6_t7_fatalism_vs_me_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gurdjeff2_t6_t7_fatalism_vs_mechanicalness",
+  "turn_index": 0,
+  "lineage": "Gurdjieffian",
+  "student_state": "stuck_on_determinism_paradox",
+  "behavior_tags": [
+    "philosophical_confusion",
+    "category_conflation"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_03",
+    "function_name": "RM_03",
+    "mechanism_shape": "COMPARISON_CONTRAST",
+    "teaching_actions": [
+      "states_present_incapacity",
+      "defines_agency_conditionally",
+      "diagnoses_binary_thinking",
+      "introduces_relativity"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.65,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_04",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "go_along_compliantly",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The resolution works: present incapacity (cannot 'do' now), agency = conditional (emerges with realization/struggle), binary thinking = error (not absolute), relativity (we differ from animals = conditional). The student is stuck on determinism paradox (philosophical confusion), which shows they understand: cannot 'do' = fatalism (paradox). They'll likely accept the resolution. Single-turn episode: paradox question → resolution → complete. Hypothesis: determinism paradox resolutions lead to compliance in single-turn episodes—testable by tracking whether determinism paradox resolutions end episodes.",
+  "accumulated_insight": "T1: Student stuck on determinism paradox ('I cannot separate the idea of not being able to 'do' from fatalism. When and how have we the power of choice and how do we differ from animals?')—stuck on determinism paradox via philosophical confusion and category conflation. They understand: cannot 'do' = fatalism (paradox). The comparison_contrast mechanism resolves: present incapacity (cannot 'do' now), agency = conditional (emerges with realization/struggle), binary thinking = error (not absolute), relativity (we differ from animals = conditional). Pattern: paradox question → resolution → [complete]. Low confidence because paradox resolutions can lead to compliance or further questions.",
+  "abstract_pattern": "",
+  "visible_response": "In the present state we differ very little.\nOur power of choice begins\nonly when we begin to realize our situation, our mechanicalness, and\nwhen we begin to struggle for something else There are possibilities for\nthat But this is a formatory way of thinking—either determinism or\nfreedom Some things are determined, some less determined, some are in\nour power, if we know how to change them or how to turn them Only,\nwe must know.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:sufi-comparative-analysis",
+    "ro:steiner-tantraloka-parallels"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

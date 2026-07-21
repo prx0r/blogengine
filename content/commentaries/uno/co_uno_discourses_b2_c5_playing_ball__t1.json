@@ -1,0 +1,64 @@
+{
+  "co_id": "co:uno_discourses_b2_c5_playing_ball__t1",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "discourses_b2_c5_playing_ball_socrates",
+  "turn_index": 1,
+  "lineage": "Realist",
+  "student_state": "Student sees Socrates' trial as a tragedy or serious crisis.",
+  "behavior_tags": [
+    "seeking_explanation",
+    "emotional_reaction"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_01",
+    "function_name": "RM_01",
+    "mechanism_shape": "STRUCTURAL_ANALOGY",
+    "teaching_actions": [
+      "asserts_analogy",
+      "uses_anecdote",
+      "clarifies_metaphor"
+    ],
+    "traps_avoided": [
+      "ego_defense",
+      "looking_outward",
+      "none"
+    ],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.5,
+      "depth": 0.62,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_03",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "go_along_compliantly",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "My intent says 'Shift their frame...' but the student is in Student sees Socrates' trial as a tragedy or serious crisis.. Am I trying to shift their frame or are they already shifting? The structural_analogy mechanism suggests I'm doing something, but maybe they're doing it to themselves and I'm just naming it.",
+  "accumulated_insight": "T2 (Final): Student 'And what was the ball in that case?'—now Student sees Socrates' trial as a tragedy or serious crisis.. Episode complete after 2 turns, moving from unknown to Student sees Socrates' trial as a tragedy or serious crisis.. Teaching arc used structural analogy in REMAKING phase to address seeking explanation, emotional reaction. Student progressed through 2-turn teaching sequence.",
+  "abstract_pattern": "",
+  "visible_response": "Life, chains, banishment, a draught of poison, separation from wife and leaving children orphans.\nThese were the things with which he was playing; but still he did play and threw the ball skillfully.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:kybalion",
+    "ro:grimoires-decoded",
+    "ro:hermes-proof-system"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

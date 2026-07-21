@@ -1,0 +1,57 @@
+{
+  "co_id": "co:uno_therapy2_t1624_t1629_ruminatio_t2",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy2_t1624_t1629_rumination_neurotransmitters",
+  "turn_index": 2,
+  "lineage": "Therapeutic",
+  "student_state": "flight_to_biology",
+  "behavior_tags": [
+    "biological_defense",
+    "rumination"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_06",
+    "function_name": "UM_06",
+    "mechanism_shape": "CONSTRAINT_COLLAPSE",
+    "teaching_actions": [
+      "blocks_rumination",
+      "refocuses_on_self"
+    ],
+    "traps_avoided": [
+      "conceptual_reification"
+    ],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.35,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_02",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "Final turn: 'Uh, yes, I would say I am passive-aggressive. Of course, that could be'. Reached flight_to_biology after 3 turns. Episode demonstrates constraint_collapse effectiveness in UNMAKING work. Teaching complete for this sequence.",
+  "accumulated_insight": "T3 (Final): Student: 'Uh, yes, I would say I am passive-aggressive. Of course, that could be'. Final state: flight_to_biology. Episode complete with 3 turns. Arc shows progression through UNMAKING phase using constraint_collapse interventions. Teaching sequence addressed biological_defense, rumination pattern.",
+  "abstract_pattern": "",
+  "visible_response": "But if we don’t go off to neurotransmitters, you say you are passive-aggressive?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

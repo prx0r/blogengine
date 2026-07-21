@@ -1,0 +1,44 @@
+{
+  "work_id": "work:t2-pubmed-cardiac-respiratory-and-gastric-rhythms-independently-modulate-motor-c",
+  "schema_version": 2,
+  "title": "Cardiac, respiratory, and gastric rhythms independently modulate motor corticospinal excitability in humans.",
+  "authors": [
+    {
+      "name": "Engelen, Tahn\u00e9e"
+    },
+    {
+      "name": "Schuhmann, Teresa"
+    },
+    {
+      "name": "Sack, Alexander T"
+    },
+    {
+      "name": "Tallon-Baudry, Catherine"
+    }
+  ],
+  "identifiers": {
+    "pmid": "41223212",
+    "doi": "10.1371/journal.pbio.3003478"
+  },
+  "publication": {
+    "journal": "PLoS biology",
+    "year": "2025"
+  },
+  "abstract": "Interoception refers to the brain's sensing of internal body state and encompasses various bodily systems, notably the cardiac, respiratory, and gastric rhythms. Beyond their roles in physiological regulation and emotional states, each of these visceral rhythms has been shown to influence brain activity and cognition, prompting for the development of various interpretative functional frameworks. However, both experimental data and functional hypothesis leave it unclear whether and how each visceral rhythm acts simultaneously and independently on brain activity. Here, we address this question by measuring in human participants how the corticospinal excitability of the motor system varies with the phase of each of the three visceral rhythms. We applied single pulse transcranial magnetic stimulation (TMS) over the hand region in primary motor cortex to elicit Motor Evoked Potentials (MEPs), whose amplitude reflects corticospinal excitability, and tested whether MEP amplitude depends on the phase of the simultaneously measured cardiac, respiratory, and gastric rhythms. All three visceral rhythms were coupled to motor excitability with similar effect sizes at the group level. However, we found no relation between coupling strengths: participants displaying high coupling with one organ did not necessarily display high coupling to the other organs. These results indicate that independent mechanisms could underly the coupling between the cardiac, respiratory, and gastric rhythms and motor excitability. We further introduce the concept of individual interoceptive profiles and show that such interoceptive profiles obtained from objective coupling strength measures were not explained by self-reported awareness of the organ. Altogether, our results call for refined specifications of the frameworks offering a functional or clinical interpretation of viscera-brain coupling taking into account both independent mechanisms and individual interoceptive profiles.",
+  "phase_mapping": {
+    "phase": 11,
+    "phase_name": "Body-energy"
+  },
+  "bridge_tags": [
+    "interoception",
+    "body-energy",
+    "spiritus",
+    "embodied-cognition"
+  ],
+  "evaluation": "Quality pass v3 (score=44) \u2014 High-signal bridge paper for Body-energy.",
+  "assets": {
+    "pdf_path": null,
+    "nxml_path": null
+  },
+  "tier": 2
+}

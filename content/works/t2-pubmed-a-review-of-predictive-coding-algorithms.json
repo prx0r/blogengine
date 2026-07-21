@@ -1,0 +1,43 @@
+{
+  "work_id": "work:t2-pubmed-a-review-of-predictive-coding-algorithms",
+  "schema_version": 2,
+  "title": "A review of predictive coding algorithms.",
+  "authors": [
+    {
+      "name": "Spratling MW"
+    }
+  ],
+  "publication": {
+    "year": 2017,
+    "journal": "Brain Cogn",
+    "source": "PubMed/MEDLINE",
+    "language": "en"
+  },
+  "identifiers": {
+    "pmid": "26809759",
+    "doi": "10.1016/j.bandc.2015.11.003"
+  },
+  "topics": [
+    "phase-6-dependent-arising",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "assets": {
+    "pdf_path": null,
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/26809759/",
+    "abstract": "Predictive coding is a leading theory of how the brain performs probabilistic inference. However, there are a number of distinct algorithms which are described by the term \"predictive coding\". This article provides a concise review of these different predictive coding algorithms, highlighting their similarities and differences. Five algorithms are covered: linear predictive coding which has a long and influential history in the signal processing literature; the first neuroscience-related applica"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_alt17_acquisition",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 6,
+    "phase_name": "Dependent-arising",
+    "bridge_rationale": "Bridge paper score=9.0: links Dependent-arising concept to mechanistic neuroscience"
+  },
+  "evaluation": "Score 9: Good bridge signal",
+  "tier": 2
+}

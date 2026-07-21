@@ -1,0 +1,59 @@
+{
+  "co_id": "co:uno_gurdjeff2_t2011_t2018_arguing__t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gurdjeff2_t2011_t2018_arguing_vs_agreeing",
+  "turn_index": 0,
+  "lineage": "Gurdjieffian",
+  "student_state": "seeking_correct_strategy_diagnosis",
+  "behavior_tags": [
+    "asks_for_capacity_check",
+    "seeks_diagnostic"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_02",
+    "function_name": "RM_02",
+    "mechanism_shape": "COMPARISON_CONTRAST",
+    "teaching_actions": [
+      "gives_paradoxical_example",
+      "demonstrates_counter-intuitive_method",
+      "provides_alternative_strategy"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.65,
+      "depth": 0.38,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_04",
+      "depth_discrete": "PD_02",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "go_along_compliantly",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The counter-intuitive method works: counter-intuitive method (agreeing to persuade = higher efficacy), gives: paradoxical example, demonstrates: alternative strategy. The student asks for capacity check (seeking correct strategy diagnosis), which shows they understand: capacity = know when to argue/agree (diagnostic). They'll likely accept the counter-intuitive method. Single-turn episode: capacity question → counter-intuitive method → complete. Hypothesis: counter-intuitive methods lead to compliance in single-turn episodes—testable by tracking whether counter-intuitive methods end episodes.",
+  "accumulated_insight": "T1: Student asks for capacity check ('I suppose in a case like that we should be capable of knowing whether to argue or agree?')—seeking correct strategy diagnosis via asks for capacity check and seeks diagnostic. They understand: capacity = know when to argue/agree (diagnostic). The comparison_contrast mechanism provides: counter-intuitive method (agreeing to persuade = higher efficacy), gives: paradoxical example, demonstrates: alternative strategy. Pattern: capacity question → counter-intuitive method → [complete]. Low confidence because counter-intuitive methods can lead to compliance or deeper questions.",
+  "abstract_pattern": "",
+  "visible_response": "For instance, you are talking to somebody, trying to persuade this person that you\nare right about something and he is wrong.\nThe more you argue, the more he is\nconvinced that he is right.\nStop, and you may suddenly see that this person\nunderstands you... Or you may even pretend to agree with him and in that way\nmake him understand what you want.\n\nIf you do not identify you will see.\nArguing is one way to persuade, agreeing is\nanother. Generally what prevents us from seeing what method to use is identifying.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:sufi-comparative-analysis",
+    "ro:steiner-tantraloka-parallels"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

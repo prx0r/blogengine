@@ -1,0 +1,57 @@
+{
+  "co_id": "co:uno_euthyphro_spine_02_god_disagre_t2",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "euthyphro_spine_02_god_disagreement_collapse",
+  "turn_index": 2,
+  "lineage": "Socratic",
+  "student_state": "surface_emotion",
+  "behavior_tags": [
+    "shares_feelings"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_03",
+    "function_name": "UM_03",
+    "mechanism_shape": "CONSTRAINT_COLLAPSE",
+    "teaching_actions": [
+      "forces_contradiction"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.35,
+      "attunement": 0.8,
+      "style": 0.5,
+      "depth": 0.62,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_03",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_03",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "resist_intellectually",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "euthyphro_spine_02_god_disagreement_collapse T3: Using constraint_collapse/UM_03 with intensity=PR_03, intimacy=IN_02, attunement=AT_03 on 'I'm afraid so'. Response shows letting feelings in; expecting resist_intellectually next. If not, lower PR and re-anchor the hinge.",
+  "accumulated_insight": "T3: Student says 'I'm afraid so.'?letting feelings in (surface_emotion) via shares_feelings. Focus: I'm afraid so. The constraint_collapse/UM_03 move applies shift their frame: standard function application. Pattern: go_along_compliantly ? go_along_compliantly ? surface_emotion. Confidence low.",
+  "abstract_pattern": "",
+  "visible_response": "So the same act would be both pious and impious?",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:proclus-elements",
+    "ro:platonism-decoded",
+    "ro:chaldean-oracles"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

@@ -1,0 +1,54 @@
+{
+  "co_id": "co:uno_therapy3_t658_t669_projection__t2",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3_t658_t669_projection_virtue_trap",
+  "turn_index": 2,
+  "lineage": "Therapeutic",
+  "student_state": "desperate_realization",
+  "behavior_tags": [
+    "bottoming_out"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_03",
+    "function_name": "UM_03",
+    "mechanism_shape": "SYSTEM_DYNAMICS",
+    "teaching_actions": [
+      "uses_irony",
+      "challenges_urgency"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.85,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.92,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_04",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_06",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "'But I can't keep going this way!'—breakdown of defense. Three turns from 'waiting is good' to 'I can't keep going.' The paradoxical agreement (T1) created anxiety (T2) which led to admission (T3). Now teacher reframes: 'you are underestimating yourself.' The thirty years of waiting wasn't patience (virtue) or obedience (rule) but endurance (strength wasted). Reframing: if you could endure this long, you're strong—but strength is being used for suffering, not solving. Three-turn teaching: expose defense → create anxiety → reframe crisis as misused strength. Clean.",
+  "accumulated_insight": "T3 (Final): Student breaks: 'But I can't keep going this way!'—admission that waiting isn't working. From projection (T1) → anxiety (T2) → admission (T3). Three-turn arc exposes waiting-as-virtue defense. Teacher reframes crisis as strength: 'Is it possible you are underestimating yourself? If you've waited thirty years...' Waiting reframed from patience to endurance, from virtue to suffering. Episode shows how paradoxical agreement → anxiety → admission → reframe of strength.",
+  "abstract_pattern": "",
+  "visible_response": "Is it possible you are underestimating yourself?\nIf you’ve waited thirty years, surely you could wait a few more.",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

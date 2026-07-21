@@ -1,0 +1,639 @@
+{
+"episode_id": "ep_shamanic_worlds_trance_001",
+"seed_question": "Shamanic journeying describes traveling to "upper", "middle", and "lower" worlds to retrieve information or healing. Neuroscience of trance states shows theta-dominant brain activity and default mode network (DMN) reconfiguration. Are these "worlds" best understood as different modes of self-referential processing, or do shamanic cultures treat them as ontologically real places accessed via altered states?",
+"topic": "shamanism_trance_worlds",
+"user_behavior_pattern": "smart_confused",
+"target_turn_count": 5,
+"turns": [
+{
+"turn": 1,
+"intention": "DISSECTION",
+"user": "Shamanic journeying talks about going to "upper", "middle", and "lower" worlds to get healing or information. Neuroscience papers talk about theta rhythms, DMN changes, and trance brain states. Are those worlds basically different modes of self-processing and imagination the brain is entering, or do shamanic traditions actually claim these are real, non-imaginary places you visit through altered states?",
+"hxrmxs": "You fused three layers and tried to get one verdict: the emic claim that shamans literally travel to other worlds, the etic claim that trance has specific neural signatures, and your own urge to decide if it is "just brain" or "literally other realms". Until we separate insider cosmology, outsider neuroscience, and how models of self-reference work, you are asking fMRI to stamp a passport.",
+"diamond": {
+"n1_compression": {
+"original_prompt": "Shamanic journeying talks about going to "upper", "middle", and "lower" worlds to get healing or information. Neuroscience papers talk about theta rhythms, DMN changes, and trance brain states. Are those worlds basically different modes of self-processing and imagination the brain is entering, or do shamanic traditions actually claim these are real, non-imaginary places you visit through altered states?",
+"sharpened_question": "How should we relate shamanic three-world cosmologies (upper, middle, lower worlds) to neuroscientific models of trance and self-referential processing: as purely internal modes of imaginative/self-related cognition, as ontologically real realms in shamanic emic terms, or as distinct registers that should not be collapsed into a single yes-or-no claim?",
+"assumptions": [
+"If trance states have identifiable neural correlates, then the "worlds" encountered must be nothing more than internal brain-generated simulations.",
+"Neuroscientific description and shamanic cosmological description are competing accounts of the same object, rather than different-level descriptions with different aims.",
+"Shamanic practitioners and cultures have a single, uniform stance on whether journey worlds are literally real places."
+],
+"category_errors": [
+"Conflating emic (insider) ontological claims about spirits and worlds with etic (outsider) explanatory models of brain and cognition.",
+"Treating neural correlates as if they automatically settle metaphysical questions about what, if anything, experiences are "of".",
+"Collapsing symbolic-geographic maps of experience into either naive literal geography or mere arbitrary fantasy."
+],
+"search_strategy": {
+"queries": [
+"upper middle lower worlds shamanic cosmology cross-cultural",
+"theta rhythms shamanic trance EEG DMN",
+"Brain Network Reconfiguration perceptual decoupling trance Hove 2015",
+"Neural correlates of the shamanic state of consciousness Huels 2021",
+"Michael Winkelman shamanism neurotheology biopsychosocial paradigm"
+],
+"domains": [
+"anthropology",
+"neuroscience",
+"religious_studies",
+"cross_cultural_psychology"
+],
+"evidence_types": [
+"theoretical",
+"historical_textual",
+"experimental_overview"
+]
+}
+},
+"n2_truthcore": {
+"claim": "The question currently mixes insider shamanic claims about real spirit-world travel with outsider neuroscientific accounts of trance and assumes that finding brain mechanisms will directly decide whether those worlds are "only in the head" or ontologically real.",
+"mechanisms": [],
+"correspondences": [],
+"evidence": {
+"empirical": [],
+"theoretical": [
+{
+"claim": "Anthropological and neurotheological work on shamanism explicitly distinguishes between emic cosmologies of spirit worlds and etic models that link shamanic universals to underlying brain processes.",
+"source": "Winkelman2004",
+"evidence_type": "theoretical_framework"
+},
+{
+"claim": "Philosophy of religious experience emphasizes that having a powerful, structured experience with a sense of objectivity does not by itself decide the metaphysical status of what is experienced.",
+"source": "SEP_ReligiousExperience2011",
+"evidence_type": "historical_textual"
+}
+],
+"formal": []
+},
+"category_distinctions": [
+{
+"what": "Emic versus etic description",
+"is": "the difference between how participants within a tradition describe and ontologize their experiences, and how outside observers model those experiences using scientific or comparative concepts",
+"is_not": "a simple choice between 'true' and 'false' accounts of the same object",
+"why": "Failing to keep emic and etic separate leads you to demand that a brain scan either prove or disprove a cosmology, which is not what brain scans do."
+},
+{
+"what": "Neural correlates of trance",
+"is": "patterns of activity and connectivity that reliably accompany certain altered states",
+"is_not": "a verdict about whether the contents of those states refer to an independent, external realm",
+"why": "Correlates tell you how the system behaves when experiences occur, not what ontological status to assign to the experienced 'worlds'."
+}
+],
+"unknowns": []
+},
+"n3_meta": {
+"phase": "DISSECTION",
+"progress": 0.15,
+"done": false,
+"stance": "iron_wall",
+"reason": "User is asking a single yes-or-no about ontological reality while blurring insider cosmology, neural mechanisms, and interpretive frameworks.",
+"boss_move_completed": false
+}
+}
+},
+{
+"turn": 2,
+"intention": "FRAMEWORKS",
+"user": "So give me the clean menu. From an anthropologist or neuroscientist point of view, what are the main ways of reading these upper/middle/lower worlds? Literal spirit geography, internal imaginal landscape, or brain networks doing different self-world processing modes?",
+"hxrmxs": "Roughly: shamans themselves typically talk as if these are real spirit domains connected to this world, not just 'inner theatre'. Anthropologists map that into a three-tiered cosmology that organizes social and ecological life. Neuro and psych people talk about imaginal geographies, modes of self-world representation, and network configurations in trance. Different registers, not one of them holding the others hostage.",
+"diamond": {
+"n1_compression": {},
+"n2_truthcore": {
+"claim": "There are at least three coherent frameworks for understanding shamanic journey worlds: emic cosmology of real layered worlds, psychological/imaginal maps of experience, and neurocognitive models of altered self-world processing.",
+"mechanisms": [
+{
+"id": "mech_shamanic_three_worlds_cosmology_001",
+"domain": "anthropology",
+"concept": "shamanic_three_worlds_cosmology",
+"definition": "A recurrent shamanic schema in which reality is divided into upper, middle, and lower worlds populated by spirits, ancestors, and powers, with the shaman journeying among them for healing, divination, and maintaining balance.",
+"function": "Organizes ritual action, meaning, and social-ecological relationships into a structured geography that makes sense of illness, misfortune, and transformation.",
+"level": "symbolic_mythic",
+"properties": [
+"cosmological",
+"ritual_structuring",
+"relational"
+],
+"source": {
+"citation": "Winkelman2000",
+"summary": "Describes cross-cultural recurrences of tiered cosmologies in shamanic traditions and their roles in healing and social integration."
+}
+},
+{
+"id": "mech_imaginal_geography_001",
+"domain": "cross_cultural_psychology",
+"concept": "imaginal_geography_of_consciousness",
+"definition": "An interpretive stance that treats upper/middle/lower worlds as structured imaginal spaces that organize inner experiences, emotions, and self-representations into a navigable landscape.",
+"function": "Lets practitioners work with complex inner material by giving it spatial form, narrative, and relational roles (allies, enemies, guides).",
+"level": "psychological",
+"properties": [
+"phenomenological",
+"narrative",
+"practice_directing"
+],
+"source": {
+"citation": "Winkelman2004",
+"summary": "Argues that shamanic universals reflect fundamental representational modules and neurognostic structures that produce recurrent visionary motifs."
+}
+},
+{
+"id": "mech_trance_absorptive_state_001",
+"domain": "neuroscience",
+"concept": "absorptive_trance_network_reconfiguration",
+"definition": "An altered state of consciousness characterized by narrowed awareness of external input, enhanced internal focus, and reconfigured large-scale brain networks, often with changes in DMN and control network connectivity.",
+"function": "Provides a neural-level account of how rhythmic stimulation and absorption support vivid internally oriented experiences such as shamanic journeys.",
+"level": "circuit",
+"properties": [
+"internally_oriented",
+"network_reconfiguration",
+"ASC_related"
+],
+"source": {
+"citation": "Hove2015",
+"summary": "Reports network reconfiguration and perceptual decoupling during trance-like absorptive states induced by rhythmic stimulation."
+}
+}
+],
+"correspondences": [
+{
+"type": "structural_analogy",
+"mechanism_ids": [
+"mech_shamanic_three_worlds_cosmology_001",
+"mech_imaginal_geography_001"
+],
+"description": "Psychological readings reinterpret the three-world cosmology as a structured imaginal map of different experiential and affective domains, preserving the layered structure while bracketing literal geography.",
+"strength": "moderate",
+"caveats": [
+"This does not mean practitioners originally conceived their worlds as 'only imagination'.",
+"Symbolic structures can function phenomenologically without reducing to arbitrary fantasy."
+]
+},
+{
+"type": "phenomenological_alignment",
+"mechanism_ids": [
+"mech_imaginal_geography_001",
+"mech_trance_absorptive_state_001"
+],
+"description": "Absorptive trance supports the kind of decoupled, vivid inner imagery that fits naturally into structured imaginal geographies of upper, middle, and lower worlds.",
+"strength": "moderate",
+"caveats": [
+"Alignment in experiential structure does not decide the metaphysical status of what is depicted.",
+"Different cultures populate similar experiential spaces with different cosmological contents."
+]
+}
+],
+"evidence": {
+"empirical": [],
+"theoretical": [
+{
+"claim": "Cross-cultural surveys show widespread three-tiered cosmologies in shamanic and related traditions, with journeying as a central ritual technique.",
+"source": "Winkelman2000",
+"evidence_type": "historical_textual"
+},
+{
+"claim": "Network-level accounts of trance describe absorptive states with altered coupling between internally oriented and externally oriented networks.",
+"source": "Hove2015",
+"evidence_type": "experimental_overview"
+}
+],
+"formal": []
+},
+"category_distinctions": [
+{
+"what": "Cosmological map versus phenomenological map",
+"is": "two different ways the same three-world schema can function: as a claim about layered reality, or as a way of organizing types of inner/relational experience",
+"is_not": "a simple choice between 'literally physical geography' and 'meaningless fantasy'",
+"why": "Keeping both roles in view lets you see why the schema is powerful in practice without prematurely deciding its metaphysical status."
+}
+],
+"unknowns": []
+},
+"n3_meta": {
+"phase": "FRAMEWORKS",
+"progress": 0.4,
+"done": false,
+"stance": "direct",
+"reason": "User is ready to see distinct interpretive frameworks laid out, not just a binary of "real realm" versus "brain mode".",
+"boss_move_completed": false
+}
+}
+},
+{
+"turn": 3,
+"intention": "MECHANISM",
+"user": "Mechanistically then, what lines up? Theta rhythms, DMN changes, internal focus, vivid imagery. Is it fair to say the "lower world" is like dropping into body/trauma stuff, the "upper world" is big-picture meaning and guidance, and the middle is ordinary self-world? Or is that overfitting psychology onto a cosmology that for them is just literally other regions of reality?",
+"hxrmxs": "You are trying to promote a neat therapy model to a universal decoder ring. Neuroscience does show rhythmic drumming and trance correlating with theta activity, network reconfiguration, and shifts in internally oriented processing. Psychologically, people often report different emotional and relational themes in different "levels". But shamans are not doing parts work in Jungian cosplay; for them these are populated, relational worlds. The clean move is: brain and self-model mechanics underwrite the capacity for such journeys; cosmology and culture format what shows up and how it is used.",
+"diamond": {
+"n1_compression": {},
+"n2_truthcore": {
+"claim": "Neuroscience and psychology can plausibly explain how shamanic journeys arise and feel structured, but the mapping from upper/middle/lower worlds to specific modes of self-referential or therapeutic processing is at best a loose, culturally shaped alignment rather than a precise, universal code.",
+"mechanisms": [
+{
+"id": "mech_trance_theta_dmn_001",
+"domain": "neuroscience",
+"concept": "trance_theta_and_network_dynamics",
+"definition": "Electrophysiological and neuroimaging findings that shamanic and trance states involve changes such as increased theta activity, altered default mode and salience network dynamics, and shifts in connectivity that favor internally generated imagery.",
+"function": "Provide a neural basis for intensified inner experience, symbolic imagery, and altered self-world boundaries during shamanic journeys.",
+"level": "circuit",
+"properties": [
+"theta_associated",
+"network_reconfiguration",
+"ASC_marker"
+],
+"source": {
+"citation": "FlorHenry2017",
+"summary": "Reports brain changes during shamanic trance, including altered activity in networks associated with internal mentation and attention."
+}
+},
+{
+"id": "mech_dmn_self_reference_001",
+"domain": "neuroscience",
+"concept": "dmn_and_self_referential_processing",
+"definition": "The default mode network supports forms of self-related, autobiographical, and internally oriented mentation; its modulation is implicated in meditation, psychedelics, and other altered states.",
+"function": "Explains how changes in DMN activity or connectivity can shift the sense of self, narrative, and boundary between inner and outer worlds.",
+"level": "circuit",
+"properties": [
+"self_related",
+"internally_oriented",
+"ASC_modulated"
+],
+"source": {
+"citation": "CarhartHarris2014",
+"summary": "Argues that altered DMN dynamics are central to primary states of consciousness such as psychedelics, with parallels to other ASC."
+}
+},
+{
+"id": "mech_world_thematic_partitioning_001",
+"domain": "cross_cultural_psychology",
+"concept": "thematic_partitioning_of_experience",
+"definition": "The tendency for symbolic systems to allocate different classes of themes—such as death/trauma, guidance/meaning, everyday concerns—to distinct imaginal zones or narrative layers.",
+"function": "Accounts for recurring reports that different "worlds" in journeying are associated with characteristic emotional tones, entities, and tasks.",
+"level": "psychological",
+"properties": [
+"pattern_forming",
+"schema_based",
+"culturally_tuned"
+],
+"source": {
+"citation": "Winkelman2004",
+"summary": "Interprets common shamanic motifs as reflecting integration of innate representational modules and basic affective themes."
+}
+}
+],
+"correspondences": [
+{
+"type": "phenomenological_alignment",
+"mechanism_ids": [
+"mech_trance_theta_dmn_001",
+"mech_trance_absorptive_state_001",
+"mech_imaginal_geography_001"
+],
+"description": "Theta-associated, internally oriented trance states provide fertile ground for the kind of vivid, spatially organized imagery described as travel through upper, middle, and lower worlds.",
+"strength": "moderate",
+"caveats": [
+"Different traditions report different specific geographies and inhabitants despite similar underlying brain dynamics.",
+"The same neural profile can support very different narrative framings (e.g., shamanic world travel versus clinical hypnosis imagery)."
+]
+},
+{
+"type": "structural_analogy",
+"mechanism_ids": [
+"mech_world_thematic_partitioning_001",
+"mech_shamanic_three_worlds_cosmology_001"
+],
+"description": "Assigning certain themes (e.g., underworld = death, ancestors; upper world = teaching spirits) to particular realms mirrors a psychological partitioning of difficult material, guidance, and everyday concerns.",
+"strength": "moderate",
+"caveats": [
+"The analogy explains why the schema works psychologically; it does not prove that shamans secretly think in modern therapy terms.",
+"Overly tidy mappings risk projecting contemporary models (trauma work, IFS, etc.) onto traditions with different aims and logics."
+]
+}
+],
+"evidence": {
+"empirical": [
+{
+"claim": "EEG and imaging studies of shamanic trance and related absorptive states report increased theta power, altered DMN and salience network activity, and enhanced internally oriented processing.",
+"source": "FlorHenry2017",
+"evidence_type": "experimental_overview"
+},
+{
+"claim": "Network reconfiguration during trance correlates with subjective reports of reduced awareness of external stimuli and increased absorption in inner imagery.",
+"source": "Hove2015",
+"evidence_type": "experimental_overview"
+}
+],
+"theoretical": [
+{
+"claim": "The entropic brain and related models treat changes in DMN and large-scale network dynamics as central to shifts in self-experience and imagery in altered states.",
+"source": "CarhartHarris2014",
+"evidence_type": "theoretical_framework"
+}
+],
+"formal": []
+},
+"category_distinctions": [
+{
+"what": "Loose psychological mapping",
+"is": "using upper/middle/lower as a heuristic for different experiential themes or modes of processing",
+"is_not": "a rigorous, one-to-one mapping between each world and a specific neural or therapeutic module",
+"why": "Treating the three worlds as an exact code for brain systems is just a new kind of over-literalism, this time in neuroscientific language."
+}
+],
+"unknowns": []
+},
+"n3_meta": {
+"phase": "MECHANISM",
+"progress": 0.6,
+"done": false,
+"stance": "direct",
+"reason": "User is probing how brain, self-reference, and cosmology line up, so concrete neural and psychological mechanisms must be laid out without over-claiming.",
+"boss_move_completed": false
+}
+}
+},
+{
+"turn": 4,
+"intention": "BOUNDARIES",
+"user": "Where does this actually break? It is tempting to say "the worlds are just DMN-mediated imaginal spaces" and be done. But that feels like I’ve just translated away the ontology. On the other hand, saying they are literal extra dimensions you visit with your soul feels like a big metaphysical leap from EEG traces. How far can we push either direction without lying to ourselves?",
+"hxrmxs": "The limit is what each toolkit is built to do. Brain data can tell you that trance reorganizes networks and self-processing; it cannot certify or refute spirits. Emic accounts take these worlds as real relational domains; if you bulldoze that into 'just imagery', you have changed the game, not just the vocabulary. Conversely, importing the cosmology into physics on the back of DMN graphs is fan-fiction. Honest posture: treat the worlds as ontologically thick within their traditions, treat the neuroscience as constraints on how such experiences are implemented, and keep metaphysical claims clearly marked as belief, not measurement.",
+"diamond": {
+"n1_compression": {},
+"n2_truthcore": {
+"claim": "Neither a reductive 'just brain modes' story nor a literal-physics 'extra realms' story is forced by current evidence; shamanic worlds function as real relational domains within their traditions, while neuroscience constrains how such experiences are generated without settling their ultimate ontology.",
+"mechanisms": [
+{
+"id": "mech_emic_ontological_commitment_001",
+"domain": "anthropology",
+"concept": "emic_commitment_to_spirit_realms",
+"definition": "The stance, common in shamanic traditions, that spirits and non-ordinary worlds are real aspects of the cosmos with which humans can interact through ritual and altered states.",
+"function": "Anchors the practical and ethical force of journeying: healing, divination, and negotiation are meaningful because they concern real beings and domains.",
+"level": "symbolic_mythic",
+"properties": [
+"ontological",
+"relational",
+"practice_grounding"
+],
+"source": {
+"citation": "Winkelman2000",
+"summary": "Documents that shamans generally construe their activities as interaction with a real spirit world rather than as symbolic role-play."
+}
+},
+{
+"id": "mech_methodological_agnosticism_001",
+"domain": "religious_studies",
+"concept": "methodological_agnosticism_about_ontic_status",
+"definition": "A research stance that brackets the ultimate truth of religious ontological claims and focuses instead on their phenomenology, functions, and coherence.",
+"function": "Allows scholars to analyze shamanic worlds and their neural correlates without prematurely adjudicating whether spirits or extra realms exist.",
+"level": "epistemic",
+"properties": [
+"non_committal",
+"discipline_bounded",
+"comparative"
+],
+"source": {
+"citation": "SEP_ReligiousExperience2011",
+"summary": "Discusses approaches that treat religious experiences as data for philosophy and psychology without assuming or denying the reality of their putative objects."
+}
+}
+],
+"correspondences": [
+{
+"type": "logical_exclusion",
+"mechanism_ids": [
+"mech_emic_ontological_commitment_001",
+"mech_imaginal_geography_001"
+],
+"description": "A purely imaginal-psychological reading that denies any external reality for spirits is incompatible with many practitioners' own understanding, even if it uses similar phenomenological descriptions.",
+"strength": "moderate",
+"caveats": [
+"Individuals within traditions can and do adopt more metaphorical or psychologized interpretations over time.",
+"External analysts can use imaginal frameworks without claiming to represent insiders' self-understanding."
+]
+},
+{
+"type": "negative_finding",
+"mechanism_ids": [
+"mech_trance_theta_dmn_001",
+"mech_emic_ontological_commitment_001"
+],
+"description": "Existing neuroscientific results on trance constrain claims about how shamanic experiences are implemented but provide no direct evidence for or against the existence of independent spirit worlds.",
+"strength": "strong",
+"caveats": [
+"Some proponents on both sides over-interpret data either to 'prove' spirits or to 'disprove' them; those inferences exceed what the data justify.",
+"Metaphysical positions about the ultimate nature of reality go beyond what current cognitive neuroscience can settle."
+]
+}
+],
+"evidence": {
+"empirical": [
+{
+"claim": "Neuroimaging studies of shamanic and related altered states report network changes but do not attempt to infer the existence or non-existence of external entities from those patterns.",
+"source": "Huels2021",
+"evidence_type": "experimental_overview"
+}
+],
+"theoretical": [
+{
+"claim": "Methodological agnosticism is widely recommended in the study of religious and mystical experience to avoid overstepping the evidential base.",
+"source": "SEP_ReligiousExperience2011",
+"evidence_type": "theoretical_framework"
+}
+],
+"formal": []
+},
+"category_distinctions": [
+{
+"what": "Implementation level versus ontological level",
+"is": "the difference between how an experience is generated in a system (e.g., brain networks, self-models) and what, if anything, the experience is ultimately about in reality",
+"is_not": "a choice between 'only brain' and 'brain plus magic realm' made by the same kind of evidence",
+"why": "Mixing up implementation explanations with ontological verdicts is how you end up asking MRIs to rule on metaphysics."
+}
+],
+"unknowns": [
+{
+"question": "Whether any future integration of neuroscience, phenomenology, and comparative religion will favor a particular ontological stance on shamanic worlds.",
+"status": "underdetermined",
+"why_unknown": "Current methods can correlate brain states, reports, and cultural patterns, but they are not designed to directly access the ultimate structure of reality.",
+"what_would_resolve": "A widely accepted philosophical framework that connects first-person experience, third-person data, and metaphysics in a way that yields non-question-begging criteria for ontic claims.",
+"linked_mechanisms": [
+"mech_methodological_agnosticism_001",
+"mech_trance_theta_dmn_001",
+"mech_emic_ontological_commitment_001"
+]
+}
+]
+},
+"n3_meta": {
+"phase": "BOUNDARIES",
+"progress": 0.8,
+"done": false,
+"stance": "direct",
+"reason": "User is explicitly asking how far reduction or literalization can be pushed, so the epistemic limits and role of methodological agnosticism must be made explicit.",
+"boss_move_completed": false
+}
+}
+},
+{
+"turn": 5,
+"intention": "INTEGRATION",
+"user": "So the sane synthesis is something like: shamanic upper, middle, and lower worlds are not secretly just neuroscience diagrams any more than fMRI scans are secretly maps of the underworld. Shamanic cultures generally treat these as real relational domains populated by spirits and ancestors, and that ontology is what makes the practice bite for them. Neuroscience and psychology can explain how rhythmic trance, theta activity, and DMN-modulated self-processing open up vivid, structured imaginal geographies, and why those geographies naturally attract themes like death, guidance, and everyday concerns. But those implementation facts don’t force a verdict on whether the worlds are "only in the head" or metaphysically real. The honest move is to keep emic cosmology, imaginal/psychological mapping, and brain-level implementation as three different layers, and be explicit about which one you’re speaking in when you talk about shamanic worlds.",
+"hxrmxs": "Exactly. You stopped trying to make a drum circle either secretly a neurology lab or secretly a NASA launchpad to the upper realm. You now distinguish: emic worlds as real relational spaces in the tradition; imaginal geographies as ways the psyche formats experience; and network dynamics as how the organism implements all of that. Neuroscience constrains how journeying can work, but it does not auto-translate spirits into circuits or circuits into spirits. That is the upgrade from "are they real or just brain?" to "which register am I in, and what claims am I actually entitled to make there?"",
+"diamond": {
+"n1_compression": {},
+"n2_truthcore": {
+"claim": "The user has integrated that shamanic worlds, psychological/imaginal mapping, and neural implementation are distinct but related registers, and that current evidence supports treating them as layered descriptions rather than forcing a single reductive or literalizing ontology.",
+"mechanisms": [
+{
+"id": "mech_multi_register_shamanic_integration_001",
+"domain": "meta_theory",
+"concept": "multi_register_model_of_shamanic_worlds",
+"definition": "A synthesized view that treats shamanic cosmology, imaginal-psychological geographies, and neural mechanisms as complementary levels of description constrained by but not reducible to one another.",
+"function": "Prevents category errors by assigning emic ontology, phenomenology, and implementation to different explanatory roles while acknowledging their interactions.",
+"level": "epistemic",
+"properties": [
+"integrative",
+"anti_reductionist",
+"anti_mystification"
+],
+"source": {
+"citation": "Winkelman2004",
+"summary": "Supports the idea that shamanic universals reflect underlying brain processes and representational systems without dismissing their religious and cosmological significance."
+}
+}
+],
+"correspondences": [],
+"evidence": {
+"empirical": [],
+"theoretical": [
+{
+"claim": "Anthropological, psychological, and neuroscientific accounts can be combined into layered models that respect emic meaning while using etic mechanisms.",
+"source": "Winkelman2000",
+"evidence_type": "theoretical_framework"
+}
+],
+"formal": []
+},
+"category_distinctions": [
+{
+"what": "Layered description versus single-story reduction",
+"is": "the idea that the same phenomenon (shamanic journeying) can be validly described in terms of cosmology, experience, and brain implementation without one description exhausting or invalidating the others",
+"is_not": "a claim that 'everything is true in its own way' or that anything goes",
+"why": "Holding onto layered description lets you use the sharp tools of neuroscience and critical analysis without trivializing the lived reality of shamanic practice or inflating data into metaphysics."
+}
+],
+"unknowns": []
+},
+"n3_meta": {
+"phase": "INTEGRATION",
+"progress": 1.0,
+"done": true,
+"stance": "peer",
+"reason": "User has articulated a nuanced, three-layer synthesis that respects emic cosmology, psychological mapping, and neural implementation without collapsing them.",
+"boss_move_completed": true
+}
+}
+}
+],
+"references": {
+"Winkelman2000": {
+"id": "isbn:9780313381812",
+"type": "book",
+"authors": [
+"Winkelman, Michael"
+],
+"year": 2010,
+"title": "Shamanism: A Biopsychosocial Paradigm of Consciousness and Healing"
+},
+"Winkelman2004": {
+"id": "url:https://michaelwinkelman.com/shamanism-as-the-original-neurotheology/
+",
+"type": "article",
+"authors": [
+"Winkelman, Michael"
+],
+"year": 2004,
+"title": "Shamanism as the Original Neurotheology"
+},
+"FlorHenry2017": {
+"id": "doi:10.1080/23311908.2017.1313522",
+"type": "article",
+"authors": [
+"Flor-Henry, Pierre",
+"Sharma, Vijay",
+"Abbey, Stephanie"
+],
+"year": 2017,
+"title": "Brain Changes During a Shamanic Trance: Altered Modes of Cognitive Processing"
+},
+"Hove2015": {
+"id": "url:https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4898667/
+",
+"type": "article",
+"authors": [
+"Hove, Michael J.",
+"Stark, Robert",
+"Keller, Peter E.",
+"Keller, Peter"
+],
+"year": 2015,
+"title": "Brain Network Reconfiguration and Perceptual Decoupling During an Absorptive State of Consciousness"
+},
+"Huels2021": {
+"id": "url:https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8012721/
+",
+"type": "article",
+"authors": [
+"Huels, Enikö R.",
+"et al."
+],
+"year": 2021,
+"title": "Neural Correlates of the Shamanic State of Consciousness"
+},
+"CarhartHarris2014": {
+"id": "doi:10.3389/fnhum.2014.00020",
+"type": "article",
+"authors": [
+"Carhart-Harris, Robin L.",
+"Leech, Robert",
+"Hellyer, Peter J.",
+"Shanahan, Murray",
+"Feilding, Amanda",
+"Tagliazucchi, Enzo",
+"Chialvo, Dante R.",
+"Nutt, David"
+],
+"year": 2014,
+"title": "The Entropic Brain: A Theory of Conscious States Informed by Neuroimaging Research with Psychedelic Drugs"
+},
+"SEP_ReligiousExperience2011": {
+"id": "url:https://plato.stanford.edu/entries/religious-experience/
+",
+"type": "reference",
+"authors": [
+"Stanford Encyclopedia of Philosophy"
+],
+"year": 2022,
+"title": "Religious Experience"
+}
+},
+"outcome": {
+"taught": "Shamanic upper, middle, and lower worlds can be coherently understood as real relational domains within their emic cosmologies, as structured imaginal geographies organizing experience, and as states implemented by specific brain dynamics, with none of these levels by itself settling the ultimate metaphysical status of those worlds.",
+"trajectory": "The user moved from asking whether neuroscience reduces shamanic worlds to mere self-processing or whether they must be taken as literal extra realms, to a multi-register view that distinguishes emic cosmology, imaginal/psychological mapping, and neural implementation as layered but interacting descriptions constrained by, yet not reducible to, one another.",
+"indicators": [
+"grasped_mech_shamanic_three_worlds_cosmology_001",
+"grasped_mech_trance_theta_dmn_001",
+"grasped_mech_imaginal_geography_001",
+"recognized_emic_etic_distinction",
+"understood_implementation_vs_ontology",
+"answered_original_question_correctly"
+],
+"feedback_pedagogy": {
+"user_reported_click_turn": null,
+"user_reported_click_cause": null,
+"clarity_delta": {
+"before": null,
+"after": null
+},
+"subjective_note": null
+}
+}
+}

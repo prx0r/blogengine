@@ -1,0 +1,59 @@
+{
+  "co_id": "co:uno_gorgias_ep019_judgment_of_soul_t1",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gorgias_ep019_judgment_of_souls",
+  "turn_index": 1,
+  "lineage": "Socratic",
+  "student_state": "seeking_clarity",
+  "behavior_tags": [
+    "asks_deeper_question"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_05",
+    "function_name": "RM_05",
+    "mechanism_shape": "SYSTEM_DYNAMICS",
+    "teaching_actions": [
+      "maps_consequence_logic"
+    ],
+    "traps_avoided": [
+      "category_conflation"
+    ],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.62,
+      "attunement": 0.8,
+      "style": 0.5,
+      "depth": 0.62,
+      "meta_mode": 0.75,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_03",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_03",
+      "meta_mode_discrete": "MM_02"
+    },
+    "predicted_impact": "go_along_compliantly",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "Curiosity unlocked. Next, map the myth to moral cause-effect (actions ? consequences) to make it useful. Expect compliance once the functional frame is clear.",
+  "accumulated_insight": "Two-turn pattern: T1 dismissal ('That's just myth-making') ? T2 curiosity about function ('And what truth is that supposed to reveal?'). They understand there may be a truth to extract; ready for the moral system mapping.",
+  "abstract_pattern": "",
+  "visible_response": "That injustice deforms the soul—and punishment restores it.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:proclus-elements",
+    "ro:platonism-decoded",
+    "ro:chaldean-oracles"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

@@ -1,0 +1,228 @@
+{
+  "ro_id": "ro:tarka-sangraha",
+  "schema_version": 1,
+  "title": "Tarka-Sangraha \u2014 The Compendium of Reasoning",
+  "family": "theme",
+  "status": "draft",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "Annambha\u1e6d\u1e6da's Tarka-Sa\u1e45graha as the epistemological scaffold for \u015a\u0101ktop\u0101ya \u2014 the 16 pad\u0101rthas, 4 pram\u0101\u1e47as, and the method of inference as the path of recognition.",
+    "scope": "Covers the complete primer of Ny\u0101ya-Vai\u015be\u1e63ika epistemology with cross-tradition comparison to the pram\u0101\u1e47a theory of the Tantr\u0101loka. Focus on the 16 pad\u0101rthas, the 4 pram\u0101\u1e47as (pratyak\u1e63a, anum\u0101na, upam\u0101na, \u015babda), the structure of inference (sv\u0101rtha/par\u0101rtha), and apavarga as liberation-through-knowledge.",
+    "traditions": [
+      "nyaya",
+      "vaishika",
+      "indian-logic",
+      "kashmir-shaivism",
+      "tantra"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "tarka-sangraha-kuppuswami",
+      "tier": 1,
+      "label": "Annambha\u1e6d\u1e6da \u2014 Tarka-Sa\u1e45graha with D\u012bpik\u0101, ed. S. Kuppuswami Sastri, 2nd ed. 1951",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "full_text",
+        "padartha_classification",
+        "pramana_theory",
+        "anumana_logic",
+        "apavarga_doctrine"
+      ],
+      "sections_affected": [
+        "epistemology",
+        "categories",
+        "inference",
+        "liberation"
+      ],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "epistemology",
+      "subsection": "sixteen_padarthas",
+      "kind": "source",
+      "text": "Gautama enumerates sixteen pad\u0101rthas \u2014 means of valid knowledge (pram\u0101\u1e47a), objects of valid knowledge (prameya), doubt (sa\u1e43\u015baya), purpose (prayojana), instances (d\u1e5b\u1e63\u1e6d\u0101nta), established conclusions (siddh\u0101nta), members of syllogism (avayava), reductio ad absurdum (tarka), decisive knowledge (nir\u1e47aya), arguing for truth (v\u0101da), arguing constructively as well as destructively for victory (jalpa), merely destructive argument (vitand\u0101), fallacious reasons (hetv\u0101bh\u0101sa), quibbling (chala), specious and unavailing objections (j\u0101ti), and vulnerable points (nigrahasth\u0101na). These sixteen are not metaphysical categories in the Vai\u015be\u1e63ika sense but sixteen topics which one should study to master the details of Ny\u0101ya dialectics. The Tarka-Sa\u1e45graha, as a syncretist primer, reduces these to the seven Vai\u015be\u1e63ika pad\u0101rthas \u2014 substance (dravya), quality (gu\u1e47a), activity (karma), generality (s\u0101m\u0101nya), particularity (vi\u015be\u1e63a), inherence (samav\u0101ya), and non-existence (abh\u0101va).",
+      "source_ids": [
+        "tarka-sangraha-kuppuswami"
+      ],
+      "topics": [
+        "padarthas",
+        "nyaya_dialectics",
+        "categories",
+        "gautama"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "epistemology",
+      "subsection": "four_pramanas",
+      "kind": "source",
+      "text": "The Naiy\u0101yikas recognize four pram\u0101\u1e47as: perception (pratyak\u1e63a), inference (anum\u0101na), assimilation (upam\u0101na), and verbal testimony (\u015babda). The C\u0101rv\u0101kas recognize only perception; the Bauddhas and Vai\u015be\u1e63ikas, perception and inference; the S\u0101\u1e45khyas add verbal testimony as a third; the Prabh\u0101karas add presumptive testimony (arth\u0101patti) as a fifth; the Bh\u0101\u1e6d\u1e6das and Advaitins add non-cognition (anupalabdhi) as a sixth. The Ny\u0101ya position \u2014 four and only four \u2014 is argued to be the most parsimonious: arth\u0101patti reduces to anum\u0101na, anupalabdhi to pratyak\u1e63a of absent objects. This epistemological minimalism parallels the Tantr\u0101loka's pram\u0101\u1e47a theory, where Abhinavagupta (TA I.66-74) similarly argues for the self-evidence of consciousness (prak\u0101\u015ba) as the sole ultimate pram\u0101\u1e47a, with the four empirical pram\u0101\u1e47as being its limited operations.",
+      "source_ids": [
+        "tarka-sangraha-kuppuswami"
+      ],
+      "topics": [
+        "pramanas",
+        "perception",
+        "inference",
+        "assimilation",
+        "verbal_testimony",
+        "tantraloka"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "inference",
+      "subsection": "definition_of_anumana",
+      "kind": "source",
+      "text": "Inference (anum\u0101na) is defined as the instrument of inferential knowledge (anumiti-kara\u1e47am anum\u0101nam). Inferential knowledge is defined as knowledge arising from a consideration (par\u0101mar\u015ba) \u2014 specifically, the knowledge that 'This mountain possesses fire because it possesses smoke, and wherever there is smoke there is fire, as in a kitchen.' The three-term structure is: (1) vy\u0101pti \u2014 the invariable concomitance ('Wherever there is smoke, there is fire'); (2) pak\u1e63adharmat\u0101 \u2014 the presence of the probans in the subject ('The mountain possesses smoke'); (3) par\u0101mar\u015ba \u2014 the combined consideration ('The mountain, which possesses smoke that is pervaded by fire, possesses fire'). From this par\u0101mar\u015ba arises the inferential conclusion ('The mountain possesses fire'). This three-step movement from universal concomitance to particular application through a synthetic consideration is the exact logical structure of \u015a\u0101ktop\u0101ya: the recognition (pratyabhij\u00f1\u0101) that the particular self (pram\u0101t\u1e5b) is pervaded by universal \u015aiva-consciousness, established through the 'invariable concomitance' of the \u0100gamic revelation.",
+      "source_ids": [
+        "tarka-sangraha-kuppuswami"
+      ],
+      "topics": [
+        "anumana",
+        "inference",
+        "vyapti",
+        "paramarsha",
+        "saktopaya",
+        "pratyabhijna"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "inference",
+      "subsection": "svartha_and_parartha",
+      "kind": "source",
+      "text": "Inference is of two kinds: for oneself (sv\u0101rth\u0101num\u0101na) and for others (par\u0101rth\u0101num\u0101na). Sv\u0101rth\u0101num\u0101na is the purely mental process: observing the invariable concomitance between smoke and fire through repeated observation in a kitchen, then going to a mountain, seeing smoke, recollecting the concomitance, and generating the inferential cognition. Par\u0101rth\u0101num\u0101na is the five-limbed syllogism (pa\u00f1c\u0101vayava-v\u0101kya) used to communicate the inference to another: (1) pratij\u00f1\u0101 \u2014 'The mountain possesses fire'; (2) hetu \u2014 'Because it possesses smoke'; (3) ud\u0101hara\u1e47a \u2014 'Wherever there is smoke, there is fire, as in a kitchen'; (4) upanaya \u2014 'The mountain is such (i.e., possesses smoke)'; (5) nigamana \u2014 'Therefore, the mountain possesses fire.' This five-limbed structure is the discursive form of the same recognition: the teacher (guru) communicates the vy\u0101pti through \u015babda-pram\u0101\u1e47a, enabling the student's own sv\u0101rth\u0101num\u0101na. In \u015a\u0101ktop\u0101ya, the guru's upade\u015ba plays the role of the ud\u0101hara\u1e47a \u2014 the 'example' that establishes the universal concomitance between \u015aiva-consciousness and one's own awareness.",
+      "source_ids": [
+        "tarka-sangraha-kuppuswami"
+      ],
+      "topics": [
+        "svarthanumana",
+        "pararthanumana",
+        "syllogism",
+        "guru_upadesa"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "liberation",
+      "subsection": "apavarga_and_moksha",
+      "kind": "source",
+      "text": "The final cessation of all miseries (apavarga) is the goal of both the Vai\u015be\u1e63ika and Ny\u0101ya systems. Apavarga is liberation-through-knowledge \u2014 not through ritual (karma) or devotion (bhakti), but through the tattva-j\u00f1\u0101na (knowledge of the categories) that eliminates the false identification of the self (\u0101tman) with body, senses, and mind. The Ny\u0101ya holds that mok\u1e63a is the absolute cessation of all pain (du\u1e25kh\u0101tyanta-viccheda), attained when the self is freed from all qualities (gu\u1e47as) through the destruction of the cycle of birth and rebirth. This is directly comparable to the \u0100\u1e47avop\u0101ya's culmination: when the individual self (a\u1e47u) exhausts all kalpan\u0101 (constructive thought) through correct reasoning (ny\u0101ya), it realizes its identity with \u015aiva. The difference is that Ny\u0101ya's apavarga is a negative state (absence of pain), while Tantr\u0101loka's mok\u1e63a is the positive realization of one's own bliss-consciousness (\u0101nanda-cit). The Tarka-Sa\u1e45graha provides the logical scaffolding: until the categories are correctly known, liberation is impossible.",
+      "source_ids": [
+        "tarka-sangraha-kuppuswami"
+      ],
+      "topics": [
+        "apavarga",
+        "moksha",
+        "liberation",
+        "tattva_jnana",
+        "anavopaya"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_006",
+      "section": "epistemology",
+      "subsection": "pramana_debate_and_skotopaya",
+      "kind": "source",
+      "text": "The Naiy\u0101yikas argue against recognizing \u015bakti (potency) as a distinct category \u2014 counter-action consists merely in the presence of counter-agents, not in the destruction of some mysterious potency. Similarly, they argue that upam\u0101na (assimilation) is distinct from both anum\u0101na and \u015babda: it is the knowledge of similarity gained through the perception of resemblance, e.g., 'A gavaya is like a cow' \u2014 a unique epistemic operation that cannot be reduced to inference or testimony. This precision in demarcating the instruments of knowledge is the precondition for what the Tantr\u0101loka calls \u015a\u0101ktop\u0101ya \u2014 the path of the empowered means, where the \u015aakti of recognition (pratyabhij\u00f1\u0101-\u015bakti) operates through the discrimination of the real from the unreal. Just as the Naiy\u0101yika must carefully distinguish which pram\u0101\u1e47a applies in which epistemic situation, the practitioner of \u015a\u0101ktop\u0101ya must discern when the Self is manifesting through pratyak\u1e63a (direct perception of \u015aiva), anum\u0101na (inference of \u015aiva from the world), or \u015babda (\u0100gamic revelation).",
+      "source_ids": [
+        "tarka-sangraha-kuppuswami"
+      ],
+      "topics": [
+        "sakti",
+        "upamana",
+        "pramana_discrimination",
+        "saktopaya",
+        "pratyabhijna_sakti"
+      ],
+      "status": "active"
+    }
+  ],
+  "coverage": {
+    "epistemology": {
+      "status": "comprehensive",
+      "sources": [
+        "tarka-sangraha-kuppuswami"
+      ],
+      "passage_count": 3,
+      "estimated_completeness": 0.85,
+      "gaps": [
+        "Detailed comparison with Tantr\u0101loka I.66-74 pram\u0101\u1e47a theory needed"
+      ]
+    },
+    "inference": {
+      "status": "comprehensive",
+      "sources": [
+        "tarka-sangraha-kuppuswami"
+      ],
+      "passage_count": 2,
+      "estimated_completeness": 0.85,
+      "gaps": [
+        "More examples of how each syllogistic limb maps to \u015a\u0101ktop\u0101ya practice"
+      ]
+    },
+    "liberation": {
+      "status": "good",
+      "sources": [
+        "tarka-sangraha-kuppuswami"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 0.7,
+      "gaps": [
+        "Full comparison of apavarga with Tantr\u0101loka's mok\u1e63a doctrine needed"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "coverage_gap",
+      "title": "Tantr\u0101loka pram\u0101\u1e47a comparison incomplete",
+      "description": "TA I.66-74 presents Abhinavagupta's pram\u0101\u1e47a theory. A systematic verse-by-verse comparison with the Tarka-Sa\u1e45graha's four-pram\u0101\u1e47a system is needed.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    },
+    {
+      "id": "issue-002",
+      "type": "coverage_gap",
+      "title": "Missing treatment of pratyak\u1e63a as direct recognition",
+      "description": "The Tarka-Sa\u1e45graha's treatment of pratyak\u1e63a (perception) needs comparison with the Pratyabhij\u00f1\u0101 theory of direct recognition of \u015aiva.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial RO with 6 passages covering the 16 pad\u0101rthas, the 4 pram\u0101\u1e47as, the structure of anum\u0101na (sv\u0101rtha/par\u0101rtha), apavarga, and the pram\u0101\u1e47a discrimination as \u015a\u0101ktop\u0101ya.",
+      "sources_added": [
+        "tarka-sangraha-kuppuswami"
+      ],
+      "passage_count": 6,
+      "status": "draft"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created in draft state with six passages from the Tarka-Sa\u1e45graha",
+      "sources_total": 1,
+      "passages_total": 6
+    }
+  ]
+}

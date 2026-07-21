@@ -1,0 +1,59 @@
+{
+  "work_id": "work:t2-pubmed-low-frequency-rtms-modulates-small-world-network-properties-in-an-avh-",
+  "schema_version": 2,
+  "title": "Low-frequency rTMS modulates small-world network properties in an AVH-related brain network in schizophrenia.",
+  "authors": [
+    {
+      "name": "Zhang, Lin"
+    },
+    {
+      "name": "Guo, Li"
+    },
+    {
+      "name": "Liu, Xiaohui"
+    },
+    {
+      "name": "Han, Jing"
+    },
+    {
+      "name": "Zhu, Yuanqiang"
+    },
+    {
+      "name": "Ma, Chaozong"
+    },
+    {
+      "name": "Li, Ye"
+    },
+    {
+      "name": "Ye, Weiliang"
+    }
+  ],
+  "identifiers": {
+    "pmid": "40303447",
+    "doi": "10.3389/fpsyt.2025.1578072"
+  },
+  "publication": {
+    "journal": "Frontiers in psychiatry",
+    "year": "2025"
+  },
+  "abstract": "Auditory verbal hallucinations (AVH) are a core symptom of schizophrenia, often persisting despite pharmacological treatment. Repetitive transcranial magnetic stimulation (rTMS), particularly low-frequency rTMS targeting the left temporoparietal junction (TPJ), has shown promise in alleviating AVH symptoms by modulating dysfunctional brain connectivity. However, the network-level effects of rTMS remain incompletely understood, particularly in terms of small-world network properties, which provide insights into local and global network efficiency. Furthermore, most previous studies have analyzed whole-brain networks, lacking specificity regarding disease-relevant circuits. This study aimed to investigate how low-frequency rTMS modulates the small-world network properties of a refined AVH-related network composed of 35 brain regions specifically implicated in hallucination generation and rTMS treatment effects, thereby providing a more targeted perspective on network reorganization. Healthy controls (HCs) were included as a reference to determine whether rTMS normalizes network alterations in schizophrenia. Additionally, a responder vs. non-responder analysis was conducted to assess individual variability in treatment response. A total of 50 schizophrenia patients with persistent AVH underwent 15 sessions of 1 Hz rTMS over the left TPJ. Resting-state fMRI data were collected before and after treatment to assess functional connectivity within the predefined 35-region AVH-related network. small-worldness (\u03c3), normalized clustering coefficient (\u03b3), and normalized characteristic path length (\u03bb), as well as functional segregation (clustering coefficient [Cp], local efficiency [El]) and functional integration (global efficiency [Eg], characteristic path length [Lp])-were analyzed before and after rTMS. Clinical symptom severity was assessed using the Auditory Hallucination Rating Scale (AHRS). At baseline, schizophrenia patients exhibited disrupted small-world properties, with significantly lower \u03c3, Cp, El, and Eg compared to healthy controls, reflecting impaired network organization, reduced local clustering, and inefficient global communication. Following rTMS, small-worldness (\u03c3), local efficiency (El), and global efficiency (Eg) showed significant improvement, suggesting partial restoration of network efficiency. Functional connectivity analyses revealed significant reductions in hyperconnectivity between the right middle temporal gyrus (MTG) and superior putamen, as well as between the left TPJ and left lateral prefrontal cortex (LPFC). Notably, responders showed greater connectivity changes, which were correlated with AVH severity reduction, highlighting the role of network modulation in treatment response. These findings support the network dysregulation model of AVH in schizophrenia and demonstrate that rTMS can modulate AVH-related connectivity, partially restoring network efficiency. The inclusion of HCs provides evidence that rTMS-induced changes align with normative network patterns, and the responder analysis suggests that connectivity modulation is linked to clinical improvement. This study offers new insights into the neurobiological mechanisms of rTMS treatment and underscores the need for biomarker-driven, individualized neuromodulation strategies for schizophrenia.",
+  "phase_mapping": {
+    "phase": 13,
+    "phase_name": "Daimon"
+  },
+  "bridge_tags": [
+    "voice-hearing",
+    "inner-speech",
+    "daimon",
+    "auditory-hallucination",
+    "auditory",
+    "repetitive-transcranial-magnetic-stimulation-(rtms)",
+    "schizophrenia"
+  ],
+  "evaluation": "Quality pass v3 (score=37) \u2014 High-signal bridge paper for Daimon.",
+  "assets": {
+    "pdf_path": null,
+    "nxml_path": null
+  },
+  "tier": 2
+}

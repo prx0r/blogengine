@@ -1,0 +1,53 @@
+{
+  "work_id": "work:t2-pubmed-fetal-brain-activity-and-the-free-energy-principle",
+  "schema_version": 2,
+  "title": "Fetal brain activity and the free energy principle.",
+  "authors": [
+    {
+      "name": "Miyagi Y"
+    },
+    {
+      "name": "Hata T"
+    },
+    {
+      "name": "Miyake T"
+    }
+  ],
+  "publication": {
+    "year": 2023,
+    "type": "article",
+    "source": "PubMed/MEDLINE",
+    "language": "en",
+    "journal": "J Perinat Med"
+  },
+  "identifiers": {
+    "pmid": "37096665",
+    "doi": "10.1515/jpm-2023-0092"
+  },
+  "topics": [
+    "phase-6-6",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "tradition": [
+    "contemporary_science"
+  ],
+  "tier": 2,
+  "assets": {
+    "pdf_path": null,
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/37096665/",
+    "abstract": "OBJECTIVES: To study whether the free energy principle can explain fetal brain activity and the existence of fetal consciousness via a chaotic dimension derived using artificial intelligence. METHODS: In this observational study, we used a four-dimensional ultrasound technique obtained to collect images of fetal faces from pregnancies at 27-37 weeks of gestation, between February and December 2021. We developed an artificial intelligence classifier that recognizes fetal facial expressions, which"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_t2_search",
+    "retrieved_at": "2026-07-11"
+  },
+  "phase_mapping": {
+    "phase": 6,
+    "phase_name": "Dependent Arising",
+    "bridge_rationale": "Predictive processing — free energy principle, Bayesian brain, active inference, neural causality."
+  },
+  "evaluation": "Good (score=2.5)"
+}

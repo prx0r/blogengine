@@ -1,0 +1,55 @@
+{
+  "co_id": "co:uno_therapy3_t246_t253_policeman_a_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3_t246_t253_policeman_anxiety_causality",
+  "turn_index": 0,
+  "lineage": "Therapeutic",
+  "student_state": "fearful_disclosure",
+  "behavior_tags": [
+    "anxiety_report"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_03",
+    "function_name": "RM_03",
+    "mechanism_shape": "SYSTEM_DYNAMICS",
+    "teaching_actions": [
+      "validates_insight",
+      "identifies_mechanism",
+      "externalizes_superego"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.62,
+      "attunement": 0.8,
+      "style": 0.65,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_03",
+      "style_discrete": "LS_04",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "'I’m afraid.'—student presents as fearful disclosure. Teacher's move uses system_dynamics: 'It’s wonderful you notice. See how this punitive mechanism comes '. Strategy: validates insight, identifies mechanism, externalizes superego. Hypothesis: system_dynamics mechanism will create ask_deeper_question. Watching how student responds to this intervention.",
+  "accumulated_insight": "T1: Student says 'I’m afraid.' showing fearful_disclosure via anxiety_report. Teacher responds 'It’s wonderful you notice. See how this punitive mechanism comes ' using system_dynamics to validates insight, identifies mechanism, externalizes superego. Opening REMAKING move addresses fearful_disclosure. Predicting ask_deeper_question because system_dynamics interventions typically produce this response pattern.",
+  "abstract_pattern": "",
+  "visible_response": "It’s wonderful you notice.\nSee how this punitive mechanism comes in now to attack you just for taking your side instead of your father’s?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

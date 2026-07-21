@@ -1,0 +1,42 @@
+{
+  "work_id": "work:t2-pubmed-eeg-based-differentiation-of-forest-and-urban-walking-environments-using-machine-learning",
+  "schema_version": 2,
+  "title": "EEG-Based Differentiation of Forest and Urban Walking Environments Using Machine Learning.",
+  "publication": {
+    "year": 2025,
+    "type": "article",
+    "source": "PubMed/MEDLINE",
+    "language": "en",
+    "journal": "Annu Int Conf IEEE Eng Med Biol Soc"
+  },
+  "identifiers": {
+    "pmid": "41336374",
+    "doi": "10.1109/EMBC58623.2025.11253034"
+  },
+  "topics": [
+    "phase-15-ecology/animism",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "tradition": [
+    "contemporary_science"
+  ],
+  "tier": 2,
+  "assets": {
+    "pdf_path": null,
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/41336374/",
+    "abstract": "Understanding the impact of different environments on neural activity is essential for environmental neuroscience and cognitive research. This study investigated the effects of forest and urban walking on brain activity using electroencephalography (EEG). EEG data were collected from 30 participants before and after walks in both environments. Spectral analysis was used to extract features from Theta, Alpha, Beta, and Gamma frequency bands. Machine learning classifiers, including Random Forest, "
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_t2_search",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 15,
+    "phase_name": "Ecology/Animism",
+    "bridge_rationale": "Ecology/Animism — biophilia, nature connectedness, environmental neuroscience, neurobiophilia."
+  },
+  "evaluation": "Marginal (score=2.0)"
+}

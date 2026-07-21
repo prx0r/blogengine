@@ -1,0 +1,60 @@
+{
+  "co_id": "co:uno_gurdjeff2_t2082_t2085_wrong_se_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gurdjeff2_t2082_t2085_wrong_separation",
+  "turn_index": 0,
+  "lineage": "Gurdjieffian",
+  "student_state": "seeking_error_mechanism",
+  "behavior_tags": [
+    "requests_definition",
+    "seeks_clarification"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_03",
+    "function_name": "RM_03",
+    "mechanism_shape": "COMPARISON_CONTRAST",
+    "teaching_actions": [
+      "gives_concrete_example",
+      "defines_wrong_separation",
+      "defines_true_i_embryologically",
+      "warns_against_reification"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.65,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_04",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "request_clarification",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The mechanism definition works: wrong separation = hedonic/pleasure-based (mechanism), true 'i' = embryo/point (correct mechanism), gives: concrete example, warns: against reification. The student requests definition (seeking error mechanism), which shows they're seeking definition (wrong separation). They'll likely ask about validation next. Hypothesis: mechanism definitions trigger value questions—testable by tracking whether mechanism definitions lead to value inquiries.",
+  "accumulated_insight": "T1: Student requests definition ('You spoke about the possibility of a wrong separation. What did you mean by that?')—seeking error mechanism via requests definition and seeks clarification. They're seeking definition (wrong separation). The comparison_contrast mechanism defines: wrong separation = hedonic/pleasure-based (mechanism), true 'i' = embryo/point (correct mechanism), gives: concrete example, warns: against reification. Pattern: definition request → mechanism definition → [next: validation question]. Low confidence because definition requests typically trigger clarification requests.",
+  "abstract_pattern": "",
+  "visible_response": "Suppose I call everything I like 'I' and everything I dislike\n'Ouspensky', it would be a wrong separation.\nThe 'I' from which I\nobserve is a point, it has no material existence yet, it is only the embryo\nfrom which 'I' can grow It I give it material existence, it would be wrong.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:sufi-comparative-analysis",
+    "ro:steiner-tantraloka-parallels"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

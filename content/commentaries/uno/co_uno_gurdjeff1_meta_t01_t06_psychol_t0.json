@@ -1,0 +1,58 @@
+{
+  "co_id": "co:uno_gurdjeff1_meta_t01_t06_psychol_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gurdjeff1_meta_t01_t06_psychological_method_basics",
+  "turn_index": 0,
+  "lineage": "Gurdjieffian",
+  "student_state": "seeking_rule_of_method",
+  "behavior_tags": [
+    "methodological_inquiry",
+    "external_reference_frame"
+  ],
+  "pedagogy": {
+    "phase": "META",
+    "function_id": "UNKNOWN",
+    "function_name": "UNKNOWN",
+    "mechanism_shape": "NONE",
+    "teaching_actions": [
+      "validates_partial_insight",
+      "points_to_experience_as_criterion"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.5,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "request_clarification",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The validation works: partial insight (one aspect), recognition = direct experience (when you meet with it, you will know). The student is seeking rule of method (methodological inquiry), which shows they're seeking method rule. They'll likely attempt reduction next. Hypothesis: method validations trigger reduction attempts—testable by tracking whether method validations lead to reduction inquiries.",
+  "accumulated_insight": "T1: Student asks about method ('Do you mean that one is not guided by the external similarity of facts?')—seeking rule of method via methodological inquiry and external reference frame. They're seeking method rule (external similarity). The none mechanism validates: partial insight (one aspect), recognition = direct experience (when you meet with it, you will know). Pattern: method question → validation → [next: reduction attempt]. Medium confidence because method validations typically trigger clarification requests.",
+  "abstract_pattern": "",
+  "visible_response": "This is one aspect. If you meet with it, you will know what is psychological method\nand what is not.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:sufi-comparative-analysis",
+    "ro:steiner-tantraloka-parallels"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

@@ -1,0 +1,59 @@
+{
+  "co_id": "co:uno_gurdjeff2_t47_t51_vicious_circ_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gurdjeff2_t47_t51_vicious_circle",
+  "turn_index": 0,
+  "lineage": "Gurdjieffian",
+  "student_state": "testing_causal_efficacy",
+  "behavior_tags": [
+    "causal_inquiry",
+    "problem_solving_stance"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_06",
+    "function_name": "UM_06",
+    "mechanism_shape": "CONSTRAINT_COLLAPSE",
+    "teaching_actions": [
+      "warns_against_self-deception",
+      "attributes_success_to_chance",
+      "predicts_same_result_despite_change"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.62,
+      "attunement": 0.2,
+      "style": 0.65,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_01",
+      "style_discrete": "LS_04",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "resist_intellectually",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The warning/prediction works: self-deception (attributing success to chance), predicts: same result despite change (mechanical state = inevitable result). The student is testing causal efficacy (problem solving stance), which shows they understand: changing actions = changes result. They'll likely recognize despair next. Hypothesis: causal efficacy warnings trigger despair recognition—testable by tracking whether causal efficacy warnings lead to despair recognition.",
+  "accumulated_insight": "T1: Student testing causal efficacy ('If I wish to obtain a particular result and fail, and if I then do the thing differently, will the result be still the same in spite of my effort?')—testing causal efficacy via causal inquiry and problem solving stance. They understand: changing actions = changes result (causal efficacy). The constraint_collapse mechanism warns: self-deception (attributing success to chance), predicts: same result despite change (mechanical state = inevitable result). Pattern: causal test → warning/prediction → [next: despair]. Low confidence because warnings can lead to resistance or recognition.",
+  "abstract_pattern": "",
+  "visible_response": "You must not deceive yourself.\nIf you do something and the result corresponds to\nyour expectations, it is simply luck, chance—that is all.\nAnd in some cases you may\ndo something entirely different and still have the same result.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:sufi-comparative-analysis",
+    "ro:steiner-tantraloka-parallels"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

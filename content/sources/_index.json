@@ -1,0 +1,151 @@
+{
+  "description": "Master index of all tradition-based source materials — full codebase recon complete",
+  "traditions": {
+    "platonism": {
+      "label": "Platonism",
+      "subcategories": {
+        "neoplatonism": {
+          "label": "Neoplatonism",
+          "folders": ["theurgy", "theurgy/proclus", "ficino", "dionysius"],
+          "key_topics": ["Plotinus", "Iamblichus", "Proclus Republic Commentary", "Porphyry", "Ficino", "Dionysius Celestial Hierarchies", "de Sol", "soul-vehicle", "theurgic ascent"],
+          "source_texts": ["proclus/", "ficino/"],
+          "scholars": ["Finamore", "Shaw", "Bochem", "Moritz", "Voss"]
+        },
+        "orphic": {
+          "label": "Orphic / Afterlife",
+          "key_topics": ["Orphic Gold Tablets", "Resurrection of the Body", "afterlife"]
+        },
+        "chaldean": {
+          "label": "Chaldean Oracles",
+          "key_topics": ["Chaldean Oracles (Majercik)", "Lewy Hans", "Stanley", "Hecate", "Iynges"]
+        }
+      }
+    },
+    "sufism": {
+      "label": "Sufism / Islamic Esotericism",
+      "subcategories": {
+        "illuminationist": {
+          "label": "Illuminationist (Ishraq)",
+          "key_topics": ["Suhrawardi", "Perfect Nature", "Man of Light", "Philosophy of Illumination", "Corbin", "alam al-mithal"],
+          "source_texts": ["corbin/", "suhrawardi/"]
+        },
+        "ibn-arabi": {
+          "label": "Ibn Arabi / Akbarian Tradition",
+          "key_topics": ["Ibn Arabi", "William Chittick", "wahdat al-wujud", "Perfect Man", "barzakh"],
+          "source_texts": ["ibn-arabi/"]
+        },
+        "rumi": {
+          "label": "Rumi / Sufi Poetry",
+          "key_topics": ["Rumi", "Sufism and the Path of Love", "Rumi bundle"]
+        }
+      }
+    },
+    "hermetica": {
+      "label": "Hermetica",
+      "key_topics": ["Corpus Hermeticum (Copenhaver)", "Poimandres", "Hermes Trismegistus", "Chaldean Oracles"]
+    },
+    "astrology": {
+      "label": "Astrology",
+      "subcategories": {
+        "hellenistic": {
+          "label": "Hellenistic Astrology",
+          "key_topics": ["Ptolemy Tetrabiblos", "Firmicus Maternus", "Vettius Valens"]
+        },
+        "classical": {
+          "label": "Classical & Medieval",
+          "key_topics": ["Abu Mashar", "Hephestion", "Hermeticism and astrology"],
+          "source_texts": ["abu-mashar/", "hephestion/"]
+        },
+        "renaissance": {
+          "label": "Renaissance Astrology",
+          "key_topics": ["Ficinian Astrology OS", "Kepler", "Advanced Forecasting Guide"],
+          "source_texts": ["kepler/"]
+        }
+      }
+    },
+    "occult": {
+      "label": "Occult / Western Esotericism",
+      "subcategories": {
+        "daimon": {
+          "label": "Daimon / HGA Contact",
+          "key_topics": ["Abramelin", "Liber Samekh", "Holy Daimon", "PGM", "HGA", "paredros", "Psellus"],
+          "files": ["sources/", "concepts/", "essays/", "spells/", "art/", "works/", "research-objects/", "daimoncontact.md"]
+        },
+        "grimoires": {
+          "label": "Grimoires & Ritual Magic",
+          "key_topics": ["Arbatel Olympic Spirits", "Heptameron", "Liber Juratus", "Ars Notoria", "Key of Solomon", "Lemegeton", "Agrippa", "Trithemius Steganographia", "John Dee Heptarchia"],
+          "files": ["arbatel/", "heptameron/", "juratus/", "dee/", "trithemius/"]
+        },
+        "scrying": {
+          "label": "Scrying / Divination",
+          "key_topics": ["Angela Voss", "scrying", "soul-vehicle", "Hades communication"]
+        }
+      }
+    },
+    "tantra": {
+      "label": "Tantra",
+      "subcategories": {
+        "classical": {
+          "label": "Classical Tantra",
+          "key_topics": ["Tantraloka (Dyczkowski)", "Abhinavagupta", "Kashmir Shaivism"]
+        }
+      }
+    },
+    "human-sciences": {
+      "label": "Human Sciences (Geisteswissenschaften)",
+      "description": "Psychology, critical theory, continental philosophy — the study of human meaning, consciousness, and culture",
+      "subcategories": {
+        "psychology": {
+          "label": "Depth Psychology",
+          "key_topics": ["Jung", "archetypes", "Freud", "active imagination"]
+        },
+        "critical-theory": {
+          "label": "Critical Theory",
+          "key_topics": ["Marx", "Baudrillard", "Lacan", "modernity critique"]
+        },
+        "continental-philosophy": {
+          "label": "Continental Philosophy",
+          "key_topics": ["Hegel", "phenomenology", "dialectics"]
+        },
+        "steiner": {
+          "label": "Steiner / Anthroposophy",
+          "key_topics": ["GA 224", "spiritual individualities", "soul", "higher knowledge"]
+        }
+      }
+    },
+    "exact-sciences": {
+      "label": "Exact Sciences",
+      "description": "Mathematics, physics, neuroscience — empirically grounded knowledge",
+      "subcategories": {
+        "neuroscience": {
+          "label": "Neuroscience & Consciousness",
+          "key_topics": ["Polkinghorne", "divine action", "psychedelic research", "hallucination studies"]
+        },
+        "mathematics": {
+          "label": "Mathematics",
+          "key_topics": ["geometry", "number theory", "symbolic logic"]
+        },
+        "physics": {
+          "label": "Physics",
+          "key_topics": ["quantum theory", "relativity", "cosmology"]
+        }
+      }
+    },
+    "tools": {
+      "label": "Tools / Reference",
+      "key_topics": ["gematria", "magic squares", "planetary names", "genius calculator"]
+    }
+  },
+    "light-philosophy": {
+      "label": "Light / Noetics / Illumination",
+      "description": "The convergence of light as metaphysical principle — Suhrawardi's Ishraq, Ficino's De Sole, the luminous body of Neoplatonism, the Man of Light, and modern noetic/consciousness studies.",
+      "key_topics": ["Ishraq", "De Sole", "luminous body", "ochêma", "Man of Light", "noetics", "perfect nature", "solar theurgy"],
+      "locations": ["sufism/illuminationist/", "platonism/neoplatonism/ficino/", "platonism/neoplatonism/theurgy/", "occult/daimon/spells/pgm/"]
+    },
+  "cross_cutting": {
+    "description": "Topics that span multiple traditions",
+    "theurgy": ["platonism/neoplatonism/theurgy/", "occult/daimon/spells/"],
+    "soul_vehicle": ["platonism/neoplatonism/theurgy/", "occult/scrying/"],
+    "perfect_nature_hga": ["sufism/illuminationist/", "occult/daimon/"]
+  }
+}

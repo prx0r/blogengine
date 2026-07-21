@@ -1,0 +1,58 @@
+{
+  "co_id": "co:uno_gurdjeff3_t36_t43_aim_is_to_aw_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gurdjeff3_t36_t43_aim_is_to_awake",
+  "turn_index": 0,
+  "lineage": "Gurdjieffian",
+  "student_state": "seeking_aim_formulation",
+  "behavior_tags": [
+    "asks_for_methodology",
+    "seeks_aim_criterion"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_03",
+    "function_name": "RM_03",
+    "mechanism_shape": "COMPARISON_CONTRAST",
+    "teaching_actions": [
+      "defines_aim_by_diagnosis",
+      "simplifies_aim_to_binary_choice"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.65,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_04",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The simplification works: aim by diagnosis (aim = opposite of sleep/mechanicalness), simplifies: aim to binary choice (sleep vs. awake). The student asks aim question (seeking aim formulation), which shows they understand: aim = needs formulation (methodology). They'll likely identify core problem next. Hypothesis: aim simplifications trigger problem identifications—testable by tracking whether aim simplifications lead to problem identifications.",
+  "accumulated_insight": "T1: Student asks aim question ('How can a man who realizes his position formulate his aim?')—seeking aim formulation via asks for methodology and seeks aim criterion. They understand: aim = needs formulation (methodology). The comparison_contrast mechanism defines: aim by diagnosis (aim = opposite of sleep/mechanicalness), simplifies: aim to binary choice (sleep vs. awake). Pattern: aim question → simplification → [next: problem identification]. Low confidence because simplifications can lead to deeper questions or problem identifications.",
+  "abstract_pattern": "",
+  "visible_response": "He will see that\nthe centre of gravity of his position is sleep;\nthen his aim will be to awake.\nOr if he sees his mechanicalness, his aim will be to get\nrid of mechanicalness.\nBoth come to the same thing.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:sufi-comparative-analysis",
+    "ro:steiner-tantraloka-parallels"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

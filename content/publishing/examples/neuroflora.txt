@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EEG Neuro-Flora Visualization (Brain Shape)</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap');
+        
+        :root {
+            --bg-color: #0a0c10;
+            --canvas-bg: #0c0e14;
+            --text-color: #cdd6f4;
+            --label-color: rgba(205, 214, 244, 0.6);
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #canvasContainer {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        canvas {
+            background-color: var(--canvas-bg);
+            display: block;
+        }
+
+        #infoLabel {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: var(--label-color);
+            pointer-events: none;
+            text-shadow: 0 0 5px var(--bg-color);
+        }
+        
+        #infoLabel span {
+            font-weight: 400;
+            color: var(--text-color);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="canvasContainer">
+        <canvas id="artCanvas"></canvas>
+        <div id="infoLabel">Visualizing: <span>Neural Network Build-up & Firing</span></div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- DOM Elements ---
+            const mainCanvas = document.getElementById('artCanvas');
+            const mainCtx = mainCanvas.getContext('2d');
+
+            // --- Offscreen Canvases for painterly effect ---
+            const backgroundCanvas = document.createElement('canvas');
+            const backgroundCtx = backgroundCanvas.getContext('2d');
+            const drawingCanvas = document.createElement('canvas');
+            const drawingCtx = drawingCanvas.getContext('2d');
+
+            // --- State Management ---
+            let activeDrawers = [];
+            let neurons = [];
+            let particles = [];
+            let brainBoundaryPath; 
+            let canonQueue = []; 
+
+            // --- Utilities ---
+            const rand = (min, max) => Math.random() * (max - min) + min;
+            const randChoice = (arr) => arr[Math.floor(Math.random() * arr.length)];
+
+            // --- Color Palettes ---
+            const PALETTES = [
+                { name: "Cyberpunk", path_hues: [180, 240], neuron_hue: 300, pulse_hue: 330, sync_hue: 330 }, 
+                { name: "Nebula", path_hues: [260, 320], neuron_hue: 220, pulse_hue: 180, sync_hue: 180 },   
+                { name: "Solar Flare", path_hues: [20, 50], neuron_hue: 60, pulse_hue: 45, sync_hue: 45 },    
+                { name: "Forest Spirit", path_hues: [90, 140], neuron_hue: 160, pulse_hue: 190, sync_hue: 190},
+            ];
+            let currentPalette = randChoice(PALETTES);
+
+            // --- Brain Shape Logic ---
+            function createBrainPath(width, height) {
+                const path = new Path2D();
+                const cx = width / 2; const cy = height / 2;
+                const rw = width * 0.35; const rh = height * 0.3;
+                path.moveTo(cx, cy - rh);
+                path.bezierCurveTo(cx + rw * 0.7, cy - rh * 1.2, cx + rw * 1.1, cy - rh * 0.5, cx + rw, cy);
+                path.bezierCurveTo(cx + rw * 1.1, cy + rh * 0.7, cx + rw * 0.5, cy + rh * 1.1, cx, cy + rh);
+                path.bezierCurveTo(cx - rw * 0.5, cy + rh * 1.1, cx - rw * 1.1, cy + rh * 0.7, cx - rw, cy);
+                path.bezierCurveTo(cx - rw * 1.1, cy - rh * 0.5, cx - rw * 0.7, cy - rh * 1.2, cx, cy - rh);
+                path.closePath();
+                return path;
+            }
+
+            function isPointInBrain(x, y) {
+                if (!brainBoundaryPath) return false;
+                return mainCtx.isPointInPath(brainBoundaryPath, x, y);
+            }
+
+            // --- Canvas Setup ---
+            function resizeCanvas() {
+                const w = window.innerWidth; const h = window.innerHeight;
+                const tempBg = document.createElement('canvas');
+                tempBg.width = backgroundCanvas.width; tempBg.height = backgroundCanvas.height;
+                if (backgroundCanvas.width > 0) tempBg.getContext('2d').drawImage(backgroundCanvas, 0, 0);
+                mainCanvas.width = w; mainCanvas.height = h;
+                drawingCanvas.width = w; drawingCanvas.height = h;
+                backgroundCanvas.width = w; backgroundCanvas.height = h;
+                if (tempBg.width > 0) backgroundCtx.drawImage(tempBg, 0, 0);
+                brainBoundaryPath = createBrainPath(w, h);
+            }
+            window.addEventListener('resize', resizeCanvas);
+            
+            // --- EEG Data Simulator ---
+            class EEGSimulator {
+                constructor() {
+                    this.frequencies = {
+                        delta: { freq: 2, amp: 1.5 }, theta: { freq: 6, amp: 0.8 },
+                        alpha: { freq: 10, amp: 0.7 }, beta:  { freq: 22, amp: 0.5 }
+                    };
+                    this.time = 0;
+                }
+                getNextValue() {
+                    let voltage = 0;
+                    Object.values(this.frequencies).forEach(f => {
+                        voltage += Math.sin(this.time * f.freq) * f.amp;
+                    });
+                    this.time += 0.05;
+                    return voltage;
+                }
+            }
+            const eegSimulator = new EEGSimulator();
+
+            // --- Particle Class for Sparks ---
+            class Particle {
+                constructor(x, y, hue) {
+                    this.x = x; this.y = y; this.vx = rand(-1, 1); this.vy = rand(-1, 1);
+                    this.lifespan = 20; this.age = 0; this.hue = hue;
+                }
+                get isFinished() { return this.age >= this.lifespan; }
+                draw(ctx) {
+                    this.age++; this.x += this.vx; this.y += this.vy;
+                    const alpha = 1.0 - (this.age / this.lifespan);
+                    ctx.fillStyle = `hsla(${this.hue}, 100%, 80%, ${alpha})`;
+                    ctx.beginPath(); ctx.arc(this.x, this.y, 1.5, 0, Math.PI * 2); ctx.fill();
+                }
+            }
+
+            // --- Neuron Class ---
+            class Neuron {
+                constructor(x, y) {
+                    this.x = x; this.y = y; this.vx = rand(-0.4, 0.4); this.vy = rand(-0.4, 0.4);
+                    this.radius = rand(3, 6);
+                    this.pulse = { maxRadius: rand(20, 40), speed: 0.1, phase: 0, active: false, duration: Math.PI };
+                    this.timeSinceLastPulse = rand(0, 150); this.refractoryPeriod = 120;
+                    this.isSynchronized = false;
+                }
+                fire(intensity = 1) {
+                    if (this.isSynchronized || this.timeSinceLastPulse < this.refractoryPeriod) return;
+                    this.pulse.speed = rand(0.05, 0.1) * (1 + (intensity / 4));
+                    this.pulse.active = true; this.pulse.phase = 0; this.timeSinceLastPulse = 0;
+                    const numToSpawn = Math.random() > 0.5 ? 2 : 1;
+                    for (let i = 0; i < numToSpawn; i++) {
+                        addNewNeuroFlora(this.x, this.y, rand(0, Math.PI * 2), false);
+                    }
+                }
+                update(globalPacemaker) {
+                    this.timeSinceLastPulse++;
+                    this.vx += rand(-0.01, 0.01); this.vy += rand(-0.01, 0.01);
+                    this.x += this.vx; this.y += this.vy;
+                    this.vx *= 0.995; this.vy *= 0.995;
+                    if (!isPointInBrain(this.x, this.y)) {
+                        this.vx *= -1.2; this.vy *= -1.2;
+                    }
+
+                    // Clustering and Synchronization Logic
+                    const neighbors = findNearestNeurons(this, 3);
+                    let syncCount = 0;
+                    const attractionRadius = 100;
+                    const repulsionRadius = 20;
+
+                    neighbors.forEach(n => {
+                        const dx = n.x - this.x; const dy = n.y - this.y;
+                        const dist = Math.hypot(dx, dy);
+                        if (dist < attractionRadius) {
+                            syncCount++;
+                            // Attraction force
+                            this.vx += dx * 0.0001; this.vy += dy * 0.0001;
+                        }
+                        if (dist < repulsionRadius) {
+                            // Repulsion force
+                            this.vx -= dx * 0.001; this.vy -= dy * 0.001;
+                        }
+                    });
+
+                    this.isSynchronized = syncCount >= 2;
+                }
+                draw(ctx, pacemakerValue) {
+                    if (this.isSynchronized) {
+                        const syncBrightness = 85 + 15 * pacemakerValue;
+                        ctx.fillStyle = `hsl(${currentPalette.sync_hue}, 100%, ${syncBrightness}%)`;
+                    } else {
+                        ctx.fillStyle = `hsl(${currentPalette.neuron_hue}, 100%, 85%)`;
+                    }
+                    ctx.beginPath(); ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2); ctx.fill();
+                    
+                    if (this.isSynchronized) {
+                        const pulseRadius = this.pulse.maxRadius * (0.6 + 0.4 * pacemakerValue);
+                        const alpha = 0.5 + 0.5 * pacemakerValue;
+                        ctx.beginPath(); ctx.arc(this.x, this.y, this.radius + pulseRadius, 0, Math.PI * 2);
+                        ctx.strokeStyle = `hsla(${currentPalette.sync_hue}, 100%, 80%, ${alpha})`;
+                        ctx.lineWidth = 2; ctx.stroke();
+                    } else if (this.pulse.active) {
+                        this.pulse.phase += this.pulse.speed;
+                        if (this.pulse.phase >= this.pulse.duration) { this.pulse.active = false; return; }
+                        const pulseRadius = this.pulse.maxRadius * Math.sin(this.pulse.phase);
+                        const alpha = 1.0 - (this.pulse.phase / this.pulse.duration);
+                        ctx.beginPath(); ctx.arc(this.x, this.y, this.radius + pulseRadius, 0, Math.PI * 2);
+                        ctx.strokeStyle = `hsla(${currentPalette.pulse_hue}, 100%, 80%, ${alpha})`;
+                        ctx.lineWidth = 3; ctx.stroke();
+                    }
+                }
+            }
+
+            // --- Data-Driven Turtle Drawer ---
+            class NeuroFloraDrawer {
+                constructor(startX, startY, initialHeading, canSpawnNeuron = true) {
+                    this.turtle = { x: startX, y: startY, heading: initialHeading, step: rand(2, 4) };
+                    this.lifetime = rand(60, 150); this.age = 0; this.canSpawnNeuron = canSpawnNeuron;
+                }
+                get isFinished() { return this.age >= this.lifetime; }
+                drawFrame(ctx, eegValue) {
+                    if (this.isFinished) return;
+                    this.age++; const turnAngle = eegValue * 0.08; this.turtle.heading += turnAngle;
+                    const magnitude = Math.abs(eegValue);
+                    const hueRange = currentPalette.path_hues[1] - currentPalette.path_hues[0];
+                    const hue = currentPalette.path_hues[0] + (magnitude * 10) % hueRange;
+                    const lightness = Math.min(90, 60 + magnitude * 8); const lineWidth = 0.8 + magnitude * 0.6;
+                    ctx.strokeStyle = `hsl(${hue}, 100%, ${lightness}%)`; ctx.lineWidth = lineWidth;
+                    ctx.lineCap = 'round'; ctx.beginPath(); ctx.moveTo(this.turtle.x, this.turtle.y);
+                    this.turtle.x += this.turtle.step * Math.cos(this.turtle.heading);
+                    this.turtle.y += this.turtle.step * Math.sin(this.turtle.heading);
+                    ctx.lineTo(this.turtle.x, this.turtle.y); ctx.stroke();
+                    if (magnitude > 3.0) particles.push(new Particle(this.turtle.x, this.turtle.y, hue));
+                    if (!isPointInBrain(this.turtle.x, this.turtle.y)) this.age = this.lifetime;
+                }
+            }
+            
+            // --- Firing Pattern Functions ---
+            function findNearestNeurons(centerNeuron, count) {
+                return neurons.filter(n => n !== centerNeuron)
+                    .sort((a, b) => Math.hypot(a.x - centerNeuron.x, a.y - centerNeuron.y) - Math.hypot(b.x - centerNeuron.x, b.y - centerNeuron.y))
+                    .slice(0, count);
+            }
+            function fireCluster(intensity) {
+                const centerNeuron = randChoice(neurons.filter(n => !n.isSynchronized));
+                if (!centerNeuron) return;
+                centerNeuron.fire(intensity);
+                const neighbors = findNearestNeurons(centerNeuron, 2);
+                neighbors.forEach(neuron => neuron.fire(intensity * 0.8));
+                for (let i = 0; i < 10; i++) particles.push(new Particle(centerNeuron.x, centerNeuron.y, currentPalette.pulse_hue));
+            }
+            function fireCanon(intensity) {
+                const unSyncedNeurons = neurons.filter(n => !n.isSynchronized);
+                if (unSyncedNeurons.length < 3) return;
+                const canonNeurons = new Set();
+                while(canonNeurons.size < 3) canonNeurons.add(randChoice(unSyncedNeurons));
+                Array.from(canonNeurons).forEach((neuron, i) => {
+                    canonQueue.push({ neuron: neuron, intensity: intensity, delay: i * 10 });
+                });
+            }
+            function fireIndependent(intensity) {
+                const fireProbability = (intensity - 2.5) / 4;
+                neurons.forEach(neuron => {
+                    if (Math.random() < fireProbability) neuron.fire(intensity);
+                });
+            }
+
+            // --- Main Application Logic ---
+            function addNewNeuroFlora(x, y, heading, canSpawn = true) {
+                activeDrawers.push(new NeuroFloraDrawer(x, y, heading, canSpawn));
+            }
+
+            let frameCount = 0;
+            function mainAnimationLoop() {
+                if (mainCanvas.width === 0 || mainCanvas.height === 0) { requestAnimationFrame(mainAnimationLoop); return; }
+                frameCount++;
+                const currentEEGValue = eegSimulator.getNextValue();
+                
+                // 40Hz Pacemaker for synchronized clusters
+                const pacemakerValue = (1 + Math.sin(Date.now() * 0.04 * Math.PI * 2)) / 2; // Oscillates between 0 and 1
+
+                backgroundCtx.globalCompositeOperation = 'source-over';
+                backgroundCtx.fillStyle = 'rgba(12, 14, 20, 0.08)';
+                backgroundCtx.fillRect(0, 0, backgroundCanvas.width, backgroundCanvas.height);
+
+                drawingCtx.clearRect(0, 0, drawingCanvas.width, drawingCanvas.height);
+                
+                activeDrawers.forEach(drawer => drawer.drawFrame(drawingCtx, currentEEGValue));
+                neurons.forEach(neuron => { neuron.update(pacemakerValue); neuron.draw(drawingCtx, pacemakerValue); });
+                particles.forEach(p => p.draw(drawingCtx));
+                
+                for (let i = canonQueue.length - 1; i >= 0; i--) {
+                    const item = canonQueue[i]; item.delay--;
+                    if (item.delay <= 0) { item.neuron.fire(item.intensity); canonQueue.splice(i, 1); }
+                }
+
+                const eegMagnitude = Math.abs(currentEEGValue);
+                if (eegMagnitude > 2.6 && neurons.length > 3 && canonQueue.length === 0) {
+                    const patternRoll = Math.random();
+                    if (patternRoll < 0.25) fireCanon(eegMagnitude);
+                    else if (patternRoll < 0.60) fireCluster(eegMagnitude);
+                    else fireIndependent(eegMagnitude);
+                }
+
+                if (frameCount % 600 === 0) currentPalette = randChoice(PALETTES.filter(p => p.name !== currentPalette.name));
+
+                backgroundCtx.drawImage(drawingCanvas, 0, 0); 
+                mainCtx.clearRect(0, 0, mainCanvas.width, mainCanvas.height);
+                mainCtx.drawImage(backgroundCanvas, 0, 0);
+                mainCtx.drawImage(drawingCanvas, 0, 0);
+                
+                const finishedDrawers = activeDrawers.filter(d => d.isFinished);
+                finishedDrawers.forEach(d => {
+                    if (d.canSpawnNeuron && isPointInBrain(d.turtle.x, d.turtle.y)) {
+                        neurons.push(new Neuron(d.turtle.x, d.turtle.y));
+                    }
+                });
+                activeDrawers = activeDrawers.filter(d => !d.isFinished);
+                particles = particles.filter(p => !p.isFinished);
+                
+                if (neurons.length > 70) neurons.shift();
+
+                requestAnimationFrame(mainAnimationLoop);
+            }
+
+            // --- Start the generation process ---
+            resizeCanvas();
+            setInterval(() => {
+                const cx = mainCanvas.width / 2; const cy = mainCanvas.height / 2;
+                const rh = mainCanvas.height * 0.3;
+                addNewNeuroFlora(rand(cx - 50, cx + 50), cy + rh, -Math.PI / 2 + rand(-0.6, 0.6), true);
+            }, 800);
+
+            mainAnimationLoop();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+{
+  "ro_id": "ro:spacetime-foam",
+  "schema_version": 1,
+  "title": "Spacetime Foam: A Review \u2014 Carlip et al.",
+  "subtitle": "Wheeler's spacetime foam \u2014 quantum fluctuations of geometry at the Planck scale, observational constraints, and the topology of the quantum vacuum",
+  "family": "thinker-topic",
+  "status": "stub",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "A comprehensive review of Wheeler's spacetime foam (1962-2022): the Planck-scale quantum fluctuations of geometry that underlie classical space-time, and the observational programs constraining foa...",
+    "scope": "Covers the history of the foam concept, Wheeler's original arguments, quantum fluctuations of the metric, topology change, Einstein metrics, holographic foam models, and observational constraints from gamma-ray astronomy and interferometry.",
+    "traditions": [
+      "physics",
+      "quantum-gravity",
+      "spacetime-foam"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "spacetime-foam-review-2022",
+      "tier": 1,
+      "label": "Carlip et al. \u2014 Spacetime Foam: A Review (2022). arXiv:2209.14282 [gr-qc]. 26 pages. PDF in corpus.",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "wheeler_foam",
+        "quantum_fluctuations",
+        "topology_change",
+        "observational_constraints"
+      ],
+      "sections_affected": [
+        "theory"
+      ],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "theory",
+      "subsection": "foam_as_maya",
+      "kind": "synthesis",
+      "text": "Spacetime foam IS M\u0101y\u0101 tattva (6) at the physical level. M\u0101y\u0101 is the 'veil' \u2014 the point at which pure geometry (the amplituhedron's positive cells) becomes the fluctuating foam of emergent space-time. The foam is not a defect of reality \u2014 it IS the transition from L\u2081 (pure principles) to L\u2082 (causal accessibility). Wheeler's foam IS the veil, experienced as the Planck-scale turbulence of the vacuum. Consciousness, in its ordinary state, averages over the foam to produce classical space-time. In nonordinary states, the averaging fails and the foam is experienced directly.",
+      "source_ids": [
+        "spacetime-foam-review-2022"
+      ],
+      "topics": [
+        "foam",
+        "maya",
+        "veil",
+        "spacetime",
+        "quantum_fluctuation"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "theory",
+      "subsection": "foam_as_grace_medium",
+      "kind": "synthesis",
+      "text": "The foam fluctuations are non-computable \u2014 they cannot be predicted from prior states. Each foam fluctuation IS a moment of genuine novelty. This IS the physical substrate of \u015baktip\u0101ta (grace). Grace is not supernatural \u2014 it IS the foam's irreducible randomness expressing itself as the freedom of the system. The five degrees of \u015baktip\u0101ta correspond to five levels of foam coupling: from complete coupling (t\u012bvrat\u012bvra \u2014 the foam directly shapes experience) to minimal coupling (manda \u2014 the foam is averaged out by strong classical constraints).",
+      "source_ids": [
+        "spacetime-foam-review-2022"
+      ],
+      "topics": [
+        "grace",
+        "saktipata",
+        "foam",
+        "novelty",
+        "freedom"
+      ],
+      "status": "active"
+    }
+  ],
+  "coverage": {
+    "theory": {
+      "status": "minimal",
+      "sources": [
+        "spacetime-foam-review-2022"
+      ],
+      "passage_count": 2,
+      "estimated_completeness": 0.3,
+      "gaps": [
+        "Full extraction of the 26-page review needed; detailed mapping of foam models to tattva levels"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "coverage_gap",
+      "title": "Full extraction needed",
+      "description": "The review covers 60+ years of foam research. Only the most philosophically relevant passages extracted.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial RO for the spacetime foam review. 2 passages mapping foam to M\u0101y\u0101 and grace.",
+      "sources_added": [
+        "spacetime-foam-review-2022"
+      ],
+      "passage_count": 2,
+      "status": "draft"
+    }
+  ],
+  "appendices": [],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created. Spacetime foam is now formally mapped to M\u0101y\u0101 tattva and \u015baktip\u0101ta.",
+      "sources_total": 1,
+      "passages_total": 2
+    }
+  ]
+}

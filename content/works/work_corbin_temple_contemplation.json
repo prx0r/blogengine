@@ -1,0 +1,79 @@
+{
+  "work_id": "work:corbin-temple-contemplation",
+  "schema_version": 1,
+  "title": "Temple and Contemplation",
+  "authors": [
+    {
+      "name": "Henry Corbin",
+      "author_id": "author:henry-corbin"
+    }
+  ],
+  "publication": {
+    "year": 1986,
+    "type": "book",
+    "publisher": "Kegan Paul International",
+    "language": "en"
+  },
+  "identifiers": {
+    "doi": null,
+    "openalex_id": null,
+    "isbn": "978-0710302531"
+  },
+  "topics": [
+    "imaginal_temple",
+    "contemplation",
+    "shii_spirituality",
+    "sacred_architecture",
+    "inner_heaven"
+  ],
+  "tradition": [
+    "shii_islam",
+    "sufism",
+    "iranian_philosophy"
+  ],
+  "relations": [
+    {
+      "predicate": "develops",
+      "target_id": "concept:imaginal-temple",
+      "confidence": 0.95
+    },
+    {
+      "predicate": "related_to",
+      "target_id": "concept:mundus-imaginalis",
+      "confidence": 0.9
+    },
+    {
+      "predicate": "related_to",
+      "target_id": "concept:contemplation",
+      "confidence": 0.9
+    }
+  ],
+  "assets": {
+    "pdf_path": "library/corbin/temple-and-contemplation.pdf",
+    "text_path": null,
+    "source_url": "https://traditionalhikma.com/wp-content/uploads/2015/08/Temple-and-Contemplation-by-Henry-Corbin.pdf"
+  },
+  "provenance": {
+    "access_status": "rights_check",
+    "oa_status": "unknown",
+    "license": null,
+    "version": "unknown",
+    "host_type": "website",
+    "sha256": null,
+    "page_count": null,
+    "file_size_bytes": 7158642,
+    "retrieved_at": "2026-07-11T06:55:00Z",
+    "validation_confidence": 0.9
+  },
+  "analysis": {
+    "summary": "Corbin explores the correspondence between the terrestrial temple and the celestial temple, the inner sanctuary of the heart as the true place of contemplation, and the imaginal world as the intermediate realm where contemplative vision takes place.",
+    "argument": "The temple is not merely a building but a symbol of the inner structure of contemplation. The true temple is the heart of the contemplative, which becomes the place of theophany. The architecture of sacred space mirrors the architecture of the imaginal world.",
+    "quality_score": 0.9,
+    "tier": 1,
+    "tier_label": "primary source"
+  },
+  "commentary_on": {},
+  "scholarly_contribution": {},
+  "relevance_to_ros": {},
+  "tier": 2
+}

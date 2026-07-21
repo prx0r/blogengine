@@ -1,0 +1,59 @@
+{
+  "work_id": "work:t2-pubmed-federated-inference-and-belief-sharing",
+  "schema_version": 2,
+  "title": "Federated inference and belief sharing.",
+  "authors": [
+    {
+      "name": "Friston KJ"
+    },
+    {
+      "name": "Parr T"
+    },
+    {
+      "name": "Heins C"
+    },
+    {
+      "name": "Constant A"
+    },
+    {
+      "name": "Friedman D"
+    }
+  ],
+  "publication": {
+    "year": 2024,
+    "type": "article",
+    "source": "PubMed/MEDLINE",
+    "language": "en",
+    "journal": "Neurosci Biobehav Rev"
+  },
+  "identifiers": {
+    "pmid": "38056542",
+    "doi": "10.1016/j.neubiorev.2023.105500"
+  },
+  "topics": [
+    "phase-6-federated-inference-",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "tradition": [
+    "contemporary_science"
+  ],
+  "tier": 2,
+  "assets": {
+    "pdf_path": "t2-PMC11139662_Federated_inference_and_belief_sharing.pdf",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/38056542/",
+    "abstract": "This paper concerns the distributed intelligence or federated inference that emerges under belief-sharing among agents who share a common world-and world model. Imagine, for example, several animals keeping a lookout for predators. Their collective surveillance rests upon being able to communicate their beliefs-about what they see-among themselves. But, how is this possible? Here, we show how all the necessary components arise from minimising free energy. We use numerical studies to simulate the"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_t2_search",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 6,
+    "phase_name": "Dependent-arising",
+    "bridge_rationale": "Dependent arising \u2014 predictive processing, free energy principle, active inference, Bayesian brain, prediction error in perception and action."
+  },
+  "evaluation": "Excellent (score=10.0)"
+}

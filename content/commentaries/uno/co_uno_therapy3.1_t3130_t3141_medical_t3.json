@@ -1,0 +1,55 @@
+{
+  "co_id": "co:uno_therapy3.1_t3130_t3141_medical_t3",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3.1_t3130_t3141_medical_leave_denial",
+  "turn_index": 3,
+  "lineage": "Therapeutic",
+  "student_state": "clarity",
+  "behavior_tags": [
+    "realization",
+    "logical_acceptance"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_02",
+    "function_name": "RM_02",
+    "mechanism_shape": "SUBJECT_OBJECT_INVERSION",
+    "teaching_actions": [
+      "interprets_dynamic",
+      "re-owns_punishment"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.62,
+      "attunement": 0.5,
+      "style": 0.35,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_02",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "no_clear_effect",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "Turn 4: 'Eighty pounds.  I see what you mean. If I can carry only twenty, I can'. Student now in clarity. Continuing with subject_object_inversion approach. Building on previous turn's foundation.",
+  "accumulated_insight": "T4: Student: 'Eighty pounds.  I see what you mean. If I can carry only twenty, I can'. Shift from objective_report to clarity. Teacher applies subject_object_inversion mechanism with interprets dynamic, re-owns punishment. Mid-episode progression in REMAKING phase.",
+  "abstract_pattern": "",
+  "visible_response": "It sounds like you are relieved not to have to go, but you punish yourself for not going. You imagine they would be angry with you and punish you, but it is you who is critical and punitive to yourself. Do you see what I mean?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

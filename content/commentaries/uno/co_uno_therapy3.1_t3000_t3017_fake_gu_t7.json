@@ -1,0 +1,49 @@
+{
+  "co_id": "co:uno_therapy3.1_t3000_t3017_fake_gu_t7",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3.1_t3000_t3017_fake_guilt_self_attack",
+  "turn_index": 7,
+  "lineage": "Therapeutic",
+  "student_state": "unknown",
+  "behavior_tags": [],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UNKNOWN",
+    "function_name": "UNKNOWN",
+    "mechanism_shape": "NONE",
+    "teaching_actions": [],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.15,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_01",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "go_along_compliantly",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "Turn 8: 'It’s true. I didn’t actually tell her I was sorry.'. Student now in unknown. Continuing with none approach. Building on previous turn's foundation.",
+  "accumulated_insight": "T8: Student: 'It’s true. I didn’t actually tell her I was sorry.'. Shift from naivety to unknown. Teacher applies none mechanism with none. Mid-episode progression in UNMAKING phase.",
+  "abstract_pattern": "",
+  "visible_response": "It’s as if your self-attack was a substitute for apologizing to her.",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

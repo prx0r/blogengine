@@ -1,0 +1,61 @@
+{
+  "co_id": "co:uno_gurdjeff1_meta_t43_t50_alterat_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gurdjeff1_meta_t43_t50_alteration_control_law_of_accident",
+  "turn_index": 0,
+  "lineage": "Gurdjieffian",
+  "student_state": "checking_teacher_reliability",
+  "behavior_tags": [
+    "asks_for_authenticity_check",
+    "questions_stability"
+  ],
+  "pedagogy": {
+    "phase": "META",
+    "function_id": "UNKNOWN",
+    "function_name": "UNKNOWN",
+    "mechanism_shape": "STRUCTURAL_ANALOGY",
+    "teaching_actions": [
+      "denies_alteration",
+      "clarifies_flexibility_rule",
+      "uses_analogy"
+    ],
+    "traps_avoided": [
+      "skeptical_inquiry"
+    ],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.5,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "request_clarification",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The denial/flexibility rule works: not altered, but flexibility rule (start from different point = not alteration), analogy (organic system: start from any point). The student asked authenticity check (checking teacher reliability), which shows they're checking teacher reliability. They'll likely ask about control next. Hypothesis: authenticity checks trigger power hierarchy questions—testable by tracking whether authenticity checks lead to power hierarchy inquiries.",
+  "accumulated_insight": "T1: Student asks authenticity check ('Have you altered the teaching much?')—checking teacher reliability via asks for authenticity check and questions stability. They're checking teacher reliability (alteration). The structural_analogy mechanism denies: not altered, but flexibility rule (start from different point = not alteration), analogy (organic system: start from any point). Pattern: authenticity check → denial/flexibility rule → [next: control question]. Medium confidence because authenticity checks typically trigger clarification requests.",
+  "abstract_pattern": "",
+  "visible_response": "I have not altered it.\nBut I prefer sometimes to start from a different point.\nIn this\nsystem, as in any organic system, one can start from any point—this is not an\nalteration.\nEverything else remains the same, but I prefer to start with the\npsychological side.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:sufi-comparative-analysis",
+    "ro:steiner-tantraloka-parallels"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

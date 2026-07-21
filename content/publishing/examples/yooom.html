@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Emergent Consciousness Alien Evolution</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"></script>
+</head>
+<body>
+<script>
+let entities = [];
+let redKiller, blueKiller;
+let stars = [];
+const NUM_ENTITIES = 50;
+const GENERATION_TIME = 30 * 60; // 30 seconds at 60 FPS
+let generation = 0;
+let frameCount = 0;
+let gameState = 'running'; // 'running', 'killersConverge', 'victoryDance'
+let victoryTimer = 0;
+const VICTORY_DURATION = 5 * 60; // 5 seconds at 60 FPS
+
+class Entity {
+  constructor(x, y, speed, cohesion, evasion) {
+    this.x = x;
+    this.y = y;
+    this.vx = random(-1, 1);
+    this.vy = random(-1, 1);
+    this.speed = speed; // 0.5 to 2.0
+    this.cohesion = cohesion; // 0.0 to 1.0
+    this.evasion = evasion; // 0.0 to 1.0
+    this.fitness = 0;
+    this.alive = true;
+  }
+
+  update() {
+    if (!this.alive) return;
+    this.fitness++;
+    
+    // Rule 1: Evade closest killer
+    let dRed = dist(this.x, this.y, redKiller.x, redKiller.y);
+    let dBlue = dist(this.x, this.y, blueKiller.x, blueKiller.y);
+    let closestKiller = dRed < dBlue ? redKiller : blueKiller;
+    let d = min(dRed, dBlue);
+    let evadeDistance = 100 * (1 + this.evasion);
+    if (d < evadeDistance) {
+      let angle = atan2(this.y - closestKiller.y, this.x - closestKiller.x);
+      this.vx += cos(angle) * this.speed * 0.05 * this.evasion;
+      this.vy += sin(angle) * this.speed * 0.05 * this.evasion;
+    }
+    
+    // Rule 2: BOIDS (cohesion, alignment, separation)
+    if (this.cohesion > 0.3) {
+      let nearby = entities.filter(e => e.alive && e !== this && dist(this.x, this.y, e.x, e.y) < 50);
+      if (nearby.length > 0) {
+        // Cohesion
+        let avgX = nearby.reduce((sum, e) => sum + e.x, 0) / nearby.length;
+        let avgY = nearby.reduce((sum, e) => sum + e.y, 0) / nearby.length;
+        this.vx += (avgX - this.x) * this.cohesion * 0.01;
+        this.vy += (avgY - this.y) * this.cohesion * 0.01;
+        // Alignment
+        let avgVx = nearby.reduce((sum, e) => sum + e.vx, 0) / nearby.length;
+        let avgVy = nearby.reduce((sum, e) => sum + e.vy, 0) / nearby.length;
+        this.vx += (avgVx - this.vx) * 0.05;
+        this.vy += (avgVy - this.vy) * 0.05;
+        // Separation
+        let sepX = 0, sepY = 0;
+        for (let e of nearby) {
+          let d = dist(this.x, this.y, e.x, e.y);
+          if (d < 20) {
+            sepX += (this.x - e.x) / (d + 0.1);
+            sepY += (this.y - e.y) / (d + 0.1);
+          }
+        }
+        this.vx += sepX * 0.05;
+        this.vy += sepY * 0.05;
+      }
+    }
+    
+    // Normalize velocity
+    let mag = sqrt(this.vx * this.vx + this.vy * this.vy);
+    if (mag > 0) {
+      this.vx = (this.vx / mag) * this.speed;
+      this.vy = (this.vy / mag) * this.speed;
+    }
+    
+    this.x += this.vx;
+    this.y += this.vy;
+    
+    // Wrap around
+    if (this.x < 0) this.x += width;
+    if (this.x > width) this.x -= width;
+    if (this.y < 0) this.y += height;
+    if (this.y > height) this.y -= height;
+  }
+
+  draw() {
+    if (!this.alive) return;
+    let c = this.cohesion * 255;
+    fill(200, c, 255, 150);
+    noStroke();
+    beginShape();
+    for (let i = 0; i < 6; i++) {
+      let angle = TWO_PI * i / 6;
+      let r = 3 + sin(frameCount * 0.1 + this.x + this.y) * 1.5;
+      vertex(this.x + cos(angle) * r, this.y + sin(angle) * r);
+    }
+    endShape(CLOSE);
+    // Trail
+    fill(200, c, 255, 50);
+    ellipse(this.x, this.y, 10, 10);
+  }
+}
+
+class Killer {
+  constructor(x, y, color, speed = 2.5) {
+    this.x = x;
+    this.y = y;
+    this.speed = speed;
+    this.vx = 0;
+    this.vy = 0;
+    this.size = 15;
+    this.color = color;
+    this.active = true;
+    this.particles = [];
+  }
+
+  update() {
+    if (!this.active) return;
+    
+    if (gameState === 'running') {
+      // Chase nearest entity
+      let nearest = entities.filter(e => e.alive).sort((a, b) => 
+        dist(this.x, this.y, a.x, a.y) - dist(this.x, this.y, b.x, b.y)
+      )[0];
+      if (nearest) {
+        let angle = atan2(nearest.y - this.y, nearest.x - this.x);
+        this.vx = cos(angle) * this.speed;
+        this.vy = sin(angle) * this.speed;
+        this.x += this.vx;
+        this.y += this.vy;
+        
+        // Consume if close
+        if (dist(this.x, this.y, nearest.x, nearest.y) < this.size / 2 + 3) {
+          nearest.alive = false;
+          this.size += 0.5;
+          // Add particles
+          for (let i = 0; i < 5; i++) {
+            this.particles.push({
+              x: nearest.x,
+              y: nearest.y,
+              vx: random(-2, 2),
+              vy: random(-2, 2),
+              life: 30
+            });
+          }
+        }
+      }
+    } else if (gameState === 'killersConverge') {
+      // Move toward other killer
+      let other = this === redKiller ? blueKiller : redKiller;
+      if (other.active) {
+        let angle = atan2(other.y - this.y, other.x - this.x);
+        this.vx = cos(angle) * this.speed;
+        this.vy = sin(angle) * this.speed;
+        this.x += this.vx;
+        this.y += this.vy;
+      }
+    }
+    
+    // Update particles
+    this.particles = this.particles.filter(p => p.life > 0);
+    for (let p of this.particles) {
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life--;
+    }
+  }
+
+  draw() {
+    if (!this.active) return;
+    // Draw particles
+    fill(this.color.levels[0], this.color.levels[1], this.color.levels[2], 100);
+    noStroke();
+    for (let p of this.particles) {
+      ellipse(p.x, p.y, 3, 3);
+    }
+    // Draw alien
+    fill(this.color);
+    noStroke();
+    beginShape();
+    for (let i = 0; i < 10; i++) {
+      let angle = TWO_PI * i / 10;
+      let r = this.size / 2 * (1 + 0.4 * sin(frameCount * 0.07 + i * 0.5));
+      vertex(this.x + cos(angle) * r, this.y + sin(angle) * r);
+    }
+    endShape(CLOSE);
+    // Glow effect
+    fill(this.color.levels[0], this.color.levels[1], this.color.levels[2], 70);
+    ellipse(this.x, this.y, this.size * 1.8, this.size * 1.8);
+  }
+
+  victoryDance() {
+    let t = (frameCount - victoryTimer) * 0.1;
+    this.x += sin(t) * 3;
+    this.y += cos(t) * 3;
+    this.size = 30 + sin(t * 0.3) * 7;
+    // Color pulse
+    let pulse = 200 + sin(t * 0.5) * 55;
+    this.color = color(this.color.levels[0], this.color.levels[1], this.color.levels[2], pulse);
+    // Add particles
+    if (frameCount % 10 === 0) {
+      this.particles.push({
+        x: this.x,
+        y: this.y,
+        vx: random(-2, 2),
+        vy: random(-2, 2),
+        life: 20
+      });
+    }
+  }
+}
+
+function evolvePopulation() {
+  let survivors = entities.filter(e => e.alive).sort((a, b) => b.fitness - a.fitness).slice(0, NUM_ENTITIES / 2);
+  entities = [];
+  for (let i = 0; i < NUM_ENTITIES; i++) {
+    let parent1 = survivors.length ? random(survivors) : new Entity(random(width), random(height), random(0.5, 2.0), random(0.0, 1.0), random(0.0, 1.0));
+    let parent2 = survivors.length ? random(survivors) : new Entity(random(width), random(height), random(0.5, 2.0), random(0.0, 1.0), random(0.0, 1.0));
+    let child = new Entity(
+      random(width),
+      random(height),
+      (parent1.speed + parent2.speed) / 2 + random(-0.1, 0.1),
+      (parent1.cohesion + parent2.cohesion) / 2 + random(-0.1, 0.1),
+      (parent1.evasion + parent2.evasion) / 2 + random(-0.1, 0.1)
+    );
+    child.speed = constrain(child.speed, 0.5, 2.0);
+    child.cohesion = constrain(child.cohesion, 0.0, 1.0);
+    child.evasion = constrain(child.evasion, 0.0, 1.0);
+    entities.push(child);
+  }
+  generation++;
+}
+
+function checkGameState() {
+  if (gameState !== 'running') return;
+  if (entities.every(e => !e.alive)) {
+    gameState = 'killersConverge';
+  }
+}
+
+function checkKillerCollision() {
+  if (gameState !== 'killersConverge') return;
+  if (dist(redKiller.x, redKiller.y, blueKiller.x, blueKiller.y) < (redKiller.size + blueKiller.size) / 2) {
+    if (redKiller.size > blueKiller.size) {
+      redKiller.size += blueKiller.size * 0.5;
+      blueKiller.active = false;
+    } else {
+      blueKiller.size += redKiller.size * 0.5;
+      redKiller.active = false;
+    }
+    gameState = 'victoryDance';
+    victoryTimer = frameCount;
+  }
+}
+
+function setup() {
+  createCanvas(800, 600);
+  // Initialize stars
+  for (let i = 0; i < 100; i++) {
+    stars.push({
+      x: random(width),
+      y: random(height),
+      size: random(1, 3)
+    });
+  }
+  for (let i = 0; i < NUM_ENTITIES; i++) {
+    entities.push(new Entity(random(width), random(height), random(0.5, 2.0), random(0.0, 1.0), random(0.0, 1.0)));
+  }
+  redKiller = new Killer(width / 2, height / 2, color(255, 0, 0, 200));
+  blueKiller = new Killer(width / 3, height / 3, color(0, 0, 255, 200));
+}
+
+function draw() {
+  // Draw background with nebula
+  background(10, 20, 30, 50);
+  for (let x = 0; x < width; x += 50) {
+    for (let y = 0; y < height; y += 50) {
+      let n = noise(x * 0.005 + frameCount * 0.01, y * 0.005);
+      fill(20, 30, 50, n * 50);
+      rect(x, y, 50, 50);
+    }
+  }
+  // Draw stars
+  fill(255, 255, 200, 150);
+  for (let star of stars) {
+    ellipse(star.x, star.y, star.size, star.size);
+  }
+  
+  if (gameState === 'victoryDance' && frameCount - victoryTimer > VICTORY_DURATION) {
+    background(10, 20, 30);
+    fill(255);
+    textSize(32);
+    textAlign(CENTER);
+    text("Simulation Complete", width / 2, height / 2);
+    if (redKiller.active) redKiller.draw();
+    if (blueKiller.active) blueKiller.draw();
+    return;
+  }
+  
+  for (let entity of entities) {
+    entity.update();
+    entity.draw();
+  }
+  redKiller.update();
+  blueKiller.update();
+  redKiller.draw();
+  blueKiller.draw();
+  
+  if (gameState === 'victoryDance') {
+    if (redKiller.active) redKiller.victoryDance();
+    if (blueKiller.active) blueKiller.victoryDance();
+  }
+  
+  frameCount++;
+  if (gameState === 'running' && frameCount > GENERATION_TIME) {
+    evolvePopulation();
+    frameCount = 0;
+  }
+  
+  checkGameState();
+  checkKillerCollision();
+  
+  fill(255);
+  textSize(16);
+  text(`Generation: ${generation}`, 10, 20);
+}
+</script>
+</body>
+</html>

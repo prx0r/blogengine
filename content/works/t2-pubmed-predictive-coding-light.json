@@ -1,0 +1,52 @@
+{
+  "work_id": "work:t2-pubmed-predictive-coding-light",
+  "schema_version": 2,
+  "title": "Predictive Coding Light.",
+  "authors": [
+    {
+      "name": "N'dri AW"
+    },
+    {
+      "name": "Barbier T"
+    },
+    {
+      "name": "Teulière C"
+    },
+    {
+      "name": "Triesch J"
+    }
+  ],
+  "publication": {
+    "year": 2025,
+    "journal": "Nat Commun",
+    "source": "PubMed/MEDLINE",
+    "language": "en"
+  },
+  "identifiers": {
+    "pmid": "41053084",
+    "doi": "10.1038/s41467-025-64234-z"
+  },
+  "topics": [
+    "phase-6-dependent-arising",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "assets": {
+    "pdf_path": "t2-12500994-predictive-coding-light.pdf",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/41053084/",
+    "abstract": "Current machine learning systems consume vastly more energy than biological brains. Neuromorphic systems aim to overcome this difference by mimicking the brain's information coding via discrete voltage spikes. However, it remains unclear how both artificial and natural networks of spiking neurons can learn energy-efficient information processing strategies. Here we propose Predictive Coding Light (PCL), a recurrent hierarchical spiking neural network for unsupervised representation learning. In "
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_alt17_acquisition",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 6,
+    "phase_name": "Dependent-arising",
+    "bridge_rationale": "Bridge paper score=11.0: links Dependent-arising concept to mechanistic neuroscience"
+  },
+  "evaluation": "Score 11: Excellent bridge signal",
+  "tier": 2
+}

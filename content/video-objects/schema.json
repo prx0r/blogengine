@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lightinform.local/schemas/video-object-v1.json",
+  "title": "Light in Form Video Object",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "vo_id",
+    "schema_version",
+    "current_version",
+    "status",
+    "created_at",
+    "updated_at",
+    "channel",
+    "mode",
+    "source_objects",
+    "premise",
+    "market",
+    "packaging",
+    "production",
+    "publication",
+    "analytics",
+    "provenance"
+  ],
+  "properties": {
+    "vo_id": { "type": "string", "pattern": "^video:[a-z0-9-]+$" },
+    "schema_version": { "const": 1 },
+    "current_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "status": { "enum": ["commission", "scripted", "in_production", "published", "archived"] },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" },
+    "channel": { "const": "Light in Form" },
+    "mode": { "enum": ["field", "canon"] },
+    "source_objects": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/researchObjectPin" } },
+    "premise": { "$ref": "#/$defs/premise" },
+    "market": { "$ref": "#/$defs/market" },
+    "packaging": { "$ref": "#/$defs/packaging" },
+    "production": { "$ref": "#/$defs/production" },
+    "publication": { "type": "object" },
+    "analytics": { "type": "object" },
+    "provenance": { "type": "object" }
+  },
+  "$defs": {
+    "researchObjectPin": {
+      "type": "object",
+      "required": ["ro_id", "version", "title", "path", "passage_ids", "source_health"],
+      "properties": {
+        "ro_id": { "type": "string", "pattern": "^ro:" },
+        "version": { "type": "string" },
+        "title": { "type": "string" },
+        "path": { "type": "string" },
+        "passage_ids": { "type": "array", "items": { "type": "string" } },
+        "source_health": { "type": "object" }
+      }
+    },
+    "premise": {
+      "type": "object",
+      "required": ["universal_question", "viewer", "promise", "thesis", "natural_form", "decision", "decision_reason"],
+      "properties": {
+        "universal_question": { "type": "string", "minLength": 1 },
+        "viewer": { "type": "string", "minLength": 1 },
+        "promise": { "type": "string", "minLength": 1 },
+        "thesis": { "type": "string", "minLength": 1 },
+        "natural_form": { "enum": ["adventure", "archival_essay", "procedural_derivation", "talking_head", "slideshow", "interview", "hybrid"] },
+        "decision": { "enum": ["make_now", "prototype", "hold_for_canon", "reject"] },
+        "decision_reason": { "type": "string" }
+      }
+    },
+    "market": {
+      "type": "object",
+      "required": ["provider", "retrieved_at", "region_code", "published_after", "search_queries", "discovery_lenses", "search_order", "references", "own_channel_evidence", "notes"],
+      "properties": {
+        "provider": { "enum": ["youtube_data_api_v3", "fixture"] },
+        "retrieved_at": { "type": "string", "format": "date-time" },
+        "region_code": { "type": "string" },
+        "published_after": { "type": "string" },
+        "search_queries": { "type": "array", "items": { "type": "string" } },
+        "discovery_lenses": { "type": "array", "items": { "type": "object" } },
+        "search_order": { "enum": ["viewCount", "relevance", "date"] },
+        "references": { "type": "array", "items": { "type": "object" } },
+        "own_channel_evidence": { "type": "array", "items": { "type": "object" } },
+        "notes": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "packaging": {
+      "type": "object",
+      "required": ["candidates", "selected_candidate_id", "title", "thumbnail", "hook"],
+      "properties": {
+        "candidates": { "type": "array", "minItems": 3, "maxItems": 3 },
+        "selected_candidate_id": { "type": "string" },
+        "title": { "type": "string", "minLength": 1 },
+        "thumbnail": { "type": "object" },
+        "hook": { "type": "string", "minLength": 1 }
+      }
+    },
+    "production": {
+      "type": "object",
+      "required": ["reading_rate_wpm", "word_count", "estimated_duration_seconds", "estimated_duration_display", "target_length_minutes", "script", "beats", "storyboard"],
+      "properties": {
+        "reading_rate_wpm": { "type": "number", "exclusiveMinimum": 0 },
+        "word_count": { "type": "integer", "minimum": 1 },
+        "estimated_duration_seconds": { "type": "number", "exclusiveMinimum": 0 },
+        "estimated_duration_display": { "type": "string" },
+        "target_length_minutes": { "type": "object" },
+        "script": { "type": "string", "minLength": 1 },
+        "beats": { "type": "array", "minItems": 1, "items": { "type": "object" } },
+        "storyboard": { "type": "array", "minItems": 1, "items": { "type": "object" } }
+      }
+    }
+  }
+}

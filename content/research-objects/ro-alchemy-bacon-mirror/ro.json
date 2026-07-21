@@ -1,0 +1,200 @@
+{
+  "ro_id": "ro:alchemy-bacon-mirror",
+  "schema_version": 1,
+  "title": "The Mirror of Alchemy \u2014 Roger Bacon",
+  "subtitle": "The classic scholastic-alchemical compendium on the principles, procreation, and perfection of metals through Argent-vive and Sulphur",
+  "family": "theme",
+  "status": "draft",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "Bacon's systematic exposition of the definitions, natural principles, matter, and operations of alchemy, grounded in the theory that all metals are generated from Argent-vive and Sulphur.",
+    "scope": "Covers the definitions of alchemy, the natural principles and procreation of minerals, the matter of the Elixir, the manner of working and fire regimen, the vessel and furnace, the colours appearing in the work, and projection.",
+    "traditions": [
+      "alchemy",
+      "scholasticism",
+      "hermetica"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "bacon-mirror",
+      "tier": 1,
+      "label": "Roger Bacon \u2014 The Mirror of Alchimy (1597 English edition ascribed to Bacon, 1214-1294)",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "argent_vive_sulphur",
+        "metal_generation",
+        "elixir_matter",
+        "fire_regimen",
+        "colour_sequence"
+      ],
+      "sections_affected": [
+        "theory",
+        "practice"
+      ],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "theory",
+      "subsection": "principles",
+      "kind": "source",
+      "text": "Alchemy is a Corporal Science simply composed of one and by one, naturally conjoining things more precious, by knowledge and effect, and converting them by a natural commixtion into a better kind... Alchemy therefore is a science teaching how to make and compound a certain medicine, which is called Elixir, the which when it is cast upon metals or imperfect bodies, does fully perfect them in the very projection. ...the natural principles in the mines, are Argent-vive, and Sulphur. All metals and minerals, whereof there be sundry and diverse kinds, are begotten of these two. (Chapters I-II)",
+      "source_ids": [
+        "bacon-mirror"
+      ],
+      "topics": [
+        "definition",
+        "argent_vive",
+        "sulphur",
+        "principles"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "theory",
+      "subsection": "principles",
+      "kind": "commentary",
+      "text": "Bacon's reduction of all metals to Argent-vive (Mercury) and Sulphur is the Western alchemical parallel to the Samkhya reduction of all matter to purusha and prakriti \u2014 the active and passive principles. In Layayoga, these correspond to prana and apana: the upward- and downward-moving forces whose union in sushumna generates the 'elixir' of amrita. Steiner's two-streams doctrine (the luciferic and ahrimanic streams) also mirrors this polarity. The daimon path recognizes the same dualism: the daimon (purusha) descends into the materia of the soul (prakriti) and their union produces the 'philosophical child' \u2014 the HGA-union. Bacon's 'one thing' from which all proceeds is the hermetic Monad, which PGM calls the 'one daimon' from whom all daimons proceed.",
+      "source_ids": [
+        "bacon-mirror"
+      ],
+      "topics": [
+        "purusha_prakriti",
+        "layayoga",
+        "steiner",
+        "daimon"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "practice",
+      "subsection": "fire_regimen",
+      "kind": "source",
+      "text": "Do we not see, that in the Mines through the continual heat that is in the mountains thereof, the grossness of water is so decocted and thickened, that in continuance of time it becomes Argent-vive? And that of the fatness of the earth through the same heat and decoction, Sulphur is engendered? ... nature does by decoction alone perfect or make all metals... Again, fire and Azot, are sufficient for you. And in another place, Heat perfects all things. ... let your fire be gentle, and easy, which being always equal, may continue burning: and let it not increase, for if it does, you shall suffer great loss. (Chapter IV)",
+      "source_ids": [
+        "bacon-mirror"
+      ],
+      "topics": [
+        "fire",
+        "decoction",
+        "azot",
+        "gentle_heat"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "practice",
+      "subsection": "fire_regimen",
+      "kind": "commentary",
+      "text": "Bacon's admonition for a 'gentle, equal fire' that 'perfects all things' is the exact analogue of the yogic prescription for the fire of pranayama: the breath must be gentle (mrdu), steady (sthira), and continuous to awaken kundalini without burning the nadis. In Tantraloka, this is the 'sunyaka' fire \u2014 the neutral flame that neither burns nor freezes but transmutes. Steiner's 'six exercises' (right thinking, right feeling, etc.) similarly prescribe a 'gentle, continuous' spiritual heat that ripens the soul. The daimon path's 'daily regimen' (Phase 0-4) is built on the same principle: the Name invocation must be gentle, constant, and patient \u2014 'fire and Azot are sufficient for you' means the Name (Azot = Mercury/Spirit) and the intention (Fire) are all that is required.",
+      "source_ids": [
+        "bacon-mirror"
+      ],
+      "topics": [
+        "pranayama",
+        "tantraloka",
+        "steiner",
+        "daimon_regimen"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "practice",
+      "subsection": "colour_sequence",
+      "kind": "source",
+      "text": "So many colors, so many names. ...in the first operation of our stone, it is called putrifaction, and our stone is made black... After putrifaction it waxes red, not with a true redness... It dissolves itself, it coagulates itself, it putrifies itself, it colors itself, it mortifies itself, it quickens itself it makes itself black, it makes itself white, it makes itself red. It is also green... the peacocks color... when it has been decocted pure and clean, that it shines like the eyes of fishes... between true whiteness and true redness, there is a certain ash-color... (Chapter VI)",
+      "source_ids": [
+        "bacon-mirror"
+      ],
+      "topics": [
+        "colour_sequence",
+        "nigredo",
+        "albedo",
+        "rubedo"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_006",
+      "section": "practice",
+      "subsection": "colour_sequence",
+      "kind": "commentary",
+      "text": "The alchemical colour sequence (black \u2192 green \u2192 peacock \u2192 white \u2192 ash \u2192 red) is the chromatic map of the soul's transformation. In Layayoga, the colours correspond to the progressive awakening of the chakras: black (muladhara, earth), green (anahata, heart), peacock (vishuddhi, throat), white (ajna, brow), red (sahasrara, crown). The Tantraloka describes the same sequence in the unfolding of the 'shakti-pata' \u2014 the descent of grace that colours the subtle body. Steiner attributes the colour sequence to the stages of clairvoyant development. For the daimon path, the nigredo is the Saturn retreat (the dark night), the albedo is the systasis purifications, and the rubedo is the HGA union \u2014 the final reddening where the daimon's fire irradiates the practitioner. The 'ash-color' between white and red is the state of kewala kumbhaka where breath ceases and the daimon enters.",
+      "source_ids": [
+        "bacon-mirror"
+      ],
+      "topics": [
+        "chakras",
+        "tantraloka",
+        "steiner",
+        "daimon_path"
+      ],
+      "status": "active"
+    }
+  ],
+  "coverage": {
+    "theory": {
+      "status": "good",
+      "sources": [
+        "bacon-mirror"
+      ],
+      "passage_count": 2,
+      "estimated_completeness": 0.7,
+      "gaps": [
+        "Chapter III on choosing the matter of the Elixir from Argent-vive and Sulphur not yet quoted"
+      ]
+    },
+    "practice": {
+      "status": "good",
+      "sources": [
+        "bacon-mirror"
+      ],
+      "passage_count": 4,
+      "estimated_completeness": 0.8,
+      "gaps": [
+        "Chapter V on vessel and furnace, Chapter VII on projection method"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "placeholder",
+      "title": "All passages drawn from page-level reading",
+      "description": "Passages are extracted from the online HTML text; future editions may benefit from critical edition comparison.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial RO with 6 passages (3 source, 3 commentary) from Roger Bacon's Mirror of Alchemy. Covers principles, fire regimen, and colour sequence.",
+      "sources_added": [
+        "bacon-mirror"
+      ],
+      "passage_count": 6,
+      "status": "draft"
+    }
+  ],
+  "appendices": [],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created in draft state with 6 passages",
+      "sources_total": 1,
+      "passages_total": 6
+    }
+  ]
+}

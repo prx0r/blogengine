@@ -1,0 +1,439 @@
+{
+  "ro_id": "ro:tantraloka-sound-metaphysics",
+  "schema_version": 1,
+  "title": "The 50 Phonemes and Levels of Speech in Abhinavagupta's Tantr\u0101loka",
+  "subtitle": "\u0100hnika 3: the alphabet as reflective awareness, par\u0101/pa\u015byant\u012b/madhyam\u0101/vaikhar\u012b, and the ascent through the twelve stages of sound",
+  "family": "tradition",
+  "status": "draft",
+  "current_version": "0.2.0",
+  "summary": {
+    "one_line": "Abhinavagupta's exposition of the 50 phonemes (var\u1e47a) as the fifty forms of \u015aiva's reflective awareness, the four levels of speech (par\u0101, pa\u015byant\u012b, madhyam\u0101, vaikhar\u012b), the M\u0101t\u1e5bk\u0101 and M\u0101lin\u012b cakras...",
+    "scope": "Covers \u0100hnika 3 (The Supreme Means \u2014 Parop\u0101ya), particularly the Alphabet of the Fifty Forms of Reflective Awareness (v. 65cd-197ab), the aesthetics of music and the three levels of speech (v. 235-247ab), and the unfolding configurations of the goddesses of consciousness, along with Appendix A to Chapter One on the twelve levels of sound from the Netratantra.",
+    "traditions": [
+      "kashmiri_shaivism",
+      "trika",
+      "kaula",
+      "mantra_shastra"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "ta_ahnika_3",
+      "tier": 1,
+      "label": "Tantr\u0101loka \u0100hnika 3 (Dyczkowski tr., Vol. 2) \u2014 The Supreme Means: 50 phonemes as reflective awareness",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "fifty_phonemes",
+        "m\u0101t\u1e5bk\u0101",
+        "m\u0101lin\u012b",
+        "var\u1e47a_sam\u0101mar\u015ba",
+        "aha\u1e43_cycle",
+        "\u015babdar\u0101\u015bi"
+      ],
+      "sections_affected": [
+        "phonemes",
+        "mantra",
+        "speech_levels"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "ta_appendix_A",
+      "tier": 1,
+      "label": "Tantr\u0101loka Vol. 1, Appendix A to Chapter One \u2014 Levels of Sound according to the Netratantra",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "twelve_stages",
+        "dv\u0101da\u015b\u0101nta",
+        "aku_ma_sequence",
+        "unman\u0101",
+        "nir\u0101maya"
+      ],
+      "sections_affected": [
+        "sound_levels",
+        "mantra_ascent"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "netratantra_levels",
+      "tier": 2,
+      "label": "Netratantra 21/59-70ab and 22/21-23 \u2014 The twelve stages of sonic ascent from A to the Transmental",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "aku_ma",
+        "bindu",
+        "ardhacandra",
+        "nirodhin\u012b",
+        "n\u0101da",
+        "n\u0101d\u0101nta",
+        "\u015bakti",
+        "vy\u0101pin\u012b",
+        "saman\u0101",
+        "unman\u0101"
+      ],
+      "sections_affected": [
+        "sound_levels",
+        "mantra_anatomy"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "svacchanda_sound",
+      "tier": 2,
+      "label": "Svacchandatantra 4/254cd-256 \u2014 Parallel account of the twelve sonic stages quoted by Jayaratha",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "eleven_parts",
+        "transmental",
+        "sonic_ascent"
+      ],
+      "sections_affected": [
+        "sound_levels"
+      ],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "phonemes",
+      "subsection": "fifty_forms_of_awareness",
+      "kind": "source",
+      "text": "In \u0100hnika 3, Abhinavagupta presents the 50 phonemes of the Sanskrit alphabet not as mere linguistic units but as the fifty forms of \u015aiva's reflective awareness (vimar\u015ba). The sequence begins with A as Anuttara, the absolute, and unfolds through the vowels (each embodying a specific power \u2014 will, knowledge, action), the diphthongs, the Point (bindu), Visarga, the consonants, semivowels, and sibilants, culminating in the fiftieth letter, K\u1e62, which contains all the others within itself (T\u0100 3/65cd-181ab; Vol. 2, pp. 136\u2013304). Each letter is a form of \u015aakti, and the entire alphabet together constitutes the supreme phonemic energy (\u015babdar\u0101\u015bi) from which all mantras and all language are derived.",
+      "source_ids": [
+        "ta_ahnika_3"
+      ],
+      "topics": [
+        "fifty_phonemes",
+        "vimar\u015ba",
+        "var\u1e47a",
+        "\u015babdar\u0101\u015bi",
+        "reflective_awareness",
+        "mantra_origin"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "phonemes",
+      "subsection": "m\u0101t\u1e5bk\u0101_and_m\u0101lin\u012b",
+      "kind": "source",
+      "text": "The phonemes are arranged into two primary cakras (cycles): M\u0101t\u1e5bk\u0101, the 'Little Mothers' \u2014 the fifty phonemes arranged in their conventional order from A to K\u1e62, used in the outer ny\u0101sa for purifying the body; and M\u0101lin\u012b, the 'Garland' \u2014 the same fifty phonemes in a secret transposed sequence beginning with NA and ending with PH, used for inner, more powerful depositions. The M\u0101lin\u012b sequence embodies the goddess in her supreme form as Par\u0101 and as K\u0101lasa\u1e41kar\u1e63i\u1e47\u012b, the Attractress of Time (T\u0100 3/197cd-200ab, 232-234; Vol. 2, pp. 314\u2013318, 357\u2013361). These two arrangements correspond to the outer (bahirarc\u0101) and inner worship of the Trika system.",
+      "source_ids": [
+        "ta_ahnika_3"
+      ],
+      "topics": [
+        "m\u0101t\u1e5bk\u0101",
+        "m\u0101lin\u012b",
+        "\u015babdar\u0101\u015bi",
+        "k\u0101lasa\u1e41kar\u1e63i\u1e47\u012b",
+        "ny\u0101sa",
+        "goddess_of_speech"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "speech_levels",
+      "subsection": "four_levels_of_speech",
+      "kind": "source",
+      "text": "The four levels of speech (v\u0101c) are presented in the context of the aesthetics of music. Par\u0101 (Supreme Speech) is the pure, undifferentiated reflective awareness identical with \u015aiva. Pa\u015byant\u012b (Seeing Speech) is the first differentiation, where the universe is seen as a single undivided whole in consciousness. Madhyam\u0101 (Intermediate Speech) is the level of inner mental speech \u2014 the form of thought before it is uttered. Vaikhar\u012b (Articulate Speech) is the audible, gross vocalization that reaches the ear of the listener (T\u0100 3/235-247ab; Vol. 2, pp. 361\u2013371). These are not just levels of utterance but successive stages of the cosmogonic emanation of all reality from pure consciousness to the differentiated world.",
+      "source_ids": [
+        "ta_ahnika_3"
+      ],
+      "topics": [
+        "par\u0101_v\u0101c",
+        "pa\u015byant\u012b",
+        "madhyam\u0101",
+        "vaikhar\u012b",
+        "speech_levels",
+        "cosmogonic_speech"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "sound_levels",
+      "subsection": "dv\u0101da\u015b\u0101nta",
+      "kind": "source",
+      "text": "The twelve stages of sonic ascent \u2014 from A to the Transmental (unman\u0101) \u2014 are detailed in Appendix A to Chapter One (Vol. 1, pp. 486\u2013488) drawing on the Netratantra 22/21-23. The sequence is: A, U, M, Bindu (the Point), Ardhacandra (Half Moon), Nirodh\u012bn\u012b (the Obstructress), N\u0101da (Sound), N\u0101d\u0101nta (End of Sound), \u015aakti (Power), Vy\u0101pin\u012b (the Pervasive One), Saman\u0101 (the Equal One), and Unman\u0101 (the Transmental). Beyond these lies the Untainted (nir\u0101maya) absolute. These twelve stages correspond to the twelve dv\u0101da\u015b\u0101ntas \u2014 the twelve 'ends' or stations of ascent from the heart to the summit of the subtle body, retracing the descent of the cosmic energy of Speech from par\u0101 to vaikhar\u012b.",
+      "source_ids": [
+        "ta_appendix_A",
+        "netratantra_levels",
+        "svacchanda_sound"
+      ],
+      "topics": [
+        "dv\u0101da\u015b\u0101nta",
+        "sonic_ascent",
+        "bindu",
+        "ardhacandra",
+        "unman\u0101",
+        "nir\u0101maya",
+        "netratantra"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "phonemes",
+      "subsection": "aha\u1e43_cycle",
+      "kind": "source",
+      "text": "The entire phonemic universe is encapsulated in the cycle of the flow of AHA\u1e40 \u2014 'I am'. The letter A represents Anuttara (the Absolute), H represents the power of emission (visarga), and the Anusv\u0101ra (\u1e40) represents the Point (bindu) of repose. The utterance AHA\u1e40 pervades all mantras and all things: 'The Lord united with emission is all things as the fifty energies of the letters' (T\u0100 3/195cd-197ab). The five-fold Point (bindu) \u2014 the Point of \u015aiva (\u015bivabindu), the Point of the Heart (h\u1e5bdayabindu), and others \u2014 and the threefold emission as \u015aakti, Pr\u0101\u1e47a and Par\u0101 Ku\u1e47\u1e0dalin\u012b complete the ontological architecture of sound (T\u0100 3/138-146ab, 221cd-225; pp. 242\u2013255, 340\u2013347).",
+      "source_ids": [
+        "ta_ahnika_3"
+      ],
+      "topics": [
+        "aha\u1e43",
+        "emission",
+        "visarga",
+        "bindu",
+        "ku\u1e47\u1e0dalin\u012b",
+        "\u015bivabindu"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_006",
+      "section": "sound_levels",
+      "subsection": "ku\u1e47\u1e0dalin\u012b_as_sound",
+      "kind": "source",
+      "text": "Ku\u1e47\u1e0dalin\u012b appears as the power of sound that rises through the dv\u0101da\u015b\u0101nta stages. In the Netratantra version cited by Jayaratha, \u015aakti at the ninth stage is identified with Ku\u1e47\u1e0dalin\u012b: 'kau\u1e47\u1e0dal\u012b vy\u0101pin\u012b \u015bakti\u1e25 saman\u0101\u015b ceti s\u0101may\u0101\u1e25' (NT 22/22ab). She is the coiled power that, when awakened, ascends through the central channel (susumn\u0101), piercing each of the twelve stages until she reaches the Transmental (unman\u0101) beyond the Equal One (saman\u0101). The World of the Principle of Power and Raised Ku\u1e47\u1e0dalin\u012b appears in \u0100hnika 8 as the threshold of the Unemerged (an\u0101\u015brita), where the subtle body dissolves into pure consciousness (T\u0100 8/396b-397; Vol. 5, pp. 367\u2013369). Thus Ku\u1e47\u1e0dalin\u012b is both the energy of speech and the power of liberation.",
+      "source_ids": [
+        "ta_ahnika_3",
+        "ta_appendix_A",
+        "netratantra_levels"
+      ],
+      "topics": [
+        "ku\u1e47\u1e0dalin\u012b",
+        "susumn\u0101",
+        "khecar\u012b",
+        "\u015bakti",
+        "sound_power",
+        "dv\u0101da\u015b\u0101nta"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_007",
+      "section": "phonemes",
+      "subsection": "reflection_of_tattvas",
+      "kind": "source",
+      "text": "\u0100hnika 3 concludes with the reflection of the tattvas in the fifty forms of reflective awareness: the thirty-six tattvas from \u015aiva down to Earth are shown to be already present in the phonemes as their ontological ground. The letters are not arbitrary signs but natural symbols \u2014 each phoneme literally embodies the tattva it encodes. Thus the fifty var\u1e47as are not merely a system of writing but the structural DNA of reality itself, and the 'Supreme Means' (Parop\u0101ya) consists in recognizing one's own consciousness as the mirror in which this entire phonemic universe is reflected (T\u0100 3/268-294ab; Vol. 2, pp. 393\u2013411).",
+      "source_ids": [
+        "ta_ahnika_3"
+      ],
+      "topics": [
+        "tattva_reflection",
+        "pratibimbav\u0101da",
+        "parop\u0101ya",
+        "consciousness_as_mirror"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_008",
+      "section": "sound_levels",
+      "subsection": "dv\u0101da\u015b\u0101nta",
+      "kind": "source",
+      "text": "The End of the Twelve (dv\u0101da\u015b\u0101nta) is the summit of sonic ascent, described in Appendix A to Chapter One as the uppermost station of the subtle body. The core teaching 'is a sequence of twelve stages ranging from A to the Transmental. These mark the stations of ascent from the Heart up to the End of the Twelve, at the summit of the subtle body. . . . They retract and reverse the downward flow of the cosmogonic energy of Speech from its supreme form (par\u0101 v\u0101c) at one with \u015aiva as His reflective awareness and freedom down to audible corporeal Speech (vaikhar\u012b v\u0101c)' (T\u0100 Vol. 1, Appendix A, pp. 485\u2013486). The Svacchandatantra version declares: 'That (Vidy\u0101 with) eleven parts moves continuously within the vital breath. (They are) the letters A, U and M, along with the Point, the Half Moon, the Obstructress, Sound, End of Sound, Power, the Pervasive One and the Equal One, which is considered to be the eleventh. The Transmental is beyond that, and beyond that is the Untainted (Absolute \u2014 nir\u0101maya)' (SvT 4/254cd-256, cited in T\u0100 Vol. 1, p. 486). The dv\u0101da\u015b\u0101nta is located at a distance of twelve finger-breadths above the crown of the head, marking the boundary between the immanent and transcendent.",
+      "source_ids": [
+        "ta_appendix_A",
+        "netratantra_levels",
+        "svacchanda_sound"
+      ],
+      "topics": [
+        "dv\u0101da\u015b\u0101nta",
+        "end_of_the_twelve",
+        "sonic_ascent",
+        "transmental",
+        "unman\u0101",
+        "nir\u0101maya",
+        "subtle_body_summit"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_009",
+      "section": "sound_levels",
+      "subsection": "ku\u1e47\u1e0dalin\u012b_as_sound",
+      "kind": "source",
+      "text": "Ku\u1e47\u1e0dalin\u012b (Kau\u1e47\u1e0dal\u012b) is identified with the ninth stage of the sonic ascent \u2014 \u015aakti \u2014 in the Netratantra version quoted in Appendix A. The Netratantra 22/21-22 states: 'The letters, A, U and M, the Point, Half Moon, the Obstructress, Sound, the End of Sound, Kau\u1e47\u1e0dal\u012b, the Pervasive One, \u015aakti and the Equal One (With Mind) are connected with suffering (the s\u0101maya)' (NT 22/21-22ab, cited in T\u0100 Vol. 1, p. 487). Jayaratha comments: 'Kau\u1e47\u1e0dal\u012b is an adjective of \u015aakti. The meaning is that these are the eleven parts of Mantra, the nature of which was determined previously' (T\u0100v ad 1/83cd-85ab; Vol. 1, p. 487). K\u1e63emar\u0101ja notes that the Svacchanda version was 'made to identify stage 9 \u2014 \u015aakti \u2014 with Ku\u1e47\u1e0dalin\u012b' (T\u0100 Vol. 1, p. 486). The coiled power (ku\u1e47\u1e0dalin\u012b) when awakened ascends through the su\u1e63umn\u0101, piercing each of the twelve stages until it reaches the Transmental (unman\u0101) beyond the Equal One (saman\u0101). Thus Ku\u1e47\u1e0dalin\u012b is both the energy of speech and the power that rises through the subtle body to unite with \u015aiva above the dv\u0101da\u015b\u0101nta.",
+      "source_ids": [
+        "ta_appendix_A",
+        "netratantra_levels"
+      ],
+      "topics": [
+        "ku\u1e47\u1e0dalin\u012b",
+        "kau\u1e47\u1e0dal\u012b",
+        "\u015bakti",
+        "sonic_ascent",
+        "netratantra",
+        "eleven_parts",
+        "unman\u0101"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_010",
+      "section": "phonemes",
+      "subsection": "m\u0101t\u1e5bk\u0101_cakra",
+      "kind": "source",
+      "text": "The M\u0101t\u1e5bk\u0101cakra (Cycle of the Letters) is the conventional ordering of the fifty phonemes from A to K\u1e62, representing the 'Little Mothers' (m\u0101t\u1e5bk\u0101) who are the creative energies of consciousness. In \u0100hnika 3, Abhinavagupta presents the letter A as the root of the entire cycle: 'The letter A is a measure of the power (of consciousness) (kal\u0101), which does not belong to the domain of M\u0101y\u0101; it transcends hearing, spontaneous, it is the wonder of one's own nature, which is the great sea (of consciousness) that, without waves, rests in the Great Light. It is present (equally) in both two phases, initial and final (of perception), as the completely full (and all-embracing) 'I-ness' as (the initial) outpouring of the power (of consciousness) and (the final) reflective awareness of all things' (PTv p. 27, cited in T\u0100 Vol. 2, p. 139). The entire M\u0101t\u1e5bk\u0101 cycle is the unfolding of this primordial A into the fifty energies that generate the universe, and it is used in the outer ny\u0101sa for purifying the body. The M\u0101t\u1e5bk\u0101 is also the 'unknown mother (aj\u00f1\u0101t\u0101 m\u0101t\u0101) of fettered souls, whose nature is described (as) the source (yoni) of all Mantras and Vidy\u0101s, present in all Mantras at all times' (T\u0100 3/232, commentary; Vol. 2, p. 358).",
+      "source_ids": [
+        "ta_ahnika_3"
+      ],
+      "topics": [
+        "m\u0101t\u1e5bk\u0101cakra",
+        "cycle_of_letters",
+        "letter_a",
+        "mothers",
+        "phonemic_energies",
+        "ny\u0101sa"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_011",
+      "section": "phonemes",
+      "subsection": "m\u0101lin\u012b_and_m\u0101t\u1e5bk\u0101",
+      "kind": "source",
+      "text": "The M\u0101lin\u012b alphabet is the same fifty phonemes as the M\u0101t\u1e5bk\u0101 but arranged in a secret transposed sequence beginning with NA and ending with PH. The relation between them is that of the unaroused and aroused states of the power of emission. Abhinavagupta states: 'This same (emission) is called the Assembly of Sounds (\u015aabdar\u0101\u015bi) and also M\u0101t\u1e5bk\u0101, and by the penetration (\u0101ve\u015ba) (of the consonants, which are the) objects of arousal, and (the vowels) that arouse them, it is said to be M\u0101lin\u012b' (T\u0100 3/232; Vol. 2, pp. 357\u2013358). Jayaratha explains: 'The Assembly is the undivided nature and cause of sounds, that is, gross words divided into syllables and sentences etc. M\u0101t\u1e5bk\u0101 is the Mother (of the universe), unknown by fettered souls. . . . The two-fold secondary (\u0101gamika) designation of the power of emission when it is unaroused, because it abides solely in its own nature alone, has been indicated in this way (as the Assembly of Sounds and M\u0101t\u1e5bk\u0101). Moreover, (Her) aroused state has another name' (T\u0100v ad 3/232; Vol. 2, pp. 358\u2013359). M\u0101lin\u012b is thus the aroused form of the same phonemic power and is identified with the supreme goddess Par\u0101 and K\u0101lasa\u1e41kar\u1e63i\u1e47\u012b: 'M\u0101lin\u012b is (the goddess Par\u0101), the supreme power, (who,) beautiful with the emergence of the emission (brought about) by the (mutual) contemplation (sam\u0101patti) of the seed (vowels) and the matrix (consonants), is said to be all things (vi\u015bvar\u016bpi\u1e47\u012b)' (T\u0100 3/233; Vol. 2, p. 359).",
+      "source_ids": [
+        "ta_ahnika_3"
+      ],
+      "topics": [
+        "m\u0101lin\u012b",
+        "m\u0101t\u1e5bk\u0101",
+        "\u015babdar\u0101\u015bi",
+        "emission",
+        "arousal",
+        "par\u0101",
+        "k\u0101lasa\u1e41kar\u1e63i\u1e47\u012b",
+        "phonemic_power"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_012",
+      "section": "speech_levels",
+      "subsection": "three_emissions",
+      "kind": "source",
+      "text": "The three levels of sound emission \u2014 \u015aabdar\u0101\u015bi (the Assembly of Sounds), M\u0101t\u1e5bk\u0101 (the Mothers), and M\u0101lin\u012b (the Garland) \u2014 represent progressively more differentiated states of the same power of emission (visarga). Abhinavagupta explains: 'The same power of emission, which makes all things manifest within itself as each (act and form) of reflective awareness. It is variously named in the \u0100gamas. . . . \u015aabdar\u0101\u015bi\u1e25 sa evokto m\u0101t\u1e5bk\u0101 s\u0101 ca k\u012brtit\u0101 / k\u1e63obhyak\u1e63obhakat\u0101ve\u015b\u0101n m\u0101lin\u012b\u1e41 t\u0101\u1e41 pracak\u1e63ate \u2014 This same (emission) is called the Assembly of Sounds (\u015aabdar\u0101\u015bi) and also M\u0101t\u1e5bk\u0101, and by the penetration (\u0101ve\u015ba) (of the consonants, which are the) objects of arousal, and (the vowels) that arouse them, it is said to be M\u0101lin\u012b' (T\u0100 3/232; Vol. 2, pp. 357\u2013358). These three correspond to the three forms of the Goddess of Speech: \u015aabdar\u0101\u015bi is the undifferentiated totality of all sound, the raw potential of all mantras; M\u0101t\u1e5bk\u0101 is the unaroused mother, the matrix from which all phonemes emerge in their conventional order; and M\u0101lin\u012b is the aroused, dynamic state of the alphabet where vowels and consonants interpenetrate in the secret sequence that embodies the supreme creative union of \u015aiva and \u015aakti. Together they constitute the three levels of the phonemic emanation of the universe from the absolute to the differentiated.",
+      "source_ids": [
+        "ta_ahnika_3"
+      ],
+      "topics": [
+        "emission",
+        "visarga",
+        "\u015babdar\u0101\u015bi",
+        "m\u0101t\u1e5bk\u0101",
+        "m\u0101lin\u012b",
+        "three_emissions",
+        "goddess_of_speech",
+        "phonemic_emanation"
+      ],
+      "status": "active"
+    }
+  ],
+  "coverage": {
+    "phonemes": {
+      "status": "comprehensive",
+      "sources": [
+        "ta_ahnika_3"
+      ],
+      "passage_count": 7,
+      "estimated_completeness": 0.9,
+      "gaps": [
+        "Detailed treatment of each letter group (vowels, consonants, semivowels, sibilants) not yet extracted; currently provides a synthetic overview"
+      ]
+    },
+    "speech_levels": {
+      "status": "good",
+      "sources": [
+        "ta_ahnika_3"
+      ],
+      "passage_count": 2,
+      "estimated_completeness": 0.75,
+      "gaps": [
+        "The aesthetic dimension (rasa, dhvani, music theory) from \u0100hnika 3/235-247ab not yet extracted; Abhinava's connection of speech levels to aesthetic experience needs separate treatment"
+      ]
+    },
+    "sound_levels": {
+      "status": "good",
+      "sources": [
+        "ta_appendix_A",
+        "netratantra_levels",
+        "svacchanda_sound"
+      ],
+      "passage_count": 4,
+      "estimated_completeness": 0.85,
+      "gaps": [
+        "The distribution of the dv\u0101da\u015b\u0101nta stages across the \u015aaiva cosmology (worlds of the pure principles) is not yet mapped"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "coverage_gap",
+      "title": "Full verse-by-verse translation of \u0100hnika 3 phoneme section not yet extracted",
+      "description": "The 50 phoneme section (v. 65cd-197ab) is very long (pp. 136\u2013318) and only summarized here. Detailed passages for each letter group are needed.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    },
+    {
+      "id": "issue-002",
+      "type": "coverage_gap",
+      "title": "The three forms of emission and the triadic structure not fully developed",
+      "description": "The three forms of emission (T\u0100 3/211-219) and the triad A I U (T\u0100 3/193-195ab, 220-221ab) as the root of all phonemes needs expanded treatment.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial RO created covering \u0100hnika 3 phoneme metaphysics and Appendix A on sound levels. 4 sources documented. 7 passages covering the 50 phonemes as vimar\u015ba, M\u0101t\u1e5bk\u0101/M\u0101lin\u012b cakras, four levels of speech, dv\u0101da\u015b\u0101nta ascent, AHA\u1e40 cycle, Ku\u1e47\u1e0dalin\u012b as sound-power, and tattva reflection.",
+      "sources_added": [
+        "ta_ahnika_3",
+        "ta_appendix_A",
+        "netratantra_levels",
+        "svacchanda_sound"
+      ],
+      "passage_count": 7,
+      "status": "draft"
+    },
+    {
+      "version": "0.2.0",
+      "date": "2026-07-14",
+      "type": "update",
+      "summary": "Added 5 passages with direct source extracts: the dv\u0101da\u015b\u0101nta as the twelve-stage sonic ascent from A to the Transmental (SvT 4/254cd-256), Ku\u1e47\u1e0dalin\u012b/Kau\u1e47\u1e0dal\u012b identified with \u015aakti at the ninth stage of ascent (NT 22/21-22ab), the M\u0101t\u1e5bk\u0101cakra with the letter A as the root of the phonemic cycle (PTv p. 27), the M\u0101lin\u012b alphabet as the aroused form of M\u0101t\u1e5bk\u0101 (T\u0100 3/232-233), and the three levels of emission \u2014 \u015aabdar\u0101\u015bi, M\u0101t\u1e5bk\u0101, and M\u0101lin\u012b \u2014 as progressively differentiated states of visarga (T\u0100 3/232).",
+      "sources_added": [],
+      "passage_count": 12,
+      "status": "draft"
+    }
+  ],
+  "appendices": [
+    {
+      "file": "phoneme-tattva-correspondence.md",
+      "description": "Full mapping of the 50 phonemes to the 36 tattvas and the goddesses of the Trika system"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created in draft state covering Tantr\u0101loka \u0100hnika 3 phoneme metaphysics",
+      "sources_total": 4,
+      "passages_total": 12
+    }
+  ]
+}

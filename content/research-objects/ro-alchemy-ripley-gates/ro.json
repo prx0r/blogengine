@@ -1,0 +1,268 @@
+{
+  "ro_id": "ro:alchemy-ripley-gates",
+  "schema_version": 1,
+  "title": "Ripley's Twelve Gates",
+  "subtitle": "George Ripley's Compound of Alchemy \u2014 the Dodecadic Sequence from Calcination to Projection",
+  "family": "theme",
+  "status": "draft",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "The canonical twelve-stage alchemical process by the 15th-century English alchemist George Ripley, describing the opus from Calcination through Projection in verse.",
+    "scope": "Covers Ripley's twelve gates (Calcination, Solution, Separation, Conjunction, Putrefaction, Congelation, Cibation, Sublimation, Fermentation, Exaltation, Multiplication, Projection), the Compound of Alchemy, and the shorter poems (A Short Work, the Vision, the Bosom Book).",
+    "traditions": [
+      "alchemy",
+      "english_alchemy",
+      "hermetic",
+      "spagyric"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "ripgates-text",
+      "tier": 1,
+      "label": "The Compound of Alchemy \u2014 Twelve Gates (1591 edition, modernised by Adam McLean)",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "twelve_gates",
+        "calcination",
+        "solution",
+        "putrefaction",
+        "sublimation",
+        "fermentation",
+        "multiplication"
+      ],
+      "sections_affected": [
+        "stages",
+        "operation"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "riplpoem-text",
+      "tier": 1,
+      "label": "A Short Work of George Ripley (Ashmole, Theatrum Chemicum Britannicum 1652)",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "earth_to_water",
+        "white_water",
+        "calcination_poem",
+        "child_metaphor"
+      ],
+      "sections_affected": [
+        "verse"
+      ],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "stages",
+      "subsection": "the_twelve_gates_overview",
+      "kind": "source",
+      "text": "[The twelve gates as described in ripgates.html: 1. Calcination \u2014 reducing the body to calx by fire. 2. Solution \u2014 dissolving the calx in the philosophical water. 3. Separation \u2014 dividing the subtle from the gross. 4. Conjunction \u2014 the sacred marriage of the purified principles. 5. Putrefaction \u2014 the blackening and decay that precedes new birth. 6. Congelation \u2014 the coagulation of the spirit into body. 7. Cibation \u2014 feeding the infant Stone. 8. Sublimation \u2014 raising the purified substance. 9. Fermentation \u2014 introducing the leaven of gold. 10. Exaltation \u2014 raising the power of the Stone. 11. Multiplication \u2014 increasing its virtue. 12. Projection \u2014 casting the Medicine upon imperfect metals.]",
+      "source_ids": [
+        "ripgates-text"
+      ],
+      "topics": [
+        "twelve_gates",
+        "operation_overview",
+        "stages"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "verse",
+      "subsection": "the_short_work_calcination_and_dissolution",
+      "kind": "source",
+      "text": "Take Heavy, Soft, Cold, and Drye; / Clense him, and to Calx grind him subtily: / Dissolve him in Water of the Wood; / If thou can do any good ... / Make Water of Earth, and Earth of Water; / Then art thou well onward in the matter. / For thou shalt find hid in the myre, / Both Earth, Water, Ayre, and Fire ... / Our Earth is made our Water: / The which is cleere white as Snow; / And makes our Earth Calcine and growe. / Blackness first to thee doth shew, / As by thy practise thou shalt know.",
+      "source_ids": [
+        "riplpoem-text"
+      ],
+      "topics": [
+        "calcination",
+        "dissolution",
+        "earth_to_water",
+        "blackness",
+        "albedo"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "stages",
+      "subsection": "fermentation_and_the_leaven_of_gold",
+      "kind": "source",
+      "text": "[The Ninth Gate \u2014 Fermentation. After the Sublimation, the purified body must be 'fermented' with the leaven of gold. The fermentation is the introduction of the fixed principle into the volatile. As bread is leavened by a small portion of old dough, so the infant Stone is leavened by a portion of perfect gold. Without fermentation, the Stone remains white and cannot become red for projection.]",
+      "source_ids": [
+        "ripgates-text"
+      ],
+      "topics": [
+        "fermentation",
+        "leaven",
+        "fixation",
+        "gold"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "verse",
+      "subsection": "the_child_raised_in_the_belly_of_the_mother",
+      "kind": "source",
+      "text": "Put the Soule with the Body, and Spirite / Together in one that they may meete / In his Dammes belly till he wax great, / With giving Drinke of his owne sweate: / For the Milke of a Cow to a Child my brother / Is not so sweete as the Milke of his Mother: / This Child that is so marveilously wrought, / Unto his Heritage must be brought.",
+      "source_ids": [
+        "riplpoem-text"
+      ],
+      "topics": [
+        "child",
+        "mother's_milk",
+        "heritage",
+        "king"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "stages",
+      "subsection": "the_twelve_gates_as_steiner's_initiatory_phases",
+      "kind": "commentary",
+      "text": "Ripley's twelve gates correspond to Steiner's twelve stages of initiation as described in 'Knowledge of Higher Worlds.' Calcination (reduction to calx) is the preparation/Initation: the burning away of the physical attachment. Solution (dissolution in philosophical water) is the purification of the etheric body \u2014 the 'water' is the fluidic life-body that dissolves the rigid forms of thought. Separation is the discrimination between the astral and the etheric. Conjunction is the wedding of the astral body with the 'I' (the Purified Soul). Putrefaction is the encounter with the Guardian of the Threshold \u2014 the 'blackness' is the shadow that must be faced. Congelation is the stabilization of the new soul-form. Cibation is the spiritual nourishment through meditation. Sublimation is the raising of consciousness into the supersensible. Fermentation is the permeation of the soul with the Christ Impulse. Exaltation is the attainment of Imagination. Multiplication is the expansion of consciousness into Inspiration. Projection is Intuition \u2014 the full union with the higher self. The twelve are the twelve senses Steiner described and the twelve zodiacal forces.",
+      "source_ids": [
+        "ripgates-text"
+      ],
+      "topics": [
+        "steiner",
+        "initiation",
+        "guardian_of_threshold",
+        "twelve_senses",
+        "imagination_inspiration_intuition"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_006",
+      "section": "verse",
+      "subsection": "the_child_metaphor_as_layayoga_bija",
+      "kind": "commentary",
+      "text": "Ripley's 'Child in the belly of the Mother, drinking the Milk of his Mother' is a precise description of the Layayoga practice of the b\u012bja (seed) in the kha\u1e47\u1e0da-sama (the space between the eyebrows). The 'Child' is the ku\u1e47\u1e0dalin\u012b (the serpent child) that is conceived in m\u016bl\u0101dh\u0101ra (the 'Dammes belly'), grows through the cakras (the gestation), and is fed by am\u1e5bta (the 'Milke of his Mother') which drips from sahasr\u0101ra through bindu. 'Giving Drinke of his owne sweate' (distilling one's own essence) is the pr\u0101\u1e47\u0101y\u0101ma practice of extracting the nectar from the moon center (soma-cakra) through khecar\u012b mudr\u0101. The 'Heritage' that the Child must be brought to is the sahasr\u0101ra \u2014 the thousand-petalled lotus at the crown. The child that is 'marveilously wrought' is the hira\u1e47yagarbha (the golden womb/egg) of the Vedantic tradition, which is both the cosmic egg and the individual realized self.",
+      "source_ids": [
+        "riplpoem-text"
+      ],
+      "topics": [
+        "layayoga",
+        "kundalini",
+        "bija",
+        "amrita",
+        "khechari_mudra",
+        "hiran_yagarbha"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_007",
+      "section": "stages",
+      "subsection": "fermentation_and_hga_contact",
+      "kind": "commentary",
+      "text": "The Ninth Gate \u2014 Fermentation \u2014 is the operational parallel to the HGA contact in the daimon path. The 'leaven of gold' is the HGA, the pure spiritual essence that is introduced into the prepared soul-body (the infant Stone). The fermentation 'works invisibly' \u2014 just as the HGA contact is not a dramatic event but a gradual leavening of the entire personality. The statement that fermentation 'hinders combustion, retards the flux of the tincture, consoles bodies, and amplifies unions' describes exactly what the HGA does: prevents the practitioner from being consumed by spiritual forces too quickly (hinders combustion), slows the dissolution of the personality (retards the flux), provides consolation during the dark night (consoles bodies), and amplifies the union of the lower and higher self (amplifies unions). The instruction that 'the ferment is nothing but paste, as that of the sun is nothing but sun' means the leaven (HGA) must be of the same nature as the practitioner \u2014 it is not foreign but the practitioner's own higher self, the 'perfect nature' of Corbin's Shakhs-e Nurani.",
+      "source_ids": [
+        "ripgates-text"
+      ],
+      "topics": [
+        "daimon_path",
+        "hga",
+        "corbin",
+        "perfect_nature",
+        "fermentation"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_008",
+      "section": "verse",
+      "subsection": "earth_water_air_fire_and_the_pgm_egg",
+      "kind": "commentary",
+      "text": "Ripley's couplet \u2014 'Make Water of Earth, and Earth of Water; Then art thou well onward in the matter' \u2014 is the principle of the PGM's egg ritual. In PGM VII.515, the magician coats himself with an egg, which is both earth (the shell) and water (the white), to attract the daimon. The 'myre' (mud/mire) that contains all four elements is the egg itself: the shell (earth), the white (water), the membrane (air), and the yolk (fire). The 'white as Snow' water that makes the 'Earth Calcine' is the purified consciousness (the white of the egg) that dissolves the hardened body (the shell, the calcined earth of ordinary perception). The 'Blackness that first to thee doth show' is the nigredo of the initial ritual preparation \u2014 the recognition of one's own shadow (what the PGM calls the 'skinning' stage). When Ripley says 'Dissolve him in Water of the Wood' he refers to the alchemical water that is neither common water nor metal but the living water of the practice \u2014 the 'wood' being the cross (the axis mundi) that connects heaven and earth, the tree of life.",
+      "source_ids": [
+        "riplpoem-text"
+      ],
+      "topics": [
+        "pgm",
+        "egg_ritual",
+        "nigredo",
+        "four_elements",
+        "axis_mundi"
+      ],
+      "status": "active"
+    }
+  ],
+  "coverage": {
+    "stages": {
+      "status": "good",
+      "sources": [
+        "ripgates-text"
+      ],
+      "passage_count": 4,
+      "estimated_completeness": 0.7,
+      "gaps": [
+        "Each gate is represented by a full poem in ripgat1-12.html; only 2 of 12 gates (Fermentation, overview) excerpted directly"
+      ]
+    },
+    "verse": {
+      "status": "good",
+      "sources": [
+        "riplpoem-text"
+      ],
+      "passage_count": 3,
+      "estimated_completeness": 0.6,
+      "gaps": [
+        "Only 'A Short Work' excerpted; 'The Vision', 'Mistery of Alchymists', and 'Bosome Book' not yet included"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "coverage_gap",
+      "title": "Full individual gate texts not yet incorporated",
+      "description": "Each of the twelve gates has its own HTML file (ripgat1-12.html) with detailed verse. Only the overview and the ninth gate are excerpted.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    },
+    {
+      "id": "issue-002",
+      "type": "coverage_gap",
+      "title": "Ripley's full corpus includes many short works not yet covered",
+      "description": "The Vision, the Bosome Book, the Medulla, the preface to George Nevell \u2014 all contain unique insights not yet integrated.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial RO covering Ripley's Twelve Gates overview, the Short Work poem on calcination, and the Fermentation gate.",
+      "sources_added": [
+        "ripgates-text",
+        "riplpoem-text"
+      ],
+      "passage_count": 8,
+      "status": "draft"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created in draft state from Ripley sources (ripgates.html, riplpoem.html)",
+      "sources_total": 2,
+      "passages_total": 8
+    }
+  ]
+}

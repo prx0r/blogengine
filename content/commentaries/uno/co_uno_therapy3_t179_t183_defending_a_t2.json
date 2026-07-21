@@ -1,0 +1,53 @@
+{
+  "co_id": "co:uno_therapy3_t179_t183_defending_a_t2",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3_t179_t183_defending_against_abuse",
+  "turn_index": 2,
+  "lineage": "Therapeutic",
+  "student_state": "factual_admission",
+  "behavior_tags": [
+    "reality_check"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_02",
+    "function_name": "UM_02",
+    "mechanism_shape": "COMPARISON_CONTRAST",
+    "teaching_actions": [
+      "contrasts_frequency"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.15,
+      "attunement": 0.2,
+      "style": 0.15,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_01",
+      "attunement_discrete": "AT_01",
+      "style_discrete": "LS_01",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "'But it hurt'—they said it. Three turns from defending ('didn't mean it,' 'was stressed') to owning impact ('it hurt'). Teacher validates simply: 'Yes, it hurt.' No analysis, just validation. This confirms: your hurt is what matters, not his reasons. Three-turn progression from excuse to acknowledgment. Breakthrough.",
+  "accumulated_insight": "T3: Student admits 'But it hurt.' From defending abuser (T1-2) to acknowledging impact (T3). Teacher validates: 'Yes, it hurt. That's what matters.' Reinforces impact over excuse. Predicting surface_emotion as admission deepens.",
+  "abstract_pattern": "",
+  "visible_response": "And how many times did you remind yourself of it and call yourself stupid?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

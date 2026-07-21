@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "last_updated": "2026-07-20",
+  "sources": {
+    "blueprints_source_texts": {
+      "path": "blueprints/source_texts/",
+      "count": 19,
+      "topics": ["ficino", "corbin", "iamblichus", "plotinus", "avicenna", "agrippa", "ibn_arabi", "swedenborg", "proclus"],
+      "processed_into_works": false
+    },
+    "library_source_texts": {
+      "path": "library/source-texts/",
+      "count": 17,
+      "processed_into_works": false
+    },
+    "library_science": {
+      "path": "library/science/",
+      "count": 240,
+      "processed_into_works": false
+    },
+    "content_sources": {
+      "path": "content/sources/",
+      "count": 2035,
+      "traditions": ["occult", "platonism", "sufism", "tantra", "astrology", "science", "hermetica", "modern", "light-philosophy"],
+      "notes": "Already structured by tradition, some with _index.json"
+    },
+    "synthesis_essays": {
+      "path": "synthesis-essays/",
+      "count": 146,
+      "topics": ["alchemy", "steiner", "taoist", "kybalion", "plato", "shamanic", "mantra", "dzogchen", "nagarjuna", "karma", "abhidharma", "neoplatonism", "tulpas"],
+      "processed_into_works": false
+    },
+    "root_pdfs": {
+      "path": "/root/projects/blog/",
+      "count": 36,
+      "key_texts": ["tantraloka-vol4", "tantraloka-vol7", "tantraloka-vol10", "bhairava-tantra", "road-to-reality", "nagarjuna-garfield", "tsongkhapa-lamp", "connes-noncommutative", "zenil-computable"],
+      "processed_into_works": false
+    }
+  },
+  "works": {
+    "path": "content/works/",
+    "count": 1917,
+    "bridge_works": 2,
+    "t2_arxiv": 10,
+    "t2_levin": 34,
+    "t2_pmc": 800,
+    "t2_pubmed": 700,
+    "named_works": 130,
+    "compiled_into_ros": 173
+  },
+  "research_objects": {
+    "path": "content/research-objects/",
+    "count": 173,
+    "families": {
+      "alchemy": 30,
+      "literature": 24,
+      "tantraloka": 17,
+      "daimon": 8,
+      "layayoga": 4,
+      "seth": 3,
+      "crowley": 3,
+      "others": 84
+    },
+    "needs_expansion_to_essays": true
+  },
+  "essays": {
+    "path": "content/glossary/essays/",
+    "count": 1795,
+    "with_audio": 0,
+    "needs_audio": 1795
+  },
+  "videos": {
+    "path": "content/video-objects/",
+    "count_planned": 56,
+    "count_with_thumbnails": 12,
+    "count_with_storyboard": 1,
+    "count_with_voiceover": 1,
+    "count_with_fablecut_timeline": 1,
+    "count_published": 0
+  },
+  "pipeline_status": {
+    "source_to_work_ratio": "~10% (many sources not yet in works/)",
+    "work_to_ro_ratio": "~9% (173 ROs from 1917 works)",
+    "ro_to_essay_ratio": "unknown (essays may come from blueprints directly)",
+    "essay_to_video_ratio": "~0.06% (1 video pipeline started)"
+  }
+}

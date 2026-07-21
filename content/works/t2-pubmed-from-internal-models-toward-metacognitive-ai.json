@@ -1,0 +1,46 @@
+{
+  "work_id": "work:t2-pubmed-from-internal-models-toward-metacognitive-ai",
+  "schema_version": 2,
+  "title": "From internal models toward metacognitive AI.",
+  "authors": [
+    {
+      "name": "Kawato M"
+    },
+    {
+      "name": "Cortese A"
+    }
+  ],
+  "publication": {
+    "year": 2021,
+    "journal": "Biol Cybern",
+    "source": "PubMed/MEDLINE",
+    "language": "en"
+  },
+  "identifiers": {
+    "pmid": "34677628",
+    "doi": "10.1007/s00422-021-00904-7"
+  },
+  "topics": [
+    "phase-10-imaginal",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "assets": {
+    "pdf_path": "t2-8551129-from-internal-models-toward-metacognitive-ai.pdf",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/34677628/",
+    "abstract": "In several papers published in Biological Cybernetics in the 1980s and 1990s, Kawato and colleagues proposed computational models explaining how internal models are acquired in the cerebellum. These models were later supported by neurophysiological experiments using monkeys and neuroimaging experiments involving humans. These early studies influenced neuroscience from basic, sensory-motor control to higher cognitive functions. One of the most perplexing enigmas related to internal models is to u"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_alt17_acquisition",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 10,
+    "phase_name": "Imaginal",
+    "bridge_rationale": "Bridge paper score=10.0: links Imaginal concept to mechanistic neuroscience"
+  },
+  "evaluation": "Score 10: Excellent bridge signal",
+  "tier": 2
+}

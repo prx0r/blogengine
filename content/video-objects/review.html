@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html><head>
+<title>Ochema — Clip Review</title>
+<style>
+*{box-sizing:border-box}
+body{font-family:system-ui,sans-serif;background:#0d0d0d;color:#ddd;padding:20px;max-width:900px;margin:auto}
+h1{color:#d4a574;font-size:22px}
+.pending{background:#1a1a1a;border-radius:8px;padding:16px;margin:12px 0;border:1px solid #333}
+.pending.rated{border-color:#555;opacity:0.8}
+video{width:100%;border-radius:4px;max-height:400px;background:#000}
+.meta{display:flex;gap:16px;margin:8px 0;font-size:13px;color:#888;flex-wrap:wrap}
+.prompt-preview{color:#666;font-size:12px;margin:6px 0;cursor:pointer}
+.prompt-full{display:none;background:#111;padding:10px;border-radius:4px;color:#999;font-size:12px;line-height:1.5;margin:6px 0 10px;white-space:pre-wrap}
+.ratings{display:flex;gap:10px;margin:10px 0}
+.ratings button{padding:6px 20px;border-radius:4px;border:1px solid #555;background:transparent;color:#aaa;cursor:pointer;font-size:14px}
+.ratings button.active-Y{background:#2d5a2d;border-color:#4caf50;color:#4caf50}
+.ratings button.active-T{background:#5a4a2d;border-color:#ffc107;color:#ffc107}
+.ratings button.active-N{background:#5a2d2d;border-color:#f44336;color:#f44336}
+.notes{width:100%;padding:8px;border-radius:4px;border:1px solid #333;background:#111;color:#ddd;font-size:13px}
+.notes::placeholder{color:#555}
+.stats{display:flex;gap:20px;margin:20px 0;padding:12px 16px;background:#1a1a1a;border-radius:6px;font-size:13px}
+.stats span{color:#888}
+.stats .y{color:#4caf50}
+.stats .t{color:#ffc107}
+.stats .n{color:#f44336}
+.actions{display:flex;gap:10px;margin:20px 0}
+.actions button{padding:8px 24px;border-radius:4px;cursor:pointer;font-size:14px}
+.btn-submit{background:#d4a574;color:#000;border:none;font-weight:bold}
+.btn-submit:hover{background:#e8c39e}
+.btn-skip{background:transparent;border:1px solid #555;color:#888}
+.btn-skip:hover{border-color:#888;color:#fff}
+.batch-done{text-align:center;padding:40px;color:#666}
+.batch-done h2{color:#d4a574}
+</style></head><body>
+<h1>📽 Clip Review</h1>
+
+<div class="stats" id="stats">
+  <span>Total: <b id="total">0</b></span>
+  <span class="y">Y: <b id="y-count">0</b></span>
+  <span class="t">T: <b id="t-count">0</b></span>
+  <span class="n">N: <b id="n-count">0</b></span>
+  <span>Batch: <b id="batch-num">1</b></span>
+</div>
+
+<div id="clips"></div>
+
+<div class="actions" id="actions">
+  <button class="btn-submit" onclick="submitBatch()">Submit Batch</button>
+  <button class="btn-skip" onclick="skipBatch()">Skip Batch</button>
+  <button class="btn-skip" onclick="exportRatings()">Export Ratings</button>
+</div>
+
+<div id="done" class="batch-done" style="display:none">
+  <h2>✓ Batch Complete</h2>
+  <p id="summary-text"></p>
+  <button class="btn-submit" onclick="nextBatch()">Next Batch</button>
+  <button class="btn-skip" onclick="exportRatings()">Export All Ratings</button>
+</div>
+
+<script>
+const API = window.location.origin;
+const FEEDBACK_FILE = 'feedback-log.json';
+
+// Mock data for initial batch — replace with real data from generation
+let clips = [
+  { id: 'AC6_SPANDA_v01', title: 'Spanda Pulse', prompt: 'Pulsing blue-white point with concentric rings emanating outward in slow waves.', duration: 15, seed: 4242, video_url: null, feedback: null },
+  { id: 'K2_MOUNTAIN_v01', title: 'Mountain Temple Dawn', prompt: 'Stone temple complex in Himalayan valley at dawn, mist between carved pillars.', duration: 15, seed: 7891, video_url: null, feedback: null },
+  { id: 'S1_SEEKER_v01', title: 'Seeker Stands Alone', prompt: 'Small geometric clay humanoid figure standing alone in warm darkness.', duration: 15, seed: 1012, video_url: null, feedback: null },
+  { id: 'TR1_MASK_REVEAL_v01', title: 'The Mask Reveal', prompt: 'Crowd of figures removes masks revealing same golden light beneath.', duration: 20, seed: 5555, video_url: null, feedback: null },
+  { id: 'AC11_RASA_v01', title: 'Rasa Blooms', prompt: 'Single point of crimson light blooming into layered colours.', duration: 15, seed: 3333, video_url: null, feedback: null },
+];
+
+let currentBatch = 1;
+const BATCH_SIZE = 5;
+
+function loadBatch() {
+  const start = (currentBatch - 1) * BATCH_SIZE;
+  const end = start + BATCH_SIZE;
+  const batch = clips.slice(start, end);
+  const container = document.getElementById('clips');
+  
+  if (batch.length === 0) {
+    document.getElementById('clips').innerHTML = '';
+    document.getElementById('done').style.display = 'block';
+    const rated = clips.filter(c => c.feedback).length;
+    document.getElementById('summary-text').textContent = `${rated}/${clips.length} clips rated. ${clips.filter(c => c.feedback?.rating === 'Y').length} Yes, ${clips.filter(c => c.feedback?.rating === 'T').length} Tweaks, ${clips.filter(c => c.feedback?.rating === 'N').length} No.`;
+    return;
+  }
+  document.getElementById('done').style.display = 'none';
+  document.getElementById('batch-num').textContent = currentBatch;
+  
+  container.innerHTML = batch.map(c => renderClip(c)).join('');
+  
+  // Re-attach event listeners
+  batch.forEach(c => {
+    document.querySelectorAll(`[data-clip="${c.id}"]`).forEach(el => {
+      el.addEventListener('click', () => setRating(c.id, el.dataset.rating));
+    });
+  });
+  
+  updateStats();
+}
+
+function renderClip(c) {
+  const f = c.feedback || {};
+  const yClass = f.rating === 'Y' ? 'active-Y' : '';
+  const tClass = f.rating === 'T' ? 'active-T' : '';
+  const nClass = f.rating === 'N' ? 'active-N' : '';
+  
+  return `
+    <div class="pending ${f.rating ? 'rated' : ''}" id="clip-${c.id}">
+      ${c.video_url 
+        ? `<video controls><source src="${c.video_url}" type="video/mp4"></video>` 
+        : `<div style="background:#111;border-radius:4px;padding:40px;text-align:center;color:#555">[ Video pending — paste URL below ]</div>`}
+      <div class="meta">
+        <span><b>${c.id}</b></span>
+        <span>⏱ ${c.duration}s</span>
+        <span>🎲 ${c.seed}</span>
+      </div>
+      <div class="prompt-preview" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='block'?'none':'block'">📝 ${c.title} (click to expand prompt)</div>
+      <div class="prompt-full">${c.prompt}</div>
+      
+      <div class="ratings" data-clip="${c.id}">
+        <button class="${yClass}" data-clip="${c.id}" data-rating="Y" onclick="setRating('${c.id}','Y')">✓ Yes</button>
+        <button class="${tClass}" data-clip="${c.id}" data-rating="T" onclick="setRating('${c.id}','T')">△ Tweak</button>
+        <button class="${nClass}" data-clip="${c.id}" data-rating="N" onclick="setRating('${c.id}','N')">✗ No</button>
+      </div>
+      <textarea class="notes" placeholder="What went wrong? (too fast, wrong colour, not clay enough, jittery...)" 
+        oninput="setNotes('${c.id}',this.value)">${f.notes || ''}</textarea>
+    </div>
+  `;
+}
+
+function setRating(id, rating) {
+  const c = clips.find(c => c.id === id);
+  if (!c) return;
+  if (c.feedback?.rating === rating) {
+    c.feedback.rating = null;  // toggle off
+  } else {
+    c.feedback = c.feedback || {};
+    c.feedback.rating = rating;
+  }
+  loadBatch();
+}
+
+function setNotes(id, notes) {
+  const c = clips.find(c => c.id === id);
+  if (!c) return;
+  c.feedback = c.feedback || {};
+  c.feedback.notes = notes;
+}
+
+function updateStats() {
+  const total = clips.filter(c => c.feedback?.rating).length;
+  const y = clips.filter(c => c.feedback?.rating === 'Y').length;
+  const t = clips.filter(c => c.feedback?.rating === 'T').length;
+  const n = clips.filter(c => c.feedback?.rating === 'N').length;
+  document.getElementById('total').textContent = total;
+  document.getElementById('y-count').textContent = y;
+  document.getElementById('t-count').textContent = t;
+  document.getElementById('n-count').textContent = n;
+}
+
+function submitBatch() {
+  const start = (currentBatch - 1) * BATCH_SIZE;
+  const end = start + BATCH_SIZE;
+  const batch = clips.slice(start, end);
+  const rated = batch.filter(c => c.feedback?.rating);
+  
+  if (rated.length < batch.length) {
+    if (!confirm(`${batch.length - rated.length} clip(s) not yet rated. Submit anyway?`)) return;
+  }
+  
+  // Save to localStorage
+  saveFeedback();
+  console.log('Batch submitted:', rated.map(c => ({id: c.id, rating: c.feedback?.rating, notes: c.feedback?.notes})));
+  
+  currentBatch++;
+  loadBatch();
+}
+
+function skipBatch() {
+  currentBatch++;
+  loadBatch();
+}
+
+function exportRatings() {
+  const data = clips.filter(c => c.feedback?.rating).map(c => ({
+    id: c.id,
+    rating: c.feedback.rating,
+    notes: c.feedback.notes || '',
+    duration: c.duration,
+    seed: c.seed
+  }));
+  
+  const blob = new Blob([JSON.stringify(data, null, 2)], {type: 'application/json'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = FEEDBACK_FILE;
+  a.click();
+  
+  console.log('Exported feedback:', data);
+  alert(`Exported ${data.length} ratings to ${FEEDBACK_FILE}`);
+}
+
+function nextBatch() {
+  document.getElementById('done').style.display = 'none';
+  currentBatch++;
+  loadBatch();
+}
+
+function saveFeedback() {
+  try {
+    localStorage.setItem('ochesma-feedback', JSON.stringify(clips.map(c => c.feedback)));
+  } catch(e) {}
+}
+
+function loadFeedback() {
+  try {
+    const saved = JSON.parse(localStorage.getItem('ochesma-feedback'));
+    if (saved) {
+      saved.forEach((f, i) => {
+        if (f) clips[i].feedback = f;
+      });
+    }
+  } catch(e) {}
+}
+
+// Add new clips for review
+function addClips(newClips) {
+  clips = clips.concat(newClips);
+  loadBatch();
+}
+
+// Allow pasting video URLs
+window.addVideoUrl = function(clipId, url) {
+  const c = clips.find(c => c.id === clipId);
+  if (c) c.video_url = url;
+  loadBatch();
+};
+
+loadFeedback();
+loadBatch();
+</script>
+</body></html>

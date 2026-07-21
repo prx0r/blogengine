@@ -1,0 +1,56 @@
+{
+  "work_id": "work:t2-pubmed-when-broca-goes-uninformed-reduced-information-flow-to-broca-s-area-in",
+  "schema_version": 2,
+  "title": "When Broca goes uninformed: reduced information flow to Broca's area in schizophrenia patients with auditory hallucinations.",
+  "authors": [
+    {
+      "name": "Curcic-Blake, Branislava"
+    },
+    {
+      "name": "Liemburg, Edith"
+    },
+    {
+      "name": "Vercammen, Ans"
+    },
+    {
+      "name": "Swart, Marte"
+    },
+    {
+      "name": "Knegtering, Henderikus"
+    },
+    {
+      "name": "Bruggeman, Richard"
+    },
+    {
+      "name": "Aleman, Andr\u00e9"
+    }
+  ],
+  "identifiers": {
+    "pmid": "23070537",
+    "doi": "10.1093/schbul/sbs107"
+  },
+  "publication": {
+    "journal": "Schizophrenia bulletin",
+    "year": "2013"
+  },
+  "abstract": "Auditory-verbal hallucinations (AVHs) are frequently associated with activation of the left superior temporal gyrus (including Wernicke's area), left inferior frontal gyrus (including Broca's area), and the right hemisphere homologs of both areas. It has been hypothesized that disconnectivity of both interhemispheric transfer and frontal and temporal areas may underlie hallucinations in schizophrenia. We investigated reduced information flow in this circuit for the first time using dynamic causal modeling, which allows for directional inference. A group of healthy subjects and 2 groups of schizophrenia patients-with and without AVH-performed a task requiring inner speech processing during functional brain scanning. We employed connectivity models between left hemispheric speech-processing areas and their right hemispheric homologs. Bayesian model averaging was used to estimate the connectivity strengths and evaluate group differences. Patients with AVH showed significantly reduced connectivity from Wernicke's to Broca's area (97% certainty) and a trend toward a reduction in connectivity from homologs of Broca's and Wernicke's areas to Broca's area (93% and 94% certainty). The connectivity magnitude in patients without hallucinations was found to be intermediate. Our results point toward a reduced input from temporal to frontal language areas in schizophrenia patients with AVH, suggesting that Broca's activity may be less constrained by perceptual information received from the temporal cortex. In addition, a lack of synchronization between Broca and its homolog may lead to the erroneous interpretation of emotional speech activity from the right hemisphere as coming from an external source.",
+  "phase_mapping": {
+    "phase": 9,
+    "phase_name": "Language/Mantra"
+  },
+  "bridge_tags": [
+    "inner-speech",
+    "mantra",
+    "language",
+    "verbal-meditation",
+    "auditory-verbal-hallucinations",
+    "dynamic-causal-modeling",
+    "functional-brain-connectivity"
+  ],
+  "evaluation": "Quality pass v3 (score=40) \u2014 High-signal bridge paper for Language/Mantra.",
+  "assets": {
+    "pdf_path": null,
+    "nxml_path": null
+  },
+  "tier": 2
+}

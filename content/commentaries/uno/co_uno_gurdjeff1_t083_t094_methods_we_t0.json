@@ -1,0 +1,62 @@
+{
+  "co_id": "co:uno_gurdjeff1_t083_t094_methods_we_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gurdjeff1_t083_t094_methods_wearing_off_and_alarms",
+  "turn_index": 0,
+  "lineage": "Gurdjieffian",
+  "student_state": "frustrated_empirical_failure",
+  "behavior_tags": [
+    "method_entropy",
+    "practical_inquiry"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_01",
+    "function_name": "RM_01",
+    "mechanism_shape": "STRUCTURAL_ANALOGY",
+    "teaching_actions": [
+      "normalizes_failure",
+      "gives_rule_of_thumb",
+      "explains_mechanism_of_entropy",
+      "uses_analogy"
+    ],
+    "traps_avoided": [
+      "problem_solving_stance"
+    ],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.5,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "request_clarification",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The normalization works: method entropy = normal (law of association), must change methods/alarms. The student is frustrated (frustrated empirical failure), which shows they're experiencing method failure. They'll likely ask about self-generating solutions next. Hypothesis: method entropy normalizations trigger self-generating solution questions—testable by tracking whether normalization responses lead to self-generating inquiries.",
+  "accumulated_insight": "T1: Student reports method failure ('when I discover a method to make me remember myself, this works for a few times and then wears off')—frustrated empirical failure via method entropy and practical inquiry. They're experiencing method entropy (methods wear off). The structural_analogy mechanism normalizes: method entropy = normal (law of association), must change methods/alarms. Pattern: method failure → normalization → [next: self-generating question]. Medium confidence because normalizations typically trigger clarification requests.",
+  "abstract_pattern": "",
+  "visible_response": "You must always change those methods; they do not work for long— it is part of\nour state.\nTake it as a fact; there is no need to analyse it.\nThe more new and\nunexpected things are, the better they will work.\nThis is connected with the\nfundamental principle of all mental and physical life.\nWe observe, in the ordinary\nsense, only changes in our associations. We do not feel permanent associations; we\nnotice only changes.\nSo when you are accustomed to them, you have to make some\nkind of alarm;\nthen you get accustomed to this alarm and it does not work any more.\nIf you make your alarm-clock ring permanently, you will notice it only when it stops\nringing.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:sufi-comparative-analysis",
+    "ro:steiner-tantraloka-parallels"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

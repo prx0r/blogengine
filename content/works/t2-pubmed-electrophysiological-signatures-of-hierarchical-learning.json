@@ -1,0 +1,55 @@
+{
+  "work_id": "work:t2-pubmed-electrophysiological-signatures-of-hierarchical-learning",
+  "schema_version": 2,
+  "title": "Electrophysiological Signatures of Hierarchical Learning.",
+  "authors": [
+    {
+      "name": "Liu M"
+    },
+    {
+      "name": "Dong W"
+    },
+    {
+      "name": "Qin S"
+    },
+    {
+      "name": "Verguts T"
+    },
+    {
+      "name": "Chen Q"
+    }
+  ],
+  "publication": {
+    "year": 2022,
+    "journal": "Cereb Cortex",
+    "source": "PubMed/MEDLINE",
+    "language": "en"
+  },
+  "identifiers": {
+    "pmid": "34339505",
+    "doi": "10.1093/cercor/bhab245"
+  },
+  "topics": [
+    "phase-6-dependent-arising",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "assets": {
+    "pdf_path": null,
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/34339505/",
+    "abstract": "Human perception and learning is thought to rely on a hierarchical generative model that is continuously updated via precision-weighted prediction errors (pwPEs). However, the neural basis of such cognitive process and how it unfolds during decision-making remain poorly understood. To investigate this question, we combined a hierarchical Bayesian model (i.e., Hierarchical Gaussian Filter [HGF]) with electroencephalography (EEG), while participants performed a probabilistic reversal learning task"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_alt17_acquisition",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 6,
+    "phase_name": "Dependent-arising",
+    "bridge_rationale": "Bridge paper score=10.5: links Dependent-arising concept to mechanistic neuroscience"
+  },
+  "evaluation": "Score 10: Excellent bridge signal",
+  "tier": 2
+}

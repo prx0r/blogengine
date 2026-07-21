@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tukdam: When Death Stops at the Threshold</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.77/Tone.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=JetBrains+Mono:wght@200;300;400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: radial-gradient(ellipse at center, #0a0a1a 0%, #000511 50%, #000000 100%);
+            color: white;
+            overflow: hidden;
+            cursor: pointer;
+            position: relative;
+        }
+        #container {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        canvas {
+            width: 100%;
+            height: 100%;
+            display: block;
+            filter: contrast(1.1) brightness(1.05);
+        }
+        
+        /* Floating UI Elements */
+        #title-card {
+            position: absolute;
+            top: 4%;
+            left: 4%;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(20px);
+            padding: 20px 30px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0;
+            transition: all 2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        #title-card h1 {
+            font-size: clamp(18px, 2.2vw, 28px);
+            font-weight: 200;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+            background: linear-gradient(45deg, #64c8ff, #c864ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        #title-card p {
+            font-size: clamp(11px, 1.1vw, 14px);
+            font-weight: 300;
+            opacity: 0.8;
+            letter-spacing: 1px;
+        }
+        
+        #equation-display {
+            position: absolute;
+            top: 4%;
+            right: 4%;
+            background: rgba(10, 10, 30, 0.6);
+            backdrop-filter: blur(15px);
+            padding: 20px 25px;
+            border-radius: 10px;
+            border: 1px solid rgba(100, 200, 255, 0.2);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: clamp(11px, 1.3vw, 16px);
+            line-height: 1.6;
+            min-width: 280px;
+            opacity: 0;
+            transition: all 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        #subtitle-poetry {
+            position: absolute;
+            bottom: 6%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(25px);
+            padding: 25px 35px;
+            border-radius: 15px;
+            font-size: clamp(16px, 2vw, 24px);
+            font-weight: 300;
+            text-align: center;
+            max-width: 85%;
+            line-height: 1.5;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            opacity: 0;
+            transition: all 2s cubic-bezier(0.4, 0, 0.2, 1);
+            letter-spacing: 0.5px;
+        }
+        
+        #phase-whisper {
+            position: absolute;
+            bottom: 4%;
+            right: 4%;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: clamp(9px, 1vw, 12px);
+            color: rgba(255, 255, 255, 0.4);
+            background: rgba(0, 0, 0, 0.3);
+            padding: 10px 15px;
+            border-radius: 6px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            opacity: 0;
+            transition: all 1s ease;
+            letter-spacing: 1px;
+        }
+        
+        #meditation-guide {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: clamp(14px, 1.8vw, 22px);
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 200;
+            z-index: 100;
+            transition: opacity 2s ease;
+            letter-spacing: 1px;
+        }
+        #meditation-guide .sub {
+            font-size: clamp(11px, 1.2vw, 16px);
+            opacity: 0.6;
+            margin-top: 15px;
+            font-weight: 200;
+        }
+        
+        /* Beautiful styling classes */
+        .quantum-glow { color: #64c8ff; text-shadow: 0 0 20px rgba(100, 200, 255, 0.3); }
+        .mystery-purple { color: #c864ff; text-shadow: 0 0 20px rgba(200, 100, 255, 0.3); }
+        .life-green { color: #64ff64; text-shadow: 0 0 20px rgba(100, 255, 100, 0.3); }
+        .death-amber { color: #ffaa64; text-shadow: 0 0 20px rgba(255, 170, 100, 0.3); }
+        .emphasis { color: #ffd700; font-weight: 400; text-shadow: 0 0 15px rgba(255, 215, 0, 0.4); }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            #equation-display { min-width: 220px; }
+            #title-card, #equation-display { top: 2%; }
+            #subtitle-poetry { bottom: 4%; }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <canvas id="consciousness-field"></canvas>
+        
+        <div id="meditation-guide">
+            <div>Tukdam: When Death Stops at the Threshold</div>
+            <div class="sub">Click to witness the impossible</div>
+        </div>
+        
+        <div id="title-card">
+            <h1>TUKDAM</h1>
+            <p>FRONTIERS IN PSYCHOLOGY • 13 SUBJECTS • UNIVERSITY OF WISCONSIN</p>
+        </div>
+        
+        <div id="equation-display"></div>
+        <div id="subtitle-poetry"></div>
+        <div id="phase-whisper">INITIALIZING QUANTUM FIELD...</div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('consciousness-field');
+        const ctx = canvas.getContext('2d');
+        
+        let isStarted = false;
+        let startTime = 0;
+        let currentTime = 0;
+        let audioReady = false;
+        let synth, reverbSynth, delayNode;
+        
+        // Quantum consciousness field system
+        let probabilityNodes = [];
+        let quantumParticles = [];
+        let waveFunction = [];
+        let currentPhase = 0;
+        const TOTAL_DURATION = 45; // 45 seconds
+        
+        // Beautiful phase structure with quantum metaphor
+        const QUANTUM_PHASES = [
+            { 
+                name: "COHERENT SUPERPOSITION", 
+                duration: 8,
+                equation: `<span class="quantum-glow">|Ψ⟩ = α|alive⟩ + β|conscious⟩</span><br>Quantum coherent meditation state<br>Probability amplitudes aligned<br><span class="emphasis">Consciousness = Observable</span>`,
+                poetry: "In the stillness of deep meditation, consciousness exists in quantum superposition—simultaneously here and beyond, measured and immeasurable."
+            },
+            { 
+                name: "WAVE FUNCTION COLLAPSE", 
+                duration: 7,
+                equation: `<span class="death-amber">∂|Ψ⟩/∂t → 0</span><br>Clinical death occurs<br>Measurement apparatus fails<br><span class="death-amber">Observer = Absent</span>`,
+                poetry: "The heart stops. Breathing ceases. The brain—that quantum measurement device—falls silent. Classical physics predicts total collapse."
+            },
+            { 
+                name: "IMPOSSIBLE PERSISTENCE", 
+                duration: 15,
+                equation: `<span class="mystery-purple">EEG = ∅ ∀ t > 26hrs</span><br>No neural activity detected<br>26+ hours of silence<br><span class="mystery-purple">Measurement = Zero</span>`,
+                poetry: "Scientists search for any trace of brain activity. EEG machines detect nothing. The quantum field should have decohered completely. Yet something impossible persists."
+            },
+            { 
+                name: "BIOLOGICAL PRESERVATION", 
+                duration: 11,
+                equation: `<span class="life-green">|Body⟩ ≠ f(|Brain⟩)</span><br>Preservation without mechanism<br>Cellular integrity maintained<br><span class="life-green">Effect ≠ Cause</span>`,
+                poetry: "For weeks, the body remains fresh. No decay. No rigor mortis. No decomposition. The quantum field has somehow maintained biological coherence without any detectable physical basis."
+            },
+            { 
+                name: "PARADIGM TRANSCENDENCE", 
+                duration: 4,
+                equation: `<span class="emphasis">C ⊄ M</span><br>Consciousness not subset of Matter<br>New physics required<br><span class="emphasis">Mystery = Gateway</span>`,
+                poetry: "At the threshold between life and death, Tukdam practitioners reveal that consciousness may be far stranger than we ever imagined."
+            }
+        ];
+        
+        // Quantum-inspired color palette
+        const QUANTUM_COLORS = {
+            probability_blue: [100, 200, 255],
+            superposition_purple: [200, 100, 255], 
+            measurement_amber: [255, 170, 100],
+            preservation_green: [100, 255, 100],
+            transcendence_gold: [255, 215, 0],
+            quantum_white: [255, 255, 255]
+        };
+        
+        // Resize canvas
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            initializeQuantumField();
+        }
+        window.addEventListener('resize', resizeCanvas);
+        
+        // Initialize quantum consciousness field
+        function initializeQuantumField() {
+            probabilityNodes = [];
+            quantumParticles = [];
+            waveFunction = [];
+            
+            const centerX = canvas.width / 2;
+            const centerY = canvas.height / 2;
+            
+            // Create probability cloud centers (quantum nodes)
+            for(let i = 0; i < 8; i++) {
+                const angle = (i / 8) * Math.PI * 2;
+                const radius = Math.min(canvas.width, canvas.height) * 0.15;
+                probabilityNodes.push({
+                    x: centerX + Math.cos(angle) * radius,
+                    y: centerY + Math.sin(angle) * radius,
+                    originalX: centerX + Math.cos(angle) * radius,
+                    originalY: centerY + Math.sin(angle) * radius,
+                    angle: angle,
+                    phase: i * 0.25,
+                    amplitude: 1.0,
+                    wavelength: 40 + i * 10,
+                    frequency: 0.02 + i * 0.005,
+                    coherence: 1.0,
+                    entangled: true
+                });
+            }
+            
+            // Create quantum particle field
+            for(let i = 0; i < 200; i++) {
+                quantumParticles.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    vx: (Math.random() - 0.5) * 0.5,
+                    vy: (Math.random() - 0.5) * 0.5,
+                    size: Math.random() * 1.5 + 0.5,
+                    opacity: Math.random() * 0.4 + 0.1,
+                    probability: Math.random(),
+                    wavePhase: Math.random() * Math.PI * 2,
+                    quantumState: 'superposition',
+                    entangled: false,
+                    age: Math.random() * 1000
+                });
+            }
+            
+            // Initialize wave function grid
+            const gridSize = 50;
+            for(let x = 0; x < gridSize; x++) {
+                waveFunction[x] = [];
+                for(let y = 0; y < gridSize; y++) {
+                    waveFunction[x][y] = {
+                        amplitude: 0,
+                        phase: 0,
+                        probability: 0
+                    };
+                }
+            }
+        }
+        
+        // Get current phase data
+        function getCurrentPhase() {
+            const loopTime = currentTime % TOTAL_DURATION;
+            let accumulatedTime = 0;
+            
+            for(let i = 0; i < QUANTUM_PHASES.length; i++) {
+                if(loopTime < accumulatedTime + QUANTUM_PHASES[i].duration) {
+                    const phaseProgress = (loopTime - accumulatedTime) / QUANTUM_PHASES[i].duration;
+                    return { index: i, progress: phaseProgress, phase: QUANTUM_PHASES[i] };
+                }
+                accumulatedTime += QUANTUM_PHASES[i].duration;
+            }
+            return { index: 0, progress: 0, phase: QUANTUM_PHASES[0] };
+        }
+        
+        // Smooth easing function
+        function easeInOutCubic(t) {
+            return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+        }
+        
+        // Update quantum field based on current phase
+        function updateQuantumField() {
+            const { index, progress, phase } = getCurrentPhase();
+            const smoothProgress = easeInOutCubic(progress);
+            const time = currentTime * 1000;
+            
+            let coherenceLevel, entanglementStrength, measurementCollapse, preservationField, phaseColors;
+            
+            switch(index) {
+                case 0: // Coherent superposition
+                    coherenceLevel = 1.0;
+                    entanglementStrength = 1.0;
+                    measurementCollapse = 0.0;
+                    preservationField = 1.0;
+                    phaseColors = [QUANTUM_COLORS.probability_blue, QUANTUM_COLORS.quantum_white];
+                    break;
+                    
+                case 1: // Wave function collapse
+                    coherenceLevel = 1.0 - smoothProgress * 0.9;
+                    entanglementStrength = 1.0 - smoothProgress * 0.8;
+                    measurementCollapse = smoothProgress;
+                    preservationField = 1.0 - smoothProgress * 0.7;
+                    phaseColors = [QUANTUM_COLORS.probability_blue, QUANTUM_COLORS.measurement_amber];
+                    break;
+                    
+                case 2: // Impossible persistence
+                    coherenceLevel = 0.1;
+                    entanglementStrength = 0.2;
+                    measurementCollapse = 1.0;
+                    preservationField = 0.3 + smoothProgress * 0.4; // Mysterious persistence
+                    phaseColors = [QUANTUM_COLORS.measurement_amber, QUANTUM_COLORS.superposition_purple];
+                    break;
+                    
+                case 3: // Biological preservation
+                    coherenceLevel = 0.2 + smoothProgress * 0.5;
+                    entanglementStrength = 0.3 + smoothProgress * 0.4;
+                    measurementCollapse = 1.0 - smoothProgress * 0.3;
+                    preservationField = 0.7 + smoothProgress * 0.3;
+                    phaseColors = [QUANTUM_COLORS.superposition_purple, QUANTUM_COLORS.preservation_green];
+                    break;
+                    
+                case 4: // Paradigm transcendence
+                    coherenceLevel = 0.7 + Math.sin(time * 0.005) * 0.3;
+                    entanglementStrength = 0.8 + Math.sin(time * 0.003) * 0.2;
+                    measurementCollapse = 0.3;
+                    preservationField = 1.0;
+                    phaseColors = [QUANTUM_COLORS.preservation_green, QUANTUM_COLORS.transcendence_gold];
+                    break;
+            }
+            
+            // Update probability nodes
+            probabilityNodes.forEach((node, i) => {
+                // Quantum breathing motion
+                const breathe = Math.sin(time * node.frequency + node.phase) * node.wavelength * coherenceLevel;
+                const entangled = Math.cos(time * 0.001 + node.phase) * entanglementStrength * 15;
+                
+                node.x = node.originalX + Math.cos(node.angle + time * 0.0002) * breathe + entangled;
+                node.y = node.originalY + Math.sin(node.angle + time * 0.0002) * breathe + entangled;
+                node.amplitude = coherenceLevel * (0.8 + Math.sin(time * 0.004 + node.phase) * 0.2);
+                node.coherence = coherenceLevel;
+                node.entangled = entanglementStrength > 0.3;
+            });
+            
+            // Update quantum particles
+            quantumParticles.forEach(particle => {
+                particle.age += 1;
+                
+                // Quantum behavior based on coherence
+                if(coherenceLevel > 0.5) {
+                    // Attracted to probability nodes when coherent
+                    let fx = 0, fy = 0;
+                    probabilityNodes.forEach(node => {
+                        const dx = node.x - particle.x;
+                        const dy = node.y - particle.y;
+                        const dist = Math.sqrt(dx*dx + dy*dy);
+                        if(dist > 0 && dist < 200) {
+                            const force = (200 - dist) / 200 * 0.008 * coherenceLevel * node.amplitude;
+                            fx += (dx / dist) * force;
+                            fy += (dy / dist) * force;
+                        }
+                    });
+                    particle.vx += fx;
+                    particle.vy += fy;
+                } else {
+                    // Random quantum fluctuations when decoherent
+                    particle.vx += (Math.random() - 0.5) * 0.05 * measurementCollapse;
+                    particle.vy += (Math.random() - 0.5) * 0.05 * measurementCollapse;
+                }
+                
+                // Wave function evolution
+                particle.wavePhase += 0.02 + coherenceLevel * 0.03;
+                particle.probability = (Math.sin(particle.wavePhase) + 1) / 2;
+                
+                // Quantum tunneling (position update)
+                particle.vx *= 0.99;
+                particle.vy *= 0.99;
+                particle.x += particle.vx;
+                particle.y += particle.vy;
+                
+                // Quantum boundary conditions (wrap around)
+                if(particle.x < 0) particle.x = canvas.width;
+                if(particle.x > canvas.width) particle.x = 0;
+                if(particle.y < 0) particle.y = canvas.height;
+                if(particle.y > canvas.height) particle.y = 0;
+                
+                // Update quantum state
+                if(measurementCollapse > 0.8) {
+                    particle.quantumState = 'collapsed';
+                } else if(coherenceLevel > 0.6) {
+                    particle.quantumState = 'superposition';
+                } else {
+                    particle.quantumState = 'mixed';
+                }
+            });
+            
+            return { coherenceLevel, entanglementStrength, measurementCollapse, preservationField, phaseColors };
+        }
+        
+        // Render quantum consciousness field
+        function renderQuantumField() {
+            const { coherenceLevel, entanglementStrength, measurementCollapse, preservationField, phaseColors } = updateQuantumField();
+            const time = currentTime * 1000;
+            
+            // Draw quantum entanglement lines
+            if(entanglementStrength > 0.2) {
+                for(let i = 0; i < probabilityNodes.length; i++) {
+                    for(let j = i + 1; j < probabilityNodes.length; j++) {
+                        const node1 = probabilityNodes[i];
+                        const node2 = probabilityNodes[j];
+                        const dist = Math.sqrt(Math.pow(node1.x - node2.x, 2) + Math.pow(node1.y - node2.y, 2));
+                        
+                        if(dist < 350) {
+                            const alpha = (350 - dist) / 350 * entanglementStrength * 0.3;
+                            const color = phaseColors[0];
+                            
+                            // Quantum entanglement visualization
+                            ctx.strokeStyle = `rgba(${color[0]}, ${color[1]}, ${color[2]}, ${alpha})`;
+                            ctx.lineWidth = 0.5 + entanglementStrength;
+                            ctx.setLineDash([5, 5]);
+                            ctx.beginPath();
+                            ctx.moveTo(node1.x, node1.y);
+                            ctx.lineTo(node2.x, node2.y);
+                            ctx.stroke();
+                            ctx.setLineDash([]);
+                        }
+                    }
+                }
+            }
+            
+            // Draw probability cloud particles
+            quantumParticles.forEach(particle => {
+                const color = particle.quantumState === 'superposition' ? phaseColors[0] : 
+                             particle.quantumState === 'collapsed' ? phaseColors[1] :
+                             [150, 150, 150]; // Mixed state
+                
+                const alpha = particle.opacity * particle.probability * (0.3 + preservationField * 0.4);
+                const size = particle.size * (0.5 + particle.probability * 0.5);
+                
+                if(alpha > 0.01) {
+                    // Quantum probability glow
+                    const glowRadius = size * 3;
+                    const gradient = ctx.createRadialGradient(
+                        particle.x, particle.y, 0,
+                        particle.x, particle.y, glowRadius
+                    );
+                    gradient.addColorStop(0, `rgba(${color[0]}, ${color[1]}, ${color[2]}, ${alpha * 0.8})`);
+                    gradient.addColorStop(0.5, `rgba(${color[0]}, ${color[1]}, ${color[2]}, ${alpha * 0.3})`);
+                    gradient.addColorStop(1, `rgba(${color[0]}, ${color[1]}, ${color[2]}, 0)`);
+                    
+                    ctx.fillStyle = gradient;
+                    ctx.beginPath();
+                    ctx.arc(particle.x, particle.y, glowRadius, 0, Math.PI * 2);
+                    ctx.fill();
+                    
+                    // Core particle
+                    ctx.fillStyle = `rgba(${color[0]}, ${color[1]}, ${color[2]}, ${alpha})`;
+                    ctx.beginPath();
+                    ctx.arc(particle.x, particle.y, size, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+            });
+            
+            // Draw probability amplitude nodes
+            probabilityNodes.forEach(node => {
+                if(node.amplitude > 0.05) {
+                    const color = phaseColors[Math.floor(Math.random() * phaseColors.length)];
+                    const glow = node.amplitude * (0.7 + Math.sin(time * 0.003 + node.phase) * 0.3);
+                    
+                    // Quantum field distortion around node
+                    const distortionRadius = 40 * node.amplitude;
+                    const gradient = ctx.createRadialGradient(
+                        node.x, node.y, 0,
+                        node.x, node.y, distortionRadius
+                    );
+                    gradient.addColorStop(0, `rgba(${color[0]}, ${color[1]}, ${color[2]}, ${glow * 0.4})`);
+                    gradient.addColorStop(0.7, `rgba(${color[0]}, ${color[1]}, ${color[2]}, ${glow * 0.1})`);
+                    gradient.addColorStop(1, `rgba(${color[0]}, ${color[1]}, ${color[2]}, 0)`);
+                    
+                    ctx.fillStyle = gradient;
+                    ctx.beginPath();
+                    ctx.arc(node.x, node.y, distortionRadius, 0, Math.PI * 2);
+                    ctx.fill();
+                    
+                    // Probability amplitude core
+                    ctx.fillStyle = `rgba(${color[0]}, ${color[1]}, ${color[2]}, ${glow})`;
+                    ctx.beginPath();
+                    ctx.arc(node.x, node.y, 3 + node.amplitude * 2, 0, Math.PI * 2);
+                    ctx.fill();
+                    
+                    // Quantum interference pattern
+                    if(node.coherence > 0.5) {
+                        ctx.strokeStyle = `rgba(${color[0]}, ${color[1]}, ${color[2]}, ${glow * 0.3})`;
+                        ctx.lineWidth = 1;
+                        ctx.beginPath();
+                        ctx.arc(node.x, node.y, 15 + Math.sin(time * 0.01 + node.phase) * 5, 0, Math.PI * 2);
+                        ctx.stroke();
+                    }
+                }
+            });
+            
+            updateUI();
+        }
+        
+        // Update UI elements
+        function updateUI() {
+            const { index, progress, phase } = getCurrentPhase();
+            
+            // Update phase indicator
+            const phaseEl = document.getElementById('phase-whisper');
+            phaseEl.textContent = phase.name.toUpperCase();
+            phaseEl.style.opacity = '1';
+            
+            // Update equation display
+            const equationEl = document.getElementById('equation-display');
+            equationEl.innerHTML = phase.equation;
+            equationEl.style.opacity = '1';
+            
+            // Update poetry subtitle
+            const subtitleEl = document.getElementById('subtitle-poetry');
+            subtitleEl.textContent = phase.poetry;
+            subtitleEl.style.opacity = '1';
+            
+            // Update title card
+            const titleEl = document.getElementById('title-card');
+            titleEl.style.opacity = '1';
+        }
+        
+        // Play quantum-inspired ambient music
+        function playQuantumMusic() {
+            if(!audioReady || !synth) return;
+            
+            const { index } = getCurrentPhase();
+            const now = Tone.now();
+            
+            // Quantum frequency relationships (based on harmonic series with uncertainty)
+            const quantumFrequencies = [
+                111, // Deep fundamental
+                166.5, // Perfect fifth (3/2 ratio)
+                222, // Octave
+                278.25, // Major third above octave
+                333, // Perfect fifth above octave
+                416.25, // Seventh harmonic
+                555 // Higher octave
+            ];
+            
+            // Play notes based on phase with quantum uncertainty
+            if(Math.random() < 0.08) { // Sparse, probabilistic timing
+                const freq = quantumFrequencies[Math.floor(Math.random() * quantumFrequencies.length)];
+                const uncertainty = 1 + (Math.random() - 0.5) * 0.02; // Quantum detuning
+                const finalFreq = freq * uncertainty;
+                
+                const duration = 3 + Math.random() * 4; // 3-7 second notes
+                const velocity = 0.1 + Math.random() * 0.2; // Gentle dynamics
+                
+                synth.triggerAttackRelease(finalFreq, duration, now, velocity);
+                
+                // Add harmonic resonance occasionally
+                if(Math.random() < 0.3) {
+                    reverbSynth.triggerAttackRelease(finalFreq * 2, duration * 0.7, now + 0.1, velocity * 0.5);
+                }
+            }
+        }
+        
+        // Main animation loop
+        function draw() {
+            if(!isStarted) return;
+            
+            currentTime = (Date.now() - startTime) / 1000;
+            
+            // Clear with quantum void
+            ctx.fillStyle = 'rgba(5, 5, 15, 0.08)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            renderQuantumField();
+            playQuantumMusic();
+            
+            requestAnimationFrame(draw);
+        }
+        
+        // Start the quantum consciousness experience
+        function startQuantumExperience() {
+            if(isStarted) return;
+            
+            // Initialize quantum audio field
+            if(!audioReady) {
+                Tone.start();
+                
+                // Create quantum-inspired synthesizers
+                synth = new Tone.Synth({
+                    oscillator: { type: "sine" },
+                    envelope: { attack: 2.5, decay: 1.0, sustain: 0.4, release: 4.0 }
+                });
+                
+                reverbSynth = new Tone.Synth({
+                    oscillator: { type: "triangle" },
+                    envelope: { attack: 3.0, decay: 1.5, sustain: 0.3, release: 5.0 }
+                });
+                
+                // Create quantum reverb space
+                const reverb = new Tone.Reverb(6).toDestination();
+                const delay = new Tone.PingPongDelay("4n", 0.1).toDestination();
+                const filter = new Tone.Filter(800, "lowpass").toDestination();
+                
+                synth.chain(filter, reverb);
+                reverbSynth.chain(delay, reverb);
+                
+                // Set quantum volume levels
+                synth.volume.value = -28;
+                reverbSynth.volume.value = -35;
+                
+                audioReady = true;
+            }
+            
+            isStarted = true;
+            startTime = Date.now();
+            
+            // Hide meditation guide
+            document.getElementById('meditation-guide').style.opacity = '0';
+            
+            draw();
+        }
+        
+        // Event listeners
+        document.body.addEventListener('click', startQuantumExperience);
+        document.body.addEventListener('keydown', (e) => {
+            if(e.code === 'Space') {
+                e.preventDefault();
+                startQuantumExperience();
+            }
+        });
+        
+        // Initialize quantum field
+        window.onload = () => {
+            resizeCanvas();
+        };
+    </script>
+</body>
+</html>

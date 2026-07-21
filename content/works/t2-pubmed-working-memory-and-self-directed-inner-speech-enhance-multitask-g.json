@@ -1,0 +1,37 @@
+{
+  "work_id": "work:t2-pubmed-working-memory-and-self-directed-inner-speech-enhance-multitask-g",
+  "schema_version": 2,
+  "title": "Working Memory and Self-Directed Inner Speech Enhance Multitask Generalization in Active Inference.",
+  "authors": [
+    {
+      "name": "Quei\u00dfer, Jeffrey Frederic"
+    },
+    {
+      "name": "Tani, Jun"
+    }
+  ],
+  "identifiers": {
+    "pmid": "41160747",
+    "doi": "10.1162/NECO.a.36"
+  },
+  "publication": {
+    "journal": "Neural computation",
+    "year": ""
+  },
+  "abstract": "This simulation study shows how a set of working memory tasks can be acquired simultaneously through interaction between a stacked recurrent neural network (RNN) and multiple working memories. In these tasks, temporal patterns are provided, followed by linguistically specified task goals. Training is performed in a supervised manner by minimizing the free energy, and goal-directed tasks are performed using the active inference (AIF) framework. Our simulation results show that the best task performance is obtained when two working memory modules are used instead of one or none and when self-directed inner speech is incorporated during task execution. Detailed analysis indicates that a temporal hierarchy develops in the stacked RNN module under these optimal conditions. We argue that the model's capacity for generalization across novel task configurations is supported by the structured interplay between working memory and the generation of self-directed language outputs during task execution. This interplay promotes internal representations that reflect task structure, which in turn support generalization by enabling a functional separation between content encoding and control dynamics within the memory architecture.",
+  "phase_mapping": {
+    "phase": 6,
+    "phase_name": "Dependent-arising"
+  },
+  "bridge_tags": [
+    "predictive-processing",
+    "dependent-arising",
+    "causality"
+  ],
+  "evaluation": "Quality pass v3 (score=20) \u2014 Dependent-arising bridge.",
+  "assets": {
+    "pdf_path": null,
+    "nxml_path": null
+  },
+  "tier": 2
+}

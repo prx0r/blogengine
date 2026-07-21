@@ -1,0 +1,56 @@
+{
+  "work_id": "work:t2-pubmed-associative-learning-and-active-inference",
+  "schema_version": 2,
+  "title": "Associative Learning and Active Inference.",
+  "authors": [
+    {
+      "name": "Anokhin P"
+    },
+    {
+      "name": "Sorokin A"
+    },
+    {
+      "name": "Burtsev M"
+    },
+    {
+      "name": "Friston K"
+    }
+  ],
+  "publication": {
+    "year": 2024,
+    "type": "article",
+    "source": "PubMed/MEDLINE",
+    "language": "en",
+    "journal": "Neural Comput"
+  },
+  "identifiers": {
+    "pmid": "39312494",
+    "doi": "10.1162/neco_a_01711"
+  },
+  "topics": [
+    "phase-6-associative-learning",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "tradition": [
+    "contemporary_science"
+  ],
+  "tier": 2,
+  "assets": {
+    "pdf_path": null,
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/39312494/",
+    "abstract": "Associative learning is a behavioral phenomenon in which individuals develop connections between stimuli or events based on their co-occurrence. Initially studied by Pavlov in his conditioning experiments, the fundamental principles of learning have been expanded on through the discovery of a wide range of learning phenomena. Computational models have been developed based on the concept of minimizing reward prediction errors. The Rescorla-Wagner model, in particular, is a well-known model that h"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "unknown",
+    "source": "pubmed_t2_search",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 6,
+    "phase_name": "Dependent-arising",
+    "bridge_rationale": "Dependent arising — predictive processing, free energy principle, active inference, Bayesian brain, prediction error in perception and action."
+  },
+  "evaluation": "Excellent (score=16.2)"
+}

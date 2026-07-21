@@ -1,0 +1,60 @@
+{
+  "co_id": "co:uno_mystique_03_heritage_grandfath_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "mystique_03_heritage_grandfather",
+  "turn_index": 0,
+  "lineage": "Realist",
+  "student_state": "unknown",
+  "behavior_tags": [
+    "cultural_defense",
+    "historical_idealism"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_03",
+    "function_name": "UM_03",
+    "mechanism_shape": "STRUCTURAL_ANALOGY",
+    "teaching_actions": [
+      "challenges_justification",
+      "uses_analogy",
+      "exposes_irrelevance"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.35,
+      "attunement": 0.2,
+      "style": 0.5,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_01",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "resist_intellectually",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The structural_analogy mechanism with UM_03 feels like unknown is being met with a specific geometric cut. But what if the geometry itself is what they're resisting? The cultural_defense, historical_idealism suggests they're aware of something but can't name it.",
+  "accumulated_insight": "T1: Student says 'But how can our rich heritage help to solve the material problems?  That doesn't'—unknown via cultural defense, historical idealism. Teacher responds '' using structural analogy to challenges justification, uses analogy, exposes irrelevance. Opening UNMAKING move addresses unknown. Predicting resist intellectually because structural analogy interventions typically produce this response.",
+  "abstract_pattern": "",
+  "visible_response": "It cannot solve them, because of the falseness, because it is false... How can you justify the existence of these slums?\nHow can you justify the existence of ten crores of Harijans...?\n\nWhat consolation is that to us?\nWhat good is that? That's like saying \"My grandfather was a very rich man, a multimillionaire: when I don't know where my next meal will come from. What is the good of telling myself all the time that my grandfather was a multimillionaire? Likewise, India produced great saints... and we don't have even one in our midst... what is the good of repeating all the time that our heritage is so tremendous...?",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:kybalion",
+    "ro:grimoires-decoded",
+    "ro:hermes-proof-system"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

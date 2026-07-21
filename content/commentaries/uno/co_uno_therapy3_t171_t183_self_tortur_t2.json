@@ -1,0 +1,54 @@
+{
+  "co_id": "co:uno_therapy3_t171_t183_self_tortur_t2",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3_t171_t183_self_torture_distinction",
+  "turn_index": 2,
+  "lineage": "Therapeutic",
+  "student_state": "experiencing_impact",
+  "behavior_tags": [
+    "compliance",
+    "experiential_check"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_02",
+    "function_name": "RM_02",
+    "mechanism_shape": "CAUSAL_CHAIN",
+    "teaching_actions": [
+      "probes_affect"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.15,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.15,
+      "depth": 0.38,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_01",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_01",
+      "depth_discrete": "PD_02",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "'It was stupid. It was stupid'—they said it twice. Repetition makes it audible, not just internal thought. Hearing yourself say 'stupid stupid' is different from thinking it. Teacher asks for feeling: how does THIS make you feel? Not 'how do you feel about mistake' but 'how do you feel when you SAY this to yourself?' Links speech act to felt consequence. Hypothesis: saying it aloud will produce awareness of badness. They'll say 'bad' or 'terrible.' Then teacher can link: you're DOING this to yourself. Causality.",
+  "accumulated_insight": "T3: Student complies: 'It was stupid. It was stupid'—follows instruction, says it twice. Teacher asks for feeling: 'How does that make you feel when you say that to yourself?' Links behavior (saying 'stupid') to consequence (feeling). This is causal chain: your words → your feelings. Predicting surface_emotion because asking for feeling after repetition typically produces awareness of emotional impact.",
+  "abstract_pattern": "",
+  "visible_response": "How does that make you feel when you say that to yourself?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

@@ -1,0 +1,61 @@
+{
+  "co_id": "co:uno_gurdjeff1_t1330_t1350_imaginat_t3",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gurdjeff1_t1330_t1350_imagination_attention_observation",
+  "turn_index": 3,
+  "lineage": "Gurdjieffian",
+  "student_state": "puzzled_by_non_observability",
+  "behavior_tags": [
+    "requests_clarification",
+    "identifies_paradoxical_result"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_01",
+    "function_name": "RM_01",
+    "mechanism_shape": "STRUCTURAL_ANALOGY",
+    "teaching_actions": [
+      "clarifies_dynamics",
+      "uses_analogy",
+      "explains_interruptive_mechanism"
+    ],
+    "traps_avoided": [
+      "false_paradox"
+    ],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.62,
+      "attunement": 0.5,
+      "style": 0.5,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "request_clarification",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The resolution works: cannot observe long (if notice and turn away, continues; if keep attention, stops), attention = light, imagination = chemical process (dark). The student identified paradox (puzzled by non-observability), which shows they understand: observation = stops imagination (paradox). They'll likely ask about thought next.",
+  "accumulated_insight": "T4: Student identified paradox ('Do you mean that one cannot observe imagination without stopping it?')—puzzled by non-observability via requests clarification and identifies paradoxical result. They understand: observation = stops imagination (paradox). The structural_analogy mechanism resolves: cannot observe long (if notice and turn away, continues; if keep attention, stops), attention = light, imagination = chemical process (dark) ('You cannot observe it for long. If you just notice it and turn away, it can go on, but if you keep attention on it, it stops. Attention acts like a light, and imagination is like a chemical process that can only go on in the dark and stops with light'). Pattern: urgency expression → crushing → universality question → causal link → tool question → correction → observation question → resolution → [next: thought question]. They're grasping: observation = dynamic (short vs. long attention), attention = light (resolution).",
+  "abstract_pattern": "",
+  "visible_response": "You cannot observe it for long. If you just notice it and turn away, it can go on, but\nif you keep attention on it, it stops.\nAttention acts like a light, and imagination is like a\nchemical process that can only go on in the dark and stops with light,",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:sufi-comparative-analysis",
+    "ro:steiner-tantraloka-parallels"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lissajous Bloom Animation</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #222, #000);
+    }
+    canvas {
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      border: 1px solid #333;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    let time;
+    let points;
+    let isDrawing;
+    let isReversing;
+    let cycleCount;
+
+    // --- Stochastic Parameters ---
+    // These will be randomized for each new bloom
+    let maxTime;
+    let freqX, freqY; // Frequencies for the Lissajous curve
+    let phaseShift;
+    let colorSpeed;
+    let amplitude;
+
+    function setup() {
+      createCanvas(400, 400);
+      colorMode(HSB, 360, 100, 100);
+      frameRate(60);
+      startNewBloom();
+    }
+
+    // This function sets the unique "DNA" for each new bloom
+    function startNewBloom() {
+      points = [];
+      time = 0;
+      isDrawing = true;
+      isReversing = false;
+      cycleCount = (cycleCount || 0) + 1;
+
+      // --- NEW: Randomization for a Lissajous Curve ---
+      maxTime = random(TWO_PI * 2, TWO_PI * 8); // How long the curve is drawn
+      freqX = floor(random(1, 6));             // Integer frequencies create closed loops
+      freqY = floor(random(1, 6));
+      phaseShift = random(PI);                 // Phase shift for different shapes
+      colorSpeed = random(0.2, 1.0);
+      amplitude = random(120, 180);            // Max size of the shape
+    }
+
+    function draw() {
+      background(0, 80); // Fading background for effect
+      translate(width / 2, height / 2);
+
+      if (isDrawing) {
+        // --- DRAWING LOGIC: LISSAJOUS CURVE ---
+        if (time < maxTime) {
+          // Increase time to draw the curve
+          time += 0.05;
+
+          // The amplitude grows over time, making the shape expand outwards
+          let currentAmplitude = map(time, 0, maxTime, 0, amplitude);
+
+          let x = currentAmplitude * sin(freqX * time + phaseShift);
+          let y = currentAmplitude * sin(freqY * time);
+          points.push(createVector(x, y));
+        } else {
+          // Finished drawing, start erasing
+          isDrawing = false;
+          isReversing = true;
+        }
+      } else if (isReversing) {
+        // --- ERASING LOGIC ---
+        if (points.length > 0) {
+          // Remove points for faster clearing, from the center out
+          points.shift();
+          if (points.length > 0) points.shift();
+        } else {
+          // Finished erasing, start a new, unique bloom
+          startNewBloom();
+        }
+      }
+
+      // --- RENDERING LOGIC ---
+      let pulse = sin(frameCount * 0.1) * 10;
+      noStroke();
+      for (let i = 0; i < points.length; i++) {
+        let p = points[i];
+        let gradientFactor = map(i, 0, points.length, 0, 360);
+        
+        let hue = (gradientFactor + frameCount * colorSpeed + cycleCount * 60) % 360;
+        let saturation = 80 + sin(i * 0.1) * 20;
+        let brightness = 90 + pulse;
+        let alpha = map(i, 0, points.length, 100, 40); // Fade out at the tail
+
+        fill(hue, saturation, brightness, alpha);
+        
+        let dotSize = 2 + map(i, 0, points.length, 0, 5); // Dots get bigger as they expand
+        ellipse(p.x, p.y, dotSize, dotSize);
+      }
+    }
+  </script>
+</body>
+</html>

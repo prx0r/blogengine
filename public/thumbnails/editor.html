@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thumbnail Editor</title>
+<style>
+  :root {
+    --bg: #f5f3ef;
+    --card: #ffffff;
+    --border: #ddd6cb;
+    --text: #1a1a1a;
+    --muted: #7a746e;
+    --accent: #8b6914;
+    --accent-light: #e8d5a3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "EB Garamond", "Georgia", serif;
+    background: var(--bg);
+    color: var(--text);
+    padding: 20px;
+  }
+  h1 {
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--text);
+    margin-bottom: 4px;
+    letter-spacing: 0.5px;
+  }
+  .subtitle {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 24px;
+    font-style: italic;
+  }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+    gap: 20px;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .card-image {
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid var(--border);
+  }
+  .card-body {
+    padding: 16px 20px 20px;
+  }
+  .card-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--text);
+    line-height: 1.3;
+  }
+  .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+  }
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .form-group label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--muted);
+    font-weight: 600;
+  }
+  .form-group input,
+  .form-group select {
+    padding: 6px 10px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 13px;
+    background: var(--bg);
+    color: var(--text);
+    min-width: 100px;
+  }
+  .form-group input { min-width: 180px; }
+  .form-group select { cursor: pointer; }
+  .btn {
+    padding: 6px 16px;
+    border: 1px solid var(--accent);
+    background: var(--accent-light);
+    color: var(--text);
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.15s;
+    white-space: nowrap;
+  }
+  .btn:hover {
+    background: var(--accent);
+    color: white;
+  }
+  .btn:disabled {
+    opacity: 0.5;
+    cursor: wait;
+  }
+  .loading {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--muted);
+    font-style: italic;
+  }
+  .error {
+    background: #f8e8e8;
+    border: 1px solid #d4a0a0;
+    color: #8b3030;
+    padding: 12px 20px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+  }
+  .success-toast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1a1a1a;
+    color: white;
+    padding: 10px 24px;
+    border-radius: 6px;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+  }
+  .success-toast.show { opacity: 1; }
+</style>
+</head>
+<body>
+  <h1>Thumbnail Editor</h1>
+  <p class="subtitle">Tweak fonts, captions, treatments — click "Re-render" to preview</p>
+  <div id="error-container"></div>
+  <div id="gallery" class="loading">Loading thumbnails...</div>
+  <div id="toast" class="success-toast">Rendered!</div>
+
+<script>
+const API = window.location.origin;
+
+async function loadConfig() {
+  const res = await fetch(`${API}/api/config`);
+  if (!res.ok) throw new Error(`Failed to load config: ${res.status}`);
+  return await res.json();
+}
+
+async function renderCard(video) {
+  const card = document.createElement('div');
+  card.className = 'card';
+  card.dataset.slug = video.slug;
+
+  const img = document.createElement('img');
+  img.className = 'card-image';
+  img.alt = video.title;
+  img.src = `${API}/thumbnails/editor/${video.filename}?t=${Date.now()}`;
+  img.onerror = () => { img.src = ''; img.alt = '(no render yet)'; img.style.padding = '60px 20px'; img.style.textAlign = 'center'; };
+
+  const body = document.createElement('div');
+  body.className = 'card-body';
+
+  const title = document.createElement('div');
+  title.className = 'card-title';
+  title.textContent = video.title;
+
+  const row1 = document.createElement('div');
+  row1.className = 'form-row';
+
+  const captionGroup = document.createElement('div');
+  captionGroup.className = 'form-group';
+  const captionLabel = document.createElement('label');
+  captionLabel.textContent = 'Caption';
+  const captionInput = document.createElement('input');
+  captionInput.type = 'text';
+  captionInput.value = video.caption;
+  captionGroup.appendChild(captionLabel);
+  captionGroup.appendChild(captionInput);
+
+  const fontGroup = document.createElement('div');
+  fontGroup.className = 'form-group';
+  const fontLabel = document.createElement('label');
+  fontLabel.textContent = 'Font';
+  const fontSelect = document.createElement('select');
+  for (const [key, name] of Object.entries(window._fonts).sort()) {
+    const opt = document.createElement('option');
+    opt.value = key;
+    opt.textContent = name;
+    if (key === video.font_role) opt.selected = true;
+    fontSelect.appendChild(opt);
+  }
+  fontGroup.appendChild(fontLabel);
+  fontGroup.appendChild(fontSelect);
+
+  const row2 = document.createElement('div');
+  row2.className = 'form-row';
+
+  const treatmentGroup = document.createElement('div');
+  treatmentGroup.className = 'form-group';
+  const treatmentLabel = document.createElement('label');
+  treatmentLabel.textContent = 'Treatment';
+  const treatmentSelect = document.createElement('select');
+  for (const t of window._treatments) {
+    const opt = document.createElement('option');
+    opt.value = t;
+    opt.textContent = t.replace(/_/g, ' ');
+    if (t === video.treatment_preset) opt.selected = true;
+    treatmentSelect.appendChild(opt);
+  }
+  treatmentGroup.appendChild(treatmentLabel);
+  treatmentGroup.appendChild(treatmentSelect);
+
+  const templateGroup = document.createElement('div');
+  templateGroup.className = 'form-group';
+  const templateLabel = document.createElement('label');
+  templateLabel.textContent = 'Template';
+  const templateSelect = document.createElement('select');
+  for (const t of window._templates) {
+    const opt = document.createElement('option');
+    opt.value = t;
+    opt.textContent = t.replace(/_/g, ' ');
+    if (t === video.template_id) opt.selected = true;
+    templateSelect.appendChild(opt);
+  }
+  templateGroup.appendChild(templateLabel);
+  templateGroup.appendChild(templateSelect);
+
+  const btn = document.createElement('button');
+  btn.className = 'btn';
+  btn.textContent = 'Re-render';
+  btn.addEventListener('click', async () => {
+    btn.disabled = true;
+    btn.textContent = 'Rendering...';
+    try {
+      const res = await fetch(`${API}/api/render`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          title: video.title,
+          image_id: video.image_id,
+          caption: captionInput.value,
+          font_role: fontSelect.value,
+          treatment_preset: treatmentSelect.value,
+          template_id: templateSelect.value,
+        }),
+      });
+      if (!res.ok) throw new Error(`Render failed: ${res.status}`);
+      const data = await res.json();
+      img.src = `${API}${data.path}?t=${Date.now()}`;
+      showToast();
+    } catch (e) {
+      alert('Error: ' + e.message);
+    } finally {
+      btn.disabled = false;
+      btn.textContent = 'Re-render';
+    }
+  });
+
+  row1.appendChild(captionGroup);
+  row1.appendChild(fontGroup);
+  row2.appendChild(treatmentGroup);
+  row2.appendChild(templateGroup);
+  row2.appendChild(btn);
+
+  body.appendChild(title);
+  body.appendChild(row1);
+  body.appendChild(row2);
+  card.appendChild(img);
+  card.appendChild(body);
+  return card;
+}
+
+function showToast() {
+  const t = document.getElementById('toast');
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 1500);
+}
+
+async function init() {
+  try {
+    const config = await loadConfig();
+    window._fonts = config.fonts;
+    window._treatments = config.treatments;
+    window._templates = config.templates;
+
+    const gallery = document.getElementById('gallery');
+    gallery.className = 'gallery';
+    gallery.innerHTML = '';
+
+    for (const video of config.videos) {
+      const card = await renderCard(video);
+      gallery.appendChild(card);
+    }
+  } catch (e) {
+    const container = document.getElementById('error-container');
+    container.innerHTML = `<div class="error">Failed to load: ${e.message}. Make sure the thumbnail server is running (python3 scripts/thumbnail_server.py)</div>`;
+    document.getElementById('gallery').className = 'loading';
+    document.getElementById('gallery').textContent = 'Could not load thumbnails.';
+  }
+}
+
+init();
+</script>
+</body>
+</html>

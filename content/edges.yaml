@@ -1,0 +1,232 @@
+# ── Phase transition edges ────────────────────────────────────
+- id: edge-phase-1-to-2
+  source: "phase-1-dashboard-diagnosis"
+  target: "phase-2-physical-desolidification"
+  kind: "bridges"
+  label: "Dashboard reveals need to question physical foundations"
+
+- id: edge-phase-2-to-3
+  source: "phase-2-physical-desolidification"
+  target: "phase-3-mind-as-computer-critique"
+  kind: "bridges"
+  label: "If matter is process, mind is not a computer"
+
+- id: edge-phase-3-to-4
+  source: "phase-3-mind-as-computer-critique"
+  target: "phase-4-nested-agency"
+  kind: "bridges"
+  label: "If mind is not a computer, who is running the show?"
+
+- id: edge-phase-4-to-5
+  source: "phase-4-nested-agency"
+  target: "phase-5-mechanicality"
+  kind: "bridges"
+  label: "Agency is nested but much of it runs mechanically"
+
+- id: edge-phase-5-to-6
+  source: "phase-5-mechanicality"
+  target: "phase-6-dependent-arising"
+  kind: "bridges"
+  label: "Mechanism is dependent arising"
+
+- id: edge-phase-6-to-7
+  source: "phase-6-dependent-arising"
+  target: "phase-7-emptiness"
+  kind: "bridges"
+  label: "Dependent arising implies emptiness of fixed essence"
+
+- id: edge-phase-7-to-8
+  source: "phase-7-emptiness"
+  target: "phase-8-non-fabrication"
+  kind: "bridges"
+  label: "Emptiness clears ground for non-fabrication"
+
+- id: edge-phase-8-to-9
+  source: "phase-8-non-fabrication"
+  target: "phase-9-language-sign-mantra"
+  kind: "bridges"
+  label: "Non-fabrication opens into creative expression"
+
+- id: edge-phase-9-to-10
+  source: "phase-9-language-sign-mantra"
+  target: "phase-10-imaginal-reconstruction"
+  kind: "bridges"
+  label: "Language renders worlds; imaginal reconstructs them"
+
+- id: edge-phase-10-to-11
+  source: "phase-10-imaginal-reconstruction"
+  target: "phase-11-body-energy"
+  kind: "bridges"
+  label: "Imaginal work must be embodied"
+
+- id: edge-phase-11-to-12
+  source: "phase-11-body-energy"
+  target: "phase-12-ritual-re-rendering"
+  kind: "bridges"
+  label: "Body-anchored presence enables ritual"
+
+- id: edge-phase-12-to-13
+  source: "phase-12-ritual-re-rendering"
+  target: "phase-13-daimon-guidance"
+  kind: "bridges"
+  label: "Ritual opens channels for guidance"
+
+- id: edge-phase-13-to-14
+  source: "phase-13-daimon-guidance"
+  target: "phase-14-nonordinary-rendering"
+  kind: "bridges"
+  label: "Guidance opens into nonordinary states"
+
+- id: edge-phase-14-to-15
+  source: "phase-14-nonordinary-rendering"
+  target: "phase-15-ecology-animism"
+  kind: "bridges"
+  label: "Nonordinary reveals more-than-human reality"
+
+- id: edge-phase-15-to-16
+  source: "phase-15-ecology-animism"
+  target: "phase-16-visionary-cosmologies"
+  kind: "bridges"
+  label: "Animist sensitivity opens into cosmology"
+
+- id: edge-phase-16-to-17
+  source: "phase-16-visionary-cosmologies"
+  target: "phase-17-social-incarnation"
+  kind: "bridges"
+  label: "Vision must be grounded in social life"
+
+- id: edge-phase-17-to-1
+  source: "phase-17-social-incarnation"
+  target: "phase-1-dashboard-diagnosis"
+  kind: "bridges"
+  label: "Cycle renews at next diagnosis"
+
+# ── Risk → Corrective edges ──────────────────────────────────
+- id: edge-risk-occult-inflation-corrective-madhyamaka
+  source: "risk-occult-inflation"
+  target: "corrective-madhyamaka"
+  kind: "corrects"
+  label: "Madhyamaka deconstructs inflation"
+
+- id: edge-risk-occult-inflation-corrective-jung-shadow
+  source: "risk-occult-inflation"
+  target: "corrective-jung-shadow"
+  kind: "corrects"
+  label: "Shadow integration deflates specialness"
+
+- id: edge-risk-dry-deconstruction-corrective-burbea
+  source: "risk-dry-deconstruction"
+  target: "corrective-burbea-soulmaking"
+  kind: "corrects"
+  label: "Soulmaking restores meaning"
+
+- id: edge-risk-system-possession-corrective-wittgenstein
+  source: "risk-system-possession"
+  target: "corrective-wittgenstein"
+  kind: "corrects"
+  label: "Language game analysis breaks system trance"
+
+- id: edge-risk-category-error-corrective-epistemic-tiering
+  source: "risk-category-error"
+  target: "corrective-epistemic-tiering"
+  kind: "corrects"
+  label: "Epistemic tiering prevents domain collapse"
+
+- id: edge-risk-attention-collapse-corrective-body-anchor
+  source: "risk-attention-collapse"
+  target: "corrective-body-anchor"
+  kind: "corrects"
+  label: "Body anchor stabilizes attention"
+
+- id: edge-risk-attention-collapse-corrective-shorter-session
+  source: "risk-attention-collapse"
+  target: "corrective-shorter-session"
+  kind: "corrects"
+  label: "Shorter sessions prevent fatigue"
+
+# ── Warning edges ────────────────────────────────────────────
+- id: edge-warning-physics-magic-corrective-epistemic-tiering
+  source: "warning-physics-magic"
+  target: "corrective-epistemic-tiering"
+  kind: "corrects"
+  label: "Tier claims to avoid category errors"
+
+- id: edge-warning-conceptual-not-historical-corrective-historical-distinction
+  source: "warning-conceptual-not-historical"
+  target: "corrective-historical-distinction"
+  kind: "corrects"
+  label: "Distinguish parallel from influence"
+
+# ── Source card → Phase edges ─────────────────────────────────
+- id: edge-source-nanananda-to-phase-6
+  source: "source-nanananda-concept-reality"
+  target: "phase-6-dependent-arising"
+  kind: "evidenced_by"
+  label: "Core text for dependent arising protocol"
+
+- id: edge-source-plotinus-to-phase-2
+  source: "source-plotinus-enneads"
+  target: "phase-2-physical-desolidification"
+  kind: "evidenced_by"
+  label: "Challenges dead matter assumption"
+
+- id: edge-source-nagarjuna-to-phase-7
+  source: "source-nagarjuna-mulamadhyamaka"
+  target: "phase-7-emptiness"
+  kind: "evidenced_by"
+  label: "Foundational emptiness text"
+
+- id: edge-source-burbea-to-phase-7
+  source: "source-burbea-soulmaking"
+  target: "phase-7-emptiness"
+  kind: "evidenced_by"
+  label: "Emptiness as creative freedom"
+
+- id: edge-source-corbin-to-phase-10
+  source: "source-corbin-imaginal"
+  target: "phase-10-imaginal-reconstruction"
+  kind: "evidenced_by"
+  label: "Imaginal ontology"
+
+- id: edge-source-iamblichus-to-phase-12
+  source: "source-iamblichus-mysteries"
+  target: "phase-12-ritual-re-rendering"
+  kind: "evidenced_by"
+  label: "Theurgic ritual framework"
+
+- id: edge-source-hoffman-to-phase-14
+  source: "source-hoffman-interface"
+  target: "phase-14-nonordinary-rendering"
+  kind: "evidenced_by"
+  label: "Interface theory supports nonordinary rendering"
+
+# ── Tradition → Phase edges ──────────────────────────────────
+- id: edge-tradition-neoplatonism-phase-2
+  source: "tradition-neoplatonism"
+  target: "phase-2-physical-desolidification"
+  kind: "maps_to_phase"
+  label: "Neoplatonic emanation de-solidifies matter"
+
+- id: edge-tradition-neoplatonism-phase-12
+  source: "tradition-neoplatonism"
+  target: "phase-12-ritual-re-rendering"
+  kind: "maps_to_phase"
+  label: "Theurgy as ritual re-rendering"
+
+- id: edge-tradition-depression-era-buddhism-phase-6
+  source: "tradition-depression-era-buddhism"
+  target: "phase-6-dependent-arising"
+  kind: "maps_to_phase"
+  label: "Dependent arising is core early Buddhist teaching"
+
+- id: edge-tradition-depression-era-buddhism-phase-7
+  source: "tradition-depression-era-buddhism"
+  target: "phase-7-emptiness"
+  kind: "maps_to_phase"
+  label: "Emptiness derived from dependent arising"
+
+- id: edge-tradition-tantra-phase-12
+  source: "tradition-tantra"
+  target: "phase-12-ritual-re-rendering"
+  kind: "maps_to_phase"
+  label: "Tantric ritual technology"

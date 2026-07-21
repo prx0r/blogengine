@@ -1,0 +1,61 @@
+{
+  "co_id": "co:uno_gurdjeff2_t827_t836_payment_no_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gurdjeff2_t827_t836_payment_no_credit",
+  "turn_index": 0,
+  "lineage": "Gurdjieffian",
+  "student_state": "seeking_to_negotiate_cost",
+  "behavior_tags": [
+    "questions_term",
+    "seeks_negotiation"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_06",
+    "function_name": "UM_06",
+    "mechanism_shape": "COMPARISON_CONTRAST",
+    "teaching_actions": [
+      "asserts_consequence",
+      "denies_negotiation"
+    ],
+    "traps_avoided": [
+      "ego_defense",
+      "none"
+    ],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.15,
+      "attunement": 0.2,
+      "style": 0.65,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_01",
+      "attunement_discrete": "AT_01",
+      "style_discrete": "LS_04",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "request_clarification",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The denial/consequence works: no negotiation (cannot check), asserts: consequence = zero result (refusal = no work). The student questions term (seeking to negotiate cost), which shows they understand: price = negotiable (negotiation). They'll likely ask about mechanism next. Hypothesis: negotiation denials trigger mechanism questions—testable by tracking whether negotiation denials lead to mechanism inquiries.",
+  "accumulated_insight": "T1: Student questions term ('There is no check on the price? You cannot find out whether it is too high?')—seeking to negotiate cost via questions term and seeks negotiation. They understand: price = negotiable (negotiation). The comparison_contrast mechanism denies: no negotiation (cannot check), asserts: consequence = zero result (refusal = no work). Pattern: negotiation question → denial/consequence → [next: mechanism question]. Low confidence because negotiation denials can lead to clarification requests or resistance.",
+  "abstract_pattern": "",
+  "visible_response": "Some people think it is too high, refuse to pay and get nothing.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:sufi-comparative-analysis",
+    "ro:steiner-tantraloka-parallels"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

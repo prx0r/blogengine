@@ -1,0 +1,58 @@
+{
+  "co_id": "co:uno_therapy3_t702_t705_cancer_meta_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3_t702_t705_cancer_metaphor",
+  "turn_index": 0,
+  "lineage": "Therapeutic",
+  "student_state": "mild_agreement",
+  "behavior_tags": [
+    "understatement",
+    "minimization"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_01",
+    "function_name": "RM_01",
+    "mechanism_shape": "STRUCTURAL_ANALOGY",
+    "teaching_actions": [
+      "amplifies_pathology",
+      "uses_medical_metaphor",
+      "sets_ultimatum"
+    ],
+    "traps_avoided": [
+      "minimization"
+    ],
+    "register": {
+      "intensity": 0.85,
+      "intimacy": 0.62,
+      "attunement": 0.2,
+      "style": 0.5,
+      "depth": 0.62,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_04",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_01",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_03",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "no_clear_effect",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "They're asking about the pain of therapy process. The cancer metaphor reframes: removing pathology (self-attack) like removing tumor. Not pleasant but necessary. This gives framework for tolerating therapeutic discomfort: not 'therapy is failing' but 'removal process is working.' Pain = sign of health restoration, not damage. Single-turn metaphor plants expectation: healing involves discomfort. Makes process pain meaningful.",
+  "accumulated_insight": "T1 (Single-turn): Student asks about self-attack removal process. Teacher uses cancer metaphor: removal process isn't pretty, involves pain, but necessary for health. This is RM_01: structural analogy. Therapeutic process = cancer treatment: painful but life-saving. Reframes discomfort as necessary, not failure. Predicting go_along_compliantly (metaphor provides framework for tolerating process difficulty).",
+  "abstract_pattern": "",
+  "visible_response": "Hard on yourself?\nThis is the cancer of your life. This is how you have been making yourself depressed for decades.\nAnd you can continue to punish yourself the rest of the life if you want... But there is no way therapy can succeed if this is the choice you make.",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

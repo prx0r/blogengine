@@ -1,0 +1,102 @@
+{
+  "ro_id": "ro:fields-quantum",
+  "schema_version": 1,
+  "title": "Chris Fields \u2014 Quantum Foundations and Measurement (Collected)",
+  "subtitle": "6 papers on the measurement problem, quantum biology, classical-quantum boundary, and the role of the observer",
+  "family": "thinker-topic",
+  "status": "stub",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "Fields' work on the measurement problem shows that measurement is not a physical interaction but the establishment of a classical record \u2014 the observer does not cause collapse; the observer IS the ...",
+    "scope": "Covers quantum measurement, decoherence, quantum biology, classical-quantum boundary.",
+    "traditions": [
+      "quantum-foundations",
+      "quantum-biology",
+      "measurement"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "fields-collected",
+      "tier": 1,
+      "label": "Chris Fields \u2014 Collected Papers. 6 PDFs in /root/projects/blog/library/science/authors/fields/.",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "measurement_problem",
+        "classical_quantum",
+        "decoherence",
+        "observer"
+      ],
+      "sections_affected": [
+        "theory"
+      ],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "theory",
+      "subsection": "measurement_as_recognition",
+      "kind": "synthesis",
+      "text": "Fields argues that quantum measurement is the establishment of a classical record \u2014 an irreversible information transfer that resolves quantum superpositions into definite outcomes. The observer does not cause collapse; the observer IS the system for which collapse is registered. This IS the Tantraloka's pratyabhij\u00f1\u0101 (recognition): measurement IS consciousness knowing itself through a specific configuration. The 'collapse' IS the moment of recognition \u2014 not physical but cognitive.",
+      "source_ids": [
+        "fields-collected"
+      ],
+      "topics": [
+        "measurement",
+        "recognition",
+        "pratyabhij\u00f1a",
+        "collapse"
+      ],
+      "status": "active"
+    }
+  ],
+  "coverage": {
+    "theory": {
+      "status": "minimal",
+      "sources": [
+        "fields-collected"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 0.2,
+      "gaps": [
+        "Full extraction of all 6 papers needed"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "coverage_gap",
+      "title": "Full extraction needed",
+      "description": "6 papers collected.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial RO.",
+      "sources_added": [
+        "fields-collected"
+      ],
+      "passage_count": 1,
+      "status": "draft"
+    }
+  ],
+  "appendices": [],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created.",
+      "sources_total": 1,
+      "passages_total": 1
+    }
+  ]
+}

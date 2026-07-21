@@ -1,0 +1,42 @@
+{
+  "work_id": "work:t2-pubmed-the-anatomy-of-inference-generative-models-and-brain-structure",
+  "schema_version": 2,
+  "title": "The Anatomy of Inference: Generative Models and Brain Structure.",
+  "publication": {
+    "year": 2018,
+    "type": "article",
+    "source": "PubMed/MEDLINE",
+    "language": "en",
+    "journal": "Front Comput Neurosci"
+  },
+  "identifiers": {
+    "pmid": "30483088",
+    "doi": "10.3389/fncom.2018.00090"
+  },
+  "topics": [
+    "phase-6-dependent-arising",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "tradition": [
+    "contemporary_science"
+  ],
+  "tier": 2,
+  "assets": {
+    "pdf_path": "t2-pubmed-pmc6243103_The_Anatomy_of_Inference_Generative_Models_and_Bra.pdf",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/30483088/",
+    "abstract": "To infer the causes of its sensations, the brain must call on a generative (predictive) model. This necessitates passing local messages between populations of neurons to update beliefs about hidden variables in the world beyond its sensory samples. It also entails inferences about how we will act. Active inference is a principled framework that frames perception and action as approximate Bayesian inference. This has been successful in accounting for a wide range of physiological and behavioral p"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_t2_search",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 6,
+    "phase_name": "Dependent Arising",
+    "bridge_rationale": "Dependent arising \u2014 predictive processing, free energy principle, active inference as causal cognition."
+  },
+  "evaluation": "Marginal (score=2.2)"
+}

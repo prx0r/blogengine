@@ -1,0 +1,55 @@
+{
+  "work_id": "work:t2-pubmed-corticofugal-regulation-of-predictive-coding",
+  "schema_version": 2,
+  "title": "Corticofugal regulation of predictive coding.",
+  "authors": [
+    {
+      "name": "Lesicko AMH"
+    },
+    {
+      "name": "Angeloni CF"
+    },
+    {
+      "name": "Blackwell JM"
+    },
+    {
+      "name": "De Biasi M"
+    },
+    {
+      "name": "Geffen MN"
+    }
+  ],
+  "publication": {
+    "year": 2022,
+    "journal": "Elife",
+    "source": "PubMed/MEDLINE",
+    "language": "en"
+  },
+  "identifiers": {
+    "pmid": "35290181",
+    "doi": "10.7554/eLife.73289"
+  },
+  "topics": [
+    "phase-6-dependent-arising",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "assets": {
+    "pdf_path": "t2-8983050-corticofugal-regulation-of-predictive-coding.pdf",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/35290181/",
+    "abstract": "Sensory systems must account for both contextual factors and prior experience to adaptively engage with the dynamic external environment. In the central auditory system, neurons modulate their responses to sounds based on statistical context. These response modulations can be understood through a hierarchical predictive coding lens: responses to repeated stimuli are progressively decreased, in a process known as repetition suppression, whereas unexpected stimuli produce a prediction error signal"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_alt17_acquisition",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 6,
+    "phase_name": "Dependent-arising",
+    "bridge_rationale": "Bridge paper score=17.0: links Dependent-arising concept to mechanistic neuroscience"
+  },
+  "evaluation": "Score 17: Excellent bridge signal",
+  "tier": 2
+}

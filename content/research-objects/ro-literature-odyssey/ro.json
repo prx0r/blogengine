@@ -1,0 +1,223 @@
+{
+  "ro_id": "ro:literature-odyssey",
+  "schema_version": 1,
+  "title": "The Odyssey \u2014 The Nekyia and the Return",
+  "family": "theme",
+  "status": "draft",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "Homer's Odyssey read as an initiatory journey: the descent to the Underworld (Book 11) as the prototype of all Western initiations.",
+    "scope": "Covers the nekyia (Book 11) as threshold crossing; Circe as threshold guide; Sirens as tattvic distraction; suitors as unintegrated forces; Penelope as anima/Sophia; the bow as the shaft of will; the final battle as coagulation of the self.",
+    "traditions": [
+      "hellenism",
+      "classical-mythology",
+      "initiation",
+      "nekyia",
+      "jungian-psychology"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "odyssey",
+      "tier": 1,
+      "label": "Homer \u2014 The Odyssey (c. 8th century BCE)",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "primary_text",
+        "nekyia",
+        "nostos",
+        "initiatory_structure"
+      ],
+      "sections_affected": [
+        "nekyia",
+        "threshold",
+        "return"
+      ],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "nekyia",
+      "subsection": "descent_prototype",
+      "kind": "analysis",
+      "text": "[Odysseus' descent to the Underworld (Book 11) is the foundational nekyia of Western literature \u2014 the template for every subsequent initiatory journey. The ritual: pouring libations (milk, honey, wine, water, barley), promising sacrifice, drawing the sword to keep the shades at bay. This is the proto-systasis, establishing the pattern of threshold guardianship and controlled spirit contact.]",
+      "source_ids": [
+        "odyssey"
+      ],
+      "topics": [
+        "nekyia",
+        "descent",
+        "systasis",
+        "underworld"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "threshold",
+      "subsection": "circe_threshold_guide",
+      "kind": "analysis",
+      "text": "[Circe is the threshold guide who teaches Odysseus the crossing: she instructs him on the exact ritual to summon Tiresias, warning him about the dangers, sending him with the proper preparation. She represents the guru function \u2014 one who has already crossed and returns to teach the method. She is the daimon as initiatrix.]",
+      "source_ids": [
+        "odyssey"
+      ],
+      "topics": [
+        "circe",
+        "threshold_guide",
+        "guru",
+        "preparation"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "trials",
+      "subsection": "sirens_tattvas",
+      "kind": "analysis",
+      "text": "[The Sirens represent the distraction of the tattvas \u2014 the beautiful phenomena of the manifest world that lure consciousness into identification. Odysseus must be bound to the mast (the vertical axis of will) while his crew rows with wax in their ears. The mast is the spinal axis; the wax is selective perception. Resistance to the fascination of the tattvas is required for safe passage.]",
+      "source_ids": [
+        "odyssey"
+      ],
+      "topics": [
+        "sirens",
+        "tattvas",
+        "distraction",
+        "mast"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "trials",
+      "subsection": "suitors_unintegrated_forces",
+      "kind": "analysis",
+      "text": "[The suitors are the unintegrated forces of the psyche \u2014 the complexes, projections, and unclaimed desires that occupy the inner household during the practitioner's absence. They consume the resources (the herds, the wine) of the soul. Penelope's weaving/unweaving is the endless loop of the unawakened consciousness. The suitors must be slain for integration to occur.]",
+      "source_ids": [
+        "odyssey"
+      ],
+      "topics": [
+        "suitors",
+        "unintegrated_forces",
+        "complexes",
+        "psychic_inventory"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "return",
+      "subsection": "penelope_anima_sophia",
+      "kind": "analysis",
+      "text": "[Penelope is the anima/Sophia \u2014 the feminine wisdom principle that waits at the center of the soul's home. The marriage bed built from the living olive tree (an immovable root) is the axis mundi, the recognition sign. Odysseus' return to Penelope is the hieros gamos, the sacred marriage of consciousness with its own wisdom nature, the coagulation of the work.]",
+      "source_ids": [
+        "odyssey"
+      ],
+      "topics": [
+        "penelope",
+        "anima",
+        "sophia",
+        "hieros_gamos",
+        "coagulation"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_006",
+      "section": "return",
+      "subsection": "the_bow_shaft_of_will",
+      "kind": "analysis",
+      "text": "[The bow of Odysseus, which only he can string, is the shaft of will \u2014 the central instrument of the initiatory work. The bow must be strung (the will must be gathered), the arrow shot through the 12 axe heads (precise penetration through the tattvas), the suitors dispatched (the forces integrated). The bowtest is the final exam of the initiand, proving the gathered will.]",
+      "source_ids": [
+        "odyssey"
+      ],
+      "topics": [
+        "bow",
+        "will",
+        "shaft",
+        "axe_heads",
+        "final_battle"
+      ],
+      "status": "placeholder"
+    }
+  ],
+  "coverage": {
+    "nekyia": {
+      "status": "good",
+      "sources": [
+        "odyssey"
+      ],
+      "passage_count": 2,
+      "estimated_completeness": 0.7,
+      "gaps": [
+        "Detailed ritual comparison to PGM systasis needed"
+      ]
+    },
+    "trials": {
+      "status": "good",
+      "sources": [
+        "odyssey"
+      ],
+      "passage_count": 2,
+      "estimated_completeness": 0.65,
+      "gaps": [
+        "Complete mapping of all obstacles to internal forces needed"
+      ]
+    },
+    "return": {
+      "status": "good",
+      "sources": [
+        "odyssey"
+      ],
+      "passage_count": 2,
+      "estimated_completeness": 0.7,
+      "gaps": [
+        "Deeper comparison of hieros gamos to alchemical conjunction needed"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "placeholder",
+      "title": "All passages currently referencing analysis framework",
+      "description": "Passages need to be elaborated with primary text citations and line references.",
+      "status": "open",
+      "created": "2026-07-13",
+      "auto_generated": true
+    },
+    {
+      "id": "issue-002",
+      "type": "coverage_gap",
+      "title": "Missing comparison with other nekyia traditions",
+      "description": "Should integrate comparison with Aeneid Book VI, the Tibetan Bardo Thodol, and shamanic descent traditions.",
+      "status": "open",
+      "created": "2026-07-13",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-13",
+      "type": "initial",
+      "summary": "Initial RO mapping the Odyssey as initiatory nekyia. 6 passage framework established.",
+      "sources_added": [
+        "odyssey"
+      ],
+      "passage_count": 6,
+      "status": "draft"
+    }
+  ],
+  "appendices": [],
+  "timeline": [
+    {
+      "date": "2026-07-13",
+      "event": "RO created in draft state with initiatory reading of the Odyssey",
+      "sources_total": 1,
+      "passages_total": 6
+    }
+  ]
+}

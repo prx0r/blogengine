@@ -1,0 +1,56 @@
+{
+  "_schema": "storyboard-v1",
+  "episode_id": "test-short",
+  "episode_title": "The Shape at the Bottom of Experience",
+  "series": "test",
+  "episode_number": 0,
+  "version": "0.1.0",
+  "source_ros": ["ro:nanavira-clearing-path"],
+  "global_concepts": ["tetrahedron", "k4", "nanavira", "phenomenology"],
+  "mythos_filter": "hermetic-documentary",
+  "style_profile": "distillery-dark-gold",
+  "visual_direction": "Dark void, gold wireframe, serif text",
+  "narration_voice": "en-GB-RyanNeural",
+  "estimated_duration_min": 1,
+  "segments": [
+    {
+      "segment_id": "seg-01-hook",
+      "label": "The Shape",
+      "start_sec": 0,
+      "end_sec": 0,
+      "rhetorical_role": "hook",
+      "narration": "In 1963, a British monk sat alone in a hut in Ceylon and made a discovery. Ñāṇavīra Thera found that every moment of experience has exactly four fundamental terms: Subject, Object, Intention, and Act. Four vertices connected by six edges forming a tetrahedron. The minimal shape anything must have to exist.",
+      "visual": {
+        "type": "manim",
+        "scene_file": "test_k4.py",
+        "scene_class": "QuickK4",
+        "description": "Single rotating gold tetrahedron on dark background. Title appears.",
+        "manim_duration_sec": 60,
+        "color_palette": "distillery-dark-gold"
+      },
+      "on_screen_text": [
+        { "text": "Ñāṇavīra's Fundamental Structure", "style": "title-serif", "position": "center" },
+        { "text": "SUBJECT · OBJECT · INTENTION · ACT", "style": "vertex-label", "position": "below" }
+      ],
+      "concepts": ["tetrahedron", "k4", "nanavira"],
+      "quote_active": false
+    }
+  ],
+  "youtube_metadata": {
+    "title": "Test — The Shape at the Bottom of Experience",
+    "description": "Pipeline test.",
+    "tags": ["test"],
+    "category": "Education",
+    "privacy": "private",
+    "playlist": "test"
+  },
+  "analytics_tags": {
+    "rhetorical_roles_used": ["hook"],
+    "visual_types_used": ["wireframe"],
+    "concept_density": "medium",
+    "quote_ratio": 0
+  },
+  "timeline": [
+    { "date": "2026-07-18", "event": "Test storyboard for pipeline validation.", "version": "0.1.0" }
+  ]
+}

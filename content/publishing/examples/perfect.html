@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stochastic 'e' Flower Animation</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #222, #000);
+    }
+    canvas {
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      border: 1px solid #333;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    let angle;
+    let radius;
+    let points;
+    let isDrawing;
+    let isReversing;
+    let cycleCount;
+
+    // --- Stochastic Parameters ---
+    // These will be randomized for each new flower
+    let maxRadius;
+    let baseRadiusInc;
+    let baseAngleInc;
+    let curlFactor;
+    let colorSpeed;
+
+    function setup() {
+      createCanvas(400, 400);
+      colorMode(HSB, 360, 100, 100);
+      frameRate(60); // A high frame rate for energy
+      startNewFlower();
+    }
+
+    // This function sets the unique "DNA" for each new flower
+    function startNewFlower() {
+      points = [];
+      angle = -PI / 2;
+      radius = 0;
+      isDrawing = true;
+      isReversing = false;
+      cycleCount = (cycleCount || 0) + 1;
+
+      // --- NEW: Major randomization for each run ---
+      maxRadius = random(120, 180);           // How large the flower gets
+      baseRadiusInc = random(0.4, 1.5);      // How fast it grows outward
+      baseAngleInc = random(0.05, 0.2);      // How tightly it coils
+      curlFactor = random(0.4, 0.9);         // How dramatic the "e" loop is
+      colorSpeed = random(0.2, 1.0);         // How fast the colors shift
+    }
+
+    function draw() {
+      background(0, 80); // Fading background for effect
+      translate(width / 2, height / 2);
+
+      if (isDrawing) {
+        // --- DRAWING LOGIC ---
+        if (radius < maxRadius) {
+          // Use the unique parameters for this flower's growth
+          let angleInc = baseAngleInc + random(-0.02, 0.02);
+          let radiusInc = baseRadiusInc + random(-0.05, 0.05);
+          angle += angleInc;
+          radius += radiusInc;
+
+          // The "e" loop, now with a random curl factor
+          if (frameCount % 2 === 0) {
+            angle += curlFactor + random(-0.1, 0.1);
+          }
+
+          let x = radius * cos(-angle);
+          let y = radius * sin(-angle);
+          points.push(createVector(x, y));
+        } else {
+          // Finished drawing, start erasing
+          isDrawing = false;
+          isReversing = true;
+        }
+      } else if (isReversing) {
+        // --- ERASING LOGIC ---
+        if (points.length > 0) {
+          // Remove 2 points per frame for faster clearing, from the center out
+          points.shift();
+          if (points.length > 0) points.shift();
+        } else {
+          // Finished erasing, start a new, unique flower
+          startNewFlower();
+        }
+      }
+
+      // --- RENDERING LOGIC ---
+      let pulse = sin(frameCount * 0.1) * 10;
+      noStroke();
+      for (let i = 0; i < points.length; i++) {
+        let p = points[i];
+        let gradientFactor = map(i, 0, points.length, 0, 360);
+        
+        // Use this flower's unique color speed
+        let hue = (gradientFactor + frameCount * colorSpeed + cycleCount * 60) % 360;
+        let saturation = 80 + sin(i * 0.1) * 20;
+        let brightness = 90 + pulse;
+        let alpha = map(i, 0, points.length, 100, 40); // Fade out at the tail
+
+        fill(hue, saturation, brightness, alpha);
+        
+        let dotSize = 2 + map(i, 0, points.length, 0, 5); // Dots get bigger as they expand
+        ellipse(p.x, p.y, dotSize, dotSize);
+      }
+    }
+  </script>
+</body>
+</html>

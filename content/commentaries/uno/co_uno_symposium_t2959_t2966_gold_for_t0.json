@@ -1,0 +1,58 @@
+{
+  "co_id": "co:uno_symposium_t2959_t2966_gold_for_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "symposium_t2959_t2966_gold_for_brass",
+  "turn_index": 0,
+  "lineage": "Socratic",
+  "student_state": "cooperative_engagement",
+  "behavior_tags": [
+    "short_affirmation"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_06",
+    "function_name": "UM_06",
+    "mechanism_shape": "STRUCTURAL_ANALOGY",
+    "teaching_actions": [
+      "rejects_transaction",
+      "exposes_false_value"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.62,
+      "attunement": 0.5,
+      "style": 0.5,
+      "depth": 0.62,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_03",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "go_along_compliantly",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "symposium_t2959_t2966_gold_for_brass T1: Using structural_analogy/UM_06 with intensity=PR_03, intimacy=IN_03, attunement=AT_02 on 'the hinge'. Response shows agreeing without elaboration; expecting go_along_compliantly next. If not, lower PR and re-anchor the hinge.",
+  "accumulated_insight": "T1: Student says ''?agreeing without elaboration (cooperative_engagement) via short_affirmation. Focus: the hinge. The structural_analogy/UM_06 move applies shift their frame: standard function application. Pattern: go_along_compliantly. Confidence medium.",
+  "abstract_pattern": "",
+  "visible_response": "Alcibiades, my friend, you have indeed an elevated aim if what you say is true, and if there really is in me any power by which you may become better; truly you must see in me some rare beauty of a kind infinitely higher than any which I see in you.\n\nAnd therefore, if you mean to share with me and to exchange beauty for beauty, you will have greatly the advantage of me; you will gain true beauty in return for appearance — like Diomede, gold in exchange for brass. But look again, sweet friend, and see whether you are not deceived in me.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:proclus-elements",
+    "ro:platonism-decoded",
+    "ro:chaldean-oracles"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

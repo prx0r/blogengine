@@ -1,0 +1,57 @@
+{
+  "co_id": "co:uno_therapy2_t1562_t1570_evasivene_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy2_t1562_t1570_evasiveness_conflict",
+  "turn_index": 0,
+  "lineage": "Therapeutic",
+  "student_state": "anxious_softening",
+  "behavior_tags": [
+    "euphemism",
+    "minimization"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_04",
+    "function_name": "UM_04",
+    "mechanism_shape": "COMPARISON_CONTRAST",
+    "teaching_actions": [
+      "tracks_shifting_language",
+      "labels_evasiveness"
+    ],
+    "traps_avoided": [
+      "semantic_fog"
+    ],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.35,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_02",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "no_clear_effect",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "'I don’t know if I would say it was a conflict—maybe more of a dis'—student presents as anxious softening. Teacher's move uses comparison_contrast: 'First you said it was a conflict, then you said it’s a disagreeme'. Strategy: tracks shifting language, labels evasiveness. Hypothesis: comparison_contrast mechanism will create no_clear_effect. Watching how student responds to this intervention.",
+  "accumulated_insight": "T1: Student says 'I don’t know if I would say it was a conflict—maybe more of a dis' showing anxious_softening via euphemism, minimization. Teacher responds 'First you said it was a conflict, then you said it’s a disagreeme' using comparison_contrast to tracks shifting language, labels evasiveness. Opening UNMAKING move addresses anxious_softening. Predicting no_clear_effect because comparison_contrast interventions typically produce this response pattern.",
+  "abstract_pattern": "",
+  "visible_response": "First you said it was a conflict, then you said it’s a disagreement, and now you say it’s a discussion.\nDo you notice how you avoid giving a clear answer?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

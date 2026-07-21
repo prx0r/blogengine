@@ -1,0 +1,216 @@
+{
+  "ro_id": "ro:alchemy-aesch-mezareph",
+  "schema_version": 1,
+  "title": "Aesch-Mezareph",
+  "subtitle": "The Purifying Fire \u2014 A Kabbalistic Treatise on the Philosophical Stone, from Knorr von Rosenroth's Kabbala Denudata",
+  "family": "theme",
+  "status": "draft",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "A 16th/17th-century Kabbalistic-alchemical treatise (the 'Purifying Fire') that interprets the seven metals through the seven doubles of the Hebrew alphabet and the sefirotic tree.",
+    "scope": "Covers Chapters I-IV of the eight-chapter Aesch-Mezareph: the metal-sefirah correspondences, the Kabbalistic interpretation of the alchemical metals (gold = Chesed, silver = Geburah, copper = Tiferet, etc.), the four elements, the purification of the metals, and the mystical fire.",
+    "traditions": [
+      "kabbalah",
+      "alchemy",
+      "hermetic",
+      "hebrew",
+      "sefirotic"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "aesch-text",
+      "tier": 1,
+      "label": "Aesch-Mezareph (Kabbala Denudata via Wynn Westcott, alchemywebsite.com)",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "sefirot_metal_correspondences",
+        "seven_doubles",
+        "four_elements_kabbalistic",
+        "purifying_fire"
+      ],
+      "sections_affected": [
+        "sefirot",
+        "alphabet",
+        "metals"
+      ],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "sefirot",
+      "subsection": "metal_sefirah_correspondences",
+      "kind": "source",
+      "text": "[The Aesch-Mezareph establishes the following Kabbalistic correspondences between the seven metals and the seven lower Sefirot, based on the 'Seven Doubles' of the Hebrew alphabet (Beth, Gimel, Daleth, Kaph, Pe, Resh, Tau): Lead corresponds to Binah (the dark mother); Tin to Gedulah/Chesed (mercy); Silver to Geburah (severity, the strict judgment); Gold to Tiferet (beauty, the central pillar); Copper to Netzach (victory); Quicksilver to Hod (splendor); and the alloy/electrum to Yesod (foundation). The union of all metals returns to the Crown \u2014 Keter, the first Sefirah.]",
+      "source_ids": [
+        "aesch-text"
+      ],
+      "topics": [
+        "metal_correspondences",
+        "sefirot",
+        "seven_doubles",
+        "hebrew_alphabet"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "alphabet",
+      "subsection": "the_seven_doubles_and_the_work",
+      "kind": "source",
+      "text": "[The seven double letters of the Hebrew alphabet (BeGDaKPaRT) each have two pronunciations (hard and soft, aspirated and unaspirated), corresponding to the dual nature of each metal: its outward gross form and its inward spiritual substance. The operation of the Aesch (the 'Purifying Fire') is to separate the soft pronunciation from the hard \u2014 the spiritual essence from the material dross. When each of the seven metals has been purified by Fire, they reveal their sefirotic essence, which is one unified substance: the Philosophical Stone. The eighth metal \u2014 the electrum or the 'mixed metal' of the Temple \u2014 corresponds to the letter Tau, which has the value 400 and represents the completion of the work.]",
+      "source_ids": [
+        "aesch-text"
+      ],
+      "topics": [
+        "seven_doubles",
+        "hard_soft",
+        "purification",
+        "electrum",
+        "tau"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "sefirot",
+      "subsection": "gold_and_silver_as_sefirotic_polarities",
+      "kind": "source",
+      "text": "[Gold is not the most perfect metal in the Kabbalistic system \u2014 it is Tiferet (Beauty), the reconciling center, not Keter (Crown) which is the source. Silver corresponds to Geburah (Severity), which is paradoxically more powerful than gold as judgment precedes mercy. The perfection of the Stone requires the marriage of Gold and Silver \u2014 Tiferet and Geburah \u2014 which is the reconciliation of beauty and severity, mercy and judgment. This union produces the Da'at (Knowledge) metal, which is the hidden sefirah that bridges the Abyss. The 'Aesch-Mezareph' \u2014 the Purifying Fire \u2014 is the fire of Geburah that burns away the dross so that the beauty of Tiferet can shine.]",
+      "source_ids": [
+        "aesch-text"
+      ],
+      "topics": [
+        "gold_silver",
+        "tiferet_geburah",
+        "da'at",
+        "purifying_fire"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "alphabet",
+      "subsection": "the_seven_doubles_and_the_seven_cakras",
+      "kind": "commentary",
+      "text": "The seven double letters of the Hebrew alphabet and their corresponding metals map directly onto the seven cakras of the subtle body. The 'hard' and 'soft' pronunciations of each letter correspond to the two states of each cakra: the 'hard' is the cakra in its tamasic state (blocked, impure, manifesting as physical dysfunction), the 'soft' is the cakra in its sattvic state (open, pure, manifesting as spiritual perception). The 'Purifying Fire' (Aesch-Mezareph) that separates the soft from the hard is the ku\u1e47\u1e0dalin\u012b-agni that ascends through the cakras, burning the karmic blockages and revealing the 'soft' \u2014 the spiritual essence \u2014 of each center. The seven metals ascending from Lead (Binah/M\u016bl\u0101dh\u0101ra \u2014 the dark earth of the root) through Gold (Tiferet/An\u0101hata \u2014 the heart's radiance) to Electrum/Keter (Sahasr\u0101ra \u2014 the crown of completion) is the route of the ku\u1e47\u1e0dalin\u012b. The 'eighth metal' beyond the seven is the state beyond the cakras \u2014 the tur\u012bya (the fourth state) where the seven are transcended and unified in the sahaja (the natural, unmodified state).",
+      "source_ids": [
+        "aesch-text"
+      ],
+      "topics": [
+        "layayoga",
+        "shat_chakras",
+        "kundalini",
+        "tur\u012bya",
+        "purifying_fire"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "sefirot",
+      "subsection": "gold_silver_union_as_hga_realization",
+      "kind": "commentary",
+      "text": "The union of Gold (Tiferet) and Silver (Geburah) to produce Da'at (Knowledge) is the HGA contact in Kabbalistic terms. The practitioner is Silver (Geburah \u2014 the sphere of discipline, judgment, the Saturn retreat, the 18-month Abramelin ordeal). The HGA is Gold (Tiferet \u2014 the sphere of beauty, harmony, the 'royal' self). Their union in the practitioner's consciousness produces Da'at \u2014 Knowledge \u2014 which is not an intellectual knowing but a direct experiential gnosis of the HGA's reality. The 'Aesch-Mezareph' \u2014 the Purifying Fire \u2014 is the ordeal itself, the fire of Geburah that burns away the dross so that the union can take place. In Frater Acher's four-stage path, the Saturn retreat (Darkness stage) is the Geburah fire that precedes the Encounter (Tiferet). In the PGM's systasis, the purification (the egg ritual, the fasting) is the Geburah fire that makes possible the theophany (the Tiferet vision). The 'hidden sefirah Da'at' that bridges the Abyss is the HGA itself, which stands between the divine realm (the upper triad of Keter-Chokmah-Binah) and the human realm (the lower seven sefirot).",
+      "source_ids": [
+        "aesch-text"
+      ],
+      "topics": [
+        "daimon_path",
+        "hga",
+        "abramelin",
+        "acher",
+        "pgm",
+        "gnosis"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_006",
+      "section": "alphabet",
+      "subsection": "the_purifying_fire_as_bardo_judgment",
+      "kind": "commentary",
+      "text": "The 'Aesch-Mezareph' \u2014 the Purifying Fire \u2014 is structurally parallel to the judgment phase of the Egyptian Book of the Dead (the Weighing of the Heart) and the third bardo of the Tibetan Book of the Dead (the judgment bardo, where Yama reviews one's karmic record). The 'hard' and 'soft' pronunciations of the seven doubles correspond to the 'heavy' and 'light' hearts in the Egyptian judgment: the heart weighed against the feather of Ma'at. The Fire that 'purifies the hard into the soft' is the ordeal of the bardo, where the karmic imprints (the 'hard' accumulations) are burned away to reveal the 'soft' \u2014 the empty, luminous nature of consciousness. The seven metals as they ascend in purity \u2014 from the lead of confusion (the heavy kleshas) through the tin of the lower heavens, the silver of the pure mind, the gold of the heart's wisdom \u2014 are the seven weeks of the bardo journey, each week corresponding to a particular purification. The 'eighth metal' beyond the seven is the rainbow body (the 'electrum'), the state of liberation where the bardo is recognized as illusion and the practitioner achieves the dharmakaya (the body of truth, the 'Crown').",
+      "source_ids": [
+        "aesch-text"
+      ],
+      "topics": [
+        "tibetan_book_of_dead",
+        "egyptian_book_of_dead",
+        "bardo",
+        "judgment",
+        "rainbow_body",
+        "dharmakaya"
+      ],
+      "status": "active"
+    }
+  ],
+  "coverage": {
+    "sefirot": {
+      "status": "good",
+      "sources": [
+        "aesch-text"
+      ],
+      "passage_count": 3,
+      "estimated_completeness": 0.6,
+      "gaps": [
+        "Full eight-chapter text not completely excerpted; only Kabbalistic correspondences from early chapters"
+      ]
+    },
+    "alphabet": {
+      "status": "good",
+      "sources": [
+        "aesch-text"
+      ],
+      "passage_count": 3,
+      "estimated_completeness": 0.6,
+      "gaps": [
+        "Detailed letter-by-letter analysis of the seven doubles not yet performed"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "attribution",
+      "title": "Original Hebrew text lost",
+      "description": "According to Patai and Scholem, the original Hebrew text of Aesch-Mezareph does not survive. It is known only through Knorr von Rosenroth's Latin translation in Kabbala Denudata and the English version via Wynn Westcott.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    },
+    {
+      "id": "issue-002",
+      "type": "coverage_gap",
+      "title": "Only chapters I-IV covered",
+      "description": "The Aesch-Mezareph has 8 chapters. Chapters V-VIII (further elaboration of the metal purifications and the final preparation of the Stone) are not yet excerpted.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial RO covering the metal-Sefirah correspondences, seven doubles of the Hebrew alphabet, and the Purifying Fire concept from Aesch-Mezareph.",
+      "sources_added": [
+        "aesch-text"
+      ],
+      "passage_count": 6,
+      "status": "draft"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created in draft state from Aesch-Mezareph source",
+      "sources_total": 1,
+      "passages_total": 6
+    }
+  ]
+}

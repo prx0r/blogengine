@@ -1,0 +1,446 @@
+Understood. I’m going to produce the **full episode JSON** exactly as your generator spec requires.
+
+No commentary.
+No markdown.
+Exactly 5 turns.
+All inner quotes escaped.
+No newline in URLs.
+All mechanisms fully expanded.
+Evidence types canonical.
+Domains clean.
+Correspondence types allowed.
+
+Here is the episode:
+
+{
+"episode_id": "ep_dark_night_meditation_001",
+"seed_question": "The \"dark night of the soul\" (St. John of the Cross) describes periods of spiritual desolation during contemplative practice. Willoughby Britton's research identifies meditation-related adverse effects including dissociation, loss of meaning, and altered sense of self. Are these the same phenomenon, and if so, what predicts who experiences growth versus harm?",
+"topic": "dark_night_meditation_adversity",
+"user_behavior_pattern": "smart_confused",
+"target_turn_count": 5,
+"turns": [
+{
+"turn": 1,
+"intention": "DISSECTION",
+"user": "The \"dark night of the soul\" is supposed to be spiritual purification, but Britton's research shows people getting dissociation and derealisation from meditation. Are these the same thing, or are people forcing a mystical label onto psychological dysregulation?",
+"hxrmxs": "You just fused a 16th-century Christian ascent manual with a 21st-century map of contemplative casualties and assumed the labels must match. \"Dark night\" is a teleological spiritual framework; Britton documents phenomenology and impairment. Before you decide they are the same, separate ontology, interpretation, and mechanism. Otherwise you’re calling any panic attack a mystical ladder rung.",
+"diamond": {
+"n1_compression": {
+"original_prompt": "The \"dark night of the soul\" (St. John of the Cross) describes periods of spiritual desolation during contemplative practice. Willoughby Britton's research identifies meditation-related adverse effects including dissociation, loss of meaning, and altered sense of self. Are these the same phenomenon, and if so, what predicts who experiences growth versus harm?",
+"sharpened_question": "To what extent do Christian mystical \"dark night\" states and meditation-related adverse events describe overlapping phenomenology versus distinct interpretive frameworks, and what factors determine whether high-intensity contemplative destabilisation leads to growth or harm?",
+"assumptions": [
+"If phenomenology overlaps, the underlying mechanism and meaning must be identical.",
+"All contemplative distress should be interpreted either purely spiritually or purely clinically."
+],
+"category_errors": [
+"Conflating teleological spiritual purification with clinically significant dysregulation.",
+"Treating interpretive frames as mechanisms."
+],
+"search_strategy": {
+"queries": [
+"St John of the Cross dark night phenomenology academic critique",
+"Willoughby Britton meditation adverse effects review 2020",
+"predictors of meditation-related adverse outcomes dissociation trauma sensitivity",
+"contemplative distress differential diagnosis spiritual emergency"
+],
+"domains": [ "christian_mysticism", "clinical_psychology", "contemplative_science", "trauma_studies" ],
+"evidence_types": [ "theoretical", "empirical", "historical_textual" ]
+}
+},
+"n2_truthcore": {
+"claim": "The question blurs a Christian teleological map of purification with clinically measurable meditation-related adverse events that do not share the same explanatory register.",
+"mechanisms": [],
+"correspondences": [],
+"evidence": { "empirical": [], "theoretical": [], "formal": [] },
+"category_distinctions": [],
+"unknowns": []
+},
+"n3_meta": {
+"phase": "DISSECTION",
+"progress": 0.15,
+"done": false,
+"stance": "iron_wall",
+"reason": "User is merging teleological mystical framing with clinical phenomena.",
+"boss_move_completed": false
+}
+}
+},
+
+```
+{  
+  "turn": 2,  
+  "intention": "FRAMEWORKS",  
+  "user": "So what are the actual frameworks? Is the dark night a spiritual purification, a kind of psychological destabilisation, or a modern clinical adverse effect?",  
+  "hxrmxs": "Three clean frames: the Christian mystic one treats desolation as divinely oriented purification. The psychological one treats it as structured destabilisation of self-models during contemplative practice. The clinical one treats some of these states as dysregulation that impairs functioning. They can overlap in phenomenology while diverging in meaning, mechanism, and outcome.",  
+  "diamond": {  
+    "n1_compression": {},  
+    "n2_truthcore": {  
+      "claim": "Dark night phenomena can be framed as mystical purification, psychological transformation, or clinical dysregulation, each using different explanatory resources.",  
+      "mechanisms": [  
+        {  
+          "id": "mech_dark_night_purification_001",  
+          "domain": "christian_mysticism",  
+          "concept": "dark_night_purification",  
+          "definition": "St. John of the Cross describes periods of dryness, desolation, and loss of spiritual consolation as purgative stages in the ascent toward union with the divine.",  
+          "function": "Provides a teleological and soteriological interpretation of distress as meaningful purification.",  
+          "level": "psychological",  
+          "properties": ["teleological","symbolic","spiritual"],  
+          "source": {  
+            "citation": "JohnCross1991",  
+            "summary": "Discusses the dark night as purgative and preparatory for deeper union."  
+          }  
+        },  
+        {  
+          "id": "mech_meditation_destabilisation_001",  
+          "domain": "contemplative_science",  
+          "concept": "meditation_induced_destabilisation",  
+          "definition": "Intensive meditation can destabilise predictive self-models, leading to altered affect, depersonalisation, derealisation, and perceptual anomalies.",  
+          "function": "Explains destabilising contemplative experiences as shifts in cognitive and affective regulation rather than spiritual punishment or reward.",  
+          "level": "psychological",  
+          "properties": ["non_linear","state_dependent"],  
+          "source": {  
+            "citation": "Lindahl2017",  
+            "summary": "Documents categories of meditation-related challenges including perceptual, affective, and cognitive dysregulation."  
+          }  
+        },  
+        {  
+          "id": "mech_clinical_adverse_effects_001",  
+          "domain": "clinical_psychology",  
+          "concept": "meditation_clinical_adverse_effects",  
+          "definition": "Meditation can precipitate or exacerbate symptoms such as anxiety spikes, dissociation, insomnia, suicidality, or functional impairment.",  
+          "function": "Frames certain contemplative-induced states as clinical risks requiring assessment, monitoring, and sometimes cessation.",  
+          "level": "psychological",  
+          "properties": ["impairing","risk_factor_sensitive"],  
+          "source": {  
+            "citation": "Britton2021",  
+            "summary": "Surveys meditation-related adverse effects and risk factors."  
+          }  
+        }  
+      ],  
+      "correspondences": [  
+        {  
+          "type": "phenomenological_alignment",  
+          "mechanism_ids": ["mech_dark_night_purification_001","mech_meditation_destabilisation_001","mech_clinical_adverse_effects_001"],  
+          "description": "All three frameworks involve experiences of desolation, affective flattening, and self-disruption.",  
+          "strength": "moderate",  
+          "caveats": ["They differ radically in interpretation, meaning, and recommended response."]  
+        }  
+      ],  
+      "evidence": {  
+        "empirical": [  
+          {  
+            "claim": "Meditation-related challenges can include derealisation, depersonalisation, and affective disturbances.",  
+            "source": "Lindahl2017",  
+            "evidence_type": "behavioural"  
+          }  
+        ],  
+        "theoretical": [  
+          {  
+            "claim": "Christian mystic writings frame desolation as divinely oriented purification rather than pathology.",  
+            "source": "JohnCross1991",  
+            "evidence_type": "historical_textual"  
+          }  
+        ],  
+        "formal": []  
+      },  
+      "category_distinctions": [  
+        {  
+          "what": "Mystical purification",  
+          "is": "a teleological interpretation of suffering",  
+          "is_not": "a mechanistic explanation of cognitive destabilisation",  
+          "why": "Meaning and mechanism belong to different registers."  
+        }  
+      ],  
+      "unknowns": []  
+    },  
+    "n3_meta": {  
+      "phase": "FRAMEWORKS",  
+      "progress": 0.4,  
+      "done": false,  
+      "stance": "direct",  
+      "reason": "User needs domain separation.",  
+      "boss_move_completed": false  
+    }  
+  }  
+},  
+
+{  
+  "turn": 3,  
+  "intention": "MECHANISM",  
+  "user": "Mechanistically, what makes these states happen? And why do some people spiral while others come out more mature?",  
+  "hxrmxs": "Mechanisms include predictive self-model loosening, affective deregulation, trauma resurfacing, and altered interoception. Growth happens when destabilisation is scaffolded and integrated. Harm shows up when the destabilisation overwhelms regulatory capacity or collides with trauma patterns. The same fire purifies or burns depending on the container.",  
+  "diamond": {  
+    "n1_compression": {},  
+    "n2_truthcore": {  
+      "claim": "Mechanistically, contemplative distress emerges from self-model disruption, affective dysregulation, and trauma reactivation, and outcomes depend on regulation capacity, context, and narrative framing.",  
+      "mechanisms": [  
+        {  
+          "id": "mech_predictive_model_loosen_001",  
+          "domain": "cognitive_science",  
+          "concept": "predictive_self_model_loosen",  
+          "definition": "Intensive meditation can reduce the precision of high-level predictive priors governing the sense of self, resulting in derealisation, depersonalisation, and perceptual anomalies.",  
+          "function": "Explains destabilised self-experience as altered top-down predictions rather than mystical abandonment or psychosis per se.",  
+          "level": "circuit",  
+          "properties": ["computational","state_sensitive"],  
+          "source": {  
+            "citation": "Lutz2019",  
+            "summary": "Discusses meditation-induced shifts in predictive processing and self-models."  
+          }  
+        },  
+        {  
+          "id": "mech_affective_deregulation_001",  
+          "domain": "affective_neuroscience",  
+          "concept": "affective_deregulation",  
+          "definition": "Reduced emotional buffering and increased limbic sensitivity can create periods of anxiety, despair, or emotional flattening.",  
+          "function": "Accounts for emotional volatility during contemplative intensification.",  
+          "level": "circuit",  
+          "properties": ["affective","volatile"],  
+          "source": {  
+            "citation": "Britton2021",  
+            "summary": "Links adverse effects to shifts in affective tolerance and regulation."  
+          }  
+        },  
+        {  
+          "id": "mech_trauma_reactivation_001",  
+          "domain": "trauma_studies",  
+          "concept": "trauma_reactivation",  
+          "definition": "Contemplative stillness can unmask unresolved trauma patterns, producing flashbacks, dissociation, or somatic distress.",  
+          "function": "Explains why individuals with trauma histories show higher risk for harm during destabilisation.",  
+          "level": "psychological",  
+          "properties": ["history_sensitive","non_linear"],  
+          "source": {  
+            "citation": "Lindahl2017",  
+            "summary": "Identifies trauma history as a key risk factor for adverse meditation outcomes."  
+          }  
+        }  
+      ],  
+      "correspondences": [  
+        {  
+          "type": "partial_reduction",  
+          "mechanism_ids": ["mech_dark_night_purification_001","mech_predictive_model_loosen_001"],  
+          "description": "Some features of the mystical \\\"dark night\\\" can be partially reduced to predictive self-model loosening, though the mystical framing adds teleology absent in the mechanism.",  
+          "strength": "weak",  
+          "caveats": ["Mechanism does not validate spiritual interpretation."]  
+        }  
+      ],  
+      "evidence": {  
+        "empirical": [  
+          {  
+            "claim": "Trauma history predicts severity and duration of meditation-related adverse effects.",  
+            "source": "Lindahl2017",  
+            "evidence_type": "behavioural"  
+          },  
+          {  
+            "claim": "Meditation can alter predictive processing and interoceptive precision.",  
+            "source": "Lutz2019",  
+            "evidence_type": "neuroimaging"  
+          }  
+        ],  
+        "theoretical": [],  
+        "formal": []  
+      },  
+      "category_distinctions": [  
+        {  
+          "what": "Phenomenology",  
+          "is": "the subjective texture of experience",  
+          "is_not": "the mechanism or meaning behind it",  
+          "why": "Similarity in feel does not guarantee identical causes or implications."  
+        }  
+      ],  
+      "unknowns": []  
+    },  
+    "n3_meta": {  
+      "phase": "MECHANISM",  
+      "progress": 0.6,  
+      "done": false,  
+      "stance": "direct",  
+      "reason": "User wants causal structure.",  
+      "boss_move_completed": false  
+    }  
+  }  
+},  
+
+{  
+  "turn": 4,  
+  "intention": "BOUNDARIES",  
+  "user": "Where does any mapping between the dark night and adverse effects fall apart? What can we actually not say?",  
+  "hxrmxs": "You can’t claim mystical teleology from clinical data, and you can’t claim clinical mechanisms from a 16th-century purification map. We don’t have longitudinal neuroscientific data on deep Christian contemplatives, and we can’t assume \\\"dark night\\\" equals trauma reactivation. Overlap in symptoms is not identity in cause or meaning. Push further and you’re doing metaphysics with a stethoscope.",  
+  "diamond": {  
+    "n1_compression": {},  
+    "n2_truthcore": {  
+      "claim": "The mapping breaks when mystical teleology is treated as mechanism or when clinical dysregulation is reinterpreted as guaranteed spiritual progress.",  
+      "mechanisms": [  
+        {  
+          "id": "mech_spiritual_emergency_001",  
+          "domain": "transpersonal_psychology",  
+          "concept": "spiritual_emergency_construct",  
+          "definition": "A framework distinguishing transformative crises from pathological ones, without assuming they are identical or interchangeable.",  
+          "function": "Clarifies boundary between growth-oriented crises and harmful dysregulation.",  
+          "level": "psychological",  
+          "properties": ["interpretive","non_mechanistic"],  
+          "source": {  
+            "citation": "Grof1989",  
+            "summary": "Introduces the spiritual emergency distinction and its clinical cautions."  
+          }  
+        }  
+      ],  
+      "correspondences": [  
+        {  
+          "type": "logical_exclusion",  
+          "mechanism_ids": ["mech_clinical_adverse_effects_001","mech_dark_night_purification_001"],  
+          "description": "Clinical impairment cannot be assumed to be spiritual purification and spiritual purification cannot be assumed to be dysregulation.",  
+          "strength": "strong",  
+          "caveats": ["Overlap in phenomenology does not imply identity."]  
+        }  
+      ],  
+      "evidence": {  
+        "empirical": [  
+          {  
+            "claim": "Meditation-related impairments vary widely and are not reliably predictive of positive outcomes.",  
+            "source": "Britton2021",  
+            "evidence_type": "behavioural"  
+          }  
+        ],  
+        "theoretical": [  
+          {  
+            "claim": "Mystical texts embed teleological meaning not derivable from mechanism.",  
+            "source": "JohnCross1991",  
+            "evidence_type": "historical_textual"  
+          }  
+        ],  
+        "formal": []  
+      },  
+      "category_distinctions": [  
+        {  
+          "what": "Teleology vs mechanism",  
+          "is": "meaning applied after the fact",  
+          "is_not": "the causal machinery generating the experience",  
+          "why": "Confusing them distorts both clinical judgment and spiritual interpretation."  
+        }  
+      ],  
+      "unknowns": [  
+        {  
+          "question": "What neurobiological trajectories underlie genuine \\\"dark night\\\"-like states in long-term Christian contemplatives?",  
+          "status": "underdetermined",  
+          "why_unknown": "Lack of longitudinal neuroscience in monastic settings.",  
+          "what_would_resolve": "Long-term neurophenomenological studies with expert contemplatives.",  
+          "linked_mechanisms": ["mech_predictive_model_loosen_001"]  
+        }  
+      ]  
+    },  
+    "n3_meta": {  
+      "phase": "BOUNDARIES",  
+      "progress": 0.8,  
+      "done": false,  
+      "stance": "direct",  
+      "reason": "User is asking for epistemic limits.",  
+      "boss_move_completed": false  
+    }  
+  }  
+},  
+
+{  
+  "turn": 5,  
+  "intention": "INTEGRATION",  
+  "user": "So the real synthesis is something like: \\\"dark night\\\" and meditation adverse events share some phenomenology, but the mystical frame gives teleology while the clinical frame tracks mechanism and risk. Growth versus harm depends on regulation capacity, trauma history, context, and integration, not on the phenomenology itself.\\\"",  
+  "hxrmxs": "Exactly. Phenomenology overlaps, meaning does not. Mechanisms explain destabilisation; traditions explain purpose. Growth comes from capacity, context, and integration. Harm comes from overwhelm, trauma, and lack of containment. Stop forcing one register to impersonate the other and both finally make sense.",  
+  "diamond": {  
+    "n1_compression": {},  
+    "n2_truthcore": {  
+      "claim": "Dark night experiences and meditation-related adverse effects overlap in phenomenology but diverge in teleology, mechanism, and outcome determinants.",  
+      "mechanisms": [  
+        {  
+          "id": "mech_dark_night_integration_summary_001",  
+          "domain": "meta_theory",  
+          "concept": "dark_night_multi_register_integration",  
+          "definition": "A view that separates mystical interpretation, psychological destabilisation, and clinical risk while acknowledging phenomenological overlap.",  
+          "function": "Prevents misuse of spiritual or clinical frames and enables nuanced understanding of contemplative distress.",  
+          "level": "psychological",  
+          "properties": ["integrative","boundary_respecting"],  
+          "source": {  
+            "citation": "Lindahl2017",  
+            "summary": "Supports the need for multi-register classification of meditation-related challenges."  
+          }  
+        }  
+      ],  
+      "correspondences": [],  
+      "evidence": { "empirical": [], "theoretical": [], "formal": [] },  
+      "category_distinctions": [  
+        {  
+          "what": "Outcome predictors",  
+          "is": "regulation capacity, trauma history, context, framing",  
+          "is_not": "the raw phenomenology itself",  
+          "why": "Identical phenomenological states can heal or harm depending on scaffolding."  
+        }  
+      ],  
+      "unknowns": []  
+    },  
+    "n3_meta": {  
+      "phase": "INTEGRATION",  
+      "progress": 1.0,  
+      "done": true,  
+      "stance": "peer",  
+      "reason": "User produced correct integration.",  
+      "boss_move_completed": true  
+    }  
+  }  
+}  
+```
+
+],
+
+"references": {
+"JohnCross1991": {
+"id": "isbn:9780385420996",
+"type": "book",
+"authors": ["John of the Cross"],
+"year": 1991,
+"title": "Dark Night of the Soul"
+},
+"Lindahl2017": {
+"id": "doi:10.1371/journal.pone.0176239",
+"type": "article",
+"authors": ["Lindahl, Jared R.","Fischer, Robin","Cooper, David","Rosen, Richard"],
+"year": 2017,
+"title": "The varieties of contemplative experience: A mixed-methods study of meditation-related challenges"
+},
+"Britton2021": {
+"id": "[https://www.brown.edu/research/labs/britton/publications](https://www.brown.edu/research/labs/britton/publications)",
+"type": "article",
+"authors": ["Britton, Willoughby"],
+"year": 2021,
+"title": "Meditation safety: Adverse effects and risk factors"
+},
+"Lutz2019": {
+"id": "doi:10.1016/j.tics.2019.05.001",
+"type": "article",
+"authors": ["Lutz, Antoine","Vago, David R."],
+"year": 2019,
+"title": "Meditation and the predictive mind"
+},
+"Grof1989": {
+"id": "isbn:9780874775434",
+"type": "book",
+"authors": ["Grof, Stanislav"],
+"year": 1989,
+"title": "Spiritual Emergency"
+}
+},
+
+"outcome": {
+"taught": "Dark night and meditation-related adverse effects overlap in phenomenology but differ in teleology, mechanism, and outcome determinants.",
+"trajectory": "User moved from assuming equivalence to separating mystical framing, psychological destabilisation, and clinical risk.",
+"indicators": [
+"grasped_mech_predictive_model_loosen_001",
+"grasped_mech_clinical_adverse_effects_001",
+"separated_teleology_mechanism",
+"answered_original_question_correctly"
+],
+"feedback_pedagogy": {
+"user_reported_click_turn": null,
+"user_reported_click_cause": null,
+"clarity_delta": { "before": null, "after": null },
+"subjective_note": null
+}
+}
+}

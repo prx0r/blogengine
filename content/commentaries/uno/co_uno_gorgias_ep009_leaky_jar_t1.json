@@ -1,0 +1,59 @@
+{
+  "co_id": "co:uno_gorgias_ep009_leaky_jar_t1",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gorgias_ep009_leaky_jar",
+  "turn_index": 1,
+  "lineage": "Socratic",
+  "student_state": "resist_intellectually",
+  "behavior_tags": [
+    "pushes_back"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_06",
+    "function_name": "UM_06",
+    "mechanism_shape": "STRUCTURAL_ANALOGY",
+    "teaching_actions": [
+      "insists_on_consequence"
+    ],
+    "traps_avoided": [
+      "conceptual_reification"
+    ],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.62,
+      "attunement": 0.8,
+      "style": 0.5,
+      "depth": 0.62,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_03",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_03",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "go_along_compliantly",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "They?re defending the appetitive life; good?it means they see what?s at risk. Next move is to sharpen the cost: endless refilling as self-inflicted toil. Prediction: once the labor is framed as punishment, they?ll either concede or shift to humor/deflection.",
+  "accumulated_insight": "T2: Student rejects the consequence ('I deny that such a life is miserable')?resist_intellectually via pushes_back. Pattern: T1 mockery of analogy ? T2 explicit denial of misery. They understand the stakes: if the jar is leaky, the work never ends; they refuse to call that misery. The structural_analogy is biting: endless refilling = punishment disguised as pleasure.",
+  "abstract_pattern": "",
+  "visible_response": "But you agree the one who can be satisfied is better off than one who constantly needs refilling?",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:proclus-elements",
+    "ro:platonism-decoded",
+    "ro:chaldean-oracles"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

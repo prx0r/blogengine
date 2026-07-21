@@ -1,0 +1,41 @@
+{
+  "work_id": "work:t2-pubmed-schizophrenia-detection-using-convolutional-neural-networks-on-eeg-dat",
+  "schema_version": 2,
+  "title": "Schizophrenia Detection Using Convolutional Neural Networks on EEG Data.",
+  "authors": [
+    {
+      "name": "Norouzi, Faezeh"
+    },
+    {
+      "name": "Ghasemi, Fariba"
+    }
+  ],
+  "identifiers": {
+    "pmid": "41282228",
+    "doi": "10.21203/rs.3.rs-7863978/v1"
+  },
+  "publication": {
+    "journal": "Research square",
+    "year": "2025"
+  },
+  "abstract": "Abnormal corollary discharge has been implicated in schizophrenia and manifests as reduced suppression of auditory evoked responses during self-generated sounds. We investigate whether deep convolutional neural networks (CNNs) trained on EEG from a basic button-tone task can detect schizophrenia at the single-trial/subject level. We analyzed EEG from 81 participants (schizophrenia and healthy controls; combined across a prior publication and a larger replication cohort) collected during three conditions: (1) button press generating a tone, (2) passive tone, and (3) button press without tone. Preprocessing included re-referencing to averaged earlobes, 0.1 Hz high-pass filtering, canonical correlation analysis for muscle/high-frequency noise removal, ICA artifact rejection, epoching, baseline correction, and interpolation of outlier channels/trials. We trained a 2D-CNN optimized with Adam where inputs comprised from up to 64 electrodes. On a held-out validation set, the model achieved accuracy = 0.6265 and val loss = 0.6455. From the confusion matrix, we obtained recall (schizophrenia) = 0.578, specificity = 0.640, precision = 0.308, and F1 = 0.402.",
+  "phase_mapping": {
+    "phase": 13,
+    "phase_name": "Daimon"
+  },
+  "bridge_tags": [
+    "voice-hearing",
+    "inner-speech",
+    "daimon",
+    "auditory-hallucination",
+    "cnn",
+    "deep-learning",
+    "eeg"
+  ],
+  "evaluation": "Quality pass v3 (score=31) \u2014 High-signal bridge paper for Daimon.",
+  "assets": {
+    "pdf_path": null,
+    "nxml_path": null
+  },
+  "tier": 2
+}

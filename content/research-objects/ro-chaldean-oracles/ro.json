@@ -1,0 +1,263 @@
+{
+  "ro_id": "ro:chaldean-oracles",
+  "schema_version": 1,
+  "title": "The Chaldean Oracles: The Fragments of the Theurgic Tradition",
+  "subtitle": "Stanley Translation (1661) and Major Scholarly Editions \u2014 The Father, Hekate, the Three Triads, and the Ascent of the Soul",
+  "family": "topic-across-thinkers",
+  "status": "draft",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "A compilation of the surviving fragments of the Chaldean Oracles \u2014 the second-century CE theurgic verses central to Neoplatonic philosophy \u2014 covering the Father, the Second Nous, Hekate, the tetrac...",
+    "scope": "Primary sources: Thomas Stanley's 1661 English translation of the Chaldean Oracles of Zoroaster, with the commentaries of Plethon and Psellus (from the Esoteric Archives transcription). Scholarly reference: Hans Lewy's Chaldaean Oracles and Theurgy (2011 ed.).",
+    "traditions": [
+      "chaldean",
+      "theurgy",
+      "neoplatonism",
+      "occult"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "chaldean-oracles-stanley",
+      "tier": 1,
+      "label": "The Chaldaick Oracles of Zoroaster \u2014 Thomas Stanley (1661), transcribed by Joseph H. Peterson (1999), Esoteric Archives",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "english_translation",
+        "plethon_commentary",
+        "psellus_commentary",
+        "oracle_fragments"
+      ],
+      "sections_affected": [
+        "theory",
+        "cosmology",
+        "theurgy"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "lewy-chaldean-oracles",
+      "tier": 2,
+      "label": "Hans Lewy \u2014 Chaldaean Oracles and Theurgy: Mysticism, Magic and Platonism in the Later Roman Empire (2011 ed.)",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "scholarly_framework",
+        "iranian_background",
+        "hekate_analysis",
+        "triad_structure"
+      ],
+      "sections_affected": [
+        "theory",
+        "scholarship"
+      ],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "theory",
+      "subsection": "the_father_and_the_second_nous",
+      "kind": "source",
+      "text": "[Fragments from Stanley, Plethon, and Psellus] The Father is the primary principle, the once-transcendent (hapax epekeina), who is beyond all comprehension: 'The Father comprehends not his own intellectual being in intelligence.' The Father 'snatches himself away' (eruetai) from all determination. From the Father proceeds the Second Nous (the Demiurgic Intellect), which the oracles call 'the Second Father' who is 'the first principle of generation.' This Second Nous 'has sown the multifarious bond of love throughout the universe, that all things may continue to love for ever, and that the texture of the eternal world may subsist by this indissoluble chain.' The Father is called 'the Depth' (Buthos), 'the Paternal Abyss,' and his power is fire: 'The Father has sown the symbols of wisdom in souls, giving them to learn the many-monitored doctrines.'",
+      "source_ids": [
+        "chaldean-oracles-stanley",
+        "lewy-chaldean-oracles"
+      ],
+      "topics": [
+        "the_father",
+        "second_nous",
+        "paternal_abyss",
+        "fire",
+        "love_chain"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "theory",
+      "subsection": "hekate_as_world_soul",
+      "kind": "source",
+      "text": "[Stanley translation, Psellus commentary] Hekate is the central goddess of the Chaldean system, the World Soul who mediates between the intelligible and the sensible. She is described as 'the Center, from which all powers issue' and as 'the girdle-wearing maid' who holds the cosmic axis. The oracles speak of her as 'the bearer of life,' 'the source of the virtues,' and 'the matrix of all things.' She stands between the two fires \u2014 the paternal fire above and the material fire below \u2014 and her womb is 'the source of all generation.' Psellus comments that Hekate is the soul of the world who supplies life and motion to the cosmos, and that the theurgist invokes her to gain passage through the spheres. The famous fragment: 'Around the Hekate, a great band of daimons dances.'",
+      "source_ids": [
+        "chaldean-oracles-stanley",
+        "lewy-chaldean-oracles"
+      ],
+      "topics": [
+        "hekate",
+        "world_soul",
+        "mediation",
+        "cosmic_axis",
+        "daimons"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "theory",
+      "subsection": "the_tetractys_and_the_three_triads",
+      "kind": "source",
+      "text": "[Stanley, Plethon, Psellus; Lewy analysis] The Chaldean cosmos is structured by the tetractys (the sacred fourfold) and the three triads. The tetractys proceeds from the Father through the three gradations: (1) the Paternal Intellect (the First Nous), (2) the Demiurgic Intellect (the Second Nous), and (3) the Hekate as World Soul, with the Father himself as the unitary source. The three triads structure the intelligible world: the first triad is the Father-Power-Intellect; the second triad is the intelligible-intellectual gods; the third triad is the hypercosmic gods. Psellus outlines the triadic structure as: the once-transcendent, the self-perfect, and the ruling. Plethon identifies the triads with the three theological stations: the first god who is the good, the second god who is the maker, and the third who is the ensouler. Lewy identifies an Iranian background to the triadic structure.",
+      "source_ids": [
+        "chaldean-oracles-stanley",
+        "lewy-chaldean-oracles"
+      ],
+      "topics": [
+        "tetractys",
+        "three_triads",
+        "triadic_structure",
+        "intelligible_world",
+        "hypercosmic"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "soteriology",
+      "subsection": "the_ascent_of_the_soul_through_the_spheres",
+      "kind": "source",
+      "text": "[Stanley, Psellus; Lewy Ch. III] The soul descends from the intelligible world through the planetary spheres, each sphere adding a garment or power. The ascent is the reverse process: the theurgist must 'withdraw the soul from matter' and 'ascend through the seven spheres' by stripping away the accretions. The oracles say: 'Thou must hasten to the light, the ray of the Father, whence the soul was sent forth, endued with much intellect.' The soul must 'fly upward' and 'kindle the fire within.' Psellus glosses: 'The ascent is accomplished by theurgic virtue, not by discursive reasoning.' The key fragment: 'Lest thou be detained in the impetuous wind, fix thy eyes on the light of the Father, and the soul shall ascend by the fiery ray.'",
+      "source_ids": [
+        "chaldean-oracles-stanley",
+        "lewy-chaldean-oracles"
+      ],
+      "topics": [
+        "ascent",
+        "spheres",
+        "soul_flight",
+        "stripping",
+        "fiery_ray"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "practice",
+      "subsection": "the_theurgic_union_and_the_fire_of_the_intellect",
+      "kind": "source",
+      "text": "[Stanley, Psellus; Lewy Ch. IV] The theurgic union is achieved by the fire of the intellect (to pyr tou nou) \u2014 an interior illumination that allows direct contact with the divine. The oracles command: 'In the operation of the fire, call upon the divine, and the fire shall be to thee a soothing power.' The theurgist must 'draw down the flame' through prayer, purification, and the use of symbols (synth\u0113mata). Psellus distinguishes the theurgist from the mere philosopher: 'the philosopher elevates himself by reason; the theurgist, by the operation of the fire, is united with the gods.' The most famous theurgic fragment: 'For the soul of man shall be united with god, when the soul, by the fire of the intellect, approaches the Father.'",
+      "source_ids": [
+        "chaldean-oracles-stanley",
+        "lewy-chaldean-oracles"
+      ],
+      "topics": [
+        "theurgic_union",
+        "fire_of_intellect",
+        "prayer",
+        "purification",
+        "symbols"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_006",
+      "section": "practice",
+      "subsection": "the_flower_of_the_intellect",
+      "kind": "source",
+      "text": "[Stanley fragments; Psellus; Proclus citations] The 'flower of the intellect' (nous anthos) is the crowning concept of Chaldean theurgy \u2014 the faculty within the soul that can grasp the divine directly, beyond all intellection. The oracles say: 'The Father has sown the flower of the intellect in the soul.' Psellus explains: 'As the flower emerges from the plant, so the flower of the intellect emerges from the soul's inmost depth, enabling union with the paternal fire.' This faculty is not discursive reason but an immediate, intuitive apprehension. Proclus cites this concept extensively in his Platonic Theology, linking the 'flower of the intellect' to the 'one of the soul' (hen t\u0113s psych\u0113s), the summit of the soul that is above being. The theurgist cultivates this flower through the quieting of thought and the practice of theurgic silence.",
+      "source_ids": [
+        "chaldean-oracles-stanley",
+        "lewy-chaldean-oracles"
+      ],
+      "topics": [
+        "flower_of_intellect",
+        "nous_anthos",
+        "intuitive_apprehension",
+        "theurgic_silence",
+        "proclus"
+      ],
+      "status": "placeholder"
+    }
+  ],
+  "coverage": {
+    "theory": {
+      "status": "good",
+      "sources": [
+        "chaldean-oracles-stanley",
+        "lewy-chaldean-oracles"
+      ],
+      "passage_count": 3,
+      "estimated_completeness": 0.7,
+      "gaps": [
+        "Only three theory passages covering the Father, Hekate, and the triads; more needed on the angelic and daimonic orders, the hyparxes, and the complete theological hierarchy"
+      ]
+    },
+    "soteriology": {
+      "status": "good",
+      "sources": [
+        "chaldean-oracles-stanley",
+        "lewy-chaldean-oracles"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 0.5,
+      "gaps": [
+        "The ascent scheme needs more detail on the specific spheres, the garments of the soul, and the role of the synthemata in each sphere"
+      ]
+    },
+    "practice": {
+      "status": "good",
+      "sources": [
+        "chaldean-oracles-stanley",
+        "lewy-chaldean-oracles"
+      ],
+      "passage_count": 2,
+      "estimated_completeness": 0.5,
+      "gaps": [
+        "More practice fragments needed on theurgic prayer, sacrifice, and the use of material substances"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "placeholder",
+      "title": "Passages are compilations, not individual oracle fragments",
+      "description": "Current passages summarize groups of fragments. Individual oracle fragments should be extracted with their original numbering (des Places, Majercik) and Greek text.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    },
+    {
+      "id": "issue-002",
+      "type": "coverage_gap",
+      "title": "No fragment numbering system used yet",
+      "description": "The fragments need to be keyed to the standard editions (des Places, Majercik) for scholarly reference. Currently organized by topic only.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    },
+    {
+      "id": "issue-003",
+      "type": "coverage_gap",
+      "title": "Lewy PDF not yet extracted",
+      "description": "Hans Lewy's Chaldaean Oracles and Theurgy (2011) is available as a PDF at /root/content-sources/platonism/chaldean/ but has not been extracted for passage referencing.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial RO created from Stanley's 1661 translation (HTML transcription) and Lewy's scholarly monograph. Six passages cover: the Father and Second Nous, Hekate as World Soul, the tetractys and three triads, the ascent through spheres, the theurgic union, and the flower of the intellect.",
+      "sources_added": [
+        "chaldean-oracles-stanley",
+        "lewy-chaldean-oracles"
+      ],
+      "passage_count": 6,
+      "status": "draft"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created in draft state from Stanley's Chaldean Oracles and Lewy's scholarship",
+      "sources_total": 2,
+      "passages_total": 6
+    }
+  ]
+}

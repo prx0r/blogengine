@@ -1,0 +1,53 @@
+{
+  "co_id": "co:uno_therapy2_t1891_t1896_minimizat_t2",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy2_t1891_t1896_minimization_car",
+  "turn_index": 2,
+  "lineage": "Therapeutic",
+  "student_state": "sober_recognition",
+  "behavior_tags": [
+    "realization"
+  ],
+  "pedagogy": {
+    "phase": "SELF-MAKING",
+    "function_id": "SM_01",
+    "function_name": "SM_01",
+    "mechanism_shape": "NONE",
+    "teaching_actions": [
+      "invites_full_affect"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.62,
+      "attunement": 0.8,
+      "style": 0.35,
+      "depth": 0.62,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_03",
+      "style_discrete": "LS_02",
+      "depth_discrete": "PD_03",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "Final turn: 'That’s true. He did throw me out of the car.'. Reached sober_recognition after 3 turns. Episode demonstrates none effectiveness in SELF-MAKING work. Teaching complete for this sequence.",
+  "accumulated_insight": "T3 (Final): Student: 'That’s true. He did throw me out of the car.'. Final state: sober_recognition. Episode complete with 3 turns. Arc shows progression through SELF-MAKING phase using none interventions. Teaching sequence addressed realization pattern.",
+  "abstract_pattern": "",
+  "visible_response": "If we don’t water down your feelings, can we have an uncensored look at them?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

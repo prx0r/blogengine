@@ -1,0 +1,586 @@
+{
+  "episode_id": "ep_tms_snyder_siddhis_filters_001",
+  "seed_question": "Allan Snyders TMS work shows that turning down the left anterior temporal lobe can temporarily boost savant like artistic or mathematical performance. Does this mean yogic siddhis are just the result of successfully inhibiting the brains top down conceptual filters to access raw unprocessed data.",
+  "topic": "tms_savant_siddhi_topdown_inhibition",
+  "user_behavior_pattern": "smart_confused",
+  "target_turn_count": 5,
+  "turns": [
+    {
+      "turn": 1,
+      "intention": "DISSECTION",
+      "user": "So if Snyder can zap people with magnets and suddenly they draw better or do maths like a mini savant, is that basically what yogis are doing with siddhis. Just turning off the brain filters so raw reality comes through and skills pop out. Or am I oversimplifying it.",
+      "hxrmxs": "You are trying to reduce centuries of yoga lore to a party trick with a magnet. Right now you are mixing three things. One, what Snyder style TMS actually does to left temporal cortex and performance. Two, what siddhis are in the yoga texts, which are not lab tasks. Three, a predictive processing story about top down models filtering data. Until those are pulled apart, you are treating a few percentage points of task improvement like teleportation.",
+      "diamond": {
+        "n1_compression": {
+          "original_prompt": "So if Snyder can zap people with magnets and suddenly they draw better or do maths like a mini savant, is that basically what yogis are doing with siddhis by turning off brain filters so raw reality comes through and skills pop out.",
+          "sharpened_question": "Do TMS induced savant like effects and top down inhibition models in neuroscience support the idea that yogic siddhis are primarily the result of reducing conceptual filtering to access more literal or detailed information, or is this a loose analogy that ignores differences in scope and mechanism.",
+          "assumptions": [
+            "If TMS can transiently improve a narrow skill, long term yogic powers must be the same mechanism scaled up.",
+            "Reducing top down constraints always reveals more accurate or powerful cognition."
+          ],
+          "category_errors": [
+            "Equating small lab effects on specific tasks with broad cross domain powers described in contemplative traditions.",
+            "Treating explanatory metaphors about filters as if they directly identify a single neural mechanism."
+          ],
+          "search_strategy": {
+            "queries": [
+              "Allan Snyder TMS savant like skills left anterior temporal lobe",
+              "Chi Snyder transcranial magnetic stimulation insight problems",
+              "predictive processing top down priors and perception Friston",
+              "Yoga Sutra siddhis nature and warnings",
+              "contemplative neuroscience attention training plasticity"
+            ],
+            "domains": [
+              "cognitive_neuroscience",
+              "clinical_neuromodulation",
+              "contemplative_studies"
+            ],
+            "evidence_types": [
+              "empirical_study",
+              "experimental_overview",
+              "historical_textual",
+              "theoretical_framework"
+            ]
+          }
+        },
+        "n2_truthcore": {
+          "claim": "The user is collapsing narrow TMS effects, broad predictive processing ideas and yogic siddhi lore into one mechanism and then asking if they are literally the same.",
+          "mechanisms": [
+            {
+              "id": "mech_tms_left_atl_snyder_001",
+              "domain": "cognitive_neuroscience",
+              "concept": "tms_left_atl_savant_like_effects",
+              "definition": "Low frequency inhibitory TMS over left anterior temporal cortex has been reported to produce modest, temporary improvements on certain drawing, numerosity or insight tasks in some participants.",
+              "function": "Supports the hypothesis that dampening conceptual and semantic integration areas may allow more detail focused or less context bound processing on specific tasks.",
+              "level": "organism",
+              "properties": [
+                "transient",
+                "task_specific",
+                "variable_effect"
+              ],
+              "source": {
+                "citation": "Snyder2009",
+                "summary": "Reports TMS induced changes interpreted as accessing lower level information normally suppressed by higher level conceptual processing."
+              }
+            },
+            {
+              "id": "mech_yogic_siddhi_doctrine_001",
+              "domain": "contemplative_studies",
+              "concept": "yogic_siddhi_doctrine",
+              "definition": "In classical yoga, siddhis are described as unusual abilities that arise from concentration, mantra, austerities or birth and are generally framed as side effects rather than the goal of practice.",
+              "function": "Serve as both motivational bait and warning signs, illustrating the power of concentrated mind while being explicitly said to distract from liberation.",
+              "level": "psychological",
+              "properties": [
+                "soteriological",
+                "anecdotal",
+                "caution_flagged"
+              ],
+              "source": {
+                "citation": "Bryant2009",
+                "summary": "Commentary on Yoga Sutra third chapter details siddhis and repeatedly warns against attachment to them."
+              }
+            }
+          ],
+          "correspondences": [
+            {
+              "type": "structural_analogy",
+              "mechanism_ids": [
+                "mech_tms_left_atl_snyder_001",
+                "mech_yogic_siddhi_doctrine_001"
+              ],
+              "description": "Both suggest that altering usual cognitive control can sometimes unlock unusual capacities, but one is a narrow neuromodulation effect and the other a broad contemplative narrative.",
+              "strength": "weak",
+              "caveats": [
+                "The scope, reliability and domain range are radically different.",
+                "Siddhi claims are not grounded in controlled experiments."
+              ]
+            }
+          ],
+          "evidence": {
+            "empirical": [
+              {
+                "claim": "Inhibitory TMS to left anterior temporal lobe can improve performance on some insight and drawing tasks in a subset of subjects.",
+                "source": "ChiSnyder2011",
+                "evidence_type": "empirical_study"
+              }
+            ],
+            "theoretical": [
+              {
+                "claim": "Yoga Sutra traditions present siddhis as side effects and potential obstacles rather than central goals.",
+                "source": "Bryant2009",
+                "evidence_type": "historical_textual"
+              },
+              {
+                "claim": "Snyder interprets TMS effects as reducing top down conceptual processing, allowing access to lower level detail.",
+                "source": "Snyder2009",
+                "evidence_type": "theoretical_framework"
+              }
+            ],
+            "formal": []
+          },
+          "category_distinctions": [
+            {
+              "what": "Narrow neuromodulation effect",
+              "is": "a small, temporary change in performance on specific tasks under lab conditions",
+              "is_not": "a stable cross domain power set of the sort described in yogic lore",
+              "why": "Confusing them tempts you to treat modest statistical shifts as evidence for full blown occult abilities."
+            }
+          ],
+          "unknowns": []
+        },
+        "n3_meta": {
+          "phase": "DISSECTION",
+          "progress": 0.15,
+          "done": false,
+          "stance": "iron_wall",
+          "reason": "User is extrapolating from narrow lab findings to broad spiritual claims without tracking scope or evidential status.",
+          "boss_move_completed": false
+        }
+      }
+    },
+    {
+      "turn": 2,
+      "intention": "FRAMEWORKS",
+      "user": "Ok ok, so magnets are not instant levitation. Can you lay out the main lenses here so my brain stops turning every study into a superpower origin story.",
+      "hxrmxs": "Three lenses. First, predictive brain models where perception is a negotiation between top down expectations and bottom up signals. Second, TMS and similar tools that poke specific regions and show what happens when you loosen some of that top down grip. Third, yogic maps where long term training reshapes attention, emotion and maybe unusual capacities, embedded in an ethics and liberation framework. If you keep those distinct, you stop treating every little effect size as proof of cosmic powers.",
+      "diamond": {
+        "n1_compression": {},
+        "n2_truthcore": {
+          "claim": "The question sits at the intersection of predictive processing theories, neuromodulation studies and yogic siddhi doctrine, each of which treats filters and powers in a different way.",
+          "mechanisms": [
+            {
+              "id": "mech_predictive_processing_001",
+              "domain": "cognitive_neuroscience",
+              "concept": "predictive_processing_topdown_priors",
+              "definition": "Predictive processing frameworks model the brain as constantly generating top down predictions and minimising prediction error with incoming sensory data.",
+              "function": "Explains how prior beliefs and conceptual models shape perception and can both enable efficient processing and produce illusions.",
+              "level": "circuit",
+              "properties": [
+                "hierarchical",
+                "top_down",
+                "error_minimising"
+              ],
+              "source": {
+                "citation": "Friston2010",
+                "summary": "Reviews the free energy principle and predictive coding as unifying accounts of brain function."
+              }
+            },
+            {
+              "id": "mech_meditation_attention_training_001",
+              "domain": "contemplative_studies",
+              "concept": "meditation_attention_regulation",
+              "definition": "Intensive meditation training can produce measurable changes in attentional stability, meta awareness and emotional regulation.",
+              "function": "Provides a plausible route by which long term practice could alter how strongly top down biases and habits influence experience.",
+              "level": "organism",
+              "properties": [
+                "plasticity_inducing",
+                "practice_dependent"
+              ],
+              "source": {
+                "citation": "Lutz2008",
+                "summary": "Shows differences in neural activity and attention performance between long term meditators and controls."
+              }
+            }
+          ],
+          "correspondences": [
+            {
+              "type": "partial_reduction",
+              "mechanism_ids": [
+                "mech_meditation_attention_training_001",
+                "mech_predictive_processing_001"
+              ],
+              "description": "Meditation induced changes in attention and awareness can be framed as training the weighting of predictions and sensory precision in predictive processing terms.",
+              "strength": "moderate",
+              "caveats": [
+                "This is a modelling choice, not a direct measurement of siddhis.",
+                "Predictive models currently describe general processing, not specific occult abilities."
+              ]
+            }
+          ],
+          "evidence": {
+            "empirical": [
+              {
+                "claim": "Long term meditation is associated with altered neural dynamics and improved attention performance.",
+                "source": "Lutz2008",
+                "evidence_type": "experimental_overview"
+              }
+            ],
+            "theoretical": [
+              {
+                "claim": "Predictive processing offers a general account of how top down and bottom up signals interact.",
+                "source": "Friston2010",
+                "evidence_type": "theoretical_framework"
+              },
+              {
+                "claim": "Yoga treatises place siddhis within a broader path where ethical and concentration practices are central.",
+                "source": "Bryant2009",
+                "evidence_type": "historical_textual"
+              }
+            ],
+            "formal": []
+          },
+          "category_distinctions": [
+            {
+              "what": "Filter loosening",
+              "is": "changing the balance of top down and bottom up influence on perception and cognition",
+              "is_not": "a guarantee of accurate insight or paranormal performance",
+              "why": "Lowering constraints can give access to detail but can also produce noise, confusion or pathology."
+            }
+          ],
+          "unknowns": []
+        },
+        "n3_meta": {
+          "phase": "FRAMEWORKS",
+          "progress": 0.4,
+          "done": false,
+          "stance": "direct",
+          "reason": "User needs clear conceptual boxes before evaluating the siddhi as filter hypothesis.",
+          "boss_move_completed": false
+        }
+      }
+    },
+    {
+      "turn": 3,
+      "intention": "MECHANISM",
+      "user": "Mechanistically then, what actually lines up. Is there a real sense in which both TMS and deep meditation are just different ways of turning down top down models so some hidden raw skill shows up, or is that just my brain chasing a pretty story.",
+      "hxrmxs": "There is a weak rhyme, not a secret identity card. TMS to left temporal areas can disrupt semantic framing and sometimes unmask detail or brute force strategies. Meditation can change how strongly habits and narratives grip perception. But savant like skills in autism often come with costs in flexibility and social inference. And TMS effects are tiny compared to the siddhi stories. Turning off filters is not a free superpower toggle, it is more like loosening the safety rails on a moving train.",
+      "diamond": {
+        "n1_compression": {},
+        "n2_truthcore": {
+          "claim": "Both TMS studies and contemplative training support the idea that altering top down constraints can change what information and strategies are available, but the magnitude, reliability and side effects do not match the strong siddhi narratives.",
+          "mechanisms": [
+            {
+              "id": "mech_tms_disinhibition_low_level_detail_001",
+              "domain": "cognitive_neuroscience",
+              "concept": "tms_disinhibition_low_level_detail",
+              "definition": "By inhibiting integrative semantic regions, TMS may reduce high level framing and allow lower level perceptual or numeric details to be processed more directly.",
+              "function": "Provides a plausible basis for improvements in tasks that benefit from attention to literal detail over conceptual gist.",
+              "level": "circuit",
+              "properties": [
+                "detail_biased",
+                "context_reduced"
+              ],
+              "source": {
+                "citation": "Snyder2009",
+                "summary": "Interprets TMS induced improvements as access to raw data normally filtered by conceptual processing."
+              }
+            },
+            {
+              "id": "mech_autistic_savant_profile_001",
+              "domain": "cognitive_neuroscience",
+              "concept": "autistic_savant_profile",
+              "definition": "Many natural savants show islands of exceptional ability alongside difficulties in flexible cognition, abstraction or social understanding.",
+              "function": "Illustrates that reduced top down integration can trade general adaptability for narrow skill peaks.",
+              "level": "organism",
+              "properties": [
+                "uneven_profile",
+                "capacity_cost_tradeoff"
+              ],
+              "source": {
+                "citation": "HappeFrith2006",
+                "summary": "Reviews cognitive profiles in autism including detail focus and uneven abilities."
+              }
+            }
+          ],
+          "correspondences": [
+            {
+              "type": "phenomenological_alignment",
+              "mechanism_ids": [
+                "mech_tms_disinhibition_low_level_detail_001",
+                "mech_meditation_attention_training_001"
+              ],
+              "description": "Both TMS induced disinhibition and meditation training can alter what aspects of experience stand out or are accessible, sometimes making subtle details more salient.",
+              "strength": "moderate",
+              "caveats": [
+                "Meditation effects develop gradually and include meta awareness, not just raw detail access.",
+                "Neither has been shown to produce the full catalogue of siddhis as presented in texts."
+              ]
+            }
+          ],
+          "evidence": {
+            "empirical": [
+              {
+                "claim": "TMS studies show modest effect sizes and high inter individual variability in savant like enhancements.",
+                "source": "ChiSnyder2011",
+                "evidence_type": "empirical_study"
+              },
+              {
+                "claim": "Autistic savants exhibit both enhanced local processing and significant functional costs.",
+                "source": "HappeFrith2006",
+                "evidence_type": "experimental_overview"
+              }
+            ],
+            "theoretical": [
+              {
+                "claim": "Contemplative models emphasise balance and integration, not simple removal of conceptual processing.",
+                "source": "Bryant2009",
+                "evidence_type": "historical_textual"
+              }
+            ],
+            "formal": []
+          },
+          "category_distinctions": [
+            {
+              "what": "Loosening filters",
+              "is": "changing the balance of constraints on processing with potential gains and losses",
+              "is_not": "a pure upgrade that unlocks hidden perfection without cost",
+              "why": "Real systems have tradeoffs; your superhero story does not."
+            }
+          ],
+          "unknowns": []
+        },
+        "n3_meta": {
+          "phase": "MECHANISM",
+          "progress": 0.6,
+          "done": false,
+          "stance": "direct",
+          "reason": "User is asking for concrete alignment between mechanisms and siddhi stories, so benefits and tradeoffs of filter loosening must be spelled out.",
+          "boss_move_completed": false
+        }
+      }
+    },
+    {
+      "turn": 4,
+      "intention": "BOUNDARIES",
+      "user": "So where does this story break. How far can I push the siddhi equals filter hack idea before I am just doing spiritual science fiction.",
+      "hxrmxs": "The hard wall is evidence. We have lab data for small, noisy gains in narrow tasks when you poke cortex or train attention. We have predictive models that say priors matter. We have old texts that mix plausible mind training with tall tales and strong ethical framing. What we do not have is controlled demonstration that anyone has used top down inhibition to walk through walls or read distant thoughts. At best, you can say some siddhi descriptions rhyme with what happens when you systematically reshape attention and priors. Beyond that, it is fan fiction with Sanskrit.",
+      "diamond": {
+        "n1_compression": {},
+        "n2_truthcore": {
+          "claim": "Current science supports a modest filter story for certain cognitive changes but does not justify a literal reduction of the full siddhi catalogue to top down inhibition effects.",
+          "mechanisms": [
+            {
+              "id": "mech_meditation_adverse_effects_001",
+              "domain": "contemplative_studies",
+              "concept": "meditation_adverse_effects",
+              "definition": "Intensive contemplative practice can sometimes lead to destabilising experiences including perceptual anomalies, depersonalisation and functional impairment.",
+              "function": "Shows that altering filters and priors through practice can also move systems into dysregulated regimes, not just enhanced talents.",
+              "level": "organism",
+              "properties": [
+                "risk_bearing",
+                "state_dependent"
+              ],
+              "source": {
+                "citation": "Britton2021",
+                "summary": "Documents challenging and adverse experiences in meditation practitioners."
+              }
+            }
+          ],
+          "correspondences": [
+            {
+              "type": "negative_finding",
+              "mechanism_ids": [
+                "mech_tms_left_atl_snyder_001",
+                "mech_yogic_siddhi_doctrine_001"
+              ],
+              "description": "Despite conceptual parallels, experimental neuromodulation has not produced the kind of robust, multi domain abilities described in siddhi lore.",
+              "strength": "moderate",
+              "caveats": [
+                "Lab protocols and yogic training regimes differ greatly, but the absence of strong effects is still informative."
+              ]
+            }
+          ],
+          "evidence": {
+            "empirical": [
+              {
+                "claim": "Reports of meditation related difficulties indicate that aggressively altering cognitive filters can have serious downsides.",
+                "source": "Britton2021",
+                "evidence_type": "empirical_study"
+              },
+              {
+                "claim": "TMS based enhancement studies do not show large, generalised paranormal like effects.",
+                "source": "ChiSnyder2011",
+                "evidence_type": "empirical_study"
+              }
+            ],
+            "theoretical": [
+              {
+                "claim": "Yoga commentaries caution against fixation on siddhis as distractions from liberation.",
+                "source": "Bryant2009",
+                "evidence_type": "historical_textual"
+              }
+            ],
+            "formal": []
+          },
+          "category_distinctions": [
+            {
+              "what": "Suggestive analogy",
+              "is": "using filter language to loosely compare scientific and yogic ideas",
+              "is_not": "a demonstration that they are the same mechanism with the same capabilities",
+              "why": "Blurring that line turns metaphors into fake explanations."
+            }
+          ],
+          "unknowns": [
+            {
+              "question": "To what extent long term contemplative practice can systematically produce above average performance in specific perceptual or cognitive domains under controlled conditions.",
+              "status": "active_research",
+              "why_unknown": "Few rigorous, large scale studies directly test high level performance claims.",
+              "what_would_resolve": "Well designed experiments comparing advanced practitioners and controls on tasks that map onto specific siddhi like abilities.",
+              "linked_mechanisms": [
+                "mech_meditation_attention_training_001"
+              ]
+            }
+          ]
+        },
+        "n3_meta": {
+          "phase": "BOUNDARIES",
+          "progress": 0.8,
+          "done": false,
+          "stance": "direct",
+          "reason": "User is pushing a unifying story; it is time to mark what is supported, what is analogy and what is ungrounded.",
+          "boss_move_completed": false
+        }
+      }
+    },
+    {
+      "turn": 5,
+      "intention": "INTEGRATION",
+      "user": "So a more honest way to put it would be something like this. Both Snyder style TMS and predictive processing show that loosening certain top down filters can change what information and strategies are available, sometimes making detail and unusual solutions pop out. Meditation and yoga probably also reshape those filters over time, which could explain some enhanced clarity or specific skills. But the big siddhi stories go way beyond what has been shown, and trying to reduce them all to a simple filter hack ignores tradeoffs, risks and the ethical context. The overlap is more a suggestive rhyme than a one to one mechanism.",
+      "hxrmxs": "That is the adult version. You keep the useful insight that brains run on priors and that you can modulate how much grip they have. You see TMS, autism and meditation as three different ways that balance can shift, with gains and costs. You treat siddhi catalogues as mythic case studies about what mind might feel like when its usual habits are warped by extreme practice, not as lab proven patch notes. And you retire the fantasy that there is a single magic knob called filters that turns ordinary primate into enlightened superhero.",
+      "diamond": {
+        "n1_compression": {},
+        "n2_truthcore": {
+          "claim": "The user has integrated that while filter based models and neuromodulation provide a partial vocabulary for thinking about unusual capacities, they do not justify a full reduction of yogic siddhis to simple top down inhibition hacks.",
+          "mechanisms": [
+            {
+              "id": "mech_meta_filter_synthesis_001",
+              "domain": "meta_theory",
+              "concept": "meta_filter_synthesis",
+              "definition": "A stance that unifies predictive processing, neuromodulation findings and contemplative reports as different ways of tuning cognitive filters while preserving distinctions in scope, evidence and risk.",
+              "function": "Allows cross talk between science and contemplative lore without inflating limited data into proof of paranormal powers.",
+              "level": "theoretical",
+              "properties": [
+                "integrative",
+                "anti_hype",
+                "risk_aware"
+              ],
+              "source": {
+                "citation": "Friston2010",
+                "summary": "Predictive accounts frame filters as tunable rather than binary, supporting nuanced, graded interpretations of altered cognition."
+              }
+            }
+          ],
+          "correspondences": [],
+          "evidence": {
+            "empirical": [],
+            "theoretical": [
+              {
+                "claim": "Filter based thinking can link neuroscientific and contemplative accounts without asserting identity or paranormal conclusions.",
+                "source": "Friston2010",
+                "evidence_type": "theoretical_framework"
+              }
+            ],
+            "formal": []
+          },
+          "category_distinctions": [
+            {
+              "what": "Using science to illuminate practice",
+              "is": "letting models of priors and plasticity inform how you understand training effects",
+              "is_not": "ripping mythic claims out of context and declaring them proven by small lab anomalies",
+              "why": "One approach sharpens both science and practice, the other just feeds your inner comic book."
+            }
+          ],
+          "unknowns": []
+        },
+        "n3_meta": {
+          "phase": "INTEGRATION",
+          "progress": 1.0,
+          "done": true,
+          "stance": "peer",
+          "reason": "User now distinguishes analogy from mechanism and recognises limits of current evidence.",
+          "boss_move_completed": true
+        }
+      }
+    }
+  ],
+  "references": {
+    "Snyder2009": {
+      "id": "doi:10.1098/rstb.2008.0326",
+      "type": "article",
+      "authors": [
+        "Snyder, Allan"
+      ],
+      "year": 2009,
+      "title": "Explaining and inducing savant skills: privileged access to lower level, less processed information"
+    },
+    "ChiSnyder2011": {
+      "id": "doi:10.1038/srep00042",
+      "type": "article",
+      "authors": [
+        "Chi, Richard",
+        "Snyder, Allan"
+      ],
+      "year": 2011,
+      "title": "Facilitate insight by non invasive brain stimulation"
+    },
+    "Friston2010": {
+      "id": "doi:10.1038/nrn2787",
+      "type": "article",
+      "authors": [
+        "Friston, Karl"
+      ],
+      "year": 2010,
+      "title": "The free energy principle: a unified brain theory"
+    },
+    "Lutz2008": {
+      "id": "doi:10.1111/j.1467-8721.2008.00566.x",
+      "type": "article",
+      "authors": [
+        "Lutz, Antoine",
+        "Slagter, Heleen",
+        "Dunne, John",
+        "Davidson, Richard"
+      ],
+      "year": 2008,
+      "title": "Attention regulation and monitoring in meditation"
+    },
+    "Bryant2009": {
+      "id": "isbn:9780865477360",
+      "type": "book",
+      "authors": [
+        "Bryant, Edwin"
+      ],
+      "year": 2009,
+      "title": "The Yoga Sutras of Patanjali: A New Edition, Translation, and Commentary"
+    },
+    "HappeFrith2006": {
+      "id": "doi:10.1017/S1355617706061070",
+      "type": "article",
+      "authors": [
+        "Happe, Francesca",
+        "Frith, Uta"
+      ],
+      "year": 2006,
+      "title": "The weak coherence account: detail focused cognitive style in autism spectrum disorders"
+    },
+    "Britton2021": {
+      "id": "doi:10.1017/S003329172100171X",
+      "type": "article",
+      "authors": [
+        "Britton, Willoughby"
+      ],
+      "year": 2021,
+      "title": "Can meditation be bad for you"
+    }
+  },
+  "outcome": {
+    "taught": "Filter based models and neuromodulation findings support a limited analogy between reduced top down constraint and certain unusual abilities, but they do not justify a simple identification of yogic siddhis with top down inhibition hacks, nor do current data support the full siddhi catalogue.",
+    "trajectory": "The user moved from treating TMS induced savant like effects as direct evidence for siddhis to a graded view where predictive processing and attention training offer a shared vocabulary for altered cognition while strong siddhi claims remain largely unverified lore.",
+    "indicators": [
+      "grasped_mech_tms_left_atl_snyder_001",
+      "grasped_mech_predictive_processing_001",
+      "grasped_mech_meditation_attention_training_001",
+      "distinguished_lab_effects_from_siddhi_lore",
+      "answered_original_question_correctly"
+    ],
+    "feedback_pedagogy": {
+      "user_reported_click_turn": null,
+      "user_reported_click_cause": null,
+      "clarity_delta": {
+        "before": null,
+        "after": null
+      },
+      "subjective_note": null
+    }
+  }
+}

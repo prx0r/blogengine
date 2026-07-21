@@ -1,0 +1,54 @@
+{
+  "co_id": "co:uno_therapy2_t1826_t1846_instant_r_t2",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy2_t1826_t1846_instant_repression_anxiety",
+  "turn_index": 2,
+  "lineage": "Therapeutic",
+  "student_state": "resistant",
+  "behavior_tags": [
+    "rationalization"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_02",
+    "function_name": "UM_02",
+    "mechanism_shape": "CAUSAL_CHAIN",
+    "teaching_actions": [
+      "predicts_consequence",
+      "invites_collaboration"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.35,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_02",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "no_clear_effect",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "Turn 3: 'There’s no sense making a big deal of it.'. Student now in resistant. Continuing with causal_chain approach. Building on previous turn's foundation.",
+  "accumulated_insight": "T3: Student: 'There’s no sense making a big deal of it.'. Shift from dismissive to resistant. Teacher applies causal_chain mechanism with predicts consequence, invites collaboration. Mid-episode progression in UNMAKING phase.",
+  "abstract_pattern": "",
+  "visible_response": "Now you try to justify ignoring your anxiety.\nBut if we ignore your anxiety, it will get worse.\nShall we pay attention to your anxiety?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

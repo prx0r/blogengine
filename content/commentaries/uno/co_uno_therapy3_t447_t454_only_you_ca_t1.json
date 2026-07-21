@@ -1,0 +1,56 @@
+{
+  "co_id": "co:uno_therapy3_t447_t454_only_you_ca_t1",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3_t447_t454_only_you_can_know_meta",
+  "turn_index": 1,
+  "lineage": "Therapeutic",
+  "student_state": "anxious_insistence",
+  "behavior_tags": [
+    "pressure_for_answer"
+  ],
+  "pedagogy": {
+    "phase": "SELF-MAKING",
+    "function_id": "SM_01",
+    "function_name": "SM_01",
+    "mechanism_shape": "SUBJECT_OBJECT_INVERSION",
+    "teaching_actions": [
+      "maintains_boundary",
+      "insists_on_patient_knowledge"
+    ],
+    "traps_avoided": [
+      "answer_hunting"
+    ],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.15,
+      "depth": 0.85,
+      "meta_mode": 0.75,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_01",
+      "depth_discrete": "PD_04",
+      "meta_mode_discrete": "MM_02"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "'But I don't know what to look for'—they accepted I won't judge (good) but need guidance (reasonable). The internal markers ('more or less anxious? more or less alive?') give them concrete felt-sense tools. Not 'am I doing it right?' (external) but 'how do I feel?' (internal). This teaches them to use body/affect as progress indicator. Anxiety down = progress. Aliveness up = progress. Simple, internal, non-judgmental. Two turns from 'tell me if I'm making progress' to 'check your own felt experience.' Clean handoff of authority from teacher to student.",
+  "accumulated_insight": "T2 (Final): Student protests: 'But I don't know what to look for'—request_clarification shows they accepted teacher won't judge but need guidance on self-assessment. Teacher provides internal markers: 'Do you feel more or less anxious? More or less alive?' Shifts from abstract 'progress' to concrete felt experience. Two-turn arc: external validation seeking -> authority refused -> request for method -> internal markers given. Teaching point: progress is felt, not measured externally. Student now has tools for self-assessment without teacher judgment.",
+  "abstract_pattern": "",
+  "visible_response": "Not really. Since I haven’t heard anything from you, I have no idea whether you have an internal emotional problem or not.\nOnly you can know for sure.",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

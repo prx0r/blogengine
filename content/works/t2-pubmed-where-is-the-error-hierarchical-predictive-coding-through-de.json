@@ -1,0 +1,52 @@
+{
+  "work_id": "work:t2-pubmed-where-is-the-error-hierarchical-predictive-coding-through-de",
+  "schema_version": 2,
+  "title": "Where is the error? Hierarchical predictive coding through dendritic error computation.",
+  "authors": [
+    {
+      "name": "Mikulasch FA"
+    },
+    {
+      "name": "Rudelt L"
+    },
+    {
+      "name": "Wibral M"
+    },
+    {
+      "name": "Priesemann V"
+    }
+  ],
+  "publication": {
+    "year": 2023,
+    "journal": "Trends Neurosci",
+    "source": "PubMed/MEDLINE",
+    "language": "en"
+  },
+  "identifiers": {
+    "pmid": "36577388",
+    "doi": "10.1016/j.tins.2022.09.007"
+  },
+  "topics": [
+    "phase-6-dependent-arising",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "assets": {
+    "pdf_path": null,
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/36577388/",
+    "abstract": "Top-down feedback in cortex is critical for guiding sensory processing, which has prominently been formalized in the theory of hierarchical predictive coding (hPC). However, experimental evidence for error units, which are central to the theory, is inconclusive and it remains unclear how hPC can be implemented with spiking neurons. To address this, we connect hPC to existing work on efficient coding in balanced networks with lateral inhibition and predictive computation at apical dendrites. Toge"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_alt17_acquisition",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 6,
+    "phase_name": "Dependent-arising",
+    "bridge_rationale": "Bridge paper score=13.5: links Dependent-arising concept to mechanistic neuroscience"
+  },
+  "evaluation": "Score 13: Excellent bridge signal",
+  "tier": 2
+}

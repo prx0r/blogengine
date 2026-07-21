@@ -1,0 +1,54 @@
+{
+  "id": "occult-daimon",
+  "tradition": "occult",
+  "topic": "daimon",
+  "label": "Daimon / Guidance / Vocation",
+  "phase": "phase-13-daimon-guidance",
+  "description": "The daimon as autonomous inner-other — guidance, vocation, and the mediating spirit between human and divine realms.",
+  "manifest": {
+    "source_pdfs": [
+      "sources/Frater Acher - Holy Daimon.pdf",
+      "sources/The Book of Abramelin — A New Translation (Georg Dehn, 2015).pdf"
+    ],
+    "concepts": [
+      "concepts/daimon.json",
+      "concepts/daimonic_mediation.json"
+    ],
+    "essays": {
+      "james_daimon": [
+        "essays/t2-james-daimon-0.json",
+        "essays/t2-james-daimon-1.json"
+      ],
+      "phase_13_bridge_essays": "essays/phase-13-daimon/ (40 bridge essays on AVH, metacognition, daimonic voice)"
+    },
+    "art": [
+      "art/art_daimon_guide.json"
+    ],
+    "works": [
+      "works/work_marsilio-daimon-2.json",
+      "works/work_plato-daimon-0.json",
+      "works/work_james-daimon-1.json",
+      "works/work_james-daimon-0.json",
+      "works/work_plotinus-daimon-2.json"
+    ],
+    "research_objects": [
+      "research-objects/ro-ficino-daimon/"
+    ]
+  },
+  "related_concepts": [
+    "eros",
+    "divine_madness",
+    "participation",
+    "angelic_pedagogy",
+    "spiritus"
+  ],
+  "key_figures": [
+    "Socrates (daimonion)",
+    "Plotinus",
+    "Iamblichus",
+    "Marsilio Ficino",
+    "James Hillman",
+    "Henry Corbin",
+    "Frater Acher"
+  ]
+}

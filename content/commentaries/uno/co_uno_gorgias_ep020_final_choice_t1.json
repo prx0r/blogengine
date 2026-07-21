@@ -1,0 +1,57 @@
+{
+  "co_id": "co:uno_gorgias_ep020_final_choice_t1",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gorgias_ep020_final_choice",
+  "turn_index": 1,
+  "lineage": "Socratic",
+  "student_state": "cooperative_engagement",
+  "behavior_tags": [
+    "silent_compliance"
+  ],
+  "pedagogy": {
+    "phase": "SELF-MAKING",
+    "function_id": "SM_04",
+    "function_name": "SM_04",
+    "mechanism_shape": "COMPARISON_CONTRAST",
+    "teaching_actions": [
+      "holds_threshold"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.62,
+      "attunement": 0.8,
+      "style": 0.5,
+      "depth": 0.38,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_03",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_02",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "go_along_compliantly",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "They let the fork stand. Next, ask directly which life they defend. If they dodge, press for a choice; the episode turns on their owned answer.",
+  "accumulated_insight": "Two-turn pattern: T1 clarification request ? T2 silent compliance with the fork. They understand the choice (pleasure vs justice) but have not chosen. The comparison_contrast/SM_04 move now requires explicit commitment to reveal their stance.",
+  "abstract_pattern": "",
+  "visible_response": "Only this: choose which life you will live—the life of discipline or the life of ruin.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:proclus-elements",
+    "ro:platonism-decoded",
+    "ro:chaldean-oracles"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

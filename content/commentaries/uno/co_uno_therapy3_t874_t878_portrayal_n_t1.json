@@ -1,0 +1,54 @@
+{
+  "co_id": "co:uno_therapy3_t874_t878_portrayal_n_t1",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3_t874_t878_portrayal_negation",
+  "turn_index": 1,
+  "lineage": "Therapeutic",
+  "student_state": "somatic_activation",
+  "behavior_tags": [
+    "affect_breakthrough"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_04",
+    "function_name": "RM_04",
+    "mechanism_shape": "NONE",
+    "teaching_actions": [
+      "bypasses_superego",
+      "invites_fantasy"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.5,
+      "depth": 0.62,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_03",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "no_clear_effect",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "'I guess it did happen'—dropped negation. From 'didn't happen' to 'did happen' in two turns. Teacher's simple validation: 'Yes, it happened.' Confirms reality against defense. Two-turn breakthrough of negation.",
+  "accumulated_insight": "T2 (Final): Student admits 'I guess it did happen.' From negation (T1) to acknowledgment (T2). Teacher validates: 'Yes, it happened.' Two-turn sequence breaks through negation defense.",
+  "abstract_pattern": "",
+  "visible_response": "If those fists did what you would never do, how do you picture those fists going out on him, in your imagination?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

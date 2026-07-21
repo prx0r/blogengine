@@ -1,0 +1,59 @@
+{
+  "co_id": "co:uno_gurdjeff3_t1733_t1746_carbon_1_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gurdjeff3_t1733_t1746_carbon_12_mechanism",
+  "turn_index": 0,
+  "lineage": "Gurdjieffian",
+  "student_state": "seeking_technical_explanation",
+  "behavior_tags": [
+    "asks_for_technical_definition",
+    "seeks_causal_source"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_01",
+    "function_name": "RM_01",
+    "mechanism_shape": "COMPARISON_CONTRAST",
+    "teaching_actions": [
+      "validates_psychological_model",
+      "defines_mechanism_psychologically",
+      "links_lack_of_energy_to_lack_of_emotion"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.65,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_04",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The psychological translation works: psychological model (carbon 12 = emotional energy), defines: mechanism psychologically (not chemically), links: lack of energy to lack of emotion. The student asks technical question (seeking technical explanation), which shows they understand: Carbon 12 = needs technical explanation (causal source). They'll likely accept the psychological translation. Single-turn episode: technical question → psychological translation → complete. Hypothesis: psychological translations lead to compliance in single-turn episodes—testable by tracking whether psychological translations end episodes.",
+  "accumulated_insight": "T1: Student asks technical question ('Could we hear more about what Carbon 12 is? Where does it come from?')—seeking technical explanation via asks for technical definition and seeks causal source. They understand: Carbon 12 = needs technical explanation (causal source). The comparison_contrast mechanism validates: psychological model (carbon 12 = emotional energy), defines: mechanism psychologically (not chemically), links: lack of energy to lack of emotion. Pattern: technical question → psychological translation → [complete]. Low confidence because psychological translations can lead to deeper questions or compliance.",
+  "abstract_pattern": "",
+  "visible_response": "Carbon 12 may have many different manifestations... It is probably some energy of the emotional centre.\nBut the\nimportant thing is not the source. What is important is how to bring it... Impressions come in as\nOxygen 48 and can be transformed into Nitrogen 24 only with the help of Carbon 12, \nbut it happens that exactly at the place where impressions can be assimilated there is\nno Carbon 12, or only a little.\nSo we must bring it there by a special effort, and this\neffort is self-remembering and self-observation.\n\nI speak in this language because you asked your question in this language, but it can\nbe observed psychologically.\nImpressions come in and you do not feel them, which\nmeans that they come and do not go on.\nBut you can make an effort to remember\nyourself, and then you begin to notice things... Absence of Carbon 12 at the necessary place means that we are not\nemotional enough.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:sufi-comparative-analysis",
+    "ro:steiner-tantraloka-parallels"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

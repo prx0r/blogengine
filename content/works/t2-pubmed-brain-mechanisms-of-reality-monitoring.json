@@ -1,0 +1,49 @@
+{
+  "work_id": "work:t2-pubmed-brain-mechanisms-of-reality-monitoring",
+  "schema_version": 2,
+  "title": "Brain Mechanisms of Reality Monitoring.",
+  "authors": [
+    {
+      "name": "Simons JS"
+    },
+    {
+      "name": "Garrison JR"
+    },
+    {
+      "name": "Johnson MK"
+    }
+  ],
+  "publication": {
+    "year": 2017,
+    "journal": "Trends Cogn Sci",
+    "source": "PubMed/MEDLINE",
+    "language": "en"
+  },
+  "identifiers": {
+    "pmid": "28462815",
+    "doi": "10.1016/j.tics.2017.03.012"
+  },
+  "topics": [
+    "phase-10-imaginal",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "assets": {
+    "pdf_path": null,
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/28462815/",
+    "abstract": "Reality monitoring processes are necessary for discriminating between internally generated information and information that originated in the outside world. They help us to identify our thoughts, feelings, and imaginations, and to distinguish them from events we may have experienced or have been told about by someone else. Reality monitoring errors range from confusions between real and imagined experiences, that are byproducts of normal cognition, to symptoms of mental illness such as hallucina"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_alt17_acquisition",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 10,
+    "phase_name": "Imaginal",
+    "bridge_rationale": "Bridge paper score=9.5: links Imaginal concept to mechanistic neuroscience"
+  },
+  "evaluation": "Score 9: Good bridge signal",
+  "tier": 2
+}

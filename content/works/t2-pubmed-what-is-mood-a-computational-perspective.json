@@ -1,0 +1,42 @@
+{
+  "work_id": "work:t2-pubmed-what-is-mood-a-computational-perspective",
+  "schema_version": 2,
+  "title": "What is mood? A computational perspective.",
+  "publication": {
+    "year": 2018,
+    "type": "article",
+    "source": "PubMed/MEDLINE",
+    "language": "en",
+    "journal": "Psychol Med"
+  },
+  "identifiers": {
+    "pmid": "29478431",
+    "doi": "10.1017/S0033291718000430"
+  },
+  "topics": [
+    "phase-6-dependent-arising",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "tradition": [
+    "contemporary_science"
+  ],
+  "tier": 2,
+  "assets": {
+    "pdf_path": "t2-pubmed-pmc6340107_What_is_mood_A_computational_perspective.pdf",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/29478431/",
+    "abstract": "The neurobiological understanding of mood, and by extension mood disorders, remains elusive despite decades of research implicating several neuromodulator systems. This review considers a new approach based on existing theories of functional brain organisation. The free energy principle (a.k.a. active inference), and its instantiation in the Bayesian brain, offers a complete and simple formulation of mood. It has been proposed that emotions reflect the precision of - or certainty about - the pre"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_t2_search",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 6,
+    "phase_name": "Dependent Arising",
+    "bridge_rationale": "Dependent arising \u2014 predictive processing, free energy principle, active inference as causal cognition."
+  },
+  "evaluation": "Excellent (score=6.0)"
+}

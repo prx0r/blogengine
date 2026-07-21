@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thumbnail Match Viewer</title>
+<style>
+  :root {
+    --bg: #f5f3ef;
+    --card: #ffffff;
+    --border: #ddd6cb;
+    --text: #1a1a1a;
+    --muted: #7a746e;
+    --accent: #8b6914;
+    --accent-light: #e8d5a3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "EB Garamond", "Georgia", serif;
+    background: var(--bg);
+    color: var(--text);
+    padding: 20px;
+  }
+  h1 {
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 4px;
+  }
+  .subtitle {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 24px;
+    font-style: italic;
+  }
+  .filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .filters input {
+    padding: 6px 12px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 14px;
+    background: white;
+    min-width: 250px;
+  }
+  .filters select {
+    padding: 6px 12px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 14px;
+    background: white;
+  }
+  .count {
+    color: var(--muted);
+    font-size: 13px;
+    margin-left: auto;
+  }
+  .match-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 16px;
+  }
+  .match-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.15s;
+  }
+  .match-card:hover {
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  }
+  .match-header {
+    padding: 10px 14px 6px;
+    border-bottom: 1px solid #eee;
+  }
+  .match-num {
+    font-size: 11px;
+    color: var(--muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+  .match-title {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+  .match-images {
+    display: flex;
+    gap: 2px;
+    background: #eee;
+  }
+  .match-images a {
+    flex: 1;
+    display: block;
+  }
+  .match-images img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.15s;
+  }
+  .match-images img:hover {
+    opacity: 0.85;
+  }
+  .match-footer {
+    padding: 8px 14px 10px;
+    font-size: 11px;
+    color: var(--muted);
+  }
+  .match-footer .score {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  .match-footer .id {
+    font-family: monospace;
+    font-size: 10px;
+  }
+  .match-footer .concepts {
+    margin-top: 2px;
+    color: #999;
+  }
+  .badge {
+    display: inline-block;
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 600;
+    background: var(--accent-light);
+    color: var(--text);
+  }
+  .section-header {
+    margin: 24px 0 12px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--border);
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-header .badge {
+    font-size: 11px;
+  }
+  .loading {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--muted);
+    font-style: italic;
+  }
+  .error {
+    background: #f8e8e8;
+    border: 1px solid #d4a0a0;
+    color: #8b3030;
+    padding: 12px 20px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+  }
+  .nav-links {
+    margin-bottom: 16px;
+    display: flex;
+    gap: 16px;
+  }
+  .nav-links a {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 14px;
+  }
+  .nav-links a:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+  <h1>Thumbnail Matches</h1>
+  <p class="subtitle">Top 2 artworks matched to each of 56 videos — click an image to preview it</p>
+
+  <div class="nav-links">
+    <a href="/thumbnails/editor.html">Open Editor →</a>
+  </div>
+
+  <div class="filters">
+    <input type="text" id="search" placeholder="Search videos..." oninput="filterCards()">
+    <select id="section-filter" onchange="filterCards()">
+      <option value="all">All sections</option>
+      <option value="1-8">Tantraloka (1-8)</option>
+      <option value="9-25">Mixed Traditions (9-25)</option>
+      <option value="26-35">Seth/Esoteric (26-35)</option>
+      <option value="36-51">Daimons/Theurgy (36-51)</option>
+      <option value="52-56">Scholarly (52-56)</option>
+    </select>
+    <span class="count" id="count"></span>
+  </div>
+
+  <div id="container" class="loading">Loading match data...</div>
+
+<script>
+const SECTIONS = [
+  { name: "Tantraloka", range: [1, 8] },
+  { name: "Mixed Traditions", range: [9, 25] },
+  { name: "Seth / Modern Esoteric", range: [26, 35] },
+  { name: "Daimons / Theurgy", range: [36, 51] },
+  { name: "Scholarly Heavyweights", range: [52, 56] },
+];
+
+function serverPath(p) { return ''; }
+
+function buildCard(video) {
+  const card = document.createElement('div');
+  card.className = 'match-card';
+  card.dataset.title = video.title.toLowerCase();
+  card.dataset.num = video.num;
+
+  const header = document.createElement('div');
+  header.className = 'match-header';
+  header.innerHTML = `
+    <div class="match-num">#${video.num}</div>
+    <div class="match-title">${video.title}</div>
+  `;
+  card.appendChild(header);
+
+  const imgContainer = document.createElement('div');
+  imgContainer.className = 'match-images';
+
+  video.matches.forEach((m, i) => {
+    const imgUrl = `/img/${m.id}`;
+    const link = document.createElement('a');
+    link.href = imgUrl;
+    link.target = '_blank';
+    link.title = `${m.id}: ${m.image_title}`;
+    const img = document.createElement('img');
+    img.src = imgUrl;
+    img.alt = m.id;
+    img.onerror = function() {
+      this.parentElement.innerHTML = `<div style="display:flex;align-items:center;justify-content:center;height:140px;background:#f0eee8;color:var(--muted);font-size:11px;text-align:center;padding:8px;">${m.id.replace(/_/g, ' ')}</div>`;
+    };
+    link.appendChild(img);
+    imgContainer.appendChild(link);
+  });
+
+  card.appendChild(imgContainer);
+
+  const footer = document.createElement('div');
+  footer.className = 'match-footer';
+  const scores = video.matches.map(m => `<span class="badge">#${m.rank}: ${m.score}</span>`).join(' ');
+  const ids = video.matches.map(m => `<span class="id">${m.id}</span>`).join(' · ');
+  footer.innerHTML = `
+    <div>${scores} <span class="id" style="float:right">${ids}</span></div>
+    ${video.matches[0].concepts && video.matches[0].concepts.length ? `<div class="concepts">${video.matches[0].concepts.slice(0,3).join(' · ')}</div>` : ''}
+  `;
+  card.appendChild(footer);
+
+  return card;
+}
+
+function serverPath(p) {
+  if (!p) return '';
+  // Use /img/ endpoint which serves by image ID
+  // We don't have the ID here from the path, but we have it from the match
+  return ''; // will be set by the data attribute instead
+}
+
+async function init() {
+  try {
+    const res = await fetch('/api/matches');
+    const matches = await res.json();
+
+    const container = document.getElementById('container');
+    container.className = '';
+    container.innerHTML = '';
+
+    let total = 0;
+    SECTIONS.forEach(section => {
+      const videos = matches.filter(v => v.num >= section.range[0] && v.num <= section.range[1]);
+      if (!videos.length) return;
+
+      const header = document.createElement('div');
+      header.className = 'section-header';
+      header.id = `section-${section.range[0]}`;
+      header.innerHTML = `${section.name} <span class="badge">${section.range[0]}–${section.range[1]}</span>`;
+      container.appendChild(header);
+
+      const grid = document.createElement('div');
+      grid.className = 'match-grid';
+
+      videos.forEach(v => {
+        const card = buildCard(v);
+        grid.appendChild(card);
+        total++;
+      });
+
+      container.appendChild(grid);
+    });
+
+    document.getElementById('count').textContent = `${total} videos`;
+  } catch(e) {
+    document.getElementById('container').className = 'error';
+    document.getElementById('container').innerHTML = `Failed to load: ${e.message}. Make sure the server is running.`;
+  }
+}
+
+function filterCards() {
+  const q = document.getElementById('search').value.toLowerCase();
+  const section = document.getElementById('section-filter').value;
+  const cards = document.querySelectorAll('.match-card');
+
+  let visible = 0;
+  cards.forEach(card => {
+    const title = card.dataset.title || '';
+    const num = parseInt(card.dataset.num) || 0;
+    let show = true;
+
+    if (q && !title.includes(q)) show = false;
+
+    if (section !== 'all') {
+      const [start, end] = section.split('-').map(Number);
+      if (num < start || num > end) show = false;
+    }
+
+    card.style.display = show ? '' : 'none';
+    if (show) visible++;
+  });
+
+  document.getElementById('count').textContent = `${visible} videos`;
+}
+
+init();
+</script>
+</body>
+</html>

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal AV Engine - Textured Flow</title>
+    <!-- Using ES Module Shims for Three.js imports -->
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.150.1/examples/jsm/"
+        }
+    }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body { margin: 0; overflow: hidden; background: #05050a; font-family: 'Inter', sans-serif; color: white; }
+        canvas { display: block; }
+        #controls { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); z-index: 100; display: flex; gap: 1rem; }
+        #debug { position: absolute; top: 1rem; left: 1rem; background: rgba(0,0,0,0.5); backdrop-filter: blur(8px); padding: 1rem; border-radius: 8px; font-size: 0.9rem; border: 1px solid rgba(255,255,255,0.15); line-height: 1.6; }
+        button { background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); color: white; padding: 1rem 2rem; border-radius: 30px; cursor: pointer; font-size: 1rem; font-weight: 500; transition: all 0.2s ease; backdrop-filter: blur(10px); }
+        button:hover { background: rgba(255, 255, 255, 0.2); transform: translateY(-2px); }
+        button:active { transform: translateY(0); }
+    </style>
+</head>
+<body>
+    <!-- Debug panel to show real-time audio analysis values -->
+    <div id="debug">
+        <div>Low: <span id="lowValue">0.00</span></div>
+        <div>Mid: <span id="midValue">0.00</span></div>
+        <div>High: <span id="highValue">0.00</span></div>
+        <div>RMS: <span id="rmsValue">0.00</span></div>
+    </div>
+    <div id="controls">
+        <button id="playButton">▶ Play</button>
+        <button id="changeSongButton">Change Song</button>
+        <button id="changeShapeButton">Change Shape</button>
+    </div>
+
+    <script type="module">
+        // Import necessary Three.js modules
+        import * as THREE from 'three';
+        import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
+        import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
+        import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
+
+        // A simple simplex noise implementation for organic visual effects
+        const SimplexNoise = new function() {
+            const grad3 = [[1,1,0],[-1,1,0],[1,-1,0],[-1,-1,0],[1,0,1],[-1,0,1],[1,0,-1],[-1,0,-1],[0,1,1],[0,-1,1],[0,1,-1],[-1,-1,-1]];
+            const p = new Uint8Array(256);
+            for(let i=0; i<256; i++) p[i] = i;
+            let n;
+            for(let i=255; i>0; i--) { n = Math.floor((i+1)*Math.random()); const t = p[i]; p[i] = p[n]; p[n] = t; }
+            const perm = new Uint8Array(512);
+            for(let i=0; i<512; i++) perm[i] = p[i & 255];
+            this.noise = function(xin, yin, zin) {
+                let n0, n1, n2; let s = (xin+yin+zin) * (1/3);
+                let i = Math.floor(xin+s), j = Math.floor(yin+s), k = Math.floor(zin+s);
+                let t = (i+j+k) * (1/6);
+                let x0 = xin-i+t, y0 = yin-j+t, z0 = zin-k+t;
+                let i1, j1, k1, i2, j2, k2;
+                if(x0>=y0) { if(y0>=z0) { i1=1; j1=0; k1=0; i2=1; j2=1; k2=0; } else if(x0>=z0) { i1=1; j1=0; k1=0; i2=1; j2=0; k2=1; } else { i1=0; j1=0; k1=1; i2=1; j2=0; k2=1; } }
+                else { if(y0<z0) { i1=0; j1=0; k1=1; i2=0; j2=1; k2=1; } else if(x0<z0) { i1=0; j1=1; k1=0; i2=0; j2=1; k2=1; } else { i1=0; j1=1; k1=0; i2=1; j2=1; k2=0; } }
+                let x1 = x0 - i1 + (1/6), y1 = y0 - j1 + (1/6), z1 = z0 - k1 + (1/6);
+                let x2 = x0 - i2 + (2/6), y2 = y0 - j2 + (2/6), z2 = z0 - k2 + (2/6);
+                let ii = i & 255, jj = j & 255, kk = k & 255;
+                let gi0 = perm[ii+perm[jj+perm[kk]]] % 12, gi1 = perm[ii+i1+perm[jj+j1+perm[kk+k1]]] % 12, gi2 = perm[ii+i2+perm[jj+j2+perm[kk+k2]]] % 12;
+                let t0 = 0.6 - x0*x0 - y0*y0 - z0*z0; if(t0<0) n0 = 0; else { t0 *= t0; n0 = t0 * t0 * (grad3[gi0][0]*x0 + grad3[gi0][1]*y0 + grad3[gi0][2]*z0); }
+                let t1 = 0.6 - x1*x1 - y1*y1 - z1*z1; if(t1<0) n1 = 0; else { t1 *= t1; n1 = t1 * t1 * (grad3[gi1][0]*x1 + grad3[gi1][1]*y1 + grad3[gi1][2]*z1); }
+                let t2 = 0.6 - x2*x2 - y2*y2 - z2*z2; if(t2<0) n2 = 0; else { t2 *= t2; n2 = t2 * t2 * (grad3[gi2][0]*x2 + grad3[gi2][1]*y2 + grad3[gi2][2]*z2); }
+                return 32 * (n0 + n1 + n2);
+            };
+        };
+
+        //========================================================================
+        // 1. AUDIO MODULE (Unchanged)
+        //========================================================================
+        const AudioModule = {
+            analyserNode: null, waveformAnalyserNode: null, frequencyData: null, waveformData: null, activeLoops: [],
+            SongLibrary: {
+                'Default Beat': { creator: (self) => { const kick = new Tone.MembraneSynth().toDestination(); const hats = new Tone.MetalSynth({frequency: 250, envelope: {attack:0.001, decay:0.1, release:0.05}}).toDestination(); hats.volume.value = -20; const arp = new Tone.DuoSynth().toDestination(); arp.volume.value = -15; self.activeLoops.push(new Tone.Loop(time => { kick.triggerAttackRelease("C1", "8n", time); }, "4n").start(0)); self.activeLoops.push(new Tone.Loop(time => { hats.triggerAttackRelease("C6", "16n", time); }, "8n").start("8n")); self.activeLoops.push(new Tone.Sequence((time, note) => { arp.triggerAttackRelease(note, "16n", time); }, ["C4", "E4", "G4", "B4"], "16n").start(0)); }},
+                'Ambient Arps': { creator: (self) => { const reverb = new Tone.Reverb(4).toDestination(); const synth = new Tone.FMSynth({ harmonicity: 3.01, modulationIndex: 14, envelope: { attack: 0.2, decay: 0.8, sustain: 0.1, release: 2.5 } }).connect(reverb); synth.volume.value = -10; const bass = new Tone.MonoSynth({ oscillator: { type: 'sine' }, envelope: { attack: 0.1, decay: 0.3, release: 2 } }).toDestination(); bass.volume.value = -8; self.activeLoops.push(new Tone.Sequence((time, note) => { synth.triggerAttackRelease(note, '1n', time); }, [['C3', 'E4'], 'G4', ['B4', 'D5'], 'E5', 'G5'], '1n').start(0)); self.activeLoops.push(new Tone.Loop(time => { bass.triggerAttackRelease('C2', '2n', time); }, '1n').start('0')); }},
+                'Starlight Drone': { creator: (self) => { const pad = new Tone.PolySynth(Tone.AMSynth, { harmonicity: 1.5, envelope: { attack: 4, decay: 0.1, sustain: 1, release: 4 }, modulationEnvelope: { attack: 2, decay: 0.1, sustain: 1, release: 4 } }).toDestination(); pad.volume.value = -12; const bassDrone = new Tone.MonoSynth({ oscillator: {type: 'sine'}, envelope: {attack: 5, release: 5}}).toDestination(); bassDrone.volume.value = -10; self.activeLoops.push(new Tone.Loop(time => { pad.triggerAttackRelease(['C2', 'G2', 'C3'], '8m', time); bassDrone.triggerAttackRelease('C1', '8m', time); }, '8m').start(0)); }},
+                'Minimal Tech': { creator: (self) => { const kick = new Tone.MembraneSynth({ pitchDecay: 0.02, octaves: 6 }).toDestination(); const hihat = new Tone.MetalSynth({ frequency: 400, envelope: {attack: 0.001, decay: 0.05}, harmonicity: 3.1, modulationIndex: 64, resonance: 3000, octaves: 1.5}).toDestination(); hihat.volume.value = -25; const stab = new Tone.Synth({oscillator: {type:'sawtooth'}, envelope: {attack:0.01, decay: 0.2, sustain: 0, release:0.1}}).toDestination(); stab.volume.value = -15; self.activeLoops.push(new Tone.Loop(time => { kick.triggerAttackRelease("C1", "4n", time); }, "4n").start(0)); self.activeLoops.push(new Tone.Loop(time => { hihat.triggerAttackRelease("C6", "8n", time); }, "8n").start("8n")); self.activeLoops.push(new Tone.Sequence((time, note) => { stab.triggerAttackRelease(note, '16n', time); }, [null, 'F4', null, ['C4', 'G3'], null, 'F4', null, 'D4'], '8n').start(0)); }},
+                'Melancholy Piano': { creator: (self) => { const piano = new Tone.PolySynth(Tone.FMSynth, { harmonicity: 3.01, modulationIndex: 14, envelope: { attack: 0.01, decay: 0.8, sustain: 0.1, release: 2.5 } }).toDestination(); piano.volume.value = -6; const melody = new Tone.Synth({oscillator: {type: 'triangle'}}).toDestination(); melody.volume.value = -12; self.activeLoops.push(new Tone.Sequence((time, chord) => { piano.triggerAttackRelease(chord, '2n', time); }, [['A3', 'C4', 'E4'], ['G3', 'B3', 'D4'], ['F3', 'A3', 'C4'], ['E3', 'G3', 'B3']], '2n').start(0)); self.activeLoops.push(new Tone.Sequence((time, note) => { melody.triggerAttackRelease(note, '8n', time); }, ['E5', null, 'D5', 'C5', null, 'B4', null, 'A4'], '4n').start('1n')); }}
+            },
+            initialize() { const audioContext = Tone.getContext().rawContext; this.analyserNode = audioContext.createAnalyser(); this.analyserNode.fftSize = 512; this.analyserNode.smoothingTimeConstant = 0.8; this.frequencyData = new Uint8Array(this.analyserNode.frequencyBinCount); this.waveformAnalyserNode = audioContext.createAnalyser(); this.waveformAnalyserNode.fftSize = 512; this.waveformData = new Uint8Array(this.waveformAnalyserNode.fftSize); Tone.getDestination().connect(this.analyserNode); Tone.getDestination().connect(this.waveformAnalyserNode); },
+            start(songName = 'Default Beat') { this.stop(); const songData = this.SongLibrary[songName]; if (songData && songData.creator) { songData.creator(this); Tone.Transport.bpm.value = 120; Tone.Transport.start(); } else { console.error(`Song "${songName}" not found.`); } },
+            stop() { Tone.Transport.stop(); this.activeLoops.forEach(loop => loop.dispose()); this.activeLoops = []; }
+        };
+
+        //========================================================================
+        // 2. VISUAL MODULE
+        //========================================================================
+        const VisualModule = {
+            scene: null, camera: null, renderer: null,
+            mainMesh: null, particles: null, composer: null, clock: new THREE.Clock(),
+            
+            // Re-introducing the Geometries library for the central shape
+            Geometries: {
+                Sphere: () => new THREE.SphereGeometry(1, 128, 128),
+                TorusKnot: () => new THREE.TorusKnotGeometry(0.8, 0.25, 200, 32),
+                Icosahedron: () => new THREE.IcosahedronGeometry(1.2, 1),
+                Box: () => new THREE.BoxGeometry(1.5, 1.5, 1.5, 10, 10, 10)
+            },
+
+            initialize(container) {
+                this.scene = new THREE.Scene();
+                this.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+                this.camera.position.z = 5;
+                
+                this.renderer = new THREE.WebGLRenderer({ antialias: true });
+                this.renderer.setSize(window.innerWidth, window.innerHeight);
+                this.renderer.setClearColor(0x05050a);
+                container.appendChild(this.renderer.domElement);
+                
+                this.initParticles(); // Initialize the background particle system
+                this.setShape('Sphere'); // Initialize a default central shape
+
+                // Lights and post-processing
+                this.scene.add(new THREE.AmbientLight(0xffffff, 0.2));
+                const pointLight = new THREE.PointLight(0xccddff, 0.8);
+                pointLight.position.set(5, 5, 5);
+                this.scene.add(pointLight);
+
+                const renderPass = new RenderPass(this.scene, this.camera);
+                const bloomPass = new UnrealBloomPass(new THREE.Vector2(window.innerWidth, window.innerHeight), 1.2, 0.6, 0.8);
+                this.composer = new EffectComposer(this.renderer);
+                this.composer.addPass(renderPass);
+                this.composer.addPass(bloomPass);
+
+                window.addEventListener('resize', this.onWindowResize.bind(this));
+            },
+
+            // Method to dynamically set the central shape
+            setShape(shapeName) {
+                if (this.mainMesh) {
+                    this.scene.remove(this.mainMesh);
+                    this.mainMesh.geometry.dispose();
+                    this.mainMesh.material.dispose();
+                }
+                if (this.Geometries[shapeName]) {
+                    const geom = this.Geometries[shapeName]();
+                    geom.setAttribute('originalPosition', geom.attributes.position.clone()); // Store original vertices
+                    const mat = new THREE.MeshStandardMaterial({ color: 0xffffff, emissive: 0x000000, metalness: 0.1, roughness: 0.2, wireframe: true });
+                    this.mainMesh = new THREE.Mesh(geom, mat);
+                    this.scene.add(this.mainMesh);
+                } else {
+                    console.error(`Shape "${shapeName}" not found in Geometries library.`);
+                }
+            },
+
+            initParticles() {
+                const particleCount = 10000;
+                const positions = new Float32Array(particleCount * 3);
+                const velocities = new Float32Array(particleCount * 3);
+                const bound = 12; 
+                for(let i = 0; i < particleCount; i++) {
+                    const i3 = i * 3;
+                    positions[i3] = (Math.random() - 0.5) * bound; positions[i3+1] = (Math.random() - 0.5) * bound; positions[i3+2] = (Math.random() - 0.5) * bound;
+                }
+                const particleGeom = new THREE.BufferGeometry();
+                particleGeom.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+                particleGeom.setAttribute('velocity', new THREE.BufferAttribute(velocities, 3));
+                const particleMat = new THREE.PointsMaterial({ size: 0.015, blending: THREE.AdditiveBlending, transparent: true, depthWrite: false, color: 0xffffff });
+                this.particles = new THREE.Points(particleGeom, particleMat);
+                this.scene.add(this.particles);
+            },
+
+            onWindowResize() {
+                this.camera.aspect = window.innerWidth / window.innerHeight;
+                this.camera.updateProjectionMatrix();
+                this.renderer.setSize(window.innerWidth, window.innerHeight);
+                this.composer.setSize(window.innerWidth, window.innerHeight);
+            },
+            
+            update(params) {
+                const time = this.clock.getElapsedTime();
+
+                // 1. Update central textured mesh
+                if (this.mainMesh && params.mainMesh) {
+                    const pos = this.mainMesh.geometry.attributes.position;
+                    const originalPos = this.mainMesh.geometry.attributes.originalPosition;
+                    
+                    for (let i = 0; i < pos.count; i++) {
+                        const p = new THREE.Vector3(originalPos.getX(i), originalPos.getY(i), originalPos.getZ(i));
+                        const noise = SimplexNoise.noise(p.x * params.mainMesh.noise.freq + time, p.y * params.mainMesh.noise.freq + time, p.z * params.mainMesh.noise.freq + time);
+                        p.addScaledVector(p.clone().normalize(), params.mainMesh.noise.amp * noise);
+                        pos.setXYZ(i, p.x, p.y, p.z);
+                    }
+                    pos.needsUpdate = true;
+                    this.mainMesh.geometry.computeVertexNormals();
+
+                    this.mainMesh.material.color.setHSL(params.mainMesh.color.h, params.mainMesh.color.s, params.mainMesh.color.l);
+                    this.mainMesh.material.emissive.setHSL(params.mainMesh.color.h, params.mainMesh.color.s, params.mainMesh.emissive);
+                    this.mainMesh.rotation.x += params.mainMesh.rotation.x;
+                    this.mainMesh.rotation.y += params.mainMesh.rotation.y;
+                }
+                
+                // 2. Update particle flow field
+                if (this.particles && params.flowField) {
+                    const flowTime = time * params.flowField.timeScale;
+                    const positions = this.particles.geometry.attributes.position;
+                    const velocities = this.particles.geometry.attributes.velocity;
+                    const ns = params.flowField.noiseScale;
+                    const forceStrength = params.flowField.force;
+                    const bound = 12; 
+
+                    for(let i = 0; i < positions.count; i++) {
+                        const i3 = i * 3;
+                        const p = new THREE.Vector3(positions.array[i3], positions.array[i3+1], positions.array[i3+2]);
+                        const force = new THREE.Vector3(SimplexNoise.noise(p.x*ns, p.y*ns, flowTime), SimplexNoise.noise(p.y*ns, p.z*ns, flowTime), SimplexNoise.noise(p.z*ns, p.x*ns, flowTime));
+                        force.multiplyScalar(forceStrength);
+                        velocities.array[i3] += force.x; velocities.array[i3+1] += force.y; velocities.array[i3+2] += force.z;
+                        positions.array[i3] += velocities.array[i3]; positions.array[i3+1] += velocities.array[i3+1]; positions.array[i3+2] += velocities.array[i3+2];
+                        velocities.array[i3] *= params.flowField.damping; velocities.array[i3+1] *= params.flowField.damping; velocities.array[i3+2] *= params.flowField.damping;
+                        if (positions.array[i3] > bound) positions.array[i3] = -bound; if (positions.array[i3] < -bound) positions.array[i3] = bound;
+                        if (positions.array[i3+1] > bound) positions.array[i3+1] = -bound; if (positions.array[i3+1] < -bound) positions.array[i3+1] = bound;
+                        if (positions.array[i3+2] > bound) positions.array[i3+2] = -bound; if (positions.array[i3+2] < -bound) positions.array[i3+2] = bound;
+                    }
+                    positions.needsUpdate = true;
+                    this.particles.material.color.setHSL(params.particles.color.h, params.particles.color.s, params.particles.color.l);
+                    this.particles.material.opacity = params.particles.opacity;
+                    this.particles.material.size = params.particles.size;
+                }
+                
+                // 3. Update camera
+                this.camera.position.z += (params.camera.zoom - this.camera.position.z) * 0.05;
+                this.camera.lookAt(this.scene.position);
+            },
+
+            render() { this.composer.render(); }
+        };
+
+        //========================================================================
+        // 3. UNIVERSAL AV ENGINE
+        //========================================================================
+        const UniversalAVEngine = {
+            isAudioPlaying: false,
+            currentSongIndex: 0,
+            currentShapeIndex: 0,
+            songList: [],
+            shapeList: [],
+            audioFeatures: { low: 0, mid: 0, high: 0, rms: 0 },
+            visualParams: {},
+
+            // Combined mapping config for both the central mesh and the particle field
+            mappingConfig: {
+                 mainMesh: {
+                    noise: {
+                        amp: (f) => 0.1 + f.mid * 0.8,
+                        freq: (f) => 2.0 + f.high * 3.0
+                    },
+                    color: {
+                        h: (f) => 0.6 + f.rms * 0.2,
+                        s: (f) => 0.8,
+                        l: (f) => 0.3 + f.mid * 0.3
+                    },
+                    emissive: (f) => f.high * 0.2,
+                    rotation: {
+                        x: (f) => f.rms * 0.0005,
+                        y: (f) => f.rms * 0.001
+                    }
+                },
+                flowField: {
+                    timeScale:  (f) => 0.05 + f.rms * 0.2,
+                    noiseScale: (f) => 0.2 + f.mid * 1.5,
+                    force:      (f) => 0.0001 + f.low * 0.0004,
+                    damping:    0.98,
+                },
+                particles: {
+                    color: {
+                        h: (f) => 0.55 + f.rms * 0.3,
+                        s: (f) => 0.7 + f.high * 0.3,
+                        l: (f) => 0.4 + f.rms * 0.3,
+                    },
+                    size:       (f) => 0.01 + f.low * 0.05,
+                    opacity:    (f) => 0.1 + f.rms * 0.5,
+                },
+                camera: {
+                    zoom:       (f) => 6 - f.low * 3,
+                }
+            },
+            
+            initialize(audio, visuals, container) {
+                this.audio = audio;
+                this.visuals = visuals;
+                this.songList = Object.keys(this.audio.SongLibrary);
+                this.shapeList = Object.keys(this.visuals.Geometries);
+                this.audio.initialize();
+                this.visuals.initialize(container);
+                this.animate();
+            },
+
+            togglePlayback() {
+                if (this.isAudioPlaying) {
+                    this.isAudioPlaying = false;
+                    this.audio.stop();
+                } else {
+                    Tone.start().then(() => {
+                        this.isAudioPlaying = true;
+                        const songName = this.songList[this.currentSongIndex];
+                        this.audio.start(songName);
+                    });
+                }
+            },
+
+            changeSong() {
+                this.currentSongIndex = (this.currentSongIndex + 1) % this.songList.length;
+                if (this.isAudioPlaying) {
+                    this.audio.start(this.songList[this.currentSongIndex]);
+                }
+            },
+
+            changeShape() {
+                this.currentShapeIndex = (this.currentShapeIndex + 1) % this.shapeList.length;
+                this.visuals.setShape(this.shapeList[this.currentShapeIndex]);
+            },
+
+            analyze() {
+                this.audio.analyserNode.getByteFrequencyData(this.audio.frequencyData);
+                const freqData = this.audio.frequencyData; const nyquist = Tone.getContext().rawContext.sampleRate / 2;
+                const getAvg = (start, end) => { const s = Math.round(start / nyquist * freqData.length); const e = Math.round(end / nyquist * freqData.length); let sum = 0; for(let i = s; i < e; i++) sum += freqData[i]; return (sum / (e - s) || 0) / 255.0; };
+                this.audioFeatures.low = getAvg(40, 250); this.audioFeatures.mid = getAvg(250, 4000); this.audioFeatures.high = getAvg(4000, 16000);
+                this.audio.waveformAnalyserNode.getByteTimeDomainData(this.audio.waveformData);
+                let sum = 0; for (let i = 0; i < this.audio.waveformData.length; i++) { const val = (this.audio.waveformData[i] - 128) / 128.0; sum += val * val; }
+                this.audioFeatures.rms = Math.sqrt(sum / this.audio.waveformData.length);
+            },
+            
+            map() {
+                const features = this.audioFeatures;
+                const processMapping = (config) => { const result = {}; for (const key in config) { if (typeof config[key] === 'function') { result[key] = config[key](features); } else if (typeof config[key] === 'object' && config[key] !== null) { result[key] = processMapping(config[key]); } else { result[key] = config[key]; } } return result; };
+                this.visualParams = processMapping(this.mappingConfig);
+            },
+
+            updateDebug() {
+                document.getElementById('lowValue').textContent = this.audioFeatures.low.toFixed(2);
+                document.getElementById('midValue').textContent = this.audioFeatures.mid.toFixed(2);
+                document.getElementById('highValue').textContent = this.audioFeatures.high.toFixed(2);
+                document.getElementById('rmsValue').textContent = this.audioFeatures.rms.toFixed(2);
+            },
+            
+            animate() {
+                requestAnimationFrame(() => this.animate());
+                if (this.isAudioPlaying) {
+                    this.analyze();
+                } else {
+                    this.audioFeatures.low *= 0.95; this.audioFeatures.mid *= 0.95; this.audioFeatures.high *= 0.95; this.audioFeatures.rms *= 0.95;
+                }
+                this.map();
+                this.updateDebug();
+                this.visuals.update(this.visualParams);
+                this.visuals.render();
+            }
+        };
+
+        //========================================================================
+        // INITIALIZATION
+        //========================================================================
+        const engine = UniversalAVEngine;
+        engine.initialize(AudioModule, VisualModule, document.body);
+
+        const playButton = document.getElementById('playButton');
+        const changeSongButton = document.getElementById('changeSongButton');
+        const changeShapeButton = document.getElementById('changeShapeButton');
+
+        playButton.addEventListener('click', () => {
+            engine.togglePlayback();
+            playButton.textContent = engine.isAudioPlaying ? '■ Stop' : '▶ Play';
+        });
+
+        changeSongButton.addEventListener('click', () => { engine.changeSong(); });
+        changeShapeButton.addEventListener('click', () => { engine.changeShape(); });
+
+    </script>
+</body>
+</html>

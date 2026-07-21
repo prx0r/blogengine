@@ -1,0 +1,55 @@
+{
+  "co_id": "co:uno_therapy2_t1740_t1746_denial_de_t2",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy2_t1740_t1746_denial_deed_jennifer",
+  "turn_index": 2,
+  "lineage": "Therapeutic",
+  "student_state": "moral_bargaining",
+  "behavior_tags": [
+    "idealization",
+    "should_statement"
+  ],
+  "pedagogy": {
+    "phase": "META",
+    "function_id": "UNKNOWN",
+    "function_name": "UNKNOWN",
+    "mechanism_shape": "ONTOLOGICAL_SHIFT",
+    "teaching_actions": [
+      "rephrases_question",
+      "exposes_absurdity"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.92,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_06",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "Turn 3: 'But shouldn’t we be able to work things out?'. Student now in moral_bargaining. Continuing with ontological_shift approach. Building on previous turn's foundation.",
+  "accumulated_insight": "T3: Student: 'But shouldn’t we be able to work things out?'. Shift from stubborn_hope to moral_bargaining. Teacher applies ontological_shift mechanism with rephrases question, exposes absurdity. Mid-episode progression in META phase.",
+  "abstract_pattern": "",
+  "visible_response": "Shouldn’t reality be different from what reality is?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

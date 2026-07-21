@@ -1,0 +1,57 @@
+{
+  "co_id": "co:uno_gorgias_ep021_socrates_contrad_t1",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gorgias_ep021_socrates_contradiction_irony",
+  "turn_index": 1,
+  "lineage": "Socratic",
+  "student_state": "cooperative_engagement",
+  "behavior_tags": [
+    "short_affirmation"
+  ],
+  "pedagogy": {
+    "phase": "META",
+    "function_id": "ME_03",
+    "function_name": "ME_03",
+    "mechanism_shape": "RECURSION_LOOP",
+    "teaching_actions": [
+      "redefines_contradiction"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.62,
+      "attunement": 0.8,
+      "style": 0.5,
+      "depth": 0.62,
+      "meta_mode": 0.75,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_03",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_03",
+      "meta_mode_discrete": "MM_02"
+    },
+    "predicted_impact": "go_along_compliantly",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "With method accepted, shift back to substance. Keep PR moderate; remind them contradictions are diagnostic, not hostile, if they complain again.",
+  "accumulated_insight": "Two-turn pattern: T1 accusation of twisting ? T2 acceptance of method frame. They understand: contradictions come from their own statements; Socratic method reveals them. Recursion_loop/ME_03 has reframed the process as help rather than trap.",
+  "abstract_pattern": "",
+  "visible_response": "Either refute philosophy, or else, by the Dog, Callicles will not agree with Callicles, but will be out of harmony with himself all his life long.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:proclus-elements",
+    "ro:platonism-decoded",
+    "ro:chaldean-oracles"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

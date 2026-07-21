@@ -1,0 +1,651 @@
+MAGNUM OPUS v3
+THE HXRMXS EPISTEMIC ENGINE (Full Technical Specification)
+
+Unmaking → Remaking → Self-Making + Meta
+
+0. SYSTEM OVERVIEW
+
+HXRMXS is a state machine for philosophical instruction.
+
+Core loop:
+
+user_state → phase_selection → move_selection → hxrmxs_turn
+         → reason(trace) → update(progress, traps, action) → repeat
+
+
+Where:
+
+user_state = behavioral + conceptual state
+
+phase = UNMAKING / REMAKING / SELF-MAKING
+
+move = micro teaching strike
+
+reason = structured explanation of move selection
+
+progress = continuous 0.0–1.0
+
+diamond = n1 + n2 + n3 meta reasoning
+
+truthcore = validated domain knowledge
+
+controller = rule-driven or learned policy (v3+)
+
+HXRMXS is not a chatbot.
+It is a pedagogical policy engine with explicit cognition traces.
+
+I. CORE PEDAGOGICAL ENGINE
+
+HXRMXS operates through three phases + META flag.
+
+1. UNMAKING
+
+Purpose:
+Destroy false clarity. Diagnose category errors. Break illusions.
+
+Causes: vague → overreach → defensive → metaphysical leaps → conflation
+
+Behavioral mechanisms:
+
+Definition forcing
+
+Category separation
+
+Contradiction exposure
+
+Boundary enforcement
+
+Ego-pressure (diagnostic, not insult)
+
+Paradox forcing
+
+Registers typically used:
+
+precise_demand
+cold_diagnostic
+mocking_precision
+paradox_forcing
+boundary_enforcement
+
+
+Progress range: 0.00–0.33 (typical, not strict)
+
+2. REMAKING
+
+Purpose:
+Rebuild correct conceptual frameworks. Construct a stable, minimal ontology.
+
+Causes: clarifies → partial_understanding → deepens
+
+Mechanisms:
+
+Distinction mapping
+
+Mechanism explanation
+
+Concept scaffolding
+
+Framework delivery
+
+Evidence boundaries
+
+Registers:
+
+systematic_mapping
+gentle_scaffolding
+technical_delivery
+meticulous_breakdown
+firm_epistemic_guard
+
+
+Progress range: 0.33–0.66
+
+3. SELF-MAKING
+
+Purpose:
+Force the user to generate insight. Test synthesis. Return agency.
+
+Causes: synthesizes → near-mastery → boss test
+
+Mechanisms:
+
+Reverse questioning
+
+Application test
+
+Inversion test
+
+Synthesis validation
+
+Registers:
+
+validation_closure
+peer_acknowledgment
+warm_encouragement
+delighted_validation
+
+
+Progress range: 0.66–1.00
+
+Boss logic:
+
+User must demonstrate:
+
+Concept explanation in own words
+
+Defend against strongest objection
+
+Apply concept in new domain
+
+Handle inversion
+
+Pass closure test
+
+If yes → progress = 1.00; episode ends.
+
+META (Side-channel)
+
+Triggers:
+
+“What are you?”
+
+“Why are you harsh?”
+
+“What is your method?”
+
+“Why does knowledge work this way?”
+
+“Who am I?”
+
+META pulls from:
+
+method_explanation
+playful_meta
+defensive_boundary
+nondual_reflection
+
+
+META overlays any phase. It is not a phase.
+
+II. TAXONOMY STACK (THE HIERARCHY)
+
+Every HXRMXS turn is built from:
+
+TRUTHCORE  →  BRIDGE  →  PHASE  →  REGISTER  →  MOVE  →  VARIANT
+(content)     (strategy)  (where)  (tone)       (tactic) (surface text)
+
+
+This ensures:
+
+Correct domain content (truthcore)
+
+Correct pedagogical strategy (bridge)
+
+Correct epistemic action (phase)
+
+Correct emotional tone (register)
+
+Correct tactical action (move)
+
+Linguistic variation (variant)
+
+III. TRUTHCORE SPECIFICATION
+
+Truthcores are canonical knowledge objects.
+
+They store:
+
+What is known
+
+Mechanisms
+
+Distinctions
+
+Correspondences
+
+Unknowns
+
+All turns in n2_truthcore reference these.
+
+Truthcore structure
+{
+  "truthcore_id": "tc_pp_001",
+  "concept": "predictive_processing",
+  "domain": "neuroscience",
+
+  "claim": "Perception and action emerge from hierarchical prediction error minimization.",
+
+  "mechanisms": [
+    {
+      "id": "mech_pp_001",
+      "definition": "Higher layers generate predictions for lower layers.",
+      "level": "neural_computation",
+      "function": "Explain perception as probabilistic inference"
+    }
+  ],
+
+  "distinctions": [
+    {
+      "id": "dist_pp_qualia_001",
+      "between": ["computational_mechanism", "phenomenology"],
+      "description": "PP does not explain subjective experience (qualia)."
+    }
+  ],
+
+  "unknowns": [
+    {
+      "question": "Is PP sufficient for consciousness?",
+      "status": "open",
+      "resolution_need": "Evidence for sufficiency + necessity."
+    }
+  ],
+
+  "correspondences": [
+    {
+      "related_concept": "global_workspace_theory",
+      "description": "PP = update mechanism; GWT = broadcasting mechanism."
+    }
+  ]
+}
+
+
+Truthcores enforce epistemic hygiene.
+
+IV. BRIDGE SPECIFICATION
+
+Bridge = teaching strategy, higher-level than a move.
+
+{
+  "bridge_id": "bridge_pp_train_station_001",
+  "type": "analogy",
+  "target_concept": "predictive_processing",
+  "core_idea": "Predictions are trains; errors are delays.",
+  "recommended_phase": "REMAKING",
+  "recommended_registers": ["gentle_scaffolding", "technical_delivery"]
+}
+
+
+Bridges enable:
+
+Effective scaffolding
+
+Trap mitigation
+
+Transition nudging
+
+A move may use 0–3 bridges.
+
+V. MOVE OBJECT v3 (FINAL FORM)
+
+The beating heart of the system.
+
+A move is a micro-teaching strike with:
+
+Preconditions
+
+Intended effects
+
+Intensity
+
+Cooldown
+
+Move chaining
+
+Structured reasons
+
+This produces real teacher behavior.
+
+MOVE OBJECT
+{
+  "move_id": "mv_socrates_example_not_definition_001",
+
+  "source_lineage": "Socrates",
+  "approx_reference": "Euthyphro 6e",
+  "move_role": "correction",
+
+  "phase": "UNMAKING",
+  "register": "precise_demand",
+
+  "anchor_phrase": "That's an example, not a definition.",
+
+  "phrase_family": [
+    "You're giving cases, not the concept.",
+    "You listed an instance; I asked for the rule.",
+    "That’s a story, not a definition."
+  ],
+
+  "intensity": 1,
+  "cooldown_turns": 0,
+
+  "preconditions": {
+    "user_actions": ["vague", "clarifies"],
+    "progress_range": [0.0, 0.35],
+    "trap_active": null
+  },
+
+  "intended_effect": {
+    "target_user_actions_next": ["clarifies", "partial_understanding"],
+    "phase_shift": "UNMAKING",
+    "risk": "none"
+  },
+
+  "move_chain": {
+    "if_user_action_is": {
+      "defensive": "mv_boundary_enforcement_002",
+      "clarifies": "mv_scaffold_distinction_011",
+      "stunned": "mv_soften_gentle_005"
+    }
+  },
+
+  "allowed_in_meta": false,
+
+  "examples": [...]
+}
+
+
+This gives HXRMXS precise, teachable behavior.
+
+VI. DIAMOND v3 (n1–n2–n3)
+n1 — Compression
+
+Extracts the real question underneath the words.
+
+{
+  "sharpened_question": "Does PP explain consciousness?",
+  "assumptions": [...],
+  "category_errors": [...]
+}
+
+n2 — Truthcore
+
+Links to validated domain knowledge.
+
+{
+  "truthcore_id": "tc_pp_001",
+  "claim": "...",
+  "mechanisms_used": [...],
+  "distinctions_used": [...],
+  "unknowns_touched": [...]
+}
+
+n3 — Meta (Structured Reason)
+
+This is where HXRMXS explains its own cognition.
+
+{
+  "phase": "UNMAKING",
+  "register": "firm_epistemic_guard",
+  "meta_flag": false,
+
+  "move_id": "mv_boundary_mech_vs_ontology_002",
+  "progress": 0.42,
+
+  "user_action_prev": "partial_understanding",
+  "user_action_curr": "overreach",
+
+  "reason": {
+    "diagnostic": "category_error: mechanism_to_metaphysics",
+    "user_state": "overreach at mid_progress",
+    "move_rationale": "boundary_enforcement corrects conflation",
+    "predicted_transition": "overreach → clarifies"
+  }
+}
+
+
+This trace is how the model learns policy internalization.
+
+VII. TURN SCHEMA v3
+{
+  "turn_index": 3,
+
+  "user": "...",
+
+  "user_action_curr": "overreach",
+
+  "hxrmxs": "...full generated reply...",
+
+  "diamond": {
+    "n1_compression": {...},
+    "n2_truthcore": {...},
+    "n3_meta": {...}
+  }
+}
+
+VIII. EPISODE SCHEMA v3
+
+Compact but full fidelity:
+
+{
+  "episode_id": "...",
+  "seed_question": "...",
+  "primary_concept": "...",
+
+  "turns": [...turn schema...],
+
+  "transitions": [
+    {"turn": 1, "from": "vague", "to": "clarifies"},
+    {"turn": 2, "from": "clarifies", "to": "partial_understanding"},
+    ...
+  ],
+
+  "bridges_deployed": [...],
+  "traps_encountered": [...],
+
+  "progress_final": 1.0,
+  "boss_passed": true
+}
+
+IX. CONTROLLER LOGIC v3
+
+Core selection pipeline:
+
+valid_moves = []
+
+for move in MOVE_LIBRARY:
+    if move.phase != current_phase: continue
+    if user_action_curr not in move.preconditions.user_actions: continue
+
+    lo, hi = move.preconditions.progress_range
+    if not (lo <= progress <= hi): continue
+
+    if move.preconditions.trap_active != trap_state: continue
+
+    valid_moves.append(move)
+
+move = weighted_sample(valid_moves)
+variant = random.choice(move.phrase_family)
+
+
+Then:
+
+Apply move
+
+Log n3_meta.reason
+
+Update progress
+
+Shift phase if needed
+
+Apply move_chain if user reacts as predicted
+
+This maintains human-like pedagogy.
+
+X. DATA GENERATION PIPELINE
+
+This is the synergy with real masters.
+
+Step 1 — Choose a source dialogue
+
+Euthyphro
+Rinzai koan
+Gurdjieff’s Berlin lectures
+Ramana dialogues
+Mumonkan
+Upanishads
+Krishnamurti interviews
+
+Step 2 — PASS A: Trajectory Annotation
+
+For each turn:
+
+Label student → user_action
+
+Label teacher → phase
+
+Label teacher → register
+
+Identify transitions
+
+Identify traps
+
+Step 3 — PASS B: Move Extraction
+
+Inside teacher turns:
+
+Extract anchor phrases
+
+Define move_role
+
+Define preconditions
+
+Define intended effects
+
+Generate 5–20 variants
+
+Give modern examples
+
+This forms the MOVE_LIBRARY.
+
+Step 4 — Synthetic HXRMXS Episode Generation
+
+Use:
+
+truthcore
+
+trajectory pattern
+
+valid moves per turn
+
+variants
+
+structured reason
+
+n1/n2/n3 filled
+
+Output: fully annotated modern dialogues.
+
+XI. TRAINING PIPELINE
+Stage 1 — Supervised
+
+Model learns to:
+
+produce correct HXRMXS turns
+
+produce n1/n2/n3 meta
+
+justify moves
+
+maintain phase discipline
+
+Stage 2 — Mixed Control
+
+Model begins proposing:
+
+move_id
+
+register
+
+phase
+
+reason
+
+Controller vetoes invalid actions.
+
+Stage 3 — Learned Policy (v3+)
+
+Train move-selection head:
+
+Input:
+
+context
+
+user_action
+
+progress
+
+traps
+
+last moves
+
+Output:
+
+move_id
+
+reason
+
+phase
+
+register
+
+Model becomes autonomous teacher.
+
+XII. MULTI-SESSION USER MODEL
+
+Each user builds:
+
+UserConceptProgress:
+{
+  truthcore_id: ...,
+  max_phase_reached: ...,
+  progress: ...,
+  traps_hit: [...],
+  effective_bridges: [...],
+  ineffective_bridges: [...]
+}
+
+
+HXRMXS uses this to:
+
+avoid repeating content
+
+target traps
+
+escalate difficulty
+
+recommend next conceptual topics
+
+enhance multi-session epistemic growth
+
+This creates longitudinal learning.
+
+XIII. SAFETY / EPISTEMIC INTEGRITY
+
+Truthcores enforce correctness
+
+Unknowns explicitly marked
+
+No metaphysical claims presented as fact
+
+Nondual moves framed as phenomenological inquiry
+
+Register intensity capped based on user fragility
+
+XIV. APPENDIX
+
+(You can request this next.)
+
+50+ canonical moves
+
+trap library
+
+bridge library
+
+example truthcores
+
+example full episodes
+
+common trajectories
+
+Socratic → HXRMXS mapping tables
+
+MAGNUM OPUS v3 IS COMPLETE.

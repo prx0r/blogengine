@@ -1,0 +1,58 @@
+{
+  "_schema": "video-analytics-v1",
+  "_description": "Tracks video performance per storyboard. YouTube retention data is mapped back to segments using elapsedVideoTimeRatio * duration. Stores frame-level performance for feedback loop.",
+
+  "video_id": "yt-abc123",
+  "storyboard_id": "nanavira-fundamental-structure",
+  "episode_title": "Ñāṇavīra's Fundamental Structure",
+  "series": "the-tetrahedron",
+
+  "youtube": {
+    "youtube_video_id": "dQw4w9WgXcQ",
+    "title": "Ñāṇavīra's Fundamental Structure — The Shape at the Bottom of Experience",
+    "privacy_status": "private",
+    "published_at": null,
+    "duration_iso": "PT14M30S",
+    "duration_sec": 870,
+
+    "views": 0,
+    "likes": 0,
+    "comments": 0,
+    "subscribers_gained": 0,
+    "average_view_duration_sec": 0,
+    "average_view_percentage": 0,
+    "impressions": 0,
+    "impressions_click_through_rate": 0,
+
+    "traffic_sources": {},
+    "demographics": {}
+  },
+
+  "segment_performance": [
+    {
+      "segment_id": "seg-01-hook",
+      "label": "Hook — The Monk Who Found the Shape",
+      "rhetorical_role": "hook",
+      "start_sec": 0,
+      "end_sec": 90,
+      "average_retention": null,
+      "retention_start": null,
+      "retention_end": null,
+      "retention_delta": null,
+      "dropoff_flag": null,
+      "rewatch_signal": null
+    }
+  ],
+
+  "retention_points": [],
+
+  "insights": {
+    "best_rhetorical_role": null,
+    "worst_rhetorical_role": null,
+    "best_concept": null,
+    "highest_dropoff_segment": null,
+    "recommendations": []
+  },
+
+  "last_synced": null
+}

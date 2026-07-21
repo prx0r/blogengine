@@ -1,0 +1,216 @@
+{
+  "ro_id": "ro:literature-gawain",
+  "schema_version": 1,
+  "title": "Sir Gawain and the Green Knight \u2014 The Threshold Encounter",
+  "subtitle": "The Green Knight as the Guardian of the Threshold; the beheading game as tattva-exchange; the three temptations as the three malas",
+  "family": "literature",
+  "status": "draft",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "Sir Gawain and the Green Knight read through the lens of the daimon tradition: the Green Knight as the terrifying aspect of the daimon (Guardian of the Threshold), the beheading game as the exchang...",
+    "scope": "Focuses on the Green Knight as the daimonic threshold-figure, the pentangle as the five pure tattvas, the three temptations as the three malas (\u0101\u1e47ava/m\u0101y\u012bya/k\u0101rma), and the green girdle as the unintegrated shadow.",
+    "traditions": [
+      "tantra",
+      "kashmiri_shaivism",
+      "literature",
+      "daimon"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "gawain-poem",
+      "tier": 1,
+      "label": "Sir Gawain and the Green Knight (anon., c. 1400) \u2014 Tolkien trans. (1975) or Armitage trans. (2007)",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "threshold_encounter",
+        "beheading_game",
+        "five_tattvas"
+      ],
+      "sections_affected": [
+        "analysis"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "gawain-tolkien-essay",
+      "tier": 2,
+      "label": "J.R.R. Tolkien \u2014 'Sir Gawain and the Green Knight' (essay, 1953, in The Monsters and the Critics)",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "structural_analysis",
+        "christian_readings"
+      ],
+      "sections_affected": [
+        "analysis"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "gawain-ace",
+      "tier": 2,
+      "label": "G. Ace \u2014 'The Beheading Game as Initiation'",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "initiatory_readings",
+        "threshold_crossing"
+      ],
+      "sections_affected": [
+        "analysis"
+      ],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "analysis",
+      "subsection": "guardian_of_threshold",
+      "kind": "source",
+      "text": "[The Green Knight's sudden entry at Camelot's New Year feast is the classic daimonic irruption \u2014 the Guardian of the Threshold appearing at the liminal moment of the year's turning. He is the daimon in its terrifying aspect: green as the colour of the chthonic, the holly branch as the sign of the other world. He demands the exchange of blows \u2014 an exchange that mirrors the tattva-level transaction between impure and pure paths.]",
+      "source_ids": [
+        "gawain-poem"
+      ],
+      "topics": [
+        "threshold",
+        "daimon",
+        "terrifying_aspect"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "analysis",
+      "subsection": "tattva_exchange",
+      "kind": "source",
+      "text": "[The beheading game is a precise analogue of tattva-exchange: Gawain's stroke removes the Green Knight's head (the gross body), yet the Knight retrieves it and rides away \u2014 demonstrating that the apparent destruction of the lower tattva-level does not destroy the higher. The year-and-a-day is the time of the impure path; the chapel-audience is the threshold into the pure.]",
+      "source_ids": [
+        "gawain-poem"
+      ],
+      "topics": [
+        "tattvas",
+        "beheading_game",
+        "threshold"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "analysis",
+      "subsection": "three_malas",
+      "kind": "source",
+      "text": "[The three temptations at Bercilak's castle correspond to the three malas: the Lady's offer of her body is \u0101\u1e47ava mala (the contraction of the self into the body); the offer of her wealth and station is m\u0101y\u012bya mala (entanglement in the objective); the offer of the green girdle (life-preserving magic) is k\u0101rma mala (the attachment to result). Gawain accepts the girdle but not the body \u2014 a partial victory that will cost him.]",
+      "source_ids": [
+        "gawain-poem"
+      ],
+      "topics": [
+        "three_malas",
+        "temptation",
+        "partial_initiation"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "analysis",
+      "subsection": "green_girdle",
+      "kind": "source",
+      "text": "[The green girdle is the unintegrated shadow \u2014 the magical talisman Gawain accepts out of fear of death. Its colour matches the Green Knight himself, showing that the daimonic content Gawain failed to integrate has now become an attachment. He wears it after the encounter not as a trophy but as a badge of his incompleteness \u2014 a reminder of the partial nature of his initiation.]",
+      "source_ids": [
+        "gawain-poem"
+      ],
+      "topics": [
+        "shadow",
+        "girdle",
+        "partial_initiation"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "analysis",
+      "subsection": "nick_on_neck",
+      "kind": "source",
+      "text": "[The nick on Gawain's neck \u2014 the wound he receives when he flinches and then accepts the girdle \u2014 is the scar of partial initiation. He passed the test of courage (the beheading) and the test of honesty (his confession at court), but the nick remains. In tantric terms, he reached the threshold of the pure path but could not fully cross it: the scar is the trace of the k\u0101rma mala that still binds him.]",
+      "source_ids": [
+        "gawain-poem"
+      ],
+      "topics": [
+        "scar",
+        "partial_initiation",
+        "karma"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_006",
+      "section": "analysis",
+      "subsection": "pentangle",
+      "kind": "source",
+      "text": "[The pentangle on Gawain's shield \u2014 the 'endless knot' of five fives \u2014 is the map of the five tattvas of the pure path. The poet describes each point as interwoven with the next: 'alle his aferyares were of fyue wyttez' (all his virtues were fivefold). This is the \u015auddha-vidy\u0101 of the Gawain-poet: the five tattvas of the pure path (\u015auddha-vidy\u0101, \u012a\u015bvara, Sada\u015biva, \u015aakti, \u015aiva) mapped onto knightly virtue.]",
+      "source_ids": [
+        "gawain-poem",
+        "gawain-tolkien-essay"
+      ],
+      "topics": [
+        "pentangle",
+        "five_tattvas",
+        "pure_path"
+      ],
+      "status": "placeholder"
+    }
+  ],
+  "coverage": {
+    "analysis": {
+      "status": "good",
+      "sources": [
+        "gawain-poem",
+        "gawain-tolkien-essay",
+        "gawain-ace"
+      ],
+      "passage_count": 6,
+      "estimated_completeness": 0.8,
+      "gaps": [
+        "Primary passages from the poem itself need extraction with Middle English quotations; comparative readings with other threshold-encounter narratives (The Wedding of Sir Gawain, etc.)"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "placeholder",
+      "title": "All passages currently reference the analytical framework rather than primary text",
+      "description": "This RO is currently a meta-index of the interpretive framework. Real passages from the Gawain-poem need extraction as proper kind:source passages.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial RO created for Sir Gawain and the Green Knight as daimon-threshold narrative. Six passages mapped to tantric framework.",
+      "sources_added": [
+        "gawain-poem",
+        "gawain-tolkien-essay",
+        "gawain-ace"
+      ],
+      "passage_count": 6,
+      "status": "draft"
+    }
+  ],
+  "appendices": [],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created in draft state with analytical framework for Gawain as daimon-encounter narrative",
+      "sources_total": 3,
+      "passages_total": 6
+    }
+  ]
+}

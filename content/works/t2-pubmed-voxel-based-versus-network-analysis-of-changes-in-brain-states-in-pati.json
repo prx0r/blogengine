@@ -1,0 +1,59 @@
+{
+  "work_id": "work:t2-pubmed-voxel-based-versus-network-analysis-of-changes-in-brain-states-in-pati",
+  "schema_version": 2,
+  "title": "Voxel-based versus network-analysis of changes in brain states in patients with auditory verbal hallucinations using the Eriksen Flanker task.",
+  "authors": [
+    {
+      "name": "Sand\u00f8y, Lydia Brunvoll"
+    },
+    {
+      "name": "Kazimierczak, Katarzyna"
+    },
+    {
+      "name": "Riemer, Frank"
+    },
+    {
+      "name": "Craven, Alexander R"
+    },
+    {
+      "name": "Ersland, Lars"
+    },
+    {
+      "name": "Lilleskare, Lin"
+    },
+    {
+      "name": "Johnsen, Erik"
+    },
+    {
+      "name": "Hugdahl, Kenneth"
+    },
+    {
+      "name": "Gr\u00fcner, Renate"
+    }
+  ],
+  "identifiers": {
+    "pmid": "40112006",
+    "doi": "10.1371/journal.pone.0319925"
+  },
+  "publication": {
+    "journal": "PloS one",
+    "year": "2025"
+  },
+  "abstract": "The present functional magnetic resonance imaging (fMRI) study investigated neural correlates of switching between task-processing and periods of rest in a conventional ON-OFF block-design in patients with auditory verbal hallucinations (AVHs) and healthy controls. It has been proposed that auditory hallucinations are a failure of top-down control of bottom-up perceptual processes which could be due to aberrant up- and down regulation of brain networks. A version of the Eriksen Flanker task was used to assess cognitive flexibility and conflict control. BOLD fMRI with alternating blocks of task engagement and rest was collected using a 3T MR scanner. The objective of the study was to explore how patients would dynamically modulate relevant brain networks in response to shifting environmental demands, while transitioning from a resting state to active task-processing. Analysis of performance data found significant behavioral effects between the groups, where AVH patients performed the Flanker task significantly less accurately and with longer reaction times (RTs) than the healthy control group, indicating that AVH patients displayed reduced top-down guided conflict control. A network connectivity analysis of the fMRI data showed that both groups recruited similar networks related to task-present and task-absent conditions. However, the controls displayed increased network variability across task-present and task-absent conditions. This would indicate that the controls were better at switching between networks and conditions when demands changed from task-present to task-absent, with the consequence that they would perform the Flanker task better than the AVH patients.",
+  "phase_mapping": {
+    "phase": 13,
+    "phase_name": "Daimon"
+  },
+  "bridge_tags": [
+    "voice-hearing",
+    "inner-speech",
+    "daimon",
+    "auditory-hallucination"
+  ],
+  "evaluation": "Quality pass v3 (score=33) \u2014 High-signal bridge paper for Daimon.",
+  "assets": {
+    "pdf_path": null,
+    "nxml_path": null
+  },
+  "tier": 2
+}

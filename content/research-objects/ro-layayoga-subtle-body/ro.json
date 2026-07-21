@@ -1,0 +1,238 @@
+{
+  "ro_id": "ro:layayoga-subtle-body",
+  "schema_version": 1,
+  "title": "The Sūkṣma Śarīra — Nāḍīs, Cakras, Prāṇa from Layayoga (Goswami)",
+  "subtitle": "The subtle body architecture as expounded in Shyam Sundar Goswami's Layayoga: nāḍī system, sapta-cakras, prāṇa-vāyu theory, and the bindu doctrine",
+  "family": "topic-across-thinkers",
+  "status": "draft",
+  "current_version": "0.2.0",
+  "summary": {
+    "one_line": "A compilation of Goswami's exposition of the sūkṣma śarīra from Layayoga, covering the three nāḍīs, the sapta-cakras across three systems, and the prāṇa-vāyu / bindu framework.",
+    "scope": "Covers the three nāḍīs (iḍā/piṅgalā/suṣumṇā), the sapta-cakras as expounded in the Waidika, Pouranika, and Tantrika systems, the prāṇa-vāyu doctrine, the bindu theory of concentrated consciousness, and the three-channel resonance model from Tantrāloka.",
+    "traditions": [
+      "tantra",
+      "layayoga",
+      "kashmir_shaivism",
+      "yoga"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "layayoga-goswami-chakras",
+      "tier": 1,
+      "label": "Goswami, Shyam Sundar — Layayoga (1980/1999), chapters on the chakra system, pp. 145–200",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": ["sapta_cakras", "nadi_tridanda", "prana_vayu", "bindu_doctrine", "three_chakra_systems"],
+      "sections_affected": ["subtle_body", "cakras", "nadis"],
+      "status": "active"
+    },
+    {
+      "source_id": "tantraloka-v1-nadis",
+      "tier": 1,
+      "label": "Tantrāloka (Dyczkowski trans.), Vol. 1, lines 15734–15753 — three channels and their resonances",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": ["ida_cincini", "pingala_cricket", "sushumna_bell", "resonance_laya"],
+      "sections_affected": ["subtle_body", "nadis"],
+      "status": "active"
+    },
+    {
+      "source_id": "tantraloka-v2-kurma-nadi",
+      "tier": 1,
+      "label": "Tantrāloka (Dyczkowski trans.), Vol. 2, lines 8370–8405 — Kūrma-nāḍī (Channel of the Tortoise) as one of the fourteen vital breaths and sixteen supports",
+      "first_added_in": "0.2.0",
+      "last_reviewed_in": "0.2.0",
+      "contribution": ["kurma_nadi", "tortoise_breath", "sixteen_adhara"],
+      "sections_affected": ["subtle_body", "nadis"],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "subtle_body",
+      "subsection": "nadi_tridanda",
+      "kind": "source",
+      "text": "Of the 10 principal nāḍīs, three are the most important: iḍā, piṅgalā and suṣumṇā. Of the three again, one is the fundamental — suṣumṇā. Nāḍīs are of two kinds: gross (nerves, vessels) and subtle (yoga-nāḍīs). The subtle nāḍīs are non-material prāṇic force-motion lines. In the posterior aspect of mūlādhāra, the three nāḍīs are united; iḍā (white force-motion line) and piṅgalā (red force-motion line) are united with suṣumṇā (fire-like central force-motion line). From Tantrāloka: iḍā resonates with the ciñcinī sound, piṅgalā with the cricket (cīra) sound, and suṣumṇā reverberates like a bell; when the bell-like resonance dies down the Yogin attains the silent, liberated state of Śiva.",
+      "source_ids": ["layayoga-goswami-chakras", "tantraloka-v1-nadis"],
+      "topics": ["nadi_tridanda", "susumna", "ida_pingala", "yoga_nadis"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "subtle_body",
+      "subsection": "sapta_cakras",
+      "kind": "source",
+      "text": "The seven cakras of the Tantrika system: (1) mūlādhāra — perineal region, four red petals, earth region, seat of kuṇḍalinī; (2) svādhiṣṭhāna — genital region, six red petals, water region; (3) maṇipūra — navel region, ten dark petals, fire region; (4) anāhata — heart region, twelve red petals, air region, seat of non-sensory sound (anāhata nāda); (5) viśuddha — neck region, sixteen smoke-coloured petals, void (ākāśa) region; (6) ājñā — eyebrow region, two petals, seat of bindu; (7) sahasrāra — supracerebral point, thousand white petals, seat of Supreme Bindu where concentration develops into samādhi.",
+      "source_ids": ["layayoga-goswami-chakras"],
+      "topics": ["sapta_cakras", "muladhara", "anahata", "ajna", "sahasrara"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "subtle_body",
+      "subsection": "three_chakra_systems",
+      "kind": "source",
+      "text": "Goswami distinguishes three systems of cakras. The Waidika system, preserved in the Upaniṣads, is incomplete due to lost documents; it enumerates fewer cakras and is now less used. The Pouranika system, drawn from the Purāṇas, describes up to twelve centres including mūlādhāra, svādhiṣṭhāna, maṇipūra, hrit-padma, anāhata, viśuddha, tālu, ājñā, śakti, kailāsa, rodhinī, and sahasrāra — with variations across different texts. The Tantrika system is the most complete and widely adopted by layayogis; it standardizes the six cakras + sahasrāra as the canonical seven, with detailed descriptions of petal numbers, colours, bija-mantras, and element regions.",
+      "source_ids": ["layayoga-goswami-chakras"],
+      "topics": ["waidika_system", "pouranika_system", "tantrika_system", "chakra_systems"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "subtle_body",
+      "subsection": "prana_vayu",
+      "kind": "source",
+      "text": "The nāḍīs are the subtle prāṇic force-motion lines created by the operation of the prāṇa-vāyus. The ordinary operation of the prāṇa-vāyus produces two effects: maintaining life in the body by complex activities and supporting mentation. The extraordinary function centralizes force-motions as the suṣumṇā-line. The term 'nāḍī' is derived from 'nāda' = bhraṃśa, meaning radiating motion. Kalicharana, commentator of Ṣaṭcakranirūpaṇa, defines the subtle yoga-nāḍīs as distinct from the gross nervous system — they constitute the 'wireless' system operating without being vehicled by the nerves, while the nervous system is an extension of this nāḍī system into the material field.",
+      "source_ids": ["layayoga-goswami-chakras"],
+      "topics": ["prana_vayu", "nadis", "wireless_system", "nervous_extension"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "subtle_body",
+      "subsection": "bindu_doctrine",
+      "kind": "source",
+      "text": "Bindu is the supremely concentrated power-point of consciousness. The inner nature of the mind is to tend towards bindu, though in diversified mental states the towards-bindu-motion operates only fragmentarily. From bindu to matter, the flow of power descends; in samādhi, consciousness reaches the bindu state — the point where Supreme Power expresses its specific powerfulness and prāṇa in the form of bindu becomes patent. The sahasrāra is the seat of Supreme Bindu. The three bindus (power-points) — nāda, bindu, bija — are the structural units of mantra; nāda is the centre of prāṇic force, bindu is the conscious form, bija is sound-specificality.",
+      "source_ids": ["layayoga-goswami-chakras"],
+      "topics": ["bindu", "power_point", "concentration", "mantra_structure"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_006",
+      "section": "subtle_body",
+      "subsection": "hrit_chakra_sun_moon_fire",
+      "kind": "source",
+      "text": "The hrit chakra (eight-petalled lotus in the heart region) is a centre of special importance. In its pericarp are the sun, moon and fire, and a gemmed seat. The lotus is delicate, beautiful, red like the morning sun, bearing eight forms of superpower on its petals. The three nāḍīs (suṣumṇā, iḍā, piṅgalā) are united in the heart where lies a sixteen-petalled chakra that is the seat for concentration and mantra-japa. The prāṇa-vāyus are also located here. It is a sacred place for spiritual concentration (Lingapurāṇa, 1.86.62-64).",
+      "source_ids": ["layayoga-goswami-chakras"],
+      "topics": ["hrit_chakra", "sun_moon_fire", "heart_centre", "concentration_seat"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_007",
+      "section": "subtle_body",
+      "subsection": "susumna_and_brahma_nadi",
+      "kind": "source",
+      "text": "Within the suṣumṇā is the brahma-nāḍī, the innermost channel. When iḍā and piṅgalā flows become still, the suṣumṇā flow starts and kuṇḍalinī is aroused. The suṣumṇā is the central force-motion line; its end point is the brahmarandhra, beyond which lies the sahasrāra. Those who enter the brahmarandhra attain the highest spiritual state (Yogashikhopaniṣad, 6.30-34). The suṣumṇā is said to be like the stalk of a lotus, with the six cakras as nodes along its length. The three nāḍīs — iḍā, piṅgalā, and suṣumṇā — are the primary force-channels through which prāṇic energy flows, and their regulation is the foundation of prāṇāyāma and kuṇḍalinī-yoga.",
+      "source_ids": ["layayoga-goswami-chakras"],
+      "topics": ["susumna", "brahma_nadi", "brahmarandhra", "force_motion"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_008",
+      "section": "subtle_body",
+      "subsection": "tantraloka_channel_resonance",
+      "kind": "source",
+      "text": "Tantrāloka describes the three channels through their sonic signatures. Iḍā, on the left, resonates with the ciñcinī sound, which is insentient (prākṛta) and coarse (sthūla). Piṅgalā, to the right of suṣumṇā, resonates with the sound of the cricket (cīra); it is conscious (pauruṣa) and subtle. Suṣumṇā, the central channel, reverberates like a bell; its resonance is supreme. When the bell-like resonance dies down, the Yogin attains the unsupported, unlocated state — liberation. 'At the end of the resonances of the voices of Ciñcinī and the cricket respectively, the Yogin is unsupported and unlocated' (Dīkṣottara 2/20ab-24ab, cited in Tantrāloka v1 lines 15734-15753). These inner sounds belong to the standard lists of ten nāda-sounds heard by yogis.",
+      "source_ids": ["tantraloka-v1-nadis"],
+      "topics": ["channel_resonance", "cincini", "inner_sound", "nada", "liberation"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_009",
+      "section": "subtle_body",
+      "subsection": "cakra_petal_colors_and_bijas",
+      "kind": "source",
+      "text": "The Tantrika system cakras are described with precise petal colours, Mātṛkā letters, and bīja-mantras. The mūlādhāra chakra (perineal region) has four petals of red colour, on which are the four Mātṛkā-letters 'Wang' to 'Sang' of yellow colour; the earth-region is a square of yellow colour, and the earth bīja 'Lang' (also yellow) resides in the square region. The svādhiṣṭhāna (genital region) has six petals of red colour, on which are the six letters 'Bang' to 'Lang' of the lustre of a diamond; the water-region is half-moon-shaped and white, containing 'Wang'-bīja of white colour. The maṇipūra (navel region) has ten petals of dark or black colour, on which are the ten letters 'Dang' to 'Phang' of lightning colour; the fire-region is triangular and red, containing the red 'Rang'-bīja. The anāhata (heart region) has twelve petals of red colour, on which are the twelve letters 'Kang' to 'Thang'; the air-region is circular and smoke-coloured, containing the smoke-coloured 'Yang'-bīja. The viśuddha (neck region) has sixteen petals of smoke-colour, on which are the sixteen letters 'Ang' to 'Ah' which are lustrous; the void-region is circular and white (or transparent), containing the white 'Hang'-bīja. The ājñā (eyebrow region) has two petals like lightning (also mentioned as red), on which are the letters 'Hang' and 'Kshang'. The sahasrāra (supracerebral point) has 1000 petals which are white in colour and is the seat of Supreme Bindu (Layayoga, The Chakra System, based on Purāṇic and Tantric sources).",
+      "source_ids": ["layayoga-goswami-chakras"],
+      "topics": ["cakra_petals", "bijamantras", "matrika_letters", "muladhara", "swadhishthana", "manipura", "anahata", "wishuddha", "ajna", "sahasrara"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_010",
+      "section": "subtle_body",
+      "subsection": "nadishuddhi_effects",
+      "kind": "source",
+      "text": "The purification of the nāḍīs (nāḍīśuddhi) accomplished through breath-control produces specific observable signs. As the Shāndilyopaniṣad states: 'When breath-control is accomplished, certain signs appear. It is said: \"Thence the yogi's body becomes free from excessive fat and disease, eyes bright, countenance cheerful, sexual urge well-controlled and energy increased\"' (Shāndilyopaniṣad, 1.7.13:6, cited at Layayoga, p. 52). This nāḍī-purification is the foundation upon which all higher yogic practices depend.",
+      "source_ids": ["layayoga-goswami-chakras"],
+      "topics": ["nadishuddhi", "purification", "pranayama_effects"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_011",
+      "section": "subtle_body",
+      "subsection": "three_bandhas",
+      "kind": "source",
+      "text": "During breath-control three forms of muscular control (bandhas) are adopted in conjunction with prāṇāyāma. They are mūlabandha (anal-lock), udḍīyāna (abdomino-retraction) and jālandhara (chin-lock). The Yogakuṇḍalyupaniṣad (1.40-41) states: 'During the four forms of breath-suspension, the three forms of control should be executed; they are anal-lock, abdomino-retraction and chin-lock.' These bandhas regulate the flow of prāṇa and apāna, redirecting the prāṇic forces into the suṣumṇā for the arousal of Kuṇḍalinī (Layayoga, p. 51).",
+      "source_ids": ["layayoga-goswami-chakras"],
+      "topics": ["bandhas", "mulabandha", "uddiyana", "jalandhara", "pranayama"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_012",
+      "section": "subtle_body",
+      "subsection": "hrit_padma",
+      "kind": "source",
+      "text": "The hrit-padma (heart lotus) is a chakra of special importance in the Pouranika system, situated at an intrathoracispinal point below anāhata and above maṇipūra. It has eight petals which are white in colour. Prāṇic forces are located here, and it is described as a sacred place for spiritual concentration (Lingapurāṇa, 1.86.62-64). The hridaya (hrit) is like a lotus, which ordinarily lies with its head downwards; during concentration, the chakra turns upwards. There is a void in relation to the hrit lotus, within which lies the whole chakra system, including the hrit chakra itself, situated within the suṣumṇā (Layayoga, The Waidika System of Chakras, based on the Narayanopaniṣad and Trishikhibrahmanopaniṣad).",
+      "source_ids": ["layayoga-goswami-chakras"],
+      "topics": ["hrit_padma", "heart_lotus", "hridaya", "concentration_seat"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_013",
+      "section": "subtle_body",
+      "subsection": "kurma_nadi",
+      "kind": "source",
+      "text": "The Kūrma-nāḍī (Channel of the Tortoise) is one of the fourteen forms of the vital breath listed among the Sixteen Ādhāras (Supports) in the Tantric tradition. According to Kṣemarāja's commentary on the Netratantra, the kūrmanāḍī is located at the level of the stomach, between the Heart and the Throat, and is the channel along which the Tortoise Breath travels. This breath causes the eyes to close; pain is associated with this nāḍī, which is why painful tactile sensations are reflected in the stomach, the Channel of the Tortoise, and the throat, causing fainting and the like. According to the Svacchandatantra (7/312), Kūrmanāḍī is located in the knees, and its corresponding form of the vital breath gives rise to anxiety. When a person dies, the residue of this breath in the body makes the limbs of the corpse contract, the joints bend, and it dries out (Tantrāloka, Vol. 2, Dyczkowski trans., commentary ad loc., citing Gorakṣaśataka 34-37).",
+      "source_ids": ["tantraloka-v2-kurma-nadi"],
+      "topics": ["kurma_nadi", "tortoise_channel", "vital_breath", "adhara", "sixteen_supports"],
+      "status": "active"
+    }
+  ],
+  "coverage": {
+    "subtle_body": {
+      "status": "comprehensive",
+      "sources": ["layayoga-goswami-chakras", "tantraloka-v1-nadis", "tantraloka-v2-kurma-nadi"],
+      "passage_count": 13,
+      "estimated_completeness": 0.85,
+      "gaps": ["Detailed mapping of all 72,000 nāḍīs not extracted", "The prāṇa-vāyu fivefold classification needs separate treatment"]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "coverage_gap",
+      "title": "The five prāṇa-vāyus not fully extracted",
+      "description": "Goswami discusses prāṇa, apāna, vyāna, udāna, and samāna vāyus in detail; only the general nāḍī theory is covered here.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial RO created from Layayoga chakra chapters and Tantrāloka channel resonance passage. Eight source passages covering nāḍīs, cakras, three systems, prāṇa-vāyu, bindu doctrine, and the sonic model of the channels.",
+      "sources_added": ["layayoga-goswami-chakras", "tantraloka-v1-nadis"],
+      "passage_count": 8,
+      "status": "draft"
+    },
+    {
+      "version": "0.2.0",
+      "date": "2026-07-14",
+      "type": "update",
+      "summary": "Added 5 new passages: detailed cakra petal colours and bīja-mantras, nāḍī-purification effects from Shāndilyopaniṣad, three bandhas (mūla, uḍḍīyāna, jālandhara), hrit-padma (eight-petalled heart lotus), and the Kūrma-nāḍī from Tantrāloka Vol. 2.",
+      "sources_added": ["tantraloka-v2-kurma-nadi"],
+      "passage_count": 13,
+      "status": "draft"
+    }
+  ],
+  "appendices": [],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created in draft state",
+      "sources_total": 2,
+      "passages_total": 8
+    },
+    {
+      "date": "2026-07-14",
+      "event": "Updated to v0.2.0 — added 5 passages on cakra details, nāḍīśuddhi, bandhas, hrit-padma, and kūrma-nāḍī",
+      "sources_total": 3,
+      "passages_total": 13
+    }
+  ]
+}

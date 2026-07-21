@@ -1,0 +1,223 @@
+{
+  "ro_id": "ro:literature-golden-ass",
+  "schema_version": 1,
+  "title": "The Golden Ass of Apuleius \u2014 The Daimon Appears",
+  "family": "theme",
+  "status": "draft",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "Apuleius' The Golden Ass read as an initiatory novel: the transformation into an ass as Earth tattva dominance, Isis appearing as the daimon, and the mysteries as the systasis.",
+    "scope": "Covers Lucius transformed into an ass as the contracted self (Earth tattva dominance); Isis appearing as the daimon; the procession of Isis as the vision of the pure path; the initiation into the mysteries as the systasis; the ass as the body that must be purified through the work.",
+    "traditions": [
+      "platonism",
+      "hermetica",
+      "isis",
+      "initiation",
+      "roman-religion",
+      "theurgy"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "golden-ass",
+      "tier": 1,
+      "label": "Apuleius \u2014 The Golden Ass (Metamorphoses, c. 158-180 CE)",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "primary_text",
+        "initiation_narrative",
+        "isis_mysteries",
+        "transformation"
+      ],
+      "sections_affected": [
+        "transformation",
+        "isis",
+        "initiation"
+      ],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "transformation",
+      "subsection": "ass_earth_tattva",
+      "kind": "analysis",
+      "text": "[Lucius' transformation into an ass is the contraction of the self into the Earth tattva (p\u1e5bthiv\u012b) \u2014 the densest, most limited mode of consciousness. The ass is the body-mind identified entirely with gross matter: hungry, beaten, driven, unable to speak, reduced to animal awareness. This is the state of the unawakened soul trapped in the lowest tattva, unable to rise through the subtle levels.]",
+      "source_ids": [
+        "golden-ass"
+      ],
+      "topics": [
+        "ass",
+        "earth_tattva",
+        "contraction",
+        "animal_consciousness"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "transformation",
+      "subsection": "curiosity_disaster",
+      "kind": "analysis",
+      "text": "[Lucius' downfall comes from his excessive curiosity (curiositas) about magic \u2014 he wants to transform into a bird but uses the wrong ointment and becomes an ass. This is the warning about approaching the work without proper guidance: the desire for spiritual experience without purification leads to greater entanglement. His aunt Byrrhena's warning and Pamphile's sorcery are the threshold that he crosses incorrectly.]",
+      "source_ids": [
+        "golden-ass"
+      ],
+      "topics": [
+        "curiosity",
+        "disaster",
+        "wrong_use",
+        "pamphile"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "isis",
+      "subsection": "isis_daimon",
+      "kind": "analysis",
+      "text": "[Isis appears to Lucius on the beach at Cenchreae \u2014 the most famous theophany in Latin literature. She is the daimon in its full form: the goddess who comes to the initiate in his moment of utter despair. 'Behold, I am come to you, Lucius, moved by your prayers.' She instructs him directly, gives him the method (the procession, the priest, the initiation). Isis is the daimon as saving grace, the Suddhavidya that descends to lift the soul.]",
+      "source_ids": [
+        "golden-ass"
+      ],
+      "topics": [
+        "isis",
+        "daimon",
+        "theophany",
+        "salvation"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "isis",
+      "subsection": "procession_pure_path",
+      "kind": "analysis",
+      "text": "[The procession of Isis (Book 11) is the vision of the pure path (\u015buddha adhvan) \u2014 the manifestation of the divine order in the world. Lucius sees the sistrum, the golden vessels, the sacred images, the initiates in their linen robes. Each element of the procession is a tattva in its purified form. The priest carrying the sistrum, the light-bearer, the images of the gods \u2014 these are the pure tattvas becoming visible to the prepared soul.]",
+      "source_ids": [
+        "golden-ass"
+      ],
+      "topics": [
+        "procession",
+        "pure_path",
+        "manifestation",
+        "tattvas"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "initiation",
+      "subsection": "mysteries_systasis",
+      "kind": "analysis",
+      "text": "[Lucius' initiation into the mysteries of Isis (Book 11) is the systasis \u2014 the standing-together with the daimon. The formula is given: 'I approached the boundary of death, trod the threshold of Proserpina, was carried through all the elements, and returned.' This is the nekyia, the death-and-rebirth of the initiate. The 'midnight sun' and 'the gods of the underworld and the gods of the upper world' are the totality of the tattvas experienced directly.]",
+      "source_ids": [
+        "golden-ass"
+      ],
+      "topics": [
+        "initiation",
+        "systasis",
+        "death_rebirth",
+        "elements"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_006",
+      "section": "initiation",
+      "subsection": "ass_purified_body",
+      "kind": "analysis",
+      "text": "[Lucius, even after initiation, retains his human form \u2014 but the ass is never fully forgotten. The body that was the instrument of contraction becomes the instrument of service. He becomes a lawyer in Rome, a devotee of Isis and Osiris, and receives a second and third initiation. The ass-body is the gross vehicle that must be purified and dedicated to the work, not rejected. The body is the crucible of transformation.]",
+      "source_ids": [
+        "golden-ass"
+      ],
+      "topics": [
+        "ass",
+        "purification",
+        "body",
+        "service",
+        "integration"
+      ],
+      "status": "placeholder"
+    }
+  ],
+  "coverage": {
+    "transformation": {
+      "status": "good",
+      "sources": [
+        "golden-ass"
+      ],
+      "passage_count": 2,
+      "estimated_completeness": 0.7,
+      "gaps": [
+        "More detailed mapping of ass symbolism to alchemical nigredo needed"
+      ]
+    },
+    "isis": {
+      "status": "good",
+      "sources": [
+        "golden-ass"
+      ],
+      "passage_count": 2,
+      "estimated_completeness": 0.75,
+      "gaps": [
+        "Full translation and analysis of the Isis aretalogy needed"
+      ]
+    },
+    "initiation": {
+      "status": "good",
+      "sources": [
+        "golden-ass"
+      ],
+      "passage_count": 2,
+      "estimated_completeness": 0.7,
+      "gaps": [
+        "Comparison of Apuleian initiation with PGM systasis ritual needed"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "placeholder",
+      "title": "All passages currently referencing analysis framework",
+      "description": "Passages need to be elaborated with primary text citations and book/chapter references.",
+      "status": "open",
+      "created": "2026-07-13",
+      "auto_generated": true
+    },
+    {
+      "id": "issue-002",
+      "type": "coverage_gap",
+      "title": "Missing theological analysis of Isis as universal daimon",
+      "description": "Should integrate Apuleius' own De Deo Socratis for his daimonology alongside the fictional treatment.",
+      "status": "open",
+      "created": "2026-07-13",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-13",
+      "type": "initial",
+      "summary": "Initial RO mapping The Golden Ass as initiatory narrative of daimon contact. 6 passage framework established.",
+      "sources_added": [
+        "golden-ass"
+      ],
+      "passage_count": 6,
+      "status": "draft"
+    }
+  ],
+  "appendices": [],
+  "timeline": [
+    {
+      "date": "2026-07-13",
+      "event": "RO created in draft state as daimon-initiation reading of Apuleius",
+      "sources_total": 1,
+      "passages_total": 6
+    }
+  ]
+}

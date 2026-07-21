@@ -1,0 +1,42 @@
+{
+  "work_id": "work:t2-pubmed-prediction-and-perception-insights-for-and-from-tinnitus",
+  "schema_version": 2,
+  "title": "Prediction and perception: Insights for (and from) tinnitus.",
+  "publication": {
+    "year": 2019,
+    "type": "article",
+    "source": "PubMed/MEDLINE",
+    "language": "en",
+    "journal": "Neurosci Biobehav Rev"
+  },
+  "identifiers": {
+    "pmid": "30998951",
+    "doi": "10.1016/j.neubiorev.2019.04.008"
+  },
+  "topics": [
+    "phase-6-dependent-arising",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "tradition": [
+    "contemporary_science"
+  ],
+  "tier": 2,
+  "assets": {
+    "pdf_path": null,
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/30998951/",
+    "abstract": "More than 150 years have passed since Helmholtz first described perception as a process of unconscious inference about the causes of sensations. His ideas have since inspired a wealth of literature investigating the mechanisms underlying these inferences. In recent years, much of this work has converged on the notion that the brain is a hierarchical generative model of its environment that predicts sensations and updates itself based on prediction errors. Here, we build a case for modeling tinni"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_t2_search",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 6,
+    "phase_name": "Dependent Arising",
+    "bridge_rationale": "Dependent arising — predictive processing, free energy principle, active inference as causal cognition."
+  },
+  "evaluation": "Marginal (score=1.5)"
+}

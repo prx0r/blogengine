@@ -1,0 +1,57 @@
+{
+  "co_id": "co:uno_therapy3_t447_t454_only_you_ca_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3_t447_t454_only_you_can_know_meta",
+  "turn_index": 0,
+  "lineage": "Therapeutic",
+  "student_state": "hopeful_passivity",
+  "behavior_tags": [
+    "dependency",
+    "passive_role"
+  ],
+  "pedagogy": {
+    "phase": "META",
+    "function_id": "UNKNOWN",
+    "function_name": "UNKNOWN",
+    "mechanism_shape": "CONSTRAINT_COLLAPSE",
+    "teaching_actions": [
+      "refuses_role",
+      "defines_epistemology"
+    ],
+    "traps_avoided": [
+      "looking_outward"
+    ],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.35,
+      "depth": 0.15,
+      "meta_mode": 0.75,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_02",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_02"
+    },
+    "predicted_impact": "no_clear_effect",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "'How do I know if I'm making progress?'—they want ME to tell them. Classic external validation seeking. But if I judge, they're dependent on my assessment. The 'Only you can know that' returns authority. They have to look INSIDE for progress markers, not at me for approval. This is harder—requires internal reference point, not external scorecard. Hypothesis: they'll ask HOW to know (seeking method) or resist (insisting I should tell them). Either way, they have to engage with internal experience, not external judgment.",
+  "accumulated_insight": "T1: Student asks: 'How do I know if I'm making progress?'—seeks external validation (teacher to judge progress). Teacher refuses authority role: 'Only you can know that.' This is META_01: hands back authority for self-assessment. Removes teacher as judge, makes student responsible for knowing their own progress. Predicting request_clarification because students typically push back when authority is refused ('but HOW do I know?').",
+  "abstract_pattern": "",
+  "visible_response": "That’s not something I can do.\nOnly you can know if you have an internal emotional problem.",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

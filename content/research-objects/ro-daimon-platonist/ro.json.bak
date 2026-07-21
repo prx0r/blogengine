@@ -1,0 +1,152 @@
+{
+  "ro_id": "ro:daimon-platonist",
+  "schema_version": 1,
+  "title": "The Platonist Daimon: The 300-Year Argument",
+  "subtitle": "Plotinus vs Iamblichus vs Proclus on the nature of the personal daimon",
+  "family": "topic-across-thinkers",
+  "status": "draft",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "The core debate: Plotinus made the daimon the undescended part of the soul. Porphyry said you could bypass it. Iamblichus insisted it was a superior being requiring ritual. Proclus synthesized them...",
+    "scope": "",
+    "traditions": [
+      "general"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "plotinus-enneads-3-4",
+      "tier": 1,
+      "label": "plotinus-enneads-3-4",
+      "status": "active"
+    },
+    {
+      "source_id": "iamblichus-mysteries",
+      "tier": 1,
+      "label": "iamblichus-mysteries",
+      "status": "active"
+    },
+    {
+      "source_id": "proclus-in-tim",
+      "tier": 1,
+      "label": "proclus-in-tim",
+      "status": "active"
+    },
+    {
+      "source_id": "proclus-in-remp",
+      "tier": 1,
+      "label": "proclus-in-remp",
+      "status": "active"
+    },
+    {
+      "source_id": "porphyry-sententiae",
+      "tier": 1,
+      "label": "porphyry-sententiae",
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "plotinus_position",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [],
+      "topics": [],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "porphyry_position",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [],
+      "topics": [],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "iamblichus_response",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [],
+      "topics": [],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "proclus_synthesis",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [],
+      "topics": [],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "the_apopl\u0113r\u014dt\u0113s",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [],
+      "topics": [],
+      "status": "placeholder"
+    }
+  ],
+  "coverage": {
+    "porphyry_position": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    },
+    "plotinus_position": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    },
+    "proclus_synthesis": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    },
+    "the_apopl\u0113r\u014dt\u0113s": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    },
+    "iamblichus_response": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    }
+  },
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-13",
+      "type": "initial",
+      "summary": "Initial draft. 5 sections outlined.",
+      "sources_added": [
+        "plotinus-enneads-3-4",
+        "iamblichus-mysteries",
+        "proclus-in-tim",
+        "proclus-in-remp",
+        "porphyry-sententiae"
+      ],
+      "passage_count": 5,
+      "status": "draft"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-07-13",
+      "event": "RO created",
+      "sources_total": 5,
+      "passages_total": 5
+    }
+  ]
+}

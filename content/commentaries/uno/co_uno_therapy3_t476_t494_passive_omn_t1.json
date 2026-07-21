@@ -1,0 +1,57 @@
+{
+  "co_id": "co:uno_therapy3_t476_t494_passive_omn_t1",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3_t476_t494_passive_omnipotent_transference",
+  "turn_index": 1,
+  "lineage": "Therapeutic",
+  "student_state": "pleading",
+  "behavior_tags": [
+    "magical_thinking",
+    "dependency"
+  ],
+  "pedagogy": {
+    "phase": "META",
+    "function_id": "UNKNOWN",
+    "function_name": "UNKNOWN",
+    "mechanism_shape": "CAUSAL_CHAIN",
+    "teaching_actions": [
+      "refuses_omnipotence",
+      "quantifies_contribution"
+    ],
+    "traps_avoided": [
+      "spiritual_superego"
+    ],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.35,
+      "depth": 0.15,
+      "meta_mode": 0.75,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_02",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_02"
+    },
+    "predicted_impact": "no_clear_effect",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "'But I don't know what to do'—escalating incapacity claim. Teacher's move: ignore 'can't,' ask 'want.' This is brilliant—can't is debatable (maybe you can, maybe you can't) but want is internal (only you know). Asking 'what do you want?' returns authority without arguing about capability. They might say 'I don't know what I want' but that's different from 'I can't.' Watching if they'll name a desire or continue refusing.",
+  "accumulated_insight": "T2: Student escalates 'But I don't know what to do'—claims incapacity to force teacher's hand. Teacher redirects: 'What do you WANT to do?' Shifts from capability (I can't) to desire (I want). This bypasses incapacity claim and goes to will. Predicting go_along_compliantly because want-question harder to refuse than can-question.",
+  "abstract_pattern": "",
+  "visible_response": "No.\nIf I give one hundred percent here and you give one hundred percent, we can have a very good result.\nBut if I give one hundred percent and you can give only twenty percent, we’ll just have a twenty percent result.\n... If twenty percent is all you can give, then a twenty percent result is all we can hope for.",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

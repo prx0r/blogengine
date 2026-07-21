@@ -1,0 +1,145 @@
+{
+  "ro_id": "ro:daimon-shadow",
+  "schema_version": 1,
+  "title": "The Evil Daimon and the Shadow",
+  "subtitle": "Contaminated daimons, the Goetia, and the daimonic shadow in practice",
+  "family": "theme",
+  "status": "dissolved",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "Every tradition acknowledges a shadow daimon \u2014 the 'Evil Daimon' in Agrippa's name calculation, the contaminated daimons in Calcidius, the punishing daimons in Apuleius, and the Goetic spirits of t...",
+    "scope": "",
+    "traditions": [
+      "general"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "psellus-daemonibus",
+      "tier": 1,
+      "label": "psellus-daemonibus",
+      "status": "active"
+    },
+    {
+      "source_id": "calcidius-in-tim",
+      "tier": 1,
+      "label": "calcidius-in-tim",
+      "status": "active"
+    },
+    {
+      "source_id": "apuleius-de-deo-socratis",
+      "tier": 1,
+      "label": "apuleius-de-deo-socratis",
+      "status": "active"
+    },
+    {
+      "source_id": "lemegeton-goetia",
+      "tier": 1,
+      "label": "lemegeton-goetia",
+      "status": "active"
+    },
+    {
+      "source_id": "agrippa-three-books",
+      "tier": 1,
+      "label": "agrippa-three-books",
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "contaminated_daimons",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [],
+      "topics": [],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "the_evil_genius",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [],
+      "topics": [],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "goetic_tradition",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [],
+      "topics": [],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "shadow_in_practice",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [],
+      "topics": [],
+      "status": "placeholder"
+    }
+  ],
+  "coverage": {
+    "the_evil_genius": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    },
+    "goetic_tradition": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    },
+    "contaminated_daimons": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    },
+    "shadow_in_practice": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    }
+  },
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-13",
+      "type": "initial",
+      "summary": "Initial draft. 4 sections outlined.",
+      "sources_added": [
+        "psellus-daemonibus",
+        "calcidius-in-tim",
+        "apuleius-de-deo-socratis",
+        "lemegeton-goetia",
+        "agrippa-three-books"
+      ],
+      "passage_count": 4,
+      "status": "draft"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-07-13",
+      "event": "RO created",
+      "sources_total": 5,
+      "passages_total": 4
+    }
+  ],
+  "notes": "Dissolved into concept:daimon. already stub, link to concept",
+  "outputs": [
+    {
+      "type": "dissolved_into",
+      "parent": "concept:daimon",
+      "date": "2026-07-20"
+    }
+  ]
+}

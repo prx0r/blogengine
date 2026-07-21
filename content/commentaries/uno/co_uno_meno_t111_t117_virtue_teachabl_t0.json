@@ -1,0 +1,57 @@
+{
+  "co_id": "co:uno_meno_t111_t117_virtue_teachabl_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "meno_t111_t117_virtue_teachable_setup",
+  "turn_index": 0,
+  "lineage": "Socratic",
+  "student_state": "genuine_curiosity",
+  "behavior_tags": [
+    "asks_deeper_question"
+  ],
+  "pedagogy": {
+    "phase": "META",
+    "function_id": "ME_02",
+    "function_name": "ME_02",
+    "mechanism_shape": "COMPARISON_CONTRAST",
+    "teaching_actions": [
+      "enforces_sequence"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.62,
+      "attunement": 0.8,
+      "style": 0.5,
+      "depth": 0.62,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_03",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_03",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "meno_t111_t117_virtue_teachable_setup T1: Using comparison_contrast/ME_02 with intensity=PR_03, intimacy=IN_03, attunement=AT_03 on 'Do you not think we have made some'. Response shows pressing deeper; expecting ask_deeper_question next. If not, lower PR and re-anchor the hinge.",
+  "accumulated_insight": "T1: Student says 'Do you not think we have made some progress?'?pressing deeper (genuine_curiosity) via asks_deeper_question. Focus: Do you not think we have made some. The comparison_contrast/ME_02 move applies shift their frame: standard function application. Pattern: ask_deeper_question. Confidence medium.",
+  "abstract_pattern": "",
+  "visible_response": "I would be surprised if we were able to say, since we do not yet know what virtue is.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:proclus-elements",
+    "ro:platonism-decoded",
+    "ro:chaldean-oracles"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

@@ -1,0 +1,61 @@
+{
+  "co_id": "co:uno_gurdjeff1_t315_t332_formatory__t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gurdjeff1_t315_t332_formatory_opposites_identification",
+  "turn_index": 0,
+  "lineage": "Gurdjieffian",
+  "student_state": "intellectually_resistant",
+  "behavior_tags": [
+    "questions_mechanism",
+    "questions_necessity"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_02",
+    "function_name": "RM_02",
+    "mechanism_shape": "CAUSAL_CHAIN",
+    "teaching_actions": [
+      "establishes_causality",
+      "explains_functional_impairment",
+      "defines_system_thinking"
+    ],
+    "traps_avoided": [
+      "category_conflation"
+    ],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.5,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "request_clarification",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The causal explanation works: identification → narrow/defective thought → binds you → cannot think/make deductions → lowers intellectual capacity. The student is intellectually resistant (questions mechanism), which shows they're questioning the necessity. They'll likely ask about epistemological necessity next. Hypothesis: causal explanations trigger epistemological questions—testable by tracking whether causal explanations lead to epistemological inquiries.",
+  "accumulated_insight": "T1: Student questions mechanism ('I cannot see why this is so and why identification should necessarily spoil thinking?')—intellectually resistant via questions mechanism and questions necessity. They're questioning: why identification spoils thinking? The causal_chain mechanism establishes: identification → narrow/defective thought → binds you → cannot think/make deductions → lowers intellectual capacity. Pattern: mechanism question → causal explanation → [next: epistemological question]. Medium confidence because causal explanations typically trigger clarification requests.",
+  "abstract_pattern": "",
+  "visible_response": "Because identification makes thought narrow and defective, it binds you, you\ncannot think, you cannot make deductions.\nIt lowers the standard of man's normal\nintellectual capacity. As to why thinking about the big ideas of the system stops\nidentification, it is because you cannot think about them if you identify with them.\nYour thinking will produce no effect.\nWhen we are studying, trying to understand,\nthis means a new way of thinking.\nThe moment we go back to the old way of\nthinking, we identify.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:sufi-comparative-analysis",
+    "ro:steiner-tantraloka-parallels"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

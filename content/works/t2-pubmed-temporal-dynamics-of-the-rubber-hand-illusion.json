@@ -1,0 +1,52 @@
+{
+  "work_id": "work:t2-pubmed-temporal-dynamics-of-the-rubber-hand-illusion",
+  "schema_version": 2,
+  "title": "Temporal dynamics of the Rubber Hand Illusion.",
+  "authors": [
+    {
+      "name": "Finotti G"
+    },
+    {
+      "name": "Garofalo S"
+    },
+    {
+      "name": "Costantini M"
+    },
+    {
+      "name": "Proffitt DR"
+    }
+  ],
+  "publication": {
+    "year": 2023,
+    "journal": "Sci Rep",
+    "source": "PubMed/MEDLINE",
+    "language": "en"
+  },
+  "identifiers": {
+    "pmid": "37160924",
+    "doi": "10.1038/s41598-023-33747-2"
+  },
+  "topics": [
+    "phase-1-birth-body",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "assets": {
+    "pdf_path": "t2-10170134-temporal-dynamics-of-the-rubber-hand-illusion.pdf",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/37160924/",
+    "abstract": "It is widely accepted that the representation of the body is not fixed and immutable, but rather flexible and constantly updated based on a continuous stream of multisensory information. This mechanism can be very useful to adapt to several situations, but it would not be adaptive if the body representation was too malleable or if it wasn't capable of restoring its integrity after a transient modification. Here we used the Rubber Hand Illusion (RHI) to investigate how quickly the body representa"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_alt17_acquisition",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 1,
+    "phase_name": "Birth/Body",
+    "bridge_rationale": "Bridge paper score=12.5: links Birth/Body concept to mechanistic neuroscience"
+  },
+  "evaluation": "Score 12: Excellent bridge signal",
+  "tier": 2
+}

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergent Consciousness Visualization</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap');
+        
+        :root {
+            --bg-color: #0a0c10;
+            --canvas-bg: #0c0e14;
+            --text-color: #cdd6f4;
+            --label-color: rgba(205, 214, 244, 0.6);
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #canvasContainer {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        canvas {
+            display: block;
+            background-color: var(--canvas-bg);
+        }
+
+        #infoLabel {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: var(--label-color);
+            pointer-events: none;
+            text-shadow: 0 0 5px var(--bg-color);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="canvasContainer">
+        <canvas id="artCanvas"></canvas>
+        <div id="infoLabel">Visualizing: <span>Emergent Consciousness</span></div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- DOM Elements & Contexts ---
+            const mainCanvas = document.getElementById('artCanvas');
+            const mainCtx = mainCanvas.getContext('2d');
+            const drawingCanvas = document.createElement('canvas');
+            const drawingCtx = drawingCanvas.getContext('2d');
+
+            // --- State Management ---
+            let activeDrawers = [];
+            let neurons = [];
+            let clusters = [];
+
+            // --- Utilities ---
+            const rand = (min, max) => Math.random() * (max - min) + min;
+
+            // --- Brain Color Palette ---
+            const BRAIN_PALETTE = {
+                path_hues: [0, 25],
+                neuron_hues: [330, 380], 
+                connection_color: "hsla(340, 100%, 80%, 0.1)",
+            };
+
+            // --- Circular Boundary Logic ---
+            let circularBoundary;
+            function createCircularBoundary(width, height) {
+                const radius = Math.min(width, height) * 0.4; // 40% of the smallest dimension
+                return {
+                    x: width / 2,
+                    y: height / 2,
+                    radius: radius
+                };
+            }
+            
+            function isPointInBoundary(x, y) {
+                if (!circularBoundary) return false;
+                return Math.hypot(x - circularBoundary.x, y - circularBoundary.y) <= circularBoundary.radius;
+            }
+
+            // --- Canvas Setup ---
+            function resizeCanvas() {
+                const w = window.innerWidth; const h = window.innerHeight;
+                mainCanvas.width = w; mainCanvas.height = h;
+                drawingCanvas.width = w; drawingCanvas.height = h;
+                circularBoundary = createCircularBoundary(w, h);
+            }
+            window.addEventListener('resize', resizeCanvas);
+            
+            // --- EEG Data Simulator ---
+            class EEGSimulator {
+                constructor() { this.time = 0; }
+                getNextValue() {
+                    let voltage = 0;
+                    voltage += Math.sin(this.time * 2) * 1.5;
+                    voltage += Math.sin(this.time * 6) * 0.8;
+                    this.time += 0.02; 
+                    return voltage;
+                }
+            }
+            const eegSimulator = new EEGSimulator();
+
+            // --- Neuron Class ---
+            class Neuron {
+                constructor(x, y) {
+                    this.x = x; this.y = y; this.vx = rand(-0.1, 0.1); this.vy = rand(-0.1, 0.1);
+                    this.radius = rand(2, 4);
+                    this.isSynchronized = false;
+                    this.hue = rand(BRAIN_PALETTE.neuron_hues[0], BRAIN_PALETTE.neuron_hues[1]) % 360;
+                    this.nearestNeighbor = null;
+                }
+                update(cluster) {
+                    this.vx += rand(-0.005, 0.005); this.vy += rand(-0.005, 0.005);
+                    this.x += this.vx; this.y += this.vy;
+                    this.vx *= 0.99; this.vy *= 0.99;
+
+                    if (cluster && cluster.length > 1) {
+                         const avgX = cluster.reduce((sum, n) => sum + n.x, 0) / cluster.length;
+                         const avgY = cluster.reduce((sum, n) => sum + n.y, 0) / cluster.length;
+                         this.vx += (avgX - this.x) * 0.0001;
+                         this.vy += (avgY - this.y) * 0.0001;
+                    }
+
+                    // Keep neurons inside the circle
+                    const distFromCenter = Math.hypot(this.x - circularBoundary.x, this.y - circularBoundary.y);
+                    if (distFromCenter > circularBoundary.radius - this.radius) {
+                        const angle = Math.atan2(this.y - circularBoundary.y, this.x - circularBoundary.x);
+                        this.vx -= Math.cos(angle) * 0.1;
+                        this.vy -= Math.sin(angle) * 0.1;
+                    }
+                }
+                draw(ctx, pacemaker) {
+                    let brightness = 75;
+                    let glow = 2;
+                    
+                    if (this.isSynchronized) {
+                        brightness = 75 + 20 * pacemaker.value;
+                        glow = 2 + 12 * pacemaker.value;
+                    }
+                    
+                    const color = `hsl(${this.hue}, 90%, ${brightness}%)`;
+                    ctx.fillStyle = color;
+                    ctx.shadowColor = color;
+                    ctx.shadowBlur = glow;
+                    
+                    ctx.beginPath(); ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2); ctx.fill();
+                }
+            }
+
+            // --- Data-Driven Turtle Drawer ---
+            class NeuroFloraDrawer {
+                constructor(startX, startY, initialHeading) {
+                    this.turtle = { x: startX, y: startY, heading: initialHeading, step: rand(1, 2.5) };
+                    this.lifetime = rand(120, 300); this.age = 0;
+                }
+                get isFinished() { return this.age >= this.lifetime; }
+                drawFrame(ctx, eegValue) {
+                    if (this.isFinished) return;
+                    this.age++; 
+                    this.turtle.heading += eegValue * 0.06; 
+                    
+                    // Nudge back towards center if it leaves the circle
+                    if (!isPointInBoundary(this.turtle.x, this.turtle.y)) {
+                        const angleToCenter = Math.atan2(circularBoundary.y - this.turtle.y, circularBoundary.x - this.turtle.x);
+                        this.turtle.heading += (angleToCenter - this.turtle.heading) * 0.1;
+                    }
+
+                    const hueRange = BRAIN_PALETTE.path_hues[1] - BRAIN_PALETTE.path_hues[0];
+                    const hue = BRAIN_PALETTE.path_hues[0] + (this.age / this.lifetime) * hueRange;
+                    const lightness = 20 + (this.age / this.lifetime) * 20;
+                    
+                    const color = `hsl(${hue}, 40%, ${lightness}%)`;
+                    ctx.strokeStyle = color;
+                    ctx.lineWidth = 0.6;
+                    ctx.shadowColor = color;
+                    ctx.shadowBlur = 4;
+                    
+                    ctx.beginPath(); ctx.moveTo(this.turtle.x, this.turtle.y);
+                    this.turtle.x += this.turtle.step * Math.cos(this.turtle.heading);
+                    this.turtle.y += this.turtle.step * Math.sin(this.turtle.heading);
+                    ctx.lineTo(this.turtle.x, this.turtle.y); ctx.stroke();
+                }
+            }
+            
+            // --- Main Application Logic ---
+            let frameCount = 0;
+            function mainAnimationLoop() {
+                if (mainCanvas.width === 0 || mainCanvas.height === 0) { requestAnimationFrame(mainAnimationLoop); return; }
+                frameCount++;
+                const currentEEGValue = eegSimulator.getNextValue();
+                
+                mainCtx.globalCompositeOperation = 'source-over';
+                mainCtx.fillStyle = 'rgba(10, 12, 20, 0.1)';
+                mainCtx.fillRect(0, 0, mainCanvas.width, mainCanvas.height);
+                
+                drawingCtx.clearRect(0, 0, drawingCanvas.width, drawingCanvas.height);
+                drawingCtx.shadowBlur = 0;
+                
+                activeDrawers = activeDrawers.filter(d => !d.isFinished);
+                activeDrawers.forEach(drawer => drawer.drawFrame(drawingCtx, currentEEGValue));
+                
+                if (activeDrawers.length < 10 && Math.random() < 0.1) {
+                     // Start new pathways from the edge of the circle
+                     const angle = rand(0, Math.PI * 2);
+                     const startX = circularBoundary.x + Math.cos(angle) * circularBoundary.radius;
+                     const startY = circularBoundary.y + Math.sin(angle) * circularBoundary.radius;
+                     // Aim towards the center
+                     const angleToCenter = Math.atan2(circularBoundary.y - startY, circularBoundary.x - startX);
+                     activeDrawers.push(new NeuroFloraDrawer(startX, startY, angleToCenter + rand(-0.5, 0.5)));
+                }
+
+                // --- Optimized Clustering and Drawing ---
+                if (frameCount % 10 === 0) {
+                    clusters = [];
+                    const attractionRadius = 90;
+                    const visited = new Set();
+                    neurons.forEach(n => n.nearestNeighbor = null);
+
+                    for (const neuron of neurons) {
+                        if (visited.has(neuron)) continue;
+                        const currentCluster = new Set();
+                        const queue = [neuron];
+                        visited.add(neuron);
+                        while (queue.length > 0) {
+                            const current = queue.shift();
+                            currentCluster.add(current);
+                            let closest = null; let minDist = Infinity;
+                            for (const other of neurons) {
+                                if (current === other) continue;
+                                const dist = Math.hypot(current.x - other.x, current.y - other.y);
+                                if (dist < minDist) { minDist = dist; closest = other; }
+                                if (!visited.has(other) && dist < attractionRadius) { visited.add(other); queue.push(other); }
+                            }
+                            current.nearestNeighbor = closest;
+                        }
+                        clusters.push(Array.from(currentCluster));
+                    }
+                }
+                
+                const time = Date.now() * 0.0008;
+
+                for (const cluster of clusters) {
+                    const isSynchronized = cluster.length >= 3;
+                    let pacemaker = { value: 0 }; 
+
+                    if (isSynchronized) {
+                        const beatSpeed = 0.7 + cluster.length * 0.04;
+                        pacemaker.value = (1 + Math.sin(time * beatSpeed * Math.PI)) / 2;
+
+                        // Draw Geometric Connections
+                        drawingCtx.beginPath();
+                        for (const neuron of cluster) {
+                            if (neuron.nearestNeighbor) {
+                                drawingCtx.moveTo(neuron.x, neuron.y);
+                                drawingCtx.lineTo(neuron.nearestNeighbor.x, neuron.nearestNeighbor.y);
+                            }
+                        }
+                        drawingCtx.strokeStyle = BRAIN_PALETTE.connection_color;
+                        drawingCtx.lineWidth = 0.4;
+                        drawingCtx.globalAlpha = pacemaker.value * 0.7;
+                        drawingCtx.stroke();
+                        drawingCtx.globalAlpha = 1.0;
+                    }
+                    
+                    cluster.forEach(neuron => {
+                        neuron.isSynchronized = isSynchronized;
+                        neuron.update(cluster);
+                        neuron.draw(drawingCtx, pacemaker);
+                    });
+                }
+                
+                mainCtx.globalCompositeOperation = 'lighter';
+                mainCtx.drawImage(drawingCanvas, 0, 0);
+
+                if (neurons.length < 150 && Math.random() < 0.2) {
+                    const finishedDrawer = activeDrawers.find(d => d.isFinished);
+                    if (finishedDrawer) {
+                        const { x, y } = finishedDrawer.turtle;
+                        if (isPointInBoundary(x, y)) {
+                            neurons.push(new Neuron(x, y));
+                        }
+                        activeDrawers = activeDrawers.filter(d => d !== finishedDrawer);
+                    }
+                }
+                
+                requestAnimationFrame(mainAnimationLoop);
+            }
+
+            // --- Start ---
+            resizeCanvas();
+            mainAnimationLoop();
+        });
+    </script>
+</body>
+</html>

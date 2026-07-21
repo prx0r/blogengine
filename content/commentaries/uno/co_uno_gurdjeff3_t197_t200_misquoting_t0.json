@@ -1,0 +1,62 @@
+{
+  "co_id": "co:uno_gurdjeff3_t197_t200_misquoting_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gurdjeff3_t197_t200_misquoting_conscience",
+  "turn_index": 0,
+  "lineage": "Gurdjieffian",
+  "student_state": "stuck_on_literal_impossibility",
+  "behavior_tags": [
+    "cites_misquote",
+    "expresses_confusion",
+    "questions_feasibility"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_03",
+    "function_name": "RM_03",
+    "mechanism_shape": "COMPARISON_CONTRAST",
+    "teaching_actions": [
+      "corrects_misquote",
+      "refines_conceptual_scope",
+      "provides_functional_definition"
+    ],
+    "traps_avoided": [
+      "conceptual_reification"
+    ],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.62,
+      "attunement": 0.5,
+      "style": 0.65,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_04",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The correction/refinement works: misquote (not 'all emotions at same time'), refines: conceptual scope (conscience = feeling emotions together, not simultaneously), provides: functional definition (conscience = feeling emotions together). The student cites misquote (stuck on literal impossibility), which shows they understand: all emotions at same time = impossible (literal impossibility). They'll likely accept the correction/refinement. Single-turn episode: literal impossibility question → correction/refinement → complete. Hypothesis: literal impossibility corrections lead to compliance in single-turn episodes—testable by tracking whether literal impossibility corrections end episodes.",
+  "accumulated_insight": "T1: Student cites misquote ('You said that conscience is feeling all our emotions at the same time. I cannot quite see how we can feel them all together')—stuck on literal impossibility via cites misquote, expresses confusion and questions feasibility. They understand: all emotions at same time = impossible (literal impossibility). The comparison_contrast mechanism corrects: misquote (not 'all emotions at same time'), refines: conceptual scope (conscience = feeling emotions together, not simultaneously), provides: functional definition (conscience = feeling emotions together). Pattern: literal impossibility question → correction/refinement → [complete]. Low confidence because corrections can lead to deeper questions or compliance.",
+  "abstract_pattern": "",
+  "visible_response": "No, I never said that.\nI said that in a moment of conscience, whether you wish it or\nnot, you will feel all your emotions on the same subject at once.\nBut it is not a\ndefinition of conscience. Conscience can be defined as an emotional feeling of truth\non a given subject.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:sufi-comparative-analysis",
+    "ro:steiner-tantraloka-parallels"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

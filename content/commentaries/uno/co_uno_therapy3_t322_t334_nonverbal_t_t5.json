@@ -1,0 +1,53 @@
+{
+  "co_id": "co:uno_therapy3_t322_t334_nonverbal_t_t5",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3_t322_t334_nonverbal_transference_resistance",
+  "turn_index": 5,
+  "lineage": "Therapeutic",
+  "student_state": "caught_in_logic",
+  "behavior_tags": [
+    "reluctant_admission"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_04",
+    "function_name": "RM_04",
+    "mechanism_shape": "NONE",
+    "teaching_actions": [
+      "demands_quantification"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.35,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_02",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "'Not too involved, I guess'—caught. They judged the hypothetical intern as low-involvement, can't now claim they themselves are high-involvement when displaying same behaviors. But 'not too involved' is still vague. Teacher forces precision: exact percentage. This removes wiggle room. 'Not too involved' could be 70%. But forcing '100, 50, or 20?' makes them quantify the admission. They'll go low (20%) because vague admission is now public, might as well be honest. Then teacher can link percentage to outcome: '20% involvement = 20% result.' Consequence-linking.",
+  "accumulated_insight": "T6: Student admits low involvement: 'Not too involved, I guess'—caught in logic replaces defensive claims. The professional analogy worked: they judged hypothetical intern as low-involvement, implicitly judging self. Teacher forces precision: 'How involved? 100%, 50%, 20%?' Demands quantification, not vague 'not too involved.' This is RM_04: demands quantification to make vague confession precise. Predicting ask_deeper_question because quantification typically leads to further inquiry about consequences.",
+  "abstract_pattern": "",
+  "visible_response": "How involved?\nOne hundred percent, fifty percent, twenty percent?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

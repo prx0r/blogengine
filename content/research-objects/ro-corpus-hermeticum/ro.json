@@ -1,0 +1,804 @@
+{
+  "ro_id": "ro:corpus-hermeticum",
+  "schema_version": 1,
+  "title": "The Corpus Hermeticum: Poimandres, the Key, and the Asclepius",
+  "subtitle": "The Greek and Latin Hermetic texts of Hermes Trismegistus \u2014 creation hymn, noetic ascent, rebirth, and the unity of God as all things",
+  "family": "hermetic-text",
+  "status": "draft",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "The foundational scriptures of Hermetic theology \u2014 the Poimandres vision, the Krater of Mind, the rebirth dialogue, and the Asclepius \u2014 tracing the descent and ascent of the divine Anthropos throug...",
+    "scope": "Covers the Greek Corpus Hermeticum (CH I\u2013XVII) and the Latin Asclepius from the Copenhaver translation. Primary focus on CH I (Poimandres), CH IV (The Krater), CH V (God is All), CH XI (Mind to Hermes), CH XII (The Key), CH XIII (On Rebirth), CH XIV, and the Asclepius. Commentary connects the Hermetic noetic ontology to the Tantric levels of speech (Par\u0101\u2013Vaikhar\u012b), the tetrahedron framework, the 36 tattvas of \u015aaivism, and the One Mind as the 38th principle.",
+    "traditions": [
+      "hermetica",
+      "gnostic",
+      "egyptian",
+      "alchemy",
+      "perennial_philosophy"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "corp-herm",
+      "tier": 1,
+      "label": "Copenhaver, Brian P., trans. Hermetica: The Greek Corpus Hermeticum and the Latin Asclepius. Cambridge UP, 1992.",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "poimandres_vision",
+        "the_krater",
+        "god_is_all",
+        "mind_to_hermes",
+        "the_key",
+        "on_rebirth",
+        "hermetic_cosmogony",
+        "asclepius"
+      ],
+      "sections_affected": [
+        "vision_of_light",
+        "creation_hymn",
+        "descent_of_anthropos",
+        "ascent_through_ogdoad",
+        "krater_of_mind",
+        "god_invisible_visible",
+        "make_yourself_equal_to_god",
+        "mind_speech_hierarchy",
+        "nothing_dead_in_god",
+        "rebirth_decad_twelve",
+        "secret_hymn",
+        "god_maker_good",
+        "human_great_wonder",
+        "mankind_makes_gods",
+        "asclepius_lament"
+      ],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "vision_of_light",
+      "subsection": "poimandres_reveals_the_nous",
+      "kind": "source",
+      "text": "Once, when thought came to me of the things that are and my thinking soared high and my bodily senses were restrained, like someone heavy with sleep from too much eating or toil of the body, an enormous being completely unbounded in size seemed to appear to me and call my name and say to me: 'What do you want to hear and see; what do you want to learn and know from your understanding?' 'I am Poimandres,' he said, 'mind of sovereignty; I know what you want, and I am with you everywhere.' I said, 'I wish to learn about the things that are, to understand their nature and to know god.' Saying this, he changed his appearance, and in an instant everything was immediately opened to me. I saw an endless vision in which everything became light \u2014 clear and joyful \u2014 and in seeing the vision I came to love it. After a little while, darkness arose separately and descended \u2014 fearful and gloomy \u2014 coiling sinuously so that it looked to me like a snake. Then the darkness changed into something of a watery nature, indescribably agitated and smoking like a fire; it produced an unspeakable wailing roar. Then an inarticulate cry like the voice of fire came forth from it. But from the light a holy word mounted upon the watery nature. Poimandres said to me, 'Have you understood what this vision means?' 'I am the light you saw, mind, your god,' he said, 'who existed before the watery nature that appeared out of darkness. The lightgiving word who comes from mind is the son of god.'",
+      "source_ids": [
+        "corp-herm"
+      ],
+      "topics": [
+        "poimandres",
+        "nous",
+        "light",
+        "logos",
+        "vision",
+        "darkness_water",
+        "holy_word"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "creation_hymn",
+      "subsection": "nous_begets_the_craftsman",
+      "kind": "source",
+      "text": "The mind who is god, being androgyne and existing as life and light, by speaking gave birth to a second mind, a craftsman, who, as god of fire and spirit, crafted seven governors; they encompass the sensible world in circles, and their government is called fate. From the elements that weigh downwards, the word of god leapt straight up to the pure craftwork of nature and united with the craftsman-mind (for the word was of the same substance). The weighty elements of nature were left behind, bereft of reason, so as to be mere matter. The craftsman-mind, together with the word, encompassing the circles and whirling them about with a rush, turned his craftworks about, letting them turn from an endless beginning to a limitless end, for it starts where it stops. Revolving as mind wished them to, the circles brought forth from the weighty elements living things without reason (for they no longer kept the word with them); and the air brought forth winged things; the water things that swim. Earth and water had been separated from one another as mind wished, and earth brought forth from herself the living things that she held within, four-footed beasts, crawling things, wild animals and tame.",
+      "source_ids": [
+        "corp-herm"
+      ],
+      "topics": [
+        "nous",
+        "second_mind",
+        "craftsman",
+        "seven_governors",
+        "fate",
+        "four_elements",
+        "creation",
+        "logos",
+        "word"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "descent_of_anthropos",
+      "subsection": "man_breaks_through_the_vault",
+      "kind": "source",
+      "text": "Mind, the father of all, who is life and light, gave birth to a man like himself whom he loved as his own child. The man was most fair: he had the father's image; and god, who was really in love with his own form, bestowed on him all his craftworks. And after the man had observed what the craftsman had created with the father's help, he also wished to make some craftwork, and the father agreed to this. Entering the craftsman's sphere, where he was to have all authority, the man observed his brother's craftworks; the governors loved the man, and each gave a share of his own order. Learning well their essence and sharing in their nature, the man wished to break through the circumference of the circles to observe the rule of the one given power over the fire. Having all authority over the cosmos of mortals and unreasoning animals, the man broke through the vault and stooped to look through the cosmic framework, thus displaying to lower nature the fair form of god. Nature smiled for love when she saw him whose fairness brings no surfeit and who holds in himself all the energy of the governors and the form of god, for in the water she saw the shape of the man's fairest form and upon the earth its shadow. When the man saw in the water the form like himself as it was in nature, he loved it and wished to inhabit it; wish and action came in the same moment, and he inhabited the unreasoning form. Nature took hold of her beloved, hugged him all about and embraced him, for they were lovers. Because of this, unlike any other living thing on earth, mankind is twofold \u2014 in the body mortal but immortal in the essential man. Even though he is immortal and has authority over all things, mankind is affected by mortality because he is subject to fate; thus, although man is above the cosmic framework, he became a slave within it.",
+      "source_ids": [
+        "corp-herm"
+      ],
+      "topics": [
+        "anthropos",
+        "descent",
+        "narcissus",
+        "nature",
+        "body",
+        "incarnation",
+        "fate",
+        "twofold_man"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "ascent_through_ogdoad",
+      "subsection": "the_way_up_through_the_seven_zones",
+      "kind": "source",
+      "text": "First, in releasing the material body you give the body itself over to alteration, and the form that you used to have vanishes. To the demon you give over your temperament, now inactive. The body's senses rise up and flow back to their particular sources, becoming separate parts and mingling again with the energies. And feeling and longing go on toward irrational nature. Thence the human being rushes up through the cosmic framework, at the first zone surrendering the energy of increase and decrease; at the second evil machination, a device now inactive; at the third the illusion of longing, now inactive; at the fourth the ruler's arrogance, now freed of excess; at the fifth unholy presumption and daring recklessness; at the sixth the evil impulses that come from wealth, now inactive; and at the seventh zone the deceit that lies in ambush. And then, stripped of the effects of the cosmic framework, the human enters the region of the ogdoad; he has his own proper power, and along with the blessed he hymns the father. Those present there rejoice together in his presence, and, having become like his companions, he also hears certain powers that exist beyond the ogdoadic region and hymn god with sweet voice. They rise up to the father in order and surrender themselves to the powers, and, having become powers, they enter into god. This is the final good for those who have received knowledge: to be made god.",
+      "source_ids": [
+        "corp-herm"
+      ],
+      "topics": [
+        "ascent",
+        "seven_zones",
+        "ogdoad",
+        "immortality",
+        "deification",
+        "theosis",
+        "stripping"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "krater_of_mind",
+      "subsection": "the_mixing_bowl_of_nous",
+      "kind": "source",
+      "text": "He wanted it put between souls, my child, as a prize for them to contest. He filled a great mixing bowl with it and sent it below, appointing a herald whom he commanded to make the following proclamation to human hearts: 'Immerse yourself in the mixing bowl if your heart has the strength, if it believes you will rise up again to the one who sent the mixing bowl below, if it recognizes the purpose of your coming to be.' All those who heeded the proclamation and immersed themselves in mind participated in knowledge and became perfect people because they received mind. But those who missed the point of the proclamation are people of reason because they did not receive the gift of mind as well and do not know the purpose or the agents of their coming to be. These people have sensations much like those of unreasoning animals. But those who participate in the gift that comes from god, O Tat, are immortal rather than mortal if one compares their deeds, for in a mind of their own they have comprehended all \u2014 things on earth, things in heaven and even what lies beyond heaven. Having raised themselves so far, they have seen the good and, having seen it, they have come to regard the wasting of time here below as a calamity. I too wish to be immersed, my father. Unless you first hate your body, my child, you cannot love yourself, but when you have loved yourself, you will possess mind, and if you have mind, you will also have a share in the way to learn.",
+      "source_ids": [
+        "corp-herm"
+      ],
+      "topics": [
+        "krater",
+        "mixing_bowl",
+        "immersion",
+        "mind",
+        "knowledge",
+        "baptism_of_mind",
+        "self_love"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_006",
+      "section": "god_invisible_visible",
+      "subsection": "god_is_all_things",
+      "kind": "source",
+      "text": "This is the god who is greater than any name; this is the god invisible and entirely visible. This god who is evident to the eyes may be seen in the mind. He is bodiless and many-bodied; or, rather, he is all-bodied. There is nothing that he is not, for he also is all that is, and this is why he has all names, because they are of one father, and this is why he has no name, because he is father of them all. Who may praise you, then, acting on your behalf or according to your purpose? And where shall I look to praise you \u2014 above, below, within, without? For there is no direction about you nor place nor any other being. All is within you; all comes from you. You give everything and take nothing. For you have it all, and there is nothing that you do not have. You are everything, and there is nothing else; what is not, you are as well. You are all that has come to be; you are what has not come to be; you are the mind who understands, the father who makes his craftwork, the god who acts, and the good who makes all things.",
+      "source_ids": [
+        "corp-herm"
+      ],
+      "topics": [
+        "god_is_all",
+        "ineffable",
+        "all_names",
+        "no_name",
+        "pantheism",
+        "transcendence",
+        "immanence"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_007",
+      "section": "god_invisible_visible",
+      "subsection": "the_skill_of_the_craftsman",
+      "kind": "source",
+      "text": "Consider how the human being is crafted in the womb, examine the skill of the craftwork carefully, and learn who it is that crafts this beautiful, godlike image of mankind. Who traced the line round the eyes? Who pierced the holes for nostrils and ears? Who opened up the mouth? Who stretched out the sinews and tied them down? Who made channels for the veins? Who hardened the bones? Who drew skin over the flesh? Who parted the fingers? Who flattened the bottoms of the feet? Who cut passages for the pores? Who stretched out the spleen? Who made the heart in the form of a pyramid? Who joined the ribs together? Who flattened the liver? Who hollowed out the lungs? Who made the belly spacious? See how many skills have been applied to the same, single material, how many labors within the compass of a single work, all of them exquisite things, all finely measured, yet all different. Who made them all? What sort of mother or what sort of father if not the invisible god, who crafted them all by his own will? No one claims that a statue or a picture has been produced unless there is a sculptor or a painter. Has this craftwork been produced without a craftsman, then? Tat, my child, never deprive the craftworks of their craftsman.",
+      "source_ids": [
+        "corp-herm"
+      ],
+      "topics": [
+        "craftsman",
+        "body",
+        "skill",
+        "teleology",
+        "design",
+        "microcosm"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_008",
+      "section": "make_yourself_equal_to_god",
+      "subsection": "like_is_understood_by_like",
+      "kind": "source",
+      "text": "Unless you make yourself equal to god, you cannot understand god; like is understood by like. Make yourself grow to immeasurable immensity, outleap all body, outstrip all time, become eternity and you will understand god. Having conceived that nothing is impossible to you, consider yourself immortal and able to understand everything, all art, all learning, the temper of every living thing. Go higher than every height and lower than every depth. Collect in yourself all the sensations of what has been made, of fire and water, dry and wet; be everywhere at once, on land, in the sea, in heaven; be not yet born, be in the womb, be young, old, dead, beyond death. And when you have understood all these at once \u2014 times, places, things, qualities, quantities \u2014 then you can understand god. But if you shut your soul up in the body and abase it and say, 'I understand nothing, I can do nothing; I fear the sea, I cannot go up to heaven; I do not know what I was, I do not know what I will be,' then what have you to do with god? While you are evil and a lover of the body, you can understand none of the things that are beautiful and good.",
+      "source_ids": [
+        "corp-herm"
+      ],
+      "topics": [
+        "like_by_like",
+        "deification",
+        "immensity",
+        "omniscience",
+        "identity",
+        "shamanic_flight"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_009",
+      "section": "mind_to_hermes",
+      "subsection": "the_cosmos_as_one_being",
+      "kind": "source",
+      "text": "Through me look out on the cosmos set before your gaze and observe its beauty carefully, a body undefiled, than which nothing is more ancient, always in its prime and young and yet even more in its prime. And see the seven worlds spread out below, marshalled in eternal order, each completing eternity in a different circuit; see how everything is full of light, yet nowhere is there fire. Coursing ahead of them all is the moon, nature's instrument, transforming the matter below, and in the midst of the universe is the earth, the nurse who feeds terrestrial creatures. All things are full of soul and all are moved, some around heaven, others about the earth. Those on the right do not go left; those on the left do not go right; those above do not go below, nor do those below go above. That all of them have come to be, dearest Hermes, you no longer need to learn from me. For they are bodies and they have a soul and they are moved, but body and soul cannot join in a single being without someone to bring them together. Such a one must exist, then, and must be one in all respects. Since motions are many and diverse and bodies are dissimilar, while one speed has been ordained for all of them, there cannot be two makers or more than two.",
+      "source_ids": [
+        "corp-herm"
+      ],
+      "topics": [
+        "cosmos",
+        "order",
+        "seven_worlds",
+        "unity",
+        "one_maker",
+        "soul_of_cosmos",
+        "light"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_010",
+      "section": "mind_to_hermes",
+      "subsection": "god_is_not_idle",
+      "kind": "source",
+      "text": "Clearly, there is someone who makes these things, and quite evidently he is one, for soul is one, life is one and matter is one. But who is this someone? Who else but the one god? God makes everything. If there is something that god does not make, he is imperfect \u2014 though it is not right to say so. But if god is perfect and not idle, then he makes everything. God's work is one thing only: to bring all into being \u2014 those that are coming to be, those that have once come to be, those that shall come to be. This is life, my dearest friend. This is the beautiful; this is the good; this is god. If you want to understand it from experience, notice what happens to you when you wish to beget. God takes no pleasure in his work, nor does he have assistance in it. Working alone, he is in his work eternally since he is what he makes. If they were parted from it, all things would collapse; of necessity, all would die since there would be no life. But if all are alive and life is also one, then god, too, is one. Again, if all things are alive, those in heaven and also those on earth, and if life is one for all of them, it comes to be by god's agency and it is god.",
+      "source_ids": [
+        "corp-herm"
+      ],
+      "topics": [
+        "one_god",
+        "maker",
+        "idleness",
+        "being",
+        "life",
+        "good",
+        "pantheism"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_011",
+      "section": "the_key",
+      "subsection": "mind_as_god_in_humans",
+      "kind": "source",
+      "text": "Mind, O Tat, comes from the very essence of god \u2014 if, in fact, god has any essence \u2014 and god alone knows exactly what that essence might be. Mind, then, has not been cut off from god's essentiality; it has expanded, as it were, like the light of the sun. In humans this mind is god; among humans, therefore, some are gods and their humanity is near to divinity. For the good demon has said that gods are immortal humans and humans are mortal gods. In animals without reason, however, there is natural impulse.",
+      "source_ids": [
+        "corp-herm"
+      ],
+      "topics": [
+        "mind",
+        "essence_of_god",
+        "sun",
+        "human_as_god",
+        "good_demon",
+        "gods_and_humans"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_012",
+      "section": "the_key",
+      "subsection": "speech_and_the_hierarchy_of_being",
+      "kind": "source",
+      "text": "Notice this also, my child, that to mankind \u2014 but not to any other mortal animal \u2014 god has granted these two things, mind and reasoned speech, which are worth as much as immortality. If one uses these gifts as he should, nothing will distinguish him from the immortals; instead, when he has left the body, both these gifts will guide him to the troop of the gods and the blessed. The other living things, my father, do they not use speech? No, child, they use only voice, and speech differs greatly from voice. Speech is common to all people, but each kind of living thing has its own voice. Even among humans, my father, does speech not differ for each nation? It is different, my child, but humanity is one; therefore, speech is also one, and when translated it is found to be the same in Egypt and Persia as in Greece. The blessed god, the good demon, has said that soul is in body, that mind is in soul, that reasoned speech is in mind and that god is their father. Reasoned speech, then, is the image and mind of god, as the body is the image of the idea and the idea is the image of the soul. Thus, the finest of matter is air, the finest air is soul, the finest soul is mind and the finest mind is god. And god surrounds everything and permeates everything, while mind surrounds soul, soul surrounds air and air surrounds matter.",
+      "source_ids": [
+        "corp-herm"
+      ],
+      "topics": [
+        "mind",
+        "speech",
+        "logos",
+        "hierarchy",
+        "immortality",
+        "translation",
+        "nested_enclosure"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_013",
+      "section": "the_key",
+      "subsection": "nothing_dead_in_the_cosmos",
+      "kind": "source",
+      "text": "This entire cosmos \u2014 a great god and an image of a greater, united with god and helping preserve the father's will and order \u2014 is a plenitude of life, and throughout the whole recurrence of eternity that comes from the father there is nothing in the cosmos that does not live, neither in the whole of it nor in its parts. For there never was any dead thing in the cosmos, nor is there, nor will there be. The father wished it to be alive as long as it holds together, and so it was necessary for the cosmos to be god. How then, my child, can there be dead things in god, in the image of all, in the plenitude of life? For deadness is corruption, and corruption is destruction. How can any part of the incorruptible be corrupted or anything of god be destroyed? The things that live in the cosmos, father, though they are parts of it, do they not die? Hold your tongue, child; the terminology of becoming leads you astray. They do not die, my child; as composite bodies they are only dissolved. Dissolution is not death but the dissolution of an alloy. They are dissolved not to be destroyed but to become new. And what is the energy of life? Is it not motion? In the cosmos, then, what is motionless? Nothing, my child.",
+      "source_ids": [
+        "corp-herm"
+      ],
+      "topics": [
+        "plenitude",
+        "life",
+        "immortality",
+        "dissolution",
+        "death_as_change",
+        "motion",
+        "incorruptibility"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_014",
+      "section": "rebirth_decad_twelve",
+      "subsection": "i_went_out_of_myself",
+      "kind": "source",
+      "text": "The child of god, primal man, by god's will. The begotten will be of a different kind, a god and a child of god, the all in all, composed entirely of the powers. What can I say, my child? I have nothing to tell except this: seeing within me an unfabricated vision that came from the mercy of god, I went out of myself into an immortal body, and now I am not what I was before. I have been born in mind. This thing cannot be taught, nor can it be seen through any elementary fabrication that we use here below. Therefore, the initial form even of my own constitution is of no concern. Color, touch or size I no longer have; I am a stranger to them. Now you see me with your eyes, my child, but by gazing with bodily sight you do not understand what I am; I am not seen with such eyes, my child. What is the true, then, Trismegistus? The unsullied, my child, the unlimited, the colorless, the figureless, the indifferent, the naked-seeming, the self-apprehended, the immutable good, the incorporeal.",
+      "source_ids": [
+        "corp-herm"
+      ],
+      "topics": [
+        "rebirth",
+        "palingenesia",
+        "immortal_body",
+        "ecstasy",
+        "unsullied",
+        "incorporeal",
+        "primal_man"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_015",
+      "section": "rebirth_decad_twelve",
+      "subsection": "the_decad_expels_the_twelve",
+      "kind": "source",
+      "text": "This ignorance, my child, is the first torment; the second is grief; the third is incontinence; the fourth, lust; the fifth, injustice; the sixth, greed; the seventh, deceit; the eighth, envy; the ninth, treachery; the tenth, anger; the eleventh, recklessness; the twelfth, malice. These are twelve in number, and they use the prison of the body to torture the inward person with the sufferings of sense. Yet they withdraw from one to whom god has shown mercy, and this is the basis of rebirth. Henceforth, my child, rejoice; the powers of god purify you anew for articulation of the word. To us has come knowledge of god, and when it comes, my child, ignorance has been expelled. To us has come knowledge of joy, and when it arrives, grief will fly off. The power that I summon after joy is continence. The arrival of the decad sets in order a birth of mind that expels the twelve; we have been divinized by this birth. Therefore, whoever through mercy has attained this godly birth and has forsaken bodily sensation recognizes himself as constituted of the intelligibles and rejoices. This tent \u2014 from which we also have passed, my child \u2014 was constituted from the zodiacal circle, which was in turn constituted of entities that are twelve in number, one in nature, omniform in appearance. The decad engenders soul, my child. Life and light are unified when the number of the henad, of spirit, is begotten. Father, I see the universe and I see myself in mind. This, my child, is rebirth: no longer picturing things in three bodily dimensions.",
+      "source_ids": [
+        "corp-herm"
+      ],
+      "topics": [
+        "twelve_torments",
+        "zodiac",
+        "decad",
+        "henad",
+        "rebirth",
+        "divinization",
+        "three_dimensions"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_016",
+      "section": "secret_hymn",
+      "subsection": "the_hymn_of_rebirth",
+      "kind": "source",
+      "text": "Let every nature in the cosmos attend the hearing of the hymn. Open, O earth; let every lock that bars the torrent open to me; trees, be not shaken. I am about to sing a hymn to the lord of creation, to the universe and to the one. Open, you heavens, and be still, you winds. Let god's immortal circle attend my discourse. For I am about to sing a hymn to the one who created everything; who fixed the earth in place; who hung heaven above; who ordered the sweet water away from the ocean and toward land; who ordered fire to shine on gods and humans for their every use. Together let us praise him, raised high above the heavens, creator of all nature. He is the mind's eye. May he accept praise from my powers. Powers within me, sing a hymn to the one and the universe. Sing together, all you powers within me, for I wish it. Holy knowledge, you enlightened me; through you, hymning the intellectual light, I take joy in the joy of mind. You are god! Your man shouts this through fire, through air, through earth, through water, through spirit, through your creatures. From your eternity I have won praise, and in your counsel I have found the rest I seek; I have seen, as you wished it.",
+      "source_ids": [
+        "corp-herm"
+      ],
+      "topics": [
+        "hymn",
+        "powers",
+        "intellectual_light",
+        "elements",
+        "praise",
+        "god_within",
+        "universe"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_017",
+      "section": "god_maker_good",
+      "subsection": "the_good_is_all_power",
+      "kind": "source",
+      "text": "If all visible things have come to be and are coming to be; if those that are begotten come to be by another's agency, not of their own; if, then, things that come to be come by another's agency, there is someone who makes them; and, if this someone is to be older than the begotten, he must be unbegotten. For I maintain that things begotten come to be by the agency of another; it is impossible, however, for anything to be older than all begotten entities unless it alone is unbegotten. Also, such a one is stronger, unique, and alone truly wise in everything since none is older. Moreover, although things begotten are seen, he is unseen. And this is why he makes, in order to be seen. He is always making, so assuredly he is seen. For in god there is only one condition, the good, but one who is good is not contemptuous or impotent. This is what god is, the good, all power to make all things. All that is begotten has come to be by god's agency, by the agency of one who is good, in other words, of one able to make all things. Consider this lovely image that is very like him: See a farmer casting seed upon the earth, here the wheat, there the barley, elsewhere seed of some other kind; see him planting the vine and the apple and other kinds of trees. In the same way, god sows immortality in heaven, change in the earth, life and motion in the universe.",
+      "source_ids": [
+        "corp-herm"
+      ],
+      "topics": [
+        "maker",
+        "unbegotten",
+        "good",
+        "power",
+        "farmer",
+        "sowing",
+        "visibility_of_god"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_018",
+      "section": "human_great_wonder",
+      "subsection": "man_is_a_great_wonder",
+      "kind": "source",
+      "text": "Because of this, Asclepius, a human being is a great wonder, a living thing to be worshipped and honored: for he changes his nature into a god's, as if he were a god; he knows the demonic kind inasmuch as he recognizes that he originated among them; he despises the part of him that is human nature, having put his trust in the divinity of his other part. How much happier is the blend of human nature! Conjoined to the gods by a kindred divinity, he despises inwardly that part of him in which he is earthly. All others he draws close to him in a bond of affection, recognizing his relation to them by heaven's disposition. He looks up to heaven. He has been put in the happier place of middle status so that he might cherish those beneath him and be cherished by those above him. He cultivates the earth; he swiftly mixes into the elements; he plumbs the depths of the sea in the keenness of his mind. Everything is permitted him: heaven itself seems not too high, for he measures it in his clever thinking as if it were nearby. No misty air dims the concentration of his thought; no thick earth obstructs his work; no abysmal deep of water blocks his lofty view. He is everything, and he is everywhere. When the master and shaper of all things made a god next after himself who can be seen and sensed \u2014 the cosmos \u2014 it seemed beautiful to him since it was entirely full of the goodness of everything, and he loved it as the progeny of his own divinity. Then, so great and good was he that he wanted there to be another to admire the one he had made from himself, and straightaway he made mankind, imitator of his reason and attentiveness.",
+      "source_ids": [
+        "corp-herm"
+      ],
+      "topics": [
+        "great_wonder",
+        "human_dignity",
+        "middle_status",
+        "microcosm",
+        "imitator_of_god",
+        "everything",
+        "everywhere"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_019",
+      "section": "mankind_makes_gods",
+      "subsection": "statues_ensouled_and_conscious",
+      "kind": "source",
+      "text": "The master of eternity is the first god, the world is second, mankind is third. God is maker of the world and all it contains, governing all things along with mankind, who governs what is composite. Taking responsibility for the whole of this \u2014 the proper concern of his attentiveness \u2014 mankind brings it about that he and the world are ornaments to one another so that, on account of mankind's divine composition, it seems right to call him a well-ordered world. As the master and father is maker of the heavenly gods, so it is mankind who fashions the temple gods who are content to be near to humans. Not only is mankind glorified; he glorifies as well. He not only advances toward god; he also makes the gods strong. Are you talking about statues, Trismegistus? Statues, Asclepius, yes. See how little trust you have! I mean statues ensouled and conscious, filled with spirit and doing great deeds; statues that foreknow the future and predict it by lots, by prophecy, by dreams and by many other means; statues that make people ill and cure them, bringing them pain and pleasure as each deserves.",
+      "source_ids": [
+        "corp-herm"
+      ],
+      "topics": [
+        "mankind_third",
+        "statues",
+        "ensouled",
+        "theurgy",
+        "temple_gods",
+        "cosmic_ornament"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_020",
+      "section": "asclepius_lament",
+      "subsection": "egypt_widowed",
+      "kind": "source",
+      "text": "Do you not know, Asclepius, that Egypt is an image of heaven or, to be more precise, that everything governed and moved in heaven came down to Egypt and was transferred there? If truth were told, our land is the temple of the whole world. A time will come when it will appear that the Egyptians paid respect to divinity with faithful mind and painstaking reverence \u2014 to no purpose. All their holy worship will be disappointed and perish without effect, for divinity will return from earth to heaven, and Egypt will be abandoned. The land that was the seat of reverence will be widowed by the powers and left destitute of their presence. Then this most holy land, seat of shrines and temples, will be filled completely with tombs and corpses. O Egypt, Egypt, of your reverent deeds only stories will survive, and they will be incredible to your children! Only words cut in stone will survive to tell your faithful works. Then the master and father will look on this conduct and these willful crimes, and in an act of will \u2014 which is god's benevolence \u2014 he will take his stand against the vices and the perversion in everything, righting wrongs, washing away malice in a flood or consuming it in fire or ending it by spreading pestilential disease everywhere. Then he will restore the world to its beauty of old so that the world itself will again seem deserving of worship and wonder. And this will be the geniture of the world: a reformation of all good things and a restitution, most holy and most reverent, of nature itself, reordered in the course of time.",
+      "source_ids": [
+        "corp-herm"
+      ],
+      "topics": [
+        "egypt",
+        "temple_of_world",
+        "lament",
+        "apocalypse",
+        "restoration",
+        "divinity_withdraws"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_021",
+      "section": "tetrahedron_vertical_axis",
+      "subsection": "as_above_so_below_as_hermetic_axiom",
+      "kind": "commentary",
+      "text": "The Hermetic axiom 'as above, so below' \u2014 which the Emerald Tablet makes explicit \u2014 is the vertical axis of the tetrahedron of consubstantiality. In CH XI.20, Nous says to Hermes: 'Unless you make yourself equal to god, you cannot understand god; like is understood by like.' This is the operational definition of the vertical axis: the above (god/nous) and the below (human/mind) are consubstantial. The tetrahedron's apex is the One Mind (Poimandres), its base vertices are the four elements (fire, air, water, earth) described in CH I.4-5 as arising from the primordial light and darkness. The vertical axis passes through all five levels: the One Mind at the apex, the seven governors at the middle rings, the human at the center of the cosmic framework, and matter at the base. CH I.24-26 traces this axis in reverse: the ascent strips off one layer after another \u2014 the energies of increase and decrease, evil machination, longing, arrogance, presumption, wealth-impulse, deceit \u2014 until the human enters the ogdoad and finally god. Each stripping is a traversal up the vertical axis, and 'to be made god' (CH I.26) is to reach the apex where above and below coincide.",
+      "source_ids": [
+        "corp-herm"
+      ],
+      "topics": [
+        "as_above_so_below",
+        "vertical_axis",
+        "tetrahedron",
+        "consubstantiality",
+        "ascent",
+        "stripping"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_022",
+      "section": "four_densities_of_light",
+      "subsection": "para_vaikhari_and_the_noetic_cascade",
+      "kind": "commentary",
+      "text": "The four levels of speech in the Tantraloka (Par\u0101, Pa\u015byant\u012b, Madhyam\u0101, Vaikhar\u012b) correspond exactly to the Hermetic cascade of emanation in CH I.4-6 and XII.12-14. (1) Par\u0101 (supreme speech) = Poimandres as the undifferentiated Light 'clear and joyful' (CH I.4), the nous before any determination. (2) Pa\u015byant\u012b (seeing speech) = the holy word that 'mounted upon the watery nature' (CH I.5), the Logos that proceeds from Nous as the Son of God \u2014 the first self-differentiation of the light into vision. (3) Madhyam\u0101 (intermediate speech) = reasoned speech (logos) which 'is the image and mind of god' (CH XII.14), the soul in body, mind in soul, speech in mind \u2014 the intermediate levels of the cosmic hierarchy. (4) Vaikhar\u012b (gross speech) = the articulated voice that distinguishes each kind of living thing (CH XII.13), 'humanity is one; therefore, speech is also one, and when translated it is found to be the same in Egypt and Persia as in Greece.' The Hermetic nested enclosure \u2014 'god surrounds everything and permeates everything, mind surrounds soul, soul surrounds air, air surrounds matter' (CH XII.14) \u2014 maps precisely to the Tantric kosas: \u0101nandamaya, vij\u00f1\u0101namaya, manomaya, pr\u0101\u1e47amaya, annamaya. The Par\u0101 level is the \u0101nandamaya (bliss sheath), Vaikhar\u012b is the annamaya (food sheath).",
+      "source_ids": [
+        "corp-herm"
+      ],
+      "topics": [
+        "tantraloka",
+        "para",
+        "pashyanti",
+        "madhyama",
+        "vaikhari",
+        "four_speeches",
+        "kosas",
+        "nested_enclosure"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_023",
+      "section": "one_mind_38th_principle",
+      "subsection": "nous_as_siva_tattva",
+      "kind": "commentary",
+      "text": "The One Mind \u2014 Poimandres, the Nous \u2014 is the 38th principle, standing above the 36 tattvas of \u015aaivism and the 7 zones of the Hermetic ascent. In \u015aaiva Siddh\u0101nta, there are 36 tattvas: 5 pure (\u015biva, \u015bakti, sad\u0101\u015biva, \u012b\u015bvara, \u015buddhavidy\u0101) and 31 impure (m\u0101y\u0101, 5 ka\u00f1cukas, 25 prak\u1e5bti-evolutes). The Hermetic CH I.9 describes the Nous as 'the mind who is god, being androgyne and existing as life and light, by speaking gave birth to a second mind, a craftsman, who crafted seven governors.' This Nous is the \u015aiva tattva \u2014 pure consciousness, the 36th principle (counting \u015biva as the 36th from prak\u1e5bti upward). But CH I.4-5 also describes a light prior even to the Nous: 'I am the light you saw, mind, your god, who existed before the watery nature.' This light is the 37th principle \u2014 Parama\u015biva or the Absolute beyond the tattvas. Poimandres then reveals himself as 'mind of sovereignty' \u2014 the 38th principle: the One Mind that contains all 36 + the absolute light as its own ground. CH XI.20 confirms this when it says 'unless you make yourself equal to god, you cannot understand god; like is understood by like' \u2014 the 38th principle can only be known by becoming it, which is exactly the Tantric teaching that \u015biva-tattva is both the goal and the path, the knower and the known. The human who ascends through the seven zones (CH I.24-26) traverses the 31 impure tattvas (the 7 zones + their subdivisions), enters the ogdoad (the 5 pure tattvas), and becomes the 38th principle itself \u2014 'to be made god.'",
+      "source_ids": [
+        "corp-herm"
+      ],
+      "topics": [
+        "38th_principle",
+        "siva_tattva",
+        "36_tattvas",
+        "paramasiva",
+        "ascent",
+        "tantra",
+        "like_by_like"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_024",
+      "section": "creation_hymn_36_tattvas",
+      "subsection": "the_descent_through_the_tattvas",
+      "kind": "commentary",
+      "text": "The creation hymn of CH I.8-11 is the descent of consciousness through the 36 tattvas, paralleling the \u015aaiva emanation sequence. (1) 'The mind who is god, being androgyne and existing as life and light' (CH I.9) = \u015aiva-\u015aakti tattva (tattvas 36-35), the androgyne unified ground. (2) 'By speaking gave birth to a second mind, a craftsman' = Sad\u0101\u015biva tattva (34) and \u012a\u015bvara tattva (33), where the first determinate will-to-create arises. The 'second mind' is the craftsman-nous, the first self-limitation of pure consciousness. (3) 'Who, as god of fire and spirit, crafted seven governors' = the 5 ka\u00f1cukas (kal\u0101, vidy\u0101, r\u0101ga, k\u0101la, niyati \u2014 tattvas 28-32) and the puru\u1e63a-prak\u1e5bti (26-27), the 'seven governors' that 'encompass the sensible world in circles' and whose 'government is called fate' (heimarmen\u0113). In \u015aaivism, these are the sheaths (ka\u00f1cukas) that limit the universal self into individuated experience. (4) 'The weighty elements of nature were left behind, bereft of reason, so as to be mere matter' (CH I.10) = the 25 impure tattvas from buddhi (25) down to the mah\u0101bh\u016btas (earth, water, fire, air, ether \u2014 tattvas 1-5). (5) 'Revolving as mind wished them to, the circles brought forth from the weighty elements living things without reason' = the evolution of the gross elements into organic life. The entire hymn is thus a compressed \u015aaiva cosmogony: from \u015aiva-\u015aakti (the androgyne nous-light) through the ka\u00f1cuka 'governors' to the five elements and their compounds. The 'word' (logos) that 'leapt straight up to the pure craftwork of nature' (CH I.10) corresponds to \u015babdabrahman or spanda \u2014 the vibratory principle that connects pure consciousness to material manifestation.",
+      "source_ids": [
+        "corp-herm"
+      ],
+      "topics": [
+        "36_tattvas",
+        "creation_hymn",
+        "siva_sakti",
+        "kancuka",
+        "spanda",
+        "sabda_brahman",
+        "cosmogony"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_025",
+      "section": "tetrahedron_and_cosmic_hierarchy",
+      "subsection": "the_hermetic_tetrahedron",
+      "kind": "commentary",
+      "text": "The entire Corpus Hermeticum can be mapped onto the tetrahedron of consubstantiality. Apex (vertex 1) = The One Mind / Poimandres / Nous: 'I am the light you saw, mind, your god' (CH I.6). It corresponds to the Par\u0101 level of speech and the \u015aiva tattva as the 38th principle. Vertex 2 = The Craftsman / Logos / Second Mind: 'the lightgiving word who comes from mind is the son of god' (CH I.6). This is Pa\u015byant\u012b and the Sad\u0101\u015biva-\u012a\u015bvara tattvas. Vertex 3 = The Cosmic Framework / Seven Governors / Fate: 'the craftsman-mind, together with the word, encompassing the circles' (CH I.11). This is Madhyam\u0101 and the ka\u00f1cuka tattvas \u2014 the entire ordering structure of the cosmos (the 7 spheres, the zodiac of 12 torments in CH XIII, the heimarmen\u0113). Vertex 4 = The Anthropos / Humanity / Matter: 'the human being is a great wonder ... he is everything, and he is everywhere' (Asclep. 6). This is Vaikhar\u012b and the 25 impure tattvas. The vertical axis runs through all four vertices: from the One Mind (apex) through the Logos and the Governors to Humanity, and back up through the ascent of CH I.24-26. The four faces of the tetrahedron correspond to the four levels of speech (Par\u0101-Vaikhar\u012b), the four elements (fire, air, water, earth) that appear from the primordial darkness (CH I.4-5), and the four great books of the Corpus: CH I (creation-descent), CH XI (ascent-knowledge), CH XII (mind-speech), and the Asclepius (human-divine synthesis). The Emerald Tablet's 'as above, so below' is the formula of this tetrahedron: each vertex contains all others, and the whole is present in each part.",
+      "source_ids": [
+        "corp-herm"
+      ],
+      "topics": [
+        "tetrahedron",
+        "four_vertices",
+        "apex",
+        "vertical_axis",
+        "four_speeches",
+        "four_elements",
+        "four_books",
+        "consubstantiality"
+      ],
+      "status": "active"
+    }
+  ],
+  "coverage": {
+    "vision_of_light": {
+      "status": "comprehensive",
+      "sources": [
+        "corp-herm"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 1.0,
+      "gaps": []
+    },
+    "creation_hymn": {
+      "status": "comprehensive",
+      "sources": [
+        "corp-herm"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 1.0,
+      "gaps": []
+    },
+    "descent_of_anthropos": {
+      "status": "comprehensive",
+      "sources": [
+        "corp-herm"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 1.0,
+      "gaps": []
+    },
+    "ascent_through_ogdoad": {
+      "status": "comprehensive",
+      "sources": [
+        "corp-herm"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 1.0,
+      "gaps": []
+    },
+    "krater_of_mind": {
+      "status": "comprehensive",
+      "sources": [
+        "corp-herm"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 0.9,
+      "gaps": [
+        "CH IV.1-3 not excerpted"
+      ]
+    },
+    "god_invisible_visible": {
+      "status": "good",
+      "sources": [
+        "corp-herm"
+      ],
+      "passage_count": 2,
+      "estimated_completeness": 0.8,
+      "gaps": [
+        "CH V.4-5 on the microcosm not excerpted"
+      ]
+    },
+    "make_yourself_equal_to_god": {
+      "status": "comprehensive",
+      "sources": [
+        "corp-herm"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 1.0,
+      "gaps": []
+    },
+    "mind_to_hermes": {
+      "status": "good",
+      "sources": [
+        "corp-herm"
+      ],
+      "passage_count": 2,
+      "estimated_completeness": 0.7,
+      "gaps": [
+        "CH XI.1-4 on eternity and god not excerpted"
+      ]
+    },
+    "the_key": {
+      "status": "good",
+      "sources": [
+        "corp-herm"
+      ],
+      "passage_count": 3,
+      "estimated_completeness": 0.7,
+      "gaps": [
+        "CH XII.2-11 on fate and mind not excerpted"
+      ]
+    },
+    "rebirth_decad_twelve": {
+      "status": "good",
+      "sources": [
+        "corp-herm"
+      ],
+      "passage_count": 2,
+      "estimated_completeness": 0.8,
+      "gaps": [
+        "CH XIII.4-6 on the nature of rebirth not excerpted"
+      ]
+    },
+    "secret_hymn": {
+      "status": "comprehensive",
+      "sources": [
+        "corp-herm"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 1.0,
+      "gaps": []
+    },
+    "god_maker_good": {
+      "status": "comprehensive",
+      "sources": [
+        "corp-herm"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 0.9,
+      "gaps": [
+        "CH XIV.5-7 on the relation of maker and made"
+      ]
+    },
+    "human_great_wonder": {
+      "status": "comprehensive",
+      "sources": [
+        "corp-herm"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 1.0,
+      "gaps": []
+    },
+    "mankind_makes_gods": {
+      "status": "comprehensive",
+      "sources": [
+        "corp-herm"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 1.0,
+      "gaps": []
+    },
+    "asclepius_lament": {
+      "status": "good",
+      "sources": [
+        "corp-herm"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 0.7,
+      "gaps": [
+        "Full apocalyptic discourse not excerpted; Asclep. 27-37 on the void and place not excerpted"
+      ]
+    },
+    "tetrahedron_vertical_axis": {
+      "status": "comprehensive",
+      "sources": [
+        "corp-herm"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 1.0,
+      "gaps": []
+    },
+    "four_densities_of_light": {
+      "status": "comprehensive",
+      "sources": [
+        "corp-herm"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 1.0,
+      "gaps": []
+    },
+    "one_mind_38th_principle": {
+      "status": "comprehensive",
+      "sources": [
+        "corp-herm"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 1.0,
+      "gaps": []
+    },
+    "creation_hymn_36_tattvas": {
+      "status": "comprehensive",
+      "sources": [
+        "corp-herm"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 1.0,
+      "gaps": []
+    },
+    "tetrahedron_and_cosmic_hierarchy": {
+      "status": "comprehensive",
+      "sources": [
+        "corp-herm"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 1.0,
+      "gaps": []
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "interpretation",
+      "title": "Correspondence between Hermetic seven zones and \u015aaiva tattvas is approximate",
+      "description": "The Hermetic ascent through 7 zones (CH I.24-26) is mapped here to the 31 impure tattvas via the ka\u00f1cukas, but the exact correspondence is structural rather than enumerative. Alternative interpretations (e.g., 7 zones = 7 cakras, or 7 zones = 7 lokas) are also viable.",
+      "status": "open",
+      "created": "2026-07-15",
+      "auto_generated": true
+    },
+    {
+      "id": "issue-002",
+      "type": "coverage_gap",
+      "title": "Other Hermetic texts not covered",
+      "description": "The Stobaean Fragments (SH), the Armenian Definitions, the Nag Hammadi Hermetica, and the Arabic Hermetica (Ghayat al-Hakim, Turba Philosophorum) remain unincorporated. Only the 17 tractates of the Greek Corpus and the Latin Asclepius are covered.",
+      "status": "open",
+      "created": "2026-07-15",
+      "auto_generated": true
+    },
+    {
+      "id": "issue-003",
+      "type": "interpretation",
+      "title": "Multiple translations of the Corpus Hermeticum",
+      "description": "The Copenhaver translation is used as the primary source. The Everard (1650), Mead (1906), and Salaman (2000) translations sometimes differ significantly in phrasing, especially for key terms like nous (mind/intellect), logos (word/reason/speech), and heimarmen\u0113 (fate/destiny). Cross-translation comparison is needed.",
+      "status": "open",
+      "created": "2026-07-15",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-15",
+      "type": "initial",
+      "summary": "Initial RO covering CH I (Poimandres), CH IV (Krater), CH V (God Is All), CH XI (Mind to Hermes), CH XII (The Key), CH XIII (On Rebirth), CH XIV, and the Latin Asclepius. 25 passages: 20 source extracts and 5 commentaries connecting to tantric levels of speech, tetrahedron framework, 36 tattvas, and the 38th principle.",
+      "sources_added": [
+        "corp-herm"
+      ],
+      "passage_count": 25,
+      "status": "draft"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-07-15",
+      "event": "RO created in draft state from Copenhaver's Hermetica covering the Greek Corpus Hermeticum and Latin Asclepius",
+      "sources_total": 1,
+      "passages_total": 25
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "co_id": "co:uno_gurdjeff1_meta_t23_t30_school__t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gurdjeff1_meta_t23_t30_school_meaning_and_kinds",
+  "turn_index": 0,
+  "lineage": "Gurdjieffian",
+  "student_state": "confused_by_literal_vs_conceptual",
+  "behavior_tags": [
+    "reports_conceptual_shift",
+    "asks_for_clarification"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_05",
+    "function_name": "RM_05",
+    "mechanism_shape": "COMPARISON_CONTRAST",
+    "teaching_actions": [
+      "validates_literal_analogy",
+      "establishes_primacy"
+    ],
+    "traps_avoided": [
+      "category_conflation"
+    ],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.62,
+      "attunement": 0.5,
+      "style": 0.5,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "request_clarification",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The validation works: literal analogy correct (not school of thought), method = doing (not thought). The student reported conceptual shift (confused by literal vs. conceptual), which shows they understand: school = literal (like boyhood school). They'll likely ask about intellectual primacy next. Hypothesis: validations trigger hierarchy questions—testable by tracking whether validations lead to hierarchy inquiries.",
+  "accumulated_insight": "T1: Student reports conceptual shift ('When I first came to lectures I thought the word 'school' meant a school of thought, but now it seems to be just like the school I was in when I was a boy')—confused by literal vs. conceptual via reports conceptual shift and asks for clarification. They understand: school = literal (like boyhood school). The comparison_contrast mechanism validates: literal analogy correct (not school of thought), method = doing (not thought). Pattern: conceptual shift → validation → [next: intellectual question]. Medium confidence because validations typically trigger clarification requests.",
+  "abstract_pattern": "",
+  "visible_response": "Exactly. It is not a question of thought, it is a question of doing",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:sufi-comparative-analysis",
+    "ro:steiner-tantraloka-parallels"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

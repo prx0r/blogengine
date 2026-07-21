@@ -1,0 +1,54 @@
+{
+  "co_id": "co:uno_therapy3.1_t2363_t2366_unspoke_t2",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3.1_t2363_t2366_unspoken_criticism",
+  "turn_index": 2,
+  "lineage": "Therapeutic",
+  "student_state": "factual_concession",
+  "behavior_tags": [
+    "reality_acceptance"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_02",
+    "function_name": "RM_02",
+    "mechanism_shape": "SUBJECT_OBJECT_INVERSION",
+    "teaching_actions": [
+      "interprets_mechanism",
+      "locates_source"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.62,
+      "attunement": 0.5,
+      "style": 0.65,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_04",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "'You were dismissive'—said it. From hinting (T1) to denying (T2) to naming (T3). Teacher accepts feedback without defending. 'Thank you' validates honesty. This teaches: criticism allowed, even helpful.",
+  "accumulated_insight": "T3: Student admits 'Well, I thought you were dismissive earlier.' Named criticism. Teacher validates: 'Thank you for telling me.' Accepts feedback. Predicting surface_emotion as honesty is validated.",
+  "abstract_pattern": "",
+  "visible_response": "There’s a thought in your head that I think badly of you, but there is no evidence to support the thought in your head.\nCould this be your critical conscience inside you calling you names?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

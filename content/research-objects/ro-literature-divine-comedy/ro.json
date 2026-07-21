@@ -1,0 +1,253 @@
+{
+  "ro_id": "ro:literature-divine-comedy",
+  "schema_version": 1,
+  "title": "The Divine Comedy \u2014 The Complete Initiation",
+  "family": "theme",
+  "status": "draft",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "Dante's Divine Comedy read as a complete initiatory journey through impure tattvas (Inferno), albedo/purgation (Purgatory), and pure path ascent (Paradise).",
+    "scope": "Covers the three cantiche mapped to Trika tantric cosmology: Inferno 9 circles = 31 impure tattvas in 3 groups; Purgatory 7 terraces = 7 cakras/ka\u00f1cukas; Paradise 9 spheres = 5 pure tattvas; Virgil as \u0100\u1e47avop\u0101ya; Beatrice as daimon/Suddhavidya; the Rose as Mah\u0101bhairava; the final flash as \u015a\u0101mbhavop\u0101ya.",
+    "traditions": [
+      "kashmir-shaivism",
+      "trika",
+      "christian-mysticism",
+      "medieval-allegory",
+      "comparative-mythology"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "divine-comedy",
+      "tier": 1,
+      "label": "Dante Alighieri \u2014 The Divine Comedy (1321)",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "primary_text",
+        "three_cantiche",
+        "initiatory_structure"
+      ],
+      "sections_affected": [
+        "inferno",
+        "purgatory",
+        "paradise"
+      ],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "inferno",
+      "subsection": "descent_through_impure_tattvas",
+      "kind": "analysis",
+      "text": "[Inferno 9 circles correspond to the 31 impure tattvas of Trika Shaivism, organized in 3 groups (1-4: gross elements and tanm\u0101tras; 5-7: the 5 buddh\u012bndriyas, 5 karmendriyas, manas, aha\u1e43k\u0101ra, buddhi; 8-9: m\u0101y\u0101, kal\u0101, etc.). Each circle progressively strips away an aspect of the contracted self. The entrance through the 'selva oscura' is the entry into the tattva matrix.]",
+      "source_ids": [
+        "divine-comedy"
+      ],
+      "topics": [
+        "inferno",
+        "impure_tattvas",
+        "descent",
+        "contraction"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "inferno",
+      "subsection": "virgil_anavopaya",
+      "kind": "analysis",
+      "text": "[Virgil represents \u0100\u1e47avop\u0101ya \u2014 the method of the individual self, operating through reason and guidance. He can lead Dante through the tattvic descent and up to the Earthly Paradise but cannot enter the pure realm. This mirrors the limitation of \u0101\u1e47ava: it purifies the individual but cannot give direct access to \u015aiva-consciousness.]",
+      "source_ids": [
+        "divine-comedy"
+      ],
+      "topics": [
+        "virgil",
+        "anavopaya",
+        "reason",
+        "guidance"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "purgatory",
+      "subsection": "terraces_ka\u00f1cukas",
+      "kind": "analysis",
+      "text": "[Purgatory's 7 terraces correspond to the 7 cakras and/or ka\u00f1cukas (sheaths of limitation): Proud \u2192 niyati/k\u0101la; Envious \u2192 r\u0101ga; Wrathful \u2192 vidy\u0101; Slothful \u2192 kal\u0101; Avaricious \u2192 m\u0101y\u0101; Gluttonous/Lustful \u2192 the lower cakras. Each terrace is a purification (albedo) of a specific limitation, exactly the work of purification in the middle path of Trika practice.]",
+      "source_ids": [
+        "divine-comedy"
+      ],
+      "topics": [
+        "purgatory",
+        "ka\u00f1cukas",
+        "albedo",
+        "purification"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "purgatory",
+      "subsection": "beatrice_daimon",
+      "kind": "analysis",
+      "text": "[Beatrice descends into Purgatory to take over from Virgil, representing the daimon/Suddhavidya (pure knowledge). In Trika terms, \u015auddhavidy\u0101 is the first of the pure tattvas \u2014 the point where the practitioner begins to see through the limitations and receives direct guidance from the daimonic function. Beatrice as the beloved who reveals.]",
+      "source_ids": [
+        "divine-comedy"
+      ],
+      "topics": [
+        "beatrice",
+        "daimon",
+        "suddhavidya",
+        "transition"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "paradise",
+      "subsection": "pure_path_ascent",
+      "kind": "analysis",
+      "text": "[Paradise's 9 spheres map to the 5 pure tattvas (\u015auddhavidy\u0101, \u012a\u015bvara, S\u0101d\u0101khya, \u015aakti, \u015aiva), with the Primum Mobile and Empyrean representing the progressive unveiling of absolute consciousness. Beatrice's increasing radiance corresponds to the intensification of \u015aakti as the tattvas refine. Each sphere removes another veil.]",
+      "source_ids": [
+        "divine-comedy"
+      ],
+      "topics": [
+        "paradise",
+        "pure_tattvas",
+        "ascent",
+        "unveiling"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_006",
+      "section": "paradise",
+      "subsection": "the_rose_mahabhairava",
+      "kind": "analysis",
+      "text": "[The Celestial Rose is Mah\u0101bhairava \u2014 the full expansion of \u015aiva-\u015aakti consciousness. The saints arranged in petals are the totality of manifestation recognized as divine play. The Rose is not a static vision but the dynamic self-recognition of consciousness as all that is.]",
+      "source_ids": [
+        "divine-comedy"
+      ],
+      "topics": [
+        "celestial_rose",
+        "mahabhairava",
+        "totality",
+        "recognition"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_007",
+      "section": "paradise",
+      "subsection": "the_final_flash",
+      "kind": "analysis",
+      "text": "[The final canto \u2014 the flash (fulgore) that overcomes Dante's vision and the 'love that moves the sun and other stars' \u2014 is \u015a\u0101mbhavop\u0101ya, the path of direct grace where no method remains. The unification happens beyond all tattvas, in the pure light of consciousness recognizing itself. Dante's will is 'turned by the Love' \u2014 the \u015baktip\u0101ta.]",
+      "source_ids": [
+        "divine-comedy"
+      ],
+      "topics": [
+        "final_flash",
+        "sambhavopaya",
+        "grace",
+        "union"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_008",
+      "section": "paradise",
+      "subsection": "three_upayas_three_cantiche",
+      "kind": "analysis",
+      "text": "[The three cantiche map perfectly to the three up\u0101yas of Trika: Inferno = \u0100\u1e47avop\u0101ya (individual effort, Virgil's guidance, purification through facing the tattvas); Purgatory = \u015a\u0101ktop\u0101ya (Beatrice's grace, will and knowledge, the via media); Paradise = \u015a\u0101mbhavop\u0101ya (direct recognition, no mediation, the final flash). Dante travels the complete Trika path in a single poem.]",
+      "source_ids": [
+        "divine-comedy"
+      ],
+      "topics": [
+        "three_upayas",
+        "trika_path",
+        "complete_initiation"
+      ],
+      "status": "placeholder"
+    }
+  ],
+  "coverage": {
+    "inferno": {
+      "status": "good",
+      "sources": [
+        "divine-comedy"
+      ],
+      "passage_count": 2,
+      "estimated_completeness": 0.7,
+      "gaps": [
+        "Deeper mapping of each circle to specific tattvas needed"
+      ]
+    },
+    "purgatory": {
+      "status": "good",
+      "sources": [
+        "divine-comedy"
+      ],
+      "passage_count": 2,
+      "estimated_completeness": 0.7,
+      "gaps": [
+        "Detailed mapping of each terrace to ka\u00f1cukas needed"
+      ]
+    },
+    "paradise": {
+      "status": "good",
+      "sources": [
+        "divine-comedy"
+      ],
+      "passage_count": 4,
+      "estimated_completeness": 0.75,
+      "gaps": [
+        "Canto-by-canto mapping of sphere ascent to pure tattvas needed"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "placeholder",
+      "title": "All passages currently referencing analysis framework",
+      "description": "Passages need to be elaborated with primary text citations and line references.",
+      "status": "open",
+      "created": "2026-07-13",
+      "auto_generated": true
+    },
+    {
+      "id": "issue-002",
+      "type": "coverage_gap",
+      "title": "Missing engagement with existing Dante commentary tradition",
+      "description": "Should integrate Singleton, Freccero, and esoteric interpretations of the Comedy.",
+      "status": "open",
+      "created": "2026-07-13",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-13",
+      "type": "initial",
+      "summary": "Initial RO mapping Divine Comedy to Trika tattvas and up\u0101yas. 8 passage framework established.",
+      "sources_added": [
+        "divine-comedy"
+      ],
+      "passage_count": 8,
+      "status": "draft"
+    }
+  ],
+  "appendices": [],
+  "timeline": [
+    {
+      "date": "2026-07-13",
+      "event": "RO created in draft state with Trika mapping framework",
+      "sources_total": 1,
+      "passages_total": 8
+    }
+  ]
+}

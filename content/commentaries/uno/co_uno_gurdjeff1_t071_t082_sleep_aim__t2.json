@@ -1,0 +1,60 @@
+{
+  "co_id": "co:uno_gurdjeff1_t071_t082_sleep_aim__t2",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gurdjeff1_t071_t082_sleep_aim_effort",
+  "turn_index": 2,
+  "lineage": "Gurdjieffian",
+  "student_state": "tentative_self_assessment",
+  "behavior_tags": [
+    "asks_for_diagnostic",
+    "relates_uncertainty_to_state"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_03",
+    "function_name": "RM_03",
+    "mechanism_shape": "NONE",
+    "teaching_actions": [
+      "provides_diagnostic",
+      "links_hesitation_to_understanding"
+    ],
+    "traps_avoided": [
+      "category_conflation"
+    ],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.5,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "go_along_compliantly",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The diagnostic works: hesitation = sleep + incomplete understanding (when one knows what is most important, one has no hesitation). The student asked diagnostic (tentative self-assessment), which shows they understand: hesitation = diagnostic. They'll likely accept the diagnostic. The episode is complete: peak optimization → reorientation → precondition → dismissal → diagnostic → diagnostic. Pattern complete.",
+  "accumulated_insight": "Three-turn pattern: T1: Student asked for peak optimization (focusing on high moments)—reorientation: regular efforts, emotional realization of sleep. T2: Student questioned precondition (seeking excuse for inaction)—dismissal: half-sleep sufficient. T3: Student asked diagnostic ('Is hesitation between two different aims a sign of sleep?')—tentative self-assessment via asks for diagnostic and relates uncertainty to state. They understand: hesitation = diagnostic (uncertainty). The none mechanism provides diagnostic: hesitation = sleep + incomplete understanding ('Partly of sleep and partly of incomplete understanding. When one knows what is most important, one has no hesitation'). Pattern complete: peak optimization → reorientation → precondition question → dismissal → diagnostic question → diagnostic. They've shifted: hesitation = sleep + incomplete understanding, not just sleep.",
+  "abstract_pattern": "",
+  "visible_response": "Partly of sleep and partly of incomplete understanding. When one knows what is\nmost important, one has no hesitation.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:sufi-comparative-analysis",
+    "ro:steiner-tantraloka-parallels"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

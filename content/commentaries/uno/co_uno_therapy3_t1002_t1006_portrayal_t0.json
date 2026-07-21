@@ -1,0 +1,57 @@
+{
+  "co_id": "co:uno_therapy3_t1002_t1006_portrayal_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3_t1002_t1006_portrayal_identification_victim",
+  "turn_index": 0,
+  "lineage": "Therapeutic",
+  "student_state": "pathological_guilt",
+  "behavior_tags": [
+    "identification_with_victim",
+    "masochism"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_05",
+    "function_name": "UM_05",
+    "mechanism_shape": "SUBJECT_OBJECT_INVERSION",
+    "teaching_actions": [
+      "mirrors_pathology",
+      "probes_action"
+    ],
+    "traps_avoided": [
+      "identification_with_content"
+    ],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.35,
+      "depth": 0.62,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_02",
+      "depth_discrete": "PD_03",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "'Mine.'—student presents as pathological guilt. Teacher's move uses subject_object_inversion: 'So it is your body you have murdered. What is it you do with your'. Strategy: mirrors pathology, probes action. Hypothesis: subject_object_inversion mechanism will create ask_deeper_question. Watching how student responds to this intervention.",
+  "accumulated_insight": "T1: Student says 'Mine.' showing pathological_guilt via identification_with_victim, masochism. Teacher responds 'So it is your body you have murdered. What is it you do with your' using subject_object_inversion to mirrors pathology, probes action. Opening UNMAKING move addresses pathological_guilt. Predicting ask_deeper_question because subject_object_inversion interventions typically produce this response pattern.",
+  "abstract_pattern": "",
+  "visible_response": "So it is your body you have murdered.\nWhat is it you do with your body?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

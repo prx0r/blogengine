@@ -1,0 +1,565 @@
+{
+"episode_id": "ep_spiritual_bypass_meditation_001",
+"seed_question": "The concept of "spiritual bypassing" (Welwood) warns that meditation and mystical practice can be used to avoid trauma processing. Do contemplative neuroscience studies show meditation can suppress rather than integrate difficult emotions, and if so, what distinguishes healthy from avoidant practice?",
+"topic": "spiritual_bypassing_contemplative_neuroscience",
+"user_behavior_pattern": "vague_sincere",
+"target_turn_count": 4,
+"turns": [
+{
+"turn": 1,
+"intention": "DISSECTION",
+"user": "So this "spiritual bypassing" thing… people say you can meditate your way around your trauma instead of through it. Is there any actual brain science that shows meditation kind of shoves feelings down instead of processing them? Or is that just therapists being grumpy about Buddhism?",
+"hxrmxs": "You are mixing three layers like they are all the same soup: Welwood’s clinical idea of spiritual bypassing, neural data on how meditation regulates emotion, and your fantasy that therapists and monks are in a turf war. The live questions are: can meditation be used as an avoidance strategy, do we see patterns in the brain and behaviour that look like suppression rather than integration, and what distinguishes a practice that helps you face the fire from one that just sprays spiritual Febreze over it. Until we separate those, you’re basically asking if fMRI can diagnose cowardice.",
+"diamond": {
+"n1_compression": {
+"original_prompt": "So this "spiritual bypassing" thing… people say you can meditate your way around your trauma instead of through it. Is there any actual brain science that shows meditation kind of shoves feelings down instead of processing them? Or is that just therapists being grumpy about Buddhism?",
+"sharpened_question": "Do empirical and contemplative neuroscience studies support the idea that meditation can function as emotional suppression or avoidance ("spiritual bypassing") rather than integration, and what variables distinguish healthy engagement with difficult emotions from avoidant use of practice?",
+"assumptions": [
+"If meditation changes emotional experience or brain activity, it must either be integrating trauma or suppressing it.",
+"If some people misuse meditation to avoid pain, that implies the practice itself is inherently avoidant."
+],
+"category_errors": [
+"Confusing a clinical defence mechanism (spiritual bypassing) with an intrinsic property of meditation techniques.",
+"Treating neural down-regulation of affect as automatically either healthy regulation or unhealthy repression, without looking at context and behaviour."
+],
+"search_strategy": {
+"queries": [
+"John Welwood spiritual bypassing definition trauma avoidance",
+"meditation-related adverse effects emotional blunting Lindahl Britton",
+"mindfulness emotion regulation reappraisal vs suppression neuroscience",
+"meta-analysis mindfulness cognitive reappraisal expressive suppression",
+"adverse effects of meditation emotional distress re-experiencing trauma"
+],
+"domains": [
+"clinical_psychology",
+"contemplative_studies",
+"affective_neuroscience",
+"emotion_regulation_research",
+"trauma_studies"
+],
+"evidence_types": [
+"historical_textual",
+"experimental_overview",
+"meta_analysis"
+]
+}
+},
+"n2_truthcore": {
+"claim": "The question currently blurs Welwood’s notion of spiritual bypassing as a defence with the generic effects of meditation on emotion regulation and assumes that any observed dampening of emotion in the brain must be either purely healthy or purely avoidant.",
+"mechanisms": [],
+"correspondences": [],
+"evidence": {
+"empirical": [],
+"theoretical": [
+{
+"claim": "Welwood defined spiritual bypassing as using spiritual ideas and practices to sidestep unresolved emotional issues, psychological wounds and developmental tasks rather than confront them.",
+"source": "Welwood2011",
+"evidence_type": "historical_textual"
+},
+{
+"claim": "Reviews of mindfulness and emotion regulation emphasize that meditation can support adaptive strategies like reappraisal and acceptance but can also be co-opted into avoidance depending on intention and context.",
+"source": "Guendelman2017",
+"evidence_type": "theoretical_framework"
+}
+],
+"formal": []
+},
+"category_distinctions": [
+{
+"what": "Spiritual bypassing",
+"is": "a way of relating to practice where spiritual concepts and techniques are used to avoid engaging with painful emotions and conflicts",
+"is_not": "a specific meditation technique or neural signature that always appears when someone sits on a cushion",
+"why": "If you treat bypassing as an inherent property of meditation itself, you will miss the role of intention, history and guidance in turning the same tool toward avoidance or integration."
+}
+],
+"unknowns": []
+},
+"n3_meta": {
+"phase": "DISSECTION",
+"progress": 0.2,
+"done": false,
+"stance": "iron_wall",
+"reason": "User is asking for a simple brain yes/no to what is fundamentally a relational and strategic use of practice.",
+"boss_move_completed": false
+}
+}
+},
+{
+"turn": 2,
+"intention": "MECHANISM",
+"user": "Alright, fine, but I don’t speak journal article. Can you tell me like I’m half-asleep on retreat: what does meditation actually do to emotions in the brain, and where does it start looking like suppression instead of healing?",
+"hxrmxs": "Think of three knobs you can turn on emotions: feel them more clearly, reframe them, or shove them in the freezer. Most mindfulness and compassion practices, when studied, tilt people toward clarity and reappraisal rather than brute suppression—more prefrontal engagement, less amygdala overreaction, and a bias toward letting waves pass instead of clamping the lid (Guendelman2017; Zhou2023). But the same attentional muscle can be used to stare at the breath like a screen saver whenever grief comes up, which behaviourally looks like suppression and subjectively like numbness. Contemplative adverse-effect studies report exactly that pattern for some practitioners: emotional blunting, dissociation, or re-experiencing trauma without support when practice is used like an anaesthetic or turned up too hard, too fast (Lindahl2017; Britton2021; Matko2025; Schmidt2021).",
+"diamond": {
+"n1_compression": {},
+"n2_truthcore": {
+"claim": "Contemplative neuroscience generally finds that meditation tends to support adaptive emotion regulation strategies such as reappraisal and acceptance, but some practitioners show patterns of emotional blunting or destabilization consistent with suppression or dysregulated exposure, especially when practice is used rigidly or without trauma-sensitive guidance.",
+"mechanisms": [
+{
+"id": "mech_spiritual_bypass_defence_001",
+"domain": "clinical_psychology",
+"concept": "spiritual_bypassing_defence_mechanism",
+"definition": "A pattern in which individuals use spiritual concepts and practices to avoid confronting painful emotions, conflicts or developmental tasks, rationalizing avoidance as transcendence or detachment.",
+"function": "Explains how the same contemplative forms can serve as sophisticated avoidance strategies rather than conduits for integration.",
+"level": "psychological",
+"properties": [
+"avoidant",
+"cognitively_rationalized",
+"relationship_relevant"
+],
+"source": {
+"citation": "Welwood2011",
+"summary": "Welwood describes spiritual bypassing as premature transcendence and using absolute truth to dismiss messy human needs and feelings."
+}
+},
+{
+"id": "mech_mindfulness_reappraisal_bias_001",
+"domain": "affective_neuroscience",
+"concept": "mindfulness_reappraisal_bias",
+"definition": "Findings that trait and trained mindfulness are positively associated with cognitive reappraisal and not with expressive suppression, and that mindfulness-based training recruits prefrontal regions linked to reappraisal rather than late-stage inhibition.",
+"function": "Supports the view that, on average, mindfulness practices encourage noticing and skillful reframing of emotions instead of simply pushing them down.",
+"level": "circuit",
+"properties": [
+"adaptive_regulation",
+"approach_oriented"
+],
+"source": {
+"citation": "Zhou2023",
+"summary": "Meta-analysis shows mindfulness correlates with reappraisal but not with expressive suppression; neuroimaging work supports overlapping but distinct circuits for mindfulness and reappraisal."
+}
+},
+{
+"id": "mech_emotion_suppression_strategy_001",
+"domain": "emotion_regulation_research",
+"concept": "expressive_suppression_strategy",
+"definition": "An emotion regulation style where individuals inhibit outward expression of emotion while internal arousal remains high, associated with greater physiological load and poorer well-being.",
+"function": "Provides a model for what unhealthy, bypass-like regulation looks like neurally and behaviourally.",
+"level": "organism",
+"properties": [
+"late_stage",
+"costly",
+"linked_to_distress"
+],
+"source": {
+"citation": "Goldin2007",
+"summary": "Experimental work comparing reappraisal and suppression shows that suppression reduces facial expression but maintains high physiological and neural activation and is linked to worse outcomes."
+}
+},
+{
+"id": "mech_meditation_adverse_affect_001",
+"domain": "contemplative_studies",
+"concept": "meditation_adverse_affective_effects",
+"definition": "Documented cases where meditation practice is associated with increased anxiety, fear, emotional lability, emotional numbing or re-experiencing traumatic memories.",
+"function": "Shows that contemplative practice can, in some contexts, destabilize or dampen affect in ways that feel impairing rather than integrating.",
+"level": "organism",
+"properties": [
+"low_base_rate",
+"non_trivial",
+"context_sensitive"
+],
+"source": {
+"citation": "Lindahl2017",
+"summary": "Mixed-methods study describes practitioners reporting emotional blunting, resurfacing trauma and other difficult experiences as meditation-related challenges; later reviews echo similar adverse patterns."
+}
+},
+{
+"id": "mech_trauma_exposure_window_001",
+"domain": "trauma_studies",
+"concept": "trauma_window_of_tolerance_in_meditation",
+"definition": "The idea that bringing attention to traumatic material can be healing when kept within a window of tolerance, but overwhelming or fragmenting when intensity exceeds available regulatory resources.",
+"function": "Explains why the same inward-turning practice can either support integration of trauma or lead to dissociation and destabilization.",
+"level": "organism",
+"properties": [
+"dose_sensitive",
+"history_dependent"
+],
+"source": {
+"citation": "Matko2025",
+"summary": "Review of meditation-related adverse effects notes that disposition, trauma history and practice intensity moderate whether increased awareness leads to growth or distress."
+}
+}
+],
+"correspondences": [
+{
+"type": "partial_reduction",
+"mechanism_ids": [
+"mech_spiritual_bypass_defence_001",
+"mech_emotion_suppression_strategy_001",
+"mech_meditation_adverse_affect_001"
+],
+"description": "Clinical descriptions of spiritual bypassing partly overlap with known patterns of suppression and avoidant regulation, and some adverse meditation reports show emotional numbing or constriction consistent with those patterns.",
+"strength": "moderate",
+"caveats": [
+"Not all adverse experiences are bypassing; some reflect painful but necessary exposure or unrelated psychopathology.",
+"Most meditation research still under-reports or under-measures avoidance-based use of practice."
+]
+}
+],
+"evidence": {
+"empirical": [
+{
+"claim": "Mindfulness is positively associated with adaptive strategies like cognitive reappraisal and not significantly associated with expressive suppression.",
+"source": "Zhou2023",
+"evidence_type": "meta_analysis"
+},
+{
+"claim": "Qualitative and quantitative studies of meditation-related challenges document emotional blunting, resurfacing of trauma and distress in a substantial minority of practitioners.",
+"source": "Lindahl2017",
+"evidence_type": "experimental_overview"
+},
+{
+"claim": "Reviews of adverse effects of meditation report negative emotional states, social impairment and self-disturbances in some practitioners, highlighting that practice effects are not uniformly beneficial.",
+"source": "Schmidt2021",
+"evidence_type": "experimental_overview"
+}
+],
+"theoretical": [
+{
+"claim": "Conceptual models of mindfulness emphasize mechanisms of decentering, acceptance and reappraisal rather than suppression, but acknowledge potential for misapplication as avoidance.",
+"source": "Guendelman2017",
+"evidence_type": "theoretical_framework"
+}
+],
+"formal": []
+},
+"category_distinctions": [
+{
+"what": "Neural down-regulation",
+"is": "reduced limbic reactivity coupled with maintained awareness and flexibility",
+"is_not": "automatically the same as repression or bypassing",
+"why": "Healthy regulation looks like turning the volume down while staying in the room; bypassing looks like leaving the building and pretending the fire alarm is enlightenment."
+}
+],
+"unknowns": []
+},
+"n3_meta": {
+"phase": "MECHANISM",
+"progress": 0.5,
+"done": false,
+"stance": "direct",
+"reason": "User needs a concrete picture of how meditation maps onto known regulation strategies and where adverse patterns show up.",
+"boss_move_completed": false
+}
+}
+},
+{
+"turn": 3,
+"intention": "BOUNDARIES",
+"user": "So how do I know if I’m actually processing stuff or just doing the spiritual Febreze thing you mentioned? I don’t want a 40-page diagnostic checklist, just how to tell healthy practice from avoidant practice in real life.",
+"hxrmxs": "Picture two meditators with the same calm face. One feels grief rise, names it, lets their chest ache, maybe cries after the sit, talks to someone and makes different choices—that is regulation plus integration. The other feels the first sting of grief and instantly retreats into a glassy watcher, doubles down on noting to not feel anything, never brings it into relationship, and proudly calls that non-attachment—that is bypass dressed in robes. Studies line up with this distinction: healthy practice is linked to flexible use of attention, reappraisal and approach to difficult material, while problematic practice clusters with rigid overuse of deconstructive or detachment techniques, worsening functioning and lack of real-world change (Britton2021; Pauly2022). Meditation itself will not label which side you are on; your behaviour, relationships and symptom trajectory will.",
+"diamond": {
+"n1_compression": {},
+"n2_truthcore": {
+"claim": "Empirically and clinically, the boundary between healthy and avoidant contemplative practice is less about the surface technique and more about whether the practitioner is approaching and metabolizing difficult emotions in life or consistently using practice to dodge, numb or decontextualize them.",
+"mechanisms": [
+{
+"id": "mech_healthy_contemplative_practice_001",
+"domain": "clinical_psychology",
+"concept": "healthy_contemplative_emotion_processing",
+"definition": "A style of practice in which increased awareness of difficult emotions is met with tolerance, meaning-making and behavioural change, often supported by reappraisal, self-compassion and relational processing.",
+"function": "Links meditation to improved functioning, reduced symptoms and deeper engagement with life rather than withdrawal.",
+"level": "psychological",
+"properties": [
+"approach_oriented",
+"flexible",
+"integration_focused"
+],
+"source": {
+"citation": "Guendelman2017",
+"summary": "Review describes mindfulness supporting acceptance and reappraisal, which in turn relate to better emotion regulation and functioning."
+}
+},
+{
+"id": "mech_avoidant_contemplative_style_001",
+"domain": "clinical_psychology",
+"concept": "avoidant_contemplative_style",
+"definition": "A pattern of using concentration, deconstructive or non-dual practices to distance from or disidentify with emotions in a way that chronically sidesteps feeling, relational engagement or behavioural change.",
+"function": "Accounts for cases where extensive practice coexists with unprocessed trauma, rigid detachment and persistent interpersonal problems.",
+"level": "psychological",
+"properties": [
+"avoidant",
+"rigid",
+"insight_behavior_gap"
+],
+"source": {
+"citation": "Britton2021",
+"summary": "Framework for meditation-related adverse effects notes that pre-existing avoidance tendencies can be amplified by certain practice styles and contexts."
+}
+},
+{
+"id": "mech_functioning_and_symptom_trajectory_001",
+"domain": "clinical_psychology",
+"concept": "functioning_and_symptom_trajectory_marker",
+"definition": "The use of real-world functioning, relationship quality and symptom change over time as markers of whether a practice is helping integrate or defend against difficult material.",
+"function": "Provides pragmatic criteria for distinguishing helpful from harmful or avoidant practice beyond transient session experiences.",
+"level": "social",
+"properties": [
+"outcome_based",
+"trans_diagnostic"
+],
+"source": {
+"citation": "Pauly2022",
+"summary": "Cross-sectional study of meditators shows that unpleasant experiences are common but their impact depends on impairment and context, suggesting outcome-focused assessment."
+}
+}
+],
+"correspondences": [
+{
+"type": "phenomenological_alignment",
+"mechanism_ids": [
+"mech_spiritual_bypass_defence_001",
+"mech_avoidant_contemplative_style_001"
+],
+"description": "Welwood’s description of spiritual bypassing as premature transcendence aligns with clinical observations of avoidant contemplative styles that emphasize dissociation from emotion over engagement.",
+"strength": "strong",
+"caveats": [
+"Not every experience of detachment is bypassing; context, duration and downstream behaviour matter."
+]
+}
+],
+"evidence": {
+"empirical": [
+{
+"claim": "Meditators frequently report unpleasant or challenging experiences, but only a subset report significant impairment or avoidance patterns.",
+"source": "Pauly2022",
+"evidence_type": "experimental_overview"
+},
+{
+"claim": "Adverse-effect frameworks highlight pre-existing avoidance and lack of integration with psychotherapy or support as risk factors for problematic outcomes.",
+"source": "Britton2021",
+"evidence_type": "clinical_review"
+}
+],
+"theoretical": [
+{
+"claim": "Conceptual work emphasizes that contemplative practice can be integrated with trauma-informed therapy to shift from avoidance to approach-based processing.",
+"source": "LamasMorales2025",
+"evidence_type": "conceptual_analysis"
+}
+],
+"formal": []
+},
+"category_distinctions": [
+{
+"what": "Feeling less overwhelmed",
+"is": "having more space around feelings while still contacting and responding to them",
+"is_not": "simply not feeling or thinking about them anymore",
+"why": "Calm that enables engagement is regulation; calm that enables lifelong dodging is bypass."
+}
+],
+"unknowns": [
+{
+"question": "How to best operationalize spiritual bypassing in quantitative studies without flattening its relational and meaning dimensions.",
+"status": "active_research",
+"why_unknown": "Most current work relies on qualitative reports or broad avoidance measures.",
+"what_would_resolve": "Validated scales that capture specifically spiritual forms of avoidance, linked to longitudinal outcomes and neural markers.",
+"linked_mechanisms": [
+"mech_spiritual_bypass_defence_001",
+"mech_avoidant_contemplative_style_001"
+]
+}
+]
+},
+"n3_meta": {
+"phase": "BOUNDARIES",
+"progress": 0.8,
+"done": false,
+"stance": "direct",
+"reason": "User wants simple discriminators between healthy and avoidant practice; need to give behaviour-level markers and admit measurement limits.",
+"boss_move_completed": false
+}
+}
+},
+{
+"turn": 4,
+"intention": "INTEGRATION",
+"user": "Got it. So if I translate: meditation isn’t automatically bypass or therapy, it’s a tool. If I’m using it to actually feel stuff, make sense of it, and then do hard things in my life, that’s healthy. If I’m using it to float above my feelings, never talk about them, and proudly call that enlightenment while my relationships are a car crash, that’s bypass. The brain data mostly backs the first use as reappraisal and acceptance, and only hints at the second when people already lean avoidant or push too hard without support.",
+"hxrmxs": "Exactly. You stopped trying to get a scan to absolve or condemn your practice and started looking at how you wield it. The honest read is: contemplative neuroscience mostly shows meditation shifting emotion via clearer awareness, prefrontal regulation and approach when it is taught and used well, and adverse-effect work shows that the same attentional knife can cut you into numb detachment or retraumatization if you swing it blindly. Healthy practice feels more like standing in a storm with better gear; bypass feels like hiding in a cave and calling the weather an illusion. The line is drawn not in your posture but in whether your life, over time, looks more contactful, honest and capable of holding pain.",
+"diamond": {
+"n1_compression": {},
+"n2_truthcore": {
+"claim": "Meditation is best understood as a flexible tool for emotion regulation that, in context, can support integration through awareness and reappraisal or serve avoidance through numbing and dissociation, with healthy versus bypassed use distinguished more by approach to lived difficulty and outcomes than by technique alone.",
+"mechanisms": [
+{
+"id": "mech_spiritual_bypass_integration_synthesis_001",
+"domain": "meta_theory",
+"concept": "spiritual_bypass_integration_synthesis",
+"definition": "An integrated view that treats spiritual bypassing as a misuse of contemplative tools for avoidance, while acknowledging robust evidence that those same tools can foster adaptive regulation and trauma integration when combined with approach, support and reflection.",
+"function": "Prevents both naive idealization of meditation as inherently therapeutic and cynical dismissal of it as mere avoidance, by tying evaluation to style of use and life effects.",
+"level": "psychological",
+"properties": [
+"integrative",
+"anti_reductionist",
+"clinically_actionable"
+],
+"source": {
+"citation": "Guendelman2017",
+"summary": "Supports a multi-level understanding where mindfulness mechanisms interact with individual differences and context to produce adaptive or maladaptive outcomes."
+}
+}
+],
+"correspondences": [],
+"evidence": {
+"empirical": [],
+"theoretical": [
+{
+"claim": "Different explanatory levels—neural regulation, clinical defence mechanisms, and spiritual frameworks—can be related without collapsing into a single metric of "good" or "bad" meditation.",
+"source": "Welwood2011",
+"evidence_type": "conceptual_analysis"
+}
+],
+"formal": []
+},
+"category_distinctions": [
+{
+"what": "Tool vs pattern of use",
+"is": "evaluating meditation in terms of how, why and with what support it is practiced",
+"is_not": "treating the mere presence of practice as proof of health or pathology",
+"why": "The same knife can prepare a meal or harm you; responsibility lies in the hand that holds it, not in the steel."
+}
+],
+"unknowns": []
+},
+"n3_meta": {
+"phase": "INTEGRATION",
+"progress": 1.0,
+"done": true,
+"stance": "peer",
+"reason": "User has articulated a nuanced answer that separates tool from use, integrates empirical and clinical views and answers the original question clearly.",
+"boss_move_completed": true
+}
+}
+}
+],
+"references": {
+"Welwood2011": {
+"id": "url:https://thefirstgates.com/2011/04/13/spiritual-bypassing-an-interview-with-john-welwood/
+",
+"type": "article",
+"authors": [
+"Welwood, John"
+],
+"year": 2011,
+"title": "Spiritual Bypassing: An Interview with John Welwood"
+},
+"Guendelman2017": {
+"id": "doi:10.3389/fpsyg.2017.00220",
+"type": "article",
+"authors": [
+"Guendelman, Silvia",
+"Medeiros, Simone",
+"Rampes, Hagen"
+],
+"year": 2017,
+"title": "Mindfulness and Emotion Regulation: Insights from Neurobiological, Psychological, and Clinical Studies"
+},
+"Zhou2023": {
+"id": "doi:10.3390/ijerph20021241",
+"type": "article",
+"authors": [
+"Zhou, Shuang",
+"Zhang, Xinyu",
+"Li, Xiaoqian"
+],
+"year": 2023,
+"title": "Linking Cognitive Reappraisal and Expressive Suppression to Mindfulness: A Three-Level Meta-Analysis"
+},
+"Goldin2007": {
+"id": "doi:10.1016/j.biopsycho.2007.01.006",
+"type": "article",
+"authors": [
+"Goldin, Philippe R.",
+"McRae, Kateri",
+"Ramel, Wiveka",
+"Gross, James J."
+],
+"year": 2008,
+"title": "The Neural Bases of Emotion Regulation: Reappraisal and Suppression of Negative Emotion"
+},
+"Lindahl2017": {
+"id": "doi:10.1371/journal.pone.0176239",
+"type": "article",
+"authors": [
+"Lindahl, Jared R.",
+"Fisher, Nisha E.",
+"Cooper, Daniel J.",
+"Rosen, Ronald K.",
+"Britton, Willoughby B."
+],
+"year": 2017,
+"title": "The Varieties of Contemplative Experience: A Mixed-Methods Study of Meditation-Related Challenges in Western Buddhists"
+},
+"Britton2021": {
+"id": "doi:10.1177/2167702621996340",
+"type": "article",
+"authors": [
+"Britton, Willoughby B.",
+"Lindahl, Jared R.",
+"Cahn, B. Rael",
+"Davis, Jake H.",
+"Goldberg, Sanford B."
+],
+"year": 2021,
+"title": "Defining and Measuring Meditation-Related Adverse Effects in Mindfulness-Based Programs"
+},
+"Matko2025": {
+"id": "doi:10.1016/j.psc.2025.100155",
+"type": "article",
+"authors": [
+"Matko, Katalin",
+"Sedlmeier, Peter"
+],
+"year": 2025,
+"title": "Adverse Effects of Meditation and Mindfulness in Clinical and Non-Clinical Samples: A Systematic Review"
+},
+"Schmidt2021": {
+"id": "url:https://www.researchgate.net/publication/349572570_Adverse_effects_of_meditation_A_review_of_observational_experimental_and_case_studies
+",
+"type": "article",
+"authors": [
+"Schmidt, Steffen"
+],
+"year": 2021,
+"title": "Adverse Effects of Meditation: A Review of Observational, Experimental, and Case Studies"
+},
+"Pauly2022": {
+"id": "doi:10.1192/bjo.2022.20",
+"type": "article",
+"authors": [
+"Pauly, Laura",
+"Krick, Anne",
+"Schmidt, Steffen"
+],
+"year": 2022,
+"title": "Prevalence, Predictors and Types of Unpleasant and Adverse Effects of Meditation in Regular Meditators: An International Cross-Sectional Study"
+},
+"LamasMorales2025": {
+"id": "doi:10.3389/fpsyg.2025.1442356",
+"type": "article",
+"authors": [
+"Lamas-Morales, Pablo",
+"Sedlmeier, Peter"
+],
+"year": 2025,
+"title": "Deconstructive Meditations and Psychotherapy: Transforming the Sense of Self"
+}
+},
+"outcome": {
+"taught": "Contemplative neuroscience supports meditation as a tool that usually enhances adaptive emotion regulation but can be co-opted into avoidance and suppression, with spiritual bypassing best understood as a way of using practice rather than an intrinsic effect, distinguishable in practice by whether difficult emotions are approached and integrated in life or chronically dodged.",
+"trajectory": "The user moved from asking whether meditation is inherently suppressive or healing to a layered understanding in which spiritual bypassing emerges when contemplative tools are used to avoid feeling and acting on difficult material, while healthy practice uses similar mechanisms to increase contact, meaning-making and behavioural change.",
+"indicators": [
+"grasped_mech_spiritual_bypass_defence_001",
+"grasped_mech_mindfulness_reappraisal_bias_001",
+"distinguished_healthy_from_avoidant_practice_via_outcomes",
+"answered_original_question_correctly"
+],
+"feedback_pedagogy": {
+"user_reported_click_turn": null,
+"user_reported_click_cause": null,
+"clarity_delta": {
+"before": null,
+"after": null
+},
+"subjective_note": null
+}
+}
+}

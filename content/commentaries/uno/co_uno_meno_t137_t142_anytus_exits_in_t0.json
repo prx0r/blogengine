@@ -1,0 +1,57 @@
+{
+  "co_id": "co:uno_meno_t137_t142_anytus_exits_in_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "meno_t137_t142_anytus_exits_in_anger",
+  "turn_index": 0,
+  "lineage": "Socratic",
+  "student_state": "cooperative_engagement",
+  "behavior_tags": [
+    "short_affirmation"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_01",
+    "function_name": "UM_01",
+    "mechanism_shape": "ABSTRACT_TO_CONCRETE",
+    "teaching_actions": [
+      "asserts_truth_despite_threat"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.85,
+      "intimacy": 0.15,
+      "attunement": 0.5,
+      "style": 0.5,
+      "depth": 0.62,
+      "meta_mode": 0.75,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_04",
+      "intimacy_discrete": "IN_01",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_03",
+      "meta_mode_discrete": "MM_02"
+    },
+    "predicted_impact": "go_along_compliantly",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "meno_t137_t142_anytus_exits_in_anger T1: Using abstract_to_concrete_check/UM_01 with intensity=PR_04, intimacy=IN_01, attunement=AT_02 on 'I advise you to be careful'. Response shows agreeing without elaboration; expecting go_along_compliantly next. If not, lower PR and re-anchor the hinge.",
+  "accumulated_insight": "T1: Student says 'I advise you to be careful.'?agreeing without elaboration (cooperative_engagement) via short_affirmation. Focus: I advise you to be careful. The abstract_to_concrete_check/UM_01 move applies shift their frame: standard function application. Pattern: go_along_compliantly. Confidence medium.",
+  "abstract_pattern": "",
+  "visible_response": "I am saying nothing but the truth, Anytus.\n\nIf they could teach virtue, they would teach their own sons.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:proclus-elements",
+    "ro:platonism-decoded",
+    "ro:chaldean-oracles"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

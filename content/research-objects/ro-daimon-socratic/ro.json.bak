@@ -1,0 +1,123 @@
+{
+  "ro_id": "ro:daimon-socratic",
+  "schema_version": 1,
+  "title": "The Socratic Daimonion",
+  "subtitle": "Plutarch, Apuleius, and Plato on Socrates' divine sign",
+  "family": "thinker-topic",
+  "status": "stub",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "Socrates' daimonion (divine sign) was a prohibitory voice that only said 'no.' This RO traces its treatment from Plato through Plutarch's De Genio Socratis and Apuleius' De Deo Socratis.",
+    "scope": "",
+    "traditions": [
+      "general"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "plutarch-de-genio-socratis",
+      "tier": 1,
+      "label": "plutarch-de-genio-socratis",
+      "status": "active"
+    },
+    {
+      "source_id": "apuleius-de-deo-socratis",
+      "tier": 1,
+      "label": "apuleius-de-deo-socratis",
+      "status": "active"
+    },
+    {
+      "source_id": "plato-apology-phaedrus",
+      "tier": 1,
+      "label": "plato-apology-phaedrus",
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "socratic_origin",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [],
+      "topics": [],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "plutarch_interpretation",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [],
+      "topics": [],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "apuleius_classification",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [],
+      "topics": [],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "the_prohibition_principle",
+      "kind": "source",
+      "text": "[Passage to be extracted]",
+      "source_ids": [],
+      "topics": [],
+      "status": "placeholder"
+    }
+  ],
+  "coverage": {
+    "socratic_origin": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    },
+    "plutarch_interpretation": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    },
+    "the_prohibition_principle": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    },
+    "apuleius_classification": {
+      "status": "partial",
+      "passage_count": 1,
+      "estimated_completeness": 0.35,
+      "gaps": []
+    }
+  },
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-13",
+      "type": "initial",
+      "summary": "Initial draft. 4 sections outlined.",
+      "sources_added": [
+        "plutarch-de-genio-socratis",
+        "apuleius-de-deo-socratis",
+        "plato-apology-phaedrus"
+      ],
+      "passage_count": 4,
+      "status": "draft"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-07-13",
+      "event": "RO created",
+      "sources_total": 3,
+      "passages_total": 4
+    }
+  ]
+}

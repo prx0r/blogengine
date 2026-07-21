@@ -1,0 +1,53 @@
+{
+  "co_id": "co:uno_therapy3_t993_t997_facing_eyes_t1",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3_t993_t997_facing_eyes_guilt",
+  "turn_index": 1,
+  "lineage": "Therapeutic",
+  "student_state": "resistant_modification",
+  "behavior_tags": [
+    "avoidance"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_04",
+    "function_name": "RM_04",
+    "mechanism_shape": "NONE",
+    "teaching_actions": [
+      "modifies_imagery"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.62,
+      "attunement": 0.5,
+      "style": 0.15,
+      "depth": 0.38,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_01",
+      "depth_discrete": "PD_02",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "no_clear_effect",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "'Guilt about anger'—is that guilt (I did wrong) or fear (I'll be punished)? Teacher separating guilt from fear. Real question: do they feel bad about anger (guilt) or afraid of consequence (fear)? Distinction matters for treatment.",
+  "accumulated_insight": "T2: Student names guilt about anger at father. Teacher distinguishes: 'Guilt or fear?' Challenges if it's real guilt (wrongdoing) vs fear (consequence). Predicting request_clarification as distinction introduced.",
+  "abstract_pattern": "",
+  "visible_response": "If they are open?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

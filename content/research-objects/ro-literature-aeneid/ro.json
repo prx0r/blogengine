@@ -1,0 +1,224 @@
+{
+  "ro_id": "ro:literature-aeneid",
+  "schema_version": 1,
+  "title": "The Aeneid Book VI \u2014 The Descent and the Vision",
+  "family": "theme",
+  "status": "draft",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "Virgil's Aeneid Book VI read as an initiatory descent: the golden bough, the Sibyl, and the vision of souls awaiting incarnation.",
+    "scope": "Covers the golden bough as threshold key; the Sibyl as guru; the underworld as kamaloca/Chonyid Bardo; Anchises showing souls awaiting birth as Steiner's spiritual world before incarnation; the Lethe as forgetting of past lives; the gate of horn and ivory as the two paths.",
+    "traditions": [
+      "hellenism",
+      "neoplatonism",
+      "initiation",
+      "karma",
+      "reincarnation",
+      "steiner"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "aeneid-vi",
+      "tier": 1,
+      "label": "Virgil \u2014 Aeneid Book VI (19 BCE)",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "primary_text",
+        "katabasis",
+        "eschatology",
+        "initiatory_structure"
+      ],
+      "sections_affected": [
+        "descent",
+        "soul_vision",
+        "return"
+      ],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "descent",
+      "subsection": "golden_bough_threshold_key",
+      "kind": "analysis",
+      "text": "[The golden bough is the key to the threshold \u2014 the token that allows the living to enter the realm of the dead. It must be plucked from the tree by force of will (if the Fates call you, it yields easily; if not, no strength can take it). This is the talisman of election, the sign that the initiand is ready. In alchemical terms, it is the tincture that grants passage between worlds.]",
+      "source_ids": [
+        "aeneid-vi"
+      ],
+      "topics": [
+        "golden_bough",
+        "threshold",
+        "key",
+        "election"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "descent",
+      "subsection": "sibyl_guru",
+      "kind": "analysis",
+      "text": "[The Sibyl of Cumae is the guru \u2014 the one who has access to the underworld and knows the paths. She warns Aeneas of the dangers, demands the golden bough, and leads him through the descent. Her prophetic frenzy is the possession by the daimon: 'God is in me, I rave, I foretell.' She represents the theurgic priestess who mediates between the worlds.]",
+      "source_ids": [
+        "aeneid-vi"
+      ],
+      "topics": [
+        "sibyl",
+        "guru",
+        "prophetess",
+        "possession"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "underworld",
+      "subsection": "kamaloca_bardo",
+      "kind": "analysis",
+      "text": "[The Virgilian underworld corresponds to the kamaloca (desire realm) and the Chonyid Bardo (the bardo of reality) of Tibetan tradition. The souls at the threshold clamoring for passage across the Styx are those still bound by desire; the various regions of punishment and purification map to the karmic visions of the bardo. Aeneas sees what the soul experiences between death and rebirth.]",
+      "source_ids": [
+        "aeneid-vi"
+      ],
+      "topics": [
+        "kamaloca",
+        "bardo",
+        "desire_realm",
+        "afterlife_sight"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "underworld",
+      "subsection": "anchises_spiritual_world",
+      "kind": "analysis",
+      "text": "[Anchises showing Aeneas the souls awaiting birth in the Elysian fields corresponds to Steiner's description of the spiritual world before incarnation: souls in their geistige Heimat, choosing their next destiny, drinking of Lethe to forget. The pageant of future Roman heroes is the vision of the soul's plan for its coming life \u2014 the pre-incarnative intention.]",
+      "source_ids": [
+        "aeneid-vi"
+      ],
+      "topics": [
+        "anchises",
+        "souls",
+        "pre_incarnation",
+        "steiner"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "underworld",
+      "subsection": "lethe_forgetting",
+      "kind": "analysis",
+      "text": "[The Lethe is the river of forgetting \u2014 souls drink its waters before returning to birth to lose the memory of their spiritual origin and the plan they chose. This is the necessary amnesia for incarnation, the veil of the Earth tattva. The initiatory work, in this context, is the recovery of what was forgotten \u2014 the anamnesis that is the core of Platonic philosophy.]",
+      "source_ids": [
+        "aeneid-vi"
+      ],
+      "topics": [
+        "lethe",
+        "forgetting",
+        "amnesia",
+        "anamnesis",
+        "incarnation"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_006",
+      "section": "return",
+      "subsection": "gate_horn_ivory",
+      "kind": "analysis",
+      "text": "[The gate of horn (true visions) and the gate of ivory (false dreams) represent the two paths after the initiatory vision. Aeneas exits through the ivory gate \u2014 a famously puzzling detail. The horn gate gives true shades (the real visions); the ivory gate sends false dreams to the upper world. This is the choice between integrating the vision into life or letting it remain a dream. Aeneas' exit through ivory may signal the vision is yet to be fully embodied.]",
+      "source_ids": [
+        "aeneid-vi"
+      ],
+      "topics": [
+        "horn_gate",
+        "ivory_gate",
+        "true_visions",
+        "false_dreams",
+        "integration"
+      ],
+      "status": "placeholder"
+    }
+  ],
+  "coverage": {
+    "descent": {
+      "status": "good",
+      "sources": [
+        "aeneid-vi"
+      ],
+      "passage_count": 2,
+      "estimated_completeness": 0.7,
+      "gaps": [
+        "Deeper analysis of the ritual of descent needed"
+      ]
+    },
+    "underworld": {
+      "status": "good",
+      "sources": [
+        "aeneid-vi"
+      ],
+      "passage_count": 3,
+      "estimated_completeness": 0.7,
+      "gaps": [
+        "Systematic comparison with Tibetan bardo literature needed"
+      ]
+    },
+    "return": {
+      "status": "good",
+      "sources": [
+        "aeneid-vi"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 0.6,
+      "gaps": [
+        "More scholarship on the horn/ivory gate problem needed"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "placeholder",
+      "title": "All passages currently referencing analysis framework",
+      "description": "Passages need to be elaborated with primary text citations and line references.",
+      "status": "open",
+      "created": "2026-07-13",
+      "auto_generated": true
+    },
+    {
+      "id": "issue-002",
+      "type": "coverage_gap",
+      "title": "Missing Neoplatonic commentary on Aeneid VI",
+      "description": "Should integrate Macrobius' Commentary on the Dream of Scipio and Servius' commentary for the Neoplatonic reading of the descent.",
+      "status": "open",
+      "created": "2026-07-13",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-13",
+      "type": "initial",
+      "summary": "Initial RO mapping Aeneid Book VI as initiatory katabasis. 6 passage framework established.",
+      "sources_added": [
+        "aeneid-vi"
+      ],
+      "passage_count": 6,
+      "status": "draft"
+    }
+  ],
+  "appendices": [],
+  "timeline": [
+    {
+      "date": "2026-07-13",
+      "event": "RO created in draft state with initiatory reading of Aeneid VI",
+      "sources_total": 1,
+      "passages_total": 6
+    }
+  ]
+}

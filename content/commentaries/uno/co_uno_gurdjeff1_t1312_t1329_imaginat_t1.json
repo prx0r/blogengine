@@ -1,0 +1,62 @@
+{
+  "co_id": "co:uno_gurdjeff1_t1312_t1329_imaginat_t1",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gurdjeff1_t1312_t1329_imagination_as_uncontrolled_activity",
+  "turn_index": 1,
+  "lineage": "Gurdjieffian",
+  "student_state": "seeking_to_analyze_before_acting",
+  "behavior_tags": [
+    "proposes_analytic_strategy",
+    "assumes_causality_is_necessary"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_04",
+    "function_name": "RM_04",
+    "mechanism_shape": "CONSTRAINT_COLLAPSE",
+    "teaching_actions": [
+      "rejects_causal_analysis",
+      "gives_direct_instruction",
+      "demands_replacement_activity"
+    ],
+    "traps_avoided": [
+      "analytic_delay",
+      "causal_fixation"
+    ],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.62,
+      "attunement": 0.5,
+      "style": 0.5,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "request_clarification",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The rejection works: no causal analysis, stop at once, replace with intentional thinking. The student proposed analytic strategy (seeking to analyze before acting), which shows they understand: cause = necessary. They'll likely ask about observation next.",
+  "accumulated_insight": "T2: Student proposed analytic strategy ('In trying to resist imagination, should one find the cause of it?')—seeking to analyze before acting via proposes analytic strategy and assumes causality is necessary. They understand: cause = necessary (analytic strategy). The constraint_collapse mechanism rejects: no causal analysis, stop at once, replace with intentional thinking ('No, stop it at once. There are always causes. Replace it by something else—some intentional thinking'). Pattern: obstacle identification → differentiation → analytic question → rejection → [next: observation question]. They're grasping: analysis = delay, action = immediate (rejection).",
+  "abstract_pattern": "",
+  "visible_response": "No, stop it at once. There are always causes. Replace it by something else—some\nintentional thinking.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:sufi-comparative-analysis",
+    "ro:steiner-tantraloka-parallels"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

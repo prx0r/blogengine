@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurora Jazz Geode</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #111118;
+            --text-color: #d9e1f2;
+            --label-color: rgba(217, 225, 242, 0.6);
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #canvasContainer {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        canvas {
+            display: block;
+            background-color: transparent;
+        }
+
+        #infoLabel {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: var(--label-color);
+            pointer-events: none;
+            text-shadow: 0 0 5px var(--bg-color);
+            text-align: center;
+        }
+
+        .controls {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .play-button {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 1rem;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            pointer-events: auto;
+        }
+
+        .play-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.6);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div id="canvasContainer">
+        <canvas id="artCanvas"></canvas>
+        <div id="infoLabel">Visualizing: <span>Aurora Jazz Geode</span></div>
+        <div class="controls">
+            <button id="playButton" class="play-button">▶ Play</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- DOM Elements & Contexts ---
+            const mainCanvas = document.getElementById('artCanvas');
+            const mainCtx = mainCanvas.getContext('2d');
+            const playButton = document.getElementById('playButton');
+
+            // --- State Management ---
+            let crystals = [];
+            let isPlaying = false;
+            let jazzInstruments = {};
+            let audioReady = false;
+            let lastBeat = 0;
+            let lastChordTime = 0;
+            let frameCount = 0;
+
+            // --- Audio State ---
+            const visualState = {
+                geometric_alignment: 0.5,
+                chaos_level: 0.6,
+                color_brightness: 0.9,
+                movement_speed: 1.5,
+                particle_density: 0.8,
+                intensity: 0.7,
+                syncopation: 0.7
+            };
+
+            const engineState = {
+                tuningSystem: '12-TET',
+                microtonalOffset: 25,
+                fundamentalFrequency: 220,
+                spectralProfile: 'warm-glow',
+                fractalDepth: 3,
+                valence: 0.6,
+                arousal: 0.4,
+                superpositionStates: 4
+            };
+
+            // --- Jazz Chord Progressions ---
+            const jazzChords = {
+                swing: [
+                    ['C4', 'E4', 'G4', 'Bb4'],
+                    ['F4', 'A4', 'C5', 'Eb5'],
+                    ['G4', 'B4', 'D5', 'F5'],
+                    ['C4', 'E4', 'G4', 'Bb4']
+                ],
+                blues: [
+                    ['C4', 'E4', 'G4', 'Bb4'],
+                    ['F4', 'A4', 'C5', 'Eb5'],
+                    ['C4', 'E4', 'G4', 'Bb4'],
+                    ['G4', 'B4', 'D5', 'F5']
+                ],
+                bebop: [
+                    ['D4', 'F#4', 'A4', 'C5'],
+                    ['G4', 'B4', 'D5', 'F5'],
+                    ['C4', 'E4', 'G4', 'B4'],
+                    ['A4', 'C5', 'E5', 'G5']
+                ]
+            };
+
+            // --- Microtonal Tuning ---
+            const tuningSystems = {
+                '12-TET': { divisions: 12, centsPerStep: 100 },
+                '24-TET': { divisions: 24, centsPerStep: 50 },
+                'JI': { ratios: { 'C4': 1, 'E4': 5/4, 'G4': 3/2, 'Bb4': 7/4 } }
+            };
+
+            // --- Color Palettes ---
+            const PALETTES = [
+                { name: "Amethyst", hues: [260, 300] },
+                { name: "Fluorite", hues: [160, 220] },
+                { name: "Rose Quartz", hues: [330, 360] },
+                { name: "Citrine", hues: [40, 60] },
+                { name: "Emerald", hues: [120, 160] },
+                { name: "Topaz", hues: [25, 45] },
+                { name: "Sapphire", hues: [210, 250] },
+                { name: "Garnet", hues: [0, 20] },
+            ];
+            let currentPalette = PALETTES[0]; // Start with Amethyst
+
+            // --- Utilities ---
+            const rand = (min, max) => Math.random() * (max - min) + min;
+            const randChoice = (arr) => arr[Math.floor(Math.random() * arr.length)];
+            const dist = (p1, p2) => Math.hypot(p1.x - p2.x, p1.y - p2.y);
+
+            function selectTuningSystem(visualState) {
+                const complexity = visualState.chaos_level + visualState.geometric_alignment;
+                if (complexity < 0.5) return '12-TET';
+                if (complexity < 0.8) return '24-TET';
+                return 'JI';
+            }
+
+            function recursiveHarmony(baseProgression, iterations) {
+                if (iterations === 0) return baseProgression;
+                let expanded = [];
+                baseProgression.forEach(chord => {
+                    expanded.push(chord);
+                    const variedChord = chord.map(note => {
+                        if (Math.random() < 0.3) {
+                            const octaveUp = note.replace(/\d/, n => parseInt(n) + 1);
+                            return octaveUp;
+                        }
+                        return note;
+                    });
+                    expanded.push(variedChord);
+                });
+                return recursiveHarmony(expanded, iterations - 1);
+            }
+
+            // --- Audio Setup ---
+            function initJazzAudio() {
+                Tone.start().then(() => {
+                    jazzInstruments.piano = new Tone.PolySynth(Tone.Synth, {
+                        oscillator: { type: 'sine' },
+                        envelope: { attack: 0.05, decay: 0.4, sustain: 0.2, release: 1.5 }
+                    }).toDestination();
+
+                    jazzInstruments.bass = new Tone.Synth({
+                        oscillator: { type: 'sine' },
+                        envelope: { attack: 0.02, decay: 0.2, sustain: 0.4, release: 1.0 }
+                    }).toDestination();
+
+                    jazzInstruments.brass = new Tone.PolySynth(Tone.Synth, {
+                        oscillator: { type: 'sine' },
+                        envelope: { attack: 0.15, decay: 0.3, sustain: 0.5, release: 1.2 }
+                    }).toDestination();
+
+                    const reverb = new Tone.Reverb(3.0).toDestination();
+                    const delay = new Tone.PingPongDelay("8n", 0.2).toDestination();
+                    jazzInstruments.piano.connect(reverb);
+                    jazzInstruments.brass.connect(delay);
+                    jazzInstruments.bass.connect(reverb);
+
+                    audioReady = true;
+                    console.log('Audio initialized with sine waves');
+                }).catch(err => {
+                    console.error('Audio context error:', err);
+                });
+            }
+
+            function playJazzChord(chordType = 'swing', sceneIndex = 0) {
+                if (!isPlaying || !audioReady) return;
+
+                const progression = recursiveHarmony(jazzChords[chordType] || jazzChords.swing, engineState.fractalDepth);
+                const chord = progression[sceneIndex % progression.length];
+
+                const tuning = tuningSystems[engineState.tuningSystem];
+                const microtonalChord = chord.map(note => {
+                    if (tuning.ratios && tuning.ratios[note]) {
+                        const cents = 1200 * Math.log2(tuning.ratios[note]);
+                        return { note, cents };
+                    }
+                    return { note, cents: Math.random() * engineState.microtonalOffset };
+                });
+
+                const velocity = 0.3 + engineState.valence * 0.3;
+                jazzInstruments.piano.triggerAttackRelease(microtonalChord.map(c => c.note), '4n', '+0', velocity);
+                const bassNote = chord[0].replace('4', '2');
+                jazzInstruments.bass.triggerAttackRelease(bassNote, '4n', '+0', 0.4);
+                if (Math.random() < 0.4) {
+                    jazzInstruments.brass.triggerAttackRelease(chord.slice(0, 2), '2n', '+0.5', 0.25);
+                }
+
+                // Trigger visual response
+                crystals.forEach(c => {
+                    if (c.growthQueue.length < 50) {
+                        const lastIndex = c.vertices.length - 1;
+                        if (lastIndex >= 0) {
+                            c.growthQueue.push({
+                                fromIndex: lastIndex,
+                                angle: rand(-0.8, 0.8),
+                                length: rand(20, 80)
+                            });
+                        }
+                    }
+                    c.scalePulse = 1.2;
+                });
+                lastChordTime = performance.now();
+            }
+
+            function startJazzExperience() {
+                if (!audioReady) {
+                    initJazzAudio();
+                    setTimeout(startJazzExperience, 100);
+                    return;
+                }
+
+                isPlaying = !isPlaying;
+                playButton.textContent = isPlaying ? '⏸ Pause' : '▶ Play';
+                playButton.style.background = isPlaying ? 'rgba(255, 255, 255, 0.3)' : 'rgba(255, 255, 255, 0.2)';
+                if (!isPlaying) {
+                    Tone.Transport.stop();
+                    Object.values(jazzInstruments).forEach(instrument => instrument.triggerRelease());
+                } else {
+                    playJazzChord('swing', sceneIndex);
+                }
+            }
+
+            // --- Canvas Setup ---
+            function resizeCanvas() {
+                const w = window.innerWidth;
+                const h = window.innerHeight;
+                mainCanvas.width = w;
+                mainCanvas.height = h;
+            }
+            window.addEventListener('resize', resizeCanvas);
+
+            // --- Crystal Class ---
+            class Crystal {
+                constructor(x, y) {
+                    this.center = { x, y };
+                    this.vertices = [];
+                    this.growthQueue = [];
+                    this.lifespan = rand(800, 1600);
+                    this.age = 0;
+                    this.hue = rand(currentPalette.hues[0], currentPalette.hues[1]);
+                    this.rotation = rand(0, Math.PI * 2);
+                    this.rotationSpeed = rand(-0.001, 0.001);
+                    this.isDark = Math.random() < 0.25;
+                    this.scalePulse = 1.0;
+
+                    const initialPoints = Math.floor(rand(3, 7));
+                    const initialRadius = rand(5, 10);
+                    for (let i = 0; i < initialPoints; i++) {
+                        const angle = (i / initialPoints) * Math.PI * 2;
+                        const newVertex = {
+                            x: Math.cos(angle) * initialRadius,
+                            y: Math.sin(angle) * initialRadius,
+                        };
+                        this.vertices.push(newVertex);
+                        this.growthQueue.push({ fromIndex: i, angle: angle + rand(-0.5, 0.5), length: rand(20, 80) });
+                    }
+                }
+
+                get isFinished() { return this.age >= this.lifespan && this.growthQueue.length === 0; }
+
+                update(jazzPulse, valence, arousal) {
+                    this.age++;
+                    this.rotation += this.rotationSpeed;
+                    this.scalePulse = Math.max(1.0, this.scalePulse * 0.95);
+
+                    if (this.growthQueue.length > 0 && Math.random() < 0.2 * (1 + jazzPulse)) {
+                        const growthJob = this.growthQueue.shift();
+                        const fromVertex = this.vertices[growthJob.fromIndex];
+
+                        if (!fromVertex) return;
+
+                        const newVertex = {
+                            x: fromVertex.x + Math.cos(growthJob.angle) * growthJob.length,
+                            y: fromVertex.y + Math.sin(growthJob.angle) * growthJob.length,
+                        };
+
+                        let tooClose = false;
+                        for (const v of this.vertices) {
+                            if (dist(v, newVertex) < 20) {
+                                tooClose = true;
+                                break;
+                            }
+                        }
+
+                        if (!tooClose) {
+                            const newIndex = this.vertices.push(newVertex) - 1;
+                            if (this.growthQueue.length < 50) {
+                                this.growthQueue.push({ fromIndex: newIndex, angle: growthJob.angle + rand(-0.8, 0.8), length: rand(20, 80) });
+                                if (Math.random() < 0.3) {
+                                    this.growthQueue.push({ fromIndex: newIndex, angle: growthJob.angle + rand(-0.8, 0.8), length: rand(20, 80) });
+                                }
+                            }
+                        }
+                    }
+
+                    // Update hue based on valence and arousal
+                    this.hue = (currentPalette.hues[0] + (currentPalette.hues[1] - currentPalette.hues[0]) * valence) % 360;
+                }
+
+                draw(ctx) {
+                    const progress = this.age / this.lifespan;
+                    const chordPulse = Math.exp(-((performance.now() - lastChordTime) / 200)) * 0.3;
+                    const alpha = Math.sin(progress * Math.PI) * (0.3 + chordPulse);
+
+                    if (alpha <= 0) return;
+
+                    ctx.save();
+                    ctx.translate(this.center.x, this.center.y);
+                    ctx.rotate(this.rotation);
+                    ctx.scale(this.scalePulse, this.scalePulse);
+
+                    if (this.isDark) {
+                        ctx.beginPath();
+                        if (this.vertices.length > 0) {
+                            ctx.moveTo(this.vertices[0].x, this.vertices[0].y);
+                            for (let i = 1; i < this.vertices.length; i++) {
+                                ctx.lineTo(this.vertices[i].x, this.vertices[i].y);
+                            }
+                        }
+                        ctx.closePath();
+                        ctx.strokeStyle = `hsla(0, 0%, 5%, ${alpha * 0.7})`;
+                        ctx.lineWidth = 1;
+                        ctx.stroke();
+
+                        ctx.beginPath();
+                        for (let i = 0; i < this.vertices.length; i++) {
+                            ctx.moveTo(0, 0);
+                            ctx.lineTo(this.vertices[i].x, this.vertices[i].y);
+                        }
+                        ctx.lineWidth = 0.2;
+                        ctx.stroke();
+                    } else {
+                        ctx.beginPath();
+                        if (this.vertices.length > 0) {
+                            ctx.moveTo(this.vertices[0].x * 1.1, this.vertices[0].y * 1.1);
+                            for (let i = 1; i < this.vertices.length; i++) {
+                                ctx.lineTo(this.vertices[i].x * 1.1, this.vertices[i].y * 1.1);
+                            }
+                        }
+                        ctx.closePath();
+                        ctx.fillStyle = `hsla(${this.hue}, 80%, 85%, ${alpha * 0.1})`;
+                        ctx.fill();
+
+                        ctx.beginPath();
+                        if (this.vertices.length > 0) {
+                            ctx.moveTo(this.vertices[0].x, this.vertices[0].y);
+                            for (let i = 1; i < this.vertices.length; i++) {
+                                ctx.lineTo(this.vertices[i].x, this.vertices[i].y);
+                            }
+                        }
+                        ctx.closePath();
+                        ctx.strokeStyle = `hsla(${this.hue}, 80%, 85%, ${alpha * 0.6})`;
+                        ctx.fillStyle = `hsla(${this.hue}, 80%, 15%, ${alpha * 0.2})`;
+                        ctx.lineWidth = 1;
+                        ctx.fill();
+                        ctx.stroke();
+
+                        ctx.beginPath();
+                        for (let i = 0; i < this.vertices.length; i++) {
+                            ctx.moveTo(0, 0);
+                            ctx.lineTo(this.vertices[i].x, this.vertices[i].y);
+                        }
+                        ctx.lineWidth = 0.3;
+                        ctx.strokeStyle = `hsla(${this.hue}, 80%, 85%, ${alpha * 0.4})`;
+                        ctx.stroke();
+                    }
+
+                    ctx.restore();
+                }
+            }
+
+            // --- Scenes ---
+            const SCENES = [
+                {
+                    name: "Awakening: Gentle Swing",
+                    duration: 20000,
+                    tuningSystem: '12-TET',
+                    valence: 0.6,
+                    arousal: 0.4,
+                    chaos_level: 0.5,
+                    palette: PALETTES[0], // Amethyst
+                    rhythm_pattern: 'swing'
+                },
+                {
+                    name: "Blue Horizon: Soulful Blues",
+                    duration: 25000,
+                    tuningSystem: '24-TET',
+                    valence: 0.3,
+                    arousal: 0.6,
+                    chaos_level: 0.7,
+                    palette: PALETTES[6], // Sapphire
+                    rhythm_pattern: 'syncopated'
+                },
+                {
+                    name: "Stellar Bebop: Cosmic Dance",
+                    duration: 18000,
+                    tuningSystem: 'JI',
+                    valence: 0.8,
+                    arousal: 0.8,
+                    chaos_level: 0.6,
+                    palette: PALETTES[4], // Emerald
+                    rhythm_pattern: 'bebop'
+                }
+            ];
+
+            let sceneIndex = 0;
+            let sceneStartTime = 0;
+
+            function getJazzPulse(time, pattern = 'swing') {
+                const baseTime = time * 0.7;
+                switch (pattern) {
+                    case 'swing':
+                        const swingBeat = Math.floor(baseTime * 2) % 4;
+                        const swingOffset = swingBeat % 2 === 0 ? 0 : 0.3;
+                        return Math.sin(baseTime * Math.PI + swingOffset) * 0.5 + 0.5;
+                    case 'syncopated':
+                        return Math.sin(baseTime * Math.PI * 1.4 + Math.PI/3) * 0.6 + 0.4;
+                    case 'bebop':
+                        return (Math.sin(baseTime * Math.PI * 2.5) + Math.sin(baseTime * Math.PI * 4) * 0.3) * 0.4 + 0.5;
+                    default:
+                        return Math.sin(baseTime * Math.PI) * 0.5 + 0.5;
+                }
+            }
+
+            // --- Main Animation Loop ---
+            function mainAnimationLoop(time) {
+                if (mainCanvas.width === 0 || mainCanvas.height === 0) {
+                    requestAnimationFrame(mainAnimationLoop);
+                    return;
+                }
+                frameCount++;
+
+                const elapsedTime = time - sceneStartTime;
+                const currentScene = SCENES[sceneIndex];
+                const progress = Math.min(elapsedTime / currentScene.duration, 1.0);
+                currentPalette = currentScene.palette;
+
+                // Audio Sync
+                const beatInterval = 60000 / 130;
+                if (time - lastBeat > beatInterval && isPlaying && audioReady) {
+                    let chordType = 'swing';
+                    if (currentScene.rhythm_pattern === 'syncopated') chordType = 'blues';
+                    if (currentScene.rhythm_pattern === 'bebop') chordType = 'bebop';
+                    playJazzChord(chordType, Math.floor((time - sceneStartTime) / 1500) % 4);
+                    lastBeat = time;
+                }
+
+                // Scene Transitions
+                if (progress >= 1.0) {
+                    sceneIndex = (sceneIndex + 1) % SCENES.length;
+                    sceneStartTime = time;
+                    const newScene = SCENES[sceneIndex];
+                    engineState.tuningSystem = selectTuningSystem(visualState);
+                    engineState.valence = newScene.valence;
+                    engineState.arousal = newScene.arousal;
+                    visualState.chaos_level = newScene.chaos_level;
+                    document.getElementById('infoLabel').innerHTML = `Visualizing: <span>${newScene.name}</span>`;
+                }
+
+                // Update Visuals
+                const jazzPulse = getJazzPulse(time / 1000, currentScene.rhythm_pattern);
+
+                mainCtx.globalCompositeOperation = 'source-over';
+                mainCtx.fillStyle = 'rgba(12, 10, 24, 0.18)';
+                mainCtx.fillRect(0, 0, mainCanvas.width, mainCanvas.height);
+
+                mainCtx.globalCompositeOperation = 'lighter';
+
+                crystals = crystals.filter(c => !c.isFinished);
+                crystals.forEach(c => {
+                    c.update(jazzPulse, engineState.valence, engineState.arousal);
+                    c.draw(mainCtx);
+                });
+
+                if (crystals.length < 10 && Math.random() < 0.012 * (1 + jazzPulse)) {
+                    const centerX = mainCanvas.width / 2;
+                    const centerY = mainCanvas.height / 2;
+                    crystals.push(new Crystal(
+                        centerX + rand(-100, 100),
+                        centerY + rand(-100, 100)
+                    ));
+                }
+
+                requestAnimationFrame(mainAnimationLoop);
+            }
+
+            // --- Start ---
+            resizeCanvas();
+            for (let i = 0; i < 3; i++) {
+                crystals.push(new Crystal(
+                    mainCanvas.width / 2 + rand(-100, 100),
+                    mainCanvas.height / 2 + rand(-100, 100)
+                ));
+            }
+            playButton.addEventListener('click', startJazzExperience);
+            requestAnimationFrame(mainAnimationLoop);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,782 @@
+/**
+ * ENHANCED UNIVERSAL VISUAL-MUSIC TRANSLATION ENGINE
+ * Advanced Mathematical Foundation for Visual-to-Musical Score Generation
+ * 
+ * Based on cutting-edge research in:
+ * - Dmitri Tymoczko's Geometry of Music (5 features of tonality)
+ * - Neo-Riemannian Theory with advanced PLR transformations
+ * - Pythagorean harmonic ratios + microtonal extensions
+ * - Spectral Music Theory (Grisey, Murail, IRCAM research)
+ * - Xenharmonic Theory (24-TET, 31-TET, just intonation)
+ * - Chaos Theory & Strange Attractors for composition
+ * - Category Theory & Topos foundations (Mazzola)
+ * - Advanced Psychoacoustics & Granular Synthesis
+ * - Quantum-inspired superposition concepts
+ * - Fractal & Recursive Temporal Structures
+ * - Emotion-driven generation (Russell's circumplex model)
+ */
+
+class EnhancedUniversalVisualMusicEngine {
+    constructor() {
+        this.initializeHarmonicFoundations();
+        this.initializeMicrotonalSupport();
+        this.initializeSpectralMusicTheory();
+        this.initializeScaleSpaces();
+        this.initializeTimbreMapping();
+        this.initializeRhythmicStructures();
+        this.initializeImprovisationEngine();
+        this.initializeInstrumentSelection();
+        this.initializeChaosTheory();
+        this.initializeCategoryTheory();
+        this.initializeQuantumConcepts();
+        this.initializeEmotionalModel();
+        this.initializeFractalStructures();
+        
+        // Enhanced current musical state
+        this.currentState = {
+            key: 'C',
+            mode: 'major',
+            tuningSystem: '12-TET', // Can switch to 24-TET, 31-TET, JI, etc.
+            microtonalOffset: 0,    // Cents deviation for microtones
+            chordSpace: this.createChordSpace(),
+            voiceLeadingHistory: [],
+            melodicTension: 0.5,
+            harmonicRhythm: 'moderate',
+            currentChord: null,
+            scale: null,
+            chaosAttractor: null,
+            emotionalState: { valence: 0, arousal: 0 },
+            spectralProfile: null,
+            fractalDepth: 3
+        };
+        
+        // Enhanced real-time score generation
+        this.score = {
+            measures: [],
+            timeSignature: [4, 4],
+            tempo: 120,
+            key: 'C',
+            tuningSystem: '12-TET',
+            instruments: [],
+            microtonalPitchBends: [],
+            spectralAnalysis: null,
+            chaosParameters: null,
+            emotionalArc: []
+        };
+    }
+
+    // === MICROTONAL/XENHARMONIC FOUNDATIONS ===
+    
+    initializeMicrotonalSupport() {
+        // Support for various equal temperament systems
+        this.tuningSystem = {
+            '12-TET': { divisions: 12, centsPerStep: 100 },
+            '24-TET': { divisions: 24, centsPerStep: 50 },   // Quarter tones
+            '31-TET': { divisions: 31, centsPerStep: 38.71 }, // Close to meantone
+            '19-TET': { divisions: 19, centsPerStep: 63.16 }, // Historical interest
+            '22-TET': { divisions: 22, centsPerStep: 54.55 }, // Arabic maqam approximation
+            '53-TET': { divisions: 53, centsPerStep: 22.64 }  // Very close to just intonation
+        };
+
+        // Just intonation ratios mapped to fractal depth/visual parameters
+        this.justIntonationRatios = {
+            // Pythagorean foundation
+            1: 1/1,        // Unison
+            2: 9/8,        // Major second  
+            3: 5/4,        // Major third
+            4: 4/3,        // Perfect fourth
+            5: 3/2,        // Perfect fifth
+            6: 5/3,        // Major sixth
+            7: 15/8,       // Major seventh
+            
+            // Extended harmonic series for deeper fractal layers
+            8: 7/4,        // Harmonic seventh
+            9: 11/8,       // Undecimal fourth
+            10: 13/8,      // Tridecimal sixth
+            11: 17/16,     // 17th harmonic semitone
+            12: 19/16,     // 19th harmonic
+            13: 23/16,     // 23rd harmonic
+            14: 29/16,     // 29th harmonic
+            15: 31/16      // 31st harmonic
+        };
+
+        // Microtonal consonance calculation (extended Pythagorean approach)
+        this.microtonalConsonance = (ratio_num, ratio_den) => {
+            const gcd = this.greatestCommonDivisor(ratio_num, ratio_den);
+            const complexity = ratio_num + ratio_den - gcd;
+            return 1 / Math.log2(complexity + 1); // Logarithmic consonance scale
+        };
+    }
+
+    // === SPECTRAL MUSIC THEORY INTEGRATION ===
+    
+    initializeSpectralMusicTheory() {
+        // Based on Grisey, Murail, and IRCAM research
+        this.spectralAnalysis = {
+            // Fundamental for spectral analysis
+            fundamentalFrequency: 220, // A3
+            
+            // Harmonic series with amplitude decay
+            harmonicSeries: Array.from({length: 16}, (_, i) => ({
+                partial: i + 1,
+                frequency: 220 * (i + 1),
+                amplitude: 1 / Math.sqrt(i + 1), // Natural decay
+                phase: Math.random() * 2 * Math.PI
+            })),
+            
+            // Spectral morphing between timbres
+            morphingEngine: {
+                sourceSpectrum: null,
+                targetSpectrum: null,
+                morphFactor: 0.0
+            },
+            
+            // Additive synthesis for microtonal partials
+            additiveOscillators: []
+        };
+
+        // Spectral chord generation from harmonic analysis
+        this.generateSpectralChord = (fundamental, inharmonicity = 0) => {
+            const partials = [];
+            for (let i = 1; i <= 8; i++) {
+                const frequency = fundamental * i * (1 + inharmonicity * Math.random());
+                const pitchClass = this.frequencyToPitchClass(frequency);
+                partials.push({
+                    pitchClass: pitchClass,
+                    frequency: frequency,
+                    amplitude: 1 / Math.sqrt(i),
+                    microtonal_offset: this.frequencyToCents(frequency) % 100
+                });
+            }
+            return partials;
+        };
+    }
+
+    // === CHAOS THEORY & STRANGE ATTRACTORS ===
+    
+    initializeChaosTheory() {
+        // Strange attractors for musical generation
+        this.chaosSystem = {
+            // Lorenz attractor parameters
+            lorenz: {
+                σ: 10,      // Prandtl number
+                ρ: 28,      // Rayleigh number  
+                β: 8/3,     // Aspect ratio
+                x: 1, y: 1, z: 1,  // Current state
+                dt: 0.01    // Time step
+            },
+            
+            // Hénon map for discrete chaos
+            henon: {
+                a: 1.4,
+                b: 0.3,
+                x: 0.1,
+                y: 0.1
+            },
+            
+            // Mandelbrot set parameters for harmony
+            mandelbrot: {
+                maxIterations: 100,
+                escapeRadius: 2
+            }
+        };
+
+        // Fractal-based harmony generation
+        this.generateFractalHarmony = (visualState) => {
+            const iterationCount = this.mandelbrotIteration(
+                visualState.geometric_alignment,
+                visualState.chaos_level
+            );
+            
+            const complexity = Math.min(iterationCount / this.chaosSystem.mandelbrot.maxIterations, 1);
+            
+            return {
+                chordComplexity: complexity,
+                extensions: this.mapComplexityToExtensions(complexity),
+                alterations: this.mapChaosToAlterations(visualState.chaos_level),
+                voicingSpread: this.mapIterationsToVoicing(iterationCount)
+            };
+        };
+    }
+
+    // === CATEGORY THEORY & TOPOS FOUNDATIONS ===
+    
+    initializeCategoryTheory() {
+        // Inspired by Mazzola's "Topos of Music"
+        this.topologicalStructures = {
+            // Musical objects as functors
+            chordCategory: {
+                objects: new Set(), // All possible chord types
+                morphisms: new Map(), // Transformations between chords
+                composition: this.composeMorphisms.bind(this),
+                identity: this.identityMorphism.bind(this)
+            },
+            
+            // Rhythm as temporal topology
+            rhythmTopology: {
+                openSets: new Set(),
+                basis: this.generateRhythmicBasis(),
+                continuousMaps: new Map()
+            },
+            
+            // Denotator-like structures for complex musical objects
+            musicalDenotators: {
+                forms: new Map(), // Basic musical forms
+                coordinateCharts: new Map(), // Local representations
+                globalStructure: null // Global composition structure
+            }
+        };
+
+        // Classify musical structures using topos theory
+        this.classifyMusicalStructure = (visualState) => {
+            const structuralProperties = {
+                symmetries: this.detectSymmetries(visualState),
+                topologicalInvariants: this.computeTopologicalInvariants(visualState),
+                categoricalDimension: this.computeCategoricalDimension(visualState),
+                homologyGroups: this.computeHomology(visualState)
+            };
+            
+            return structuralProperties;
+        };
+    }
+
+    // === QUANTUM-INSPIRED CONCEPTS ===
+    
+    initializeQuantumConcepts() {
+        // Musical superposition and entanglement metaphors
+        this.quantumMusicState = {
+            // Superposition of multiple musical states
+            superpositionStates: [],
+            amplitudes: [],
+            
+            // Entangled harmonic relationships
+            entangledParameters: new Map(),
+            
+            // Wave function collapse to definite musical events
+            measurementOperators: {
+                chordSelection: this.chordMeasurement.bind(this),
+                rhythmSelection: this.rhythmMeasurement.bind(this),
+                timbreSelection: this.timbreMeasurement.bind(this)
+            }
+        };
+
+        // Quantum-inspired harmony generation
+        this.generateQuantumHarmony = (visualState) => {
+            // Create superposition of possible chords
+            const possibleChords = this.generateChordProbabilities(visualState);
+            
+            // Apply quantum interference patterns
+            const interferencePattern = this.computeInterference(possibleChords);
+            
+            // Collapse to definite chord based on visual observation
+            const collapsedChord = this.collapseWaveFunction(interferencePattern, visualState);
+            
+            return collapsedChord;
+        };
+    }
+
+    // === EMOTIONAL MODEL (Russell's Circumplex) ===
+    
+    initializeEmotionalModel() {
+        // Russell's circumplex model of affect
+        this.emotionalSpace = {
+            // Valence (-1 to 1): negative to positive
+            // Arousal (-1 to 1): calm to excited
+            
+            emotionToParameters: {
+                // High arousal, positive valence (excited, elated)
+                excitement: { valence: 0.8, arousal: 0.8, tempo: 1.3, dynamics: 1.2, brightness: 0.9 },
+                // High arousal, negative valence (distressed, upset)  
+                distress: { valence: -0.7, arousal: 0.7, tempo: 1.2, dynamics: 1.1, dissonance: 0.8 },
+                // Low arousal, positive valence (relaxed, calm)
+                contentment: { valence: 0.6, arousal: -0.5, tempo: 0.7, dynamics: 0.6, consonance: 0.9 },
+                // Low arousal, negative valence (sad, depressed)
+                sadness: { valence: -0.8, arousal: -0.6, tempo: 0.5, dynamics: 0.4, minor_emphasis: 0.9 }
+            },
+            
+            // Map visual parameters to emotional space
+            visualToEmotion: (visualState) => {
+                const valence = (visualState.color_brightness * 2) - 1;
+                const arousal = (visualState.movement_speed - 1) * 0.5;
+                return { valence, arousal };
+            }
+        };
+    }
+
+    // === FRACTAL & RECURSIVE TEMPORAL STRUCTURES ===
+    
+    initializeFractalStructures() {
+        // Self-similar musical structures
+        this.fractalGenerators = {
+            // Golden ratio-based phrase structures
+            goldenRatio: (1 + Math.sqrt(5)) / 2,
+            
+            // Fibonacci sequence for rhythmic patterns
+            fibonacciSequence: [1, 1, 2, 3, 5, 8, 13, 21, 34, 55],
+            
+            // Recursive subdivision algorithm
+            recursiveSubdivision: (phrase_length, depth) => {
+                if (depth === 0) return [phrase_length];
+                
+                const phi = this.fractalGenerators.goldenRatio;
+                const part1 = phrase_length / phi;
+                const part2 = phrase_length - part1;
+                
+                return [
+                    ...this.fractalGenerators.recursiveSubdivision(part1, depth - 1),
+                    ...this.fractalGenerators.recursiveSubdivision(part2, depth - 1)
+                ];
+            },
+            
+            // Self-similar harmonic progressions
+            recursiveHarmony: (baseProgression, iterations) => {
+                if (iterations === 0) return baseProgression;
+                
+                let expandedProgression = [];
+                baseProgression.forEach(chord => {
+                    expandedProgression.push(chord);
+                    // Add recursive variation
+                    expandedProgression.push(this.applyRecursiveTransformation(chord));
+                });
+                
+                return this.fractalGenerators.recursiveHarmony(expandedProgression, iterations - 1);
+            }
+        };
+    }
+
+    // === GRANULAR SYNTHESIS & ADVANCED TIMBRE ===
+    
+    initializeAdvancedTimbre() {
+        // Granular synthesis for evolving textures
+        this.granularEngine = {
+            grainDensity: 50,    // Grains per second
+            grainSize: 0.1,      // Duration in seconds
+            grainPitch: 1.0,     // Pitch ratio
+            grainPosition: 0.0,  // Position in source material
+            
+            generateGrains: (visualState) => {
+                const density = visualState.particle_density * 100;
+                const size = (1 - visualState.movement_speed) * 0.2;
+                const pitch = 1.0 + (visualState.chaos_level - 0.5) * 0.2;
+                
+                return {
+                    grainDensity: density,
+                    grainSize: size,
+                    grainPitch: pitch,
+                    spatialSpread: visualState.geometric_alignment
+                };
+            }
+        };
+
+        // Spectral morphing between timbres
+        this.spectralMorphing = {
+            morphBetweenSpectra: (spectrum1, spectrum2, factor) => {
+                const morphedSpectrum = [];
+                const maxLength = Math.max(spectrum1.length, spectrum2.length);
+                
+                for (let i = 0; i < maxLength; i++) {
+                    const amp1 = spectrum1[i]?.amplitude || 0;
+                    const amp2 = spectrum2[i]?.amplitude || 0;
+                    const freq1 = spectrum1[i]?.frequency || 0;
+                    const freq2 = spectrum2[i]?.frequency || 0;
+                    
+                    morphedSpectrum.push({
+                        frequency: freq1 * (1 - factor) + freq2 * factor,
+                        amplitude: amp1 * (1 - factor) + amp2 * factor,
+                        phase: Math.random() * 2 * Math.PI
+                    });
+                }
+                
+                return morphedSpectrum;
+            }
+        };
+    }
+
+    // === ENHANCED CORE TRANSLATION FUNCTIONS ===
+
+    translateVisualToMusical(visualState) {
+        // Enhanced Tymoczko's 5 features with microtonal and spectral extensions
+        const musicalState = {
+            // 1. Conjunct melodic motion (enhanced with microtonal steps)
+            melodicConjunction: this.calculateMicrotonalMelodicConjunction(visualState),
+            
+            // 2. Harmonic consistency (spectral and microtonal aware)
+            harmonicConsistency: this.calculateSpectralHarmonicConsistency(visualState),
+            
+            // 3. Voice-leading efficiency (quantum superposition aware)
+            voiceLeadingEfficiency: this.calculateQuantumVoiceLeading(visualState),
+            
+            // 4. Pitch circulation (xenharmonic circle of fifths)
+            pitchCirculation: this.mapToXenharmonicCircle(visualState),
+            
+            // 5. Chord spacing (fractal and spectral)
+            chordSpacing: this.calculateFractalChordSpacing(visualState),
+            
+            // Enhanced features
+            chaosParameters: this.extractChaosParameters(visualState),
+            emotionalVector: this.emotionalSpace.visualToEmotion(visualState),
+            spectralContent: this.analyzeSpectralContent(visualState),
+            microtonalDeviations: this.calculateMicrotonalDeviations(visualState),
+            fractalDepth: this.calculateFractalDepth(visualState)
+        };
+
+        return this.generateEnhancedMusicalScore(musicalState, visualState);
+    }
+
+    // === ENHANCED CHORD GENERATION ===
+
+    generateEnhancedChord(musicalState, visualState) {
+        // Determine tuning system based on visual complexity
+        const tuningSystem = this.selectTuningSystem(visualState);
+        
+        // Generate base chord using traditional methods
+        const baseChord = this.generateChord(musicalState, visualState);
+        
+        // Apply microtonal deviations
+        const microtonalChord = this.applyMicrotonalDeviations(baseChord, musicalState);
+        
+        // Add spectral content
+        const spectralChord = this.addSpectralContent(microtonalChord, musicalState);
+        
+        // Apply chaos theory modifications
+        const chaosChord = this.applyChaosModifications(spectralChord, musicalState);
+        
+        // Apply emotional coloring
+        const emotionalChord = this.applyEmotionalColoring(chaosChord, musicalState);
+        
+        return {
+            ...emotionalChord,
+            tuningSystem: tuningSystem,
+            microtonalOffsets: this.calculateMicrotonalOffsets(emotionalChord),
+            spectralProfile: this.generateSpectralProfile(emotionalChord),
+            chaosSignature: this.generateChaosSignature(emotionalChord),
+            emotionalTag: this.classifyEmotion(musicalState.emotionalVector),
+            fractalStructure: this.generateFractalStructure(emotionalChord, musicalState.fractalDepth)
+        };
+    }
+
+    // === MICROTONAL MIDI OUTPUT ===
+
+    generateMicrotonalMIDI(chord) {
+        const midiEvents = [];
+        
+        chord.notes.forEach((note, index) => {
+            const baseMIDINote = this.noteToMIDI(note.pitchClass);
+            const microtonalOffset = note.microtonal_offset || 0;
+            
+            // Calculate pitch bend for microtonal adjustment
+            const pitchBendValue = this.centsToPitchBend(microtonalOffset);
+            
+            // Pitch bend message (if needed)
+            if (Math.abs(microtonalOffset) > 5) { // Only bend if significant
+                midiEvents.push({
+                    type: 'pitchBend',
+                    channel: index % 16,
+                    value: pitchBendValue,
+                    time: 0
+                });
+            }
+            
+            // Note on
+            midiEvents.push({
+                type: 'noteOn',
+                channel: index % 16,
+                note: baseMIDINote,
+                velocity: this.calculateVelocity(note),
+                time: 0
+            });
+            
+            // Schedule note off
+            midiEvents.push({
+                type: 'noteOff',
+                channel: index % 16, 
+                note: baseMIDINote,
+                velocity: 0,
+                time: note.duration || 1000
+            });
+        });
+        
+        return midiEvents;
+    }
+
+    // === GRANULAR RHYTHM GENERATION ===
+
+    generateGranularRhythm(visualState, fractalDepth = 3) {
+        // Base rhythm from Euclidean algorithm
+        const baseRhythm = this.generateEuclideanRhythm(
+            Math.round(visualState.intensity * 8) + 1,
+            visualState.chaos_level > 0.7 ? 16 : 8
+        );
+        
+        // Apply fractal subdivision
+        const fractalRhythm = this.applyFractalSubdivision(baseRhythm, fractalDepth);
+        
+        // Add granular micro-rhythms
+        const granularRhythm = this.addGranularMicroRhythms(fractalRhythm, visualState);
+        
+        // Apply chaos theory perturbations
+        const chaosRhythm = this.applyChaosToRhythm(granularRhythm, visualState);
+        
+        return {
+            basePattern: baseRhythm,
+            fractalPattern: fractalRhythm,
+            granularPattern: granularRhythm,
+            chaosPattern: chaosRhythm,
+            emotionalModulation: this.applyEmotionalRhythmModulation(chaosRhythm, visualState)
+        };
+    }
+
+    // === ENHANCED IMPROVISATION WITH QUANTUM CONCEPTS ===
+
+    generateQuantumImprovisation(currentChord, style, length = 8) {
+        // Create superposition of possible melodic paths
+        const melodicPaths = this.generateMelodicPossibilities(currentChord, style);
+        
+        // Apply quantum interference between paths
+        const interferencePattern = this.computeMelodicInterference(melodicPaths);
+        
+        // Collapse to specific notes based on observation (visual state)
+        const collapsedMelody = [];
+        
+        for (let i = 0; i < length; i++) {
+            const possibleNotes = this.extractPossibleNotes(interferencePattern, i);
+            const observedNote = this.collapseToNote(possibleNotes, this.currentVisualState);
+            
+            // Apply microtonal and spectral modifications
+            const enhancedNote = this.enhanceNote(observedNote, {
+                microtonal: this.calculateMicrotonalDeviation(observedNote),
+                spectral: this.generateSpectralContent(observedNote),
+                granular: this.generateGranularVariation(observedNote),
+                emotional: this.applyEmotionalColoring(observedNote)
+            });
+            
+            collapsedMelody.push(enhancedNote);
+        }
+        
+        return collapsedMelody;
+    }
+
+    // === UTILITY FUNCTIONS FOR ENHANCED FEATURES ===
+
+    selectTuningSystem(visualState) {
+        const complexity = visualState.chaos_level + visualState.geometric_alignment;
+        
+        if (complexity < 0.3) return '12-TET';
+        if (complexity < 0.5) return '19-TET';
+        if (complexity < 0.7) return '24-TET';
+        if (complexity < 0.9) return '31-TET';
+        return 'JI'; // Just intonation for highest complexity
+    }
+
+    centsToPitchBend(cents) {
+        // Convert cents to MIDI pitch bend value (-8192 to +8191)
+        const semitones = cents / 100;
+        const bendRange = 2; // Assume 2 semitone bend range
+        return Math.round((semitones / bendRange) * 8192);
+    }
+
+    mandelbrotIteration(real, imag, maxIter = 100) {
+        let zReal = 0, zImag = 0;
+        let iter = 0;
+        
+        while (iter < maxIter && (zReal * zReal + zImag * zImag) < 4) {
+            const newReal = zReal * zReal - zImag * zImag + real;
+            const newImag = 2 * zReal * zImag + imag;
+            zReal = newReal;
+            zImag = newImag;
+            iter++;
+        }
+        
+        return iter;
+    }
+
+    applyFractalSubdivision(baseRhythm, depth) {
+        if (depth === 0) return baseRhythm;
+        
+        let subdivided = [];
+        baseRhythm.forEach(beat => {
+            if (beat) {
+                // Subdivide based on golden ratio
+                const phi = this.fractalGenerators.goldenRatio;
+                subdivided.push(true, false, Math.random() < (1/phi));
+            } else {
+                subdivided.push(false, false, false);
+            }
+        });
+        
+        return this.applyFractalSubdivision(subdivided, depth - 1);
+    }
+
+    generateEnhancedMusicalScore(musicalState, visualState) {
+        const enhancedScore = {
+            metadata: {
+                title: "Enhanced Visual-Music Translation",
+                tempo: this.calculateAdaptiveTempo(visualState, musicalState),
+                timeSignature: this.determineComplexTimeSignature(visualState),
+                key: this.mapToXenharmonicKey(visualState),
+                tuningSystem: this.selectTuningSystem(visualState),
+                style: this.classifyAdvancedMusicalStyle(musicalState, visualState),
+                emotionalTag: this.classifyEmotion(musicalState.emotionalVector),
+                chaosLevel: musicalState.chaosParameters.complexity,
+                fractalDepth: musicalState.fractalDepth
+            },
+            
+            harmony: {
+                chord: this.generateEnhancedChord(musicalState, visualState),
+                progression: this.generateFractalChordProgression(musicalState, visualState),
+                voiceLeading: this.calculateQuantumVoiceLeading(musicalState),
+                spectralContent: this.generateSpectralHarmony(musicalState, visualState),
+                microtonalDeviations: musicalState.microtonalDeviations
+            },
+            
+            melody: {
+                improvisation: this.generateQuantumImprovisation(
+                    this.generateEnhancedChord(musicalState, visualState),
+                    this.classifyAdvancedMusicalStyle(musicalState, visualState)
+                ),
+                ornaments: this.generateFractalOrnaments(visualState),
+                phrasing: this.calculateEmotionalPhrasing(visualState, musicalState),
+                microtonalExpression: this.generateMicrotonalExpression(visualState)
+            },
+            
+            rhythm: {
+                pattern: this.generateGranularRhythm(visualState, musicalState.fractalDepth),
+                syncopation: this.calculateChaosBasedSyncopation(visualState),
+                metric_modulation: this.calculateQuantumMetricModulation(visualState),
+                fractalStructure: this.generateFractalRhythm(visualState)
+            },
+            
+            timbre: {
+                spectralProfile: this.generateSpectralProfile(visualState),
+                granularTexture: this.granularEngine.generateGrains(visualState),
+                morphingTargets: this.calculateSpectralMorphingTargets(visualState),
+                microtonalPartials: this.generateMicrotonalPartials(visualState)
+            },
+            
+            instrumentation: {
+                instruments: this.selectQuantumInstruments(visualState),
+                dynamics: this.mapEmotionalStateToDynamics(musicalState.emotionalVector),
+                articulations: this.selectChaosBasedArticulations(visualState),
+                effects: this.selectSpectralEffects(visualState),
+                spatialDistribution: this.calculateFractalSpatialization(visualState)
+            },
+            
+            form: {
+                phrase_length: this.calculateFractalPhraseLength(visualState),
+                cadence_type: this.selectQuantumCadenceType(musicalState),
+                developmental_techniques: this.selectChaosBasedDevelopment(visualState),
+                emotional_arc: this.generateEmotionalArc(visualState, musicalState),
+                fractal_structure: this.generateFractalForm(visualState, musicalState)
+            },
+            
+            // Advanced features
+            quantum: {
+                superposition_states: this.quantumMusicState.superpositionStates,
+                entangled_parameters: Array.from(this.quantumMusicState.entangledParameters),
+                measurement_history: this.quantum_measurement_history || []
+            },
+            
+            chaos: {
+                attractor_type: this.classifyAttractor(musicalState.chaosParameters),
+                strange_attractor_path: this.generateAttractorPath(visualState),
+                fractal_dimension: this.calculateFractalDimension(visualState)
+            },
+            
+            emotional: {
+                valence: musicalState.emotionalVector.valence,
+                arousal: musicalState.emotionalVector.arousal,
+                emotional_trajectory: this.calculateEmotionalTrajectory(visualState),
+                affective_parameters: this.generateAffectiveParameters(musicalState.emotionalVector)
+            }
+        };
+        
+        return enhancedScore;
+    }
+
+    // === EXPORT FUNCTIONS FOR DIFFERENT FORMATS ===
+
+    exportEnhancedScore(format = 'json') {
+        switch(format) {
+            case 'json':
+                return JSON.stringify(this.score, null, 2);
+            case 'musicxml':
+                return this.convertToEnhancedMusicXML(this.score);
+            case 'midi':
+                return this.convertToMicrotonalMIDI(this.score);
+            case 'magenta':
+                return this.convertToEnhancedMagentaFormat(this.score);
+            case 'supercollider':
+                return this.convertToSuperColliderCode(this.score);
+            case 'maxmsp':
+                return this.convertToMaxMSPPatch(this.score);
+            case 'openmusic':
+                return this.convertToOpenMusicFormat(this.score);
+            default:
+                return this.score;
+        }
+    }
+
+    // Convert to enhanced Magenta format with all new features
+    convertToEnhancedMagentaFormat(score) {
+        return {
+            format: "enhanced_visual_music_v2.0",
+            generator: "EnhancedUniversalVisualMusicEngine",
+            timestamp: new Date().toISOString(),
+            
+            // Standard Magenta format
+            notes: this.extractNotesForMagenta(score),
+            tempos: this.extractTemposForMagenta(score),
+            time_signatures: this.extractTimeSignaturesForMagenta(score),
+            
+            // Enhanced features for advanced training
+            microtonal: {
+                tuning_system: score.metadata.tuningSystem,
+                microtonal_deviations: score.harmony.microtonalDeviations,
+                pitch_bend_events: this.extractPitchBends(score)
+            },
+            
+            spectral: {
+                spectral_profiles: score.timbre.spectralProfile,
+                morphing_trajectories: score.timbre.morphingTargets,
+                granular_parameters: score.timbre.granularTexture
+            },
+            
+            chaos: {
+                attractor_parameters: score.chaos.attractor_type,
+                fractal_dimensions: score.chaos.fractal_dimension,
+                strange_attractor_data: score.chaos.strange_attractor_path
+            },
+            
+            emotional: {
+                valence_arousal_trajectory: score.emotional.emotional_trajectory,
+                affective_parameters: score.emotional.affective_parameters,
+                emotional_tags: score.metadata.emotionalTag
+            },
+            
+            quantum: {
+                superposition_history: score.quantum.superposition_states,
+                entanglement_data: score.quantum.entangled_parameters,
+                measurement_events: score.quantum.measurement_history
+            },
+            
+            // Training metadata
+            training_metadata: {
+                visual_complexity: this.calculateVisualComplexity(),
+                musical_complexity: this.calculateMusicalComplexity(score),
+                theoretical_foundations: [
+                    "tymoczko_geometry",
+                    "neo_riemannian_theory", 
+                    "spectral_music_theory",
+                    "chaos_theory",
+                    "category_theory",
+                    "quantum_inspired",
+                    "microtonal_xenharmonic",
+                    "emotional_modeling"
+                ]
+            }
+        };
+    }
+}
+
+// Export for use in applications
+export { EnhancedUniversalVisualMusicEngine };

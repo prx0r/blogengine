@@ -1,0 +1,65 @@
+{
+  "work_id": "work:t2-pubmed-neural-network-topologies-supporting-individual-variations-in-vividnes",
+  "schema_version": 2,
+  "title": "Neural network topologies supporting individual variations in vividness of visual imagery.",
+  "authors": [
+    {
+      "name": "Kvamme, Timo L"
+    },
+    {
+      "name": "Lumaca, Massimo"
+    },
+    {
+      "name": "Bajada, Claude J"
+    },
+    {
+      "name": "Gregersen, Signe Dall"
+    },
+    {
+      "name": "Hobot, Justyna"
+    },
+    {
+      "name": "Paunovic, Dunja"
+    },
+    {
+      "name": "Wierzchon, Michal"
+    },
+    {
+      "name": "Zana, Blanka"
+    },
+    {
+      "name": "Silvanto, Juha"
+    },
+    {
+      "name": "Sandberg, Kristian"
+    }
+  ],
+  "identifiers": {
+    "pmid": "41076035",
+    "doi": "10.1016/j.neuroimage.2025.121520"
+  },
+  "publication": {
+    "journal": "NeuroImage",
+    "year": "2025"
+  },
+  "abstract": "Vividness of visual imagery varies considerably across individuals, yet its neural underpinnings remain unclear. As emphasized in recent debates, a key controversy is whether early sensory architecture explains imagery or whether it is explained by interactions of high-level visual and fronto-parietal areas. This study examined how individual differences in imagery vividness, measured via the Vividness of Visual Imagery Questionnaire (VVIQ-2), relate to intrinsic brain network organization using graph theory applied to structural and functional connectomes from diffusion-weighted imaging (DWI; n=525) and resting-state fMRI (n=556). Connectivity was assessed in an imagery-specific network and three canonical resting-state networks: occipital, salience, and default mode. In functional connectivity analyses, vividness correlated positively with local efficiency in the left fusiform gyrus, a high-level visual region implicated in integrative imagery processes. In structural connectivity analyses, higher vividness was associated with greater local efficiency and clustering in the occipital network, suggesting that vivid imagery depends on well-segregated low-level visual networks. Additionally, greater global efficiency in the right insular cortex-a key salience network hub-was linked to vividness, indicating that efficient salience-driven control may stabilize internal imagery. Multivariate analysis found that no single factor explained imagery better than a combined model, with the fusiform imagery node (FIN) as the strongest single predictor, while other structural factors contributed to the best overall model. These findings reconcile competing accounts of imagery by demonstrating that vivid imagery emerges from the interplay between sensory-based structural networks, salience-based regulatory hubs, and higher-order visual integration.",
+  "phase_mapping": {
+    "phase": 10,
+    "phase_name": "Imaginal"
+  },
+  "bridge_tags": [
+    "mental-imagery",
+    "imagination",
+    "imaginal",
+    "perception",
+    "aphantasia",
+    "brain-connectivity",
+    "fusiform-gyrus"
+  ],
+  "evaluation": "Quality pass v3 (score=49) \u2014 High-signal bridge paper for Imaginal.",
+  "assets": {
+    "pdf_path": null,
+    "nxml_path": null
+  },
+  "tier": 2
+}

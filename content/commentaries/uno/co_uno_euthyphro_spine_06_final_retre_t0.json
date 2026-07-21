@@ -1,0 +1,57 @@
+{
+  "co_id": "co:uno_euthyphro_spine_06_final_retre_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "euthyphro_spine_06_final_retreat",
+  "turn_index": 0,
+  "lineage": "Socratic",
+  "student_state": "cooperative_engagement",
+  "behavior_tags": [
+    "short_affirmation"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_01",
+    "function_name": "UM_01",
+    "mechanism_shape": "COMPARISON_CONTRAST",
+    "teaching_actions": [
+      "mirrors_student_action"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.85,
+      "intimacy": 0.35,
+      "attunement": 0.8,
+      "style": 0.5,
+      "depth": 0.62,
+      "meta_mode": 0.75,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_04",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_03",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_03",
+      "meta_mode_discrete": "MM_02"
+    },
+    "predicted_impact": "go_along_compliantly",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "euthyphro_spine_06_final_retreat T1: Using comparison_contrast/UM_01 with intensity=PR_04, intimacy=IN_02, attunement=AT_03 on 'the hinge'. Response shows agreeing without elaboration; expecting go_along_compliantly next. If not, lower PR and re-anchor the hinge.",
+  "accumulated_insight": "T1: Student says ''?agreeing without elaboration (cooperative_engagement) via short_affirmation. Focus: the hinge. The comparison_contrast/UM_01 move applies shift their frame: standard function application. Pattern: go_along_compliantly. Confidence medium.",
+  "abstract_pattern": "",
+  "visible_response": "You cast me down from a great hope — that I would learn from you what is pious and free myself from Meletos' charge.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:proclus-elements",
+    "ro:platonism-decoded",
+    "ro:chaldean-oracles"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

@@ -1,0 +1,61 @@
+{
+  "co_id": "co:uno_discourses_b1_c2_chamber_pot_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "discourses_b1_c2_chamber_pot",
+  "turn_index": 0,
+  "lineage": "Realist",
+  "student_state": "desire_for_external_command",
+  "behavior_tags": [
+    "rule_seeking",
+    "ethical_outsourcing"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_03",
+    "function_name": "UM_03",
+    "mechanism_shape": "CAUSAL_CHAIN",
+    "teaching_actions": [
+      "plays_devils_advocate",
+      "mirrors_values"
+    ],
+    "traps_avoided": [
+      "answer_hunting"
+    ],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.35,
+      "attunement": 0.2,
+      "style": 0.8,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_01",
+      "style_discrete": "LS_05",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "resist_intellectually",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "This is a trap question. They want me to say 'no, don't hold it' so they can feel righteous. Instead I'll say 'yes, hold it'—but only if their values are purely material. The disgust they feel will be data about what they actually value. Hypothesis: they'll recoil and assert dignity. If they don't recoil, we have a different problem.",
+  "accumulated_insight": "T1: Student wants me to make their decision for them—classic ethical outsourcing. The 'chamber pot' is deliberately degrading. They're testing whether I'll play moral authority. Instead, I'll play their stated values to absurd conclusion.",
+  "abstract_pattern": "",
+  "visible_response": "I shall say to you that the receiving of food is worth more than the not receiving of it, and the being scourged is a greater indignity than not being scourged; so that if you measure your interests by these things, go and hold the chamber pot.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:kybalion",
+    "ro:grimoires-decoded",
+    "ro:hermes-proof-system"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

@@ -1,0 +1,58 @@
+{
+  "co_id": "co:uno_therapy3_t518_t526_defiant_col_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3_t518_t526_defiant_collaboration",
+  "turn_index": 0,
+  "lineage": "Therapeutic",
+  "student_state": "angry_independence",
+  "behavior_tags": [
+    "defiance",
+    "hostility"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_02",
+    "function_name": "UM_02",
+    "mechanism_shape": "SUBJECT_OBJECT_INVERSION",
+    "teaching_actions": [
+      "validates_honesty",
+      "reframes_defiance",
+      "highlights_ambivalence"
+    ],
+    "traps_avoided": [
+      "false_paradox"
+    ],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.8,
+      "style": 0.92,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_03",
+      "style_discrete": "LS_06",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "no_clear_effect",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "'I don't see why I have to do all the work here'—classic passive demand. They want therapy benefits without effort. But notice: they're WORKING to resist (arguing, defending, avoiding). Teacher's reframe: 'you ARE doing the work' points this out. Resistance takes energy. The question is whether they'll USE that energy for therapy or against it. Hypothesis: if they see that resistance = work, they might redirect the energy. Or they might double down. Single intervention, watching response.",
+  "accumulated_insight": "T1: Student challenges: 'I don't see why I have to do all the work here'—defiant demand for teacher to do the work (passive_omnipotence: 'you do it for me'). Teacher reframes: 'you ARE doing the work' by showing that resistance itself is work. Uses none mechanism with confrontation: points out the energy they're expending to resist. Predicting go_along_compliantly because reframe might produce recognition that resistance = effort.",
+  "abstract_pattern": "",
+  "visible_response": "Thank you for being so collaborative.\nAlthough your feet have brought you here, you are also letting me know you don’t want to depend on me.",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

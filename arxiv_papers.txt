@@ -1,0 +1,603 @@
+# ArXiv Papers - TetraHermes Research Corpus
+# Total: 100 papers
+
+## 1. Generative-Contrastive Heterogeneous Graph Neural Network
+   ID: 2404.02810v3
+   Authors: 
+   Categories: cs.LG, cs.IR
+   Summary: Heterogeneous Graphs (HGs) effectively model complex relationships in the real world through multi-type nodes and edges. In recent years, inspired by self-supervised learning (SSL), contrastive learning (CL)-based Heterogeneous Graphs Neural Networks (HGNNs) have shown great potential in utilizing data augmentation and contrastive discriminators for downstream tasks. However, data augmentation rem
+
+## 2. Simple and Efficient Heterogeneous Graph Neural Network
+   ID: 2207.02547v3
+   Authors: 
+   Categories: cs.LG
+   Summary: Heterogeneous graph neural networks (HGNNs) have powerful capability to embed rich structural and semantic information of a heterogeneous graph into node representations. Existing HGNNs inherit many mechanisms from graph neural networks (GNNs) over homogeneous graphs, especially the attention mechanism and the multi-layer structure. These mechanisms bring excessive complexity, but seldom work stud
+
+## 3. Heterogeneous Graph Neural Network for Privacy-Preserving Recommendation
+   ID: 2210.00538v2
+   Authors: 
+   Categories: cs.LG, cs.CR
+   Summary: Social networks are considered to be heterogeneous graph neural networks (HGNNs) with deep learning technological advances. HGNNs, compared to homogeneous data, absorb various aspects of information about individuals in the training stage. That means more information has been covered in the learning result, especially sensitive information. However, the privacy-preserving methods on homogeneous gr
+
+## 4. HMSG: Heterogeneous Graph Neural Network based on Metapath Subgraph Learning
+   ID: 2109.02868v1
+   Authors: 
+   Categories: cs.AI, cs.LG, cs.SI
+   Summary: Many real-world data can be represented as heterogeneous graphs with different types of nodes and connections. Heterogeneous graph neural network model aims to embed nodes or subgraphs into low-dimensional vector space for various downstream tasks such as node classification, link prediction, etc. Although several models were proposed recently, they either only aggregate information from the same 
+
+## 5. Graph Learning Augmented Heterogeneous Graph Neural Network for Social Recommendation
+   ID: 2109.11898v1
+   Authors: 
+   Categories: cs.IR
+   Summary: Social recommendation based on social network has achieved great success in improving the performance of recommendation system. Since social network (user-user relations) and user-item interactions are both naturally represented as graph-structured data, Graph Neural Networks (GNNs) have thus been widely applied for social recommendation. In this work, we propose an end-to-end heterogeneous global
+
+## 6. Heterogeneous Graph Neural Network for Recommendation
+   ID: 2009.00799v1
+   Authors: 
+   Categories: cs.SI, cs.IR, cs.LG
+   Summary: The prosperous development of e-commerce has spawned diverse recommendation systems. As a matter of fact, there exist rich and complex interactions among various types of nodes in real-world recommendation systems, which can be constructed as heterogeneous graphs. How learn representative node embedding is the basis and core of the personalized recommendation system. Meta-path is a widely used str
+
+## 7. Chinese Word Segmentation with Heterogeneous Graph Neural Network
+   ID: 2201.08975v1
+   Authors: 
+   Categories: cs.CL
+   Summary: In recent years, deep learning has achieved significant success in the Chinese word segmentation (CWS) task. Most of these methods improve the performance of CWS by leveraging external information, e.g., words, sub-words, syntax. However, existing approaches fail to effectively integrate the multi-level linguistic information and also ignore the structural feature of the external information. Ther
+
+## 8. SHGNN: Structure-Aware Heterogeneous Graph Neural Network
+   ID: 2112.06244v2
+   Authors: 
+   Categories: cs.SI, cs.LG
+   Summary: Many real-world graphs (networks) are heterogeneous with different types of nodes and edges. Heterogeneous graph embedding, aiming at learning the low-dimensional node representations of a heterogeneous graph, is vital for various downstream applications. Many meta-path based embedding methods have been proposed to learn the semantic information of heterogeneous graphs in recent years. However, mo
+
+## 9. Heterogeneous Graph Neural Network on Semantic Tree
+   ID: 2402.13496v2
+   Authors: 
+   Categories: cs.LG, cs.SI
+   Summary: The recent past has seen an increasing interest in Heterogeneous Graph Neural Networks (HGNNs), since many real-world graphs are heterogeneous in nature, from citation graphs to email graphs. However, existing methods ignore a tree hierarchy among metapaths, naturally constituted by different node types and relation types. In this paper, we present HetTree, a novel HGNN that models both the graph 
+
+## 10. End-to-End Heterogeneous Graph Neural Networks for Traffic Assignment
+   ID: 2310.13193v3
+   Authors: 
+   Categories: cs.LG
+   Summary: The traffic assignment problem is one of the significant components of traffic flow analysis for which various solution approaches have been proposed. However, deploying these approaches for large-scale networks poses significant challenges. In this paper, we leverage the power of heterogeneous graph neural networks to propose a novel end-to-end surrogate model for traffic assignment, specifically
+
+## 11. RHCO: A Relation-aware Heterogeneous Graph Neural Network with Contrastive Learning for Large-scale Graphs
+   ID: 2211.11752v1
+   Authors: 
+   Categories: cs.LG, cs.AI
+   Summary: Heterogeneous graph neural networks (HGNNs) have been widely applied in heterogeneous information network tasks, while most HGNNs suffer from poor scalability or weak representation when they are applied to large-scale heterogeneous graphs. To address these problems, we propose a novel Relation-aware Heterogeneous Graph Neural Network with Contrastive Learning (RHCO) for large-scale heterogeneous 
+
+## 12. Loss-aware Curriculum Learning for Heterogeneous Graph Neural Networks
+   ID: 2402.18875v1
+   Authors: 
+   Categories: cs.LG
+   Summary: Heterogeneous Graph Neural Networks (HGNNs) are a class of deep learning models designed specifically for heterogeneous graphs, which are graphs that contain different types of nodes and edges. This paper investigates the application of curriculum learning techniques to improve the performance and robustness of Heterogeneous Graph Neural Networks (GNNs). To better classify the quality of the data,
+
+## 13. HGOT: Self-supervised Heterogeneous Graph Neural Network with Optimal Transport
+   ID: 2506.02619v1
+   Authors: 
+   Categories: cs.LG, cs.AI, cs.SI
+   Summary: Heterogeneous Graph Neural Networks (HGNNs), have demonstrated excellent capabilities in processing heterogeneous information networks. Self-supervised learning on heterogeneous graphs, especially contrastive self-supervised strategy, shows great potential when there are no labels. However, this approach requires the use of carefully designed graph augmentation strategies and the selection of posi
+
+## 14. Attentional Heterogeneous Graph Neural Network: Application to Program Reidentification
+   ID: 1812.04064v2
+   Authors: 
+   Categories: cs.CR, cs.LG, stat.ML
+   Summary: Program or process is an integral part of almost every IT/OT system. Can we trust the identity/ID (e.g., executable name) of the program? To avoid detection, malware may disguise itself using the ID of a legitimate program, and a system tool (e.g., PowerShell) used by the attackers may have the fake ID of another common software, which is less sensitive. However, existing intrusion detection techn
+
+## 15. MECCH: Metapath Context Convolution-based Heterogeneous Graph Neural Networks
+   ID: 2211.12792v2
+   Authors: 
+   Categories: cs.LG
+   Summary: Heterogeneous graph neural networks (HGNNs) were proposed for representation learning on structural data with multiple types of nodes and edges. To deal with the performance degradation issue when HGNNs become deep, researchers combine metapaths into HGNNs to associate nodes closely related in semantics but far apart in the graph. However, existing metapath-based models suffer from either informat
+
+## 16. Morphological-Symmetry-Equivariant Heterogeneous Graph Neural Network for Robotic Dynamics Learning
+   ID: 2412.01297v3
+   Authors: 
+   Categories: cs.RO, cs.LG
+   Summary: We present a morphological-symmetry-equivariant heterogeneous graph neural network, namely MS-HGNN, for robotic dynamics learning, that integrates robotic kinematic structures and morphological symmetries into a single graph network. These structural priors are embedded into the learning architecture as constraints, ensuring high generalizability, sample and model efficiency. The proposed MS-HGNN 
+
+## 17. Heterogeneous Graph Neural Networks for Malicious Account Detection
+   ID: 2002.12307v1
+   Authors: 
+   Categories: cs.LG, cs.CR, stat.ML
+   Summary: We present, GEM, the first heterogeneous graph neural network approach for detecting malicious accounts at Alipay, one of the world's leading mobile cashless payment platform. Our approach, inspired from a connected subgraph approach, adaptively learns discriminative embeddings from heterogeneous account-device graphs based on two fundamental weaknesses of attackers, i.e. device aggregation and ac
+
+## 18. Physics-Informed Heterogeneous Graph Neural Networks for DC Blocker Placement
+   ID: 2405.10389v1
+   Authors: 
+   Categories: eess.SY, cs.LG
+   Summary: The threat of geomagnetic disturbances (GMDs) to the reliable operation of the bulk energy system has spurred the development of effective strategies for mitigating their impacts. One such approach involves placing transformer neutral blocking devices, which interrupt the path of geomagnetically induced currents (GICs) to limit their impact. The high cost of these devices and the sparsity of trans
+
+## 19. SR-HetGNN:Session-based Recommendation with Heterogeneous Graph Neural Network
+   ID: 2108.05641v3
+   Authors: 
+   Categories: cs.IR, cs.AI
+   Summary: The Session-Based Recommendation System aims to predict the user's next click based on their previous session sequence. The current studies generally learn user preferences according to the transitions of items in the user's session sequence. However, other effective information in the session sequence, such as user profiles, are largely ignored which may lead to the model unable to learn the user
+
+## 20. LSPI: Heterogeneous Graph Neural Network Classification Aggregation Algorithm Based on Size Neighbor Path Identification
+   ID: 2405.18933v2
+   Authors: 
+   Categories: cs.LG
+   Summary: Existing heterogeneous graph neural network algorithms (HGNNs) mostly rely on meta-paths to capture the rich semantic information contained in heterogeneous graphs (also known as heterogeneous information networks (HINs)), but most of these HGNNs focus on different ways of feature aggre gation and ignore the properties of the meta-paths themselves. This paper studies meta-paths in three commonly u
+
+## 21. A Temporal Graph Network Framework for Dynamic Recommendation
+   ID: 2403.16066v2
+   Authors: 
+   Categories: cs.AI
+   Summary: Recommender systems, crucial for user engagement on platforms like e-commerce and streaming services, often lag behind users' evolving preferences due to static data reliance. After Temporal Graph Networks (TGNs) were proposed, various studies have shown that TGN can significantly improve situations where the features of nodes and edges dynamically change over time. However, despite its promising 
+
+## 22. A2QTGN: Adaptive Amplitude Quantum-Integrated Temporal Graph Network for Dynamic Link Prediction
+   ID: 2605.21916v1
+   Authors: 
+   Categories: quant-ph, cs.LG
+   Summary: Dynamic link prediction is important for modeling evolving interactions in complex systems, including social, communication, financial, and transportation networks. Classical temporal graph models capture sequential dependencies, but they may struggle to represent concurrent and rapidly changing node-edge interactions in large dynamic graphs. We propose A2QTGN (Adaptive Amplitude Quantum-Integrate
+
+## 23. Riemannian Liquid Spatio-Temporal Graph Network
+   ID: 2601.14115v1
+   Authors: 
+   Categories: cs.LG, cs.AI
+   Summary: Liquid Time-Constant networks (LTCs), a type of continuous-time graph neural network, excel at modeling irregularly-sampled dynamics but are fundamentally confined to Euclidean space. This limitation introduces significant geometric distortion when representing real-world graphs with inherent non-Euclidean structures (e.g., hierarchies and cycles), degrading representation quality. To overcome thi
+
+## 24. Leveraging Temporal Graph Networks Using Module Decoupling
+   ID: 2310.02721v2
+   Authors: 
+   Categories: cs.LG
+   Summary: Modern approaches for learning on dynamic graphs have adopted the use of batches instead of applying updates one by one. The use of batches allows these techniques to become helpful in streaming scenarios where updates to graphs are received at extreme speeds. Using batches, however, forces the models to update infrequently, which results in the degradation of their performance. In this work, we s
+
+## 25. Temporal Graph Network Embedding with Causal Anonymous Walks Representations
+   ID: 2108.08754v2
+   Authors: 
+   Categories: cs.LG
+   Summary: Many tasks in graph machine learning, such as link prediction and node classification, are typically solved by using representation learning, in which each node or edge in the network is encoded via an embedding. Though there exists a lot of network embeddings for static graphs, the task becomes much more complicated when the dynamic (i.e. temporal) network is analyzed. In this paper, we propose a
+
+## 26. Semantics-enhanced Temporal Graph Networks for Content Popularity Prediction
+   ID: 2301.12355v4
+   Authors: 
+   Categories: cs.AI, eess.SP
+   Summary: The surging demand for high-definition video streaming services and large neural network models (e.g., Generative Pre-trained Transformer, GPT) implies a tremendous explosion of Internet traffic. To mitigate the traffic pressure, architectures with in-network storage have been proposed to cache popular contents at devices in closer proximity to users. Correspondingly, in order to maximize caching 
+
+## 27. Provably expressive temporal graph networks
+   ID: 2209.15059v1
+   Authors: 
+   Categories: cs.LG
+   Summary: Temporal graph networks (TGNs) have gained prominence as models for embedding dynamic interactions, but little is known about their theoretical underpinnings. We establish fundamental results about the representational power and limits of the two main categories of TGNs: those that aggregate temporal walks (WA-TGNs), and those that augment local message passing with recurrent memory modules (MP-TG
+
+## 28. Trajectory Encoding Temporal Graph Networks
+   ID: 2504.11386v1
+   Authors: 
+   Categories: cs.LG, cs.AI
+   Summary: Temporal Graph Networks (TGNs) have demonstrated significant success in dynamic graph tasks such as link prediction and node classification. Both tasks comprise transductive settings, where the model predicts links among known nodes, and in inductive settings, where it generalises learned patterns to previously unseen nodes. Existing TGN designs face a dilemma under these dual scenarios. Anonymous
+
+## 29. A Spatio-temporal Graph Network Allowing Incomplete Trajectory Input for Pedestrian Trajectory Prediction
+   ID: 2501.13973v1
+   Authors: 
+   Categories: cs.CV, cs.AI, cs.LG
+   Summary: Pedestrian trajectory prediction is important in the research of mobile robot navigation in environments with pedestrians. Most pedestrian trajectory prediction algorithms require the input historical trajectories to be complete. If a pedestrian is unobservable in any frame in the past, then its historical trajectory become incomplete, the algorithm will not predict its future trajectory. To addre
+
+## 30. Time-Aware Neighbor Sampling for Temporal Graph Networks
+   ID: 2112.09845v1
+   Authors: 
+   Categories: cs.SI, cs.AI, cs.DB
+   Summary: We present a new neighbor sampling method on temporal graphs. In a temporal graph, predicting different nodes' time-varying properties can require the receptive neighborhood of various temporal scales. In this work, we propose the TNS (Time-aware Neighbor Sampling) method: TNS learns from temporal information to provide an adaptive receptive neighborhood for every node at any time. Learning how to
+
+## 31. Learning Multi-Granular Spatio-Temporal Graph Network for Skeleton-based Action Recognition
+   ID: 2108.04536v1
+   Authors: 
+   Categories: cs.CV, cs.LG
+   Summary: The task of skeleton-based action recognition remains a core challenge in human-centred scene understanding due to the multiple granularities and large variation in human motion. Existing approaches typically employ a single neural representation for different motion patterns, which has difficulty in capturing fine-grained action classes given limited training data. To address the aforementioned p
+
+## 32. Temporal Graph Networks for Graph Anomaly Detection in Financial Networks
+   ID: 2404.00060v1
+   Authors: 
+   Categories: q-fin.ST, cs.AI, cs.LG
+   Summary: This paper explores the utilization of Temporal Graph Networks (TGN) for financial anomaly detection, a pressing need in the era of fintech and digitized financial transactions. We present a comprehensive framework that leverages TGN, capable of capturing dynamic changes in edges within financial networks, for fraud detection. Our study compares TGN's performance against static Graph Neural Networ
+
+## 33. Continuous Temporal Graph Networks for Event-Based Graph Data
+   ID: 2205.15924v1
+   Authors: 
+   Categories: cs.LG
+   Summary: There has been an increasing interest in modeling continuous-time dynamics of temporal graph data. Previous methods encode time-evolving relational information into a low-dimensional representation by specifying discrete layers of neural networks, while real-world dynamic graphs often vary continuously over time. Hence, we propose Continuous Temporal Graph Networks (CTGNs) to capture the continuou
+
+## 34. Temporal Graph Networks for Deep Learning on Dynamic Graphs
+   ID: 2006.10637v3
+   Authors: 
+   Categories: cs.LG, stat.ML
+   Summary: Graph Neural Networks (GNNs) have recently become increasingly popular due to their ability to learn complex systems of relations or interactions arising in a broad spectrum of problems ranging from biology and particle physics to social networks and recommendation systems. Despite the plethora of different models for deep learning on graphs, few approaches have been proposed thus far for dealing 
+
+## 35. Stock Recommendations for Individual Investors: A Temporal Graph Network Approach with Mean-Variance Efficient Sampling
+   ID: 2404.07223v3
+   Authors: 
+   Categories: q-fin.ST, cs.AI, cs.LG
+   Summary: Recommender systems can be helpful for individuals to make well-informed decisions in complex financial markets. While many studies have focused on predicting stock prices, even advanced models fall short of accurately forecasting them. Additionally, previous studies indicate that individual investors often disregard established investment theories, favoring their personal preferences instead. Thi
+
+## 36. Meta-Transfer Learning Powered Temporal Graph Networks for Cross-City Real Estate Appraisal
+   ID: 2410.08947v2
+   Authors: 
+   Categories: cs.LG, cs.AI
+   Summary: Real estate appraisal is important for a variety of endeavors such as real estate deals, investment analysis, and real property taxation. Recently, deep learning has shown great promise for real estate appraisal by harnessing substantial online transaction data from web platforms. Nonetheless, deep learning is data-hungry, and thus it may not be trivially applicable to enormous small cities with l
+
+## 37. Multi Scale Temporal Graph Networks For Skeleton-based Action Recognition
+   ID: 2012.02970v1
+   Authors: 
+   Categories: cs.CV, cs.AI
+   Summary: Graph convolutional networks (GCNs) can effectively capture the features of related nodes and improve the performance of the model. More attention is paid to employing GCN in Skeleton-Based action recognition. But existing methods based on GCNs have two problems. First, the consistency of temporal and spatial features is ignored for extracting features node by node and frame by frame. To obtain sp
+
+## 38. MR-STGN: Multi-Residual Spatio Temporal Graph Network Using Attention Fusion for Patient Action Assessment
+   ID: 2312.13509v2
+   Authors: 
+   Categories: cs.CV
+   Summary: Accurate assessment of patient actions plays a crucial role in healthcare as it contributes significantly to disease progression monitoring and treatment effectiveness. However, traditional approaches to assess patient actions often rely on manual observation and scoring, which are subjective and time-consuming. In this paper, we propose an automated approach for patient action assessment using a 
+
+## 39. DyC-STG: Dynamic Causal Spatio-Temporal Graph Network for Real-time Data Credibility Analysis in IoT
+   ID: 2509.06483v1
+   Authors: 
+   Categories: cs.LG, cs.AI
+   Summary: The wide spreading of Internet of Things (IoT) sensors generates vast spatio-temporal data streams, but ensuring data credibility is a critical yet unsolved challenge for applications like smart homes. While spatio-temporal graph (STG) models are a leading paradigm for such data, they often fall short in dynamic, human-centric environments due to two fundamental limitations: (1) their reliance on 
+
+## 40. HTGN-BTW: Heterogeneous Temporal Graph Network with Bi-Time-Window Training Strategy for Temporal Link Prediction
+   ID: 2202.12713v1
+   Authors: 
+   Categories: cs.SI, cs.AI, cs.LG
+   Summary: With the development of temporal networks such as E-commerce networks and social networks, the issue of temporal link prediction has attracted increasing attention in recent years. The Temporal Link Prediction task of WSDM Cup 2022 expects a single model that can work well on two kinds of temporal graphs simultaneously, which have quite different characteristics and data properties, to predict whe
+
+## 41. Noise-robust classification with hypergraph neural network
+   ID: 2102.01934v3
+   Authors: 
+   Categories: stat.ML, cs.LG
+   Summary: This paper presents a novel version of the hypergraph neural network method. This method is utilized to solve the noisy label learning problem. First, we apply the PCA dimensional reduction technique to the feature matrices of the image datasets in order to reduce the "noise" and the redundant features in the feature matrices of the image datasets and to reduce the runtime constructing the hypergr
+
+## 42. Directed hypergraph neural network
+   ID: 2008.03626v3
+   Authors: 
+   Categories: stat.ML, cs.LG, stat.CO
+   Summary: To deal with irregular data structure, graph convolution neural networks have been developed by a lot of data scientists. However, data scientists just have concentrated primarily on developing deep neural network method for un-directed graph. In this paper, we will present the novel neural network method for directed hypergraph. In the other words, we will develop not only the novel directed hype
+
+## 43. Implicit Hypergraph Neural Network
+   ID: 2508.14101v2
+   Authors: 
+   Categories: cs.LG, cs.AI
+   Summary: Hypergraphs offer a generalized framework for capturing high-order relationships between entities and have been widely applied in various domains, including healthcare, social networks, and bioinformatics. Hypergraph neural networks, which rely on message-passing between nodes over hyperedges to learn latent representations, have emerged as the method of choice for predictive tasks in many of thes
+
+## 44. HyperMagNet: A Magnetic Laplacian based Hypergraph Neural Network
+   ID: 2402.09676v2
+   Authors: 
+   Categories: cs.LG
+   Summary: In data science, hypergraphs are natural models for data exhibiting multi-way relations, whereas graphs only capture pairwise. Nonetheless, many proposed hypergraph neural networks effectively reduce hypergraphs to undirected graphs via symmetrized matrix representations, potentially losing important information. We propose an alternative approach to hypergraph neural networks in which the hypergr
+
+## 45. Towards Solving Polynomial-Objective Integer Programming with Hypergraph Neural Networks
+   ID: 2603.19318v1
+   Authors: 
+   Categories: cs.NE, cs.LG
+   Summary: Complex real-world optimization problems often involve both discrete decisions and nonlinear relationships between variables. Many such problems can be modeled as polynomial-objective integer programs, encompassing cases with quadratic and higher-degree variable interactions. Nonlinearity makes them more challenging than their linear counterparts. In this paper, we propose a hypergraph neural netw
+
+## 46. Generalization Performance of Hypergraph Neural Networks
+   ID: 2501.12554v2
+   Authors: 
+   Categories: cs.LG
+   Summary: Hypergraph neural networks have been promising tools for handling learning tasks involving higher-order data, with notable applications in web graphs, such as modeling multi-way hyperlink structures and complex user interactions. Yet, their generalization abilities in theory are less clear to us. In this paper, we seek to develop margin-based generalization bounds for four representative classes o
+
+## 47. Wasserstein Hypergraph Neural Network
+   ID: 2506.09682v1
+   Authors: 
+   Categories: cs.LG
+   Summary: The ability to model relational information using machine learning has driven advancements across various domains, from medicine to social science. While graph representation learning has become mainstream over the past decade, representing higher-order relationships through hypergraphs is rapidly gaining momentum. In the last few years, numerous hypergraph neural networks have emerged, most of th
+
+## 48. You are AllSet: A Multiset Function Framework for Hypergraph Neural Networks
+   ID: 2106.13264v4
+   Authors: 
+   Categories: cs.LG, cs.AI
+   Summary: Hypergraphs are used to model higher-order interactions amongst agents and there exist many practically relevant instances of hypergraph datasets. To enable efficient processing of hypergraph-structured data, several hypergraph neural network platforms have been proposed for learning hypergraph properties and structure, with a special focus on node classification. However, almost all existing meth
+
+## 49. Residual Enhanced Multi-Hypergraph Neural Network
+   ID: 2105.00490v1
+   Authors: 
+   Categories: cs.CV
+   Summary: Hypergraphs are a generalized data structure of graphs to model higher-order correlations among entities, which have been successfully adopted into various research domains. Meanwhile, HyperGraph Neural Network (HGNN) is currently the de-facto method for hypergraph representation learning. However, HGNN aims at single hypergraph learning and uses a pre-concatenation approach when confronting multi
+
+## 50. Heterophily-Aware Adaptive Knowledge Distillation for Hypergraph Neural Networks
+   ID: 2606.08978v1
+   Authors: 
+   Categories: cs.LG
+   Summary: Hypergraph knowledge distillation aims to retain the predictive performance of a hypergraph neural network (HNN) teacher while reducing inference costs through a lightweight student model. In this work, we observe that HNNs exhibit substantially lower prediction performance on heterophilic nodes connected through semantically diverse hyperedges, indicating that the reliability of teacher knowledge
+
+## 51. Hyperedge Interaction-aware Hypergraph Neural Network
+   ID: 2401.15587v2
+   Authors: 
+   Categories: cs.LG, cs.SI
+   Summary: Hypergraphs provide an effective modeling approach for modeling high-order relationships in many real-world datasets. To capture such complex relationships, several hypergraph neural networks have been proposed for learning hypergraph structure, which propagate information from nodes to hyperedges and then from hyperedges back to nodes. However, most existing methods focus on information propagati
+
+## 52. Counterfactual Explanations for Hypergraph Neural Networks
+   ID: 2602.04360v2
+   Authors: 
+   Categories: cs.LG, cs.AI, cs.CY
+   Summary: Hypergraph neural networks (HGNNs) effectively model higher-order interactions in many real-world systems but remain difficult to interpret, limiting their deployment in high-stakes settings. We introduce CF-HyperGNNExplainer, a counterfactual explanation method for HGNNs that identifies the minimal structural changes required to alter a model's prediction. The method generates counterfactual hype
+
+## 53. Parameter-Free Hypergraph Neural Network for Few-Shot Node Classification
+   ID: 2510.21462v1
+   Authors: 
+   Categories: cs.LG
+   Summary: Few-shot node classification on hypergraphs requires models that generalize from scarce labels while capturing high-order structures. Existing hypergraph neural networks (HNNs) effectively encode such structures but often suffer from overfitting and scalability issues due to complex, black-box architectures. In this work, we propose ZEN (Zero-Parameter Hypergraph Neural Network), a fully linear an
+
+## 54. Hypergraph Neural Networks
+   ID: 1809.09401v3
+   Authors: 
+   Categories: cs.LG, stat.ML
+   Summary: In this paper, we present a hypergraph neural networks (HGNN) framework for data representation learning, which can encode high-order data correlation in a hypergraph structure. Confronting the challenges of learning representation for complex data in real practice, we propose to incorporate such data structure in a hypergraph, which is more flexible on data modeling, especially when dealing with 
+
+## 55. Explaining Hypergraph Neural Networks: From Local Explanations to Global Concepts
+   ID: 2410.07764v1
+   Authors: 
+   Categories: cs.LG
+   Summary: Hypergraph neural networks are a class of powerful models that leverage the message passing paradigm to learn over hypergraphs, a generalization of graphs well-suited to describing relational data with higher-order interactions. However, such models are not naturally interpretable, and their explainability has received very limited attention. We introduce SHypX, the first model-agnostic post-hoc e
+
+## 56. HyperAttack: Multi-Gradient-Guided White-box Adversarial Structure Attack of Hypergraph Neural Networks
+   ID: 2302.12407v1
+   Authors: 
+   Categories: cs.LG, cs.AI, cs.CR
+   Summary: Hypergraph neural networks (HGNN) have shown superior performance in various deep learning tasks, leveraging the high-order representation ability to formulate complex correlations among data by connecting two or more nodes through hyperedge modeling. Despite the well-studied adversarial attacks on Graph Neural Networks (GNN), there is few study on adversarial attacks against HGNN, which leads to 
+
+## 57. Molecular Hypergraph Neural Networks
+   ID: 2312.13136v2
+   Authors: 
+   Categories: physics.chem-ph, cs.LG
+   Summary: Graph neural networks (GNNs) have demonstrated promising performance across various chemistry-related tasks. However, conventional graphs only model the pairwise connectivity in molecules, failing to adequately represent higher-order connections like multi-center bonds and conjugated structures. To tackle this challenge, we introduce molecular hypergraphs and propose Molecular Hypergraph Neural Ne
+
+## 58. Heterophily-Agnostic Hypergraph Neural Networks with Riemannian Local Exchanger
+   ID: 2603.00599v1
+   Authors: 
+   Categories: cs.AI, cs.LG
+   Summary: Hypergraphs are the natural description of higher-order interactions among objects, widely applied in social network analysis, cross-modal retrieval, etc. Hypergraph Neural Networks (HGNNs) have become the dominant solution for learning on hypergraphs. Traditional HGNNs are extended from message passing graph neural networks, following the homophily assumption, and thus struggle with the prevalent
+
+## 59. Tensorized Hypergraph Neural Networks
+   ID: 2306.02560v2
+   Authors: 
+   Categories: cs.AI
+   Summary: Hypergraph neural networks (HGNN) have recently become attractive and received significant attention due to their excellent performance in various domains. However, most existing HGNNs rely on first-order approximations of hypergraph connectivity patterns, which ignores important high-order information. To address this issue, we propose a novel adjacency-tensor-based \textbf{T}ensorized \textbf{H}
+
+## 60. Recent Advances in Hypergraph Neural Networks
+   ID: 2503.07959v1
+   Authors: 
+   Categories: cs.LG, cs.SI
+   Summary: The growing interest in hypergraph neural networks (HGNNs) is driven by their capacity to capture the complex relationships and patterns within hypergraph structured data across various domains, including computer vision, complex networks, and natural language processing. This paper comprehensively reviews recent advances in HGNNs and presents a taxonomy of mainstream models based on their archite
+
+## 61. RelGT-AC: A Relational Graph Transformer for Autocomplete Tasks in Relational Databases
+   ID: 2606.03040v1
+   Authors: 
+   Categories: cs.AI, cs.LG
+   Summary: Relational databases underpin modern enterprise, scientific, and healthcare systems, yet predictive machine learning on such data remains challenging due to their multi-table, heterogeneous, and temporal structure. Relational Deep Learning (RDL) addresses this by representing databases as heterogeneous graphs and applying graph neural networks (GNNs) directly. RelBench v2 recently introduced autoc
+
+## 62. Translational Gaps in Graph Transformers for Longitudinal EHR Prediction: A Critical Appraisal of GT-BEHRT
+   ID: 2603.13231v1
+   Authors: 
+   Categories: cs.LG, cs.CL, cs.CY
+   Summary: Transformer-based models have improved predictive modeling on longitudinal electronic health records through large-scale self-supervised pretraining. However, most EHR transformer architectures treat each clinical encounter as an unordered collection of codes, which limits their ability to capture meaningful relationships within a visit. Graph-transformer approaches aim to address this limitation 
+
+## 63. Graph Transformer for Recommendation
+   ID: 2306.02330v1
+   Authors: 
+   Categories: cs.IR
+   Summary: This paper presents a novel approach to representation learning in recommender systems by integrating generative self-supervised learning with graph transformer architecture. We highlight the importance of high-quality data augmentation with relevant self-supervised pretext tasks for improving performance. Towards this end, we propose a new approach that automates the self-supervision augmentation
+
+## 64. Generalized Graph Transformer Variational Autoencoder
+   ID: 2512.00612v1
+   Authors: 
+   Categories: cs.LG, cs.AI
+   Summary: Graph link prediction has long been a central problem in graph representation learning in both network analysis and generative modeling. Recent progress in deep learning has introduced increasingly sophisticated architectures for capturing relational dependencies within graph-structured data. In this work, we propose the Generalized Graph Transformer Variational Autoencoder (GGT-VAE). Our model in
+
+## 65. Relational Graph Transformer
+   ID: 2505.10960v2
+   Authors: 
+   Categories: cs.LG, cs.AI, cs.DB
+   Summary: Relational Deep Learning (RDL) is a promising approach for building state-of-the-art predictive models on multi-table relational data by representing it as a heterogeneous temporal graph. However, commonly used Graph Neural Network models suffer from fundamental limitations in capturing complex structural patterns and long-range dependencies that are inherent in relational data. While Graph Transf
+
+## 66. Graph Transformers: A Survey
+   ID: 2407.09777v2
+   Authors: 
+   Categories: cs.LG, cs.AI
+   Summary: Graph transformers are a recent advancement in machine learning, offering a new class of neural network models for graph-structured data. The synergy between transformers and graph learning demonstrates strong performance and versatility across various graph-related tasks. This survey provides an in-depth review of recent progress and challenges in graph transformer research. We begin with foundat
+
+## 67. Graph Transformer Networks
+   ID: 1911.06455v2
+   Authors: 
+   Categories: cs.LG, cs.SI, stat.ML
+   Summary: Graph neural networks (GNNs) have been widely used in representation learning on graphs and achieved state-of-the-art performance in tasks such as node classification and link prediction. However, most existing GNNs are designed to learn node representations on the fixed and homogeneous graphs. The limitations especially become problematic when learning representations on a misspecified graph or a
+
+## 68. Topology-Informed Graph Transformer
+   ID: 2402.02005v3
+   Authors: 
+   Categories: cs.LG
+   Summary: Transformers have revolutionized performance in Natural Language Processing and Vision, paving the way for their integration with Graph Neural Networks (GNNs). One key challenge in enhancing graph transformers is strengthening the discriminative power of distinguishing isomorphisms of graphs, which plays a crucial role in boosting their predictive performances. To address this challenge, we introd
+
+## 69. Counterfactual Graph Transformer for Traffic Flow Prediction
+   ID: 2308.00391v1
+   Authors: 
+   Categories: cs.LG, cs.AI
+   Summary: Traffic flow prediction (TFP) is a fundamental problem of the Intelligent Transportation System (ITS), as it models the latent spatial-temporal dependency of traffic flow for potential congestion prediction. Recent graph-based models with multiple kinds of attention mechanisms have achieved promising performance. However, existing methods for traffic flow prediction tend to inherit the bias patter
+
+## 70. Heterogeneous Graph Transformer
+   ID: 2003.01332v1
+   Authors: 
+   Categories: cs.LG, cs.SI, stat.ML
+   Summary: Recent years have witnessed the emerging success of graph neural networks (GNNs) for modeling structured data. However, most GNNs are designed for homogeneous graphs, in which all nodes and edges belong to the same types, making them infeasible to represent heterogeneous structures. In this paper, we present the Heterogeneous Graph Transformer (HGT) architecture for modeling Web-scale heterogeneou
+
+## 71. QuEst: Graph Transformer for Quantum Circuit Reliability Estimation
+   ID: 2210.16724v2
+   Authors: 
+   Categories: quant-ph, cs.AI, cs.AR
+   Summary: Among different quantum algorithms, PQC for QML show promises on near-term devices. To facilitate the QML and PQC research, a recent python library called TorchQuantum has been released. It can construct, simulate, and train PQC for machine learning tasks with high speed and convenient debugging supports. Besides quantum for ML, we want to raise the community's attention on the reversed direction:
+
+## 72. Graph Transformer GANs for Graph-Constrained House Generation
+   ID: 2303.08225v1
+   Authors: 
+   Categories: cs.CV, cs.AI
+   Summary: We present a novel graph Transformer generative adversarial network (GTGAN) to learn effective graph node relations in an end-to-end fashion for the challenging graph-constrained house generation task. The proposed graph-Transformer-based generator includes a novel graph Transformer encoder that combines graph convolutions and self-attentions in a Transformer to model both local and global interac
+
+## 73. Planning Assembly Sequence with Graph Transformer
+   ID: 2210.05236v3
+   Authors: 
+   Categories: cs.AI, cs.LG
+   Summary: Assembly sequence planning (ASP) is the essential process for modern manufacturing, proven to be NP-complete thus its effective and efficient solution has been a challenge for researchers in the field. In this paper, we present a graph-transformer based framework for the ASP problem which is trained and demonstrated on a self-collected ASP database. The ASP database contains a self-collected set o
+
+## 74. TransCamP: Graph Transformer for 6-DoF Camera Pose Estimation
+   ID: 2105.14065v1
+   Authors: 
+   Categories: cs.CV
+   Summary: Camera pose estimation or camera relocalization is the centerpiece in numerous computer vision tasks such as visual odometry, structure from motion (SfM) and SLAM. In this paper we propose a neural network approach with a graph transformer backbone, namely TransCamP, to address the camera relocalization problem. In contrast with prior work where the pose regression is mainly guided by photometric 
+
+## 75. TransMOT: Spatial-Temporal Graph Transformer for Multiple Object Tracking
+   ID: 2104.00194v2
+   Authors: 
+   Categories: cs.CV
+   Summary: Tracking multiple objects in videos relies on modeling the spatial-temporal interactions of the objects. In this paper, we propose a solution named TransMOT, which leverages powerful graph transformers to efficiently model the spatial and temporal interactions among the objects. TransMOT effectively models the interactions of a large number of objects by arranging the trajectories of the tracked o
+
+## 76. Cell Graph Transformer for Nuclei Classification
+   ID: 2402.12946v1
+   Authors: 
+   Categories: cs.CV
+   Summary: Nuclei classification is a critical step in computer-aided diagnosis with histopathology images. In the past, various methods have employed graph neural networks (GNN) to analyze cell graphs that model inter-cell relationships by considering nuclei as vertices. However, they are limited by the GNN mechanism that only passes messages among local nodes via fixed edges. To address the issue, we devel
+
+## 77. Position-aware Graph Transformer for Recommendation
+   ID: 2412.18731v1
+   Authors: 
+   Categories: cs.IR
+   Summary: Collaborative recommendation fundamentally involves learning high-quality user and item representations from interaction data. Recently, graph convolution networks (GCNs) have advanced the field by utilizing high-order connectivity patterns in interaction graphs, as evidenced by state-of-the-art methods like PinSage and LightGCN. However, one key limitation has not been well addressed in existing 
+
+## 78. Masked Graph Transformer for Large-Scale Recommendation
+   ID: 2405.04028v1
+   Authors: 
+   Categories: cs.IR
+   Summary: Graph Transformers have garnered significant attention for learning graph-structured data, thanks to their superb ability to capture long-range dependencies among nodes. However, the quadratic space and time complexity hinders the scalability of Graph Transformers, particularly for large-scale recommendation. Here we propose an efficient Masked Graph Transformer, named MGFormer, capable of capturi
+
+## 79. Structural-Temporal Coupling Anomaly Detection with Dynamic Graph Transformer
+   ID: 2505.08330v1
+   Authors: 
+   Categories: cs.LG, cs.SI
+   Summary: Detecting anomalous edges in dynamic graphs is an important task in many applications over evolving triple-based data, such as social networks, transaction management, and epidemiology. A major challenge with this task is the absence of structural-temporal coupling information, which decreases the ability of the representation to distinguish anomalies from normal instances. Existing methods focus 
+
+## 80. Quantum Graph Transformer for NLP Sentiment Classification
+   ID: 2506.07937v1
+   Authors: 
+   Categories: cs.CL, quant-ph
+   Summary: Quantum machine learning is a promising direction for building more efficient and expressive models, particularly in domains where understanding complex, structured data is critical. We present the Quantum Graph Transformer (QGT), a hybrid graph-based architecture that integrates a quantum self-attention mechanism into the message-passing framework for structured language modeling. The attention m
+
+## 81. Federated Graph Attention Network for Rumor Detection
+   ID: 2206.05713v1
+   Authors: 
+   Categories: cs.SI
+   Summary: With the development of network technology, many social media are flourishing. Due to imperfect Internet regulation, the spread of false rumors has become a common problem on those social platforms. Social platforms can generate rumor data in their operation process, but existing rumor detection models are all constructed for a single social platform, which ignores the value of cross-platform rumo
+
+## 82. Relational Graph Attention Networks
+   ID: 1904.05811v1
+   Authors: 
+   Categories: cs.LG, cs.AI, stat.ML
+   Summary: We investigate Relational Graph Attention Networks, a class of models that extends non-relational graph attention mechanisms to incorporate relational information, opening up these methods to a wider variety of problems. A thorough evaluation of these models is performed, and comparisons are made against established benchmarks. To provide a meaningful comparison, we retrain Relational Graph Convol
+
+## 83. Neighbor Overlay-Induced Graph Attention Network
+   ID: 2408.08788v1
+   Authors: 
+   Categories: cs.LG
+   Summary: Graph neural networks (GNNs) have garnered significant attention due to their ability to represent graph data. Among various GNN variants, graph attention network (GAT) stands out since it is able to dynamically learn the importance of different nodes. However, present GATs heavily rely on the smoothed node features to obtain the attention coefficients rather than graph structural information, whi
+
+## 84. Edge-Featured Graph Attention Network
+   ID: 2101.07671v1
+   Authors: 
+   Categories: cs.LG, cs.AI
+   Summary: Lots of neural network architectures have been proposed to deal with learning tasks on graph-structured data. However, most of these models concentrate on only node features during the learning process. The edge features, which usually play a similarly important role as the nodes, are often ignored or simplified by these models. In this paper, we present edge-featured graph attention networks, nam
+
+## 85. Aspect and Opinion Term Extraction Using Graph Attention Network
+   ID: 2404.19260v1
+   Authors: 
+   Categories: cs.CL
+   Summary: In this work we investigate the capability of Graph Attention Network for extracting aspect and opinion terms. Aspect and opinion term extraction is posed as a token-level classification task akin to named entity recognition. We use the dependency tree of the input query as additional feature in a Graph Attention Network along with the token and part-of-speech features. We show that the dependency
+
+## 86. A Temporally Augmented Graph Attention Network for Affordance Classification
+   ID: 2604.10149v1
+   Authors: 
+   Categories: cs.LG, cs.AI
+   Summary: Graph attention networks (GATs) provide one of the best frameworks for learning node representations in relational data; but, existing variants such as Graph Attention Network (GAT) mainly operate on static graphs and rely on implicit temporal aggregation when applied to sequential data. In this paper, we introduce Electroencephalography-temporal Graph Attention Network (EEG-tGAT), a temporally au
+
+## 87. r-GAT: Relational Graph Attention Network for Multi-Relational Graphs
+   ID: 2109.05922v1
+   Authors: 
+   Categories: cs.AI, cs.CL, cs.LG
+   Summary: Graph Attention Network (GAT) focuses on modelling simple undirected and single relational graph data only. This limits its ability to deal with more general and complex multi-relational graphs that contain entities with directed links of different labels (e.g., knowledge graphs). Therefore, directly applying GAT on multi-relational graphs leads to sub-optimal solutions. To tackle this issue, we p
+
+## 88. SGAT: Simplicial Graph Attention Network
+   ID: 2207.11761v1
+   Authors: 
+   Categories: cs.LG
+   Summary: Heterogeneous graphs have multiple node and edge types and are semantically richer than homogeneous graphs. To learn such complex semantics, many graph neural network approaches for heterogeneous graphs use metapaths to capture multi-hop interactions between nodes. Typically, features from non-target nodes are not incorporated into the learning procedure. However, there can be nonlinear, high-orde
+
+## 89. Spectral Graph Attention Network with Fast Eigen-approximation
+   ID: 2003.07450v2
+   Authors: 
+   Categories: cs.LG, cs.SI, stat.ML
+   Summary: Variants of Graph Neural Networks (GNNs) for representation learning have been proposed recently and achieved fruitful results in various fields. Among them, Graph Attention Network (GAT) first employs a self-attention strategy to learn attention weights for each edge in the spatial domain. However, learning the attentions over edges can only focus on the local information of graphs and greatly in
+
+## 90. A Global-Local Graph Attention Network for Traffic Forecasting
+   ID: 2605.16726v1
+   Authors: 
+   Categories: cs.AI
+   Summary: Traffic forecasting is a significant part of intelligent transportation systems. One of the critical challenges of traffic forecasting is to find spatio-temporal correlations. In recent years, graph convolutional networks and graph attention networks have replaced traditional statistical models to predict future traffic. However, it is complicated for both of them to allow vertices to have far dif
+
+## 91. Relational Graph Attention Network for Aspect-based Sentiment Analysis
+   ID: 2004.12362v1
+   Authors: 
+   Categories: cs.CL, cs.LG
+   Summary: Aspect-based sentiment analysis aims to determine the sentiment polarity towards a specific aspect in online reviews. Most recent efforts adopt attention-based neural network models to implicitly connect aspects with opinion words. However, due to the complexity of language and the existence of multiple aspects in a single sentence, these models often confuse the connections. In this paper, we add
+
+## 92. Fine-grained Fact Verification with Kernel Graph Attention Network
+   ID: 1910.09796v4
+   Authors: 
+   Categories: cs.CL
+   Summary: Fact Verification requires fine-grained natural language inference capability that finds subtle clues to identify the syntactical and semantically correct but not well-supported claims. This paper presents Kernel Graph Attention Network (KGAT), which conducts more fine-grained fact verification with kernel-based attentions. Given a claim and a set of potential evidence sentences that form an evide
+
+## 93. MEGAN: Multi-Explanation Graph Attention Network
+   ID: 2211.13236v2
+   Authors: 
+   Categories: cs.LG, cs.AI
+   Summary: We propose a multi-explanation graph attention network (MEGAN). Unlike existing graph explainability methods, our network can produce node and edge attributional explanations along multiple channels, the number of which is independent of task specifications. This proves crucial to improve the interpretability of graph regression predictions, as explanations can be split into positive and negative 
+
+## 94. Hyperbolic Graph Attention Network
+   ID: 1912.03046v1
+   Authors: 
+   Categories: cs.LG, stat.ML
+   Summary: Graph neural network (GNN) has shown superior performance in dealing with graphs, which has attracted considerable research attention recently. However, most of the existing GNN models are primarily designed for graphs in Euclidean spaces. Recent research has proven that the graph data exhibits non-Euclidean latent anatomy. Unfortunately, there was rarely study of GNN in non-Euclidean settings so 
+
+## 95. Multi-Agent Actor-Critic with Hierarchical Graph Attention Network
+   ID: 1909.12557v2
+   Authors: 
+   Categories: cs.LG, cs.AI, cs.MA
+   Summary: Most previous studies on multi-agent reinforcement learning focus on deriving decentralized and cooperative policies to maximize a common reward and rarely consider the transferability of trained policies to new tasks. This prevents such policies from being applied to more complex multi-agent tasks. To resolve these limitations, we propose a model that conducts both representation learning for mul
+
+## 96. Association Rules Enhanced Knowledge Graph Attention Network
+   ID: 2011.08431v1
+   Authors: 
+   Categories: cs.IR
+   Summary: Most existing knowledge graphs suffer from incompleteness. Embedding knowledge graphs into continuous vector spaces has recently attracted increasing interest in knowledge base completion. However, in most existing embedding methods, only fact triplets are utilized, and logical rules have not been thoroughly studied for the knowledge base completion task. To overcome the problem, we propose an ass
+
+## 97. MKDTI: Predicting drug-target interactions via multiple kernel fusion on graph attention network
+   ID: 2407.10055v1
+   Authors: 
+   Categories: cs.LG, q-bio.QM
+   Summary: Drug-target relationships may now be predicted computationally using bioinformatics data, which is a valuable tool for understanding pharmacological effects, enhancing drug development efficiency, and advancing related research. A number of structure-based, ligand-based and network-based approaches have now emerged. Furthermore, the integration of graph attention networks with intricate drug targe
+
+## 98. Signed Graph Attention Networks
+   ID: 1906.10958v3
+   Authors: 
+   Categories: cs.SI, cs.LG, physics.soc-ph
+   Summary: Graph or network data is ubiquitous in the real world, including social networks, information networks, traffic networks, biological networks and various technical networks. The non-Euclidean nature of graph data poses the challenge for modeling and analyzing graph data. Recently, Graph Neural Network (GNNs) are proposed as a general and powerful framework to handle tasks on graph data, e.g., node
+
+## 99. Contrastive Document Representation Learning with Graph Attention Networks
+   ID: 2110.10778v1
+   Authors: 
+   Categories: cs.CL
+   Summary: Recent progress in pretrained Transformer-based language models has shown great success in learning contextual representation of text. However, due to the quadratic self-attention complexity, most of the pretrained Transformers models can only handle relatively short text. It is still a challenge when it comes to modeling very long documents. In this work, we propose to use a graph attention netwo
+
+## 100. Question Directed Graph Attention Network for Numerical Reasoning over Text
+   ID: 2009.07448v2
+   Authors: 
+   Categories: cs.AI
+   Summary: Numerical reasoning over texts, such as addition, subtraction, sorting and counting, is a challenging machine reading comprehension task, since it requires both natural language understanding and arithmetic computation. To address this challenge, we propose a heterogeneous graph representation for the context of the passage and question needed for such reasoning, and design a question directed gra
+

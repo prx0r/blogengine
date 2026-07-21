@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ochema Lab</title>
+<style>
+  :root {
+    --bg: #111;
+    --card: #1a1a1a;
+    --border: #333;
+    --text: #e0dcd5;
+    --muted: #777;
+    --accent: #c9a227;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "EB Garamond", "Georgia", serif;
+    background: var(--bg);
+    color: var(--text);
+    padding: 30px;
+  }
+  h1 {
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--accent);
+    margin-bottom: 4px;
+    letter-spacing: 1px;
+  }
+  .subtitle {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 30px;
+    font-style: italic;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 16px;
+    margin-bottom: 30px;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px;
+    transition: border-color 0.15s;
+  }
+  .card:hover { border-color: var(--accent); }
+  .card h2 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--accent);
+  }
+  .card p {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 12px;
+    line-height: 1.4;
+  }
+  .card a, .card .link {
+    display: inline-block;
+    padding: 6px 14px;
+    background: var(--accent);
+    color: #111;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    margin-right: 6px;
+    margin-bottom: 4px;
+  }
+  .card a:hover { opacity: 0.85; }
+  .card .tag {
+    display: inline-block;
+    padding: 2px 8px;
+    background: #222;
+    color: var(--muted);
+    border-radius: 3px;
+    font-size: 10px;
+    margin-right: 4px;
+  }
+  video { 
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    background: #000;
+  }
+  .tools {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .note {
+    color: var(--muted);
+    font-size: 12px;
+    font-style: italic;
+    margin-top: 8px;
+    border-top: 1px solid var(--border);
+    padding-top: 8px;
+  }
+</style>
+</head>
+<body>
+  <h1>Ochema Lab</h1>
+  <p class="subtitle">Factory control center — preview, edit, monitor</p>
+
+  <div class="grid">
+    <div class="card">
+      <h2>🎬 FableCut Editor</h2>
+      <p>Browser-based video editor. Import assets, build timelines, preview, export. The factory's output channel.</p>
+      <div class="tools">
+        <a href="https://remembered-donations-glasgow-alive.trycloudflare.com" target="_blank">Open FableCut →</a>
+        <span class="tag">7777</span>
+        <span class="tag">MCP ready</span>
+      </div>
+      <div class="note">Connected to MCP — instruct via any LLM agent</div>
+    </div>
+
+    <div class="card">
+      <h2>🖼 Thumbnail Studio</h2>
+      <p>Assign artwork to videos, preview thumbnails, tweak fonts and captions. 348 images in the gallery.</p>
+      <div class="tools">
+        <a href="https://passenger-literary-alignment-enable.trycloudflare.com" target="_blank">Open Assigner →</a>
+        <span class="tag">8765</span>
+      </div>
+      <div class="note">56 videos, 12 with assigned art</div>
+    </div>
+
+    <div class="card">
+      <h2>🌙 Liminal Listening Demo</h2>
+      <p>3-minute demo: 3 alchemical artworks with grain overlay, color shift, and crossfade transitions. Designed for contemplative voiceover.</p>
+      <video controls playsinline preload="metadata">
+        <source src="/lab/liminal-demo.mp4" type="video/mp4">
+      </video>
+      <div class="tools">
+        <a href="/lab/liminal-demo.mp4" download>Download MP4</a>
+        <span class="tag">2.3 MB</span>
+        <span class="tag">3 min</span>
+        <span class="tag">720p</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>📊 Factory Status</h2>
+      <p>153 ROs | 43 ready for essay | 3 essays written | 1 cron active | 2 COs | 904 art entries</p>
+      <div class="tools">
+        <a href="https://re-rendering-atlas.tradesprior.workers.dev" target="_blank">Live Site →</a>
+        <span class="tag">Cloudflare Worker</span>
+      </div>
+      <div class="note">Cron fires every 6h — processes one stage per cycle</div>
+    </div>
+
+    <div class="card">
+      <h2>📁 Media Assets</h2>
+      <p>13 artwork files pre-loaded into FableCut. Drag any asset onto the timeline to start editing.</p>
+      <div class="tools">
+        <a href="https://remembered-donations-glasgow-alive.trycloudflare.com" target="_blank">Open Media Panel →</a>
+        <span class="tag">Fludd</span>
+        <span class="tag">Alchemy</span>
+        <span class="tag">Angels</span>
+      </div>
+      <div class="note">Drop more files into /root/projects/FableCut/media/ to add them</div>
+    </div>
+
+    <div class="card">
+      <h2>🤖 Hermes MCP</h2>
+      <p>Register the FableCut MCP server with any LLM agent to drive the editor programmatically.</p>
+      <pre style="background:#222;padding:10px;border-radius:4px;font-size:11px;color:#ccc;overflow-x:auto;">
+claude mcp add -s user fablecut -- \
+  node "/root/projects/FableCut/mcp-server.js"</pre>
+      <div class="note" style="margin-top:8px;">MCP tools: fablecut_status, fablecut_get_project, fablecut_patch_project, fablecut_import_media, fablecut_set_project</div>
+    </div>
+  </div>
+
+  <div class="note" style="text-align:center;margin-top:20px;border:none;">
+    Ochema Lab · Built 2026-07-20 · 
+    <a href="/lab/liminal-demo.mp4" style="color:var(--accent);">Liminal Demo</a> · 
+    <a href="https://remembered-donations-glasgow-alive.trycloudflare.com" style="color:var(--accent);">FableCut</a>
+  </div>
+</body>
+</html>

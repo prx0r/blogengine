@@ -1,0 +1,335 @@
+{
+  "ro_id": "ro:ficino-daimon",
+  "schema_version": 1,
+  "title": "Ficino on the Daimon",
+  "subtitle": "Commentarial perspectives on Ficino's concept of the daimon",
+  "family": "thinker-topic",
+  "status": "draft",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "A compilation of scholarly commentary on Marsilio Ficino's concept of the daimon as tutelary spirit, ontological mediator, and object of astrological and magical practice.",
+    "scope": "Secondary scholarship only (Tier 2). No primary source passages from Ficino's own works. All passages come from academic commentaries on Ficino.",
+    "traditions": [
+      "ficino",
+      "renaissance_platonism",
+      "neoplatonism"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "work:ficino-daemon-socratico",
+      "tier": 2,
+      "label": "Vieira \u2014 Mars\u00edlio Ficino sobre o daemon socr\u00e1tico",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "socratic_daimon",
+        "apology_commentary",
+        "tutelary_spirit"
+      ],
+      "sections_affected": [
+        "ontology",
+        "socrates"
+      ],
+      "passages_used": 0,
+      "status": "active"
+    },
+    {
+      "source_id": "work:kiosoglou-ficino-soul",
+      "tier": 2,
+      "label": "Kiosoglou \u2014 Marsilio Ficino and the Soul",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "soul_vehicle",
+        "elements_of_theology",
+        "proclean_influence"
+      ],
+      "sections_affected": [
+        "ontology",
+        "soul"
+      ],
+      "passages_used": 0,
+      "status": "active"
+    },
+    {
+      "source_id": "work:corrias-daemonic-reason",
+      "tier": 2,
+      "label": "Corrias \u2014 From Daemonic Reason to Daemonic Imagination",
+      "first_added_in": null,
+      "last_reviewed_in": null,
+      "contribution": [
+        "plotinus_comparison",
+        "daemonic_imagination"
+      ],
+      "sections_affected": null,
+      "passages_used": 0,
+      "status": "paywalled_stub"
+    },
+    {
+      "source_id": "work:god-or-the-daemon-platonic-astrology-in",
+      "tier": 2,
+      "label": "Voss \u2014 God or the Daemon",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "astrological_daimon"
+      ],
+      "sections_affected": [
+        "astrology"
+      ],
+      "passages_used": 0,
+      "status": "active"
+    },
+    {
+      "source_id": "work:ficino-hermetic",
+      "tier": 2,
+      "label": "Voss \u2014 Ficino Hermetic",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "hermetic_magic"
+      ],
+      "sections_affected": [
+        "practice"
+      ],
+      "passages_used": 0,
+      "status": "active"
+    },
+    {
+      "source_id": "work:magic-astrology-and-music",
+      "tier": 2,
+      "label": "Voss \u2014 Magic, Astrology and Music",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "music_therapy"
+      ],
+      "sections_affected": [
+        "practice",
+        "astrology"
+      ],
+      "passages_used": 0,
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "ontology",
+      "subsection": "socratic_origin",
+      "kind": "source",
+      "text": "[Passage to be extracted from Vieira's analysis of Ficino's commentary on the Apology. Vieira argues that Ficino's daimon is fundamentally Socratic \u2014 a tutelary spirit assigned at birth, not a celestial intelligence or planetary angel.]",
+      "source_id": "work:ficino-daemon-socratico",
+      "page_ref": null,
+      "topics": [
+        "socratic_daimon",
+        "tutelary_spirit",
+        "apology"
+      ],
+      "notes": "Key source for the Socratic lineage of Ficino's daimon concept"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "ontology",
+      "subsection": "soul_vehicle",
+      "kind": "source",
+      "text": "[Passage to be extracted from Kiosoglou on Ficino's use of Proclus' Elements of Theology. Kiosoglou demonstrates that Ficino's daimon functions as the vehicle of the soul \u2014 an ontological intermediary between the immortal intellect and the mortal body, structurally derived from Proclean metaphysics.]",
+      "source_id": "work:kiosoglou-ficino-soul",
+      "page_ref": null,
+      "topics": [
+        "soul_vehicle",
+        "proclean_influence",
+        "mediation"
+      ],
+      "notes": "Connects Ficino's daimon to the Proclean tradition of metaphysical intermediaries"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "astrology",
+      "subsection": "planetary_mediation",
+      "kind": "source",
+      "text": "[Passage to be extracted from Voss on Ficino's astrological framework. Voss shows that the daimon operates through planetary mediation \u2014 the natal configuration of the heavens determines the specific character and function of the daimon for each individual.]",
+      "source_id": "work:vossficinoandrenaissanceharmonia",
+      "page_ref": null,
+      "topics": [
+        "astrological_daimon",
+        "planetary_mediation",
+        "natal_configuration"
+      ],
+      "notes": "Establishes the astrological dimension of Ficino's daimon \u2014 not just a philosophical concept but an astrological reality"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "practice",
+      "subsection": "music_therapy",
+      "kind": "source",
+      "text": "[Passage to be extracted from Voss on Ficino's musical therapy. Voss describes how Ficino used Orphic hymns and planetary songs to attune the soul to its daimon \u2014 a practical, therapeutic application of the daimonic principle.]",
+      "source_id": "work:vossficinoandrenaissanceharmonia",
+      "page_ref": null,
+      "topics": [
+        "music_therapy",
+        "orphic_hymns",
+        "planetary_songs",
+        "practice"
+      ],
+      "notes": "Connects the daimon concept to Ficino's practical magical and musical practices"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "comparison",
+      "subsection": "plotinus",
+      "kind": "source",
+      "text": "[Passage to be extracted from Corrias on the distinction between Ficino's daimon and Plotinus' daimon. Corrias argues that Ficino transforms the Plotinian daimon from a purely noetic entity into a personally accessible spiritual guide \u2014 a shift from reason to imagination.]",
+      "source_id": "work:corrias-daemonic-reason",
+      "page_ref": null,
+      "topics": [
+        "plotinus_comparison",
+        "daemonic_imagination"
+      ],
+      "notes": "SOURCE NOT YET ACQUIRED \u2014 paywalled. Passage to be filled when OA copy is found or paper is purchased."
+    }
+  ],
+  "coverage": {
+    "ontology": {
+      "status": "partial",
+      "sources": [
+        "work:ficino-daemon-socratico",
+        "work:kiosoglou-ficino-soul"
+      ],
+      "passage_count": 2,
+      "estimated_completeness": 0.35,
+      "gaps": [
+        "Ficino's own definition of daimon (primary source needed)",
+        "Latin terminology analysis (genius vs daemon vs angelus)",
+        "Ficino's debt to Apuleius's De Deo Socratis"
+      ]
+    },
+    "astrology": {
+      "status": "partial",
+      "sources": [
+        "work:vossficinoandrenaissanceharmonia"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 0.25,
+      "gaps": [
+        "Detailed natal astrology framework",
+        "Ficino's planetary hour system for daimonic practice",
+        "Three Books on Life astrological passages (primary source)"
+      ]
+    },
+    "practice": {
+      "status": "partial",
+      "sources": [
+        "work:vossficinoandrenaissanceharmonia"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 0.2,
+      "gaps": [
+        "Ficino's talismanic magic and the daimon",
+        "Prayer practices addressing the daimon",
+        "Orphic hymn recitation protocols"
+      ]
+    },
+    "comparison": {
+      "status": "minimal",
+      "sources": [],
+      "passage_count": 1,
+      "estimated_completeness": 0.1,
+      "gaps": [
+        "Corrias comparison with Plotinus (paywalled)",
+        "Comparison with Pico della Mirandola's daimon concept",
+        "Comparison with the Christian guardian angel tradition",
+        "Walker's interpretation (not yet acquired)"
+      ]
+    },
+    "socrates": {
+      "status": "partial",
+      "sources": [
+        "work:ficino-daemon-socratico"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 0.3,
+      "gaps": [
+        "The reception of the Socratic daimon in Renaissance thought",
+        "Ficino's sources for the Socratic daimon (Plato, Apuleius, Augustine)"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "coverage_gap",
+      "title": "Missing Corrias comparison with Plotinus",
+      "description": "Corrias' paper on the Plotinus-Ficino comparison is paywalled. The comparison section currently has only placeholder text.",
+      "suggested_sources": [
+        "Find OA copy of Corrias \u2014 From Daemonic Reason to Daemonic Imagination"
+      ],
+      "status": "open",
+      "created": "2026-07-11",
+      "auto_generated": true
+    },
+    {
+      "id": "issue-002",
+      "type": "coverage_gap",
+      "title": "No primary source passages",
+      "description": "This RO currently contains only secondary commentary. No passages from Ficino's own works (Three Books on Life, Platonic Theology, Letters) are included.",
+      "suggested_sources": [
+        "work:the-letters-of-marsilio-ficino",
+        "Platonic Theology volumes in source-texts/"
+      ],
+      "status": "open",
+      "created": "2026-07-11",
+      "auto_generated": true
+    },
+    {
+      "id": "issue-003",
+      "type": "potential_error",
+      "title": "Voss and Kiosoglou may disagree on daimon-soul relationship",
+      "description": "Voss emphasizes the astrological and musical dimensions. Kiosoglou emphasizes the metaphysical and Proclean structure. These may not contradict \u2014 but the current RO doesn't check.",
+      "suggested_sources": [],
+      "status": "open",
+      "created": "2026-07-11",
+      "auto_generated": true
+    },
+    {
+      "id": "issue-004",
+      "type": "validation_needed",
+      "title": "Passages are placeholder text",
+      "description": "All passages currently contain bracketed descriptions instead of actual extracted text. Real passages need to be extracted from the PDFs.",
+      "suggested_sources": [],
+      "status": "open",
+      "created": "2026-07-11",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-11",
+      "type": "initial",
+      "summary": "Initial draft compilation from 3 secondary sources. All passages are placeholder text \u2014 extraction not yet performed.",
+      "sources_added": [
+        "work:ficino-daemon-socratico",
+        "work:kiosoglou-ficino-soul",
+        "work:god-or-the-daemon-platonic-astrology-in",
+        "work:ficino-hermetic",
+        "work:magic-astrology-and-music"
+      ],
+      "sources_removed": [],
+      "passage_count": 5,
+      "test_pass_rate": null,
+      "skill_id": null
+    }
+  ],
+  "dependencies": [],
+  "outputs": [],
+  "timeline": [
+    {
+      "date": "2026-07-11",
+      "event": "RO created in draft state",
+      "sources_total": 3,
+      "passages_total": 5
+    }
+  ]
+}

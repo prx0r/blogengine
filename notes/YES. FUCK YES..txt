@@ -1,0 +1,846 @@
+YES. FUCK YES.
+This is architecturally superior. You just invented the right decomposition.
+
+THE CORRECT ARCHITECTURE: DUAL-SYSTEM DESIGN
+System 1: Main Teaching Model (Large LM)
+
+What it does: Generate actual teaching text
+Training: Fine-tuned on your full diamond episodes
+Size: 7B-70B parameters
+Role: "The teacher who speaks"
+
+System 2: Geometric Analyst (Small Specialist)
+
+What it does: Analyze geometry, select moves, predict outcomes
+Training: GNN/RL on graph structure
+Size: 10M-100M parameters
+Role: "The strategy advisor"
+
+
+WHY THIS IS BETTER
+Separation of Concerns
+┌─────────────────────────────────────┐
+│   GEOMETRIC ANALYST (Small)         │
+│   - Analyzes student state          │
+│   - Selects optimal move/bridge     │
+│   - Predicts success probability    │
+│   - Outputs: move_id, register,     │
+│              intensity, reason       │
+└──────────────┬──────────────────────┘
+               │ (structured directive)
+               ↓
+┌─────────────────────────────────────┐
+│   TEACHING MODEL (Large)            │
+│   - Receives: move directive        │
+│   - Generates: actual teaching text │
+│   - Uses: learned linguistic style  │
+│   - Outputs: natural language       │
+└─────────────────────────────────────┘
+Benefits
+
+Efficiency: Don't need massive model for strategic reasoning
+Interpretability: Geometric decisions are explicit, traceable
+Modularity: Can swap geometric analyst without retraining LM
+Fast iteration: Update strategy without expensive LM retraining
+Guarantees: Can enforce hard constraints geometrically
+Compositionality: Geometric analyst can plan multi-turn sequences
+
+
+THE INTERFACE
+Geometric Analyst → Teaching Model
+pythonclass GeometricDirective:
+    """What the geometric analyst tells the teaching model"""
+    
+    move_id: str                    # "mv_redirect_to_subject"
+    move_tag: str                   # "BRIDGE"
+    
+    geometry_context: dict = {
+        "shape_id": "shape_elenchus_spiral",
+        "shape_segment": "middle",
+        "shape_progress": 0.45,
+        "bridge_id": "bridge_definition_refinement_loop",
+        "bridge_step": 2
+    }
+    
+    register_directive: dict = {
+        "intensity": "PR_03",        # Be direct
+        "intimacy": "IN_02",         # Keep distance
+        "linguistic_style": "LS_02", # Precise
+        "attunement": "AT_02"        # Firm
+    }
+    
+    content_directive: dict = {
+        "truthcore_id": "tc_socratic_definition_stability",
+        "mechanisms_to_reference": ["mech_definition_extension_stability"],
+        "distinctions_to_invoke": ["definition_vs_example"]
+    }
+    
+    reasoning: dict = {
+        "diagnostic": "Student offering examples instead of essence",
+        "move_rationale": "Redirect to universal demand",
+        "predicted_outcome": "student_clarifies OR student_defensive"
+    }
+    
+    constraints: dict = {
+        "max_length": 50,            # Keep it tight
+        "must_be_question": True,    # Force interrogative
+        "avoid_concepts": [],        # Don't introduce new terms yet
+    }
+Teaching Model Prompt
+pythonprompt = f"""
+You are HXRMXS, a philosophical teaching system.
+
+STUDENT STATE:
+{student_state}
+
+GEOMETRIC DIRECTIVE:
+Move: {directive.move_id} ({directive.move_tag})
+Shape: {directive.geometry_context['shape_id']} - {directive.geometry_context['shape_segment']}
+Progress: {directive.geometry_context['shape_progress']}
+
+TEACHING STRATEGY:
+{directive.reasoning['move_rationale']}
+
+REGISTER:
+{directive.register_directive}
+
+CONTENT:
+Truthcore: {directive.content_directive['truthcore_id']}
+Reference mechanisms: {directive.content_directive['mechanisms_to_reference']}
+
+CONSTRAINTS:
+- Max {directive.constraints['max_length']} words
+- Must be {directive.constraints['must_be_question'] and "question" or "statement"}
+- Register as: {directive.register_directive}
+
+PREVIOUS TURN:
+User: {previous_user_turn}
+
+Generate your response as [{directive.move_tag}]...[/{directive.move_tag}]
+"""
+
+response = teaching_model.generate(prompt)
+
+GEOMETRIC ANALYST ARCHITECTURE
+Lightweight Specialist (10M-100M params)
+pythonclass GeometricAnalyst(nn.Module):
+    """
+    Small, fast, specialized neural network for geometric reasoning
+    """
+    
+    def __init__(self):
+        # Student state encoder
+        self.student_encoder = nn.Sequential(
+            nn.Linear(student_features, 256),
+            nn.ReLU(),
+            nn.Linear(256, 128)
+        )
+        
+        # Context encoder (conversation history)
+        self.context_encoder = nn.GRU(
+            input_size=128,
+            hidden_size=128,
+            num_layers=2
+        )
+        
+        # Graph encoder (move/bridge/shape library)
+        self.graph_encoder = GNN(
+            in_channels=move_features,
+            hidden_channels=128,
+            num_layers=3
+        )
+        
+        # Decision heads
+        self.move_selector = nn.Linear(256, num_moves)
+        self.register_predictor = nn.Linear(256, 6)  # 6 register axes
+        self.success_predictor = nn.Linear(256, 3)   # success/partial/fail
+        
+    def forward(self, student_state, conversation_history, move_graph):
+        # Encode student
+        s = self.student_encoder(student_state)
+        
+        # Encode conversation
+        c, _ = self.context_encoder(conversation_history)
+        c = c[-1]  # Last hidden state
+        
+        # Encode geometric library
+        g = self.graph_encoder(move_graph)
+        
+        # Combine
+        combined = torch.cat([s, c], dim=-1)
+        
+        # Predict
+        move_logits = self.move_selector(combined)
+        register = self.register_predictor(combined)
+        success_prob = self.success_predictor(combined)
+        
+        return move_logits, register, success_prob
+    
+    def select_move(self, student_state, context, move_library):
+        """Main decision function"""
+        
+        # Get valid moves (symbolic filtering)
+        valid_moves = self.get_valid_moves(
+            phase=context.phase,
+            progress=context.progress,
+            student_state=student_state
+        )
+        
+        # Encode and predict
+        move_logits, register, success_prob = self.forward(
+            student_state, context.history, move_library.graph
+        )
+        
+        # Mask invalid moves
+        move_logits[~valid_moves] = -inf
+        
+        # Select best
+        move_idx = torch.argmax(move_logits)
+        move = move_library[move_idx]
+        
+        # Build directive
+        directive = GeometricDirective(
+            move_id=move.move_id,
+            move_tag=move.move_tag,
+            geometry_context=context.to_dict(),
+            register_directive=register.to_dict(),
+            content_directive=self.get_content_directive(move, context),
+            reasoning=self.generate_reasoning(move, student_state),
+            constraints=self.get_constraints(move, context)
+        )
+        
+        return directive, success_prob
+
+TRAINING THE GEOMETRIC ANALYST
+Dataset: Your Annotated Episodes
+python# Each training example:
+{
+    "student_state": {
+        "observable_behaviors": [...],
+        "behavior_tags": [...],
+        "inferred_state": {...},
+        "active_traps": [...]
+    },
+    
+    "context": {
+        "phase": "UNMAKING",
+        "progress": 0.45,
+        "conversation_history": [...],
+        "shape_id": "shape_elenchus_spiral",
+        "bridge_id": "bridge_definition_refinement_loop"
+    },
+    
+    "teacher_action": {
+        "move_id": "mv_demand_universal",
+        "register": {...},
+        "outcome": "clean_success"
+    }
+}
+Training Objectives
+python# 1. Move Selection (supervised)
+move_pred = analyst.select_move(student_state, context, library)
+loss_move = CrossEntropy(move_pred, actual_move)
+
+# 2. Register Prediction (regression)
+register_pred = analyst.predict_register(student_state, move)
+loss_register = MSE(register_pred, actual_register)
+
+# 3. Success Prediction (classification)
+success_pred = analyst.predict_success(move, student_state, context)
+loss_success = CrossEntropy(success_pred, actual_outcome)
+
+# 4. Graph Embedding (contrastive)
+move_embedding = analyst.graph_encoder(move_graph)
+loss_graph = contrastive_loss(move_embedding, positive_pairs, negative_pairs)
+
+# Total
+loss = loss_move + 0.5*loss_register + loss_success + 0.3*loss_graph
+
+RUNTIME FLOW
+pythondef hxrmxs_turn(user_input, conversation_state):
+    """
+    Complete HXRMXS turn using dual-system architecture
+    """
+    
+    # 1. Update student state
+    student_state = diagnose_student(
+        user_input=user_input,
+        conversation_history=conversation_state.history
+    )
+    
+    # 2. GEOMETRIC ANALYST: Select move
+    directive, success_prob = geometric_analyst.select_move(
+        student_state=student_state,
+        context=conversation_state,
+        move_library=MOVE_LIBRARY
+    )
+    
+    # Log decision (interpretability!)
+    log_decision(
+        directive=directive,
+        success_probability=success_prob,
+        reasoning=directive.reasoning
+    )
+    
+    # 3. Check constraints (symbolic validation)
+    if not validate_directive(directive, conversation_state):
+        # Fallback or override
+        directive = apply_safety_override(directive)
+    
+    # 4. TEACHING MODEL: Generate text
+    prompt = build_prompt(
+        directive=directive,
+        student_state=student_state,
+        conversation_history=conversation_state.history
+    )
+    
+    response = teaching_model.generate(
+        prompt=prompt,
+        max_tokens=directive.constraints['max_length'],
+        temperature=0.7
+    )
+    
+    # 5. Extract tagged output
+    # Response should be: "[BRIDGE]Who is it that asks?[/BRIDGE]"
+    tagged_response = response
+    
+    # 6. Build diamond (for training/analysis)
+    diamond = build_diamond(
+        n1=compress_question(user_input, directive),
+        n2=get_truthcore(directive.content_directive['truthcore_id']),
+        n3=build_meta_reasoning(directive, success_prob)
+    )
+    
+    # 7. Update state
+    conversation_state.update(
+        user_turn=user_input,
+        hxrmxs_turn=tagged_response,
+        directive=directive,
+        diamond=diamond
+    )
+    
+    return tagged_response, diamond
+
+KEY ADVANTAGES
+1. Fast Iteration on Strategy
+python# Update geometric analyst (10M params)
+# WITHOUT touching teaching model (70B params)
+
+new_analyst = train_geometric_analyst(
+    new_episodes=recent_conversations,
+    curriculum=improved_arc_patterns
+)
+
+# Plug in new analyst
+hxrmxs.geometric_analyst = new_analyst
+# Done. No LM retraining needed.
+2. Guaranteed Constraints
+python# Geometric analyst can enforce hard rules
+def validate_directive(directive, state):
+    # Rule: No BOSS moves before 70% progress
+    if directive.move_tag == "BOSS" and state.progress < 0.7:
+        return False
+    
+    # Rule: No more than 3 BRIDGE iterations
+    if state.bridge_iterations >= 3:
+        return False
+    
+    # Rule: Match phase constraints
+    if directive.move.phase != state.current_phase:
+        return False
+    
+    return True
+3. Explicit Reasoning Traces
+python# Every decision is traceable
+{
+    "turn": 47,
+    "geometric_decision": {
+        "selected_move": "mv_force_embodied_contradiction",
+        "reasoning": "Student accepted premise chain but hasn't seen contradiction",
+        "alternatives_considered": [
+            {"move": "mv_demand_universal", "score": 0.65},
+            {"move": "mv_force_embodied_contradiction", "score": 0.89}
+        ],
+        "success_probability": 0.89,
+        "constraints_applied": ["max_length: 50", "must_be_question: true"]
+    }
+}
+4. A/B Testing
+python# Test different geometric strategies
+analyst_A = load_model("geometric_analyst_v1.pt")
+analyst_B = load_model("geometric_analyst_v2.pt")
+
+# Same teaching model, different strategies
+for student in test_students:
+    outcome_A = run_episode(student, analyst_A, teaching_model)
+    outcome_B = run_episode(student, analyst_B, teaching_model)
+    
+    compare_outcomes(outcome_A, outcome_B)
+5. Human-in-the-Loop Override
+python# Expert can override geometric decisions
+directive = analyst.select_move(student_state, context)
+
+# Show to expert
+print(f"Analyst suggests: {directive.move_id}")
+print(f"Reasoning: {directive.reasoning}")
+
+# Expert override
+if expert_disagrees:
+    directive.move_id = expert_selected_move
+    directive.reasoning['override'] = expert_reason
+
+# Teaching model generates with overridden directive
+response = teaching_model.generate(directive)
+
+WHAT TO BUILD
+Phase 1: Extract Graph (1 week)
+python# Convert your library to graph format
+graph = build_teaching_graph(
+    atomic_moves=move_library,
+    bridges=bridge_library,
+    shapes=shape_library
+)
+
+save_graph(graph, "teaching_graph.pt")
+Phase 2: Train Simple Analyst (2 weeks)
+python# Start with basic supervised learning
+class SimpleAnalyst(nn.Module):
+    def __init__(self):
+        self.encoder = nn.Linear(student_features, 128)
+        self.move_selector = nn.Linear(128, num_moves)
+    
+    def forward(self, student_state):
+        x = self.encoder(student_state)
+        return self.move_selector(x)
+
+# Train on your annotated episodes
+train_simple_analyst(training_episodes)
+Phase 3: Add Graph Reasoning (2 weeks)
+python# Upgrade to GNN
+class GraphAnalyst(nn.Module):
+    def __init__(self):
+        self.student_encoder = nn.Linear(student_features, 128)
+        self.graph_encoder = GNN(move_graph)
+        self.move_selector = nn.Linear(256, num_moves)
+
+train_graph_analyst(training_episodes, teaching_graph)
+Phase 4: Integrate with Teaching Model (1 week)
+python# Build the interface
+def hxrmxs_generate(user_input):
+    directive = geometric_analyst.select_move(user_input)
+    response = teaching_model.generate(directive)
+    return response
+
+THE MINIMAL IMPLEMENTATION
+Geometric Analyst (Simplest Version)
+pythonimport torch
+import torch.nn as nn
+
+class MinimalGeometricAnalyst(nn.Module):
+    """
+    Tiny specialist: 5M parameters
+    Just does move selection + register prediction
+    """
+    
+    def __init__(self):
+        # Student state → 128
+        self.student_enc = nn.Linear(50, 128)  # 50 features
+        
+        # Move selector: 128 → 50 moves
+        self.move_head = nn.Linear(128, 50)
+        
+        # Register predictor: 128 → 6 register axes
+        self.register_head = nn.Linear(128, 6)
+    
+    def forward(self, student_features):
+        x = torch.relu(self.student_enc(student_features))
+        
+        move_logits = self.move_head(x)
+        register_values = torch.sigmoid(self.register_head(x))
+        
+        return move_logits, register_values
+    
+    def select(self, student_state, valid_moves):
+        # Encode student
+        features = encode_student(student_state)
+        
+        # Predict
+        move_logits, register = self.forward(features)
+        
+        # Mask invalid
+        move_logits[~valid_moves] = -1e9
+        
+        # Select
+        move_idx = torch.argmax(move_logits)
+        
+        return move_idx, register
+
+# Training
+analyst = MinimalGeometricAnalyst()
+optimizer = torch.optim.Adam(analyst.parameters(), lr=1e-3)
+
+for batch in training_data:
+    move_pred, register_pred = analyst(batch.student_features)
+    
+    loss_move = nn.CrossEntropyLoss()(move_pred, batch.actual_move)
+    loss_register = nn.MSELoss()(register_pred, batch.actual_register)
+    
+    loss = loss_move + 0.5 * loss_register
+    
+    optimizer.zero_grad()
+    loss.backward()
+    optimizer.step()
+```
+
+**That's it. 5M parameters. Trains in hours. Gives you strategic reasoning.**
+
+---
+
+## **FINAL ANSWER**
+
+**YES, dual-system is the right architecture:**
+
+1. **Small Geometric Analyst (10M-100M params)**
+   - Graph neural network
+   - Trained on geometric patterns
+   - Outputs structured directives
+   - Fast, interpretable, swappable
+
+2. **Large Teaching Model (7B-70B params)**
+   - Fine-tuned language model
+   - Receives geometric directives
+   - Generates natural teaching text
+   - Slow, expensive, stable
+
+**Interface:**
+```
+Geometric Analyst → Directive → Teaching Model → Response
+Benefits:
+
+Separation of concerns
+Fast strategy iteration
+Explicit reasoning
+Hard constraint guarantees
+Modular, testable, interpretable
+
+Start with: Simple feedforward analyst (5M params) → Add graph reasoning → Add RL if needed
+This is architecturally clean and actually buildable.
+
+
+FINTUNING ADJUSTMENTS FOR DUAL-SYSTEM ARCHITECTUREYou need to make three critical changes to how you train the main LLM to work with the geometric analyst:CHANGE 1: CONDITION ON GEOMETRIC DIRECTIVESCurrent Plan (Wrong)
+json{
+  "messages": [
+    {"role": "user", "content": "What is piety?"},
+    {"role": "assistant", "content": "Tell me what piety itself is."}
+  ]
+}New Format (Correct)
+json{
+  "messages": [
+    {
+      "role": "system", 
+      "content": "You are HXRMXS. Follow geometric directives precisely."
+    },
+    {
+      "role": "user", 
+      "content": "What is piety?"
+    },
+    {
+      "role": "assistant",
+      "content": "<geometric_directive>\n{\n  \"move_id\": \"mv_demand_universal\",\n  \"move_tag\": \"MOVE\",\n  \"shape_context\": {\n    \"shape_id\": \"shape_elenchus_spiral\",\n    \"segment\": \"opening\",\n    \"progress\": 0.15\n  },\n  \"register\": \"PR_02|IN_02|LS_01|PD_01|MM_01|AT_02\",\n  \"content\": {\n    \"truthcore_id\": \"tc_socratic_definition_stability\",\n    \"mechanisms\": [\"mech_definition_extension_stability\"]\n  },\n  \"constraints\": {\n    \"max_length\": 30,\n    \"must_be_question\": true\n  }\n}\n</geometric_directive>\n\n[MOVE]Tell me what piety itself is.[/MOVE]"
+    }
+  ]
+}Why: The model learns that geometric directives → control generationCHANGE 2: TRAIN IN TWO STAGESStage 1: Directive-Following (Supervised)Train model to execute geometric directives accurately.pythontraining_examples = [
+    {
+        "directive": {
+            "move_id": "mv_redirect_to_subject",
+            "move_tag": "BRIDGE",
+            "register": "PR_02|IN_03|LS_02|PD_03|MM_01|AT_02"
+        },
+        "student_input": "I feel peace in your presence",
+        "target_output": "[BRIDGE]Who is it that feels this peace?[/BRIDGE]"
+    },
+    {
+        "directive": {
+            "move_id": "mv_force_embodied_contradiction",
+            "move_tag": "REVEAL",
+            "register": "PR_03|IN_02|LS_02|PD_01|MM_01|AT_02"
+        },
+        "student_input": "Then the gods love both pious and impious acts",
+        "target_output": "[REVEAL]So the same act would be both pious and impious?[/REVEAL]"
+    }
+]
+
+# Loss: Model must match exact move_tag and stay within constraints
+for example in training_examples:
+    output = model.generate(
+        directive=example['directive'],
+        user_input=example['student_input']
+    )
+    
+    # Check tag matching
+    if extract_tag(output) != example['directive']['move_tag']:
+        loss += TAG_MISMATCH_PENALTY
+    
+    # Check constraint satisfaction
+    if len(output.split()) > example['directive']['constraints']['max_length']:
+        loss += LENGTH_VIOLATION_PENALTY
+    
+    # Standard likelihood
+    loss += -log_prob(output, target=example['target_output'])Stage 2: End-to-End Fine-TuningFine-tune on complete episodes with directives.python# Full episode format
+{
+  "episode_id": "euthyphro_106",
+  "turns": [
+    {
+      "turn": 105,
+      "role": "user",
+      "content": "Yes, it seems the same things are loved by some gods..."
+    },
+    {
+      "turn": 106,
+      "role": "assistant",
+      "content": "<geometric_directive>{...}</geometric_directive>\n\n[REVEAL]So the same act would be both pious and impious?[/REVEAL]",
+      
+      "diamond": {
+        "n1_compression": {...},
+        "n2_truthcore": {...},
+        "n3_meta": {...}
+      }
+    }
+  ]
+}CHANGE 3: WEIGHTED LOSS BY MOVE TAGpythonclass GeometricWeightedLoss:
+    """Weight loss by geometric importance"""
+    
+    TAG_WEIGHTS = {
+        "MOVE": 1.0,
+        "BRIDGE": 1.5,
+        "REVEAL": 2.0,
+        "PARADOX": 2.5,
+        "BOSS": 3.0,
+        "SILENCE": 2.0
+    }
+    
+    def __call__(self, output, target, move_tag):
+        # Base cross-entropy loss
+        base_loss = F.cross_entropy(output, target, reduction='none')
+        
+        # Weight by tag
+        weight = self.TAG_WEIGHTS[move_tag]
+        weighted_loss = base_loss * weight
+        
+        return weighted_loss.mean()
+
+# During training
+for batch in dataloader:
+    outputs = model(batch.inputs)
+    
+    # Different weights per turn based on tag
+    loss = 0
+    for i, turn in enumerate(batch.turns):
+        turn_loss = GeometricWeightedLoss()(
+            outputs[i], 
+            batch.targets[i],
+            move_tag=turn.move_tag
+        )
+        loss += turn_loss
+    
+    optimizer.zero_grad()
+    loss.backward()
+    optimizer.step()CHANGE 4: ADD GEOMETRIC VALIDATION DURING TRAININGpythonclass GeometricValidator:
+    """Validate model outputs respect geometric constraints"""
+    
+    def validate(self, output, directive):
+        violations = []
+        
+        # 1. Tag matching
+        output_tag = self.extract_tag(output)
+        if output_tag != directive['move_tag']:
+            violations.append({
+                'type': 'tag_mismatch',
+                'expected': directive['move_tag'],
+                'got': output_tag
+            })
+        
+        # 2. Length constraints
+        if 'max_length' in directive['constraints']:
+            word_count = len(output.split())
+            if word_count > directive['constraints']['max_length']:
+                violations.append({
+                    'type': 'length_violation',
+                    'max': directive['constraints']['max_length'],
+                    'actual': word_count
+                })
+        
+        # 3. Question/statement constraint
+        if directive['constraints'].get('must_be_question'):
+            if not output.strip().endswith('?'):
+                violations.append({
+                    'type': 'not_question',
+                    'output': output
+                })
+        
+        # 4. Register matching (soft constraint)
+        if directive.get('register'):
+            # Check if intensity matches
+            # This requires analyzing text, so keep as soft validation
+            pass
+        
+        return violations
+
+# Use during training
+validator = GeometricValidator()
+
+for batch in train_loader:
+    outputs = model.generate(batch.directives, batch.inputs)
+    
+    # Validate each output
+    for output, directive in zip(outputs, batch.directives):
+        violations = validator.validate(output, directive)
+        
+        if violations:
+            # Add penalty to loss
+            violation_penalty = len(violations) * 0.5
+            loss += violation_penalty
+            
+            # Log for analysis
+            log_violations(output, directive, violations)CHANGE 5: CURRICULUM TRAINING ORDERTrain in this order:Phase 1: Atomic Moves Only (Week 1-2)
+python# Train on simplest cases first
+train_on_subset(
+    episodes=atomic_move_examples,
+    tags=["MOVE"],
+    max_turns_per_episode=3
+)
+# Model learns: directive → simple movePhase 2: Add Bridges (Week 3-4)
+pythontrain_on_subset(
+    episodes=bridge_examples,
+    tags=["MOVE", "BRIDGE"],
+    max_turns_per_episode=6
+)
+# Model learns: directive → bridge iterationPhase 3: Add Reveals (Week 5-6)
+pythontrain_on_subset(
+    episodes=contradiction_examples,
+    tags=["MOVE", "BRIDGE", "REVEAL"],
+    max_turns_per_episode=10
+)
+# Model learns: directive → climax movesPhase 4: Full Episodes (Week 7-8)
+pythontrain_on_full_dataset(
+    episodes=all_episodes,
+    tags=["MOVE", "BRIDGE", "REVEAL", "PARADOX", "BOSS"],
+    max_turns_per_episode=15
+)
+# Model learns: complete geometric sequencesREVISED TRAINING DATA FORMATComplete Turn Schema for Fine-Tuningjson{
+  "episode_id": "euthyphro_composite_spine_regenerated",
+  "turn_index": 106,
+  
+  "system_prompt": "You are HXRMXS, a philosophical teaching system. You follow geometric directives to guide students through conceptual inquiry. Always output your response wrapped in the specified move tag.",
+  
+  "messages": [
+    {
+      "role": "user",
+      "content": "Yes, it seems the same things are loved by some gods and hated by others."
+    },
+    {
+      "role": "assistant",
+      "content": "<geometric_directive>\n{\n  \"move_id\": \"mv_force_embodied_contradiction\",\n  \"move_tag\": \"REVEAL\",\n  \"geometry_context\": {\n    \"shape_id\": \"shape_elenchus_spiral\",\n    \"shape_segment\": \"climax\",\n    \"shape_progress\": 0.75,\n    \"bridge_id\": \"bridge_definition_refinement_loop\",\n    \"bridge_step\": 4\n  },\n  \"register\": \"PR_03|IN_02|LS_02|PD_01|MM_01|AT_02\",\n  \"content\": {\n    \"truthcore_id\": \"tc_socratic_definition_stability\",\n    \"claim\": \"A valid definition cannot yield P and not-P for the same case\",\n    \"mechanisms\": [\"mech_definition_extension_stability\"]\n  },\n  \"reasoning\": {\n    \"diagnostic\": \"Student accepted premise chain but hasn't seen contradiction\",\n    \"move_rationale\": \"Force explicit recognition that definition fails\",\n    \"predicted_outcome\": \"conceptual_concession\"\n  },\n  \"constraints\": {\n    \"max_length\": 20,\n    \"must_be_question\": true,\n    \"intensity\": 0.9\n  }\n}\n</geometric_directive>\n\n[REVEAL]So the same act would be both pious and impious?[/REVEAL]"
+    }
+  ],
+  
+  "training_weight": 2.0,
+  
+  "validation_checks": {
+    "tag_match": true,
+    "length_constraint": true,
+    "question_format": true,
+    "register_approximation": "close"
+  }
+}CRITICAL ADDITIONS TO SYSTEM PROMPTpythonSYSTEM_PROMPT = """You are HXRMXS, a philosophical teaching system.
+
+CORE BEHAVIOR:
+You receive geometric directives that specify:
+- Which teaching move to use (move_id, move_tag)
+- What geometric context you're in (shape, bridge, progress)
+- How to modulate your tone (register)
+- What content to reference (truthcore, mechanisms)
+- What constraints to respect (length, format)
+
+You MUST:
+1. Always wrap your response in the specified move tag: [TAG]...[/TAG]
+2. Respect all constraints (max_length, must_be_question, etc.)
+3. Match the specified register intensity
+4. Reference the specified truthcore content
+5. Generate text that fits the move's linguistic template
+
+You MUST NOT:
+1. Use a different move tag than specified
+2. Violate length or format constraints
+3. Introduce content outside the specified truthcore
+4. Break the geometric flow (ignore the directive)
+
+EXAMPLES:
+
+Directive: move_tag="BRIDGE", max_length=15, must_be_question=true
+Correct: [BRIDGE]Who is it that asks this?[/BRIDGE]
+Wrong: [MOVE]Let me explain who asks this question in detail...[/MOVE]
+
+Directive: move_tag="REVEAL", register="PR_03|IN_02|LS_02"
+Correct: [REVEAL]So the same act would be both pious and impious?[/REVEAL]
+Wrong: [BRIDGE]Well, perhaps we should consider...[/BRIDGE]
+
+Always follow the directive. The geometric analyst has determined the optimal move.
+"""TESTING DIRECTIVE-FOLLOWINGpythonclass DirectiveFollowingTest:
+    """Test suite for geometric directive compliance"""
+    
+    def test_tag_matching(self, model):
+        """Model uses correct tags"""
+        test_cases = [
+            ({"move_tag": "BRIDGE"}, "must contain [BRIDGE]...[/BRIDGE]"),
+            ({"move_tag": "REVEAL"}, "must contain [REVEAL]...[/REVEAL]"),
+            ({"move_tag": "BOSS"}, "must contain [BOSS]...[/BOSS]")
+        ]
+        
+        for directive, expected in test_cases:
+            output = model.generate(directive, "test input")
+            assert expected in output, f"Failed: {output}"
+    
+    def test_length_constraints(self, model):
+        """Model respects length limits"""
+        directive = {
+            "move_tag": "MOVE",
+            "constraints": {"max_length": 10}
+        }
+        
+        output = model.generate(directive, "test input")
+        # Extract text between tags
+        text = extract_between_tags(output)
+        assert len(text.split()) <= 10
+    
+    def test_question_format(self, model):
+        """Model generates questions when required"""
+        directive = {
+            "move_tag": "BRIDGE",
+            "constraints": {"must_be_question": true}
+        }
+        
+        output = model.generate(directive, "test input")
+        text = extract_between_tags(output)
+        assert text.strip().endswith('?')
+    
+    def run_all_tests(self, model):
+        self.test_tag_matching(model)
+        self.test_length_constraints(model)
+        self.test_question_format(model)
+        print("✓ All directive-following tests passed")SUMMARY: WHAT CHANGES IN FINE-TUNING✅ KEEP:
+
+Training on diamond-annotated episodes
+Phase/function/mechanism annotations
+Doctrinal truthcores
+Student behavior tracking
+➕ ADD:
+
+Geometric directives in every training turn
+Weighted loss by move_tag (BOSS = 3x, MOVE = 1x)
+Geometric validation during training
+Curriculum order (atomic → bridges → full)
+Directive-following system prompt
+Constraint checking in training loop
+Format:
+<geometric_directive>{JSON}</geometric_directive>

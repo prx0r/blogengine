@@ -1,0 +1,61 @@
+{
+  "co_id": "co:uno_gurdjeff1_meta_t11_t18_esoteri_t1",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gurdjeff1_meta_t11_t18_esoteric_features_hidden_knowledge",
+  "turn_index": 1,
+  "lineage": "Gurdjieffian",
+  "student_state": "stuck_on_hidden_paradox",
+  "behavior_tags": [
+    "proposes_simplification",
+    "questions_recognizability"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_03",
+    "function_name": "RM_03",
+    "mechanism_shape": "CONSTRAINT_COLLAPSE",
+    "teaching_actions": [
+      "resolves_paradox",
+      "redefines_hidden_functionally",
+      "gives_recognition_protocol"
+    ],
+    "traps_avoided": [
+      "false_paradox"
+    ],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.5,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "go_along_compliantly",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The resolution works: hidden = not absolute (can be found), recognition = comparison/verification against system. The student questioned recognizability (stuck on hidden paradox), which shows they understand: hidden = cannot find (paradox). They'll likely accept the resolution. The episode is complete: definition → structural model → hidden paradox → resolution. Pattern complete.",
+  "accumulated_insight": "Two-turn pattern: T1: Student asked for definition (seeking formal definition)—structural model: circles of humanity, etymology, transmission, examples. T2: Student questioned recognizability ('I understand that the primary feature of esoteric knowledge is that it is hidden and one would not be likely to find it. So how can we recognize esoteric knowledge or an esoteric school?')—stuck on hidden paradox via proposes simplification and questions recognizability. They understand: hidden = cannot find (paradox). The constraint_collapse mechanism resolves: hidden = not absolute (can be found), recognition = comparison/verification against system ('We are studying a system which is supposed to be esoteric, so with its help we will be able to recognize it. And although esoteric knowledge is hidden from ordinary life, it can be found. It is not hidden absolutely, so that nobody can find it, otherwise it would have no meaning... The only meaning of hidden knowledge is that it can be found; the important thing is how to recognize it. With the help of these ideas, comparing what can be found in the ordinary intellectual way and what cannot and then comparing it with the system, we shall be able to establish with a certain degree of probability the level of the knowledge we meet with'). Pattern complete: definition question → structural model → hidden paradox question → resolution. They've shifted: hidden = not absolute (can be found), recognition = comparison/verification (resolution).",
+  "abstract_pattern": "",
+  "visible_response": "We are studying a system which is supposed to be esoteric, so with its help we will\nbe able to recognize it.\nAnd although esoteric knowledge is hidden from ordinary life,\nit can be found.\nIt is not hidden absolutely,\nso that nobody can find it, otherwise it would have no meaning.\nThis would be\ncontrary to its aims and would spoil the results of its existence.\nThe only meaning of\nhidden knowledge is that it can be found;\nthe important thing is how to recognize it.\nWith the help of these ideas, comparing what can be found in the ordinary intellectual\nway and what cannot and then comparing it with the system, we shall be able to\nestablish with a certain degree of probability the level of the knowledge we meet with.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:sufi-comparative-analysis",
+    "ro:steiner-tantraloka-parallels"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

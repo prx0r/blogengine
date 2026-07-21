@@ -1,0 +1,42 @@
+{
+  "work_id": "work:t2-pubmed-a-transformation-from-vision-to-imagery-in-the-human-brain",
+  "schema_version": 2,
+  "title": "A transformation from vision to imagery in the human brain.",
+  "publication": {
+    "year": 2025,
+    "type": "article",
+    "source": "PubMed/MEDLINE",
+    "language": "en",
+    "journal": "bioRxiv"
+  },
+  "identifiers": {
+    "pmid": "40950062",
+    "doi": "10.1101/2025.09.02.672180"
+  },
+  "topics": [
+    "phase-10-imaginal-reconstruction",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "tradition": [
+    "contemporary_science"
+  ],
+  "tier": 2,
+  "assets": {
+    "pdf_path": "t2-pubmed-pmc12424947_A_transformation_from_vision_to_imagery_in_the_hum.pdf",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/40950062/",
+    "abstract": "Extensive work has shown that the visual cortex is reactivated during mental imagery, and that models trained on visual data can predict imagery activity and decode imagined stimuli. These findings may explain why imagery can feel and function like vision, but give little insight into how the brain activity patterns that encode seen and mental images differ. While one popular theory (\"weak vision\") suggests that imagery differs from vision only in strength, recent work points to more complex dif"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_t2_search",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 10,
+    "phase_name": "Imaginal Reconstruction",
+    "bridge_rationale": "Imaginal \u2014 mental imagery as real perception, imagination activating sensory cortices, aphantasia."
+  },
+  "evaluation": "Marginal (score=2.0)"
+}

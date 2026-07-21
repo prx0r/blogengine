@@ -1,0 +1,53 @@
+{
+  "work_id": "work:t2-pubmed-content-representation-of-tactile-mental-imagery-in-primary-somatosens",
+  "schema_version": 2,
+  "title": "Content Representation of Tactile Mental Imagery in Primary Somatosensory Cortex.",
+  "authors": [
+    {
+      "name": "Nierhaus, Till"
+    },
+    {
+      "name": "Wesolek, Sara"
+    },
+    {
+      "name": "Pach, Daniel"
+    },
+    {
+      "name": "Witt, Claudia M"
+    },
+    {
+      "name": "Blankenburg, Felix"
+    },
+    {
+      "name": "Schmidt, Timo T"
+    }
+  ],
+  "identifiers": {
+    "pmid": "37221090",
+    "doi": "10.1523/ENEURO.0408-22.2023"
+  },
+  "publication": {
+    "journal": "eNeuro",
+    "year": "2023"
+  },
+  "abstract": "The imagination of tactile stimulation has been shown to activate primary somatosensory cortex (S1) with a somatotopic specificity akin to that seen during the perception of tactile stimuli. Using fMRI and multivariate pattern analysis, we investigate whether this recruitment of sensory regions also reflects content-specific activation (i.e., whether the activation in S1 is specific to the mental content participants imagined). To this end, healthy volunteers (n\u2009=\u200921) either perceived or imagined three types of vibrotactile stimuli (mental content) while fMRI data were acquired. Independent of the content, during tactile mental imagery we found activation of frontoparietal regions, supplemented with activation in the contralateral BA2 subregion of S1, replicating previous reports. While the imagery of the three different stimuli did not reveal univariate activation differences, using multivariate pattern classification, we were able to decode the imagined stimulus type from BA2. Moreover, cross-classification revealed that tactile imagery elicits activation patterns similar to those evoked by the perception of the respective stimuli. These findings promote the idea that mental tactile imagery involves the recruitment of content-specific activation patterns in sensory cortices, namely in S1.",
+  "phase_mapping": {
+    "phase": 10,
+    "phase_name": "Imaginal"
+  },
+  "bridge_tags": [
+    "mental-imagery",
+    "imagination",
+    "imaginal",
+    "perception",
+    "mvpa",
+    "s1",
+    "attention"
+  ],
+  "evaluation": "Quality pass v3 (score=53) \u2014 High-signal bridge paper for Imaginal.",
+  "assets": {
+    "pdf_path": null,
+    "nxml_path": null
+  },
+  "tier": 2
+}

@@ -1,0 +1,54 @@
+{
+  "co_id": "co:uno_therapy3_t322_t334_nonverbal_t_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3_t322_t334_nonverbal_transference_resistance",
+  "turn_index": 0,
+  "lineage": "Therapeutic",
+  "student_state": "guarded_irritation",
+  "behavior_tags": [
+    "defensive_innocence"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_04",
+    "function_name": "UM_04",
+    "mechanism_shape": "NONE",
+    "teaching_actions": [
+      "interprets_behavior",
+      "labels_avoidance"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.15,
+      "depth": 0.38,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_01",
+      "depth_discrete": "PD_02",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "no_clear_effect",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "'What? Am I supposed to look at you?'—defensive question masks discomfort. They're not asking for rules ('should I?'), they're deflecting observation. The 'Yeah' before the question is interesting—brief acknowledgment then immediate defense. Teacher didn't answer the question ('No, you don't have to'), just restated observation ('you avoid my gaze'). This keeps focus on BEHAVIOR not on rules. Hypothesis: student will rationalize the avoidance ('I need to think') rather than explore why they avoid. Testing if labeling alone creates awareness.",
+  "accumulated_insight": "T1: Student defensive: 'Yeah. What? Am I supposed to look at you?'—guarded irritation when teacher points out gaze avoidance. The defensiveness ('Am I supposed to...?') reveals the avoidance is unconscious or ego-syntonic. Teacher labels behavior directly ('you avoid my gaze') without answering the defensive question. This is UM_04: labeling avoidance without engaging the defense. Predicting no_clear_effect because student will likely rationalize the behavior rather than examine it.",
+  "abstract_pattern": "",
+  "visible_response": "I just wondered if you noticed how you avoid my gaze.",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

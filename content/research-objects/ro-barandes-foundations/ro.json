@@ -1,0 +1,100 @@
+{
+  "ro_id": "ro:barandes-foundations",
+  "schema_version": 1,
+  "title": "Jacob Barandes \u2014 Quantum Foundations and Stochastic Dynamics (Collected)",
+  "subtitle": "3 papers on no-collapse quantum foundations, Markovian stochastic dynamics, and measurement as instantiation",
+  "family": "thinker-topic",
+  "status": "stub",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "Barandes' work on stochastic quantum dynamics provides a formalism for understanding measurement as a physical instantiation of a configuration \u2014 directly mapping to the 'measurement = recognition'...",
+    "scope": "Covers no-collapse quantum foundations, Markovian stochastic quantum dynamics.",
+    "traditions": [
+      "quantum-foundations",
+      "stochastic-processes"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "barandes-collected",
+      "tier": 1,
+      "label": "Jacob Barandes \u2014 Collected Papers. 3 PDFs in /root/projects/blog/library/science/authors/barandes/.",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "no_collapse",
+        "stochastic_quantum",
+        "quantum_foundations"
+      ],
+      "sections_affected": [
+        "theory"
+      ],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "theory",
+      "subsection": "stochastic_collapse_as_sankoca",
+      "kind": "synthesis",
+      "text": "Barandes proposes that quantum collapse is not a separate physical process but a stochastic transition within a Markovian framework \u2014 the system naturally transitions to definite states through interactions. This IS the Tantraloka's sa\u1e43koca (contraction): consciousness contracts into a specific configuration through interaction with the environment. Measurement IS the moment of contraction \u2014 the stochastic transition from superposition to specificity.",
+      "source_ids": [
+        "barandes-collected"
+      ],
+      "topics": [
+        "stochastic",
+        "collapse",
+        "sankoca",
+        "measurement"
+      ],
+      "status": "active"
+    }
+  ],
+  "coverage": {
+    "theory": {
+      "status": "minimal",
+      "sources": [
+        "barandes-collected"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 0.2,
+      "gaps": [
+        "Full extraction needed"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "coverage_gap",
+      "title": "Full extraction needed",
+      "description": "3 papers collected.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial RO.",
+      "sources_added": [
+        "barandes-collected"
+      ],
+      "passage_count": 1,
+      "status": "draft"
+    }
+  ],
+  "appendices": [],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created.",
+      "sources_total": 1,
+      "passages_total": 1
+    }
+  ]
+}

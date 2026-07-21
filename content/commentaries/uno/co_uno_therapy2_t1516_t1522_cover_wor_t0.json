@@ -1,0 +1,56 @@
+{
+  "co_id": "co:uno_therapy2_t1516_t1522_cover_wor_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy2_t1516_t1522_cover_words_grief",
+  "turn_index": 0,
+  "lineage": "Therapeutic",
+  "student_state": "guarded",
+  "behavior_tags": [
+    "cover_word"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_01",
+    "function_name": "UM_01",
+    "mechanism_shape": "NONE",
+    "teaching_actions": [
+      "validates_but_redirects",
+      "bypasses_cover_word"
+    ],
+    "traps_avoided": [
+      "semantic_fog"
+    ],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.15,
+      "depth": 0.62,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_01",
+      "depth_discrete": "PD_03",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "no_clear_effect",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "'I feel upset.'—student presents as guarded. Teacher's move uses none: 'Obviously, her death upset your entire world. What is your feelin'. Strategy: validates but redirects, bypasses cover word. Hypothesis: none mechanism will create no_clear_effect. Watching how student responds to this intervention.",
+  "accumulated_insight": "T1: Student says 'I feel upset.' showing guarded via cover_word. Teacher responds 'Obviously, her death upset your entire world. What is your feelin' using none to validates but redirects, bypasses cover word. Opening UNMAKING move addresses guarded. Predicting no_clear_effect because none interventions typically produce this response pattern.",
+  "abstract_pattern": "",
+  "visible_response": "Obviously, her death upset your entire world.\nWhat is your feeling over losing her?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

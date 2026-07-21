@@ -1,0 +1,146 @@
+{
+  "ro_id": "ro:utpaladeva-ipk",
+  "schema_version": 1,
+  "title": "Īśvarapratyabhijñākārikā — Verses on the Recognition of the Lord",
+  "subtitle": "Utpaladeva's foundational text of the Pratyabhijñā (Recognition) school of Kashmir Śaivism, with autocommentary (IPV)",
+  "family": "trika-text",
+  "status": "draft",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "Utpaladeva's ~190 verses establishing the Recognition philosophy — consciousness is universal, our sense of separate self is a construct, and enlightenment is recognizing what we always were.",
+    "scope": "All 4 books of the Īśvarapratyabhijñākārikā with Utpaladeva's autocommentary (IPV). Translated by R. Torella (2002). Connected to Kṣemarāja's Pratyabhijñāhṛdayam (which summarizes this work), the Tantrāloka, and the tetrahedron framework.",
+    "traditions": ["trika", "kashmir_shaivism", "pratyabhijna", "tantra", "cosmopsychism"]
+  },
+  "sources": [
+    {
+      "source_id": "ipk-torella",
+      "tier": 1,
+      "label": "Utpaladeva. Īśvarapratyabhijñākārikā with Autocommentary (Īśvarapratyabhijñāvṛtti). Translated by Raffaele Torella, Motilal Banarsidass, 2002.",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": ["full_text", "translation", "introduction"],
+      "sections_affected": ["all_books"],
+      "status": "active"
+    },
+    {
+      "source_id": "ipk-analysis",
+      "tier": 2,
+      "label": "Academic analysis: Utpaladeva's cosmopsychism and the subject decombination problem. Contemporary philosophy of mind reading.",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": ["analysis", "contemporary_relevance"],
+      "sections_affected": ["cosmopsychism"],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "book_1_knowledge",
+      "subsection": "the_nature_of_consciousness",
+      "kind": "commentary",
+      "text": "BOOK I (Knowledge): The first book establishes that consciousness (prakāśa) is self-luminous and not dependent on any object for its existence. Utpaladeva argues against Buddhist idealism (Vijñānavāda) that consciousness is not momentary but continuous, and against Nyāya realism that objects are not known independently of consciousness. The key move: consciousness is not a property of individuals but the universal ground in which individuals appear. This is foundational cosmopsychism: the universe is conscious, and our experiences derive from it.",
+      "source_ids": ["ipk-torella", "ipk-analysis"],
+      "topics": ["cosmopsychism", "consciousness", "prakasa", "self-luminosity"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "book_1_knowledge",
+      "subsection": "vikalpa_and_exclusion",
+      "kind": "source",
+      "text": "IPV I 6.4-5: The reflective awareness 'I' as the knowing subject, which because of the power of māyā of the Consciousness-principle itself, of the Lord, addresses realities that are manifested as separate such as the body, the intellect, the interior tactile sensation or that imagined entity which is the void, beyond them, similar to ether—this form of reflective awareness 'I' is nothing other than a vikalpa, like 'this is a jar,' since it excludes the various opposite entities that are manifested, such as the body and so on.",
+      "source_ids": ["ipk-torella"],
+      "topics": ["vikalpa", "exclusion", "self-concept", "maya"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "book_2_action",
+      "subsection": "subject_object_construction",
+      "kind": "source",
+      "text": "IPV IV 8: The entities that are manifested separately, that is, the universals are shown by the limited subjects – thanks to the power of mental elaboration (vikalpa-śaktyā) – as the object of inner reflective awareness through various names such as 'jar', 'silvery', white', 'cloth', 'cart', and so on. The limited subjects, conditioned by the experience of these objects, then also make themselves the object of various denotations such as 'I am thin', 'I am happy or unhappy'… It is precisely this manifestation of a difference between perceiving subject and object perceived, substantiated by the word, which constitutes the bond of the saṃsāra in the limited soul.",
+      "source_ids": ["ipk-torella"],
+      "topics": ["vikalpa", "subject-object", "samsara", "construction"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "book_4_recognition",
+      "subsection": "liberation_from_vikalpa",
+      "kind": "source",
+      "text": "IPV IV 11: Permeated only by the reflective awareness 'I am this universe,' this creation of the Lord is free from mental constructs—since no differentiation arises within it.",
+      "source_ids": ["ipk-torella"],
+      "topics": ["liberation", "non-differentiation", "recognition", "free_from_vikalpa"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "book_4_recognition",
+      "subsection": "the_lord_manifests_as_perspectives",
+      "kind": "source",
+      "text": "IPV I 5.15: The Lord, by virtue of his freedom which is perfect fulness characterized by unity with the cognizable object, manifests himself as that particular cognizing subject of that particular moment, representing him in the forms of Īśvara, Śiva, the perceiving subject and so on, acting thus for the purpose of the various practical activities such as creative meditation, etc.",
+      "source_ids": ["ipk-torella"],
+      "topics": ["freedom", "manifestation", "svatantrya", "perspectives"],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_006",
+      "section": "contemporary_relevance",
+      "subsection": "cosmopsychism_and_the_hard_problem",
+      "kind": "commentary",
+      "text": "Utpaladeva's philosophy maps directly onto contemporary debates in philosophy of mind. The 'hard problem of consciousness' (Chalmers) assumes that first-person perspective is private and irreducible to physical processes. Utpaladeva denies this assumption. For him, the sense of privacy is a conceptual construct (vikalpa) formed by exclusion. A universal consciousness (Śiva) can experience all perspectives because consciousness is structured — our perspectives are elements within His awareness, related to each other by their exclusionary ties. This solves the subject decombination problem that challenges cosmopsychism. Utpaladeva's solution can be stated in contemporary terms: consciousness is not private but structurally inclusive; our sense of exclusion is not fundamental but constructed.",
+      "source_ids": ["ipk-analysis"],
+      "topics": ["cosmopsychism", "hard_problem", "privacy", "contemporary_philosophy"],
+      "status": "active"
+    }
+  ],
+  "coverage": {
+    "book_1_knowledge": {
+      "status": "outline",
+      "sources": ["ipk-torella"],
+      "passage_count": 1,
+      "estimated_completeness": 0.2,
+      "gaps": ["Full translation of Book 1 not yet extracted; needs detailed verse-by-verse treatment"]
+    },
+    "book_2_action": {
+      "status": "outline",
+      "sources": ["ipk-torella"],
+      "passage_count": 0,
+      "estimated_completeness": 0.1,
+      "gaps": ["Not started — Book 2 covers action, practice, and the means of recognition"]
+    },
+    "book_3_means": {
+      "status": "outline",
+      "sources": ["ipk-torella"],
+      "passage_count": 0,
+      "estimated_completeness": 0.0,
+      "gaps": ["Not started — Book 3 covers the upāyas and the path"]
+    },
+    "book_4_recognition": {
+      "status": "outline",
+      "sources": ["ipk-torella", "ipk-analysis"],
+      "passage_count": 3,
+      "estimated_completeness": 0.2,
+      "gaps": ["Full treatment of the recognition experience not yet extracted"]
+    },
+    "cosmopsychism": {
+      "status": "draft",
+      "sources": ["ipk-analysis"],
+      "passage_count": 1,
+      "estimated_completeness": 0.5,
+      "gaps": ["Needs expansion with direct Torella citations"]
+    }
+  },
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-20",
+      "type": "initial",
+      "summary": "Initial RO covering Utpaladeva's cosmopsychism argument, the vikalpa/exclusion theory, and contemporary relevance. Key passages from IPV I 5.15, I 6.4-5, IV 8, and IV 11.",
+      "sources_added": ["ipk-torella", "ipk-analysis"],
+      "passage_count": 6,
+      "status": "draft"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "work_id": "work:t2-pubmed-a-generative-adversarial-model-of-intrusive-imagery-in-the-human-brain",
+  "schema_version": 2,
+  "title": "A generative adversarial model of intrusive imagery in the human brain.",
+  "authors": [
+    {
+      "name": "Cushing, Cody A"
+    },
+    {
+      "name": "Dawes, Alexei J"
+    },
+    {
+      "name": "Hofmann, Stefan G"
+    },
+    {
+      "name": "Lau, Hakwan"
+    },
+    {
+      "name": "LeDoux, Joseph E"
+    },
+    {
+      "name": "Taschereau-Dumouchel, Vincent"
+    }
+  ],
+  "identifiers": {
+    "pmid": "36733294",
+    "doi": "10.1093/pnasnexus/pgac265"
+  },
+  "publication": {
+    "journal": "PNAS nexus",
+    "year": "2023"
+  },
+  "abstract": "The mechanisms underlying the subjective experiences of mental disorders remain poorly understood. This is partly due to long-standing over-emphasis on behavioral and physiological symptoms and a de-emphasis of the patient's subjective experiences when searching for treatments. Here, we provide a new perspective on the subjective experience of mental disorders based on findings in neuroscience and artificial intelligence (AI). Specifically, we propose the subjective experience that occurs in visual imagination depends on mechanisms similar to generative adversarial networks that have recently been developed in AI. The basic idea is that a generator network fabricates a prediction of the world, and a discriminator network determines whether it is likely real or not. Given that similar adversarial interactions occur in the two major visual pathways of perception in people, we explored whether we could leverage this AI-inspired approach to better understand the intrusive imagery experiences of patients suffering from mental illnesses such as post-traumatic stress disorder (PTSD) and acute stress disorder. In our model, a nonconscious visual pathway generates predictions of the environment that influence the parallel but interacting conscious pathway. We propose that in some patients, an imbalance in these adversarial interactions leads to an overrepresentation of disturbing content relative to current reality, and results in debilitating flashbacks. By situating the subjective experience of intrusive visual imagery in the adversarial interaction of these visual pathways, we propose testable hypotheses on novel mechanisms and clinical applications for controlling and possibly preventing symptoms resulting from intrusive imagery.",
+  "phase_mapping": {
+    "phase": 10,
+    "phase_name": "Imaginal"
+  },
+  "bridge_tags": [
+    "mental-imagery",
+    "imagination",
+    "imaginal",
+    "perception"
+  ],
+  "evaluation": "Quality pass v3 (score=44) \u2014 High-signal bridge paper for Imaginal.",
+  "assets": {
+    "pdf_path": null,
+    "nxml_path": null
+  },
+  "tier": 2
+}

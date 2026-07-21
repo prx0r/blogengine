@@ -1,0 +1,88 @@
+{
+  "work_id": "work:corbin-mundus-imaginalis",
+  "schema_version": 1,
+  "title": "Mundus Imaginalis, or the Imaginary and the Imaginal",
+  "authors": [
+    {
+      "name": "Henry Corbin",
+      "author_id": "author:henry-corbin"
+    }
+  ],
+  "publication": {
+    "year": 1972,
+    "type": "essay",
+    "journal": "Spring",
+    "language": "en"
+  },
+  "identifiers": {
+    "doi": null,
+    "openalex_id": null
+  },
+  "topics": [
+    "mundus_imaginalis",
+    "active_imagination",
+    "alam_al_mithal",
+    "imaginal_perception",
+    "sufi_epistemology"
+  ],
+  "tradition": [
+    "sufism",
+    "iranian_philosophy",
+    "shii_islam"
+  ],
+  "relations": [
+    {
+      "predicate": "develops",
+      "target_id": "concept:mundus-imaginalis",
+      "confidence": 0.99
+    },
+    {
+      "predicate": "develops",
+      "target_id": "concept:active-imagination",
+      "confidence": 0.95
+    },
+    {
+      "predicate": "discusses",
+      "target_id": "concept:alam-al-mithal",
+      "confidence": 0.99
+    },
+    {
+      "predicate": "contrasts_with",
+      "target_id": "concept:imaginary-as-unreal",
+      "confidence": 0.9
+    },
+    {
+      "predicate": "related_to",
+      "target_id": "concept:symbol",
+      "confidence": 0.85
+    }
+  ],
+  "assets": {
+    "pdf_path": "library/corbin/imagination-mundus-imaginalis-spring2007.pdf",
+    "text_path": null,
+    "source_url": "https://labaninternational.org/wp-content/uploads/2017/10/imagination-and-the-mundus-imaginalis-printed-in-spring-no-77-2007.pdf"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "bronze",
+    "license": null,
+    "version": "published_version",
+    "host_type": "website",
+    "sha256": null,
+    "page_count": null,
+    "file_size_bytes": 76750,
+    "retrieved_at": "2026-07-11T06:55:00Z",
+    "validation_confidence": 0.95
+  },
+  "analysis": {
+    "summary": "Corbin's foundational essay distinguishing the imaginal (mundus imaginalis) from the imaginary. The mundus imaginalis is a real intermediate order of reality accessed through the active imagination (imaginatio vera), not fantasy. Key source for the concept of the imaginal in Western esotericism.",
+    "argument": "There exists an intermediate ontological region between the sensible and the intelligible, the mundus imaginalis (\u0101lam al-mith\u0101l), which is perceived by the imaginative faculty (imaginatio vera) and not by the senses or the intellect alone. This is not fantasy or fiction but a real cognitive faculty with noetic value.",
+    "quality_score": 0.95,
+    "tier": 1,
+    "tier_label": "primary source"
+  },
+  "commentary_on": {},
+  "scholarly_contribution": {},
+  "relevance_to_ros": {},
+  "tier": 2
+}

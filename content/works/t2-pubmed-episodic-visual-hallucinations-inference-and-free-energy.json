@@ -1,0 +1,53 @@
+{
+  "work_id": "work:t2-pubmed-episodic-visual-hallucinations-inference-and-free-energy",
+  "schema_version": 2,
+  "title": "Episodic Visual Hallucinations, Inference and Free Energy.",
+  "authors": [
+    {
+      "name": "Collerton D"
+    },
+    {
+      "name": "Tsuda I"
+    },
+    {
+      "name": "Nara S"
+    }
+  ],
+  "publication": {
+    "year": 2024,
+    "type": "article",
+    "source": "PubMed/MEDLINE",
+    "language": "en",
+    "journal": "Entropy (Basel)"
+  },
+  "identifiers": {
+    "pmid": "39056919",
+    "doi": "10.3390/e26070557"
+  },
+  "topics": [
+    "phase-6-6",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "tradition": [
+    "contemporary_science"
+  ],
+  "tier": 2,
+  "assets": {
+    "pdf_path": "t2-PMC11275595_Episodic_Visual_Hallucinations_Inference.pdf",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/39056919/",
+    "abstract": "Understandings of how visual hallucinations appear have been highly influenced by generative approaches, in particular Friston's Active Inference conceptualization. Their core proposition is that these phenomena occur when hallucinatory expectations outweigh actual sensory data. This imbalance occurs as the brain seeks to minimize informational free energy, a measure of the distance between predicted and actual sensory data in a stationary open system. We review this approach in the light of old"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_t2_search",
+    "retrieved_at": "2026-07-11"
+  },
+  "phase_mapping": {
+    "phase": 6,
+    "phase_name": "Dependent Arising",
+    "bridge_rationale": "Predictive processing \u2014 free energy principle, Bayesian brain, active inference, neural causality."
+  },
+  "evaluation": "Good (score=2.5)"
+}

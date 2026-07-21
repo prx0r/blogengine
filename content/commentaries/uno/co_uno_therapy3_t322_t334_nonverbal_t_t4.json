@@ -1,0 +1,56 @@
+{
+  "co_id": "co:uno_therapy3_t322_t334_nonverbal_t_t4",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3_t322_t334_nonverbal_transference_resistance",
+  "turn_index": 4,
+  "lineage": "Therapeutic",
+  "student_state": "proforma_defense",
+  "behavior_tags": [
+    "denial"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_01",
+    "function_name": "RM_01",
+    "mechanism_shape": "STRUCTURAL_ANALOGY",
+    "teaching_actions": [
+      "uses_professional_analogy",
+      "invites_perspective_taking"
+    ],
+    "traps_avoided": [
+      "ego_defense"
+    ],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.5,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "'I think I'm very involved'—proforma claim contradicted by everything before. But now teacher uses their profession (lawyer) against them: 'If an intern sat like this in YOUR office, how involved?' Brilliant move: can't defend themselves without contradicting their own professional judgment. They judge interns by engagement; now judge SELF by same standard. The 'she' is clever—hypothetical third person, less threatening than 'you.' But the parallel is obvious: slouching, avoiding eyes, sarcastic. They'll have to admit low involvement or contradict their professional standards. Prediction: they'll admit it ('Not too involved, I guess').",
+  "accumulated_insight": "T5: Student claims high involvement: 'I think I'm very involved'—proforma defense replaces sarcasm. But body language (slouching, sarcasm T4) contradicts verbal claim. Teacher uses professional analogy: 'If a prospective intern were sitting like this...how involved would you say she was?' This is RM_01: structural analogy using student's own professional standards (lawyer). Shifts from teacher-judging-student to student-judging-hypothetical-intern. Predicting ask_deeper_question because structural analogies typically produce recognition or questions.",
+  "abstract_pattern": "",
+  "visible_response": "You said you’re a lawyer.\nIf a prospective intern were sitting like this in your office for an interview, how involved would you say she was?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

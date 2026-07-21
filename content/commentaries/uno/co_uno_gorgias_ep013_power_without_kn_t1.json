@@ -1,0 +1,59 @@
+{
+  "co_id": "co:uno_gorgias_ep013_power_without_kn_t1",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gorgias_ep013_power_without_knowledge",
+  "turn_index": 1,
+  "lineage": "Socratic",
+  "student_state": "defensive_rationalization",
+  "behavior_tags": [
+    "pushes_back"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_05",
+    "function_name": "UM_05",
+    "mechanism_shape": "CONSTRAINT_COLLAPSE",
+    "teaching_actions": [
+      "forces_consequence"
+    ],
+    "traps_avoided": [
+      "category_conflation"
+    ],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.62,
+      "attunement": 0.8,
+      "style": 0.5,
+      "depth": 0.62,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_03",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_03",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "resist_intellectually",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "Defense arrived on cue - they want \"greatness\" without the knowledge requirement. Next move: present a concrete harm case (doctor without knowledge harming patients) to force them to drop \"power is greatest\" or accept that ignorant power is dangerous. Expect either a clarifying question or a softened stance when the harm is vivid.",
+  "accumulated_insight": "Two-turn pattern: T1: Student asserted value claim (\"Yes - the greatest of human powers\") - cooperative engagement via affirms value claim; they understand: rhetoric = greatest power (value claim), power = supremacy (unexamined use). The constraint_collapse mechanism tests: power without knowledge = can cause harm, forces choice between power and good use. T2: Student defended claim (\"Not necessarily. But that doesn't lessen his power!\") - defensive rationalization via pushes_back; they understand: power must remain \"great\" even if ignorant. Pattern: bold claim + consequence test + defense + [next: concrete misuse example]. They are grasping the consequence (harm risk) but clinging to \"greatest\" framing.",
+  "abstract_pattern": "",
+  "visible_response": "Then you’ve admitted he acts without knowledge—and the man without knowledge harms himself the most.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:proclus-elements",
+    "ro:platonism-decoded",
+    "ro:chaldean-oracles"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

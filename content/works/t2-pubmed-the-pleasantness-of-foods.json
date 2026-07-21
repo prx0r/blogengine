@@ -1,0 +1,43 @@
+{
+  "work_id": "work:t2-pubmed-the-pleasantness-of-foods",
+  "schema_version": 2,
+  "title": "The pleasantness of foods.",
+  "authors": [
+    {
+      "name": "Jacquin-Piques A"
+    }
+  ],
+  "publication": {
+    "year": 2025,
+    "journal": "Neurophysiol Clin",
+    "source": "PubMed/MEDLINE",
+    "language": "en"
+  },
+  "identifiers": {
+    "pmid": "39644807",
+    "doi": "10.1016/j.neucli.2024.103031"
+  },
+  "topics": [
+    "phase-5-water-pleasure",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "assets": {
+    "pdf_path": null,
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/39644807/",
+    "abstract": "Food pleasantness is largely based on the palatability of food and is linked to taste. Along with homeostatic and cognitive control, it forms part of the control of food intake (hedonic control), and does not only correspond to the pleasure that can be described of food intake. There are many factors that cause variations in eating pleasantness between individuals, such as age, sex, culture, co-morbidities, treatments, environmental factors or the specific characteristics of foods. The control o"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_alt17_acquisition",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 5,
+    "phase_name": "Water/Pleasure",
+    "bridge_rationale": "Bridge paper score=10.0: links Water/Pleasure concept to mechanistic neuroscience"
+  },
+  "evaluation": "Score 10: Excellent bridge signal",
+  "tier": 2
+}

@@ -1,0 +1,54 @@
+{
+  "co_id": "co:uno_therapy3.1_t3180_t3190_husband_t2",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3.1_t3180_t3190_husband_villain_projection",
+  "turn_index": 2,
+  "lineage": "Therapeutic",
+  "student_state": "subjective_conviction",
+  "behavior_tags": [
+    "emotional_reasoning"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_02",
+    "function_name": "RM_02",
+    "mechanism_shape": "CAUSAL_CHAIN",
+    "teaching_actions": [
+      "validates_affect",
+      "explains_mechanism"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.62,
+      "attunement": 0.8,
+      "style": 0.35,
+      "depth": 0.38,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_03",
+      "style_discrete": "LS_02",
+      "depth_discrete": "PD_02",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "no_clear_effect",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "Final turn: 'It feels that way.'. Reached subjective_conviction after 3 turns. Episode demonstrates causal_chain effectiveness in REMAKING work. Teaching complete for this sequence.",
+  "accumulated_insight": "T3 (Final): Student: 'It feels that way.'. Final state: subjective_conviction. Episode complete with 3 turns. Arc shows progression through REMAKING phase using causal_chain interventions. Teaching sequence addressed emotional_reasoning pattern.",
+  "abstract_pattern": "",
+  "visible_response": "Of course it feels that way. If you assume he is calling you “all bad,” you will feel the feelings that go with that assumption. That’s why we have to clarify that what you assumed is not the same as what he actually said.",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

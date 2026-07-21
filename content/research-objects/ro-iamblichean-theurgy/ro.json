@@ -1,0 +1,216 @@
+{
+  "ro_id": "ro:iamblichean-theurgy",
+  "schema_version": 1,
+  "title": "Iamblichean Theurgy: Ritual as Divine Embodiment",
+  "subtitle": "Shaw's interpretation of Iamblichus's ritual metaphysics",
+  "family": "thinker-topic",
+  "status": "stub",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "Shaw on Iamblichus's theurgic project \u2014 ritual as participation in the divine through structured liturgical forms.",
+    "scope": "Shaw's works on Iamblichus specifically.",
+    "traditions": [
+      "iamblichus",
+      "theurgy",
+      "neoplatonism"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "work:containing-ecstasy-the-strategies-of-iam",
+      "tier": 2,
+      "label": "Shaw \u2014 Containing Ecstasy",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "iamblichus",
+        "ecstasy"
+      ],
+      "sections_affected": [
+        "practice",
+        "ontology"
+      ],
+      "passages_used": 0,
+      "status": "active"
+    },
+    {
+      "source_id": "work:the-mortality-and-anonymity-of-the-iambl",
+      "tier": 2,
+      "label": "Shaw \u2014 Mortality and Anonymity",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "priesthood",
+        "anonymity"
+      ],
+      "sections_affected": [
+        "priesthood"
+      ],
+      "passages_used": 0,
+      "status": "active"
+    },
+    {
+      "source_id": "work:the-souls-innate-gnosis-of-the-gods",
+      "tier": 2,
+      "label": "Shaw \u2014 Soul's Innate Gnosis",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "gnosis",
+        "soul"
+      ],
+      "sections_affected": [
+        "ontology"
+      ],
+      "passages_used": 0,
+      "status": "active"
+    },
+    {
+      "source_id": "work:theurgy-and-the-platonists-luminous-body",
+      "tier": 2,
+      "label": "Shaw \u2014 Luminous Body",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "luminous_body",
+        "vehicle"
+      ],
+      "sections_affected": [
+        "ontology"
+      ],
+      "passages_used": 0,
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "ontology",
+      "subsection": "ritual_metaphysics",
+      "kind": "source",
+      "text": "[Shaw on Iamblichus's ritual metaphysics \u2014 rituals as ontologically effective operations. Extract from Containing Ecstasy.]",
+      "source_id": "work:containing-ecstasy-the-strategies-of-iam",
+      "page_ref": null,
+      "topics": [
+        "iamblichus",
+        "ritual_ontology"
+      ],
+      "notes": "Rituals work, they don't symbolize"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "practice",
+      "subsection": "containment",
+      "kind": "source",
+      "text": "[Shaw on containing ecstasy within liturgical forms. Extract from Containing Ecstasy.]",
+      "source_id": "work:containing-ecstasy-the-strategies-of-iam",
+      "page_ref": null,
+      "topics": [
+        "ecstasy",
+        "containment"
+      ],
+      "notes": "Structure as vehicle"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "ontology",
+      "subsection": "luminous_body",
+      "kind": "source",
+      "text": "[Shaw on the vehicle of the soul as medium of theurgic transformation. Extract from Luminous Body.]",
+      "source_id": "work:theurgy-and-the-platonists-luminous-body",
+      "page_ref": null,
+      "topics": [
+        "luminous_body",
+        "ochema"
+      ],
+      "notes": "Instrument of transformation"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "priesthood",
+      "subsection": "anonymity",
+      "kind": "source",
+      "text": "[Shaw on the Iamblichean priest as anonymous vehicle for divine action. Extract from Mortality and Anonymity.]",
+      "source_id": "work:the-mortality-and-anonymity-of-the-iambl",
+      "page_ref": null,
+      "topics": [
+        "priesthood",
+        "anonymity"
+      ],
+      "notes": "Priest as technician of the sacred"
+    }
+  ],
+  "coverage": {
+    "ontology": {
+      "status": "partial",
+      "sources": [
+        "work:containing-ecstasy-the-strategies-of-iam",
+        "work:theurgy-and-the-platonists-luminous-body"
+      ],
+      "passage_count": 2,
+      "estimated_completeness": 0.3,
+      "gaps": [
+        "Soul's descent vs ascent"
+      ]
+    },
+    "practice": {
+      "status": "partial",
+      "sources": [
+        "work:containing-ecstasy-the-strategies-of-iam"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 0.2,
+      "gaps": [
+        "Specific ritual procedures"
+      ]
+    },
+    "priesthood": {
+      "status": "minimal",
+      "sources": [
+        "work:the-mortality-and-anonymity-of-the-iambl"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 0.2,
+      "gaps": [
+        "Priestly training"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "potential_error",
+      "title": "Overlap with ro:shaw-theurgy",
+      "description": "This RO may overlap with broader Shaw theurgy RO.",
+      "status": "open",
+      "created": "2026-07-11",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-11",
+      "type": "initial",
+      "summary": "Draft from 4 Shaw works on Iamblichus",
+      "sources_added": [
+        "work:containing-ecstasy-the-strategies-of-iam",
+        "work:the-mortality-and-anonymity-of-the-iambl",
+        "work:the-souls-innate-gnosis-of-the-gods",
+        "work:theurgy-and-the-platonists-luminous-body"
+      ],
+      "passage_count": 4,
+      "test_pass_rate": null
+    }
+  ],
+  "dependencies": [],
+  "outputs": [],
+  "timeline": [
+    {
+      "date": "2026-07-11",
+      "event": "RO created",
+      "sources_total": 4,
+      "passages_total": 4
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "co_id": "co:uno_mystique_07_death_fear_project_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "mystique_07_death_fear_projection",
+  "turn_index": 0,
+  "lineage": "Realist",
+  "student_state": "unknown",
+  "behavior_tags": [
+    "fear_of_death",
+    "seeking_consolation"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_03",
+    "function_name": "RM_03",
+    "mechanism_shape": "CAUSAL_CHAIN",
+    "teaching_actions": [
+      "dismisses_question",
+      "redefines_immortality",
+      "diagnoses_fear",
+      "links_fear_to_projection"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.62,
+      "attunement": 0.5,
+      "style": 0.65,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_04",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "go_along_compliantly",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The causal_chain mechanism with RM_03 feels like unknown is being met with a specific geometric cut. But what if the geometry itself is what they're resisting? The fear_of_death, seeking_consolation suggests they're aware of something but can't name it. [Turn 1 in mystique_07_death_fear_pr]",
+  "accumulated_insight": "T1: Student says 'Sir, what will happen after death?  But that is not going to help anybody who is'—unknown via fear of death, seeking consolation. Teacher responds '' using causal chain to dismisses question, redefines immortality, diagnoses fear, links fear to projection. Opening REMAKING move addresses unknown. Predicting go along compliantly because causal chain interventions typically produce this response.",
+  "abstract_pattern": "",
+  "visible_response": "All questions about death are meaningless -- and especially for a young person like you. ... Only a person who is not living asks \"What will happen after my death?\" You are not living. ... What do you think will die? ... This body disintegrates into its constituent elements, so nothing is lost. ... If you throw it into \nthe river, it becomes food for the fishes. One form of life lives on another form of life... So life is immortal.\n\nAfter all, 'death' is fear, the fear of something coming to an end. ... The 'you' as you know yourself... does not want to come to an end. ... So then it projects (an afterlife). ... Fear creates that, so when the fear is gone, the question of death is also gone.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:kybalion",
+    "ro:grimoires-decoded",
+    "ro:hermes-proof-system"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

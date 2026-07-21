@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurora Geode</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap');
+        
+        :root {
+            --bg-color: #111118; /* A very dark, neutral blue */
+            --text-color: #d9e1f2;
+            --label-color: rgba(217, 225, 242, 0.6);
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            cursor: none;
+        }
+
+        #canvasContainer {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        canvas {
+            display: block;
+            background-color: var(--bg-color);
+        }
+
+        #infoLabel {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: var(--label-color);
+            pointer-events: none;
+            text-shadow: 0 0 5px var(--bg-color);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="canvasContainer">
+        <canvas id="artCanvas"></canvas>
+        <div id="infoLabel">Visualizing: <span>Aurora Geode</span></div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- DOM Elements & Contexts ---
+            const mainCanvas = document.getElementById('artCanvas');
+            const mainCtx = mainCanvas.getContext('2d');
+
+            // --- State Management ---
+            let crystals = [];
+
+            // --- Utilities ---
+            const rand = (min, max) => Math.random() * (max - min) + min;
+            const randChoice = (arr) => arr[Math.floor(Math.random() * arr.length)];
+            const dist = (p1, p2) => Math.hypot(p1.x - p2.x, p1.y - p2.y);
+
+            // --- Expanded Color Palettes ---
+            const PALETTES = [
+                { name: "Amethyst", hues: [260, 300] },
+                { name: "Fluorite", hues: [160, 220] },
+                { name: "Rose Quartz", hues: [330, 360] },
+                { name: "Citrine", hues: [40, 60] },
+                { name: "Emerald", hues: [120, 160] },
+                { name: "Topaz", hues: [25, 45] },
+                { name: "Sapphire", hues: [210, 250] },
+                { name: "Garnet", hues: [0, 20] },
+            ];
+            let currentPalette = randChoice(PALETTES);
+
+            // --- Canvas Setup ---
+            function resizeCanvas() {
+                const w = window.innerWidth; const h = window.innerHeight;
+                mainCanvas.width = w; mainCanvas.height = h;
+            }
+            window.addEventListener('resize', resizeCanvas);
+
+            // --- Crystal Class ---
+            class Crystal {
+                constructor(x, y) {
+                    this.center = { x, y };
+                    this.vertices = [];
+                    this.growthQueue = [];
+                    this.lifespan = rand(800, 1600); 
+                    this.age = 0;
+                    this.hue = rand(currentPalette.hues[0], currentPalette.hues[1]);
+                    this.rotation = rand(0, Math.PI * 2);
+                    this.rotationSpeed = rand(-0.001, 0.001);
+                    this.isDark = Math.random() < 0.25; 
+
+                    // Create initial seed shape
+                    const initialPoints = Math.floor(rand(3, 7));
+                    const initialRadius = rand(5, 10);
+                    for (let i = 0; i < initialPoints; i++) {
+                        const angle = (i / initialPoints) * Math.PI * 2;
+                        const newVertex = {
+                            x: Math.cos(angle) * initialRadius,
+                            y: Math.sin(angle) * initialRadius,
+                        };
+                        this.vertices.push(newVertex);
+                        this.growthQueue.push({ fromIndex: i, angle: angle + rand(-0.5, 0.5), length: rand(20, 80) });
+                    }
+                }
+                get isFinished() { return this.age >= this.lifespan && this.growthQueue.length === 0; }
+                update() {
+                    this.age++;
+                    this.rotation += this.rotationSpeed;
+
+                    if (this.growthQueue.length > 0 && Math.random() < 0.2) { 
+                        const growthJob = this.growthQueue.shift();
+                        const fromVertex = this.vertices[growthJob.fromIndex];
+
+                        if(!fromVertex) return;
+
+                        const newVertex = {
+                            x: fromVertex.x + Math.cos(growthJob.angle) * growthJob.length,
+                            y: fromVertex.y + Math.sin(growthJob.angle) * growthJob.length,
+                        };
+                        
+                        let tooClose = false;
+                        for (const v of this.vertices) {
+                            if (dist(v, newVertex) < 20) {
+                                tooClose = true;
+                                break;
+                            }
+                        }
+
+                        if (!tooClose) {
+                            const newIndex = this.vertices.push(newVertex) - 1;
+                            if (this.growthQueue.length < 50) { 
+                                this.growthQueue.push({ fromIndex: newIndex, angle: growthJob.angle + rand(-0.8, 0.8), length: rand(20, 80) });
+                                if(Math.random() < 0.3) {
+                                    this.growthQueue.push({ fromIndex: newIndex, angle: growthJob.angle + rand(-0.8, 0.8), length: rand(20, 80) });
+                                }
+                            }
+                        }
+                    }
+                }
+                draw(ctx) {
+                    const progress = this.age / this.lifespan;
+                    // Significantly reduced maximum alpha for a much more transparent effect
+                    const alpha = Math.sin(progress * Math.PI) * 0.3; 
+
+                    if (alpha <= 0) return;
+
+                    ctx.save();
+                    ctx.translate(this.center.x, this.center.y);
+                    ctx.rotate(this.rotation);
+
+                    if (this.isDark) {
+                        ctx.beginPath();
+                        if (this.vertices.length > 0) {
+                            ctx.moveTo(this.vertices[0].x, this.vertices[0].y);
+                            for (let i = 1; i < this.vertices.length; i++) {
+                                ctx.lineTo(this.vertices[i].x, this.vertices[i].y);
+                            }
+                        }
+                        ctx.closePath();
+                        ctx.strokeStyle = `hsla(0, 0%, 5%, ${alpha * 0.7})`;
+                        ctx.lineWidth = 1;
+                        ctx.stroke();
+
+                        ctx.beginPath();
+                        for (let i = 0; i < this.vertices.length; i++) {
+                            ctx.moveTo(0, 0); 
+                            ctx.lineTo(this.vertices[i].x, this.vertices[i].y);
+                        }
+                        ctx.lineWidth = 0.2;
+                        ctx.stroke();
+
+                    } else {
+                        ctx.beginPath();
+                        if (this.vertices.length > 0) {
+                            ctx.moveTo(this.vertices[0].x * 1.1, this.vertices[0].y * 1.1);
+                            for (let i = 1; i < this.vertices.length; i++) {
+                                ctx.lineTo(this.vertices[i].x * 1.1, this.vertices[i].y * 1.1);
+                            }
+                        }
+                        ctx.closePath();
+                        ctx.fillStyle = `hsla(${this.hue}, 80%, 85%, ${alpha * 0.1})`;
+                        ctx.fill();
+
+                        ctx.beginPath();
+                        if (this.vertices.length > 0) {
+                            ctx.moveTo(this.vertices[0].x, this.vertices[0].y);
+                            for (let i = 1; i < this.vertices.length; i++) {
+                                ctx.lineTo(this.vertices[i].x, this.vertices[i].y);
+                            }
+                        }
+                        ctx.closePath();
+                        ctx.strokeStyle = `hsla(${this.hue}, 80%, 85%, ${alpha * 0.6})`;
+                        ctx.fillStyle = `hsla(${this.hue}, 80%, 15%, ${alpha * 0.2})`;
+                        ctx.lineWidth = 1;
+                        ctx.fill();
+                        ctx.stroke();
+
+                        ctx.beginPath();
+                        for (let i = 0; i < this.vertices.length; i++) {
+                            ctx.moveTo(0, 0);
+                            ctx.lineTo(this.vertices[i].x, this.vertices[i].y);
+                        }
+                        ctx.lineWidth = 0.3;
+                        ctx.strokeStyle = `hsla(${this.hue}, 80%, 85%, ${alpha * 0.4})`;
+                        ctx.stroke();
+                    }
+                    
+                    ctx.restore();
+                }
+            }
+            
+            // --- Main Application Logic ---
+            let frameCount = 0;
+            function mainAnimationLoop() {
+                if (mainCanvas.width === 0 || mainCanvas.height === 0) { requestAnimationFrame(mainAnimationLoop); return; }
+                frameCount++;
+                
+                mainCtx.globalCompositeOperation = 'source-over';
+                mainCtx.fillStyle = 'rgba(12, 10, 24, 0.18)';
+                mainCtx.fillRect(0, 0, mainCanvas.width, mainCanvas.height);
+                
+                mainCtx.globalCompositeOperation = 'lighter';
+                
+                crystals = crystals.filter(c => !c.isFinished);
+                crystals.forEach(c => {
+                    c.update();
+                    c.draw(mainCtx);
+                });
+                
+                if (crystals.length < 15 && Math.random() < 0.012) {
+                    crystals.push(new Crystal(rand(0, mainCanvas.width), rand(0, mainCanvas.height)));
+                }
+                
+                if (frameCount % 1000 === 0) {
+                    currentPalette = randChoice(PALETTES);
+                }
+                
+                requestAnimationFrame(mainAnimationLoop);
+            }
+
+            // --- Start ---
+            resizeCanvas();
+            for (let i = 0; i < 5; i++) {
+                crystals.push(new Crystal(rand(0, mainCanvas.width), rand(0, mainCanvas.height)));
+            }
+            mainAnimationLoop();
+        });
+    </script>
+</body>
+</html>

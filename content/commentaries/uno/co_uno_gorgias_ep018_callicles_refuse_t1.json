@@ -1,0 +1,59 @@
+{
+  "co_id": "co:uno_gorgias_ep018_callicles_refuse_t1",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gorgias_ep018_callicles_refuses_answer",
+  "turn_index": 1,
+  "lineage": "Socratic",
+  "student_state": "cooperative_engagement",
+  "behavior_tags": [
+    "vents_frustration"
+  ],
+  "pedagogy": {
+    "phase": "META",
+    "function_id": "ME_03",
+    "function_name": "ME_03",
+    "mechanism_shape": "NONE",
+    "teaching_actions": [
+      "restates_rule"
+    ],
+    "traps_avoided": [
+      "process_derailment"
+    ],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.62,
+      "attunement": 0.8,
+      "style": 0.5,
+      "depth": 0.38,
+      "meta_mode": 0.75,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_03",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_02",
+      "meta_mode_discrete": "MM_02"
+    },
+    "predicted_impact": "go_along_compliantly",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "They didn't clarify, they complied with grumble. Next ask for explicit agreement to the rule to lock process. Expect either a ?fine? or another vent; keep tone steady, not harsh.",
+  "accumulated_insight": "T2: Student vents (?I'm tired of your traps?)?cooperative enough to answer but frustrated. Pattern: refusal ? vented compliance. Process_discipline is holding; need explicit yes to proceed cleanly.",
+  "abstract_pattern": "",
+  "visible_response": "They are not traps, Callicles. They are conditions for any rational inquiry.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:proclus-elements",
+    "ro:platonism-decoded",
+    "ro:chaldean-oracles"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

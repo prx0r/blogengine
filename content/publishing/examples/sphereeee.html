@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celestial Nocturne - Visual Tour</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Mono&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow: hidden; /* Prevent scrollbars */
+        }
+        canvas {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        .ui-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            pointer-events: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 1rem;
+        }
+        @media (min-width: 768px) {
+            .ui-container {
+                padding: 2rem;
+            }
+        }
+        .scene-title {
+            font-family: 'Space Mono', monospace;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+            transition: opacity 2s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+
+    <canvas id="fractalCanvas"></canvas>
+
+    <div class="ui-container">
+        <!-- Top Info -->
+        <div class="w-full max-w-lg">
+            <h1 class="text-3xl md:text-4xl font-bold text-white">Celestial Nocturne</h1>
+            <p class="mt-2 text-gray-300 text-sm md:text-base">An infinite tour through harmonic & platonic geometries.</p>
+        </div>
+        <!-- Bottom Info -->
+        <div class="w-full text-right">
+            <h2 id="scene-title" class="scene-title text-xl md:text-2xl font-bold">Initializing...</h2>
+        </div>
+    </div>
+
+    <script>
+        // --- DOM ELEMENTS ---
+        const canvas = document.getElementById('fractalCanvas');
+        const ctx = canvas.getContext('2d');
+        const sceneTitle = document.getElementById('scene-title');
+
+        // --- GLOBAL STATE & TIMING ---
+        let animationFrameId;
+        const pointsPerFrame = 30000;
+        let currentPoint = { x: 0, y: 0, z: 0 };
+        
+        let physicsVectors = [];
+        let sceneStartTime = 0;
+        let progression = [];
+        let progressionIndex = 0;
+
+        // --- 3D VECTOR MATH HELPERS ---
+        const V3 = {
+            create: (x = 0, y = 0, z = 0) => ({ x, y, z }),
+            add: (v1, v2) => ({ x: v1.x + v2.x, y: v1.y + v2.y, z: v1.z + v2.z }),
+            sub: (v1, v2) => ({ x: v1.x - v2.x, y: v1.y - v2.y, z: v1.z - v2.z }),
+            scale: (v, s) => ({ x: v.x * s, y: v.y * s, z: v.z * s }),
+            dot: (v1, v2) => v1.x * v2.x + v1.y * v2.y + v1.z * v2.z,
+            normSq: (v) => v.x*v.x + v.y*v.y + v.z*v.z,
+            normalize: (v) => {
+                const len = Math.sqrt(V3.normSq(v));
+                return len > 0 ? V3.scale(v, 1 / len) : V3.create();
+            },
+            cross: (v1, v2) => ({
+                x: v1.y * v2.z - v1.z * v2.y,
+                y: v1.z * v2.x - v1.x * v2.z,
+                z: v1.x * v2.y - v1.y * v2.x
+            })
+        };
+
+        // --- ORBITAL PHYSICS ENGINE ---
+        class PhysicsVector {
+            constructor() {
+                this.current = V3.normalize(V3.create(Math.random() - 0.5, Math.random() - 0.5, Math.random() - 0.5));
+                this.target = { ...this.current };
+                this.velocity = V3.create();
+                this.damping = 0.97;
+                this.springK = 0.002;
+                this.orbitalStrength = 0.001;
+            }
+            setTarget(target) { this.target = target; }
+            update() {
+                const displacement = V3.sub(this.target, this.current);
+                const springForce = V3.scale(displacement, this.springK);
+                const orbitalAxis = V3.normalize(this.current);
+                const orbitalDir = V3.cross(displacement, orbitalAxis);
+                const orbitalForce = V3.scale(V3.normalize(orbitalDir), this.orbitalStrength * (0.5 + V3.normSq(displacement) * 0.5) );
+                const totalForce = V3.add(springForce, orbitalForce);
+                this.velocity = V3.add(this.velocity, totalForce);
+                this.velocity = V3.scale(this.velocity, this.damping);
+                this.current = V3.add(this.current, this.velocity);
+                this.current = V3.normalize(this.current);
+            }
+        }
+
+        // --- GEOMETRIC LIBRARIES ---
+        const NOTE_NAMES = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
+        const TENSION_CHORDS = [{ name: 'Diminished 7th', intervals: [0, 3, 6, 9] }, { name: 'Augmented', intervals: [0, 4, 8] }];
+        const PLATONIC_SOLIDS = {
+            CUBE: { name: "Cube", geometry: [V3.create(1,1,1), V3.create(1,1,-1), V3.create(1,-1,1), V3.create(1,-1,-1), V3.create(-1,1,1), V3.create(-1,1,-1), V3.create(-1,-1,1), V3.create(-1,-1,-1)].map(V3.normalize) },
+            OCTAHEDRON: { name: "Octahedron", geometry: [V3.create(1,0,0), V3.create(-1,0,0), V3.create(0,1,0), V3.create(0,-1,0), V3.create(0,0,1), V3.create(0,0,-1)] },
+        };
+
+        // --- SCENE & PROGRESSION GENERATION ---
+        function generateProgression() {
+            progression = [];
+            const startSolid = Math.random() > 0.5 ? PLATONIC_SOLIDS.CUBE : PLATONIC_SOLIDS.OCTAHEDRON;
+            const endSolid = (startSolid === PLATONIC_SOLIDS.CUBE) ? PLATONIC_SOLIDS.OCTAHEDRON : PLATONIC_SOLIDS.CUBE;
+
+            // 1. Start State
+            progression.push({ name: `Reflect: ${startSolid.name}`, geometry: startSolid.geometry, duration: 15000, alpha: 0.6, baseHue: 220 });
+            
+            // 2. Build Tension
+            const tensionChordData = TENSION_CHORDS[Math.floor(Math.random() * TENSION_CHORDS.length)];
+            const root = Math.floor(Math.random() * 12);
+            const tensionName = `Tension: ${NOTE_NAMES[root]} ${tensionChordData.name}`;
+            const chordPitches = tensionChordData.intervals.map(i => (root + i) % 12);
+            const tensionGeometry = chordPitches.map((pc, i) => {
+                const angle = (pc / 12) * 2 * Math.PI;
+                const z = (chordPitches.length > 1) ? (i / (chordPitches.length - 1)) * 1.6 - 0.8 : 0;
+                const r = Math.sqrt(1 - z*z);
+                return V3.create(r * Math.cos(angle), r * Math.sin(angle), z);
+            });
+            progression.push({ name: tensionName, geometry: tensionGeometry, duration: 25000, alpha: 0.7, baseHue: 0 });
+
+            // 3. Resolve
+            progression.push({ name: `Resolve: ${endSolid.name}`, geometry: endSolid.geometry, duration: 20000, alpha: 0.65, baseHue: 180 });
+        }
+
+        // --- CORE IFS & ANIMATION ---
+        function transform(p, q) {
+            const q_squared = V3.normSq(q);
+            if (q_squared < 1e-6) return p;
+            const q_dot_p = V3.dot(q, p);
+            const denominator = 1 + q_squared + 2 * q_dot_p;
+            if (Math.abs(denominator) < 1e-9) return p;
+            const numerator = V3.add(V3.scale(p, 1 - q_squared), V3.scale(q, 2 * (1 + q_dot_p)));
+            return V3.scale(numerator, 1 / denominator);
+        }
+
+        function animate(time) {
+            if (!sceneStartTime) sceneStartTime = time;
+            let currentScene = progression[progressionIndex];
+            
+            if (time - sceneStartTime > currentScene.duration) {
+                progressionIndex = (progressionIndex + 1) % progression.length;
+                if(progressionIndex === 0) generateProgression();
+                currentScene = progression[progressionIndex];
+
+                sceneStartTime = time;
+                
+                const targetGeometry = currentScene.geometry;
+                const baseHue = currentScene.baseHue;
+                for(let i=0; i<8; i++){
+                    physicsVectors[i].setTarget(targetGeometry[i] || V3.create(0,0,0));
+                    if (targetGeometry[i]) {
+                         const hue = (baseHue + Math.random() * 60) % 360;
+                         physicsVectors[i].color = `hsla(${hue}, 100%, 75%, 0.1)`;
+                    } else {
+                         physicsVectors[i].color = 'rgba(0,0,0,0)';
+                    }
+                }
+                
+                sceneTitle.style.opacity = 0;
+                setTimeout(() => { 
+                    sceneTitle.innerText = currentScene.name;
+                    sceneTitle.style.opacity = 1;
+                }, 1500);
+            }
+            
+            physicsVectors.forEach(v => v.update());
+
+            const alpha = currentScene.alpha;
+            const q_vectors = physicsVectors.map(pv => V3.scale(pv.current, alpha));
+
+            ctx.globalCompositeOperation = 'source-over';
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.02)'; // Ethereal trails
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.globalCompositeOperation = 'lighter';
+
+            for (let i = 0; i < pointsPerFrame; i++) {
+                let lambdas = [], lambda_sum = 0;
+                for (let j = 0; j < q_vectors.length; j++) {
+                    const q = q_vectors[j];
+                    if (V3.normSq(q) === 0) { lambdas.push(0); continue; }
+                    const q_squared = V3.normSq(q);
+                    const q_dot_p = V3.dot(q, currentPoint);
+                    const lambda = (1 + q_squared + 2 * q_dot_p) / 4;
+                    lambdas.push(lambda);
+                    lambda_sum += lambda;
+                }
+                if (lambda_sum === 0) continue;
+
+                const r = Math.random() * lambda_sum;
+                let cumulative_prob = 0, choice_index = 0;
+                for (let j = 0; j < lambdas.length; j++) {
+                    cumulative_prob += lambdas[j];
+                    if (r <= cumulative_prob) { choice_index = j; break; }
+                }
+
+                currentPoint = transform(currentPoint, q_vectors[choice_index]);
+                plot(currentPoint, physicsVectors[choice_index].color);
+            }
+            
+            animationFrameId = requestAnimationFrame(animate);
+        }
+
+        function plot(p, color) {
+            if (!color || color === 'rgba(0,0,0,0)') return;
+            const scale_factor = 1 + p.z * 0.3;
+            const scale = Math.min(canvas.width, canvas.height) * 0.45 * scale_factor;
+            const x = canvas.width / 2 + p.x * scale;
+            const y = canvas.height / 2 + p.y * scale;
+            ctx.fillStyle = color;
+            ctx.fillRect(x, y, 1, 1);
+        }
+
+        function startGeneration() {
+            if (animationFrameId) cancelAnimationFrame(animationFrameId);
+            
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            
+            currentPoint = V3.normalize(V3.create(Math.random(), Math.random(), Math.random()));
+            
+            ctx.fillStyle = 'black';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            physicsVectors = [];
+            for (let i = 0; i < 8; i++) {
+                physicsVectors.push(new PhysicsVector());
+            }
+
+            generateProgression();
+            progressionIndex = 0;
+            const initialScene = progression[0];
+            for(let i=0; i<8; i++){
+                physicsVectors[i].current = initialScene.geometry[i] || V3.create();
+                physicsVectors[i].target = initialScene.geometry[i] || V3.create();
+                const baseHue = initialScene.baseHue;
+                const hue = (baseHue + Math.random() * 60) % 360;
+                physicsVectors[i].color = `hsla(${hue}, 100%, 75%, 0.1)`;
+            }
+
+            sceneStartTime = performance.now();
+            sceneTitle.innerText = initialScene.name;
+            sceneTitle.style.opacity = 1;
+            
+            animate(performance.now());
+        }
+        
+        window.addEventListener('resize', startGeneration);
+        window.onload = startGeneration;
+    </script>
+</body>
+</html>

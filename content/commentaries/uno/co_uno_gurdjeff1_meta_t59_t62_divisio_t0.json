@@ -1,0 +1,61 @@
+{
+  "co_id": "co:uno_gurdjeff1_meta_t59_t62_divisio_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gurdjeff1_meta_t59_t62_division_practical_theoretical_philosophical",
+  "turn_index": 0,
+  "lineage": "Gurdjieffian",
+  "student_state": "seeking_foundational_definition",
+  "behavior_tags": [
+    "requests_clarification",
+    "admits_ignorance"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_03",
+    "function_name": "RM_03",
+    "mechanism_shape": "COMPARISON_CONTRAST",
+    "teaching_actions": [
+      "defines_practical",
+      "creates_hierarchy",
+      "links_scales_to_action"
+    ],
+    "traps_avoided": [
+      "semantic_fog"
+    ],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.5,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "go_along_compliantly",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The definitions/hierarchy works: practical = doing (what you can do, on one scale or another), hierarchy (doing > thinking/talking), philosophical = thinking, theoretical = talking, practical = doing. The student requested clarification (seeking foundational definition), which shows they're seeking foundational definition. They'll likely ask about philosophical definition next. Hypothesis: foundational definitions trigger follow-up definition questions—testable by tracking whether foundational definitions lead to follow-up inquiries.",
+  "accumulated_insight": "T1: Student requests clarification ('I should like to understand more about this division. I do not know what is practical')—seeking foundational definition via requests clarification and admits ignorance. They're seeking foundational definition (what is practical). The comparison_contrast mechanism defines: practical = doing (what you can do, on one scale or another), hierarchy (doing > thinking/talking), philosophical = thinking, theoretical = talking, practical = doing ('It means what you can do—in all senses. Only, 'doing' can be on one scale or another scale. Doing is always more important than thinking or talking. So if we take it that philosophical is thinking, theoretical talking and practical doing, the practical is more important'). Pattern: definition request → definitions/hierarchy → [next: definition question]. Medium confidence because definitions typically lead to compliance, but foundational definitions may trigger follow-up questions.",
+  "abstract_pattern": "",
+  "visible_response": "It means what you can do—in all senses. Only, 'doing' can be on one\nscale or another scale Doing is always more important than thinking or\ntalking.\nSo if we take it that philosophical is thinking, theoretical talking\nand practical doing, the practical is more important",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:sufi-comparative-analysis",
+    "ro:steiner-tantraloka-parallels"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

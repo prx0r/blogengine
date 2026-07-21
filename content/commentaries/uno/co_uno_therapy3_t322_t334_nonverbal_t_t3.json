@@ -1,0 +1,54 @@
+{
+  "co_id": "co:uno_therapy3_t322_t334_nonverbal_t_t3",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3_t322_t334_nonverbal_transference_resistance",
+  "turn_index": 3,
+  "lineage": "Therapeutic",
+  "student_state": "resistant_boredom",
+  "behavior_tags": [
+    "sarcastic_defense"
+  ],
+  "pedagogy": {
+    "phase": "META",
+    "function_id": "UNKNOWN",
+    "function_name": "UNKNOWN",
+    "mechanism_shape": "NONE",
+    "teaching_actions": [
+      "questions_commitment",
+      "shifts_to_meta"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.35,
+      "depth": 0.15,
+      "meta_mode": 0.75,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_02",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_02"
+    },
+    "predicted_impact": "no_clear_effect",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "'I like the view'—pure sarcasm. They're done with the behavioral tracking, can't stay passive, so they break into sarcastic resistance. The teacher reads this perfectly: don't engage the sarcasm ('Actually the view is...' would be trap), shift to meta-level. 'How involved are you?' changes game from 'notice your avoidance' to 'evaluate your engagement.' This is brilliant—puts responsibility on THEM to assess. The sarcasm revealed low involvement; now make them SAY it. Hypothesis: they'll claim high involvement (can't admit low), then teacher will use their own standards against them.",
+  "accumulated_insight": "T4: Student breaks into sarcasm: '[Looks back...slouches] I like the view'—resistant boredom replaces passive withdrawal. The slouch + sarcastic comment ('I like the view') shows the relentless tracking is creating pressure. Teacher shifts strategy: from behavioral tracking to meta-level engagement question ('How involved are you here today?'). META_01: shifts from specific behavior to general level of engagement. This is strategic—student can't defend 'I like the view,' so teacher changes frame to involvement. Predicting no_clear_effect because student will likely claim high involvement (defensive).",
+  "abstract_pattern": "",
+  "visible_response": "How involved would you say you are here today?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

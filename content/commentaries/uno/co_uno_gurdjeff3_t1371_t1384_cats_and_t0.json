@@ -1,0 +1,61 @@
+{
+  "co_id": "co:uno_gurdjeff3_t1371_t1384_cats_and_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gurdjeff3_t1371_t1384_cats_and_rats_justice",
+  "turn_index": 0,
+  "lineage": "Gurdjieffian",
+  "student_state": "feeling_moral_indignation",
+  "behavior_tags": [
+    "expresses_moral_indignation",
+    "makes_subjective_judgment"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_05",
+    "function_name": "UM_05",
+    "mechanism_shape": "STRUCTURAL_ANALOGY",
+    "teaching_actions": [
+      "attacks_premise",
+      "uses_reductio_ad_absurdum",
+      "asserts_universal_injustice",
+      "uses_grotesque_analogy",
+      "redefines_aim_functionally"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.85,
+      "intimacy": 0.15,
+      "attunement": 0.2,
+      "style": 0.5,
+      "depth": 0.38,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_04",
+      "intimacy_discrete": "IN_01",
+      "attunement_discrete": "AT_01",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_02",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "resist_intellectually",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The attack/grotesque analogy works: attacks premise (nature = unjust/cruel), uses: reductio ad absurdum, asserts: universal injustice (all unjust), uses: grotesque analogy (self-supporting farm to breed cats and rats), redefines: aim functionally. The student expresses moral indignation (feeling moral indignation), which shows they understand: nature = unjust/cruel (moral judgment). They'll likely accept the attack/grotesque analogy. Single-turn episode: moral indignation → attack/grotesque analogy → complete. Hypothesis: grotesque analogies lead to compliance in single-turn episodes—testable by tracking whether grotesque analogies end episodes.",
+  "accumulated_insight": "T1: Student expresses moral indignation ('Nature seems to be very unjust and very cruel to man')—feeling moral indignation via expresses moral indignation and makes subjective judgment. They understand: nature = unjust/cruel (moral judgment). The structural_analogy mechanism attacks: premise (nature = unjust/cruel), uses: reductio ad absurdum, asserts: universal injustice (all unjust), uses: grotesque analogy (self-supporting farm to breed cats and rats), redefines: aim functionally. Pattern: moral indignation → attack/grotesque analogy → [complete]. Low confidence because attacks can lead to resistance or compliance.",
+  "abstract_pattern": "",
+  "visible_response": "What do you call nature?\nAn earthquake is also nature... Evidently it was created like it is because there\nwas no other means.\nIf we do not like it, we can study methods of how to run away... All life from beginning to end is an injustice.\nFor instance, we have to die—it is most unjust.\nWe divide things into just and unjust,\nand what right have we?\nAll organic life is based on injustice;\nit is a self-supporting\nfarm to breed cats and rats.\nCats eat rats and rats eat cats. What is justice among cats\nand rats? This is life.\nIt is nothing very beautiful. Our aim is to get out;\nit is not our\nbusiness to feel indignation, that is simply loss of energy.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:sufi-comparative-analysis",
+    "ro:steiner-tantraloka-parallels"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

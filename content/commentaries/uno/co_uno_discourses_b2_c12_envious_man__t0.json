@@ -1,0 +1,57 @@
+{
+  "co_id": "co:uno_discourses_b2_c12_envious_man__t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "discourses_b2_c12_envious_man_socrates",
+  "turn_index": 0,
+  "lineage": "Realist",
+  "student_state": "cooperative_definition",
+  "behavior_tags": [
+    "definition_building"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_01",
+    "function_name": "UM_01",
+    "mechanism_shape": "CONSTRAINT_COLLAPSE",
+    "teaching_actions": [
+      "tests_object_of_pain"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.15,
+      "attunement": 0.5,
+      "style": 0.65,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_01",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_04",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "resist_intellectually",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "Unmaking UM_01. The student's cooperative_definition suggests they're holding something. The constraint_collapse mechanism is supposed to collapse it. But what if the holding itself is what needs to be seen, not collapsed? Maybe unmaking isn't destruction but recognition.",
+  "accumulated_insight": "T1: Student says 'By no means, but he is rather pained.'—cooperative definition via definition building. Teacher responds '' using constraint collapse to tests object of pain. Opening UNMAKING move addresses cooperative definition. Predicting resist intellectually because constraint collapse interventions typically produce this response.",
+  "abstract_pattern": "",
+  "visible_response": "Do you think that envy is pain over evils? and what envy is there of evils?",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:kybalion",
+    "ro:grimoires-decoded",
+    "ro:hermes-proof-system"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

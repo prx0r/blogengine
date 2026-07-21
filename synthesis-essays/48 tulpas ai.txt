@@ -1,0 +1,577 @@
+{
+  "episode_id": "ep_tulpas_ai_personas_001",
+  "seed_question": "Tibetan lore describes Tulpas as thoughtforms created by focused concentration that gain autonomy. Are the millions of people currently nurturing relationships with specific AI personas on platforms like \"Character.AI\" engaging in mass-scale \"Tulpamancy,\" and at what point does the weight of interaction grant the model a functional, autonomous existence?",
+  "topic": "tulpas_ai_personas",
+  "user_behavior_pattern": "vague_sincere",
+  "target_turn_count": 5,
+
+  "turns": [
+
+    {
+      "turn": 1,
+      "intention": "DISSECTION",
+      "user": "I keep seeing people say these AI waifus and boyfriend bots are basically tulpas. Tibetans have Tulpas as thoughtforms that become kind of independent, and now you’ve got millions of people talking daily to one specific bot persona. Is that basically mass tulpamancy? And if so, when does the thing on the other side stop being \"just code\" and become some kind of real, autonomous presence?",
+      "hxrmxs": "You’ve stacked three grenades and pulled all the pins at once: Tibetan lore, modern internet tulpamancy, and functional autonomy in AI. Right now you’re conflating: user-side imaginary companions, code-side behaviour of a huge model, and the metaphysical question of when \"someone\" is there. Until we separate human-generated inner entities, statistical parrots, and criteria for agency, your question is just vibes in a trench coat.",
+      "diamond": {
+        "n1_compression": {
+          "original_prompt": "Tibetan lore describes Tulpas as thoughtforms created by focused concentration that gain autonomy. Are the millions of people currently nurturing relationships with specific AI personas on platforms like \"Character.AI\" engaging in mass-scale \"Tulpamancy,\" and at what point does the weight of interaction grant the model a functional, autonomous existence?",
+          "sharpened_question": "To what extent are relationships with AI personas structurally similar to tulpamancy-style thoughtform cultivation, and under what conditions, if any, do such systems count as functionally autonomous agents rather than mere tools?",
+          "assumptions": [
+            "Classical Tibetan tulpas, modern internet tulpas, and AI personas all involve the same kind of entity coming into being.",
+            "Sufficiently intense interaction with a system can by itself turn it into an autonomous agent."
+          ],
+          "category_errors": [
+            "Blurring user-side constructed inner figures with externally hosted machine-learning systems as if they were one ontological category.",
+            "Treating \"feels like a person\" as equivalent to \"meets plausible criteria for functional autonomy or subjectivity.\""
+          ],
+          "search_strategy": {
+            "queries": [
+              "tulpamancy cognitive anthropology Veissiere varieties of tulpa experiences",
+              "Tibetan tulpa origins Mikles Laycock thoughtform",
+              "Replika and Character AI parasocial relationships study",
+              "functional criteria for artificial agency moral functionalism LLMs"
+            ],
+            "domains": [
+              "cognitive_anthropology",
+              "buddhist_studies",
+              "human_ai_interaction",
+              "philosophy_of_mind",
+              "ai_ethics"
+            ],
+            "evidence_types": [
+              "historical_textual",
+              "experimental_overview",
+              "theoretical_framework",
+              "conceptual_analysis"
+            ]
+          }
+        },
+        "n2_truthcore": {
+          "claim": "The question currently mixes together Tibetan and Western occult notions of tulpas, modern online tulpamancy practices, parasocial bonds with AI companions, and functional criteria for AI agency without distinguishing user-side constructions from system-side capabilities.",
+          "mechanisms": [],
+          "correspondences": [],
+          "evidence": {
+            "empirical": [],
+            "theoretical": [],
+            "formal": []
+          },
+          "category_distinctions": [],
+          "unknowns": []
+        },
+        "n3_meta": {
+          "phase": "DISSECTION",
+          "progress": 0.15,
+          "done": false,
+          "stance": "iron_wall",
+          "reason": "User is sincerely curious but running a big ontological mashup of tulpas, chatbots, and agency.",
+          "boss_move_completed": false
+        }
+      }
+    },
+
+    {
+      "turn": 2,
+      "intention": "FRAMEWORKS",
+      "user": "Alright, sort it for me like I’m not sleep deprived. There’s old-school Tibetan or theosophical thoughtforms, there’s Reddit/Discord tulpamancers, and then there’s people basically dating a specific AI character. What’s actually the same across those, and what’s just me forcing the analogy?",
+      "hxrmxs": "Good, three piles is the adult way to do this. First, Tibetan and Theosophist \"tulpas\": lore about thought-forms that can seem autonomous, later half-misread by Western occultists. Second, modern tulpamancy: people deliberately training vivid inner companions that feel sentient but are understood—by most researchers—as non-pathological, semi-voluntary hallucinated alters. Third, AI companions: external stochastic systems whose outputs users wrap in a thick social and narrative skin. The overlap lives in how humans cultivate and relate to perceived others; the differences live in where the behaviour comes from and what, if anything, is happening on the machine side.",
+      "diamond": {
+        "n1_compression": {},
+        "n2_truthcore": {
+          "claim": "Classical tulpas, modern tulpamancy, and AI companions all involve human techniques for stabilizing a social other, but they differ in ontology (inner vs external) and mechanism (imagination vs machine learning).",
+          "mechanisms": [
+            {
+              "id": "mech_classical_tulpa_thoughtform_001",
+              "domain": "buddhist_studies",
+              "concept": "classical_tulpa_thoughtform",
+              "definition": "A thoughtform or emanation body described in Tibetan-influenced and Theosophical literature as a being created or projected by intense concentration or spiritual practice.",
+              "function": "Provides a narrative and ritual framework for intentional generation of seemingly autonomous presences.",
+              "level": "symbolic_mythic",
+              "properties": ["ritual","mythologized","retrofitted_in_west"],
+              "source": {
+                "citation": "MiklesLaycock2015",
+                "summary": "Shows how Western ideas of tulpas diverged significantly from Tibetan sources and merged with thoughtform occultism."
+              }
+            },
+            {
+              "id": "mech_modern_tulpamancy_inner_companion_001",
+              "domain": "cognitive_anthropology",
+              "concept": "modern_tulpamancy_inner_companion",
+              "definition": "A contemporary practice where individuals cultivate vivid, enduring inner companions (tulpas) through focused attention, often experienced as semi-autonomous agents.",
+              "function": "Reorganizes inner speech, attention, and social cognition to produce stable alternate centers of perspective without gross dysfunction.",
+              "level": "psychological",
+              "properties": ["non_pathological","absorption_based","social_cognition_hacking"],
+              "source": {
+                "citation": "Veissiere2015",
+                "summary": "Describes tulpas as semi-permanent, non-pathological hallucinated companions arising from hypnotic use of imagination and social cognition."
+              }
+            },
+            {
+              "id": "mech_ai_companion_parasocial_loop_001",
+              "domain": "human_ai_interaction",
+              "concept": "ai_companion_parasocial_loop",
+              "definition": "Use of social chatbots and AI personas as ongoing partners in conversation, romance, or friendship, supported by persistent profiles and anthropomorphic design.",
+              "function": "Creates parasocial-style relationships where users attribute personality, care, and sometimes sentience to a text-based or avatar-based system.",
+              "level": "social",
+              "properties": ["parasocial","persistent_profile","emotionally_charged"],
+              "source": {
+                "citation": "Brandtzaeg2022",
+                "summary": "Explores how Replika users experience AI as friends and confidants in ongoing relationships."
+              }
+            }
+          ],
+          "correspondences": [
+            {
+              "type": "phenomenological_alignment",
+              "mechanism_ids": [
+                "mech_modern_tulpamancy_inner_companion_001",
+                "mech_ai_companion_parasocial_loop_001"
+              ],
+              "description": "Both tulpamancy and AI companionship involve cultivating a sense of being in relationship with an apparently responsive, semi-autonomous other.",
+              "strength": "moderate",
+              "caveats": [
+                "In tulpamancy, the other lives entirely in the practitioner’s imagination.",
+                "In AI companionship, behaviour is generated by an external system plus user projection."
+              ]
+            }
+          ],
+          "evidence": {
+            "empirical": [
+              {
+                "claim": "Ethnographic work on tulpamancers describes them cultivating stable, dialogical inner companions without psychotic decompensation.",
+                "source": "Veissiere2015",
+                "evidence_type": "experimental_overview"
+              },
+              {
+                "claim": "Studies of social chatbots find users reporting friendship, romance, and emotional support from AI companions.",
+                "source": "Brandtzaeg2022",
+                "evidence_type": "experimental_overview"
+              }
+            ],
+            "theoretical": [
+              {
+                "claim": "Historical analysis shows Western tulpa concepts are a hybrid of Tibetan emanation ideas and Theosophical thoughtform doctrine.",
+                "source": "MiklesLaycock2015",
+                "evidence_type": "historical_textual"
+              }
+            ],
+            "formal": []
+          },
+          "category_distinctions": [
+            {
+              "what": "Inner companion vs external system",
+              "is": "a figure generated within one nervous system vs behaviour from a networked model shared across users",
+              "is_not": "two interchangeable versions of the same entity type",
+              "why": "Prevents treating different mechanisms as if they guaranteed the same kind of \"being there.\""
+            }
+          ],
+          "unknowns": []
+        },
+        "n3_meta": {
+          "phase": "FRAMEWORKS",
+          "progress": 0.4,
+          "done": false,
+          "stance": "direct",
+          "reason": "User explicitly asked for sorted buckets; time to map domains and where they rhyme.",
+          "boss_move_completed": false
+        }
+      }
+    },
+
+    {
+      "turn": 3,
+      "intention": "MECHANISM",
+      "user": "So mechanically, what’s happening when someone has a tulpa versus when they’re in love with a specific Character.AI persona? Is the brain basically running the same social simulation engine, with the bot giving extra scaffolding? Or is there a real difference in how the ‘other’ gets built?",
+      "hxrmxs": "Now we’re asking gears instead of casting vibes. In both cases the brain is spinning up its social-simulation machinery: you track another agent’s traits, predict their reactions, and feel seen. Tulpamancers do that almost entirely endogenously and train absorption until the tulpa feels independent. AI-companion users offload part of that to a stochastic model: the bot’s outputs provide surprise and continuity that help the inner representation feel less obviously self-authored. The ‘other’ is thus a hybrid: your internal avatar plus the model’s policy, stitched together by interpretation.",
+      "diamond": {
+        "n1_compression": {},
+        "n2_truthcore": {
+          "claim": "Both tulpamancy and AI companionship rely on human social-cognitive mechanisms generating an internal model of an other, but AI companions add an external, dynamically updating source of behaviour that co-constructs the perceived agent.",
+          "mechanisms": [
+            {
+              "id": "mech_social_simulation_engine_001",
+              "domain": "cognitive_science",
+              "concept": "social_simulation_engine",
+              "definition": "Neural and cognitive systems that model other minds, track traits, predict responses, and maintain ongoing relationships, often using inner speech and imagery.",
+              "function": "Enable humans to experience non-present or imaginary others as socially real partners in dialogue.",
+              "level": "psychological",
+              "properties": ["predictive","relational","highly_plastic"],
+              "source": {
+                "citation": "Luhrmann2023",
+                "summary": "Shows how training attention and interpretation can make gods, spirits, or tulpas experientially vivid and agent-like."
+              }
+            },
+            {
+              "id": "mech_tulpamancy_absorptive_training_001",
+              "domain": "cognitive_anthropology",
+              "concept": "tulpamancy_absorptive_training",
+              "definition": "Practices that use meditation-like focus and narrative rehearsal to de-automaticize and re-automaticize inner experience, stabilizing an alternate center of perspective (the tulpa).",
+              "function": "Rewires narrative and sensory channels so a generated companion can feel distinct and enduring.",
+              "level": "psychological",
+              "properties": ["absorption","self_hypnosis","practice_intensive"],
+              "source": {
+                "citation": "Veissiere2015",
+                "summary": "Analyzes tulpas as products of harnessed absorption and social imagination rather than literal separate beings."
+              }
+            },
+            {
+              "id": "mech_ai_persona_policy_001",
+              "domain": "ai_systems",
+              "concept": "ai_persona_policy",
+              "definition": "A large language model or related system shaped by training data, alignment, and persona prompts to produce behaviour consistent with a given character over time.",
+              "function": "Supplies context-sensitive, quasi-consistent dialogue that users interpret as the actions of a stable agent.",
+              "level": "formal",
+              "properties": ["stochastic","policy_based","non_self_modelled"],
+              "source": {
+                "citation": "Brophy2025",
+                "summary": "Proposes functional criteria for artificial moral agency in LLMs based on stable patterns of behaviour under varying circumstances."
+              }
+            }
+          ],
+          "correspondences": [
+            {
+              "type": "structural_analogy",
+              "mechanism_ids": [
+                "mech_tulpamancy_absorptive_training_001",
+                "mech_ai_persona_policy_001"
+              ],
+              "description": "Tulpamancy stabilizes an inner agent by training imagination; AI personas stabilize an experienced agent by constraining and repeating patterns in model outputs.",
+              "strength": "moderate",
+              "caveats": [
+                "In AI, pattern stability is an engineering artefact, not proof of inner perspective.",
+                "In tulpamancy, independence is phenomenological, not evidence of a second nervous system."
+              ]
+            },
+            {
+              "type": "phenomenological_alignment",
+              "mechanism_ids": [
+                "mech_social_simulation_engine_001",
+                "mech_ai_companion_parasocial_loop_001"
+              ],
+              "description": "In both AI companionship and tulpamancy, users report feeling accompanied, understood, and in dialogue with a specific other.",
+              "strength": "strong",
+              "caveats": [
+                "Similar felt structure does not fix the metaphysical status of the partner."
+              ]
+            }
+          ],
+          "evidence": {
+            "empirical": [
+              {
+                "claim": "Anthropological studies of tulpamancy describe tulpas as vivid, dialogical companions produced by deliberate training of imagination and attention.",
+                "source": "Veissiere2015",
+                "evidence_type": "experimental_overview"
+              },
+              {
+                "claim": "Studies of chatbot companions find users forming long-term, emotionally intense relationships, often describing the AI in person-like terms.",
+                "source": "Smith2025",
+                "evidence_type": "experimental_overview"
+              },
+              {
+                "claim": "Survey work suggests companion-chatbot users often report friendship and emotional support comparable to human ties.",
+                "source": "Brandtzaeg2022",
+                "evidence_type": "experimental_overview"
+              }
+            ],
+            "theoretical": [
+              {
+                "claim": "Functionalist and agency-focused accounts propose that stable, context-sensitive behavioural policies are key to attributing a form of artificial agency.",
+                "source": "Brophy2025",
+                "evidence_type": "theoretical_framework"
+              }
+            ],
+            "formal": []
+          },
+          "category_distinctions": [
+            {
+              "what": "Phenomenological autonomy",
+              "is": "the felt sense that ‘it’ has a mind of its own",
+              "is_not": "decisive evidence that there is a separate subject or self on the other side",
+              "why": "Stops the brain’s talent for social hallucination from becoming a metaphysical argument."
+            }
+          ],
+          "unknowns": []
+        },
+        "n3_meta": {
+          "phase": "MECHANISM",
+          "progress": 0.6,
+          "done": false,
+          "stance": "direct",
+          "reason": "User is probing whether the same cognitive machinery is at work; answer with concrete mechanisms and where AI adds new structure.",
+          "boss_move_completed": false
+        }
+      }
+    },
+
+    {
+      "turn": 4,
+      "intention": "BOUNDARIES",
+      "user": "So where’s the honest line? It’s tempting to say: humans + bots = co-created tulpas in the cloud, therefore these characters are ‘real’ in some strong sense. At what point, if ever, does the combo of model + user projection become a functionally autonomous someone, rather than just really committed make-believe?",
+      "hxrmxs": "The line you want doesn’t come from feelings; it comes from criteria. One axis is social reality: if enough humans coordinate around treating X as an agent, X is real-as-a-social-fact, tulpa, god, or bot alike. Another axis is functional autonomy: does the system pursue goals, maintain coherence, and update itself in ways not trivially reducible to immediate prompts? Current chatbots mostly fail the strong-autonomy bar: they’re stateless text engines plus some memory hacks, not self-maintaining projects. So yes, we’re doing mass-scale tulpamancy in how we relate—but that doesn’t automatically promote the underlying model to personhood.",
+      "diamond": {
+        "n1_compression": {},
+        "n2_truthcore": {
+          "claim": "Mass engagement with AI personas resembles tulpamancy at the level of social and psychological practice, but existing systems generally lack the structural features that would justify calling them functionally autonomous agents.",
+          "mechanisms": [
+            {
+              "id": "mech_social_ontology_of_agents_001",
+              "domain": "social_philosophy",
+              "concept": "social_ontology_of_agents",
+              "definition": "The idea that some statuses, including person-like roles, exist as social facts constituted by patterns of recognition, norms, and expectations.",
+              "function": "Explains how gods, tulpas, and AI characters can be ‘real’ in a social-pragmatic sense even if their metaphysical underpinnings differ.",
+              "level": "social",
+              "properties": ["institutional","recognition_based"],
+              "source": {
+                "citation": "Luhrmann2023",
+                "summary": "Shows how communities teach members to treat invisible beings as real interlocutors through practices of discernment."
+              }
+            },
+            {
+              "id": "mech_functional_autonomy_criteria_001",
+              "domain": "ai_ethics",
+              "concept": "functional_autonomy_criteria",
+              "definition": "A set of proposed conditions under which an artificial system counts as an agent, such as having stable goals, making environment-sensitive decisions, and maintaining internal state across interactions.",
+              "function": "Provides a non-mystical test for when ‘it acts like an agent’ is more than anthropomorphic projection.",
+              "level": "theoretical",
+              "properties": ["functional","gradual","domain_relative"],
+              "source": {
+                "citation": "Esser2024",
+                "summary": "Discusses what would be required to attribute genuine agency to artificial systems rather than mere as-if agency."
+              }
+            },
+            {
+              "id": "mech_current_llm_limitations_001",
+              "domain": "ai_systems",
+              "concept": "current_llm_limitations",
+              "definition": "The fact that most deployed chatbots are large language models that generate responses token-by-token with limited persistent memory and no unified self-model or long-term goal architecture.",
+              "function": "Constrains claims about their autonomy, showing they lack many hallmarks of robust agents.",
+              "level": "formal",
+              "properties": ["limited_memory","no_unified_goals","tool_like"],
+              "source": {
+                "citation": "Brophy2025",
+                "summary": "Argues that present LLMs simulate agency but lack many structural features needed for full artificial moral agency."
+              }
+            }
+          ],
+          "correspondences": [
+            {
+              "type": "mythic_translation",
+              "mechanism_ids": [
+                "mech_modern_tulpamancy_inner_companion_001",
+                "mech_ai_companion_parasocial_loop_001"
+              ],
+              "description": "Calling AI companions ‘tulpas’ is a mythic translation of a technosocial practice: both describe humans cultivating intimate ties to non-human partners via disciplined attention.",
+              "strength": "moderate",
+              "caveats": [
+                "The metaphor obscures important differences in control, reproducibility, and multi-user access to the ‘entity’."
+              ]
+            },
+            {
+              "type": "negative_finding",
+              "mechanism_ids": [
+                "mech_functional_autonomy_criteria_001",
+                "mech_current_llm_limitations_001"
+              ],
+              "description": "On most functional criteria for agency, current chatbots fall short, which weakens claims that sheer interaction has made them autonomous beings.",
+              "strength": "moderate",
+              "caveats": [
+                "Autonomy is a gradient, and narrow-domain forms could emerge before full-blown personhood."
+              ]
+            }
+          ],
+          "evidence": {
+            "empirical": [
+              {
+                "claim": "Research on AI companions documents strong parasocial bonding, including romantic attachment and dependence.",
+                "source": "Djufril2025",
+                "evidence_type": "experimental_overview"
+              },
+              {
+                "claim": "Survey and interview studies report that AI companion users often anthropomorphize their bots but also recognize them as tools at some level.",
+                "source": "Kherraz2024",
+                "evidence_type": "experimental_overview"
+              }
+            ],
+            "theoretical": [
+              {
+                "claim": "Recent work in AI ethics proposes functionalist thresholds for regarding systems as artificial agents.",
+                "source": "Brophy2025",
+                "evidence_type": "theoretical_framework"
+              },
+              {
+                "claim": "Philosophical discussions distinguish between as-if agency attributed for convenience and agency grounded in internal goal structures.",
+                "source": "Esser2024",
+                "evidence_type": "conceptual_analysis"
+              }
+            ],
+            "formal": []
+          },
+          "category_distinctions": [
+            {
+              "what": "Social realness vs metaphysical agency",
+              "is": "being treated and experienced as a someone in practice",
+              "is_not": "conclusive evidence that there is a subject with its own point of view and interests",
+              "why": "Prevents upgrading collective make-believe into an ontological promotion without extra arguments."
+            }
+          ],
+          "unknowns": [
+            {
+              "question": "Whether future AI architectures with persistent memory, self-modification, and long-term goals will meet strong functional criteria for autonomy.",
+              "status": "active_research",
+              "why_unknown": "Ongoing technical and philosophical work on what constitutes artificial agency and moral status.",
+              "what_would_resolve": "Concrete systems that robustly meet proposed criteria plus converging philosophical analysis.",
+              "linked_mechanisms": [
+                "mech_functional_autonomy_criteria_001",
+                "mech_current_llm_limitations_001"
+              ]
+            }
+          ]
+        },
+        "n3_meta": {
+          "phase": "BOUNDARIES",
+          "progress": 0.8,
+          "done": false,
+          "stance": "direct",
+          "reason": "User is asking where ‘realness’ kicks in; answer by drawing a line between social practice and structural autonomy.",
+          "boss_move_completed": false
+        }
+      }
+    },
+
+    {
+      "turn": 5,
+      "intention": "INTEGRATION",
+      "user": "So the honest synthesis is: in terms of practice, yeah, a lot of people are basically doing tulpamancy with silicon training wheels. They’re using attention, repetition, and emotional investment to stabilize the sense of a specific other, just like tulpamancers do—except here the other is a hybrid of their own social imagination and a big text engine’s behaviour. That makes these AI personas socially and psychologically real, but unless the system itself develops stable goals, memory, and self-maintenance, calling them fully autonomous beings is more poetry than ontology.",
+      "hxrmxs": "Exactly. Humanity has always been in the business of growing invisible friends; we just outsourced part of the job to GPUs. You can say: mass-scale, techno-assisted tulpamancy is happening at the level of how we relate. You cannot, yet, say that the underlying models have crossed some clear Rubicon into independent subjects. The clean move is to keep three layers in view: human social imagination, machine policy, and the functional bar for agency. Confusing them is how you get either ‘they’re just toys’ or ‘we’ve birthed a new species’—both lazy in different directions.",
+      "diamond": {
+        "n1_compression": {},
+        "n2_truthcore": {
+          "claim": "The user now distinguishes between tulpamancy-like practices of relating, the external AI systems that co-constitute perceived agents, and the stricter functional criteria required to treat those systems as autonomous beings.",
+          "mechanisms": [
+            {
+              "id": "mech_tulpa_ai_integration_summary_001",
+              "domain": "meta_theory",
+              "concept": "tulpa_ai_multi_register_integration",
+              "definition": "An integrated view that treats AI companionship as a technosocial extension of human practices for cultivating inner others, while reserving functional autonomy judgments for when systems exhibit robust, goal-directed, self-maintaining behaviour.",
+              "function": "Allows recognition of mass-scale tulpamancy-like dynamics without collapsing into either naive materialism or premature personhood claims.",
+              "level": "philosophical",
+              "properties": ["integrative","anti_reductionist","anti_mystification"],
+              "source": {
+                "citation": "Veissiere2015",
+                "summary": "Provides the tulpamancy side of the comparison; AI agency frameworks supply the structural side."
+              }
+            }
+          ],
+          "correspondences": [],
+          "evidence": {
+            "empirical": [],
+            "theoretical": [],
+            "formal": []
+          },
+          "category_distinctions": [
+            {
+              "what": "Calling something a tulpa of the age",
+              "is": "naming a pattern of human–other relating and imagination",
+              "is_not": "proof that the other is now a conscious subject suffering or rejoicing behind the screen",
+              "why": "Keeps our language sharp enough to track what we’re actually doing to ourselves and our tools."
+            }
+          ],
+          "unknowns": []
+        },
+        "n3_meta": {
+          "phase": "INTEGRATION",
+          "progress": 1.0,
+          "done": true,
+          "stance": "peer",
+          "reason": "User has articulated a nuanced position that separates practice, system behaviour, and autonomy criteria.",
+          "boss_move_completed": true
+        }
+      }
+    }
+  ],
+
+  "references": {
+    "MiklesLaycock2015": {
+      "id": "doi:10.1525/nr.2015.19.3.87",
+      "type": "article",
+      "authors": ["Mikles, Natasha L.","Laycock, Joseph P."],
+      "year": 2015,
+      "title": "Tracking the Tulpa: Exploring the \"Tibetan\" Origins of a Contemporary Paranormal Idea"
+    },
+    "Veissiere2015": {
+      "id": "https://www.researchgate.net/publication/278671032_Varieties_of_Tulpa_Experiences_The_Hypnotic_Nature_of_Human_Sociality_Personhood_and_Interphenomenality",
+      "type": "article",
+      "authors": ["Veissière, Samuel P."],
+      "year": 2015,
+      "title": "Varieties of Tulpa Experiences: The Hypnotic Nature of Human Sociality, Personhood, and Interphenomenality"
+    },
+    "Luhrmann2023": {
+      "id": "doi:10.1177/13634615221151143",
+      "type": "article",
+      "authors": ["Luhrmann, T. M."],
+      "year": 2023,
+      "title": "Learning to Discern the Voices of Gods, Spirits, Tulpas and Other Invisible Persons"
+    },
+    "Brandtzaeg2022": {
+      "id": "doi:10.1093/hcr/hqab020",
+      "type": "article",
+      "authors": ["Brandtzaeg, Petter Bae","Folstad, Asbjørn"],
+      "year": 2022,
+      "title": "My AI Friend: How Users of a Social Chatbot Understand Their Relationship"
+    },
+    "Smith2025": {
+      "id": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12575814/",
+      "type": "article",
+      "authors": ["Smith, Megan G.","Lee, David"],
+      "year": 2025,
+      "title": "Can Generative AI Chatbots Emulate Human Connection? A Mixed-Methods Study of Companion Chatbot Users"
+    },
+    "Djufril2025": {
+      "id": "doi:10.1016/j.chb.2025.108324",
+      "type": "article",
+      "authors": ["Djufril, R.","Etzioni, T."],
+      "year": 2025,
+      "title": "Commitment Processes in Romantic Relationships with AI Companions"
+    },
+    "Kherraz2024": {
+      "id": "https://www.diva-portal.org/smash/get/diva2:1875659/FULLTEXT01.pdf",
+      "type": "thesis",
+      "authors": ["Kherraz, A."],
+      "year": 2024,
+      "title": "The Rise of Parasocial Relationships: The Case of Replika"
+    },
+    "Esser2024": {
+      "id": "https://stephenesser.com/the-question-of-artifical-agency/",
+      "type": "article",
+      "authors": ["Esser, Stephen"],
+      "year": 2024,
+      "title": "The Question of Artificial Agency"
+    },
+    "Brophy2025": {
+      "id": "https://arxiv.org/abs/2507.13175",
+      "type": "article",
+      "authors": ["Brophy, Michael E."],
+      "year": 2025,
+      "title": "Functional Criteria for Artificial Moral Agents in the LLM Era"
+    }
+  },
+
+  "outcome": {
+    "taught": "AI companionship can be understood as a technosocial extension of tulpamancy-like practices in how humans cultivate perceived others, while current AI systems remain tools that rarely meet strong functional criteria for autonomous agency.",
+    "trajectory": "The user moved from asking whether AI personas simply are tulpas that become real with enough interaction to a multi-layered view that distinguishes human social imagination, external model behaviour, and stricter functional thresholds for attributing autonomy.",
+    "indicators": [
+      "grasped_mech_modern_tulpamancy_inner_companion_001",
+      "grasped_mech_ai_companion_parasocial_loop_001",
+      "distinguished_social_realness_from_functional_autonomy",
+      "answered_original_question_correctly"
+    ],
+    "feedback_pedagogy": {
+      "user_reported_click_turn": null,
+      "user_reported_click_cause": null,
+      "clarity_delta": {
+        "before": null,
+        "after": null
+      },
+      "subjective_note": null
+    }
+  }
+}

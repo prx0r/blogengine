@@ -1,0 +1,55 @@
+{
+  "co_id": "co:uno_therapy2_t1593_t1608_hypotheti_t5",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy2_t1593_t1608_hypothetical_speech",
+  "turn_index": 5,
+  "lineage": "Therapeutic",
+  "student_state": "distanced",
+  "behavior_tags": [
+    "externalization"
+  ],
+  "pedagogy": {
+    "phase": "SELF-MAKING",
+    "function_id": "SM_04",
+    "function_name": "SM_04",
+    "mechanism_shape": "SUBJECT_OBJECT_INVERSION",
+    "teaching_actions": [
+      "redirects_to_self"
+    ],
+    "traps_avoided": [
+      "looking_outward"
+    ],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.15,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_01",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "no_clear_effect",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "Turn 6: 'I guess you could say I leave things indefinite.'. Student now in distanced. Continuing with subject_object_inversion approach. Building on previous turn's foundation.",
+  "accumulated_insight": "T6: Student: 'I guess you could say I leave things indefinite.'. Shift from reluctant to distanced. Teacher applies subject_object_inversion mechanism with redirects to self. Mid-episode progression in SELF-MAKING phase.",
+  "abstract_pattern": "",
+  "visible_response": "But in your opinion?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

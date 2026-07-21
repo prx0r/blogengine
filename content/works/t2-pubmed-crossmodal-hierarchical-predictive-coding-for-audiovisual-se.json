@@ -1,0 +1,55 @@
+{
+  "work_id": "work:t2-pubmed-crossmodal-hierarchical-predictive-coding-for-audiovisual-se",
+  "schema_version": 2,
+  "title": "Crossmodal hierarchical predictive coding for audiovisual sequences in the human brain.",
+  "authors": [
+    {
+      "name": "Huang YT"
+    },
+    {
+      "name": "Wu CT"
+    },
+    {
+      "name": "Fang YM"
+    },
+    {
+      "name": "Fu CK"
+    },
+    {
+      "name": "Koike S"
+    }
+  ],
+  "publication": {
+    "year": 2024,
+    "journal": "Commun Biol",
+    "source": "PubMed/MEDLINE",
+    "language": "en"
+  },
+  "identifiers": {
+    "pmid": "39122960",
+    "doi": "10.1038/s42003-024-06677-6"
+  },
+  "topics": [
+    "phase-6-dependent-arising",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "assets": {
+    "pdf_path": "t2-11316022-crossmodal-hierarchical-predictive-coding-for-audiovisual-se.pdf",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/39122960/",
+    "abstract": "Predictive coding theory suggests the brain anticipates sensory information using prior knowledge. While this theory has been extensively researched within individual sensory modalities, evidence for predictive processing across sensory modalities is limited. Here, we examine how crossmodal knowledge is represented and learned in the brain, by identifying the hierarchical networks underlying crossmodal predictions when information of one sensory modality leads to a prediction in another modality"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_alt17_acquisition",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 6,
+    "phase_name": "Dependent-arising",
+    "bridge_rationale": "Bridge paper score=18.5: links Dependent-arising concept to mechanistic neuroscience"
+  },
+  "evaluation": "Score 18: Excellent bridge signal",
+  "tier": 2
+}

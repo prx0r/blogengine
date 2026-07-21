@@ -1,0 +1,123 @@
+{
+  "id": "occult/alchemy",
+  "name": "Alchemical Works",
+  "description": "A library of over 130 alchemical texts from the sacred-texts archive, with 30 Research Objects created for the most profound works. Each RO contains source passages and commentary connecting alchemical symbolism to Steiner, Layayoga, Tantraloka, the daimon path, and PGM traditions.",
+  "classification_by_theme": {
+    "foundational_corpus": [
+      {"slug": "turba", "title": "Turba Philosophorum", "era": "10th-12th c.", "significance": "The oldest dialogue of alchemical sages; debate format conceals initiatory process"},
+      {"slug": "emerald-tablet", "title": "Emerald Tablet / Golden Tractate of Hermes", "era": "Legendary", "significance": "The ur-text; 'As above, so below'; seed of all alchemy"},
+      {"slug": "corpus-hermeticum", "title": "Corpus Hermeticum", "era": "2nd-3rd c.", "significance": "17 tractates of Hermes Trismegistus; full Hermetic revelation"},
+      {"slug": "aesch-mezareph", "title": "Aesch-Mezareph", "era": "17th c.", "significance": "Only text explicitly fusing alchemy with Hebrew Kabbalah"},
+      {"slug": "maria-prophetissa", "title": "The Practise of Mary the Prophetess", "era": "c. 3rd c.", "significance": "Earliest alchemical text by a woman; the axiom of the threefold vessel"}
+    ],
+    "rosicrucian_manifestos": [
+      {"slug": "fama", "title": "Fama Fraternitatis", "era": "1614", "significance": "First Rosicrucian manifesto; discovery of CRC's tomb"},
+      {"slug": "confessio", "title": "Confessio Fraternitatis", "era": "1615", "significance": "Second Rosicrucian manifesto; reformation of the whole world"},
+      {"slug": "chymical-wedding", "title": "The Chymical Wedding of Christian Rosenkreutz", "era": "1616", "significance": "Third Rosicrucian manifesto; most layered allegorical novel in alchemy; 7-day initiatic journey"},
+      {"slug": "khunrath", "title": "Khunrath's Amphitheatrum", "era": "1609", "significance": "Fusion of oratory and laboratory; 'pray and work'"},
+      {"slug": "sophia-mirror", "title": "Speculum Sophicum Rhodostauroticum", "era": "1618", "significance": "Rosicrucian emblem book of the spiritual path"},
+      {"slug": "catechism-tschoudy", "title": "Alchemical Catechism of Baron Tschoudy", "era": "18th c.", "significance": "Q&A format condenses entire work; Sphinx riddle pedagogy"}
+    ],
+    "emblem_books_and_visual": [
+      {"slug": "atalanta", "title": "Atalanta Fugiens (Michael Maier)", "era": "1617", "significance": "50 emblems with epigrams, discourse, and musical fugue; multi-sensory initiation"},
+      {"slug": "lambspring", "title": "The Book of Lambspring", "era": "16th c.", "significance": "15 emblematic figures; animals encode the process; simplest yet deepest emblem book"},
+      {"slug": "ripley-scroll", "title": "The Ripley Scroll", "era": "15th-16th c.", "significance": "Most famous alchemical scroll; one-dimensional unfolding of multi-dimensional process"},
+      {"slug": "freher", "title": "Freher's Process", "era": "18th c.", "significance": "Finest commentary on Boehme; remarkable diagrams of spiritual anatomy"}
+    ],
+    "english_verse_and_poetry": [
+      {"slug": "ripley-gates", "title": "Ripley's Twelve Gates", "era": "15th c.", "significance": "Definitive English alchemical poem; 12 gates = 12 stages of the work"},
+      {"slug": "bloomfield", "title": "Bloomfield's Blossoms", "era": "16th c.", "significance": "Alchemical verses on the 'garden'; each blossom = sushumna awakening"},
+      {"slug": "blake-marriage", "title": "The Marriage of Heaven and Hell (Blake)", "era": "1790", "significance": "Illuminated book; inversion of morality as alchemical nigredo; Proverbs of Hell"}
+    ],
+    "theoretical_and_philosophical": [
+      {"slug": "vaughan", "title": "Coelum Terrae / Aula Lucis (Thomas Vaughan)", "era": "1650s", "significance": "Purest English alchemical theory; first matter as astral light"},
+      {"slug": "hermetic-arcanum", "title": "The Hermetic Arcanum (Jean d'Espagnet)", "era": "17th c.", "significance": "Most dense Latin treatise; canons built like theorems; spiral structure"},
+      {"slug": "glory-of-light", "title": "The Glory of Light", "era": "17th c.", "significance": "Theosophical-alchemical tract on the nature of light as the actual light-body"},
+      {"slug": "hermetic-triumph", "title": "The Hermetic Triumph", "era": "17th c.", "significance": "Allegorical narrative of the king's son = the soul's journey; encodes tantric dissolution"},
+      {"slug": "golden-age-restored", "title": "The Golden Age Restored", "era": "17th c.", "significance": "The restoration of the divine state in man"}
+    ],
+    "paracelsian_and_medicinal": [
+      {"slug": "paracelsus-aurora", "title": "The Aurora of the Philosophers (Paracelsus)", "era": "16th c.", "significance": "Paracelsus' most spiritual work; the 'light of nature' as clairvoyant organ"},
+      {"slug": "paracelsus-tincture", "title": "Book Concerning the Tincture (Paracelsus)", "era": "16th c.", "significance": "Tincture = Christ-impulse transforming the etheric; Salt/Sulfur/Mercury = body/soul/spirit"}
+    ],
+    "kabbalistic_and_astrological": [
+      {"slug": "aesch-mezareph", "title": "Aesch-Mezareph", "era": "17th c.", "significance": "Each metal = Sephirah + divine name; purification = tikkun"}
+    ],
+    "literary_and_romantic": [
+      {"slug": "goethe-faust", "title": "Goethe's Faust", "era": "1808/1832", "significance": "The alchemical drama of the modern soul; Homunculus = created spiritual body; the Mothers = prima materia"},
+      {"slug": "novalis-heinrich", "title": "Heinrich von Ofterdingen (Novalis)", "era": "1799-1800", "significance": "Romantic novel of the Blue Flower = Lapis; the mountain descent = nigredo"}
+    ],
+    "practical_operations": [
+      {"slug": "bacon-mirror", "title": "The Mirror of Alchemy (Roger Bacon)", "era": "13th c.", "significance": "First great English alchemical summary; 7 metals = 7 planetary forces"},
+      {"slug": "alchemical-mass", "title": "An Alchemical Mass", "era": "16th c.", "significance": "Liturgy of alchemy; the Mass IS the work; consecration = transmutation"},
+      {"slug": "sendivogius", "title": "Sendivogius' New Chemical Light", "era": "17th c.", "significance": "The 'philosophical water' = the living water of the astral world"},
+      {"slug": "kelly-stone", "title": "The Stone of the Philosophers (Edward Kelly)", "era": "16th c.", "significance": "Linked to Dee's scrying visions; stone = transformed etheric body"}
+    ]
+  },
+  "research_objects": [
+    "ro:alchemy-turba",
+    "ro:alchemy-emerald-tablet",
+    "ro:alchemy-chymical-wedding",
+    "ro:alchemy-atalanta",
+    "ro:alchemy-fama",
+    "ro:alchemy-ripley-gates",
+    "ro:alchemy-lambspring",
+    "ro:alchemy-paracelsus-aurora",
+    "ro:alchemy-catechism-tschoudy",
+    "ro:alchemy-aesch-mezareph",
+    "ro:alchemy-vaughan",
+    "ro:alchemy-hermetic-triumph",
+    "ro:alchemy-bacon-mirror",
+    "ro:alchemy-confessio",
+    "ro:alchemy-maria-prophetissa",
+    "ro:alchemy-alchemical-mass",
+    "ro:alchemy-hermetic-arcanum",
+    "ro:alchemy-kelly-stone",
+    "ro:alchemy-paracelsus-tincture",
+    "ro:alchemy-golden-age-restored",
+    "ro:alchemy-ripley-scroll",
+    "ro:alchemy-freher",
+    "ro:alchemy-glory-of-light",
+    "ro:alchemy-blake-marriage",
+    "ro:alchemy-goethe-faust",
+    "ro:alchemy-khunrath",
+    "ro:alchemy-bloomfield",
+    "ro:alchemy-novalis-heinrich",
+    "ro:alchemy-sophia-mirror",
+    "ro:alchemy-sendivogius"
+  ],
+  "standout_pieces": {
+    "most_profound_poem": {
+      "title": "Ripley's Twelve Gates",
+      "reason": "The definitive English alchemical poem; 12 gates simultaneously describe chemical operations, meditation stages, and cosmological principles. Each gate maps to a cakra and a stage of Steiner's initiation path."
+    },
+    "most_obscure_gem": {
+      "title": "Aesch-Mezareph",
+      "reason": "The only text fusing alchemy with Hebrew Kabbalah explicitly. Each metal = a Sephirah + a divine name. The 'purifying fire' is Da'ath. Extremely dense, extremely rewarding."
+    },
+    "best_emblem_book": {
+      "title": "Atalanta Fugiens",
+      "reason": "50 emblems with epigrams, scholarly discourse, AND a musical fugue for each. Multi-sensory initiation. The fugue structure encodes the contrapuntal nature of spiritual development. Atalanta's race = prana pursuing the still point."
+    },
+    "most_layered_allegory": {
+      "title": "The Chymical Wedding of Christian Rosenkreutz",
+      "reason": "7 days encoding a complete death/rebirth sequence. The royal wedding = interior hieros gamos. The tower's 7 floors = the 7 cakras. Each character = a daimonic force. Reads like a dream you've had."
+    },
+    "best_hidden_meaning": {
+      "title": "Turba Philosophorum",
+      "reason": "The oldest alchemical dialogue. Each philosopher's voice represents a stage of consciousness. The debate format conceals a step-by-step initiatory process. The 'crowd' is the multiplicity of voices within the practitioner's own mind before unification."
+    },
+    "most_psychedelic": {
+      "title": "Blake's Marriage of Heaven and Hell",
+      "reason": "The 'Proverbs of Hell' are alchemical operations inverted and spoken through demonic voice. The 'Printing House in Hell' = the press of generation. The Marriage = the coniunctio oppositorum. Reads like a PGM spell channeled."
+    },
+    "most_relevant_to_daimon_work": {
+      "title": "The Hermetic Triumph",
+      "reason": "The king's son's journey encodes the complete daimon contact arc. The 'king's death' = the stilling of the mind (Section G resistance). The 'queen's grief' = the dark night of the soul before contact."
+    },
+    "most_systematic": {
+      "title": "The Hermetic Arcanum (d'Espagnet)",
+      "reason": "Canons built like theorems; the text is structured as a spiral — each 'canon' returns to the same point at a higher level. The precision masks a meditation practice. Maps perfectly to Layayoga's absorption hierarchy."
+    }
+  }
+}

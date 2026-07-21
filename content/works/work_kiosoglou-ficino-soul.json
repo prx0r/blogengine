@@ -1,0 +1,78 @@
+{
+  "work_id": "work:kiosoglou-ficino-soul",
+  "schema_version": 1,
+  "title": "Marsilio Ficino and the Soul: Doctrinal and Argumentative Remarks Regarding His Use of the Elements of Physics and the Elements of Theology",
+  "authors": [
+    {
+      "name": "Sokratis-Athanasios Kiosoglou",
+      "author_id": "author:kiosoglou"
+    }
+  ],
+  "publication": {
+    "year": 2025,
+    "type": "article",
+    "journal": "Philosophies",
+    "publisher": "MDPI",
+    "language": "en"
+  },
+  "identifiers": {
+    "doi": "10.3390/philosophies10010014",
+    "openalex_id": null
+  },
+  "topics": [
+    "ficino",
+    "soul",
+    "elements_of_physics",
+    "elements_of_theology",
+    "proclus",
+    "platonism"
+  ],
+  "tradition": [
+    "platonism",
+    "ficino",
+    "late_platonism"
+  ],
+  "relations": [
+    {
+      "predicate": "uses_source",
+      "target_id": "concept:proclus-elements-theology",
+      "confidence": 0.95
+    },
+    {
+      "predicate": "discusses",
+      "target_id": "concept:ficino-anima",
+      "confidence": 0.95
+    }
+  ],
+  "assets": {
+    "pdf_path": "library/ficino/kiosoglou-ficino-soul.pdf",
+    "source_url": "https://lirias.kuleuven.be/retrieve/e50e5782-cd0b-4794-b4fc-f646fff89c2c"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "gold",
+    "license": "CC-BY",
+    "version": "version_of_record",
+    "host_type": "repository",
+    "sha256": null,
+    "page_count": 10,
+    "file_size_bytes": 334327,
+    "retrieved_at": "2026-07-11T07:10:00Z",
+    "validation_confidence": 0.98
+  },
+  "analysis": {
+    "summary": "Kiosoglou examines Marsilio Ficino's use of Proclus' Elements of Physics and Elements of Theology in his arguments about the soul. Demonstrates how Ficino adapted Proclean metaphysical structures to support his Christian Platonic anthropology.",
+    "argument": "Ficino's doctrine of the soul is shaped by two Proclean sources: the Elements of Physics provides the framework for the soul's intermediate ontological status, while the Elements of Theology supplies the argumentative structure for the soul's immortality and return to the divine.",
+    "quality_score": 0.92,
+    "tier": 2,
+    "tier_label": "scholarly commentary"
+  },
+  "commentary_on": {
+    "primary_author": "Sokratis-Athanasios Kiosoglou",
+    "primary_work": "Marsilio Ficino and the Soul: Doctrinal and Argumentative Remarks Regarding His ",
+    "primary_topic": ""
+  },
+  "scholarly_contribution": {},
+  "relevance_to_ros": {},
+  "tier": 2
+}

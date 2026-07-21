@@ -1,0 +1,42 @@
+{
+  "work_id": "work:t2-pubmed-the-predictive-coding-account-of-psychosis",
+  "schema_version": 2,
+  "title": "The Predictive Coding Account of Psychosis.",
+  "publication": {
+    "year": 2018,
+    "type": "article",
+    "source": "PubMed/MEDLINE",
+    "language": "en",
+    "journal": "Biol Psychiatry"
+  },
+  "identifiers": {
+    "pmid": "30007575",
+    "doi": "10.1016/j.biopsych.2018.05.015"
+  },
+  "topics": [
+    "phase-6-dependent-arising",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "tradition": [
+    "contemporary_science"
+  ],
+  "tier": 2,
+  "assets": {
+    "pdf_path": null,
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/30007575/",
+    "abstract": "Fueled by developments in computational neuroscience, there has been increasing interest in the underlying neurocomputational mechanisms of psychosis. One successful approach involves predictive coding and Bayesian inference. Here, inferences regarding the current state of the world are made by combining prior beliefs with incoming sensory signals. Mismatches between prior beliefs and incoming signals constitute prediction errors that drive new learning. Psychosis has been suggested to result fr"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_t2_search",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 6,
+    "phase_name": "Dependent Arising",
+    "bridge_rationale": "Dependent arising — predictive processing, free energy principle, active inference as causal cognition."
+  },
+  "evaluation": "Good (score=3.0)"
+}

@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thumbnail Assigner</title>
+<style>
+  :root {
+    --bg: #f5f3ef;
+    --card: #ffffff;
+    --border: #ddd6cb;
+    --text: #1a1a1a;
+    --muted: #7a746e;
+    --accent: #8b6914;
+    --sel: #c7a252;
+    --sel-bg: #faf3e0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "EB Garamond", "Georgia", serif;
+    background: var(--bg);
+    color: var(--text);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  header {
+    padding: 10px 20px;
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-shrink: 0;
+  }
+  header h1 {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  header .info {
+    color: var(--muted);
+    font-size: 13px;
+    margin-left: auto;
+  }
+  .save-btn {
+    padding: 6px 18px;
+    border: 1px solid var(--accent);
+    background: var(--accent);
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .save-btn:hover { opacity: 0.9; }
+  .save-btn:disabled { opacity: 0.4; cursor: wait; }
+  .save-status {
+    font-size: 12px;
+    color: var(--muted);
+    font-style: italic;
+  }
+  .main {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+  }
+  .panel-left {
+    width: 65%;
+    overflow-y: auto;
+    padding: 12px;
+    background: #ece8e1;
+  }
+  .panel-right {
+    width: 35%;
+    overflow-y: auto;
+    padding: 12px;
+    background: var(--card);
+    border-left: 1px solid var(--border);
+  }
+  .search-box {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 13px;
+    margin-bottom: 10px;
+    background: white;
+  }
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 6px;
+  }
+  .image-cell {
+    border: 2px solid transparent;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    aspect-ratio: auto;
+    background: #f0eee8;
+    transition: border-color 0.1s;
+  }
+  .image-cell:hover {
+    border-color: #bbb;
+  }
+  .image-cell.selected {
+    border-color: var(--sel);
+    box-shadow: 0 0 0 1px var(--sel);
+  }
+  .image-cell img {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    display: block;
+  }
+  .image-cell .id-label {
+    font-size: 8px;
+    color: var(--muted);
+    padding: 1px 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background: rgba(255,255,255,0.9);
+  }
+  .video-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .video-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.1s;
+    border: 1px solid transparent;
+  }
+  .video-item:hover {
+    background: var(--bg);
+  }
+  .video-item.assigned {
+    border-color: var(--sel);
+    background: var(--sel-bg);
+  }
+  .video-num {
+    font-size: 10px;
+    color: var(--muted);
+    font-weight: 600;
+    width: 22px;
+    text-align: right;
+    flex-shrink: 0;
+  }
+  .video-title {
+    font-size: 12px;
+    line-height: 1.2;
+    flex: 1;
+  }
+  .video-thumb {
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+    object-fit: cover;
+    background: #f0eee8;
+    flex-shrink: 0;
+    border: 1px solid var(--border);
+  }
+  .video-thumb.empty {
+    opacity: 0.3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: var(--muted);
+  }
+  .clear-btn {
+    font-size: 10px;
+    color: var(--muted);
+    cursor: pointer;
+    padding: 2px 4px;
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity 0.1s;
+  }
+  .video-item:hover .clear-btn { opacity: 1; }
+  .clear-btn:hover { background: #f0e8e8; color: #a04040; }
+  .section-label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--muted);
+    padding: 12px 8px 4px;
+    border-top: 1px solid var(--border);
+    margin-top: 4px;
+  }
+  .section-label:first-child { border-top: none; margin-top: 0; }
+  .selected-indicator {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--text);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 13px;
+    z-index: 100;
+    display: none;
+    pointer-events: none;
+  }
+  .selected-indicator.show { display: block; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Assign Images to Videos</h1>
+  <span class="info" id="stats">0 / 56 assigned</span>
+  <button class="save-btn" id="saveBtn" onclick="save()">Save</button>
+  <span class="save-status" id="saveStatus"></span>
+</header>
+
+<div class="main">
+  <div class="panel-left">
+    <input class="search-box" id="imageSearch" placeholder="Search images by concept, motif, mood, or ID..." oninput="filterImages()">
+    <div class="image-grid" id="imageGrid"></div>
+  </div>
+  <div class="panel-right">
+    <input class="search-box" id="videoSearch" placeholder="Search videos..." oninput="filterVideos()">
+    <div class="video-list" id="videoList"></div>
+  </div>
+</div>
+
+<div class="selected-indicator" id="selectedIndicator">Click a video to assign</div>
+
+<script>
+const API = window.location.origin;
+let allImages = [];
+let allVideos = [];
+let assignments = {};
+let selectedImageId = null;
+let dirty = false;
+
+async function load() {
+  try {
+    const [imgRes, vidRes, assignRes] = await Promise.all([
+      fetch(`${API}/api/images`),
+      fetch(`${API}/api/matches`),
+      fetch(`${API}/api/assignments`),
+    ]);
+    allImages = await imgRes.json();
+    allVideos = await vidRes.json();
+    assignments = await assignRes.json();
+  } catch(e) {
+    document.body.innerHTML = `<div style="padding:40px;color:#8b3030;">Failed to load: ${e.message}</div>`;
+    return;
+  }
+
+  renderImages();
+  renderVideos();
+  updateStats();
+}
+
+function renderImages() {
+  const grid = document.getElementById('imageGrid');
+  grid.innerHTML = '';
+
+  allImages.forEach(img => {
+    const cell = document.createElement('div');
+    cell.className = 'image-cell';
+    cell.dataset.id = img.id;
+    cell.title = `${img.id}\n${img.title}\n${(img.concepts||[]).join(', ')}`;
+
+    const imgEl = document.createElement('img');
+    imgEl.src = `${API}/img/${img.id}`;
+    imgEl.loading = 'lazy';
+    imgEl.alt = img.id;
+
+    const label = document.createElement('div');
+    label.className = 'id-label';
+    label.textContent = img.id.replace(/art_alchemy_e/, 'e');
+
+    cell.appendChild(imgEl);
+    cell.appendChild(label);
+
+    cell.addEventListener('click', () => {
+      document.querySelectorAll('.image-cell.selected').forEach(c => c.classList.remove('selected'));
+      cell.classList.add('selected');
+      selectedImageId = img.id;
+      document.getElementById('selectedIndicator').classList.add('show');
+      document.getElementById('selectedIndicator').textContent = `Selected: ${img.id} — click a video to assign`;
+    });
+
+    grid.appendChild(cell);
+  });
+}
+
+function renderVideos() {
+  const list = document.getElementById('videoList');
+  list.innerHTML = '';
+
+  const sections = [
+    { name: 'Tantraloka', range: [1, 8] },
+    { name: 'Mixed Traditions', range: [9, 25] },
+    { name: 'Seth / Modern Esoteric', range: [26, 35] },
+    { name: 'Daimons / Theurgy', range: [36, 51] },
+    { name: 'Scholarly Heavyweights', range: [52, 56] },
+  ];
+
+  sections.forEach(section => {
+    const label = document.createElement('div');
+    label.className = 'section-label';
+    label.textContent = section.name;
+    list.appendChild(label);
+
+    const videos = allVideos.filter(v => v.num >= section.range[0] && v.num <= section.range[1]);
+    videos.forEach(v => renderVideoItem(v, list));
+  });
+}
+
+function renderVideoItem(v, list) {
+  const item = document.createElement('div');
+  item.className = 'video-item';
+  item.dataset.num = v.num;
+  item.dataset.title = v.title.toLowerCase();
+
+  const imgId = assignments[v.num] || v.matches[0].id;
+
+  const num = document.createElement('span');
+  num.className = 'video-num';
+  num.textContent = v.num;
+
+  const thumb = document.createElement('img');
+  thumb.className = 'video-thumb';
+  thumb.src = `${API}/img/${imgId}`;
+  thumb.alt = '';
+  thumb.loading = 'lazy';
+  thumb.onerror = function() { this.outerHTML = '<div class="video-thumb empty">?</div>'; };
+
+  const title = document.createElement('span');
+  title.className = 'video-title';
+  title.textContent = v.title;
+
+  const clearBtn = document.createElement('span');
+  clearBtn.className = 'clear-btn';
+  clearBtn.textContent = '✕';
+  clearBtn.title = 'Remove assignment';
+  clearBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    delete assignments[v.num];
+    dirty = true;
+    renderVideoItem(v, list);
+    updateStats();
+  });
+
+  const updateAssigned = () => {
+    item.classList.toggle('assigned', !!assignments[v.num]);
+    const newImgId = assignments[v.num] || v.matches[0].id;
+    thumb.src = `${API}/img/${newImgId}`;
+  };
+
+  item.addEventListener('click', () => {
+    if (!selectedImageId) return;
+    assignments[v.num] = selectedImageId;
+    dirty = true;
+    updateAssigned();
+    updateStats();
+    document.getElementById('saveStatus').textContent = 'Unsaved changes';
+    document.getElementById('selectedIndicator').classList.remove('show');
+  });
+
+  if (assignments[v.num]) {
+    item.classList.add('assigned');
+  }
+
+  item.innerHTML = '';
+  item.appendChild(num);
+  item.appendChild(thumb);
+  item.appendChild(title);
+  item.appendChild(clearBtn);
+  list.appendChild(item);
+}
+
+function updateStats() {
+  const count = Object.keys(assignments).length;
+  document.getElementById('stats').textContent = `${count} / 56 assigned`;
+}
+
+function filterImages() {
+  const q = document.getElementById('imageSearch').value.toLowerCase();
+  document.querySelectorAll('.image-cell').forEach(cell => {
+    const id = cell.dataset.id;
+    const title = cell.title.toLowerCase();
+    cell.style.display = (!q || title.includes(q) || id.includes(q)) ? '' : 'none';
+  });
+}
+
+function filterVideos() {
+  const q = document.getElementById('videoSearch').value.toLowerCase();
+  document.querySelectorAll('.video-item').forEach(item => {
+    item.style.display = (!q || item.dataset.title.includes(q)) ? '' : 'none';
+  });
+}
+
+async function save() {
+  if (!dirty) return;
+  const btn = document.getElementById('saveBtn');
+  const status = document.getElementById('saveStatus');
+  btn.disabled = true;
+  status.textContent = 'Saving...';
+  try {
+    const res = await fetch(`${API}/api/save-assignments`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(assignments),
+    });
+    if (!res.ok) throw new Error('Save failed');
+    dirty = false;
+    status.textContent = 'Saved ✓';
+    setTimeout(() => { status.textContent = ''; }, 2000);
+  } catch(e) {
+    status.textContent = `Error: ${e.message}`;
+  } finally {
+    btn.disabled = false;
+  }
+}
+
+load();
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+{
+  "co_id": "co:uno_therapy2_t726_t748_fragile_anx_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy2_t726_t748_fragile_anxiety_regulation",
+  "turn_index": 0,
+  "lineage": "Therapeutic",
+  "student_state": "engaged",
+  "behavior_tags": [
+    "compliance"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_04",
+    "function_name": "RM_04",
+    "mechanism_shape": "NONE",
+    "teaching_actions": [
+      "checks_symptom"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.62,
+      "attunement": 0.8,
+      "style": 0.15,
+      "depth": 0.38,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_03",
+      "style_discrete": "LS_01",
+      "depth_discrete": "PD_02",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "'Yes, but not as much.'—student presents as engaged. Teacher's move uses none: 'Are you feeling like throwing up now?  You are feeling intense an'. Strategy: checks symptom. Hypothesis: none mechanism will create ask_deeper_question. Watching how student responds to this intervention.",
+  "accumulated_insight": "T1: Student says 'Yes, but not as much.' showing engaged via compliance. Teacher responds 'Are you feeling like throwing up now?  You are feeling intense an' using none to checks symptom. Opening REMAKING move addresses engaged. Predicting ask_deeper_question because none interventions typically produce this response pattern.",
+  "abstract_pattern": "",
+  "visible_response": "Are you feeling like throwing up now?\n\nYou are feeling intense anxiety here today.",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

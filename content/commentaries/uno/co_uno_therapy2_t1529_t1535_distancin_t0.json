@@ -1,0 +1,55 @@
+{
+  "co_id": "co:uno_therapy2_t1529_t1535_distancin_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy2_t1529_t1535_distancing_window",
+  "turn_index": 0,
+  "lineage": "Therapeutic",
+  "student_state": "ambivalent_compliance",
+  "behavior_tags": [
+    "incongruence",
+    "diffidence"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_04",
+    "function_name": "UM_04",
+    "mechanism_shape": "NONE",
+    "teaching_actions": [
+      "mirrors_tone",
+      "challenges_congruence"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.15,
+      "depth": 0.38,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_01",
+      "depth_discrete": "PD_02",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "no_clear_effect",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "'Sure. [Defense: Said in a diffident tone of voice.]'—student presents as ambivalent compliance. Teacher's move uses embodied_contradiction: 'You don’t sound sure.'. Strategy: mirrors tone, challenges congruence. Hypothesis: embodied_contradiction mechanism will create no_clear_effect. Watching how student responds to this intervention.",
+  "accumulated_insight": "T1: Student says 'Sure. [Defense: Said in a diffident tone of voice.]' showing ambivalent_compliance via incongruence, diffidence. Teacher responds 'You don’t sound sure.' using embodied_contradiction to mirrors tone, challenges congruence. Opening UNMAKING move addresses ambivalent_compliance. Predicting no_clear_effect because embodied_contradiction interventions typically produce this response pattern.",
+  "abstract_pattern": "",
+  "visible_response": "You don’t sound sure.",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

@@ -1,0 +1,55 @@
+{
+  "co_id": "co:uno_therapy2_t1740_t1746_denial_de_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy2_t1740_t1746_denial_deed_jennifer",
+  "turn_index": 0,
+  "lineage": "Therapeutic",
+  "student_state": "indignant_confusion",
+  "behavior_tags": [
+    "shock",
+    "denial"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_04",
+    "function_name": "UM_04",
+    "mechanism_shape": "NONE",
+    "teaching_actions": [
+      "states_fact",
+      "removes_emotion"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.15,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_01",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "no_clear_effect",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "'She comes to the front door... curses at me, throws a glass of wa'—student presents as indignant confusion. Teacher's move uses none: 'You visited a woman who said she didn’t want to see you again.'. Strategy: states fact, removes emotion. Hypothesis: none mechanism will create no_clear_effect. Watching how student responds to this intervention.",
+  "accumulated_insight": "T1: Student says 'She comes to the front door... curses at me, throws a glass of wa' showing indignant_confusion via shock, denial. Teacher responds 'You visited a woman who said she didn’t want to see you again.' using none to states fact, removes emotion. Opening UNMAKING move addresses indignant_confusion. Predicting no_clear_effect because none interventions typically produce this response pattern.",
+  "abstract_pattern": "",
+  "visible_response": "You visited a woman who said she didn’t want to see you again.",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

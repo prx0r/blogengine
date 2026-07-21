@@ -1,0 +1,49 @@
+{
+  "work_id": "work:t2-pubmed-visual-motion-perception-as-online-hierarchical-inference",
+  "schema_version": 2,
+  "title": "Visual motion perception as online hierarchical inference.",
+  "authors": [
+    {
+      "name": "Bill J"
+    },
+    {
+      "name": "Gershman SJ"
+    },
+    {
+      "name": "Drugowitsch J"
+    }
+  ],
+  "publication": {
+    "year": 2022,
+    "journal": "Nat Commun",
+    "source": "PubMed/MEDLINE",
+    "language": "en"
+  },
+  "identifiers": {
+    "pmid": "36456546",
+    "doi": "10.1038/s41467-022-34805-5"
+  },
+  "topics": [
+    "phase-6-dependent-arising",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "assets": {
+    "pdf_path": "t2-9715570-visual-motion-perception-as-online-hierarchical-inference.pdf",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/36456546/",
+    "abstract": "Identifying the structure of motion relations in the environment is critical for navigation, tracking, prediction, and pursuit. Yet, little is known about the mental and neural computations that allow the visual system to infer this structure online from a volatile stream of visual information. We propose online hierarchical Bayesian inference as a principled solution for how the brain might solve this complex perceptual task. We derive an online Expectation-Maximization algorithm that explains "
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_alt17_acquisition",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 6,
+    "phase_name": "Dependent-arising",
+    "bridge_rationale": "Bridge paper score=10.5: links Dependent-arising concept to mechanistic neuroscience"
+  },
+  "evaluation": "Score 10: Excellent bridge signal",
+  "tier": 2
+}

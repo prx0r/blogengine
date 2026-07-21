@@ -1,0 +1,43 @@
+{
+  "work_id": "work:t2-pubmed-dangerous-phase",
+  "schema_version": 2,
+  "title": "Dangerous phase.",
+  "authors": [
+    {
+      "name": "Schiff SJ"
+    }
+  ],
+  "publication": {
+    "year": 2005,
+    "journal": "Neuroinformatics",
+    "source": "PubMed/MEDLINE",
+    "language": "en"
+  },
+  "identifiers": {
+    "pmid": "16284414",
+    "doi": "10.1385/NI:3:4:315"
+  },
+  "topics": [
+    "phase-9-language-mantra",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "assets": {
+    "pdf_path": null,
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/16284414/",
+    "abstract": "\"Use a quiet reference.\" How many times have we heard this mantra during training or practice, interpreting electroencephalogram (EEG) tracings, or implanting intracranial electrodes? How many of us have used common reference EEG for synchrony studies in recent years? Far too many.Perhaps one source of this problem is the number 104. This is the relatively small number of citations to the reference Fein et al. (1988), which should have put to rest any further use of referential EEG for coherence"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_alt17_acquisition",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 9,
+    "phase_name": "Language/Mantra",
+    "bridge_rationale": "Bridge paper score=9.0: links Language/Mantra concept to mechanistic neuroscience"
+  },
+  "evaluation": "Score 9: Good bridge signal",
+  "tier": 2
+}

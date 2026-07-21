@@ -1,0 +1,502 @@
+{
+  "ro_id": "ro:daimon-guidance",
+  "schema_version": 1,
+  "title": "The Daimon as Guide: A Cross-Tradition Synthesis",
+  "subtitle": "From the Platonic daimonion to the Holy Guardian Angel \u2014 methods, theory, and practice of daimon contact",
+  "family": "topic-across-thinkers",
+  "status": "converted_to_co",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "A comprehensive compilation of daimon contact theory and practice across Platonic, Hermetic, Sufi, Thelemic, and modern practitioner traditions.",
+    "scope": "Covers primary sources (PGM, Plato, Plotinus, Proclus, Iamblichus), grimoire traditions (Abramelin, Liber Samekh), Sufi/Illuminationist (Suhrawardi, Corbin), modern practice (Frater Acher), and scholarship (Dodds, Greenfield).",
+    "traditions": [
+      "platonism",
+      "neoplatonism",
+      "hermetica",
+      "sufism",
+      "occult",
+      "thelema"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "pgm-vii-505-528",
+      "tier": 1,
+      "label": "PGM VII.505-528 \u2014 Meeting with Your Own Daimon",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "systasis_ritual",
+        "direct_contact",
+        "egg_ritual"
+      ],
+      "sections_affected": [
+        "practice",
+        "pgm"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "abramelin",
+      "tier": 1,
+      "label": "The Book of the Sacred Magic of Abramelin the Mage (Mathers trans., 1900; Dehn trans., 2015)",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "six_month_retreat",
+        "hga_contact",
+        "magic_squares"
+      ],
+      "sections_affected": [
+        "practice",
+        "grimoire"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "liber-samekh",
+      "tier": 1,
+      "label": "Liber Samekh (Crowley) \u2014 Theurgia Goetia Summa Congressus Cum Daemone",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "elemental_invocation",
+        "barbarous_names",
+        "the_union"
+      ],
+      "sections_affected": [
+        "practice",
+        "thelema"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "acher-holy-daimon",
+      "tier": 1,
+      "label": "Frater Acher \u2014 The Holy Daimon (2018)",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "four_stages",
+        "saturn_retreat",
+        "systasis_restoration",
+        "practical_method"
+      ],
+      "sections_affected": [
+        "practice",
+        "modern",
+        "pgm"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "plotinus-enneads-3-4",
+      "tier": 1,
+      "label": "Plotinus \u2014 Enneads III.4 (On Our Allotted Daimon)",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "daimon_as_function",
+        "undescended_soul",
+        "evolution_of_daimon"
+      ],
+      "sections_affected": [
+        "theory",
+        "platonism"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "proclus-in-tim",
+      "tier": 1,
+      "label": "Proclus \u2014 Commentary on Plato's Timaeus (daimon passages)",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "daimonic_hierarchy",
+        "threefold_order",
+        "operational_layer"
+      ],
+      "sections_affected": [
+        "theory",
+        "platonism"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "proclus-in-remp",
+      "tier": 2,
+      "label": "Proclus \u2014 Commentary on Plato's Republic (Baltzly, Finamore, Miles eds.)",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "myth_of_er",
+        "daimon_as_fulfiller",
+        "apopl\u0113r\u014dt\u0113s"
+      ],
+      "sections_affected": [
+        "theory",
+        "choice_of_life"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "corbin-man-of-light",
+      "tier": 1,
+      "label": "Henry Corbin \u2014 The Man of Light in Iranian Sufism",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "perfect_nature",
+        "shakhs_nurani",
+        "guide_of_light",
+        "unus_ambo"
+      ],
+      "sections_affected": [
+        "theory",
+        "sufism",
+        "illumination"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "plutarch-genio-socratis",
+      "tier": 1,
+      "label": "Plutarch \u2014 De Genio Socratis",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "socratic_daimonion",
+        "discriminative_faculty",
+        "prohibition_only"
+      ],
+      "sections_affected": [
+        "theory",
+        "socrates"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "apuleius-de-deo-socratis",
+      "tier": 1,
+      "label": "Apuleius \u2014 De Deo Socratis",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "three_tier_daimonology",
+        "genere_loco_natura_medii"
+      ],
+      "sections_affected": [
+        "theory",
+        "classification"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "psellus-daemonibus",
+      "tier": 1,
+      "label": "Pseudo-Psellos \u2014 On the Operation of Daemons",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "elemental_classification",
+        "daimonic_media",
+        "byzantine_synthesis"
+      ],
+      "sections_affected": [
+        "theory",
+        "byzantine"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "iamblichus-mysteries",
+      "tier": 1,
+      "label": "Iamblichus \u2014 De Mysteriis",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "theurgic_contact",
+        "daimon_as_superior_being",
+        "ritual_necessity"
+      ],
+      "sections_affected": [
+        "theory",
+        "theurgy"
+      ],
+      "status": "active"
+    },
+    {
+      "source_id": "dodds-greeks-irrational",
+      "tier": 2,
+      "label": "E.R. Dodds \u2014 The Greeks and the Irrational (daimon chapter)",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "modern_scholarship",
+        "daimon_evolution",
+        "socrates_daimonion"
+      ],
+      "sections_affected": [
+        "theory",
+        "scholarship"
+      ],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "theory",
+      "subsection": "platonist_foundations",
+      "kind": "source",
+      "text": "[See daimoncontact.md \u00a71-2 for the complete synthesis of the Platonic daimon from Plato through Proclus. The core doctrine: the daimon is not a being but a function \u2014 the operational interface between the divine and the human. Proclus' key contribution (In Tim. I.6430-6440) is the threefold order: mortals, daimons, and gods, with daimons providing 'an escort for creation' and checking 'all error in the cosmos.']",
+      "source_ids": [
+        "plotinus-enneads-3-4",
+        "proclus-in-tim",
+        "proclus-in-remp"
+      ],
+      "topics": [
+        "platonism",
+        "daimonic_function",
+        "threefold_order"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "theory",
+      "subsection": "the_300_year_argument",
+      "kind": "source",
+      "text": "[See daimoncontact.md \u00a78. The debate between Plotinus (daimon as higher principle within), Porphyry (daimon as bypassable intellect), Iamblichus (daimon as superior being requiring ritual), and Proclus (synthesis via hierarchy) is documented. This is the intellectual spine of the entire daimon tradition.]",
+      "source_ids": [
+        "plotinus-enneads-3-4",
+        "iamblichus-mysteries",
+        "proclus-in-tim"
+      ],
+      "topics": [
+        "debate",
+        "plotinus",
+        "iamblichus",
+        "proclus",
+        "porphyry"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "theory",
+      "subsection": "sufi_guide_of_light",
+      "kind": "source",
+      "text": "[See daimoncontact.md \u00a77. Corbin's Man of Light tradition provides the third pole of the synthesis: the daimon as Perfect Nature (Tabiat-e Tammah), the celestial Witness (shahid), the unus-ambo formula 1x1. The Guide is not a double/Doppelganger but a shadowless person of light.]",
+      "source_ids": [
+        "corbin-man-of-light"
+      ],
+      "topics": [
+        "sufism",
+        "perfect_nature",
+        "guide_of_light"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "practice",
+      "subsection": "abramelin_method",
+      "kind": "source",
+      "text": "[See daimoncontact.md \u00a73 for the complete Abramelin method: 6-month retreat, graduated purification, the three-day HGA contact sequence, the Uriel and Adam magic squares. This is the longest and most thorough preparation method in the Western tradition.]",
+      "source_ids": [
+        "abramelin"
+      ],
+      "topics": [
+        "abramelin",
+        "six_month_retreat",
+        "hga_contact"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "practice",
+      "subsection": "liber_samekh_invocation",
+      "kind": "source",
+      "text": "[See daimoncontact.md \u00a74 for the Liber Samekh structure: the barbarous names with Qabalistic paraphrases, the elemental sequence, the shaft-of-will vibration method, the resistance-and-union technique, and the 'Invoke Often' formula.]",
+      "source_ids": [
+        "liber-samekh"
+      ],
+      "topics": [
+        "thelema",
+        "elemental_invocation",
+        "barbarous_names"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_006",
+      "section": "practice",
+      "subsection": "acher_four_stages",
+      "kind": "source",
+      "text": "[See daimoncontact.md \u00a75 for Frater Acher's four-stage cyclical path: Trust (polarities), Joy (hitlahavut/singing), Darkness (Saturn retreat), Encounter (PGM systasis). This is the most accessible modern method and the recommended entry point.]",
+      "source_ids": [
+        "acher-holy-daimon"
+      ],
+      "topics": [
+        "modern_practice",
+        "four_stages",
+        "hitlahavut",
+        "systasis"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_007",
+      "section": "practice",
+      "subsection": "pgm_systasis_restored",
+      "kind": "source",
+      "text": "[See daimoncontact.md \u00a715 Phase 3 for the full restored PGM VII.505-528 systasis ritual adapted for use with an individual daimon name. The five stages: Skinning, Purifying (Helios egg), Charging, Inflaming, Communion.]",
+      "source_ids": [
+        "pgm-vii-505-528",
+        "acher-holy-daimon"
+      ],
+      "topics": [
+        "pgm",
+        "systasis",
+        "egg_ritual",
+        "daily_practice"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_008",
+      "section": "practice",
+      "subsection": "daily_regimen",
+      "kind": "source",
+      "text": "[See daimoncontact.md \u00a715 for the complete progressive regimen from Phase 0 (Name invocation) through Phase 4 (Integration). This is the unified daily/weekly/monthly practice drawn from all traditions.]",
+      "source_ids": [
+        "abramelin",
+        "liber-samekh",
+        "acher-holy-daimon",
+        "pgm-vii-505-528"
+      ],
+      "topics": [
+        "daily_practice",
+        "progressive_path",
+        "integration"
+      ],
+      "status": "placeholder"
+    }
+  ],
+  "coverage": {
+    "theory": {
+      "status": "comprehensive",
+      "sources": [
+        "plotinus-enneads-3-4",
+        "proclus-in-tim",
+        "proclus-in-remp",
+        "corbin-man-of-light",
+        "plutarch-genio-socratis",
+        "apuleius-de-deo-socratis",
+        "psellus-daemonibus",
+        "iamblichus-mysteries",
+        "dodds-greeks-irrational"
+      ],
+      "passage_count": 3,
+      "estimated_completeness": 0.85,
+      "gaps": [
+        "Primary source passages need extraction from PDFs \u2014 currently referencing daimoncontact.md synthesis only"
+      ]
+    },
+    "practice": {
+      "status": "comprehensive",
+      "sources": [
+        "pgm-vii-505-528",
+        "abramelin",
+        "liber-samekh",
+        "acher-holy-daimon"
+      ],
+      "passage_count": 5,
+      "estimated_completeness": 0.9,
+      "gaps": [
+        "Primary source passages need extraction from PDFs \u2014 currently referencing daimoncontact.md synthesis only"
+      ]
+    },
+    "pgm": {
+      "status": "good",
+      "sources": [
+        "pgm-vii-505-528"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 0.7,
+      "gaps": [
+        "Full PGM corpus references need cataloging \u2014 see pgm-catalog.json (150 spells)"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "placeholder",
+      "title": "All passages currently reference daimoncontact.md synthesis",
+      "description": "This RO is currently a meta-index that points to daimoncontact.md. Real passages need to be extracted from the primary PDFs and inserted as proper kind:source passages.",
+      "status": "open",
+      "created": "2026-07-13",
+      "auto_generated": true
+    },
+    {
+      "id": "issue-002",
+      "type": "coverage_gap",
+      "title": "Missing practical application examples from the Lemegeton/Goetia",
+      "description": "The Lemegeton contains material on commanding spirits that is relevant to the 'after contact' phase of daimon work. Not yet integrated.",
+      "status": "open",
+      "created": "2026-07-13",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-13",
+      "type": "initial",
+      "summary": "Initial RO created as a meta-index referencing daimoncontact.md. All 13 key sources documented. Practice path defined.",
+      "sources_added": [
+        "pgm-vii-505-528",
+        "abramelin",
+        "liber-samekh",
+        "acher-holy-daimon",
+        "plotinus-enneads-3-4",
+        "proclus-in-tim",
+        "proclus-in-remp",
+        "corbin-man-of-light",
+        "plutarch-genio-socratis",
+        "apuleius-de-deo-socratis",
+        "psellus-daemonibus",
+        "iamblichus-mysteries",
+        "dodds-greeks-irrational"
+      ],
+      "passage_count": 8,
+      "status": "draft"
+    }
+  ],
+  "appendices": [
+    {
+      "file": "scholarly-appendix.md",
+      "description": "Full scholarly apparatus: source map connecting every practice to its textual source, philosophy of subtraction vs addition, phase descriptions with Proclus apopl\u0113r\u014dt\u0113s, Synesius dream theory, Iamblichus prayer structure, Arbatel purification rules, Corbin unus-ambo, all collected prayers, cheatsheets, emergency grounding"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-07-13",
+      "event": "RO created in draft state as meta-index of daimoncontact.md synthesis",
+      "sources_total": 13,
+      "passages_total": 8
+    }
+  ],
+  "notes": "Converted to co:daimon-guidance on 2026-07-20",
+  "outputs": [
+    {
+      "type": "converted_to_co",
+      "co_id": "co:daimon-guidance",
+      "date": "2026-07-20"
+    }
+  ]
+}

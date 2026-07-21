@@ -1,0 +1,57 @@
+{
+  "co_id": "co:uno_therapy3_t85_t94_character_def_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3_t85_t94_character_defense_concrete_labeling",
+  "turn_index": 0,
+  "lineage": "Therapeutic",
+  "student_state": "dismissive_avoidance",
+  "behavior_tags": [
+    "represion",
+    "minimization"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_03",
+    "function_name": "UM_03",
+    "mechanism_shape": "NONE",
+    "teaching_actions": [
+      "lists_concrete_details",
+      "identifies_self_neglect"
+    ],
+    "traps_avoided": [
+      "vagueness"
+    ],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.62,
+      "attunement": 0.5,
+      "style": 0.15,
+      "depth": 0.38,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_01",
+      "depth_discrete": "PD_02",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "no_clear_effect",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "'I just forget about it'—that's minimization via amnesia. Not 'it didn't hurt' but 'I forget.' Teacher makes concrete: labels WHAT is being forgotten (hit, bruise). This removes abstraction. Can't vaguely 'forget about it' when teacher names 'the hit' and 'the bruised lip.' Concrete details make forgetting visible as active defense, not passive memory failure. Hypothesis: they'll minimize further ('it's no big deal') rather than examine the forgetting. Testing if concrete labeling creates awareness.",
+  "accumulated_insight": "T1: Student minimizes: 'I just forget about it'—uses forgetting as defense against abuse (hit, bruised lip). Teacher makes concrete: 'You forget about the hit. You forget about the bruised lip.' Repeats specific details student is forgetting. This is character defense labeling: making abstract defense (forgetting) concrete by naming what's being forgotten. Predicting no_clear_effect because minimizers typically continue minimizing when confronted.",
+  "abstract_pattern": "",
+  "visible_response": "You forget about the hit.\nYou forget about the bruised lip. You forget about the pain.\nDo you notice how you forget and ignore yourself and your feelings?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

@@ -1,0 +1,43 @@
+{
+  "work_id": "work:t2-pubmed-human-sexual-response",
+  "schema_version": 2,
+  "title": "Human sexual response.",
+  "authors": [
+    {
+      "name": "Basson R"
+    }
+  ],
+  "publication": {
+    "year": 2015,
+    "journal": "Handb Clin Neurol",
+    "source": "PubMed/MEDLINE",
+    "language": "en"
+  },
+  "identifiers": {
+    "pmid": "26003236",
+    "doi": "10.1016/B978-0-444-63247-0.00002-X"
+  },
+  "topics": [
+    "phase-5-water-pleasure",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "assets": {
+    "pdf_path": null,
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/26003236/",
+    "abstract": "The human sexual response to sexually arousing stimuli is a motivational incentive-based cycle comprising subjective experience and physiologic changes. Clinical and empirical data support a circular model of overlapping phases of variable order. Brain imaging data of sexual arousal identify areas of cerebral activation and inhibition reflecting a complex network of cognitive, motivational, emotional, and autonomic components. Psychologic and biologic factors influence the brain's appraisal and "
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_alt17_acquisition",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 5,
+    "phase_name": "Water/Pleasure",
+    "bridge_rationale": "Bridge paper score=8.0: links Water/Pleasure concept to mechanistic neuroscience"
+  },
+  "evaluation": "Score 8: Good bridge signal",
+  "tier": 2
+}

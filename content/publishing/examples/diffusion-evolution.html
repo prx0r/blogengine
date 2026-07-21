@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diffusion Models are Evolutionary Algorithms</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.77/Tone.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --background-color: #000000;
+            --particle-color: #00FFFF;
+            --text-color: #E0E0E0;
+            --highlight-color: #00FFFF;
+            --ui-background: rgba(10, 10, 15, 0.5);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            font-family: 'JetBrains Mono', monospace;
+            cursor: pointer;
+        }
+        canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            filter: brightness(1.1);
+        }
+        .ui-element {
+            position: absolute;
+            background: var(--ui-background);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 255, 255, 0.15);
+            border-radius: 8px;
+            padding: 20px 25px;
+            opacity: 0;
+            transition: opacity 1.5s cubic-bezier(0.25, 1, 0.5, 1);
+            z-index: 10;
+        }
+        #subtitle {
+            bottom: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            max-width: 900px;
+            text-align: center;
+            font-size: clamp(16px, 1.8vw, 22px);
+            font-weight: 300;
+            line-height: 1.5;
+        }
+        #equation {
+            top: 4%;
+            right: 3%;
+            font-size: clamp(12px, 1.2vw, 15px);
+            line-height: 1.6;
+            text-align: left;
+        }
+        .highlight {
+            color: var(--highlight-color);
+            text-shadow: 0 0 8px rgba(0, 255, 255, 0.5);
+        }
+        .sub-text {
+            font-size: 0.8em;
+            opacity: 0.7;
+            margin-top: 8px;
+            display: block;
+        }
+        #start-prompt {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: 18px;
+            font-weight: 300;
+            opacity: 1;
+            transition: opacity 1s ease;
+            z-index: 20;
+        }
+        #start-prompt .sub {
+            font-size: 14px;
+            opacity: 0.6;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="main-canvas"></canvas>
+
+    <div id="start-prompt">
+        <div>Diffusion Models are Evolutionary Algorithms</div>
+        <div class="sub">Click to Begin Synthesis</div>
+    </div>
+
+    <div id="subtitle" class="ui-element"></div>
+    <div id="equation" class="ui-element"></div>
+
+    <script>
+        // --- CORE SETUP ---
+        const canvas = document.getElementById('main-canvas');
+        const ctx = canvas.getContext('2d');
+        const subtitleEl = document.getElementById('subtitle');
+        const equationEl = document.getElementById('equation');
+        const startPromptEl = document.getElementById('start-prompt');
+
+        let isStarted = false;
+        let startTime = 0;
+        let audioReady = false;
+        let audioComponents = {};
+
+        // --- NARRATIVE & TIMING ---
+        const TOTAL_DURATION = 45; // seconds
+        const NARRATIVE_PHASES = [
+            {
+                name: "High Entropy",
+                duration: 9,
+                subtitle: "In the beginning, there is only noise. A space of infinite, random possibilities.",
+                equation: `S = k ln(Ω)`,
+                equation_sub: "System at maximum entropy"
+            },
+            {
+                name: "Emergent Bias",
+                duration: 7,
+                subtitle: "But hidden within the noise is a landscape of fitness. An unseen structure.",
+                equation: `p(x_t|x_0) = N(x_t; sqrt(α_t)x_0, 1-α_t)`,
+                equation_sub: "Diffusion process defines a path"
+            },
+            {
+                name: "Denoising Path",
+                duration: 15,
+                subtitle: "A process begins to denoise the chaos, iteratively refining the population.",
+                equation: `x̂_0 = (1/Z) Σ g[f(x)] N(...)x`,
+                equation_sub: "Estimating optimal solutions via selection"
+            },
+            {
+                name: "Phase Transition",
+                duration: 10,
+                subtitle: "This denoising is evolution. Selection and mutation guiding chaos into order.",
+                equation: `x_{t-1} = sqrt(α_{t-1})x̂_0 + ...`,
+                equation_sub: "Evolution as an iterative denoising step"
+            },
+            {
+                name: "Optimal Solutions",
+                duration: 4,
+                subtitle: "Revealing multiple, perfect solutions. Two processes, one fundamental law.",
+                equation: `F ≈ 0`,
+                equation_sub: "Minimum Free Energy / Maximum Fitness"
+            },
+        ];
+
+        const PARTICLE_COUNT = 3000;
+        let particles = [];
+        let flowField = [];
+        const FLOW_RESOLUTION = 20;
+        let targetPoints = [];
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            initSimulation();
+        }
+
+        function initSimulation() {
+            particles = [];
+            for (let i = 0; i < PARTICLE_COUNT; i++) {
+                particles.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    vx: 0, vy: 0, history: []
+                });
+            }
+            const margin = 0.2 * Math.min(canvas.width, canvas.height);
+            targetPoints = [
+                { x: margin, y: margin },
+                { x: canvas.width - margin, y: margin },
+                { x: margin, y: canvas.height - margin },
+                { x: canvas.width - margin, y: canvas.height - margin },
+                { x: canvas.width / 2, y: canvas.height / 2 }
+            ];
+        }
+
+        function updateFlowField(time) {
+            const cols = Math.floor(canvas.width / FLOW_RESOLUTION);
+            const rows = Math.floor(canvas.height / FLOW_RESOLUTION);
+            const noiseScale = 0.02;
+            for (let y = 0; y < rows; y++) {
+                flowField[y] = [];
+                for (let x = 0; x < cols; x++) {
+                    const angle = noise(x * noiseScale, y * noiseScale, time * 0.1) * Math.PI * 2;
+                    flowField[y][x] = { x: Math.cos(angle), y: Math.sin(angle) };
+                }
+            }
+        }
+
+        let perlin;
+        function noise(x, y, z) {
+            if (!perlin) {
+                const p = new Uint8Array(512);
+                for(let i=0; i<256; i++) p[i] = p[i+256] = Math.floor(Math.random()*256);
+                const fade = t => t*t*t*(t*(t*6-15)+10);
+                const lerp = (a, b, t) => a + t*(b-a);
+                const grad = (hash, x, y, z) => {
+                    const h = hash & 15;
+                    const u = h < 8 ? x : y;
+                    const v = h < 4 ? y : h === 12 || h === 14 ? x : z;
+                    return ((h&1) === 0 ? u : -u) + ((h&2) === 0 ? v : -v);
+                };
+                perlin = (x, y, z) => {
+                    const X=Math.floor(x)&255, Y=Math.floor(y)&255, Z=Math.floor(z)&255;
+                    x-=Math.floor(x); y-=Math.floor(y); z-=Math.floor(z);
+                    const u=fade(x), v=fade(y), w=fade(z);
+                    const A=p[X]+Y, B=p[X+1]+Y;
+                    const AA=p[A]+Z, AB=p[A+1]+Z;
+                    const BA=p[B]+Z, BB=p[B+1]+Z;
+                    return lerp(w,
+                        lerp(v, lerp(u, grad(p[AA], x, y, z), grad(p[BA], x-1, y, z)), lerp(u, grad(p[AB], x, y-1, z), grad(p[BB], x-1, y-1, z))),
+                        lerp(v, lerp(u, grad(p[AA+1], x, y, z-1), grad(p[BA+1], x-1, y, z-1)), lerp(u, grad(p[AB+1], x, y-1, z-1), grad(p[BB+1], x-1, y-1, z-1)))
+                    );
+                };
+            }
+            return perlin(x, y, z);
+        }
+
+        function initAudio() {
+            if (audioReady) return;
+            Tone.start();
+            const noise = new Tone.Noise("white").start();
+            const noiseFilter = new Tone.AutoFilter({ frequency: "8n", baseFrequency: 100, octaves: 4 }).toDestination();
+            noise.connect(noiseFilter);
+            noise.volume.value = -40;
+            const drone = new Tone.Oscillator(80, "sine").toDestination();
+            drone.volume.value = -Infinity;
+            drone.start();
+            const pingSynth = new Tone.PluckSynth({ attackNoise: 0.5, dampening: 8000, resonance: 0.98 });
+            const pingDelay = new Tone.PingPongDelay("8n", 0.4).toDestination();
+            pingSynth.connect(pingDelay);
+            pingSynth.volume.value = -12;
+            const chordSynth = new Tone.PolySynth(Tone.Synth, {
+                oscillator: { type: "fatsawtooth" },
+                envelope: { attack: 2, decay: 1, sustain: 0.8, release: 4 }
+            }).toDestination();
+            chordSynth.volume.value = -22;
+            audioComponents = { noise, noiseFilter, drone, pingSynth, chordSynth };
+            audioReady = true;
+        }
+
+        function draw(time) {
+            if (!isStarted) return;
+            const elapsed = (time - startTime) / 1000;
+            const loopTime = elapsed % TOTAL_DURATION;
+
+            let currentPhaseIndex = 0;
+            let accumulatedTime = 0;
+            let phaseProgress = 0;
+            for (let i = 0; i < NARRATIVE_PHASES.length; i++) {
+                const phaseDuration = NARRATIVE_PHASES[i].duration;
+                if (loopTime < accumulatedTime + phaseDuration) {
+                    currentPhaseIndex = i;
+                    phaseProgress = (loopTime - accumulatedTime) / phaseDuration;
+                    break;
+                }
+                accumulatedTime += phaseDuration;
+            }
+            const phase = NARRATIVE_PHASES[currentPhaseIndex];
+
+            if (subtitleEl.textContent !== phase.subtitle) {
+                subtitleEl.style.opacity = 0;
+                equationEl.style.opacity = 0;
+                setTimeout(() => {
+                    subtitleEl.innerHTML = phase.subtitle;
+                    equationEl.innerHTML = `<span class="highlight">${phase.equation}</span><span class="sub-text">${phase.equation_sub}</span>`;
+                    subtitleEl.style.opacity = 1;
+                    equationEl.style.opacity = 1;
+                }, 800);
+            }
+
+            if(audioReady) {
+                const droneVolume = -40 + Math.max(0, currentPhaseIndex - 1) * 8;
+                audioComponents.drone.volume.linearRampTo(droneVolume, 0.5);
+                if (currentPhaseIndex === 2 && Math.random() < 0.05) {
+                    audioComponents.pingSynth.triggerAttack("C5", Tone.now());
+                }
+                if (currentPhaseIndex === 3 && loopTime > accumulatedTime && loopTime < accumulatedTime + 0.5) {
+                    audioComponents.chordSynth.triggerAttackRelease(["C4", "G4", "Eb5"], "8n");
+                }
+            }
+
+            updateFlowField(loopTime);
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            const easeInOutCubic = t => t < .5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
+            let chaosFactor = 1.0, flowFactor = 0, crystalFactor = 0;
+            if (currentPhaseIndex === 0) chaosFactor = 1.0;
+            else if (currentPhaseIndex === 1) { chaosFactor = 1.0 - phaseProgress; flowFactor = easeInOutCubic(phaseProgress) * 0.2; }
+            else if (currentPhaseIndex === 2) flowFactor = 0.2 + easeInOutCubic(phaseProgress) * 0.8;
+            else if (currentPhaseIndex === 3) { flowFactor = 1.0; crystalFactor = Math.pow(phaseProgress, 4); }
+            else { flowFactor = 1.0; crystalFactor = 1.0; }
+
+            particles.forEach(p => {
+                let closestDist = Infinity, target = null;
+                targetPoints.forEach(tp => {
+                    const d = Math.hypot(p.x - tp.x, p.y - tp.y);
+                    if (d < closestDist) { closestDist = d; target = tp; }
+                });
+                p.vx += (Math.random() - 0.5) * 0.5 * chaosFactor;
+                p.vy += (Math.random() - 0.5) * 0.5 * chaosFactor;
+                const col = Math.floor(p.x / FLOW_RESOLUTION);
+                const row = Math.floor(p.y / FLOW_RESOLUTION);
+                if (flowField[row] && flowField[row][col]) {
+                    const force = flowField[row][col];
+                    p.vx += force.x * 0.1 * flowFactor;
+                    p.vy += force.y * 0.1 * flowFactor;
+                }
+                if (crystalFactor > 0 && target) {
+                    p.vx += (target.x - p.x) * 0.005 * crystalFactor;
+                    p.vy += (target.y - p.y) * 0.005 * crystalFactor;
+                }
+                p.vx *= 0.96; p.vy *= 0.96;
+                p.x += p.vx; p.y += p.vy;
+                p.history.push({x: p.x, y: p.y});
+                if(p.history.length > 5) p.history.shift();
+                if (p.x < 0) p.x = canvas.width; if (p.x > canvas.width) p.x = 0;
+                if (p.y < 0) p.y = canvas.height; if (p.y > canvas.height) p.y = 0;
+            });
+
+            ctx.beginPath();
+            particles.forEach(p => { ctx.moveTo(p.x, p.y); ctx.arc(p.x, p.y, 0.7, 0, Math.PI * 2); });
+            ctx.fillStyle = `rgba(0, 255, 255, 0.9)`;
+            ctx.fill();
+
+            if (flowFactor > 0.5) {
+                particles.forEach(p => {
+                    ctx.beginPath();
+                    if(p.history.length > 1) { ctx.moveTo(p.history[0].x, p.history[0].y); for(let i=1;i<p.history.length;i++) ctx.lineTo(p.history[i].x, p.history[i].y); }
+                    ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 * flowFactor})`;
+                    ctx.stroke();
+                });
+            }
+            requestAnimationFrame(draw);
+        }
+
+        function startExperience() {
+            if (isStarted) return;
+            isStarted = true;
+            startTime = performance.now();
+            startPromptEl.style.opacity = '0';
+            setTimeout(() => startPromptEl.style.display = 'none', 1000);
+            initAudio();
+            requestAnimationFrame(draw);
+        }
+
+        window.addEventListener('resize', resizeCanvas);
+        document.body.addEventListener('click', startExperience);
+        document.body.addEventListener('keydown', (e) => { if (e.code === 'Space') startExperience(); });
+        window.onload = () => { resizeCanvas(); };
+    </script>
+</body>
+</html>

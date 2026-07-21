@@ -1,0 +1,61 @@
+{
+  "co_id": "co:uno_gurdjeff1_t1380_t1408_imaginat_t1",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gurdjeff1_t1380_t1408_imagination_memory_negative_moods_suffering",
+  "turn_index": 1,
+  "lineage": "Gurdjieffian",
+  "student_state": "misattributing_causality",
+  "behavior_tags": [
+    "offers_empirical_observation",
+    "proposes_causal_link"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_03",
+    "function_name": "RM_03",
+    "mechanism_shape": "SUBJECT_OBJECT_INVERSION",
+    "teaching_actions": [
+      "reverses_causality",
+      "defines_memory_functionally",
+      "asserts_memory_impartiality"
+    ],
+    "traps_avoided": [
+      "causal_fixation"
+    ],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.5,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "request_clarification",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The reversal works: memory = impartial supply (not source), supplies material for whatever you want. The student proposed memory as source (misattributing causality), which shows they understand: memory = source (causal link). They'll likely ask about mechanical status next.",
+  "accumulated_insight": "T2: Student proposed memory as source ('I notice that imagining seems to take place in memory, going from one association to another. Is this a correct observation?')—misattributing causality via offers empirical observation and proposes causal link. They understand: memory = source (causal link). The subject_object_inversion mechanism reverses: memory = impartial supply (not source), supplies material for whatever you want ('Memory by itself is not responsible for anything. Memory is impartial; it supplies material for whatever you want. You may want it for serious thinking, imagination, expression of negative emotions and so on'). Pattern: difficulty admission → self-calibrating method → memory question → reversal → [next: mechanical question]. They're grasping: memory = supply (not source), impartial (reversal).",
+  "abstract_pattern": "",
+  "visible_response": "No. Memory by itself is not responsible for anything. Memory is impartial; it\nsupplies material for whatever you want.\nYou may want it for serious thinking,\nimagination, expression of negative emotions and so on.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:sufi-comparative-analysis",
+    "ro:steiner-tantraloka-parallels"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

@@ -1,0 +1,59 @@
+{
+  "co_id": "co:uno_gorgias_ep019_judgment_of_soul_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gorgias_ep019_judgment_of_souls",
+  "turn_index": 0,
+  "lineage": "Socratic",
+  "student_state": "resist_intellectually",
+  "behavior_tags": [
+    "dismisses_as_myth"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_05",
+    "function_name": "RM_05",
+    "mechanism_shape": "SYSTEM_DYNAMICS",
+    "teaching_actions": [
+      "justifies_method"
+    ],
+    "traps_avoided": [
+      "category_conflation"
+    ],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.62,
+      "attunement": 0.8,
+      "style": 0.5,
+      "depth": 0.62,
+      "meta_mode": 0.75,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_03",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_03",
+      "meta_mode_discrete": "MM_02"
+    },
+    "predicted_impact": "request_clarification",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "Need to show the myth's role: encode consequences to shape action. Expect a ?what do you mean?? once I link myth to moral cause-effect.",
+  "accumulated_insight": "T1: Student dismisses ('That's just myth-making')?resist_intellectually via dismisses_as_myth. They understand: see myth as fiction, not pedagogy. System_dynamics/RM_05 reframes: myth as model of consequences/justice. Pattern: dismissal ? reframing queued. Confidence medium because reframing often draws a clarification request.",
+  "abstract_pattern": "",
+  "visible_response": "Myths teach truths the arrogant cannot hear plainly.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:proclus-elements",
+    "ro:platonism-decoded",
+    "ro:chaldean-oracles"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

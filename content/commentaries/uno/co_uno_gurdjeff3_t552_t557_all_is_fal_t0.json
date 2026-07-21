@@ -1,0 +1,60 @@
+{
+  "co_id": "co:uno_gurdjeff3_t552_t557_all_is_fal_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gurdjeff3_t552_t557_all_is_false",
+  "turn_index": 0,
+  "lineage": "Gurdjieffian",
+  "student_state": "seeking_to_salvage_real_parts",
+  "behavior_tags": [
+    "asks_for_sorting_method",
+    "seeks_distinction"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_05",
+    "function_name": "UM_05",
+    "mechanism_shape": "CONSTRAINT_COLLAPSE",
+    "teaching_actions": [
+      "reverses_protocol",
+      "asserts_total_negation",
+      "states_necessary_precondition",
+      "gives_first_instruction"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.62,
+      "attunement": 0.5,
+      "style": 0.65,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_04",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The reversal/total negation works: protocol (cannot separate, all false personality), asserts: total negation (all false personality, no real parts), states: necessary precondition (must accept all false before salvaging), gives: first instruction. The student asks sorting question (seeking to salvage real parts), which shows they understand: real vs. false personality = separable (sorting). They'll likely accept the reversal/total negation. Single-turn episode: sorting question → reversal/total negation → complete. Hypothesis: total negations lead to compliance in single-turn episodes—testable by tracking whether total negations end episodes.",
+  "accumulated_insight": "T1: Student asks sorting question ('In considering likes and dislikes, how can one separate what is real and what is false personality?')—seeking to salvage real parts via asks for sorting method and seeks distinction. They understand: real vs. false personality = separable (sorting). The constraint_collapse mechanism reverses: protocol (cannot separate, all false personality), asserts: total negation (all false personality, no real parts), states: necessary precondition (must accept all false before salvaging), gives: first instruction. Pattern: sorting question → reversal/total negation → [complete]. Low confidence because total negations can lead to deeper questions or compliance.",
+  "abstract_pattern": "",
+  "visible_response": "Start by realizing that it is all false personality, and then try to find out\nwhat is not.\nYou cannot do the second before the first. First you must\nunderstand that all is false personality, and when you become convinced\nof that, you may find what is 'yourself'.\nGo on observing. Work begins\nfrom the moment one realizes that one is not.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:sufi-comparative-analysis",
+    "ro:steiner-tantraloka-parallels"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

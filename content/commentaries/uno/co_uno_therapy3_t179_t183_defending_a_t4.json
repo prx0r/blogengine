@@ -1,0 +1,54 @@
+{
+  "co_id": "co:uno_therapy3_t179_t183_defending_a_t4",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3_t179_t183_defending_against_abuse",
+  "turn_index": 4,
+  "lineage": "Therapeutic",
+  "student_state": "agreement",
+  "behavior_tags": [
+    "insight"
+  ],
+  "pedagogy": {
+    "phase": "SELF-MAKING",
+    "function_id": "SM_04",
+    "function_name": "SM_04",
+    "mechanism_shape": "NONE",
+    "teaching_actions": [
+      "offers_choice",
+      "mobilizes_agency"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.62,
+      "attunement": 0.8,
+      "style": 0.15,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_03",
+      "style_discrete": "LS_01",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "no_clear_effect",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "'I could defend myself now?'—tentative but considering it. Five turns: defended him, acknowledged hurt, got permission, now considering action. Teacher's 'Yes' is simple authorization. Five-turn progression: excuse blocking → impact validation → defense authorization. Student moved from protecting abuser to protecting self. Major shift. Clean arc.",
+  "accumulated_insight": "T5 (Final): Student considers 'I could defend myself now?' Teacher confirms: 'Yes, you can defend yourself now.' Five-turn arc: defends abuser (T1-2) → admits hurt (T3) → questions past defense (T4) → considers future defense (T5). Teaching moved from blocking excuses to validating impact to authorizing self-defense. Student went from protecting abuser to considering protecting self.",
+  "abstract_pattern": "",
+  "visible_response": "You can torture yourself, or you could defend yourself against this torturous habit.\nWhat shall we do?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

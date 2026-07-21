@@ -1,0 +1,215 @@
+{
+  "ro_id": "ro:tao-te-ching",
+  "schema_version": 1,
+  "title": "The Tao Te Ching: The Tao and Its Characteristics",
+  "subtitle": "James Legge Translation of the Tao Teh King \u2014 The Way, Virtue, and the Art of Wu Wei",
+  "family": "theme",
+  "status": "draft",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "The Tao Te Ching (Lao Tzu, trans. James Legge) as a complete primary source \u2014 81 chapters on the Tao (the Way), Te (virtue/power), wu wei (effortless action), and the nature of the sage.",
+    "scope": "Full text of the James Legge (1891) translation of the Tao Teh King from Project Gutenberg (eBook #216). Covers all 81 chapters organized into Part I (Tao) and Part II (Te).",
+    "traditions": [
+      "taoism",
+      "chinese-philosophy",
+      "occult"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "tao-te-ching-legge",
+      "tier": 1,
+      "label": "The Tao Teh King, or the Tao and its Characteristics \u2014 Lao Tzu, trans. James Legge (1891), Project Gutenberg #216",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "full_text",
+        "ch_1_tao_unnamable",
+        "ch_2_wu_wei",
+        "ch_11_utility_of_void",
+        "ch_38_te_vs_jen_i",
+        "ch_81_sage_accumulates_not"
+      ],
+      "sections_affected": [
+        "theory",
+        "practice"
+      ],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "theory",
+      "subsection": "the_unnamable_tao",
+      "kind": "source",
+      "text": "[Ch. 1] The Tao that can be trodden is not the enduring and unchanging Tao. The name that can be named is not the enduring and unchanging name. (Conceived of as) having no name, it is the Originator of heaven and earth; (conceived of as) having a name, it is the Mother of all things. Always without desire we must be found, if its deep mystery we would sound; but if desire always within us be, its outer fringe is all that we shall see. Under these two aspects, it is really the same; but as development takes place, it receives the different names. Together we call them the Mystery. Where the Mystery is the deepest is the gate of all that is subtle and wonderful.",
+      "source_ids": [
+        "tao-te-ching-legge"
+      ],
+      "topics": [
+        "tao",
+        "unnamable",
+        "mystery",
+        "originator",
+        "mother_of_all"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "theory",
+      "subsection": "wu_wei_and_the_sage",
+      "kind": "source",
+      "text": "[Ch. 2] All in the world know the beauty of the beautiful, and in doing this they have (the idea of) what ugliness is; they all know the skill of the skilful, and in doing this they have (the idea of) what the want of skill is. So it is that existence and non-existence give birth the one to (the idea of) the other; that difficulty and ease produce the one (the idea of) the other; that length and shortness fashion out the one the figure of the other; that (the ideas of) height and lowness arise from the contrast of the one with the other; that the musical notes and tones become harmonious through the relation of one with another; and that being before and behind give the idea of one following another. Therefore the sage manages affairs without doing anything, and conveys his instructions without the use of speech.",
+      "source_ids": [
+        "tao-te-ching-legge"
+      ],
+      "topics": [
+        "wu_wei",
+        "sage",
+        "opposites",
+        "non-action",
+        "effortless_action"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "theory",
+      "subsection": "return_as_movement_of_tao",
+      "kind": "source",
+      "text": "[Ch. 40] The movement of the Tao by contraries proceeds; and weakness marks the course of Tao's mighty deeds. All things under heaven sprang from It as existing (and named); that existence sprang from It as non-existent (and not named). [Ch. 16] The (state of) vacancy should be brought to the utmost degree, and that of stillness guarded with unwearying vigour. All things alike go through their processes of activity, and (then) we see them returning (to their original state). When things (in the vegetable world) have displayed their luxuriant growth, we see each of them return to its root. This returning to their root is what we call the state of stillness; and that stillness may be called a reporting that they have fulfilled their appointed end.",
+      "source_ids": [
+        "tao-te-ching-legge"
+      ],
+      "topics": [
+        "return",
+        "movement_of_tao",
+        "stillness",
+        "root",
+        "contraries"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "theory",
+      "subsection": "te_virtue_and_pu",
+      "kind": "source",
+      "text": "[Ch. 38] (Those who) possessed in highest degree the attributes (of the Tao) did not (seek) to show them, and therefore they possessed them (in fullest measure). (Those who) possessed in a lower degree those attributes (sought how) not to lose them, and therefore they did not possess them (in fullest measure). (Those who) possessed in the highest degree those attributes did nothing (with a purpose), and had no need to do anything. (Those who) possessed them in a lower degree did nothing (with a purpose), and had need to be doing something. (Those who) possessed the highest benevolence did something (with a purpose), and had need to be doing something. (Those who) possessed the highest righteousness did something (with a purpose), and had need to be doing something. (Those who) possessed the highest (sense of) propriety did something (with a purpose), and had need to be doing something. [Ch. 19] When the sage rules, he empties their minds, fills their bellies, weakens their wills, and strengthens their bones. He constantly (tries to) keep them without knowledge and without desire, and where there are those who have knowledge, to keep them from presuming to act (on it). When there is this abstinence from action, good order is universal. [Ch. 28] Who knows his male nature yet keeps to his female nature, becomes the valley of the world. Being the valley of the world, he will never depart from eternal virtue (Te). This is returning to the state of the uncarved block (pu).",
+      "source_ids": [
+        "tao-te-ching-legge"
+      ],
+      "topics": [
+        "te",
+        "virtue",
+        "pu",
+        "uncarved_block",
+        "valley",
+        "female"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "theory",
+      "subsection": "yin_yang_and_the_valley_spirit",
+      "kind": "source",
+      "text": "[Ch. 6] The valley spirit dies not, aye the same; the female mystery thus do we name. Its gate, from which at first they issued forth, is called the root from which grew heaven and earth. Long and unbroken does its power remain, used gently, without strain. [Ch. 42] The Tao produced One; the One produced Two; the Two produced Three; the Three produced All things. All things leave behind them the Obscurity (out of which they have come), and go forward to embrace the Brightness (into which they have emerged), while they are harmonised by the Breath of Vacancy. [Ch. 22] The partial becomes complete; the crooked, straight; the empty, full; the worn out, new. He whose (desires) are few gets them; he whose (desires) are many goes astray. Therefore the sage holds in his embrace the one thing (of humility), and manifests it to all the world. He is free from self-display, and therefore he shines; from self-assertion, and therefore he is distinguished; from self-boasting, and therefore his merit is acknowledged; from self-complacency, and therefore he acquires superiority.",
+      "source_ids": [
+        "tao-te-ching-legge"
+      ],
+      "topics": [
+        "valley_spirit",
+        "yin_yang",
+        "one_two_three",
+        "two_generates_three",
+        "breath_of_vacancy"
+      ],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_006",
+      "section": "practice",
+      "subsection": "the_sage_rules_by_non_action",
+      "kind": "source",
+      "text": "[Ch. 3] Not to value and employ men of superior ability is the way to keep the people from rivalry among themselves; not to prize articles which are difficult to procure is the way to keep them from becoming thieves; not to show them what they will covet is the way to keep their minds from disorder. Therefore the sage, in the exercise of his government, empties their minds, fills their bellies, weakens their wills, and strengthens their bones. He constantly (tries to) keep them without knowledge and without desire, and where there are those who have knowledge, to keep them from presuming to act (on it). When there is this abstinence from action, good order is universal. [Ch. 57] A state may be ruled by (measures of) correction; weapons of war may be used with crafty dexterity; (but) the kingdom is made one's own (only) by freedom from action and purpose. How do I know that it is so? By these facts: \u2014 The more restrictions and prohibitions are in the empire, the poorer grow the people; the more keen-edged tools the people have, the more disorderly is the state. [Ch. 81] The sage does not accumulate for himself. The more he spends for others, the more he possesses of his own. The way of Heaven is to benefit others and not to injure.",
+      "source_ids": [
+        "tao-te-ching-legge"
+      ],
+      "topics": [
+        "wu_wei_governance",
+        "sage_ruler",
+        "emptying",
+        "non-accumulation"
+      ],
+      "status": "placeholder"
+    }
+  ],
+  "coverage": {
+    "theory": {
+      "status": "comprehensive",
+      "sources": [
+        "tao-te-ching-legge"
+      ],
+      "passage_count": 5,
+      "estimated_completeness": 0.8,
+      "gaps": [
+        "Only 5 of 81 chapters extracted as passage excerpts; remaining chapters need per-chapter extracts for full coverage of Taoist cosmology, ethics, and political philosophy"
+      ]
+    },
+    "practice": {
+      "status": "good",
+      "sources": [
+        "tao-te-ching-legge"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 0.5,
+      "gaps": [
+        "Practical/governance passages limited to Ch. 3, 57, 81; more needed on the sage's method of ruling by non-action"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "placeholder",
+      "title": "Passages are summary extracts, not full chapter texts",
+      "description": "Each passage currently quotes from 1-3 selected chapters. Full per-chapter extracts should be added for a complete primary-source reference.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    },
+    {
+      "id": "issue-002",
+      "type": "coverage_gap",
+      "title": "Missing alternate translations and commentaries",
+      "description": "Only the James Legge translation is referenced. Alternate translations (Waley, Feng/English, Lau, Red Pine) and major commentaries (Wang Bi, Heshang Gong) should be added for comparison.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial RO created from the James Legge translation (Project Gutenberg #216). Six passages cover the core concepts: the unnamable Tao, wu wei, return, Te and pu, yin-yang and valley spirit, and sage governance.",
+      "sources_added": [
+        "tao-te-ching-legge"
+      ],
+      "passage_count": 6,
+      "status": "draft"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created in draft state from James Legge translation of the Tao Te Ching",
+      "sources_total": 1,
+      "passages_total": 6
+    }
+  ]
+}

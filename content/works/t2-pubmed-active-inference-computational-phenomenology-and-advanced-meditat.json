@@ -1,0 +1,49 @@
+{
+  "work_id": "work:t2-pubmed-active-inference-computational-phenomenology-and-advanced-meditat",
+  "schema_version": 2,
+  "title": "Active inference, computational phenomenology, and advanced meditation: Toward the formalization of the experience of meditation.",
+  "authors": [
+    {
+      "name": "Tal, Hagar"
+    },
+    {
+      "name": "Wright, Malcolm"
+    },
+    {
+      "name": "Prest, Shawn"
+    },
+    {
+      "name": "Sandved-Smith, Lars"
+    },
+    {
+      "name": "Sacchet, Matthew D"
+    }
+  ],
+  "identifiers": {
+    "pmid": "41475512",
+    "doi": "10.1016/j.neubiorev.2025.106539"
+  },
+  "publication": {
+    "journal": "Neuroscience and biobehavioral reviews",
+    "year": ""
+  },
+  "abstract": "Computational phenomenology has emerged as a powerful framework for investigating advanced meditation states and stages, and meditative development and endpoints. Various models have been proposed to mechanistically explain the diverse experiences associated with these practices, including enhanced well-being, shifts in attentional control, the loosening or 'defabrication' of perceptual constructions, as well as minimal phenomenal experiences and transformative meditative endpoints such as cessations. However, these models have developed in disparate directions, and an integrative understanding of the underlying mechanisms remains elusive. This review examines how computational models attempt to account for the phenomenology of advanced meditation, with a particular focus on Active Inference as a modeling framework. We identify precision weighting, the confidence attributed to different model parameters, as a common mechanism across models, shaping experiential shifts. Furthermore, we observe a marked difference between early models, which emphasize top-down attentional modulation toward interoception or specific focus objects, and later models which center on layer-specific precision re-weighting within the meditator's hierarchical generative model and target more specific phenomenology. These differences arise from variations in the models' aims, scope, and definitions of contemplative practice. Despite increased interest in minimal phenomenal experience, related states and formal endpoints such as nonduality and cessations remain largely unaddressed. Few models tackle reported increases in cognitive flexibility and learning from meditation, while fundamental mechanisms behind informal practice and affective processes, and processes underlying compassion traditions, remain underexplored. Addressing these gaps is crucial for refining computational models of advanced meditation and informing our understanding of its cognitive, affective, and experiential effects.",
+  "phase_mapping": {
+    "phase": 6,
+    "phase_name": "Dependent-arising"
+  },
+  "bridge_tags": [
+    "predictive-processing",
+    "dependent-arising",
+    "causality",
+    "aif",
+    "advanced meditation",
+    "attention"
+  ],
+  "evaluation": "Quality pass v3 (score=15) \u2014 Dependent-arising bridge.",
+  "assets": {
+    "pdf_path": null,
+    "nxml_path": null
+  },
+  "tier": 2
+}

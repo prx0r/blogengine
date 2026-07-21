@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celestial Nocturne - Visual Tour</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Mono&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow: hidden; /* Prevent scrollbars */
+        }
+        canvas {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        .ui-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            pointer-events: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 1rem;
+        }
+        @media (min-width: 768px) {
+            .ui-container {
+                padding: 2rem;
+            }
+        }
+        .scene-title {
+            font-family: 'Space Mono', monospace;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            transition: opacity: 1.5s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+
+    <canvas id="fractalCanvas"></canvas>
+
+    <div class="ui-container">
+        <!-- Top Info -->
+        <div class="w-full max-w-lg">
+            <h1 class="text-3xl md:text-4xl font-bold text-white">Celestial Nocturne</h1>
+            <p class="mt-2 text-gray-300 text-sm md:text-base">A visual tour through emergent quantum fractal structures.</p>
+        </div>
+        <!-- Bottom Info -->
+        <div class="w-full text-right">
+            <h2 id="scene-title" class="scene-title text-xl md:text-2xl font-bold">Initializing...</h2>
+        </div>
+    </div>
+
+    <script>
+        // --- DOM ELEMENTS ---
+        const canvas = document.getElementById('fractalCanvas');
+        const ctx = canvas.getContext('2d');
+        const sceneTitle = document.getElementById('scene-title');
+
+        // --- GLOBAL STATE ---
+        let animationFrameId;
+        const pointsPerFrame = 20000;
+        let currentPoint = { x: 0, y: 0, z: 0 };
+        
+        let sceneIndex = 0;
+        let sceneStartTime = 0;
+
+        // --- 3D VECTOR MATH HELPERS ---
+        const V3 = {
+            create: (x = 0, y = 0, z = 0) => ({ x, y, z }),
+            add: (v1, v2) => ({ x: v1.x + v2.x, y: v1.y + v2.y, z: v1.z + v2.z }),
+            sub: (v1, v2) => ({ x: v1.x - v2.x, y: v1.y - v2.y, z: v1.z - v2.z }),
+            scale: (v, s) => ({ x: v.x * s, y: v.y * s, z: v.z * s }),
+            dot: (v1, v2) => v1.x * v2.x + v1.y * v2.y + v1.z * v2.z,
+            normSq: (v) => v.x*v.x + v.y*v.y + v.z*v.z,
+            normalize: (v) => {
+                const len = Math.sqrt(V3.normSq(v));
+                return len > 0 ? V3.scale(v, 1 / len) : V3.create();
+            },
+            lerp: (v1, v2, t) => V3.add(V3.scale(v1, 1 - t), V3.scale(v2, t))
+        };
+        
+        // --- GEOMETRIC PRESETS ---
+        const GEOMETRIES = {
+            CUBE: (() => {
+                const s = 1 / Math.sqrt(3);
+                return [
+                    V3.create(s, s, s), V3.create(-s, s, s), V3.create(s, -s, s), V3.create(-s, -s, s),
+                    V3.create(s, s, -s), V3.create(-s, s, -s), V3.create(s, -s, -s), V3.create(-s, -s, -s)
+                ];
+            })(),
+            OCTAHEDRON: [
+                V3.create(1, 0, 0), V3.create(-1, 0, 0), V3.create(0, 1, 0),
+                V3.create(0, -1, 0), V3.create(0, 0, 1), V3.create(0, 0, -1),
+                // Pad with zero vectors for smooth interpolation to the 8-point cube
+                V3.create(0,0,0), V3.create(0,0,0)
+            ]
+        };
+
+        // --- VISUAL TOUR BLUEPRINT ---
+        const SCENES = [
+            { 
+                name: "Formation: Octahedron", 
+                duration: 30000, // 30 seconds
+                alpha_min: 0.5, alpha_max: 0.65,
+                geometry: GEOMETRIES.OCTAHEDRON,
+                colors: [
+                    'hsla(300, 100%, 75%, 0.1)', 'hsla(320, 100%, 75%, 0.1)',
+                    'hsla(240, 100%, 80%, 0.1)', 'hsla(260, 100%, 80%, 0.1)',
+                    'hsla(280, 100%, 75%, 0.1)', 'hsla(340, 100%, 75%, 0.1)',
+                    'rgba(0,0,0,0)', 'rgba(0,0,0,0)'
+                ]
+            },
+            { 
+                name: "Formation: Cube", 
+                duration: 30000, 
+                alpha_min: 0.7, alpha_max: 0.75,
+                geometry: GEOMETRIES.CUBE,
+                colors: [
+                    'hsla(180, 100%, 70%, 0.1)', 'hsla(190, 100%, 70%, 0.1)',
+                    'hsla(200, 100%, 75%, 0.1)', 'hsla(210, 100%, 75%, 0.1)',
+                    'hsla(170, 100%, 70%, 0.1)', 'hsla(220, 100%, 75%, 0.1)',
+                    'hsla(160, 100%, 70%, 0.1)', 'hsla(230, 100%, 75%, 0.1)'
+                ]
+            }
+        ];
+
+        let from_geometry, to_geometry;
+        let from_colors, to_colors;
+
+        // --- CORE IFS & ANIMATION FUNCTIONS ---
+        function transform(p, q) {
+            const q_squared = V3.normSq(q);
+            if (q_squared === 0) return p;
+            const q_dot_p = V3.dot(q, p);
+            const denominator = 1 + q_squared + 2 * q_dot_p;
+            if (Math.abs(denominator) < 1e-9) return p;
+            const numerator = V3.add(V3.scale(p, 1 - q_squared), V3.scale(q, 2 * (1 + q_dot_p)));
+            return V3.scale(numerator, 1 / denominator);
+        }
+
+        function animate(time) {
+            if (!sceneStartTime) sceneStartTime = time;
+            const currentScene = SCENES[sceneIndex];
+            const elapsedTime = time - sceneStartTime;
+            let progress = Math.min(elapsedTime / currentScene.duration, 1.0);
+            
+            // Smooth easing for transitions
+            const eased_progress = 0.5 - 0.5 * Math.cos(progress * Math.PI);
+
+            // --- Scene Transition Logic ---
+            if (progress >= 1.0) {
+                sceneIndex = (sceneIndex + 1) % SCENES.length;
+                sceneStartTime = time;
+                setupSceneTransition();
+            }
+            
+            // --- Interpolation ---
+            const current_alpha_pulse = (Math.sin(time / 4000) + 1) / 2;
+            const current_alpha = currentScene.alpha_min + (currentScene.alpha_max - currentScene.alpha_min) * current_alpha_pulse;
+
+            const lerped_q_vectors = [];
+            for(let i=0; i<8; i++) {
+                const from_v = V3.scale(from_geometry[i], current_alpha);
+                const to_v = V3.scale(to_geometry[i], current_alpha);
+                lerped_q_vectors.push(V3.lerp(from_v, to_v, eased_progress));
+            }
+            
+            // --- Drawing ---
+            ctx.globalCompositeOperation = 'source-over';
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.02)'; // Slow fade for ethereal trails
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.globalCompositeOperation = 'lighter';
+
+            for (let i = 0; i < pointsPerFrame; i++) {
+                let lambdas = [], lambda_sum = 0;
+                for (let j = 0; j < lerped_q_vectors.length; j++) {
+                    const q = lerped_q_vectors[j];
+                    if (V3.normSq(q) === 0) { lambdas.push(0); continue; }
+                    const q_squared = V3.normSq(q);
+                    const q_dot_p = V3.dot(q, currentPoint);
+                    const lambda = (1 + q_squared + 2 * q_dot_p) / 4;
+                    lambdas.push(lambda);
+                    lambda_sum += lambda;
+                }
+                if (lambda_sum === 0) continue;
+
+                const r = Math.random() * lambda_sum;
+                let cumulative_prob = 0, choice_index = 0;
+                for (let j = 0; j < lambdas.length; j++) {
+                    cumulative_prob += lambdas[j];
+                    if (r <= cumulative_prob) { choice_index = j; break; }
+                }
+
+                currentPoint = transform(currentPoint, lerped_q_vectors[choice_index]);
+                plot(currentPoint, to_colors[choice_index] || from_colors[choice_index]);
+            }
+            
+            animationFrameId = requestAnimationFrame(animate);
+        }
+
+        function plot(p, color) {
+            if (!color || color === 'rgba(0,0,0,0)') return;
+            const scale_factor = 1 + p.z * 0.2;
+            const scale = Math.min(canvas.width, canvas.height) * 0.5 * scale_factor;
+            const x = canvas.width / 2 + p.x * scale;
+            const y = canvas.height / 2 + p.y * scale;
+            ctx.fillStyle = color;
+            ctx.fillRect(x, y, 1, 1);
+        }
+
+        function setupSceneTransition() {
+            const currentScene = SCENES[sceneIndex];
+            const nextScene = SCENES[(sceneIndex + 1) % SCENES.length];
+            from_geometry = currentScene.geometry;
+            to_geometry = nextScene.geometry;
+            from_colors = currentScene.colors;
+            to_colors = nextScene.colors;
+            
+            sceneTitle.style.opacity = 0;
+            setTimeout(() => { 
+                sceneTitle.innerText = currentScene.name;
+                sceneTitle.style.opacity = 1;
+            }, 1500);
+        }
+
+        function startGeneration() {
+            if (animationFrameId) cancelAnimationFrame(animationFrameId);
+            
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            
+            currentPoint = V3.normalize(V3.create(Math.random(), Math.random(), Math.random()));
+            
+            ctx.fillStyle = 'black';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            sceneIndex = 0;
+            sceneStartTime = 0;
+            setupSceneTransition();
+            
+            animate(performance.now());
+        }
+        
+        window.addEventListener('resize', startGeneration);
+        window.onload = startGeneration;
+    </script>
+</body>
+</html>

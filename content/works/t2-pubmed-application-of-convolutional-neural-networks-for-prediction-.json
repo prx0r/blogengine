@@ -1,0 +1,43 @@
+{
+  "work_id": "work:t2-pubmed-application-of-convolutional-neural-networks-for-prediction-",
+  "schema_version": 2,
+  "title": "Application of convolutional neural networks for prediction of disinfection by-products.",
+  "authors": [
+    {
+      "name": "Peleato NM"
+    }
+  ],
+  "publication": {
+    "year": 2022,
+    "journal": "Sci Rep",
+    "source": "PubMed/MEDLINE",
+    "language": "en"
+  },
+  "identifiers": {
+    "pmid": "35022442",
+    "doi": "10.1038/s41598-021-03881-w"
+  },
+  "topics": [
+    "phase-14-knowledge-gnosis",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "assets": {
+    "pdf_path": "t2-8755818-application-of-convolutional-neural-networks-for-prediction-.pdf",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/35022442/",
+    "abstract": "Fluorescence spectroscopy can provide high-level chemical characterization and quantification that is suitable for use in online process monitoring and control. However, the high-dimensionality of excitation-emission matrices and superposition of underlying signals is a major challenge to implementation. Herein the use of Convolutional Neural Networks (CNNs) is investigated to interpret fluorescence spectra and predict the formation of disinfection by-products during drinking water treatment. Us"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_alt17_acquisition",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 14,
+    "phase_name": "Knowledge/Gnosis",
+    "bridge_rationale": "Bridge paper score=10.0: links Knowledge/Gnosis concept to mechanistic neuroscience"
+  },
+  "evaluation": "Score 10: Excellent bridge signal",
+  "tier": 2
+}

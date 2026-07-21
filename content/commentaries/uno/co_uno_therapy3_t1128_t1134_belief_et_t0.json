@@ -1,0 +1,54 @@
+{
+  "co_id": "co:uno_therapy3_t1128_t1134_belief_et_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3_t1128_t1134_belief_eternity_closure",
+  "turn_index": 0,
+  "lineage": "Therapeutic",
+  "student_state": "deep_vulnerability",
+  "behavior_tags": [
+    "affirmation",
+    "internalization"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_04",
+    "function_name": "RM_04",
+    "mechanism_shape": "NONE",
+    "teaching_actions": [
+      "echoes_affirmation"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.15,
+      "intimacy": 0.85,
+      "attunement": 0.8,
+      "style": 0.15,
+      "depth": 0.62,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_01",
+      "intimacy_discrete": "IN_04",
+      "attunement_discrete": "AT_03",
+      "style_discrete": "LS_01",
+      "depth_discrete": "PD_03",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "They think: face problem = suffer forever. Teacher reverses: face problem = end suffering, avoid problem = suffer forever. This is temporal reframe. Their logic: confronting = extending. Reality: confronting = completing, avoiding = perpetuating. The reframe shows: suffering continues not because you face it but because you don't. Facing = closure. Avoiding = eternity. Hypothesis: they'll ask how that works or resist the reversal.",
+  "accumulated_insight": "T1: Student assumes 'If I deal with this, I'll be dealing with it forever'—catastrophizes that working on issue = eternal suffering. Teacher reframes: confronting now = closure, avoiding now = eternal suffering. Uses causal chain to reverse their logic. Predicting ask_deeper_question because paradox reversals typically produce curiosity about mechanism.",
+  "abstract_pattern": "",
+  "visible_response": "Believe that I will succeed.",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

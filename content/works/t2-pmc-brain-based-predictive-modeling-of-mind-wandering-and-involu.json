@@ -1,0 +1,56 @@
+{
+  "work_id": "work:t2-pmc-brain-based-predictive-modeling-of-mind-wandering-and-involu",
+  "schema_version": 2,
+  "title": "Brain-based predictive modeling of mind-wandering and involuntary thought: the idiographic approach.",
+  "authors": [
+    {
+      "name": "Lotus Shareef-Trudeau"
+    },
+    {
+      "name": "David Lydon-Staley"
+    },
+    {
+      "name": "John Medaglia"
+    },
+    {
+      "name": "Aaron Kucyi"
+    }
+  ],
+  "publication": {
+    "year": 2025,
+    "type": "article",
+    "source": "PubMed/MEDLINE",
+    "language": "en",
+    "journal": "Technology, mind, and behavior"
+  },
+  "identifiers": {
+    "pmid": "41050630",
+    "doi": "10.1037/tmb0000155"
+  },
+  "topics": [
+    "phase-8-non-fabrication",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "tradition": [
+    "contemporary_science"
+  ],
+  "tier": 2,
+  "assets": {
+    "pdf_path": null,
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/41050630/",
+    "abstract": "A substantial portion of waking life consists of mental experiences that arise involuntarily, including mind-wandering, spontaneous thought and rumination. Given that these experiences are fundamental to cognitive function and mental health, there has been growing scientific and clinical interest in using measures of brain activity to model and predict the momentary occurrence of these various forms of involuntary thought. In the most common machine learning approach in neuroimaging and electrophysiology research, model training data include neural features derived from a population of individuals, and testing is performed on held-out data in one or more individuals. However, sources of idiosyncrasy, such as individual differences in the nature of thought and brain functional organization, raise critical questions regarding whether population-derived neural models can generalize to individuals. In this article, we describe how an idiographic (person-specific) approach has potential to "
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_t2_auto",
+    "retrieved_at": "2026-07-11"
+  },
+  "phase_mapping": {
+    "phase": 8,
+    "phase_name": "Non-fabrication",
+    "bridge_rationale": "The natural mind — spontaneous thought as baseline state, fabrication as deliberate override."
+  },
+  "evaluation": "Excellent (score=5.2)"
+}

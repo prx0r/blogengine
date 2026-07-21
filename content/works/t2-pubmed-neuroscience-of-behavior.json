@@ -1,0 +1,59 @@
+{
+  "work_id": "work:t2-pubmed-neuroscience-of-behavior",
+  "schema_version": 2,
+  "title": "Neuroscience of Behavior.",
+  "authors": [
+    {
+      "name": "Trevi\u00f1o M"
+    },
+    {
+      "name": "Arias-Carri\u00f3n O"
+    },
+    {
+      "name": "de la Torre-Valdovinos B"
+    },
+    {
+      "name": "Osuna Carrasco P"
+    },
+    {
+      "name": "M\u00e1rquez I"
+    }
+  ],
+  "publication": {
+    "year": 2025,
+    "type": "article",
+    "source": "PubMed/MEDLINE",
+    "language": "en",
+    "journal": "NeuroSci"
+  },
+  "identifiers": {
+    "pmid": "41283297",
+    "doi": "10.3390/neurosci6040108"
+  },
+  "topics": [
+    "phase-6-neuroscience-of-beha",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "tradition": [
+    "contemporary_science"
+  ],
+  "tier": 2,
+  "assets": {
+    "pdf_path": "t2-PMC12641644_Neuroscience_of_Behavior.pdf",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/41283297/",
+    "abstract": "Behavior is not a mere sequence of responses to stimuli but the dynamic expression of internal processes such as planning, prediction, valuation, and inference. These functions arise from distributed and metabolically costly neural systems and are best understood by considering behavior and neural activity together. This article presents a narrative and conceptual review of the neuroscience of behavior, integrating biological, environmental, and computational perspectives. We synthesize evidence"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_t2_search",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 6,
+    "phase_name": "Dependent-arising",
+    "bridge_rationale": "Dependent arising \u2014 predictive processing, free energy principle, active inference, Bayesian brain, prediction error in perception and action."
+  },
+  "evaluation": "Excellent (score=10.5)"
+}

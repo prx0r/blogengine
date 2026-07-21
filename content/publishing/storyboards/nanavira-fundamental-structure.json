@@ -1,0 +1,240 @@
+{
+  "_schema": "storyboard-v1",
+  "_description": "Each storyboard is a versioned, source-tracked asset. One per video episode. Maps script segments → visual frames → Manim scenes → narration chunks. Persists as video DNA for YouTube analytics mapping.",
+
+  "episode_id": "nanavira-fundamental-structure",
+  "episode_title": "Ñāṇavīra's Fundamental Structure",
+  "series": "the-tetrahedron",
+  "episode_number": 1,
+  "version": "0.1.0",
+
+  "source_ros": [
+    "ro:nanavira-clearing-path",
+    "ro:nanavira-proclus-tetrahedron"
+  ],
+  "source_docs": [
+    "nanavira-proclus-tetrahedron.md",
+    "tetrahedron-mathematical-formulation.md"
+  ],
+
+  "global_concepts": ["fundamental-structure", "nanavira", "tetrahedron", "phenomenology", "k4", "dependent-arising"],
+  "mythos_filter": "hermetic-documentary",
+  "style_profile": "distillery-dark-gold",
+  "visual_direction": "Dark void background, gold wireframe tetrahedron. Archival manuscript textures. Serif title cards. Green core accent (#00FF88). Contemplative pacing.",
+
+  "narration_voice": "en-GB-RyanNeural",
+  "estimated_duration_min": 14,
+
+  "segments": [
+    {
+      "segment_id": "seg-01-hook",
+      "label": "Hook — The Monk Who Found the Shape",
+      "start_sec": 0,
+      "end_sec": 90,
+      "rhetorical_role": "hook",
+
+      "narration": "In 1963, a British intelligence officer turned Buddhist monk sat alone in a hut in Ceylon. Harold Musson — now known as Ñāṇavīra Thera — had been reading Kierkegaard and Eddington's quantum diagrams. And he made a discovery that would take physicists 50 more years to independently arrive at: that the structure of experience itself is a tetrahedron. Four vertices. Six edges. The minimum shape anything must have to exist.",
+
+      "visual": {
+        "type": "manim",
+        "scene_file": "nanavira_intro.py",
+        "scene_class": "NanaviraIntro",
+        "description": "Dark void. Fade in: archival photo of Ñāṇavīra (or silhouette). Title card in serif: 'Ñāṇavīra's Fundamental Structure'. Slow zoom. Dissolve to first tetrahedron wireframe — gold edges on dark background.",
+        "manim_duration_sec": 90,
+        "color_palette": "distillery-dark-gold"
+      },
+
+      "on_screen_text": [
+        { "text": "Ñāṇavīra's Fundamental Structure", "style": "title-serif", "position": "center" },
+        { "text": "The shape at the bottom of experience", "style": "subtitle", "position": "below" }
+      ],
+
+      "concepts": ["nanavira-tera", "kierkegaard", "eddington", "tetrahedron-k4", "phenomenology"],
+      "quote_active": false
+    },
+    {
+      "segment_id": "seg-02-structure",
+      "label": "The Four Terms of Experience",
+      "start_sec": 90,
+      "end_sec": 210,
+      "rhetorical_role": "thesis",
+
+      "narration": "Ñāṇavīra argued that every moment of experience — any experience whatsoever — can be broken down into four fundamental terms. First, there is a subject — the one who experiences. Second, an object — what is experienced. Third, an intention — the direction of attention, what the subject is trying to do with the object. And fourth, an act — the actual doing, the contact between subject and object through intention. Subject. Object. Intention. Act. Nothing more.",
+
+      "visual": {
+        "type": "manim",
+        "scene_file": "nanavira_k4_build.py",
+        "scene_class": "K4Build",
+        "description": "Tetrahedron builds vertex by vertex. Gold dots appear one at a time, labeled: Subject, Object, Intention, Act. Each vertex pulses on mention. Edges appear connecting them. Camera rotates slowly.",
+        "manim_duration_sec": 120,
+        "color_palette": "distillery-dark-gold"
+      },
+
+      "on_screen_text": [
+        { "text": "SUBJECT", "style": "vertex-label", "position": "top-left" },
+        { "text": "OBJECT", "style": "vertex-label", "position": "bottom" },
+        { "text": "INTENTION", "style": "vertex-label", "position": "top-right" },
+        { "text": "ACT", "style": "vertex-label", "position": "mid-right" }
+      ],
+
+      "concepts": ["subject", "object", "intention", "act", "phenomenology", "k4"],
+      "quote_active": false
+    },
+    {
+      "segment_id": "seg-03-edges",
+      "label": "The Six Edges — Why Four Isn't Three",
+      "start_sec": 210,
+      "end_sec": 330,
+      "rhetorical_role": "expansion",
+
+      "narration": "The key insight is this: four, not three. A triangle has three vertices and three edges. It's flat. It has no inside. But a tetrahedron — four vertices connected by six edges — has volume. It's the minimal complete graph that can contain something. Ñāṇavīra called this K4, borrowing from graph theory. The six edges are the six possible relations between the four terms. Subject-to-object, subject-to-intention, subject-to-act, object-to-intention, object-to-act, intention-to-act. Every moment of experience is a traversal of these six edges. When all six are traversed, experience is complete. When an edge is blocked, suffering arises.",
+
+      "visual": {
+        "type": "manim",
+        "scene_file": "nanavira_k4_edges.py",
+        "scene_class": "K4Edges",
+        "description": "Triangle first (3 vertices, 3 edges) — flat, grey. Then 4th vertex rises from center, edges snap into place. The tetrahedron gains volume. Each edge highlights with its label as mentioned. Blocked edge: glows red, others dim.",
+        "manim_duration_sec": 120,
+        "color_palette": "distillery-dark-gold"
+      },
+
+      "on_screen_text": [
+        { "text": "3 vertices + 3 edges = FLAT", "style": "label", "position": "bottom" },
+        { "text": "4 vertices + 6 edges = VOLUME", "style": "label-emphasis", "position": "bottom" },
+        { "text": "K₄ — the minimal complete graph with an inside", "style": "formula", "position": "center" }
+      ],
+
+      "concepts": ["k4", "graph-theory", "complete-graph", "volume", "edges", "relation"],
+      "quote_active": false
+    },
+    {
+      "segment_id": "seg-04-suffering",
+      "label": "Suffering as Edge Blockage",
+      "start_sec": 330,
+      "end_sec": 450,
+      "rhetorical_role": "expansion",
+
+      "narration": "Here's where it gets practical. Ñāṇavīra was a Buddhist monk, and his framework maps directly onto the Buddha's core teaching of dependent arising — paṭicca-samuppāda. The twelve links of dependent arising can be seen as two interlocking tetrahedra. One tetrahedron for the afflictive cycle — ignorance, formations, consciousness, name-and-form. Another for the constitutive cycle — the six sense bases, contact, feeling, craving, clinging, becoming, birth, aging-and-death. When you're caught in craving, an edge is blocked. The tetrahedron can't complete. Experience becomes flat. That's dukkha. That's suffering. Not a cosmic punishment. Not a moral failing. A structural blockage in the geometry of your experience.",
+
+      "visual": {
+        "type": "manim",
+        "scene_file": "nanavira_suffering.py",
+        "scene_class": "SufferingEdges",
+        "description": "Two tetrahedra appear. First (afflictive) with one edge red/dashed. Second (constitutive) with another blocked edge. The blocked edges prevent volume. Flat grey replaces gold. Then — the edge clears. Volume returns. Gold re-illuminates.",
+        "manim_duration_sec": 120,
+        "color_palette": "distillery-dark-gold"
+      },
+
+      "on_screen_text": [
+        { "text": "Craving = blocked edge", "style": "label-emphasis", "position": "top" },
+        { "text": "Suffering = loss of volume", "style": "label", "position": "center" },
+        { "text": "Recognition = edge restored", "style": "label-emphasis", "position": "bottom" }
+      ],
+
+      "concepts": ["dukkha", "dependent-arising", "paticca-samuppada", "craving", "blockage"],
+      "quote_active": false
+    },
+    {
+      "segment_id": "seg-05-quote",
+      "label": "Ñāṇavīra's Own Words",
+      "start_sec": 450,
+      "end_sec": 530,
+      "rhetorical_role": "quote",
+
+      "narration": "Ñāṇavīra wrote: 'Positive or abstract thinking abstracts from existence and is thus incapable of thinking it continuously.' His method was what he called negative thinking — borrowed from Kierkegaard. Don't assert what reality IS. Analyze the conditions under which anything appears. Remove what isn't true. What remains — the structure that refuses to be removed — that's what is real. The tetrahedron survived this negative thinking. It couldn't be removed. Every attempt to deny it used its own vertices. The subject denying the tetrahedron was, in that very act, using Subject, Object, Intention, and Act.",
+
+      "visual": {
+        "type": "manim",
+        "scene_file": "nanavira_quote.py",
+        "scene_class": "NanaviraQuote",
+        "description": "Fade to manuscript texture background. Quote text appears letter by letter in serif, amber-colored. Below: source citation. Tetrahedron ghost in background, faint. Quote completes, tetrahedron pulses.",
+        "manim_duration_sec": 80,
+        "color_palette": "distillery-dark-gold"
+      },
+
+      "on_screen_text": [
+        { "text": "\"Positive or abstract thinking abstracts from existence\nand is thus incapable of thinking it continuously.\"", "style": "quote-serif", "position": "center" },
+        { "text": "— Ñāṇavīra Thera, Clearing the Path (1963)", "style": "citation", "position": "below" }
+      ],
+
+      "quote_text": "Positive or abstract thinking abstracts from existence and is thus incapable of thinking it continuously.",
+      "quote_source": "Ñāṇavīra Thera — Clearing the Path (1963)",
+      "concepts": ["negative-thinking", "kierkegaard", "apophatic", "phenomenology"],
+      "quote_active": true
+    },
+    {
+      "segment_id": "seg-06-convergence",
+      "label": "The Independent Discoveries",
+      "start_sec": 530,
+      "end_sec": 680,
+      "rhetorical_role": "synthesis",
+
+      "narration": "Here's what makes this remarkable. Ñāṇavīra was alone in a hut in Ceylon in 1963. He had no contact with the traditions that independently discovered this same structure. Proclus, in 475 CE Athens, derived 211 propositions about reality from a four-term structure — Henad, Being, Life, Intellect. Abhinavagupta, in 1000 CE Kashmir, mapped the 36 tattvas as nine nested tetrahedra, with the four upāyas as the invariant vertices. And in 2013 — fifty years after Ñāṇavīra — physicists Arkani-Hamed and Trnka discovered the amplituhedron A42. It's a tetrahedron. Four momenta. Six BCFW tiles. The same structure Ñāṇavīra found in experience, they found in the mathematics of particle scattering. A Buddhist monk, a Neoplatonist, a Tantric master, and quantum physicists. Four independent discoveries. One shape.",
+
+      "visual": {
+        "type": "manim",
+        "scene_file": "nanavira_convergence.py",
+        "scene_class": "ConvergenceMatrix",
+        "description": "Timeline appears: 475 → 1000 → 1963 → 2013. At each point, a tetrahedron appears with its system label. All four tetrahedra rotate in sync. Zoom out: they're the same tetrahedron, different colors. Merge into one gold tetrahedron.",
+        "manim_duration_sec": 150,
+        "color_palette": "distillery-dark-gold"
+      },
+
+      "on_screen_text": [
+        { "text": "Proclus (475 CE)", "style": "label", "position": "top-left" },
+        { "text": "Abhinavagupta (1000 CE)", "style": "label", "position": "top-right" },
+        { "text": "Ñāṇavīra (1963)", "style": "label-emphasis", "position": "bottom-left" },
+        { "text": "Arkani-Hamed & Trnka (2013)", "style": "label", "position": "bottom-right" }
+      ],
+
+      "concepts": ["proclus", "abhinavagupta", "arkanihamed", "amplituhedron", "convergence", "k4"],
+      "quote_active": false
+    },
+    {
+      "segment_id": "seg-07-closing",
+      "label": "Closing — The Minimal Shape of Anything That Is",
+      "start_sec": 680,
+      "end_sec": 840,
+      "rhetorical_role": "closing",
+
+      "narration": "Ñāṇavīra's Fundamental Structure is not a metaphor. The tetrahedron is the minimal shape anything must have to exist. Four vertices. Six edges. Before the tetrahedron, there is no inside — no space for experience. After the tetrahedron, everything else is elaboration. The 36 tattvas of Kashmir Shaivism are nine tetrahedra nested. The 64 hexagrams of the I Ching are the 64 possible states of six edges — each edge either tense or relaxed. The Markov blanket that Friston found in every living system is a four-state partition: internal, external, sensory, active. The same four vertices. The same six edges. Every living thing IS a tetrahedron. So are you. The question is whether your edges are open.",
+
+      "visual": {
+        "type": "manim",
+        "scene_file": "nanavira_closing.py",
+        "scene_class": "ClosingVolume",
+        "description": "Single gold tetrahedron center screen. Slowly rotates. Edges pulse softly. Green core (#00FF88) glows from center. Camera slowly zooms into the green center. Fade to black. End card: episode title + series name.",
+        "manim_duration_sec": 160,
+        "color_palette": "distillery-dark-gold"
+      },
+
+      "on_screen_text": [
+        { "text": "Every living thing is a tetrahedron.", "style": "closing-serif", "position": "center" },
+        { "text": "So are you.", "style": "closing-emphasis", "position": "below" }
+      ],
+
+      "concepts": ["tetrahedron", "minimal-shape", "k4", "recognition", "green-core", "markov-blanket"],
+      "quote_active": false
+    }
+  ],
+
+  "youtube_metadata": {
+    "title": "Ñāṇavīra's Fundamental Structure — The Shape at the Bottom of Experience",
+    "description": "In 1963, a British monk alone in a Ceylon hut discovered that experience has exactly four fundamental terms — and that the tetrahedron is the minimal shape anything must have to exist. This is the story of K₄: the complete graph on 4 vertices, independently discovered by Proclus, Abhinavagupta, Ñāṇavīra, and quantum physicists. Part 1 of 'The Tetrahedron' series.\n\nSources:\n- Ñāṇavīra Thera, Clearing the Path (1960-1965)\n- Arkani-Hamed & Trnka, The Amplituhedron (arXiv:1312.2007)\n- Proclus, Elements of Theology\n- Abhinavagupta, Tantraloka",
+    "tags": ["philosophy", "buddhism", "phenomenology", "tetrahedron", "nanavira", "consciousness", "geometry", "mathematics"],
+    "category": "Education",
+    "privacy": "private",
+    "playlist": "The Tetrahedron"
+  },
+
+  "analytics_tags": {
+    "rhetorical_roles_used": ["hook", "thesis", "expansion", "quote", "synthesis", "closing"],
+    "visual_types_used": ["wireframe-build", "color-transition", "quote-card", "timeline-matrix", "zoom-to-center"],
+    "concept_density": "medium",
+    "quote_ratio": 0.14
+  },
+
+  "timeline": [
+    { "date": "2026-07-18", "event": "Storyboard created. Initial 6 segments drafted from ro:nanavira-clearing-path.", "version": "0.1.0" }
+  ]
+}

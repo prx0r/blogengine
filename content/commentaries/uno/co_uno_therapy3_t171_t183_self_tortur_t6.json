@@ -1,0 +1,54 @@
+{
+  "co_id": "co:uno_therapy3_t171_t183_self_tortur_t6",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3_t171_t183_self_torture_distinction",
+  "turn_index": 6,
+  "lineage": "Therapeutic",
+  "student_state": "factual_admission",
+  "behavior_tags": [
+    "reality_check"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_02",
+    "function_name": "UM_02",
+    "mechanism_shape": "COMPARISON_CONTRAST",
+    "teaching_actions": [
+      "asks_factual_question",
+      "compares_frequency"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.15,
+      "attunement": 0.2,
+      "style": 0.15,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_01",
+      "attunement_discrete": "AT_01",
+      "style_discrete": "LS_01",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "'Once'—they admit it. One mistake. Now teacher asks: how many times reminded yourself? This sets up the devastating comparison. If they say 'hundreds' (which they will), the ratio speaks: 1 action vs 100 punishments. That's not learning, that's torture. The quantification makes excess visible. Can't say 'thinking about mistakes' when ratio is 1:100. Hypothesis: they'll say hundreds, teacher will name it 'self-torture,' and the distinction will land.",
+  "accumulated_insight": "T7: Student quantifies error: 'Once'—admits mistake happened one time. Teacher sets up comparison: 'And how many times did you remind yourself of it and call yourself stupid?' This creates quantitative contrast: 1 mistake vs X reminders. The comparison will expose disproportionate response. Predicting surface_emotion because seeing ratio produces recognition of excess.",
+  "abstract_pattern": "",
+  "visible_response": "And how many times did you remind yourself of it and call yourself stupid?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

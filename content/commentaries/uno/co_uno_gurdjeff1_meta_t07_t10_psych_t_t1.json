@@ -1,0 +1,61 @@
+{
+  "co_id": "co:uno_gurdjeff1_meta_t07_t10_psych_t_t1",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gurdjeff1_meta_t07_t10_psych_thinking_first_steps",
+  "turn_index": 1,
+  "lineage": "Gurdjieffian",
+  "student_state": "feeling_paralyzed_by_scale",
+  "behavior_tags": [
+    "requests_instruction",
+    "expresses_self-doubt"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_03",
+    "function_name": "RM_03",
+    "mechanism_shape": "COMPARISON_CONTRAST",
+    "teaching_actions": [
+      "corrects_focus",
+      "diagnoses_meta-error",
+      "demands_focus_on_process"
+    ],
+    "traps_avoided": [
+      "all_or_nothing_thinking"
+    ],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.62,
+      "attunement": 0.5,
+      "style": 0.5,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "go_along_compliantly",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The correction works: focus on process (not completed process), thinking in absolutes = error. The student expressed self-doubt (feeling paralyzed by scale), which shows they understand: psychological thinking = more than can accomplish (scale error). They'll likely accept the correction. The episode is complete: precondition → rejection → scale → correction. Pattern complete.",
+  "accumulated_insight": "Two-turn pattern: T1: Student proposed precondition (setting impossible standard)—rejection: must start as we are, mechanical change = worse. T2: Student expressed self-doubt ('What are the first things to learn in trying to think psychologically? I feel it is more than I can accomplish')—feeling paralyzed by scale via requests instruction and expresses self-doubt. They understand: psychological thinking = more than can accomplish (scale error). The comparison_contrast mechanism corrects: focus on process (not completed process), thinking in absolutes = error ('When you say it is more than you can accomplish you think about the completed process. And I speak about the process itself, about beginning to work. If you say this is beyond you, you can do nothing and so, naturally, nothing happens. It is again this habit of thinking in absolutes'). Pattern complete: precondition question → rejection → scale question → correction. They've shifted: focus = process (not end-state), absolutes = error (correction).",
+  "abstract_pattern": "",
+  "visible_response": "When you say it is more than you can accomplish you think about the completed\nprocess.\nAnd I speak about the process itself, about beginning to work.\nIf you say this\nis beyond you, you can do nothing and so, naturally, nothing happens.\nIt is again this\nhabit of thinking in absolutes.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:sufi-comparative-analysis",
+    "ro:steiner-tantraloka-parallels"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

@@ -1,0 +1,54 @@
+{
+  "co_id": "co:uno_therapy2_t1095_t1125_somatic_t_t4",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy2_t1095_t1125_somatic_transference_breakthrough",
+  "turn_index": 4,
+  "lineage": "Therapeutic",
+  "student_state": "unknown",
+  "behavior_tags": [],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_01",
+    "function_name": "RM_01",
+    "mechanism_shape": "STRUCTURAL_ANALOGY",
+    "teaching_actions": [
+      "interprets_transference",
+      "uses_analogy"
+    ],
+    "traps_avoided": [
+      "category_conflation"
+    ],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.62,
+      "attunement": 0.8,
+      "style": 0.5,
+      "depth": 0.38,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_03",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_02",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "Final turn: 'Mm-hmm.'. Reached unknown after 5 turns. Episode demonstrates structural_analogy effectiveness in REMAKING work. Teaching complete for this sequence.",
+  "accumulated_insight": "T5 (Final): Student: 'Mm-hmm.'. Final state: unknown. Episode complete with 5 turns. Arc shows progression through REMAKING phase using structural_analogy interventions. Teaching sequence addressed none pattern.",
+  "abstract_pattern": "",
+  "visible_response": "And it’s telling me that right now.\nI want us to listen to your body because at some point you apparently had to not listen to it... But right now I’m seeing your body’s having this reaction... Your body’s not here with me.\nYour body is with someone else... sort of like we’re having a relationship in stereo.",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

@@ -1,0 +1,246 @@
+{
+  "ro_id": "ro:corbin-imaginal",
+  "schema_version": 1,
+  "title": "Henry Corbin on the Imaginal and Angelic Perception",
+  "subtitle": "The mundus imaginalis as intermediate ontological region perceived by active imagination",
+  "family": "thinker-topic",
+  "status": "stub",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "Scholarly commentary on Corbin's mundus imaginalis.",
+    "scope": "Tier 2 commentaries only.",
+    "traditions": [
+      "corbin",
+      "sufism",
+      "imaginal"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "work:adventures-in-the-imaginal-henry-corbin",
+      "tier": 2,
+      "label": "Various \u2014 Adventures in the Imaginal",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "imaginal"
+      ],
+      "sections_affected": [
+        "imaginal"
+      ],
+      "passages_used": 0,
+      "status": "active"
+    },
+    {
+      "source_id": "work:apophasis-and-angelology-henry-corbin-s",
+      "tier": 2,
+      "label": "Stang \u2014 Apophasis and Angelology",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "angelology",
+        "apophasis"
+      ],
+      "sections_affected": [
+        "angelology"
+      ],
+      "passages_used": 0,
+      "status": "active"
+    },
+    {
+      "source_id": "work:cosmic-hermeneutics-a-critical-appraisal",
+      "tier": 2,
+      "label": "Various \u2014 Cosmic Hermeneutics",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "hermeneutics"
+      ],
+      "sections_affected": [
+        "hermeneutics"
+      ],
+      "passages_used": 0,
+      "status": "active"
+    },
+    {
+      "source_id": "work:the-invisible-teacher-and-his-disciples",
+      "tier": 2,
+      "label": "Various \u2014 The Invisible Teacher",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "pedagogy"
+      ],
+      "sections_affected": [
+        "pedagogy"
+      ],
+      "passages_used": 0,
+      "status": "active"
+    },
+    {
+      "source_id": "work:a-methodology-of-the-imagination-1",
+      "tier": 2,
+      "label": "Various \u2014 Methodology of Imagination",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "imagination"
+      ],
+      "sections_affected": [
+        "imaginal"
+      ],
+      "passages_used": 0,
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "imaginal",
+      "subsection": "mundus_imaginalis",
+      "kind": "source",
+      "text": "[Passage on the mundus imaginalis as intermediate ontological region. Extract from Adventures in the Imaginal.]",
+      "source_id": "work:adventures-in-the-imaginal-henry-corbin",
+      "page_ref": null,
+      "topics": [
+        "mundus_imaginalis",
+        "ontology"
+      ],
+      "notes": "Core definition"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "angelology",
+      "subsection": "apophatic_angel",
+      "kind": "source",
+      "text": "[Passage on Corbin's angelology as necessary mediation. Extract from Apophasis and Angelology.]",
+      "source_id": "work:apophasis-and-angelology-henry-corbin-s",
+      "page_ref": null,
+      "topics": [
+        "angelology",
+        "mediation"
+      ],
+      "notes": "Angel as intermediary"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "hermeneutics",
+      "subsection": "ta_wil",
+      "kind": "source",
+      "text": "[Passage on ta'wil as spiritual interpretation. Extract from Cosmic Hermeneutics.]",
+      "source_id": "work:cosmic-hermeneutics-a-critical-appraisal",
+      "page_ref": null,
+      "topics": [
+        "ta_wil",
+        "hermeneutics"
+      ],
+      "notes": "Corbin's method"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "imaginal",
+      "subsection": "active_imagination",
+      "kind": "source",
+      "text": "[Passage on the active imagination as faculty of the imaginal. Extract from A Methodology of the Imagination.]",
+      "source_id": "work:a-methodology-of-the-imagination-1",
+      "page_ref": null,
+      "topics": [
+        "active_imagination",
+        "imaginatio_vera"
+      ],
+      "notes": "Faculty of perception"
+    }
+  ],
+  "coverage": {
+    "imaginal": {
+      "status": "partial",
+      "sources": [
+        "work:adventures-in-the-imaginal-henry-corbin"
+      ],
+      "passage_count": 2,
+      "estimated_completeness": 0.2,
+      "gaps": [
+        "Suhrawardi origins",
+        "Ibn Arabi connection"
+      ]
+    },
+    "angelology": {
+      "status": "partial",
+      "sources": [
+        "work:apophasis-and-angelology-henry-corbin-s"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 0.2,
+      "gaps": [
+        "Angel vs daimon",
+        "Hierarchy of angels"
+      ]
+    },
+    "hermeneutics": {
+      "status": "minimal",
+      "sources": [
+        "work:cosmic-hermeneutics-a-critical-appraisal"
+      ],
+      "passage_count": 1,
+      "estimated_completeness": 0.15,
+      "gaps": [
+        "Full ta'wil method"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "coverage_gap",
+      "title": "Wolfson paper not included",
+      "description": "Wolfson on mundus imaginalis available but not extracted.",
+      "status": "open",
+      "created": "2026-07-11",
+      "auto_generated": true
+    },
+    {
+      "id": "issue-002",
+      "type": "validation_needed",
+      "title": "All passages placeholder",
+      "description": "Extraction not yet performed.",
+      "status": "open",
+      "created": "2026-07-11",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-11",
+      "type": "initial",
+      "summary": "Draft from 5 sources",
+      "sources_added": [
+        "work:adventures-in-the-imaginal-henry-corbin",
+        "work:apophasis-and-angelology-henry-corbin-s",
+        "work:cosmic-hermeneutics-a-critical-appraisal",
+        "work:the-invisible-teacher-and-his-disciples",
+        "work:a-methodology-of-the-imagination-1"
+      ],
+      "passage_count": 4,
+      "test_pass_rate": null,
+      "skill_id": null
+    }
+  ],
+  "dependencies": [],
+  "outputs": [
+    {
+      "output_id": "corbin-mundus-imaginalis",
+      "type": "essay",
+      "ro_version": "0.1.0",
+      "published_at": null
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-07-11",
+      "event": "RO created",
+      "sources_total": 5,
+      "passages_total": 4
+    }
+  ]
+}

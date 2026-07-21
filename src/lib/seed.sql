@@ -1,0 +1,21 @@
+insert into sources (url, name, kind, category) values
+  ('https://www.pchvykov.com/blog', 'P Chvykov', 'rss', 'complexity'),
+  ('https://thoughtforms.life/', 'Thought Forms', 'rss', 'complexity'),
+  ('https://cscsc.notion.site/CSCSC-286d8cae0cfe813290abf9eb6acd731c', 'CSCSC', 'scrape', 'complexity'),
+  ('https://cscsc.notion.site/Core-questions-29ad8cae0cfe80309dd3faecbf7c8d1c', 'CSCSC Core Questions', 'scrape', 'complexity'),
+  ('https://qri.org/blog', 'QRI', 'rss', 'consciousness'),
+  ('http://bach.ai/', 'Bach AI', 'rss', 'consciousness'),
+  ('https://footnotes2plato.com/', 'Footnotes 2 Plato', 'rss', 'complexity'),
+  ('https://scottaaronson.blog/', 'Scott Aaronson', 'rss', 'cogsci'),
+  ('https://schwitzsplinters.blogspot.com/', 'Schwitzsplinters', 'rss', 'consciousness'),
+  ('https://www.withrealityinmind.com/', 'With Reality in Mind', 'scrape', 'consciousness'),
+  ('https://opentheory.net/', 'Open Theory', 'rss', 'consciousness'),
+  ('https://qualiacomputing.com/', 'Qualia Computing', 'rss', 'consciousness'),
+  ('https://meaningness.com/', 'Meaningness', 'rss', 'complexity'),
+  ('https://gwern.net/', 'Gwern', 'rss', 'complexity'),
+  ('https://www.theintrinsicperspective.com/', 'The Intrinsic Perspective', 'rss', 'cogsci'),
+  ('https://pathpress.org/', 'Path Press', 'scrape', 'dhamma'),
+  ('https://www.hillsidehermitage.org/category/blog/', 'Hillside Hermitage', 'scrape', 'dhamma'),
+  ('https://seeingthroughthenet.net/', 'Seeing Through the Net', 'scrape', 'dhamma'),
+  ('https://www.thetransmitter.org/', 'The Transmitter', 'rss', 'cogsci')
+on conflict (url) do nothing;

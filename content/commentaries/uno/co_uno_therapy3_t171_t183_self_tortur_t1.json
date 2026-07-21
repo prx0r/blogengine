@@ -1,0 +1,54 @@
+{
+  "co_id": "co:uno_therapy3_t171_t183_self_tortur_t1",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3_t171_t183_self_torture_distinction",
+  "turn_index": 1,
+  "lineage": "Therapeutic",
+  "student_state": "defensive_justification",
+  "behavior_tags": [
+    "rationalization"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_04",
+    "function_name": "RM_04",
+    "mechanism_shape": "SYSTEM_DYNAMICS",
+    "teaching_actions": [
+      "forces_evaluation",
+      "amplifies_experience"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.62,
+      "attunement": 0.5,
+      "style": 0.15,
+      "depth": 0.62,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_01",
+      "depth_discrete": "PD_03",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "'Well, it was stupid'—they're defending the attack. Classic move: 'I'm not being mean, I'm being ACCURATE.' Teacher bypasses accuracy question entirely: 'Is that kind or cruel?' This is brilliant—doesn't debate if statement was stupid (truth) but how they're treating themselves (ethics). Can't say 'it's kind to call myself stupid.' Forces them to admit cruelty. The repetition instruction ('Keep repeating...') will make cruelty visceral. Saying 'stupid stupid stupid' to yourself FEELS cruel. Watching if they'll defend or comply.",
+  "accumulated_insight": "T2: Student doubles down: 'Well, it was stupid'—defends self-attack by reasserting criticism. Teacher reframes as choice: 'Is that a kind or a cruel thing to say to yourself?' Introduces kind/cruel distinction. Not 'right/wrong' (about accuracy) but 'kind/cruel' (about treatment). This shifts frame from truth-value to ethics-of-self-treatment. Predicting go_along_compliantly because kind/cruel frame harder to argue than right/wrong.",
+  "abstract_pattern": "",
+  "visible_response": "Is that a kind or a cruel thing to say yourself?\n... Keep repeating that to yourself, and let me know how you feel.",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

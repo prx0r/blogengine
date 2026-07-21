@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="waterG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+  </defs>
+  <!-- Downward triangle - Alchemical symbol for Water -->
+  <polygon points="8,15 92,15 50,92" stroke="url(#waterG)" stroke-width="3" fill="url(#waterG)" fill-opacity="0.15"/>
+</svg>

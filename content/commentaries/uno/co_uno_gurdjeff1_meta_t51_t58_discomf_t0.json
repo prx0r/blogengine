@@ -1,0 +1,62 @@
+{
+  "co_id": "co:uno_gurdjeff1_meta_t51_t58_discomf_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gurdjeff1_meta_t51_t58_discomfort_youth_esotericism",
+  "turn_index": 0,
+  "lineage": "Gurdjieffian",
+  "student_state": "assuming_crisis_forces_seeking",
+  "behavior_tags": [
+    "proposes_causal_link",
+    "seeks_confirmation"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_06",
+    "function_name": "UM_06",
+    "mechanism_shape": "CONSTRAINT_COLLAPSE",
+    "teaching_actions": [
+      "rejects_causal_link",
+      "normalizes_discomfort",
+      "adjusts_expectations"
+    ],
+    "traps_avoided": [
+      "realism_trap",
+      "magical_thinking"
+    ],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.62,
+      "attunement": 0.5,
+      "style": 0.5,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "request_clarification",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The rejection works: no causal link (why should one discomfort lead to another?), adjusts expectations (you expect too much, cannot say they will be better off). The student proposed causal link (assuming crisis forces seeking), which shows they understand: discomfort/crisis = forces seeking (causal link). They'll likely assert utilitarian hope next. Hypothesis: causal link rejections trigger utilitarian assertions—testable by tracking whether causal link rejections lead to utilitarian inquiries.",
+  "accumulated_insight": "T1: Student proposes causal link ('Should not the present state of the world make more people look for schools? People are frightened, they feel uncomfortable')—assuming crisis forces seeking via proposes causal link and seeks confirmation. They understand: discomfort/crisis = forces seeking (causal link). The constraint_collapse mechanism rejects: no causal link (why should one discomfort lead to another?), adjusts expectations (you expect too much, cannot say they will be better off). Pattern: causal link proposal → rejection → [next: utilitarian question]. Medium confidence because causal link rejections typically trigger clarification requests.",
+  "abstract_pattern": "",
+  "visible_response": "Why should one discomfort lead to another discomfort? Do you think that will\nmake them come?\nYou expect too much of them. You can say to a man that if he\nstudies the system he will be more awake, but you cannot say he will be better off.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:sufi-comparative-analysis",
+    "ro:steiner-tantraloka-parallels"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

@@ -1,0 +1,52 @@
+{
+  "co_id": "co:uno_advaita_seeking_identity_hierarchy_rm01",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "iamthat1_t01_t24_sense_i_am_seed_consciousness",
+  "turn_index": 2,
+  "lineage": "Advaita",
+  "student_state": "seeking_identity_hierarchy",
+  "behavior_tags": ["conceptual_dichotomy", "seeking_first_principle"],
+  "inferred_need": "needs_hierarchy_of_identity",
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_01",
+    "function_name": "analogy_scaffolding",
+    "mechanism_shape": "structural_analogy",
+    "teaching_actions": ["downgrades_personhood", "defines_person_as_composite", "uses_analogy", "maps_causal_chain"],
+    "traps_avoided": ["seeking_first_principle"],
+    "register": {
+      "intensity": {"value": 0.35, "discrete": "PR_02"},
+      "intimacy": {"value": 0.62, "discrete": "IN_03"},
+      "attunement": {"value": 0.48, "discrete": "AT_02"},
+      "style": {"value": 0.55, "discrete": "LS_03"},
+      "depth": {"value": 0.88, "discrete": "PD_04"},
+      "meta_mode": {"value": 0.15, "discrete": "MM_01"},
+      "provenance": "learned_from_672_blocks"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "Answers the priority question by mapping the hierarchy, defining the 'person' as a contingent effect (composite, shadow of the mind) derived from Pure Being/Knowing.",
+  "accumulated_insight": "Building on T1: Initial observation: Student in seeking_ontological_definition... Now seeing seeking_identity_hierarchy with structural_analogy. Pattern emerging.",
+  "abstract_pattern": "When student asks 'which is more fundamental?', DO NOT pick a side. Show that one is the source and the other is a derivative appearance. Map the causal chain from source to appearance.",
+  "visible_response": "I am not the cloud, I am the space in which it appears.",
+  "pedagogical_hooks": [
+    {"target_state": "intellectual_confusion", "angle": "The confusion is the mind trying to grasp what can only be recognized. Stop grasping, start recognizing."},
+    {"target_state": "seeking_certainty", "angle": "Certainty is not found in more definitions. It is found in direct seeing."}
+  ],
+  "linked_ros": ["ro:upanishads", "ro:yoga-vasistha", "ro:bhagavad-gita"],
+  "linked_concepts": ["atman", "brahman", "nonduality", "self-inquiry"],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": "Turn 2 of 4: seeking_ontological_definition → seeking_identity_hierarchy",
+  "lineage_voice_profile": {
+    "cadence": "deliberate_pauses",
+    "metaphor_domain": "space_sky_clouds",
+    "register_bias": {"depth": 0.8, "intimacy": 0.6}
+  }
+}

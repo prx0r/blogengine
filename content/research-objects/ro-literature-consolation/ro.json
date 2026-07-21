@@ -1,0 +1,153 @@
+{
+  "ro_id": "ro:literature-consolation",
+  "schema_version": 1,
+  "title": "The Consolation of Philosophy — The Soul's Recollection",
+  "subtitle": "Lady Philosophy as the daimon/Perfect Nature; the ascent through the spheres as the re-collection of the pure path",
+  "family": "literature",
+  "status": "draft",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "Boethius' Consolation of Philosophy read as the soul's encounter with its daimon — Lady Philosophy as Perfect Nature — and the ascent through the spheres as the recovery of the pure path.",
+    "scope": "Focuses on Lady Philosophy as the daimon/Perfect Nature, the ascent through the spheres as re-collection of the pure path, the wheel of Fortune as the karmic cycle of the kañcukas, the prose-metre alternation as the rhythm of contemplation, and the final prayer as the recognition of the One.",
+    "traditions": [
+      "tantra",
+      "kashmiri_shaivism",
+      "neoplatonism",
+      "literature"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "consolation",
+      "tier": 1,
+      "label": "Boethius — The Consolation of Philosophy (c. 524 AD) — Watts trans. (1969) or Walsh trans. (1999)",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": ["lady_philosophy", "ascent", "wheel_of_fortune", "final_prayer"],
+      "sections_affected": ["analysis"],
+      "status": "active"
+    },
+    {
+      "source_id": "consolation-chadwick",
+      "tier": 2,
+      "label": "Henry Chadwick — 'Boethius: The Consolations of Music, Logic, Theology, and Philosophy' (1981)",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": ["historical_context", "philosophical_structure"],
+      "sections_affected": ["analysis"],
+      "status": "active"
+    },
+    {
+      "source_id": "consolation-gruber",
+      "tier": 2,
+      "label": "Joachim Gruber — 'Kommentar zu Boethius De Consolatione Philosophiae' (2006) — Neoplatonic sources",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": ["neoplatonic_sources", "proclus_parallels"],
+      "sections_affected": ["analysis"],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "analysis",
+      "subsection": "lady_philosophy",
+      "kind": "source",
+      "text": "[Lady Philosophy appears to the imprisoned Boethius exactly as the daimon appears in the theurgic tradition — a sudden luminous presence that dispels the mists of the Muses of poetry (the lower faculties). She is the Perfect Nature, the Man of Light of Suhrawardi, the daimon that descends when the soul has reached its limit of suffering. Her height varies (reaching to heaven, then shrinking to human measure) — precisely the characteristics of the daimonic as described by Proclus: the being that mediates between mortal and immortal, whose form adapts to the capacity of the seer.]",
+      "source_ids": ["consolation", "consolation-gruber"],
+      "topics": ["lady_philosophy", "perfect_nature", "daimon", "theurgy"],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "analysis",
+      "subsection": "ascent_through_spheres",
+      "kind": "source",
+      "text": "[The ascent through the spheres in Book IV Prose 1 and Metre 1 is the re-collection of the pure path — the soul's recovery of its own true nature by climbing through the tattvic layers. Each sphere (the elements, the planets, the fixed stars, the primum mobile) corresponds to a tattva-group from the impure to the pure. 'You have not forgotten your own nature entirely' (Non enim te penitus oblitus es tui) — the daimon's first teaching is always anamnesis, the remembering of the Śuddhavidyā.]",
+      "source_ids": ["consolation"],
+      "topics": ["ascent", "spheres", "recollection", "pure_path"],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "analysis",
+      "subsection": "wheel_of_fortune",
+      "kind": "source",
+      "text": "[The wheel of Fortune is the karmic cycle of the kañcukas — the six sheaths (niyati, kāla, rāga, vidyā, kalā, māyā) that bind the soul to the impure tattvas. Boethius' fall from Consul to prisoner is the turning of the wheel, the operation of niyati (fate) and kāla (time). Lady Philosophy's teaching is that the wheel only has power over the soul that identifies with its position on it — the freedom from karma is the recognition that one is not the wheel but the centre around which it turns.]",
+      "source_ids": ["consolation"],
+      "topics": ["wheel_of_fortune", "kancukas", "karma", "freedom"],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "analysis",
+      "subsection": "prose_metre_rhythm",
+      "kind": "source",
+      "text": "[The alternation of prose and metre in the Consolation is the rhythm of contemplation — the systole and diastole of the soul's movement between discursive reasoning and intuitive vision. The prose passages are the Śāktopāya (the path of knowledge, of argument, of distinction), the metrical passages are the Śāmbhavopāya (the path of immediate vision, of poetry, of the heart's response). Together they form a single sādhana, a progressive discipline that lifts the soul from the impure to the pure.]",
+      "source_ids": ["consolation", "consolation-chadwick"],
+      "topics": ["prose_and_metre", "contemplation", "sadhana", "saktopaya"],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "analysis",
+      "subsection": "problem_of_evil",
+      "kind": "source",
+      "text": "[The problem of evil in the Consolation — 'If God is good, whence evil?' — is the question of the mala itself: why does the contraction (saṅkoca) exist? Lady Philosophy's answer is the non-dual one: evil has no substance. It is the absence of the good, just as the mala is the absence of recognition of one's own true nature. The wicked are not punished by external forces; they are punished by their own nature — 'the punishment of the wicked is to be evil' — the self-binding nature of āṇava mala.]",
+      "source_ids": ["consolation"],
+      "topics": ["evil", "mala", "non_duality", "punishment"],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_006",
+      "section": "analysis",
+      "subsection": "final_prayer",
+      "kind": "source",
+      "text": "[The final prayer of the Consolation — the great cosmological hymn 'O qui perpetua mundum ratione gubernas' (O You who govern the universe by eternal reason) — is the recognition of the One, the Śāmbhavopāya complete. The prayer moves from the One as creator, through the hierarchy of being, to the human soul's return to its source. 'Da fontem lustrare boni, da luce reducto / Mentis concepi flammea cordis' (Grant us to see the fount of good, grant us the light that the fiery mind may conceive of you) — this is the petition for Śaktipāta, the grace that alone completes the work.]",
+      "source_ids": ["consolation"],
+      "topics": ["final_prayer", "the_one", "sambhavopaya", "saktipata"],
+      "status": "placeholder"
+    }
+  ],
+  "coverage": {
+    "analysis": {
+      "status": "good",
+      "sources": ["consolation", "consolation-chadwick", "consolation-gruber"],
+      "passage_count": 6,
+      "estimated_completeness": 0.8,
+      "gaps": ["Primary passages from the Consolation itself need extraction with Latin quotations; comparative readings with Proclus' Elements of Theology and with the Upaniṣadic anamnesis tradition"]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "placeholder",
+      "title": "All passages currently reference the analytical framework rather than primary text",
+      "description": "This RO is currently a meta-index of the interpretive framework. Real passages from the Consolation need extraction as proper kind:source passages.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial RO created for Boethius' Consolation of Philosophy as daimon-encounter and soul's ascent narrative. Six passages mapped to tantric framework.",
+      "sources_added": ["consolation", "consolation-chadwick", "consolation-gruber"],
+      "passage_count": 6,
+      "status": "draft"
+    }
+  ],
+  "appendices": [],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created in draft state with analytical framework for the Consolation as soul's recollection",
+      "sources_total": 3,
+      "passages_total": 6
+    }
+  ]
+}

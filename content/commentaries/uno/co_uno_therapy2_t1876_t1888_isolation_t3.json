@@ -1,0 +1,53 @@
+{
+  "co_id": "co:uno_therapy2_t1876_t1888_isolation_t3",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy2_t1876_t1888_isolation_affect_resume",
+  "turn_index": 3,
+  "lineage": "Therapeutic",
+  "student_state": "uncertainty",
+  "behavior_tags": [
+    "confusion"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_02",
+    "function_name": "UM_02",
+    "mechanism_shape": "NONE",
+    "teaching_actions": [
+      "points_to_defense"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.35,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_02",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "no_clear_effect",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "Turn 4: '[Fidgets.] Maybe I’m not angry.'. Student now in uncertainty. Continuing with none approach. Building on previous turn's foundation.",
+  "accumulated_insight": "T4: Student: '[Fidgets.] Maybe I’m not angry.'. Shift from defensive_agreement to uncertainty. Teacher applies none mechanism with points to defense. Mid-episode progression in UNMAKING phase.",
+  "abstract_pattern": "",
+  "visible_response": "But you just said you are.\nDo you notice how you ignore your anger as soon as you say it?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

@@ -1,0 +1,59 @@
+{
+  "co_id": "co:uno_gorgias_ep017_pilot_navigator__t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gorgias_ep017_pilot_navigator_knowledge",
+  "turn_index": 0,
+  "lineage": "Socratic",
+  "student_state": "cooperative_engagement",
+  "behavior_tags": [
+    "grants_analogy"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_03",
+    "function_name": "RM_03",
+    "mechanism_shape": "STRUCTURAL_MAPPING",
+    "teaching_actions": [
+      "maps_analogy_to_principle"
+    ],
+    "traps_avoided": [
+      "category_conflation"
+    ],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.62,
+      "attunement": 0.8,
+      "style": 0.5,
+      "depth": 0.62,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_03",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_03",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "With 'pilot needs knowledge' accepted, pivot to 'orator needs justice/knowledge' to link craft to ethics. Expect a deeper question or mild resistance at the transfer.",
+  "accumulated_insight": "T1: Student agrees navigator needs knowledge ('Yes, because his craft demands it')?cooperative engagement via grants_analogy. They understand: role demands knowledge. Structural_mapping/RM_03 sets up transfer: orator likewise needs knowledge of justice. Pattern: accept source analogy ? apply to target next. Confidence medium because analogy acceptance usually permits mapping.",
+  "abstract_pattern": "",
+  "visible_response": "Then a man who rules must know what is best—not merely act on desire.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:proclus-elements",
+    "ro:platonism-decoded",
+    "ro:chaldean-oracles"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

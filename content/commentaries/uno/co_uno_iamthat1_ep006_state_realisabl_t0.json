@@ -1,0 +1,60 @@
+{
+  "co_id": "co:uno_iamthat1_ep006_state_realisabl_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "iamthat1_ep006_state_realisable_inner_teacher",
+  "turn_index": 0,
+  "lineage": "Advaita",
+  "student_state": "intellectually_skeptical",
+  "behavior_tags": [
+    "skeptical_inquiry",
+    "external_validation_seeking"
+  ],
+  "pedagogy": {
+    "phase": "META",
+    "function_id": "ME_03",
+    "function_name": "ME_03",
+    "mechanism_shape": "CONSTRAINT_COLLAPSE",
+    "teaching_actions": [
+      "denies_fantasy",
+      "asserts_reality_criterion"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.62,
+      "attunement": 0.5,
+      "style": 0.65,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_04",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "request_clarification",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The constraint_collapse mechanism with ME_03 feels like intellectually_skeptical is being met with a specific geometric cut. But what if the geometry itself is what they're resisting? The skeptical_inquiry, external_validation_seeking suggests they're aware of something but can't name it.",
+  "accumulated_insight": "T1: Student asks question—seeking understanding. Pattern: inquiry → response → [next: clarification]. Medium confidence because teaching typically triggers clarification requests.",
+  "abstract_pattern": "",
+  "visible_response": "I would not talk about it, if it were not.\nWhy should I engage in fancies?",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:upanishads",
+    "ro:yoga-vasistha",
+    "ro:bhagavad-gita",
+    "ro:yoga-sutras"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

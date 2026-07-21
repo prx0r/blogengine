@@ -1,0 +1,42 @@
+{
+  "work_id": "work:t2-pubmed-hierarchical-predictive-coding-in-distributed-pain-circuits",
+  "schema_version": 2,
+  "title": "Hierarchical predictive coding in distributed pain circuits.",
+  "publication": {
+    "year": 2023,
+    "type": "article",
+    "source": "PubMed/MEDLINE",
+    "language": "en",
+    "journal": "Front Neural Circuits"
+  },
+  "identifiers": {
+    "pmid": "36937818",
+    "doi": "10.3389/fncir.2023.1073537"
+  },
+  "topics": [
+    "phase-6-dependent-arising",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "tradition": [
+    "contemporary_science"
+  ],
+  "tier": 2,
+  "assets": {
+    "pdf_path": "t2-pubmed-pmc10020379_Hierarchical_predictive_coding_in_distributed_pain.pdf",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/36937818/",
+    "abstract": "Predictive coding is a computational theory on describing how the brain perceives and acts, which has been widely adopted in sensory processing and motor control. Nociceptive and pain processing involves a large and distributed network of circuits. However, it is still unknown whether this distributed network is completely decentralized or requires networkwide coordination. Multiple lines of evidence from human and animal studies have suggested that the cingulate cortex and insula cortex (cingul"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_t2_search",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 6,
+    "phase_name": "Dependent Arising",
+    "bridge_rationale": "Dependent arising \u2014 predictive processing, free energy principle, active inference as causal cognition."
+  },
+  "evaluation": "Good (score=2.7)"
+}

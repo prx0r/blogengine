@@ -1,0 +1,42 @@
+{
+  "work_id": "work:t2-pubmed-reply-to-scholz-et-al",
+  "schema_version": 2,
+  "title": "Reply to Scholz et al.",
+  "publication": {
+    "year": 2025,
+    "type": "article",
+    "source": "PubMed/MEDLINE",
+    "language": "en",
+    "journal": "Curr Biol"
+  },
+  "identifiers": {
+    "pmid": "40628227",
+    "doi": "10.1016/j.cub.2025.05.010"
+  },
+  "topics": [
+    "phase-10-imaginal-reconstruction",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "tradition": [
+    "contemporary_science"
+  ],
+  "tier": 2,
+  "assets": {
+    "pdf_path": null,
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/40628227/",
+    "abstract": "In our recent study1, we investigated the neural basis of attempts at forming voluntary visual imagery in individuals with aphantasia and found that although these individuals lack visual imagery experience, their early visual cortex exhibits stable, content-specific activation patterns during imagery attempts. Unlike in the neurotypicals, these neural representations, however, differ from those evoked during perception, as indicated by the failure of cross-decoding between imagery and perceptua"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_t2_search",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 10,
+    "phase_name": "Imaginal Reconstruction",
+    "bridge_rationale": "Imaginal — mental imagery as real perception, imagination activating sensory cortices, aphantasia."
+  },
+  "evaluation": "Excellent (score=4.1)"
+}

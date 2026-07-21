@@ -1,0 +1,59 @@
+{
+  "co_id": "co:uno_discourses_b2_c24_status_conte_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "discourses_b2_c24_status_contest",
+  "turn_index": 0,
+  "lineage": "Realist",
+  "student_state": "seeking_validation",
+  "behavior_tags": [
+    "bragging",
+    "external_validation"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_05",
+    "function_name": "UM_05",
+    "mechanism_shape": "COMPARISON_CONTRAST",
+    "teaching_actions": [
+      "uses_mythological_benchmark",
+      "tests_limit"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.15,
+      "attunement": 0.5,
+      "style": 0.65,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_01",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_04",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "resist_intellectually",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "My intent says 'Shift their frame...' but the student is in seeking_validation. Am I trying to shift their frame or are they already shifting? The comparison_contrast mechanism suggests I'm doing something, but maybe they're doing it to themselves and I'm just naming it.",
+  "accumulated_insight": "T1: Student says 'But I also am rich.'—seeking validation via bragging, external validation. Teacher responds '' using comparison contrast to uses mythological benchmark, tests limit. Opening UNMAKING move addresses seeking validation. Predicting resist intellectually because comparison contrast interventions typically produce this response.",
+  "abstract_pattern": "",
+  "visible_response": "Are you then richer than Agamemnon?",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:kybalion",
+    "ro:grimoires-decoded",
+    "ro:hermes-proof-system"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

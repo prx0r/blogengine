@@ -1,0 +1,141 @@
+{
+  "ro_id": "ro:nanavira-clearing-path",
+  "schema_version": 1,
+  "title": "Clearing the Path / Notes on Dhamma \u2014 \u00d1\u0101\u1e47av\u012bra Thera",
+  "subtitle": "A collection of letters and philosophical essays on the Buddha's teaching, centering on Fundamental Structure \u2014 a phenomenological structural analysis of experience as dynamic conditionality",
+  "family": "thinker-topic",
+  "status": "stub",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "\u00d1\u0101\u1e47av\u012bra's Clearing the Path (1960-1965) develops a 'Fundamental Structure' of experience based on dependent arising (pa\u1e6dicca-samupp\u0101da), refracted through Kierkegaardian existentialism and Eddingt...",
+    "scope": "Covers the Fundamental Structure essay, the letters on personality-view (sakk\u0101ya-di\u1e6d\u1e6dhi), the analysis of dukkha, dependent arising, the concept of a being (satta), the tetrahedron diagram of intentional experience, and the Kierkegaardian method of negative thinking.",
+    "traditions": [
+      "theravada",
+      "buddhist-philosophy",
+      "phenomenology",
+      "dependent-arising"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "nanavira-clearing-path",
+      "tier": 1,
+      "label": "\u00d1\u0101\u1e47av\u012bra Thera \u2014 Clearing the Path / Notes on Dhamma (1960-1965). PDF: ctp_book_v1.pdf in corpus root. 15,392 readable lines. Full text available.",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": [
+        "fundamental_structure",
+        "negative_thinking",
+        "paticca_samuppada",
+        "sakkaya_ditthi",
+        "dukkha_analysis",
+        "satta"
+      ],
+      "sections_affected": [
+        "theory",
+        "philosophy"
+      ],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "theory",
+      "subsection": "fundamental_structure_as_constraint_space",
+      "kind": "synthesis",
+      "text": "\u00d1\u0101\u1e47av\u012bra's Fundamental Structure is a diagram (derived from Eddington's quantum diagrams) that maps the relations between intention, responsibility, context, conditionality, and hunger (ta\u1e47h\u0101) that constitute experience. The diagram is a tetrahedron: four vertices (subject, object, intention, act) with six edges representing the relations between them. This IS the constraint space (S, C, A) approached from the phenomenological side. S is the space of possible experience, C is the structure of conditionality (pa\u1e6dicca-samupp\u0101da), A is nibb\u0101na as the cessation of the dynamic. The tetrahedron IS the simplest positive geometry \u2014 the minimal complete structure from which all experience is generated.",
+      "source_ids": [
+        "nanavira-clearing-path"
+      ],
+      "topics": [
+        "fundamental_structure",
+        "constraint_space",
+        "tetrahedron",
+        "conditionality"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "theory",
+      "subsection": "negative_thinking_as_apophatic",
+      "kind": "source",
+      "text": "'Positive or abstract thinking abstracts from existence and is thus incapable of thinking it continuously.' \u00d1\u0101\u1e47av\u012bra's method is negative thinking \u2014 not asserting what reality IS but analyzing the CONDITIONS under which anything appears. This IS the Tantraloka's apophatic tradition: the 38th principle (An\u0101khy\u0101) is the Undefinable, known only by what it is NOT. \u00d1\u0101\u1e47av\u012bra's negative thinking IS the method of approaching the 38th \u2014 removing false positives until only the silence remains. His quote from Kierkegaard: 'Precisely because the negative is present in existence, and present everywhere (for existence is a constant process of becoming), it is necessary to become aware of its presence continuously, as the only safeguard against it.'",
+      "source_ids": [
+        "nanavira-clearing-path"
+      ],
+      "topics": [
+        "negative_thinking",
+        "kierkegaard",
+        "apophatic",
+        "anakhya"
+      ],
+      "status": "active"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "theory",
+      "subsection": "satta_as_configuration",
+      "kind": "synthesis",
+      "text": "\u00d1\u0101\u1e47av\u012bra's analysis of satta (a being): 'Dukkham eva hi sambhoti, dukkha\u1e43 ti\u1e6d\u1e6dhati veti ca' \u2014 only suffering arises, only suffering ceases. The 'being' (satta) is not a substance but a dynamic configuration of the five aggregates (pa\u00f1c'up\u0101d\u0101nakkhandh\u0101). This IS the j\u012bva (the individuated configuration) in the Tantraloka. The error of personality-view (sakk\u0101ya-di\u1e6d\u1e6dhi) IS the Sv(O) error \u2014 taking the configuration as self-grounding. \u00d1\u0101\u1e47av\u012bra's solution: the sot\u0101panna (stream-enterer) has abandoned sakk\u0101ya-di\u1e6d\u1e6dhi \u2014 they no longer identify the configuration as a self. This IS partial recognition (Rec) \u2014 knowing that the configuration is empty of self-nature. Full recognition (FullRec) would be the arahant \u2014 the configuration that has entirely ceased the error.",
+      "source_ids": [
+        "nanavira-clearing-path"
+      ],
+      "topics": [
+        "satta",
+        "configuration",
+        "jiva",
+        "sakkaya_ditthi",
+        "sotapanna"
+      ],
+      "status": "active"
+    }
+  ],
+  "coverage": {
+    "theory": {
+      "status": "good",
+      "sources": [
+        "nanavira-clearing-path"
+      ],
+      "passage_count": 3,
+      "estimated_completeness": 0.4,
+      "gaps": [
+        "Full extraction of the Fundamental Structure essay; the tetrahedron diagram is referenced but the actual figure is not extractable from the PDF"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "coverage_gap",
+      "title": "Diagram extraction",
+      "description": "The Fundamental Structure diagram (tetrahedron) cannot be extracted from the PDF. It would need to be reconstructed from the textual description.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial RO for \u00d1\u0101\u1e47av\u012bra's Clearing the Path. 3 passages mapping Fundamental Structure to constraint space, negative thinking to apophatic method, satta to configuration.",
+      "sources_added": [
+        "nanavira-clearing-path"
+      ],
+      "passage_count": 3,
+      "status": "draft"
+    }
+  ],
+  "appendices": [],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created. \u00d1\u0101\u1e47av\u012bra's Fundamental Structure is now formally mapped to the constraint space framework.",
+      "sources_total": 1,
+      "passages_total": 3
+    }
+  ]
+}

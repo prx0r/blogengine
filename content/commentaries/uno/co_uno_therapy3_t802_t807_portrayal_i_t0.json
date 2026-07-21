@@ -1,0 +1,58 @@
+{
+  "co_id": "co:uno_therapy3_t802_t807_portrayal_i_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3_t802_t807_portrayal_intellectualization_block",
+  "turn_index": 0,
+  "lineage": "Therapeutic",
+  "student_state": "cognitive_distance",
+  "behavior_tags": [
+    "intellectualization",
+    "judgment"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_01",
+    "function_name": "UM_01",
+    "mechanism_shape": "CONSTRAINT_COLLAPSE",
+    "teaching_actions": [
+      "corrects_mistake",
+      "blocks_intellectualization",
+      "re-asks_feeling"
+    ],
+    "traps_avoided": [
+      "category_conflation"
+    ],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.35,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_02",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "no_clear_effect",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "They're analyzing the portrayal intellectually instead of feeling it. Teacher names the defense: intellectualization as avoidance. Making unconscious strategy conscious. Can't feel while analyzing. Single-turn identification of pattern.",
+  "accumulated_insight": "T1 (Single-turn): Student intellectualizes portrayal, avoiding feeling. Teacher names blocking: 'You're using intellect to avoid feeling.' Identifies defense mechanism. Predicting no_clear_effect (single turn, defense likely continues).",
+  "abstract_pattern": "",
+  "visible_response": "(Correction): I agree it was terrible, but that still doesn’t say what you feel toward him for doing that.\nIf you don’t cover your feeling with a thought, what is the feeling toward him?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

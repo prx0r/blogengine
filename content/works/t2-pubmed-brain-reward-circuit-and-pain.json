@@ -1,0 +1,46 @@
+{
+  "work_id": "work:t2-pubmed-brain-reward-circuit-and-pain",
+  "schema_version": 2,
+  "title": "Brain Reward Circuit and Pain.",
+  "authors": [
+    {
+      "name": "Watanabe M"
+    },
+    {
+      "name": "Narita M"
+    }
+  ],
+  "publication": {
+    "year": 2018,
+    "journal": "Adv Exp Med Biol",
+    "source": "PubMed/MEDLINE",
+    "language": "en"
+  },
+  "identifiers": {
+    "pmid": "30306526",
+    "doi": "10.1007/978-981-13-1756-9_17"
+  },
+  "topics": [
+    "phase-5-water-pleasure",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "assets": {
+    "pdf_path": "t2-pubmed-brain-reward-circuit-and-pain.pdf",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/30306526/",
+    "abstract": "Pain plays an important role in alerting the body to potential tissue injury and drives behavior that protects the body from further harm. In contrast, chronic pain does not serve this function and instead only provides a persistent sensation of pain and a negative experience. The mesolimbic dopaminergic system has been recognized to play a central role in motivated behaviors, including various types of reward and pleasure. Many dopaminergic neurons may release multiple neurotransmitters, and th"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_alt17_acquisition",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 5,
+    "phase_name": "Water/Pleasure",
+    "bridge_rationale": "Bridge paper score=10.5: links Water/Pleasure concept to mechanistic neuroscience"
+  },
+  "evaluation": "Score 10: Excellent bridge signal",
+  "tier": 2
+}

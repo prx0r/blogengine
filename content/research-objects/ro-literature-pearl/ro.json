@@ -1,0 +1,154 @@
+{
+  "ro_id": "ro:literature-pearl",
+  "schema_version": 1,
+  "title": "Pearl — The Dream-Vision of Sophia",
+  "subtitle": "The Pearl Maiden as the Daena/Sophia/the daimon in its beautiful aspect; the pearl as the Lapis and the soul itself",
+  "family": "literature",
+  "status": "draft",
+  "current_version": "0.1.0",
+  "summary": {
+    "one_line": "The Middle English dream-vision Pearl read as the soul's encounter with Sophia — the daimon in its beautiful aspect — and the threshold between the impure and pure paths.",
+    "scope": "Focuses on the Pearl Maiden as the Daena/Sophia/the beautiful daimon, the pearl as the Lapis philosophorum and the soul itself, the river as the threshold between impure and pure paths, the Celestial City as the pure path, and the transformation from grief to gnosis as the movement from Māyā to Śuddhavidyā.",
+    "traditions": [
+      "tantra",
+      "kashmiri_shaivism",
+      "literature",
+      "daimon",
+      "hermetic"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "pearl-poem",
+      "tier": 1,
+      "label": "Pearl (anon., c. 1400) — Stanbury ed. (2007) or Tolkien trans. (1953)",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": ["dream_vision", "pearl_maiden", "celestial_city", "threshold_river"],
+      "sections_affected": ["analysis"],
+      "status": "active"
+    },
+    {
+      "source_id": "pearl-anderson",
+      "tier": 2,
+      "label": "J.J. Anderson — 'The Pearl-Poet: A Commentary'",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": ["structural_analysis", "allegorical_readings"],
+      "sections_affected": ["analysis"],
+      "status": "active"
+    },
+    {
+      "source_id": "pearl-corbin-sophia",
+      "tier": 2,
+      "label": "Henry Corbin — Spiritual Body and Celestial Earth (Sophia passages relating to Daena/Sophia)",
+      "first_added_in": "0.1.0",
+      "last_reviewed_in": "0.1.0",
+      "contribution": ["daena", "sophia_perennis", "celestial_witness"],
+      "sections_affected": ["analysis"],
+      "status": "active"
+    }
+  ],
+  "body": [
+    {
+      "passage_id": "p_001",
+      "section": "analysis",
+      "subsection": "pearl_maiden_as_sophia",
+      "kind": "source",
+      "text": "[The Pearl Maiden who appears to the Dreamer across the river is the Daena/Sophia — the daimon in its beautiful aspect. She is the dreamer's own celestial counterpart, his Perfect Nature, exactly as in the Suhrawardian vision. She is radiant with pearls and light, and her speech is the voice of gnosis. She is not a lost daughter but the soul's own higher self — unus-ambo with the dreamer, though he cannot yet recognize this.]",
+      "source_ids": ["pearl-poem", "pearl-corbin-sophia"],
+      "topics": ["sophia", "daena", "beautiful_aspect", "perfect_nature"],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_002",
+      "section": "analysis",
+      "subsection": "pearl_as_lapis",
+      "kind": "source",
+      "text": "[The pearl itself is the Lapis philosophorum — the Philosopher's Stone of the alchemists — and also the soul itself. The Dreamer loses his pearl in the garden (the soul's descent into matter); he seeks it through the dream-vision (the opus contra naturam); he finds it again in the Celestial City, 'as dere as dere as hit demed clere' (precious and bright), transmuted into the celestial form. The pearl is at once the goal and the substance of the work.]",
+      "source_ids": ["pearl-poem"],
+      "topics": ["lapis", "philosophers_stone", "soul", "transmutation"],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_003",
+      "section": "analysis",
+      "subsection": "river_as_threshold",
+      "kind": "source",
+      "text": "[The river that separates the Dreamer from the Pearl Maiden is the threshold between the impure path (the world of grief, matter, time, mutability) and the pure path (the eternal, the celestial, the gnostic). The Dreamer sees across it but cannot cross it — he is still bound by the mala of grief (āṇava mala). The river is the Vaitaraṇī of the Upaniṣads, the stream that divides saṃsāra from mokṣa.]",
+      "source_ids": ["pearl-poem"],
+      "topics": ["threshold", "river", "impure_pure", "mala"],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_004",
+      "section": "analysis",
+      "subsection": "celestial_city",
+      "kind": "source",
+      "text": "[The vision of the Celestial City — the New Jerusalem descending — is the pure path (Śuddhavidyā) made visible. The Dreamer sees the City as a 'cité of glas' (city of glass), transparent and luminous, the 144,000 stones of its foundation corresponding to the pure tattvas in their perfected order. The Lamb at its centre is the absolute — Śiva-Śakti in union — and the river of life that flows from the throne is the descent of grace (Śaktipāta).]",
+      "source_ids": ["pearl-poem"],
+      "topics": ["celestial_city", "pure_path", "suddhavidya", "saktipata"],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_005",
+      "section": "analysis",
+      "subsection": "grief_to_gnosis",
+      "kind": "source",
+      "text": "[The Dreamer's journey from the opening grief ('I playned my perle þer þeron' — I mourned my pearl there) to the final acceptance of divine will (the surrender to the Lamb) is the transformation from Māyā (the condition of separation and sorrow) to Śuddhavidyā (pure knowledge of unity). The key middle term is the Maiden's teaching that the Dreamer's grief is itself the veil — his attachment to the pearl as 'lost' is the very thing that prevents him from seeing it as 'found' in its celestial form.]",
+      "source_ids": ["pearl-poem"],
+      "topics": ["grief", "gnosis", "maya", "suddhavidya", "transformation"],
+      "status": "placeholder"
+    },
+    {
+      "passage_id": "p_006",
+      "section": "analysis",
+      "subsection": "final_waking",
+      "kind": "source",
+      "text": "[The Dreamer's attempt to cross the river and his sudden waking is the failed crossing of the threshold. Like Gawain, he reaches the boundary but cannot fully enter. Yet the pearl remains with him — 'To pay þe Prince other sete saʒte' (to appease the Prince and be set at peace). The waking is not a fall but a return with the vision imprinted. He has received the Śaktipāta even if he has not yet realized it — the seed of gnosis planted in the field of the soul.]",
+      "source_ids": ["pearl-poem"],
+      "topics": ["failed_crossing", "saktipata", "seed_of_gnosis", "return"],
+      "status": "placeholder"
+    }
+  ],
+  "coverage": {
+    "analysis": {
+      "status": "good",
+      "sources": ["pearl-poem", "pearl-anderson", "pearl-corbin-sophia"],
+      "passage_count": 6,
+      "estimated_completeness": 0.75,
+      "gaps": ["Primary passages from the poem itself need extraction; comparative readings with the other Pearl-poet works (Cleanness, Patience, Gawain) and with the Zoroastrian Daena tradition"]
+    }
+  },
+  "issues": [
+    {
+      "id": "issue-001",
+      "type": "placeholder",
+      "title": "All passages currently reference the analytical framework rather than primary text",
+      "description": "This RO is currently a meta-index of the interpretive framework. Real passages from Pearl need extraction as proper kind:source passages.",
+      "status": "open",
+      "created": "2026-07-14",
+      "auto_generated": true
+    }
+  ],
+  "versions": [
+    {
+      "version": "0.1.0",
+      "date": "2026-07-14",
+      "type": "initial",
+      "summary": "Initial RO created for Pearl as Sophia-vision narrative. Six passages mapped to tantric framework.",
+      "sources_added": ["pearl-poem", "pearl-anderson", "pearl-corbin-sophia"],
+      "passage_count": 6,
+      "status": "draft"
+    }
+  ],
+  "appendices": [],
+  "timeline": [
+    {
+      "date": "2026-07-14",
+      "event": "RO created in draft state with analytical framework for Pearl as Sophia-encounter narrative",
+      "sources_total": 3,
+      "passages_total": 6
+    }
+  ]
+}

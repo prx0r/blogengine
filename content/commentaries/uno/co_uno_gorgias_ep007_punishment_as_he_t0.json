@@ -1,0 +1,51 @@
+{
+  "co_id": "co:uno_gorgias_ep007_punishment_as_he_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gorgias_ep007_punishment_as_healing",
+  "turn_index": 0,
+  "lineage": "Socratic",
+  "student_state": "seeking_clarity",
+  "behavior_tags": [
+    "requests_clarification"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_01",
+    "function_name": "RM_01",
+    "mechanism_shape": "STRUCTURAL_ANALOGY",
+    "teaching_actions": [
+      "introduces_analogy"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.5,
+      "attunement": 0.5,
+      "style": 0.5,
+      "depth": 0.38,
+      "meta_mode": 0.2,
+      "provenance": "default"
+    },
+    "predicted_impact": "request_clarification",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "The analogy introduction works: punishment = cure (like medicine for body), soul = can be diseased. This reframes punishment from 'suffering' to 'healing'—a radical shift. The student asks mechanism question (seeking clarity), which shows they understand: punishment = suffering (needs explanation). They'll likely ask for clarification about the analogy next. Hypothesis: medical analogies for abstract concepts (punishment, soul) trigger clarification requests—testable by tracking whether medical analogies lead to clarification inquiries more than other analogy types.",
+  "accumulated_insight": "T1: Student asks mechanism question ('How can punishment benefit the one who suffers it?')—seeking clarity via requests clarification. They understand: punishment = suffering (needs explanation of benefit). The structural_analogy mechanism introduces: punishment = cure (like medicine for body), soul = can be diseased, reframes: punishment as healing (not just suffering). Pattern: mechanism question → analogy introduction → [next: clarification request]. Medium confidence because analogies typically trigger clarification requests, especially medical analogies for abstract concepts.",
+  "abstract_pattern": "",
+  "visible_response": "Because punishment is a kind of cure, Polus. No one wants to keep the soul diseased.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:proclus-elements",
+    "ro:platonism-decoded",
+    "ro:chaldean-oracles"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

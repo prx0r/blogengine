@@ -1,0 +1,47 @@
+{
+  "work_id": "work:t2-pubmed-neural-elements-for-predictive-coding",
+  "schema_version": 2,
+  "title": "Neural Elements for Predictive Coding.",
+  "authors": [
+    {
+      "name": "Shipp S"
+    }
+  ],
+  "publication": {
+    "year": 2016,
+    "type": "article",
+    "source": "PubMed/MEDLINE",
+    "language": "en",
+    "journal": "Front Psychol"
+  },
+  "identifiers": {
+    "pmid": "27917138",
+    "doi": "10.3389/fpsyg.2016.01792"
+  },
+  "topics": [
+    "phase-6-neural-elements-for-",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "tradition": [
+    "contemporary_science"
+  ],
+  "tier": 2,
+  "assets": {
+    "pdf_path": "t2-PMC5114244_Neural_Elements_for_Predictive_Coding.pdf",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/27917138/",
+    "abstract": "Predictive coding theories of sensory brain function interpret the hierarchical construction of the cerebral cortex as a Bayesian, generative model capable of predicting the sensory data consistent with any given percept. Predictions are fed backward in the hierarchy and reciprocated by prediction error in the forward direction, acting to modify the representation of the outside world at increasing levels of abstraction, and so to optimize the nature of perception over a series of iterations. Th"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "green",
+    "source": "pubmed_t2_search",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 6,
+    "phase_name": "Dependent-arising",
+    "bridge_rationale": "Dependent arising \u2014 predictive processing, free energy principle, active inference, Bayesian brain, prediction error in perception and action."
+  },
+  "evaluation": "Excellent (score=12.3)"
+}

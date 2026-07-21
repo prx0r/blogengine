@@ -1,0 +1,54 @@
+{
+  "co_id": "co:uno_therapy3_t246_t253_policeman_a_t2",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3_t246_t253_policeman_anxiety_causality",
+  "turn_index": 2,
+  "lineage": "Therapeutic",
+  "student_state": "resonating_agreement",
+  "behavior_tags": [
+    "agreement"
+  ],
+  "pedagogy": {
+    "phase": "SELF-MAKING",
+    "function_id": "SM_04",
+    "function_name": "SM_04",
+    "mechanism_shape": "NONE",
+    "teaching_actions": [
+      "invites_rebellion",
+      "mobilizes_will"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.62,
+      "attunement": 0.8,
+      "style": 0.5,
+      "depth": 0.62,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_03",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_03",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "Final turn: 'Yes.'. Student reaches resonating_agreement after 3-turn sequence. The none approach in SELF-MAKING phase completed the teaching arc. Episode shows how invites rebellion, mobilizes will addresses agreement pattern.",
+  "accumulated_insight": "T3 (Final): Student 'Yes.' reaches resonating_agreement. Episode complete after 3 turns. Teaching arc used none in SELF-MAKING to address agreement. Student moved through progression ending at resonating_agreement.",
+  "abstract_pattern": "",
+  "visible_response": "Shall we break the law and take your side?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

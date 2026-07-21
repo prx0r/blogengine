@@ -1,0 +1,53 @@
+{
+  "co_id": "co:uno_therapy3.1_t3121_t3125_integra_t2",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3.1_t3121_t3125_integrated_conscience_staff",
+  "turn_index": 2,
+  "lineage": "Therapeutic",
+  "student_state": "recognition",
+  "behavior_tags": [
+    "agreement"
+  ],
+  "pedagogy": {
+    "phase": "REMAKING",
+    "function_id": "RM_02",
+    "function_name": "RM_02",
+    "mechanism_shape": "SYSTEM_DYNAMICS",
+    "teaching_actions": [
+      "explains_defense_function"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.35,
+      "depth": 0.38,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_02",
+      "depth_discrete": "PD_02",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "Final turn: 'That’s true.'. Reached recognition after 3 turns. Episode demonstrates system_dynamics effectiveness in REMAKING work. Teaching complete for this sequence.",
+  "accumulated_insight": "T3 (Final): Student: 'That’s true.'. Final state: recognition. Episode complete with 3 turns. Arc shows progression through REMAKING phase using system_dynamics interventions. Teaching sequence addressed agreement pattern.",
+  "abstract_pattern": "",
+  "visible_response": "And maybe if you could accuse them of being your conscience, you could resent them instead of what your own conscience is demanding of you.",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

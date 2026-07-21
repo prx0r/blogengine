@@ -1,0 +1,57 @@
+{
+  "co_id": "co:uno_gorgias_ep022_anti_rhetoric_pa_t0",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "gorgias_ep022_anti_rhetoric_paradox",
+  "turn_index": 0,
+  "lineage": "Socratic",
+  "student_state": "resist_intellectually",
+  "behavior_tags": [
+    "highlights_paradox"
+  ],
+  "pedagogy": {
+    "phase": "META",
+    "function_id": "ME_03",
+    "function_name": "ME_03",
+    "mechanism_shape": "STRUCTURAL_ANALOGY",
+    "teaching_actions": [
+      "reframes_concept"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.62,
+      "attunement": 0.8,
+      "style": 0.5,
+      "depth": 0.62,
+      "meta_mode": 0.75,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_03",
+      "attunement_discrete": "AT_03",
+      "style_discrete": "LS_03",
+      "depth_discrete": "PD_03",
+      "meta_mode_discrete": "MM_02"
+    },
+    "predicted_impact": "request_clarification",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "Use a medicine/surgery analogy: a dangerous tool used carefully to expose its own risks. Expect a ?how so?? that invites the analogy.",
+  "accumulated_insight": "T1: Student notes paradox (?Still, you must use the very craft you condemn to defend your view?)?resist_intellectually via highlights_paradox. They understand: apparent self-use of rhetoric. Structural_analogy/ME_03 reframes: like medicine harming to heal. Pattern: paradox noted ? analogy reframing queued. Confidence medium because analogies often trigger clarification.",
+  "abstract_pattern": "",
+  "visible_response": "If I persuade, it is not as a pastry chef persuades children, but as a doctor speaking bitter truths.",
+  "pedagogical_hooks": [],
+  "linked_ros": [
+    "ro:proclus-elements",
+    "ro:platonism-decoded",
+    "ro:chaldean-oracles"
+  ],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

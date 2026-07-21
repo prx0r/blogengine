@@ -1,0 +1,59 @@
+{
+  "work_id": "work:t2-pubmed-active-listening",
+  "schema_version": 2,
+  "title": "Active listening.",
+  "authors": [
+    {
+      "name": "Friston KJ"
+    },
+    {
+      "name": "Sajid N"
+    },
+    {
+      "name": "Quiroga-Martinez DR"
+    },
+    {
+      "name": "Parr T"
+    },
+    {
+      "name": "Price CJ"
+    }
+  ],
+  "publication": {
+    "year": 2021,
+    "type": "article",
+    "source": "PubMed/MEDLINE",
+    "language": "en",
+    "journal": "Hear Res"
+  },
+  "identifiers": {
+    "pmid": "32732017",
+    "doi": "10.1016/j.heares.2020.107998"
+  },
+  "topics": [
+    "phase-6-active-listening",
+    "frontier_science",
+    "bridge_paper"
+  ],
+  "tradition": [
+    "contemporary_science"
+  ],
+  "tier": 2,
+  "assets": {
+    "pdf_path": null,
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/32732017/",
+    "abstract": "This paper introduces active listening, as a unified framework for synthesising and recognising speech. The notion of active listening inherits from active inference, which considers perception and action under one universal imperative: to maximise the evidence for our (generative) models of the world. First, we describe a generative model of spoken words that simulates (i) how discrete lexical, prosodic, and speaker attributes give rise to continuous acoustic signals; and conversely (ii) how co"
+  },
+  "provenance": {
+    "access_status": "open",
+    "oa_status": "unknown",
+    "source": "pubmed_t2_search",
+    "retrieved_at": "2026-07-12"
+  },
+  "phase_mapping": {
+    "phase": 6,
+    "phase_name": "Dependent-arising",
+    "bridge_rationale": "Dependent arising — predictive processing, free energy principle, active inference, Bayesian brain, prediction error in perception and action."
+  },
+  "evaluation": "Excellent (score=12.0)"
+}

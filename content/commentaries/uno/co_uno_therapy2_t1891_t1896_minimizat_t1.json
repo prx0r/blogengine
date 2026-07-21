@@ -1,0 +1,56 @@
+{
+  "co_id": "co:uno_therapy2_t1891_t1896_minimizat_t1",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy2_t1891_t1896_minimization_car",
+  "turn_index": 1,
+  "lineage": "Therapeutic",
+  "student_state": "unaware_compliance",
+  "behavior_tags": [
+    "agreement"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_02",
+    "function_name": "UM_02",
+    "mechanism_shape": "COMPARISON_CONTRAST",
+    "teaching_actions": [
+      "contrasts_stimulus_response",
+      "labels_minimization"
+    ],
+    "traps_avoided": [
+      "semantic_fog"
+    ],
+    "register": {
+      "intensity": 0.62,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.35,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_03",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_02",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "Turn 2: 'Yes.'. Student now in unaware_compliance. Continuing with comparison_contrast approach. Building on previous turn's foundation.",
+  "accumulated_insight": "T2: Student: 'Yes.'. Shift from casual_dismissal to unaware_compliance. Teacher applies comparison_contrast mechanism with contrasts stimulus response, labels minimization. Mid-episode progression in UNMAKING phase.",
+  "abstract_pattern": "",
+  "visible_response": "Do you notice how you minimize your feelings?\nHe threw you out of his car and left you stranded in the snow, and then you say you feel a little peeved.\nDo you see how you water down your feelings?",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}

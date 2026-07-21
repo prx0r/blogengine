@@ -1,0 +1,178 @@
+- id: tradition-neoplatonism
+  label: "Neoplatonism"
+  aliases: ["Late Antique Platonism"]
+  stream: "Greek Platonism / Neoplatonism"
+  period: "Late Antiquity"
+  geography: ["Mediterranean"]
+  definition: "A late antique Platonic tradition centered on the One, Intellect, Soul, emanation, participation, ascent, and return."
+  coreClaims:
+    - "Reality is hierarchically ordered."
+    - "Multiplicity proceeds from a higher unity."
+    - "The soul can turn back toward its source."
+    - "Philosophy and theurgy can participate in higher order."
+  corePractices:
+    - "contemplation"
+    - "philosophical purification"
+    - "theurgy in Iamblichean forms"
+  coreTexts:
+    - "Plotinus — Enneads"
+    - "Iamblichus — On the Mysteries"
+    - "Proclus — Elements of Theology"
+  representativeFigures:
+    - "Plotinus"
+    - "Porphyry"
+    - "Iamblichus"
+    - "Proclus"
+  evidenceTier: "serious_interpretive"
+  useFor:
+    - "emanation"
+    - "participation"
+    - "theurgy"
+    - "Western esoteric lineage"
+  doNotUseFor:
+    - "proving modern magic"
+    - "claiming all mysticism is Platonism"
+    - "collapsing Buddhism or Tantra into Greek metaphysics"
+  commonCategoryErrors:
+    - "Treating conceptual similarity as historical influence."
+    - "Flattening Neoplatonic hierarchy into generic nonduality."
+  risks:
+    - "metaphysical system possession"
+    - "hierarchy inflation"
+  correctives:
+    - "Madhyamaka anti-reification"
+    - "historical distinction"
+    - "praxis"
+  status: "approved"
+
+- id: tradition-gnosticism
+  label: "Gnosticism"
+  aliases: ["ancient gnosis", "gnostic movements"]
+  stream: "Hermetic / Gnostic / Salvational Cosmology"
+  period: "Late Antiquity"
+  definition: "A family of ancient salvational religious movements centered on gnosis, divine spark, cosmic ignorance, archonic powers, demiurgic creation in some systems, and return to a higher divine source."
+  coreClaims:
+    - "Ordinary worldly existence is bound by ignorance."
+    - "Saving knowledge discloses the soul's deeper origin."
+    - "Cosmic powers may obstruct liberation."
+    - "The visible world is not ultimate."
+  coreTexts:
+    - "Nag Hammadi texts"
+    - "Gospel of Thomas"
+    - "Apocryphon of John"
+    - "Valentinian materials"
+  evidenceTier: "serious_interpretive"
+  useFor:
+    - "salvational cosmology"
+    - "hidden knowledge structures"
+    - "ancient archon/demiurge frameworks"
+    - "comparison with modern UFO/channeling myths only as conceptual parallel"
+  doNotUseFor:
+    - "claiming every hidden-control theory is Gnosticism"
+    - "equating Galactic Federation directly with ancient Gnosticism"
+    - "treating modern conspiracy cosmologies as historically Gnostic"
+  commonCategoryErrors:
+    - "Calling any cosmic hierarchy Gnosticism."
+    - "Mistaking structural resemblance for direct lineage."
+  risks:
+    - "cosmic paranoia"
+    - "special knowledge inflation"
+    - "world-rejection"
+  correctives:
+    - "historical distinction"
+    - "Madhyamaka"
+    - "praxis"
+    - "fruit-test"
+  status: "approved"
+
+- id: tradition-tantra
+  label: "Tantra"
+  stream: "Sanskrit / Buddhist / Tibetan"
+  definition: "A diverse family of South Asian religious technologies using mantra, deity, subtle body, ritual, initiation, visualization, and transformed identity to reorder body, speech, mind, and cosmos."
+  coreClaims:
+    - "Body, speech, and mind can be ritually transformed."
+    - "Sound, image, gesture, and deity-form can function as technologies of realization."
+    - "Ordinary identity can be re-rendered through consecrated symbolic embodiment."
+  corePractices:
+    - "mantra"
+    - "nyāsa"
+    - "deity yoga"
+    - "maṇḍala"
+    - "subtle body practice"
+    - "ritual offering"
+  evidenceTier: "historical_ritual"
+  useFor:
+    - "body-speech-mind reordering"
+    - "ritual technology"
+    - "mantra theory"
+    - "deity-body reconstruction"
+  doNotUseFor:
+    - "generic energy mysticism"
+    - "ego inflation"
+    - "unqualified sexualized interpretations"
+    - "proof of New Age manifestation claims"
+  commonCategoryErrors:
+    - "Treating all energy work as Tantra."
+    - "Treating deity identity as ego empowerment."
+    - "Ignoring initiation, ethics, lineage, and context."
+  risks:
+    - "energy chasing"
+    - "spiritual bypass"
+    - "inflation"
+    - "appropriation"
+  correctives:
+    - "ethics"
+    - "grounding"
+    - "qualified tradition"
+    - "Madhyamaka"
+    - "teacher/context"
+  status: "approved"
+
+- id: tradition-depression-era-buddhism
+  label: "Theravāda / Early Buddhism"
+  aliases: ["Early Buddhism", "Pāli Buddhism"]
+  stream: "Buddhist / Early Buddhism"
+  period: "6th–4th century BCE"
+  geography: ["India", "Sri Lanka", "Southeast Asia"]
+  definition: "The earliest surviving Buddhist tradition, centered on the Pāli canon, the four noble truths, dependent origination, and the eightfold path."
+  coreClaims:
+    - "Experience is marked by impermanence, unsatisfactoriness, and non-self."
+    - "Craving and ignorance drive rebirth and suffering."
+    - "The eightfold path leads to the cessation of suffering."
+    - "Liberation is achievable in this life."
+  corePractices:
+    - "mindfulness of body, feeling, mind, and dhammas"
+    - "sense restraint"
+    - "meditation (samatha and vipassanā)"
+    - "ethical conduct"
+  coreTexts:
+    - "Sutta Piṭaka"
+    - "Vinaya Piṭaka"
+    - "Abhidhamma Piṭaka"
+  representativeFigures:
+    - "The Buddha (Siddhattha Gotama)"
+    - "Sāriputta"
+    - "Mahinda"
+    - "Buddhaghosa"
+  evidenceTier: "serious_interpretive"
+  useFor:
+    - "dependent arising"
+    - "emptiness analysis"
+    - "contact/feeling/sign protocol"
+    - "anti-reification"
+  doNotUseFor:
+    - "proving that nothing exists"
+    - "claiming Buddhism is just therapy"
+    - "skipping ethics"
+  commonCategoryErrors:
+    - "Treating early Buddhism as nihilistic."
+    - "Collapsing Mahāyāna and Theravāda."
+  risks:
+    - "dry intellectualism"
+    - "world-rejection"
+    - "practice without compassion"
+  correctives:
+    - "compassion practice"
+    - "body grounding"
+    - "social engagement"
+  status: "approved"

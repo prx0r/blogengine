@@ -1,0 +1,54 @@
+{
+  "co_id": "co:uno_therapy3_t658_t669_projection__t1",
+  "schema_version": 1,
+  "source": "uno",
+  "source_episode": "therapy3_t658_t669_projection_virtue_trap",
+  "turn_index": 1,
+  "lineage": "Therapeutic",
+  "student_state": "anxious_helplessness",
+  "behavior_tags": [
+    "victim_stance"
+  ],
+  "pedagogy": {
+    "phase": "UNMAKING",
+    "function_id": "UM_06",
+    "function_name": "UM_06",
+    "mechanism_shape": "CONSTRAINT_COLLAPSE",
+    "teaching_actions": [
+      "clarifies_agency",
+      "validates_choice_to_wait"
+    ],
+    "traps_avoided": [],
+    "register": {
+      "intensity": 0.35,
+      "intimacy": 0.35,
+      "attunement": 0.5,
+      "style": 0.92,
+      "depth": 0.15,
+      "meta_mode": 0.2,
+      "provenance": "learned_from_672_blocks",
+      "intensity_discrete": "PR_02",
+      "intimacy_discrete": "IN_02",
+      "attunement_discrete": "AT_02",
+      "style_discrete": "LS_06",
+      "depth_discrete": "PD_01",
+      "meta_mode_discrete": "MM_01"
+    },
+    "predicted_impact": "ask_deeper_question",
+    "impact_confidence": 0.5
+  },
+  "my_thoughts": "Anxiety rise—the paradox worked. They dropped 'waiting is good' and shifted to 'supposed to wait' (external rule). But notice the slip: 'It's not how long I would like to wait'—admits they DON'T like waiting. Teacher catches this: mirrors back but changes 'supposed to' (external) to 'what you do' (agency). Same action, different frame: not following rules but choosing behavior. This makes waiting THEIRS, not imposed. The anxiety shows defense cracking. They're seeing: waiting isn't virtue or rule, it's their chosen avoidance.",
+  "accumulated_insight": "T2: Student shows anxiety: '[Rise of anxiety.] It's not how long I would like to wait. It's just that waiting is what you're supposed to do'—the paradox landed, produced anxiety. They revise claim: not 'I want to wait' but 'supposed to wait' (external rule). Teacher mirrors back distinction: 'It's not that you would like to wait. It's just that waiting is what you do.' Changes 'supposed to' to 'what you do'—removes external rule, makes it their behavior. Predicting surface_emotion continued as reframe deepens.",
+  "abstract_pattern": "",
+  "visible_response": "It’s not that you would like to wait.\nIt’s just that waiting is what you are doing. You are doing what you don’t like.\nYou can wait as little as you want, or you can wait as long as you want.\nAnd it may be that a long wait is in your best interest.",
+  "pedagogical_hooks": [],
+  "linked_ros": [],
+  "linked_concepts": [],
+  "usage": {
+    "successes": 0,
+    "failures": 0,
+    "last_used": null,
+    "success_rate": 0.5
+  },
+  "arc_context": ""
+}
