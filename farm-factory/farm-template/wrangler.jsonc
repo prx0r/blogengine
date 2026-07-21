@@ -1,0 +1,45 @@
+{
+  "name": "farm-{FARM_ID}",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-07-01",
+  "d1_databases": [
+    { "binding": "DB", "database_name": "farm-{FARM_ID}-db", "database_id": "" }
+  ],
+  "r2_buckets": [
+    { "binding": "SOURCES", "bucket_name": "farm-{FARM_ID}-sources" },
+    { "binding": "ASSETS", "bucket_name": "farm-{FARM_ID}-assets" },
+    { "binding": "OUTPUTS", "bucket_name": "farm-{FARM_ID}-outputs" }
+  ],
+  "queues": {
+    "producers": [
+      { "binding": "PIPELINE_QUEUE", "queue": "farm-{FARM_ID}-pipeline" },
+      { "binding": "RENDER_QUEUE", "queue": "farm-{FARM_ID}-render" }
+    ],
+    "consumers": [
+      { "queue": "farm-{FARM_ID}-pipeline", "max_batch_size": 1, "max_retries": 3 },
+      { "queue": "farm-{FARM_ID}-render", "max_batch_size": 1, "max_retries": 3 }
+    ]
+  },
+  "ai": { "binding": "AI" },
+  "vars": {
+    "FARM_ID": "{FARM_ID}",
+    "YOUTUBE_API_KEY": "",
+    "AI_GATEWAY_ID": "",
+    "DEEPGRAM_API_KEY": "",
+    "AUDIENCE_PROMISE": "",
+    "EVIDENCE_STANDARDS": "",
+    "FORBIDDEN_FRAMINGS": ""
+  },
+  "triggers": {
+    "crons": [
+      "0 6 * * *",
+      "0 12 * * 1",
+      "0 0 1 * *"
+    ]
+  },
+  "workflows": [
+    { "name": "produce-video", "binding": "PRODUCE_VIDEO", "class_name": "ProduceVideoWorkflow" },
+    { "name": "backfill-ros", "binding": "BACKFILL_ROS", "class_name": "BackfillROsWorkflow" },
+    { "name": "validate-all", "binding": "VALIDATE_ALL", "class_name": "ValidateAllWorkflow" }
+  ]
+}

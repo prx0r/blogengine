@@ -258,18 +258,32 @@ Download YouNiverse, YTCommentVerse, Global Trending to R2. Run regressions:
 
 ### Stage 1: Daily Research (Cron 6am)
 
+Daily = harvest known channels only. Gap computation is weekly (see below).
+
 ```
 1. playlistItems.list + videos.list -> new uploads from CHANNEL_IDS
 2. Compute breakout scores (OLS residual, age-band fallback for <20 videos)
 3. Strip momentum trend via calendar-time regression
-4. Thumbnail cascade: all -> cheap features, top 20% -> LLaVA
-5. Hook classification on top 5 breakouts (maintain hook library)
-6. Gap map: 48 searches + 12 velocity searches
-7. Compute opportunity scores (weighted sum with clamp)
-8. Push topics to Queue
+4. Thumbnail stratified sample: 25% extreme/strong, 25% normal, 25% weak, 25% uncertain
+5. Cheap features on all, LLaVA only on stratified sample
+6. Hook classification on top 5 breakouts (maintain hook library)
+7. Store raw search results (48 queries + 12 velocity) for weekly computation
 ```
 
-API budget: 60 search calls, ~300 general units.
+API budget: 0 search calls (collection only, computation is weekly).
+
+### Weekly Gap Computation (Cron Monday noon)
+
+```
+1. Read last 7 days of raw search results
+2. Compute gap map using rolling window (this week vs last week)
+3. Compute opportunity scores (weighted sum with clamp)
+4. Push high-opportunity topics to Queue
+5. Wikipedia pageview velocity for top topics
+6. Hypothesis testing against historical corpus
+```
+
+Rationale: Daily gap deltas in a slow-moving niche like tantra/Indology measure sampling noise from YouTube's search ranking jitter, not real signal. A rolling 7-day window filters this. If farm expands to a fast-moving niche (news, tech), revisit daily computation.
 
 ### Stage 2: Topic Opportunity Detection
 
@@ -283,38 +297,56 @@ topic_opportunity = 0.30 * clamp(gap_score)
 
 Where `clamp(x) = max(0.1, min(1.0, x))`.
 
-### Fix 7: Fact-Check Gate Before Stage 3
+### Fix 7: Research Pack — Sourced Claims Before Script Writing
 
-**Problem:** The publish gate catches credibility issues too late. Tantra has a history of grifters making unfounded claims. Tier 1 content ("Investigations," "Forbidden goddesses") is exactly the content most likely to make a claim that sounds true but isn't sourced.
+**Problem:** The fact-check gate operated on treatment, but treatment and script-with-sources shouldn't be the same document. You can't reverse-engineer "was this claim sourced" out of finished narration.
 
-**Add gate before Stage 3 approval:**
+**Solution:** Add a Research Pack stage between HO and treatment/script. This is a formal artifact containing sourced claims with exact locators. The fact-check gate operates on this, not on prose.
 
 ```
-Every historical/textual claim in the treatment must have:
-  - A traceable primary source (text name + chapter/verse)
-  - OR an academic secondary source (journal article, university press book)
-  - Claims marked with certainty level: confirmed / scholarly consensus / traditional account / disputed
-  - Checked against Crossref / Semantic Scholar / Wikipedia references
-
-Fails if: any core factual claim lacks a source
-Blocks: treatment from advancing to script writing
+HO → Research Pack (sourced claims) → Treatment → Script → Video
 ```
 
-This is checked at treatment generation, not first caught at final QA.
+Research Pack schema:
+```json
+{
+  "research_pack_id": "RP-{slug}",
+  "claims": [
+    {
+      "claim": "The Kapalikas carried skull-topped staffs as a deliberate inversion of caste markers.",
+      "certainty": "scholarly_consensus",
+      "sources": [
+        {
+          "source_id": "work:example",
+          "locator": "Chapter 3, p. 45-47",
+          "secondary": "Davidson 2002, Indian Esoteric Buddhism"
+        }
+      ]
+    }
+  ],
+  "fact_check": {
+    "all_claims_sourced": true,
+    "gates_passed": ["F01", "F02", "F03", "F04"]
+  }
+}
+```
+
+This separates the sourcing concern (Research Pack) from the narrative concern (treatment/script), so the fact-check gate has a canonical artifact to validate before prose is written.
 
 ### Stage 3: Content Production (Workflows)
 
 ```
 Step 1: research_gap(topic_id) -> D1 query
-Step 2: generate_treatment -> AI Gateway ($0.02)
-Step 3: FACT_CHECK gate (every claim needs a source)
-Step 4: WAIT_FOR_APPROVAL (human reviews treatment + sources)
-Step 5: write_script -> AI Gateway + validation gates ($0.05)
-Step 6: generate_audio -> Deepgram Aura 2 ($0.40 per 15 min)
-Step 7: create_thumbnail -> deterministic composition ($0)
-Step 8: push_render_job -> Queue -> VPS FFmpeg -> R2
-Step 9: WAIT_FOR_RENDER
-Step 10: publish -> YouTube API (1,600 quota), requires approval
+Step 2: build_research_pack -> sourced claims with exact locators
+Step 3: FACT_CHECK gate (every claim must have a source, gates F01-F04)
+Step 4: WAIT_FOR_APPROVAL (human reviews research pack + sources)
+Step 5: generate_treatment -> AI Gateway ($0.02)
+Step 6: write_script -> AI Gateway + validation gates ($0.05)
+Step 7: generate_audio -> Deepgram Aura 2 ($0.40 per 15 min)
+Step 8: create_thumbnail -> deterministic composition ($0)
+Step 9: push_render_job -> Queue -> VPS FFmpeg -> R2
+Step 10: WAIT_FOR_RENDER
+Step 11: publish -> YouTube API (1,600 quota), requires approval
 ```
 
 Each step idempotent: `video_id + step_name + input_hash + version`.
@@ -331,27 +363,25 @@ Never auto-publish. Historical/religious claims require human review with source
 
 **Problem:** "≥5 tests per hypothesis" at 1 video/week means testing a single hypothesis takes over a month. At that rate, the first few hypotheses take nearly a year.
 
-**Solution:** Test hypotheses against the historical corpus first — the hundreds of other channels' videos already collected.
+**Solution:** Test hypotheses against the historical corpus first — the hundreds of other channels' videos already collected. Use a 3-state model (pending / confirmed / rejected) with confidence-weighted n, not more states.
 
 ```
 For each hypothesis (e.g., "Question titles outperform statements"):
   1. Query historical corpus (all channels, all videos)
   2. Compute: mean(breakout_score) for question-title videos vs non-question-title
   3. t-test or Mann-Whitney U
-  4. Record effect size and significance
-  5. Mark hypothesis as STRONG_PRIOR / WEAK_PRIOR / REJECTED
+  4. Record effect size, significance, n_tests, n_supporting, n_against
+  5. Store as: { status: "confirmed", n_tests: 847, n_supporting: 523, n_against: 324 }
 
 Then use own weekly production as CONFIRMATION of strong priors, not discovery.
-Reserve own output for testing hypotheses the historical corpus can't answer:
-  - "Our specific audience prefers X" (channel-specific)
-  - "This packaging works for cold Browse traffic" (requires YouTube Analytics)
-  - Production-only variables (voice style, clip density, music choices)
-```
 
 | Hypothesis Source | Sample Size | Time to n>=5 |
 |-------------------|-------------|--------------|
 | Historical corpus (other channels) | Thousands of videos | Immediate |
 | Own production (your channel) | 1 video/week | 5+ weeks |
+```
+
+State machine: `pending / confirmed / rejected`. No intermediate states. Confidence is conveyed by `n_tests` and `n_supporting/n_against` ratios, not by adding states that won't populate at 1 video/week.
 
 ---
 
@@ -422,7 +452,27 @@ GCP credit ($300) separate: BigQuery for dataset analysis, Cloud Run for FFmpeg 
 
 ## Farm Template
 
-Parameterized by `FARM_ID`. Cloning for a new niche: set `CHANNEL_IDS`, `TOPIC_CLUSTERS`, `FARM_ID`, deploy.
+Parameterized by Tier A (must configure, requires human judgment) + Tier B (derived from data, fits automatically).
+
+### Tier A — Configured per farm (6 items)
+
+| Parameter | Type | Example (Tantra) | Example (Neuroscience) |
+|-----------|------|-------------------|------------------------|
+| `FARM_ID` | string | `tantra` | `neuroscience` |
+| `CHANNEL_IDS` | string[] | `["UCxxx","UCyyy"]` | `["UCaaa","UCbbb"]` |
+| `TOPIC_CLUSTERS` | object[] | `[{ name: "deity", terms: ["Kali","Bhairava"] }]` | `[{ name: "consciousness", terms: ["GNW","IIT"] }]` |
+| `EVIDENCE_STANDARDS` | string[] | `["primary_text","academic_indology","museum_record"]` | `["peer_reviewed","registered_report","replication"]` |
+| `FORBIDDEN_FRAMINGS` | string[] | `["science proves tantra","shocking = common","nonduality erases ethics"]` | `["overclaims mechanism","individuals = pathology"]` |
+| `AUDIENCE_PROMISE` | string | `"Hidden history of Indian philosophy and consciousness"` | `"What consciousness research actually shows"` |
+
+### Tier B — Derived from data (not manually configured)
+
+| Parameter | Derivation Method |
+|-----------|-------------------|
+| `SCORING_WEIGHTS` | Fit from Stage 0 historical validation (same regression used for breakout metric) |
+| `BLUEPRINT_PROMPT` | Selected from prompt library based on EVIDENCE_STANDARDS + AUDIENCE_PROMISE |
+
+Tier B parameters are never set by hand. They come out of the farm's own dataset validation stage, the same way the breakout metric is selected.
 
 ```
 farm-template/
