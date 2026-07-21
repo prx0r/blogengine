@@ -1,5 +1,9 @@
 # High-Signal Intelligence Spec
 
+> **Pipeline reference:** See `data/README.md` for standardized methodology, verification gates, API tracking, and output schema. Every data report produced by this pipeline follows the format specified there.
+>
+> **Quick start:** `npm run data:underserved-test` (Stage 1), then `python3 scripts/validate-data-report.py data/reports/<report>.json`
+
 ## Methodology — Within-Niche Breakout Analysis
 
 ### Thesis

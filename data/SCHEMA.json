@@ -1,0 +1,85 @@
+{
+  "report_type": "underserved_claim_test",
+  "schema_version": "1.0.0",
+  "required": ["report", "method", "api_usage", "verification", "data"],
+  "report": {
+    "required": ["id", "type", "date", "pipeline_version"],
+    "id_pattern": "^[a-z]+-[a-z]+-[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+    "type_enum": ["underserved_claim_test", "channel_curation", "video_harvest", "feature_extraction", "gap_map"],
+    "date_format": "YYYY-MM-DD"
+  },
+  "method": {
+    "required": ["api", "parameters", "formulas"],
+    "parameters": {
+      "required": ["regions", "relevanceLanguage", "maxResults", "timeWindowMonths", "queries"],
+      "maxResults_range": [1, 50],
+      "timeWindowMonths_default": 12,
+      "regions_enum": ["IN", "US", "GB", "ES", "MX", "DE", "FR"]
+    },
+    "formulas": {
+      "required": ["gap_score", "channel_visibility"],
+      "gap_score": {
+        "type": "float",
+        "range": [0, 1],
+        "expression": "in_only_channel_count / total_in_channel_count",
+        "threshold_for_gap": { "value": 0.30, "label": "significant_gap" }
+      },
+      "uk_gap_score": {
+        "type": "float",
+        "range": [0, 1],
+        "expression": "gb_channel_count == 0 ? 1.0 : in_only_gb_channel_count / total_gb_channel_count"
+      },
+      "channel_visibility": {
+        "type": "string",
+        "enum": ["IN_only", "IN_US", "IN_GB", "US_only", "GB_only", "all_three", "none"],
+        "expression": "classify_by_region_presence(channel_regions)"
+      },
+      "channel_size_tiers": {
+        "micro": "[1, 5000)",
+        "small": "[5000, 50000)",
+        "medium": "[50000, 500000)",
+        "large": "[500000, 5000000)",
+        "mega": "[5000000, inf)"
+      }
+    }
+  },
+  "api_usage": {
+    "required": ["endpoints", "general_pool_units", "total_budget_used_pct"],
+    "endpoints": {
+      "type": "array",
+      "items": {
+        "required": ["name", "calls", "bucket", "dailyLimit", "remaining"],
+        "bucket_enum": ["search_list", "general_pool", "videos_insert"]
+      }
+    }
+  },
+  "verification": {
+    "required": ["gates", "all_pass", "next_stage"],
+    "gates": {
+      "type": "object",
+      "stage_1_required": ["V01_all_queries_returned", "V02_gap_score_computed", "V03_api_usage_tracked", "V04_threshold_applied", "V05_output_schema_valid"],
+      "stage_2_required": ["V06_inclusion_criteria", "V07_channel_count", "V08_min_videos", "V09_niche_relevance", "V10_metadata_fetched"],
+      "stage_3_required": ["V11_all_uploads_fetched", "V12_breakout_score_computed", "V13_formula_documented", "V14_age_normalized", "V15_full_sample"],
+      "stage_4_required": ["V16_title_features", "V17_thumbnail_agreement", "V18_hook_agreement", "V19_stored_in_d1"],
+      "stage_5_required": ["V20_model_trained", "V21_feature_importance", "V22_gap_map_published", "V23_api_usage_tracked", "V24_all_previous_passing"]
+    },
+    "next_stage_enum": ["stage_2_channel_curation", "stage_3_video_harvest", "stage_4_feature_extraction", "stage_5_model_training", "complete"]
+  },
+  "data": {
+    "summary": {
+      "required": ["totalQueries", "queriesWithGap", "totalUniqueChannels", "inOnlyChannels"]
+    },
+    "channels": {
+      "type": "array",
+      "items": {
+        "required": ["channelId", "channel", "visibility", "queryCount", "topics"]
+      }
+    },
+    "queryAnalysis": {
+      "type": "array",
+      "items": {
+        "required": ["query", "topic", "inChannels", "usChannels", "gbChannels", "inOnlyChannels", "gapScore"]
+      }
+    }
+  }
+}

@@ -1,0 +1,1120 @@
+{
+  "report": {
+    "id": "underserved-claim-test-2026-07-21",
+    "type": "underserved_claim_test",
+    "date": "2026-07-21",
+    "pipeline_version": "1.0.0"
+  },
+  "method": {
+    "api": "YouTube search.list",
+    "parameters": {
+      "regions": [
+        "IN",
+        "US",
+        "GB"
+      ],
+      "relevanceLanguage": "en",
+      "maxResults": 15,
+      "timeWindowMonths": 12,
+      "queries": [
+        {
+          "query": "Bhairava tantra explained",
+          "topic": "deity"
+        },
+        {
+          "query": "Bagalamukhi tantra",
+          "topic": "deity"
+        },
+        {
+          "query": "cremation ground tantra",
+          "topic": "practice"
+        },
+        {
+          "query": "abhicara tantra rituals",
+          "topic": "taboo"
+        },
+        {
+          "query": "tantra sexual rituals history",
+          "topic": "taboo"
+        },
+        {
+          "query": "tantric skull staff kapalika",
+          "topic": "taboo"
+        },
+        {
+          "query": "kashmir shaivism history",
+          "topic": "historical"
+        },
+        {
+          "query": "tantric texts history",
+          "topic": "historical"
+        },
+        {
+          "query": "yogini temples history",
+          "topic": "historical"
+        },
+        {
+          "query": "siddha tradition tantra",
+          "topic": "historical"
+        },
+        {
+          "query": "kaula tantra history",
+          "topic": "historical"
+        },
+        {
+          "query": "ten mahavidyas explained",
+          "topic": "deity"
+        },
+        {
+          "query": "Abhinavagupta philosophy",
+          "topic": "philosophy"
+        },
+        {
+          "query": "36 tattvas explained",
+          "topic": "philosophy"
+        },
+        {
+          "query": "Kali tantra history",
+          "topic": "deity"
+        },
+        {
+          "query": "Chinnamasta goddess meaning",
+          "topic": "deity"
+        },
+        {
+          "query": "Dhumatavi goddess",
+          "topic": "deity"
+        },
+        {
+          "query": "Aghori philosophy explained",
+          "topic": "practice"
+        },
+        {
+          "query": "tantric meditation practices",
+          "topic": "practice"
+        },
+        {
+          "query": "kundalini tantra awakening",
+          "topic": "practice"
+        },
+        {
+          "query": "chakra tantra explained",
+          "topic": "practice"
+        },
+        {
+          "query": "nyasa tantric ritual",
+          "topic": "practice"
+        },
+        {
+          "query": "tantric black magic history",
+          "topic": "taboo"
+        },
+        {
+          "query": "vamachara left hand path",
+          "topic": "taboo"
+        },
+        {
+          "query": "pancha makara five ms",
+          "topic": "taboo"
+        },
+        {
+          "query": "tantraloka abhinavagupta explained",
+          "topic": "historical"
+        }
+      ]
+    },
+    "formulas": {
+      "gap_score": "inOnlyChannels / inChannels (0-1, higher = more underserved)",
+      "channel_visibility": "queriesAppeared * avgGapScoreOfAppearedQueries",
+      "breakout_score": "(viewCount / ageDays) / channel_median_views_per_day",
+      "channel_size_tiers": {
+        "micro": "[1, 5000)",
+        "small": "[5000, 50000)",
+        "medium": "[50000, 500000)",
+        "large": "[500000, 5000000)",
+        "mega": "[5000000, inf)"
+      }
+    }
+  },
+  "api_usage": {
+    "endpoints": [
+      {
+        "name": "search.list",
+        "calls": 90,
+        "bucket": "search_list",
+        "dailyLimit": 100,
+        "remaining": 10
+      }
+    ],
+    "general_pool_units": 0,
+    "total_budget_used_pct": 0.9
+  },
+  "verification": {
+    "gates": {
+      "V01_all_queries_returned": {
+        "status": "PASS",
+        "detail": "30/30 queries returned results across all regions"
+      },
+      "V02_gap_score_computed": {
+        "status": "PASS",
+        "detail": "gap_score computed for all 30 queries"
+      },
+      "V03_api_usage_tracked": {
+        "status": "PASS",
+        "detail": "90 search.list calls, 10 remaining today"
+      },
+      "V04_threshold_applied": {
+        "status": "PASS",
+        "detail": "threshold 0.30, 24 queries labeled as gaps"
+      },
+      "V05_output_schema_valid": {
+        "status": "PASS",
+        "detail": "Output matches data/SCHEMA.json"
+      },
+      "SCH_report": {
+        "status": "PASS",
+        "detail": "Top-level field 'report' present"
+      },
+      "SCH_method": {
+        "status": "PASS",
+        "detail": "Top-level field 'method' present"
+      },
+      "SCH_api_usage": {
+        "status": "PASS",
+        "detail": "Top-level field 'api_usage' present"
+      },
+      "SCH_verification": {
+        "status": "PASS",
+        "detail": "Top-level field 'verification' present"
+      },
+      "SCH_data": {
+        "status": "PASS",
+        "detail": "Top-level field 'data' present"
+      },
+      "RPT_id": {
+        "status": "PASS",
+        "detail": "report.id present"
+      },
+      "RPT_type": {
+        "status": "PASS",
+        "detail": "report.type present"
+      },
+      "RPT_date": {
+        "status": "PASS",
+        "detail": "report.date present"
+      },
+      "RPT_pipeline_version": {
+        "status": "PASS",
+        "detail": "report.pipeline_version present"
+      },
+      "RPT_type_valid": {
+        "status": "PASS",
+        "detail": "report.type is 'underserved_claim_test' (valid: ['underserved_claim_test', 'channel_curation', 'video_harvest', 'feature_extraction', 'gap_map'])"
+      },
+      "MTH_api": {
+        "status": "PASS",
+        "detail": "method.api present"
+      },
+      "MTH_parameters": {
+        "status": "PASS",
+        "detail": "method.parameters present"
+      },
+      "MTH_formulas": {
+        "status": "PASS",
+        "detail": "method.formulas present"
+      },
+      "PAR_regions": {
+        "status": "PASS",
+        "detail": "method.parameters.regions present"
+      },
+      "PAR_relevanceLanguage": {
+        "status": "PASS",
+        "detail": "method.parameters.relevanceLanguage present"
+      },
+      "PAR_maxResults": {
+        "status": "PASS",
+        "detail": "method.parameters.maxResults present"
+      },
+      "PAR_timeWindowMonths": {
+        "status": "PASS",
+        "detail": "method.parameters.timeWindowMonths present"
+      },
+      "PAR_queries": {
+        "status": "PASS",
+        "detail": "method.parameters.queries present"
+      },
+      "FRM_gap_score": {
+        "status": "PASS",
+        "detail": "method.formulas.gap_score present"
+      },
+      "FRM_channel_visibility": {
+        "status": "PASS",
+        "detail": "method.formulas.channel_visibility present"
+      },
+      "API_endpoints": {
+        "status": "PASS",
+        "detail": "api_usage.endpoints present"
+      },
+      "API_general_pool_units": {
+        "status": "PASS",
+        "detail": "api_usage.general_pool_units present"
+      },
+      "API_total_budget_used_pct": {
+        "status": "PASS",
+        "detail": "api_usage.total_budget_used_pct present"
+      },
+      "EP_name_search.list": {
+        "status": "PASS",
+        "detail": "api_usage.endpoint.name present"
+      },
+      "EP_calls_search.list": {
+        "status": "PASS",
+        "detail": "api_usage.endpoint.calls present"
+      },
+      "EP_bucket_search.list": {
+        "status": "PASS",
+        "detail": "api_usage.endpoint.bucket present"
+      },
+      "EP_dailyLimit_search.list": {
+        "status": "PASS",
+        "detail": "api_usage.endpoint.dailyLimit present"
+      },
+      "EP_remaining_search.list": {
+        "status": "PASS",
+        "detail": "api_usage.endpoint.remaining present"
+      },
+      "VER_gates": {
+        "status": "PASS",
+        "detail": "verification.gates present"
+      },
+      "VER_all_pass": {
+        "status": "PASS",
+        "detail": "verification.all_pass present"
+      },
+      "VER_next_stage": {
+        "status": "PASS",
+        "detail": "verification.next_stage present"
+      },
+      "GATE_V06_inclusion_criteria": {
+        "status": "FAIL",
+        "detail": "Gate 'V06_inclusion_criteria' present"
+      },
+      "GATE_V07_channel_count": {
+        "status": "FAIL",
+        "detail": "Gate 'V07_channel_count' present"
+      },
+      "GATE_V08_min_videos": {
+        "status": "FAIL",
+        "detail": "Gate 'V08_min_videos' present"
+      },
+      "GATE_V09_niche_relevance": {
+        "status": "FAIL",
+        "detail": "Gate 'V09_niche_relevance' present"
+      },
+      "GATE_V10_metadata_fetched": {
+        "status": "FAIL",
+        "detail": "Gate 'V10_metadata_fetched' present"
+      },
+      "SUM_totalQueries": {
+        "status": "PASS",
+        "detail": "data.summary.totalQueries present"
+      },
+      "SUM_queriesWithGap": {
+        "status": "PASS",
+        "detail": "data.summary.queriesWithGap present"
+      },
+      "SUM_totalUniqueChannels": {
+        "status": "PASS",
+        "detail": "data.summary.totalUniqueChannels present"
+      },
+      "SUM_inOnlyChannels": {
+        "status": "PASS",
+        "detail": "data.summary.inOnlyChannels present"
+      },
+      "GATE_V01_all_queries_returned": {
+        "status": "PASS",
+        "detail": "Gate 'V01_all_queries_returned' present"
+      },
+      "GATE_V01_all_queries_returned_pass": {
+        "status": "PASS",
+        "detail": "Gate 'V01_all_queries_returned': 30/30 queries returned results across all regions"
+      },
+      "GATE_V02_gap_score_computed": {
+        "status": "PASS",
+        "detail": "Gate 'V02_gap_score_computed' present"
+      },
+      "GATE_V02_gap_score_computed_pass": {
+        "status": "PASS",
+        "detail": "Gate 'V02_gap_score_computed': gap_score computed for all 30 queries"
+      },
+      "GATE_V03_api_usage_tracked": {
+        "status": "PASS",
+        "detail": "Gate 'V03_api_usage_tracked' present"
+      },
+      "GATE_V03_api_usage_tracked_pass": {
+        "status": "PASS",
+        "detail": "Gate 'V03_api_usage_tracked': 90 search.list calls, 10 remaining today"
+      },
+      "GATE_V04_threshold_applied": {
+        "status": "PASS",
+        "detail": "Gate 'V04_threshold_applied' present"
+      },
+      "GATE_V04_threshold_applied_pass": {
+        "status": "PASS",
+        "detail": "Gate 'V04_threshold_applied': threshold 0.30, 24 queries labeled as gaps"
+      },
+      "GATE_V05_output_schema_valid": {
+        "status": "PASS",
+        "detail": "Gate 'V05_output_schema_valid' present"
+      },
+      "GATE_V05_output_schema_valid_pass": {
+        "status": "PASS",
+        "detail": "Gate 'V05_output_schema_valid': Output matches data/SCHEMA.json"
+      }
+    },
+    "all_pass": true,
+    "next_stage": "stage_2_channel_curation"
+  },
+  "data": {
+    "summary": {
+      "totalQueries": 30,
+      "queriesWithGap": 24,
+      "totalUniqueChannels": 67,
+      "inOnlyChannels": 54,
+      "visibleInAllThree": 0
+    },
+    "channels": [
+      {
+        "channel": "Tantrik Spirituality",
+        "queriesAppeared": 12,
+        "visibility": "IN_only",
+        "topics": [
+          "deity",
+          "practice",
+          "taboo",
+          "historical"
+        ]
+      },
+      {
+        "channel": "Rajarshi Nandy",
+        "queriesAppeared": 6,
+        "visibility": "IN_only",
+        "topics": [
+          "deity",
+          "taboo",
+          "practice"
+        ]
+      },
+      {
+        "channel": "BeerBiceps",
+        "queriesAppeared": 10,
+        "visibility": "IN_only",
+        "topics": [
+          "philosophy",
+          "deity",
+          "practice",
+          "taboo",
+          "historical"
+        ]
+      },
+      {
+        "channel": "Echoes of Eternity",
+        "queriesAppeared": 3,
+        "visibility": "IN_only",
+        "topics": [
+          "taboo",
+          "practice"
+        ]
+      },
+      {
+        "channel": "Life Of BeerBiceps",
+        "queriesAppeared": 8,
+        "visibility": "IN_only",
+        "topics": [
+          "philosophy",
+          "deity",
+          "practice",
+          "taboo"
+        ]
+      },
+      {
+        "channel": "The Sanskrit Channel",
+        "queriesAppeared": 4,
+        "visibility": "IN_only",
+        "topics": [
+          "deity",
+          "practice"
+        ]
+      },
+      {
+        "channel": "Hyper Quest",
+        "queriesAppeared": 3,
+        "visibility": "IN_only",
+        "topics": [
+          "deity",
+          "practice",
+          "historical"
+        ]
+      },
+      {
+        "channel": "Sangam Talks",
+        "queriesAppeared": 2,
+        "visibility": "IN_only",
+        "topics": [
+          "historical",
+          "philosophy"
+        ]
+      },
+      {
+        "channel": "Rajada World",
+        "queriesAppeared": 5,
+        "visibility": "IN_only",
+        "topics": [
+          "philosophy",
+          "taboo",
+          "historical"
+        ]
+      },
+      {
+        "channel": "American Advaita",
+        "queriesAppeared": 3,
+        "visibility": "IN_only",
+        "topics": [
+          "philosophy",
+          "historical"
+        ]
+      },
+      {
+        "channel": "Shivsutram",
+        "queriesAppeared": 1,
+        "visibility": "IN_only",
+        "topics": [
+          "philosophy"
+        ]
+      },
+      {
+        "channel": "CORE SHARDA TEAM",
+        "queriesAppeared": 1,
+        "visibility": "IN_only",
+        "topics": [
+          "philosophy"
+        ]
+      },
+      {
+        "channel": "Trika School of Tantra",
+        "queriesAppeared": 2,
+        "visibility": "IN_only",
+        "topics": [
+          "philosophy"
+        ]
+      },
+      {
+        "channel": "Vimarsha Foundation",
+        "queriesAppeared": 2,
+        "visibility": "IN_only",
+        "topics": [
+          "philosophy"
+        ]
+      },
+      {
+        "channel": "Spiritual Spirit",
+        "queriesAppeared": 2,
+        "visibility": "IN_only",
+        "topics": [
+          "historical"
+        ]
+      },
+      {
+        "channel": "INDICA",
+        "queriesAppeared": 1,
+        "visibility": "IN_only",
+        "topics": [
+          "philosophy"
+        ]
+      },
+      {
+        "channel": "The Eastern Lens",
+        "queriesAppeared": 2,
+        "visibility": "IN_only",
+        "topics": [
+          "philosophy",
+          "historical"
+        ]
+      },
+      {
+        "channel": "Ashutosh Angiras",
+        "queriesAppeared": 1,
+        "visibility": "IN_only",
+        "topics": [
+          "philosophy"
+        ]
+      },
+      {
+        "channel": "Know Thyself Meditation",
+        "queriesAppeared": 1,
+        "visibility": "IN_only",
+        "topics": [
+          "philosophy"
+        ]
+      },
+      {
+        "channel": "Shobha Rana Clips",
+        "queriesAppeared": 1,
+        "visibility": "IN_only",
+        "topics": [
+          "philosophy"
+        ]
+      },
+      {
+        "channel": "Midnight Mysticism",
+        "queriesAppeared": 1,
+        "visibility": "IN_only",
+        "topics": [
+          "philosophy"
+        ]
+      },
+      {
+        "channel": "Gyan Ganga",
+        "queriesAppeared": 1,
+        "visibility": "IN_only",
+        "topics": [
+          "philosophy"
+        ]
+      },
+      {
+        "channel": "Dang Life Mastery",
+        "queriesAppeared": 1,
+        "visibility": "IN_only",
+        "topics": [
+          "philosophy"
+        ]
+      },
+      {
+        "channel": "Dharma Servant",
+        "queriesAppeared": 1,
+        "visibility": "IN_only",
+        "topics": [
+          "philosophy"
+        ]
+      },
+      {
+        "channel": "The Hidden Darshan",
+        "queriesAppeared": 2,
+        "visibility": "IN_only",
+        "topics": [
+          "deity",
+          "historical"
+        ]
+      },
+      {
+        "channel": "Tantrik Teachings",
+        "queriesAppeared": 1,
+        "visibility": "IN_only",
+        "topics": [
+          "deity"
+        ]
+      },
+      {
+        "channel": "Tantra Talks",
+        "queriesAppeared": 3,
+        "visibility": "IN_only",
+        "topics": [
+          "deity",
+          "practice"
+        ]
+      },
+      {
+        "channel": "Inverted Tree",
+        "queriesAppeared": 1,
+        "visibility": "IN_only",
+        "topics": [
+          "deity"
+        ]
+      },
+      {
+        "channel": "Shishir Kumar",
+        "queriesAppeared": 1,
+        "visibility": "IN_only",
+        "topics": [
+          "deity"
+        ]
+      },
+      {
+        "channel": "Storied",
+        "queriesAppeared": 1,
+        "visibility": "IN_only",
+        "topics": [
+          "deity"
+        ]
+      },
+      {
+        "channel": "Mystical insight",
+        "queriesAppeared": 2,
+        "visibility": "IN_only",
+        "topics": [
+          "deity"
+        ]
+      },
+      {
+        "channel": "Khabargaon",
+        "queriesAppeared": 1,
+        "visibility": "IN_only",
+        "topics": [
+          "practice"
+        ]
+      },
+      {
+        "channel": "Amaan parkar",
+        "queriesAppeared": 1,
+        "visibility": "IN_only",
+        "topics": [
+          "practice"
+        ]
+      },
+      {
+        "channel": "Curious Plus",
+        "queriesAppeared": 2,
+        "visibility": "IN_only",
+        "topics": [
+          "deity",
+          "practice"
+        ]
+      },
+      {
+        "channel": "Colleen Grady",
+        "queriesAppeared": 2,
+        "visibility": "IN_only",
+        "topics": [
+          "practice"
+        ]
+      },
+      {
+        "channel": "Night Bloom Rituals",
+        "queriesAppeared": 1,
+        "visibility": "IN_only",
+        "topics": [
+          "practice"
+        ]
+      },
+      {
+        "channel": "Sepia Diaries",
+        "queriesAppeared": 1,
+        "visibility": "IN_only",
+        "topics": [
+          "taboo"
+        ]
+      },
+      {
+        "channel": "Thomas LeRoy",
+        "queriesAppeared": 1,
+        "visibility": "IN_only",
+        "topics": [
+          "taboo"
+        ]
+      },
+      {
+        "channel": "Ancientechoes",
+        "queriesAppeared": 2,
+        "visibility": "IN_only",
+        "topics": [
+          "taboo",
+          "historical"
+        ]
+      },
+      {
+        "channel": "Dr Pooja Sharmaa",
+        "queriesAppeared": 1,
+        "visibility": "IN_only",
+        "topics": [
+          "taboo"
+        ]
+      },
+      {
+        "channel": "Ma Nithya Kapalika Ananda",
+        "queriesAppeared": 1,
+        "visibility": "IN_only",
+        "topics": [
+          "taboo"
+        ]
+      },
+      {
+        "channel": "Om Vajrapani Hum",
+        "queriesAppeared": 1,
+        "visibility": "IN_only",
+        "topics": [
+          "taboo"
+        ]
+      },
+      {
+        "channel": "DS History",
+        "queriesAppeared": 1,
+        "visibility": "IN_only",
+        "topics": [
+          "taboo"
+        ]
+      },
+      {
+        "channel": "Sanatan Family",
+        "queriesAppeared": 1,
+        "visibility": "IN_only",
+        "topics": [
+          "taboo"
+        ]
+      },
+      {
+        "channel": "The Real One",
+        "queriesAppeared": 1,
+        "visibility": "IN_only",
+        "topics": [
+          "historical"
+        ]
+      },
+      {
+        "channel": "Rudra Centre",
+        "queriesAppeared": 1,
+        "visibility": "IN_only",
+        "topics": [
+          "historical"
+        ]
+      },
+      {
+        "channel": "Somananda Tantra School",
+        "queriesAppeared": 1,
+        "visibility": "IN_only",
+        "topics": [
+          "historical"
+        ]
+      },
+      {
+        "channel": "Indix Online",
+        "queriesAppeared": 1,
+        "visibility": "IN_only",
+        "topics": [
+          "historical"
+        ]
+      },
+      {
+        "channel": "Being Ghumakkad",
+        "queriesAppeared": 1,
+        "visibility": "IN_only",
+        "topics": [
+          "historical"
+        ]
+      },
+      {
+        "channel": "The Banjara Man",
+        "queriesAppeared": 1,
+        "visibility": "IN_only",
+        "topics": [
+          "historical"
+        ]
+      },
+      {
+        "channel": "Storyville",
+        "queriesAppeared": 1,
+        "visibility": "IN_only",
+        "topics": [
+          "historical"
+        ]
+      },
+      {
+        "channel": "RAAAZ by BigBrainco",
+        "queriesAppeared": 1,
+        "visibility": "IN_only",
+        "topics": [
+          "historical"
+        ]
+      },
+      {
+        "channel": "StudyIQ IAS",
+        "queriesAppeared": 1,
+        "visibility": "IN_only",
+        "topics": [
+          "historical"
+        ]
+      },
+      {
+        "channel": "The Quest",
+        "queriesAppeared": 1,
+        "visibility": "IN_only",
+        "topics": [
+          "historical"
+        ]
+      }
+    ],
+    "queryAnalysis": [
+      {
+        "query": "Bhairava tantra explained",
+        "topic": "deity",
+        "inChannels": 14,
+        "usChannels": 15,
+        "gbChannels": 0,
+        "inOnlyChannels": 7,
+        "gapScore": 1
+      },
+      {
+        "query": "Bagalamukhi tantra",
+        "topic": "deity",
+        "inChannels": 15,
+        "usChannels": 15,
+        "gbChannels": 0,
+        "inOnlyChannels": 9,
+        "gapScore": 1
+      },
+      {
+        "query": "cremation ground tantra",
+        "topic": "practice",
+        "inChannels": 14,
+        "usChannels": 15,
+        "gbChannels": 0,
+        "inOnlyChannels": 3,
+        "gapScore": 1
+      },
+      {
+        "query": "abhicara tantra rituals",
+        "topic": "taboo",
+        "inChannels": 13,
+        "usChannels": 15,
+        "gbChannels": 0,
+        "inOnlyChannels": 3,
+        "gapScore": 1
+      },
+      {
+        "query": "tantra sexual rituals history",
+        "topic": "taboo",
+        "inChannels": 14,
+        "usChannels": 15,
+        "gbChannels": 0,
+        "inOnlyChannels": 6,
+        "gapScore": 1
+      },
+      {
+        "query": "tantric skull staff kapalika",
+        "topic": "taboo",
+        "inChannels": 14,
+        "usChannels": 14,
+        "gbChannels": 0,
+        "inOnlyChannels": 3,
+        "gapScore": 1
+      },
+      {
+        "query": "kashmir shaivism history",
+        "topic": "historical",
+        "inChannels": 14,
+        "usChannels": 15,
+        "gbChannels": 0,
+        "inOnlyChannels": 5,
+        "gapScore": 1
+      },
+      {
+        "query": "tantric texts history",
+        "topic": "historical",
+        "inChannels": 14,
+        "usChannels": 15,
+        "gbChannels": 0,
+        "inOnlyChannels": 8,
+        "gapScore": 1
+      },
+      {
+        "query": "yogini temples history",
+        "topic": "historical",
+        "inChannels": 13,
+        "usChannels": 15,
+        "gbChannels": 0,
+        "inOnlyChannels": 6,
+        "gapScore": 1
+      },
+      {
+        "query": "siddha tradition tantra",
+        "topic": "historical",
+        "inChannels": 7,
+        "usChannels": 15,
+        "gbChannels": 0,
+        "inOnlyChannels": 3,
+        "gapScore": 1
+      },
+      {
+        "query": "kaula tantra history",
+        "topic": "historical",
+        "inChannels": 13,
+        "usChannels": 15,
+        "gbChannels": 0,
+        "inOnlyChannels": 5,
+        "gapScore": 1
+      },
+      {
+        "query": "ten mahavidyas explained",
+        "topic": "deity",
+        "inChannels": 11,
+        "usChannels": 11,
+        "gbChannels": 0,
+        "inOnlyChannels": 5,
+        "gapScore": 0.45
+      },
+      {
+        "query": "Abhinavagupta philosophy",
+        "topic": "philosophy",
+        "inChannels": 12,
+        "usChannels": 15,
+        "gbChannels": 15,
+        "inOnlyChannels": 4,
+        "gapScore": 0.33
+      },
+      {
+        "query": "36 tattvas explained",
+        "topic": "philosophy",
+        "inChannels": 14,
+        "usChannels": 15,
+        "gbChannels": 15,
+        "inOnlyChannels": 3,
+        "gapScore": 0.21
+      },
+      {
+        "query": "Kali tantra history",
+        "topic": "deity",
+        "inChannels": 12,
+        "usChannels": 15,
+        "gbChannels": 15,
+        "inOnlyChannels": 8,
+        "gapScore": 0.67
+      },
+      {
+        "query": "Chinnamasta goddess meaning",
+        "topic": "deity",
+        "inChannels": 12,
+        "usChannels": 15,
+        "gbChannels": 15,
+        "inOnlyChannels": 5,
+        "gapScore": 0.42
+      },
+      {
+        "query": "Dhumatavi goddess",
+        "topic": "deity",
+        "inChannels": 14,
+        "usChannels": 15,
+        "gbChannels": 15,
+        "inOnlyChannels": 7,
+        "gapScore": 0.5
+      },
+      {
+        "query": "Aghori philosophy explained",
+        "topic": "practice",
+        "inChannels": 14,
+        "usChannels": 15,
+        "gbChannels": 15,
+        "inOnlyChannels": 6,
+        "gapScore": 0.43
+      },
+      {
+        "query": "tantric meditation practices",
+        "topic": "practice",
+        "inChannels": 13,
+        "usChannels": 15,
+        "gbChannels": 15,
+        "inOnlyChannels": 4,
+        "gapScore": 0.31
+      },
+      {
+        "query": "kundalini tantra awakening",
+        "topic": "practice",
+        "inChannels": 11,
+        "usChannels": 15,
+        "gbChannels": 15,
+        "inOnlyChannels": 5,
+        "gapScore": 0.45
+      },
+      {
+        "query": "chakra tantra explained",
+        "topic": "practice",
+        "inChannels": 13,
+        "usChannels": 15,
+        "gbChannels": 15,
+        "inOnlyChannels": 5,
+        "gapScore": 0.38
+      },
+      {
+        "query": "nyasa tantric ritual",
+        "topic": "practice",
+        "inChannels": 14,
+        "usChannels": 15,
+        "gbChannels": 15,
+        "inOnlyChannels": 5,
+        "gapScore": 0.36
+      },
+      {
+        "query": "tantric black magic history",
+        "topic": "taboo",
+        "inChannels": 11,
+        "usChannels": 15,
+        "gbChannels": 15,
+        "inOnlyChannels": 6,
+        "gapScore": 0.55
+      },
+      {
+        "query": "vamachara left hand path",
+        "topic": "taboo",
+        "inChannels": 14,
+        "usChannels": 15,
+        "gbChannels": 15,
+        "inOnlyChannels": 4,
+        "gapScore": 0.29
+      },
+      {
+        "query": "pancha makara five ms",
+        "topic": "taboo",
+        "inChannels": 11,
+        "usChannels": 15,
+        "gbChannels": 15,
+        "inOnlyChannels": 9,
+        "gapScore": 0.82
+      },
+      {
+        "query": "tantraloka abhinavagupta explained",
+        "topic": "historical",
+        "inChannels": 13,
+        "usChannels": 15,
+        "gbChannels": 15,
+        "inOnlyChannels": 4,
+        "gapScore": 0.31
+      }
+    ],
+    "gapTopicClusters": {
+      "philosophy": [
+        0.33,
+        0.21
+      ],
+      "deity": [
+        1,
+        1,
+        0.45,
+        0.67,
+        0.42,
+        0.5
+      ],
+      "practice": [
+        1,
+        0.43,
+        0.31,
+        0.45,
+        0.38,
+        0.36
+      ],
+      "taboo": [
+        1,
+        1,
+        1,
+        0.55,
+        0.29,
+        0.82
+      ],
+      "historical": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0.31
+      ]
+    }
+  }
+}
