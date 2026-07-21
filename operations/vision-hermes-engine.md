@@ -7,11 +7,11 @@
 ## Table of Contents
 
 - [A. Hermes as Cognitive Controller — End-to-End Flow](#a-hermes-as-cognitive-controller--end-to-end-flow)
-- [B. ML Model Architecture — One Model Per Dataset](#b-ml-model-architecture--one-model-per-dataset)
+- [B. Latent Variable Architecture — Models Represent Decisions, Not Datasets](#b-latent-variable-architecture--models-represent-decisions-not-datasets)
 - [C. Cloudflare-Native ML Strategy](#c-cloudflare-native-ml-strategy)
-- [D. The Bayesian Belief Engine](#d-the-bayesian-belief-engine)
+- [D. The Bayesian Title Engine](#d-the-bayesian-title-engine)
 - [E. GCP Credit Strategy ($300)](#e-gcp-credit-strategy-300)
-- [F. Integration with Control Plane](#f-integration-with-control-plane)
+- [F. Evidence Contracts — Unified Model Response Schema](#f-evidence-contracts--unified-model-response-schema)
 - [G. Implementation Roadmap](#g-implementation-roadmap)
 - [H. Open Questions & Risks](#h-open-questions--risks)
 
@@ -181,233 +181,105 @@ Published → YouTube Analytics API → farm D1 hypotheses table
 
 ---
 
-## B. ML Model Architecture — One Model Per Dataset
+## B. Latent Variable Architecture — Models Represent Decisions, Not Datasets
 
-Every R2 dataset becomes a queryable model. Each has a specific architecture, framework, and output format.
+Datasets are evidence sources. Models should correspond to **decisions or latent variables**, not storage buckets. Nine one-off models, each trained on a different dataset with no shared representation, produces incomparable scores that Hermes must glue together with ad-hoc weights. The current weighted sum formula (0.30 gap + 0.25 language lag + ...) will double-count evidence — for example, Google Trends demand, trending video presence, Reddit question volume, and Wikipedia clickstream may all rise from the same underlying event.
 
-### B1. YouNiverse — Breakout Prediction Model
+### B1. Latent Variables
 
-**Purpose:** Given a topic/channel, predict whether a video on that topic will break out (top 10% of OLS residual).
-
-**Features (from YouNiverse video metadata):**
-- `log(channel_subscribers)`, `channel_category`
-- `title_length`, `has_question`, `has_colon`, `power_word_count`
-- `duration_seconds`, `duration_bucket`
-- `weekday_published`, `hour_published`
-- `channel_upload_frequency` (videos/month)
-- `channel_median_views`, `channel_std_views`
-
-**Target:** Binary breakout label (top 10% of OLS residual within channel).
-
-**Model type:** Gradient-boosted tree (XGBoost or LightGBM) — interpretable, handles non-linearities, gives feature importance.
-
-**Training:** Train on YouNiverse English channels with ≥20 videos. Hold-out validation by channel ID (no channel leakage). Bootstrap CI on all metrics.
-
-**Deployment:** Export as ONNX, run inference via Workers AI (CPU inference is cheap for tabular models). Or use a small Worker that loads model weights from R2.
-
-**Query endpoint:**
-```
-POST /api/models/youniverse/predict-breakout
-{ "topic_terms": ["Chinnamasta", "Kali"],
-  "channel_profile": { "subs": 5000, "category": "Education",
-                       "median_views": 2000, "videos_per_month": 4 } }
-→ { "breakout_probability": 0.34, "ci_95": [0.28, 0.40],
-    "top_features": ["channel_median_views:0.4", "duration:0.3"] }
-```
-
-### B2. Upworthy — Title Ranking Model (Bayesian)
-
-**Purpose:** For any two title variants, predict which has higher CTR.
-
-**Features (extracted from headlines):**
-- 23 surface features from existing analysis (word count, question mark, exclamation, colon, numbers, 2nd person, negation, curiosity gap, urgency, specificity, imperative opening, question-word opening, uppercase ratio)
-- LLM-extracted semantic features: concreteness (0-1), epistemic posture (certain/hedged/curious), narrative frame (mystery/revelation/contrast), technical density
-- Eyecatcher embedding (from thumbnail image via CLIP)
-
-**Model type:** Bayesian logistic regression with:
-- Beta-Binomial likelihood per feature
-- Hierarchical pooling across semantic feature groups
-- Thompson sampling for exploration during production
-
-**Training:** Train on Upworthy confirmatory dataset (5,385 tests). Validate on holdout dataset. Report CIs on all coefficients.
-
-**Deployment:** Workers AI for inference. Model weights in R2. Bayesian inference via closed-form Beta-Binomial updates (no MCMC at inference time).
-
-**Query endpoint:**
-```
-POST /api/models/upworthy/rank-titles
-{ "title_a": "The Hidden History of the Kapalikas",
-  "title_b": "Why Skull-Carrying Ascetics Were Not What You Think",
-  "topic": "Kapalika",
-  "thumbnail_embedding": [0.1, -0.3, ...] }
-→ { "winner": "title_a",
-    "probability_a_beats_b": 0.63,
-    "posterior_ci": [0.55, 0.71],
-    "feature_contributions": { "question_b: -0.12", "never_b: +0.08", ... } }
-```
-
-### B3. Reddit — Question Clustering + Opportunity Scoring
-
-**Purpose:** Extract structured question clusters from Reddit discussions and score them by content opportunity.
-
-**Features:**
-- Submission: title, selftext, score, num_comments, created_utc, subreddit, subreddit_role
-- Comment: body, score, controversiality, link_id, depth
-
-**Model type:** Hybrid pipeline:
-1. **Embedding** (all-MiniLM-L6-v2 via Workers AI): embed submission titles + top comment texts
-2. **Clustering** (HDBSCAN on VPS batch): cluster embeddings into topic groups
-3. **Scoring** (deterministic formula):
+Replace nine model scores with beliefs about a small number of underlying quantities:
 
 ```
-reddit_opportunity = specialist_depth × mass_signal
-specialist_depth = score_in_specialist_sub × comment_depth × source_density
-mass_signal = cross_subreddit_count × total_score × years_active
+D = audience demand (is anyone looking for this?)
+S = supply scarcity (is it underserved?)
+M = topic momentum (is it growing?)
+T = cross-market transfer (will it travel?)
+V = production viability (can we research and illustrate it?)
+F = audience-topic fit (does this specific channel's audience want this?)
 ```
 
-**Training:** No training needed — embedding + clustering is unsupervised. The scoring formula is a calibrated heuristic.
+Each dataset updates one or more of these beliefs:
 
-**Deployment:** Batch processing on VPS (or GCP Cloud Run). Results stored in R2 as Parquet. Hermes queries via DuckDB.
-
-**Query endpoint (via DuckDB on R2 Parquet):**
 ```
-SELECT * FROM read_parquet('s3://research-datasets/reddit/question-clusters/*.parquet')
-WHERE opportunity_score > 0.5 AND topic_terms LIKE '%Chinnamasta%'
-ORDER BY opportunity_score DESC LIMIT 10
-```
-
-### B4. Global Trending — Cross-Country Diffusion Prediction
-
-**Purpose:** Predict which topics trending in India will cross to US/UK markets.
-
-**Features:**
-- `country`, `rank`, `category`, `title`, `language`, `live_status`
-- `view_count`, `comment_count`, `published_at`
-- Title features (same 23 as Upworthy)
-- Channel metadata (subs, category, country)
-- Lag features: days since first appearance in any country
-
-**Model type:** Survival model (Cox proportional hazards) or binary classifier (logistic regression with time-window features). Predicts whether an IN-trending video appears in US/UK within 30 days.
-
-**Training:** On Global Trending dataset (104 countries, 2022-2025). Train/test split by time.
-
-**Deployment:** BigQuery for training (SQL + BQML). Exported model weights for inference via Workers AI or Cloud Run.
-
-**Query endpoint:**
-```
-POST /api/models/global-trending/predict-diffusion
-{ "topic_terms": ["Chinnamasta", "tantra"],
-  "in_trending_rank": 45,
-  "in_category": "Education",
-  "days_since_first_appearance": 3 }
-→ { "cross_probability_30d": 0.28,
-    "expected_lag_days": 12,
-    "top_predictors": ["in_category:0.3", "in_rank:0.25"] }
+Google Trends            → D (western demand)
+YouTube search gap map   → S (supply scarcity)
+YouNiverse breakout      → D, F (related topics broke out)
+Global Trending          → M, T (diffusing geographically)
+Reddit question clusters → D, F (people asking about it)
+Clickstream gateways     → F, T (gateway entities exist)
+SARIT / Muktabodha       → V (source depth)
+Met Museum / DPLA        → V (visual depth)
+Wikipedia pageviews      → M (interest velocity)
+Stack Exchange           → D, V (community Q&A depth)
 ```
 
-### B5. YTCommentVerse — Comment Intent Classifier
+The evidence object for "Chinnamasta":
 
-**Purpose:** Classify YouTube comments into intent categories.
-
-**Classes:**
-- `question` (asking for explanation)
-- `correction` (disagreeing with content)
-- `source_request` (asking for citations)
-- `personal_testimony` (sharing experience)
-- `critique` (methodological or factual objection)
-- `praise` (non-substantive)
-- `spam` (self-promotion, irrelevant)
-
-**Model type:** Small transformer classifier (DistilBERT or MiniLM) fine-tuned on YTCommentVerse sample. Workers AI for inference.
-
-**Features:** Comment text only. Use class weights to handle imbalance.
-
-**Validation:** Dual evaluation sets — diagnostic balanced (200) + natural-prevalence frozen (500). Macro F1 >= 0.75, kappa >= 0.65.
-
-**Deployment:** Workers AI (MiniLM is ~90M params, fits within Workers AI CPU limits).
-
-**Query endpoint:**
-```
-POST /api/models/ytcomments/classify-intent
-{ "comment": "Where did you find this information? I've never heard this before." }
-→ { "intent": "source_request", "confidence": 0.87,
-    "all_probs": { "question": 0.05, "source_request": 0.87, ... } }
+```json
+{
+  "topic": "Chinnamasta",
+  "beliefs": {
+    "western_demand": {
+      "mean": 0.41, "ci_90": [0.24, 0.62],
+      "sources": ["google_trends", "reddit"]
+    },
+    "supply_scarcity": {
+      "mean": 0.82, "ci_90": [0.73, 0.89],
+      "sources": ["youtube_gap_map"]
+    },
+    "cross_market_transfer": {
+      "mean": 0.58, "ci_90": [0.29, 0.78],
+      "sources": ["global_trending"]
+    },
+    "production_viability": {
+      "mean": 0.91,
+      "sources": ["sarit", "museum_assets", "source_gate"]
+    }
+  }
+}
 ```
 
-### B6. Clickstream — Gateway Entity Graph
+### B2. Concrete Implementations
 
-**Purpose:** For any obscure topic, find what pages people read before reaching it.
+| Latent Variable | Method | Primary Dataset | Deploy | Priority |
+|----------------|--------|----------------|--------|----------|
+| audience_demand | Google Trends time-series + Reddit question frequency | Google Trends, Reddit | VPS batch | Phase 3 |
+| supply_scarcity | Gap score formula + bootstrap CI | YouTube search API | Worker | Phase 1 |
+| topic_momentum | YouNiverse breakout rate + trend slope | YouNiverse | Workers AI | Phase 5 |
+| cross_market_transfer | Exploratory analysis (descriptive, not predictive yet) | Global Trending | BigQuery | Phase 4 |
+| production_viability | Heuristic gate (source depth, visual depth, mystery, independence) | SARIT, Met, SE | Worker | Phase 3 |
+| audience_topic_fit | Reddit cross-subreddit score + channel profile similarity | Reddit, YouNiverse | DuckDB | Phase 3 |
+| opportunity_score | Weighted belief combination | All above | Worker | Phase 1 |
 
-**Model type:** Directed graph aggregation — no ML needed. Aggregate `(prev_id, curr_id, click_count)` across monthly clickstream dumps.
+### B3. Title Ranking (Separate System, Maintain Both Models)
 
-**Algorithm:**
-1. For target topic (e.g., "Chinnamasta"), find all `prev_id` values
-2. Aggregate click counts per `prev_id`
-3. Rank by total click count
-4. Extract top-5 gateway entities
+The Upworthy title engine maintains two distinct models, not one:
 
-**Deployment:** Batch processing via BigQuery or DuckDB on R2. Results cached in D1 for fast lookups.
-
-**Query:**
+**Model A: Descriptive Feature Posteriors (Beta-Binomial)**
+For each binary feature:
 ```
-SELECT prev_id, SUM(click_count) as total_clicks
-FROM clickstream_enwiki
-WHERE curr_id = 'Chinnamasta'
-GROUP BY prev_id ORDER BY total_clicks DESC LIMIT 5
+wins_observed ~ Binomial(comparisons, θ_f)
+θ_f ~ Beta(α, β)
 ```
+Used for: readable priors, uncertainty displays in dashboard, fast updates.
 
-### B7. Met Museum / DPLA / Smithsonian — Visual Asset Retriever
-
-**Purpose:** Given a topic, find relevant public domain artwork.
-
-**Model type:** CLIP embedding similarity search. Embed topic text + candidate image captions. Return top-k images where similarity > threshold.
-
-**Pipeline:**
-1. On dataset download: embed all image captions via CLIP (Workers AI or batch on VPS)
-2. Store embeddings in Vectorize index
-3. At query time: embed topic text, Vectorize similarity search, return top matches
-
-**Deployment:** Vectorize index (Cloudflare-native). Embeddings computed once during dataset ingestion.
-
-**Query:**
+**Model B: Pairwise Predictive Ranker (Bayesian Logistic Regression)**
 ```
-POST /api/models/assets/search
-{ "query": "Kali standing on Shiva, cremation ground, 18th century Indian painting" }
-→ { "results": [
-    { "asset_id": "met_12345", "score": 0.87, "image_url": "...",
-      "attribution": "Met Museum CC0", "period": "18th century" }
-  ] }
+P(A beats B) = logistic((X_A - X_B)β + context_effects)
 ```
+with Normal or hierarchical priors over coefficients. Used for: comparing complete title candidates, controlling correlated features.
 
-### B8. Stack Exchange — Question-Answer Pair Extractor
+Maintain both. The first explains; the second predicts. They are not the same model.
 
-**Purpose:** For a given topic, extract high-quality Q&A pairs for script research.
+### B4. Models Deferred Until Label Validation
 
-**Model type:** Deterministic extraction + ranking by score and accepted-answer status.
+**YouNiverse breakout classifier (XGBoost):** The breakout metric is "differentiated, not validated." Training XGBoost on an unvalidated label creates a highly optimized predictor of a potentially meaningless target. Redo A1-A3 as Tier 1 against YouNiverse time series before building the deployment stack.
 
-**Query:**
-```
--- DuckDB on R2 Parquet
-SELECT q.title as question, a.body as answer, q.score, a.score as answer_score,
-       q.tags
-FROM questions q JOIN answers a ON q.id = a.parent_id
-WHERE q.tags LIKE '%hinduism%' AND q.title LIKE '%Chinnamasta%'
-  AND a.is_accepted = 1
-ORDER BY q.score DESC LIMIT 5
-```
+**Cross-country diffusion model (Cox PH):** The Global Trending tarball must be extracted and explored first. A descriptive analysis (does IN-to-US diffusion happen at measurable rates for our niche?) should precede a predictive model. We don't know if the signal exists.
 
-### B9. Translation Datasets — Sanskrit-English Pipeline
+**Comment intent classifier (DistilBERT):** Requires labeled training data (10K comments). No labeled data exists. A pilot study (200-500 hand-labeled comments) should determine whether the taxonomy is learnable before fine-tuning a BERT variant.
 
-**Purpose:** Verify primary-source claims and translate under-translated texts.
-
-**Model type:** NMT ensemble for SA→EN. Use BPCC Sanskrit-English (496K pairs) + Samanantar HI-EN pivot (2M pairs).
-
-**Approach:**
-- Fine-tune NLLB-200-distilled on BPCC data
-- Run on GCP Cloud Run (requires GPU for reasonable speed)
-- Alternatively: use LLM (DeepSeek) with few-shot translation for short passages
-
-**Deployment:** GCP Cloud Run with GPU (sporadic usage) or Workers AI if model fits.
+**Sanskrit-English NMT (NLLB-200):** This is a separate project. Translation of philosophical Sanskrit requires text normalization, sandhi/morphology, genre-specific evaluation, and human reference translations. Defer to existing translation services (Dyczkowski corpus, GRETIL) rather than building a custom NMT pipeline.
 
 ---
 
@@ -478,57 +350,58 @@ dead_letter           ← Failed ML jobs for manual review
 
 ---
 
-## D. The Bayesian Belief Engine
+## D. The Bayesian Title Engine
 
-### D1. Core Design
+The Upworthy title engine maintains **two distinct models**, not one. They serve different purposes and use different inference mechanisms.
 
-The title intelligence system is a living Bayesian model that learns from every experiment. It replaces the current "soft priors" approach with formal uncertainty quantification.
+### D1. Model A: Descriptive Feature Posteriors (Beta-Binomial)
 
-**Model structure:**
+For each binary feature (question mark, "actually", imperative opening, etc.):
+
 ```
-For each feature f (question mark, "actually", imperative opening, etc.):
-  α_f ~ Gamma(a0, b0)  # prior successes
-  β_f ~ Gamma(c0, d0)  # prior failures
+wins_observed ~ Binomial(present_comparisons, θ_f)
+θ_f ~ Beta(α, β)
 
-For each experiment e:
-  For each pair (variant_i, variant_j):
-    logit(p_i) = β_0 + Σ β_f * (feature_i_f - feature_j_f)
-    wins_i ~ Binomial(impressions, p_i)
+prior: θ_f ~ Beta(1, 1)
+posterior: θ_f | data ~ Beta(1 + wins, 1 + losses)
 ```
 
-**Hierarchical pooling:**
-- Domain level: YouTube documentaries, Upworthy listicles, Twitter headlines
-- Platform level: YouTube Browse, YouTube Search, YouTube Suggested
-- Features partially pool across domains with domain-specific offsets
+Useful for: readable priors, uncertainty displays in the dashboard, fast closed-form updates. This is NOT a predictive model — it describes what we've observed about each feature independently.
 
-### D2. Inference
+**Inference:** Closed-form (conjugate update). No MCMC needed.
 
-- **Posterior update:** Conjugate Beta-Binomial for per-feature win rates → closed-form updates
-- **Full model:** Hamiltonian Monte Carlo (via Pyro/PyMC) retrained weekly on GCP
-- **Inference at query time:** Read posterior samples from D1, compute P(A > B) via Monte Carlo
+### D2. Model B: Pairwise Predictive Ranker (Bayesian Logistic Regression)
+
+```
+P(A beats B) = logistic((X_A - X_B)β + context_effects)
+β ~ Normal(0, σ²)  or hierarchical priors per feature group
+```
+
+Useful for: comparing complete title candidates, controlling for correlated features, platform interactions.
+
+**Inference:** Hamiltonian Monte Carlo (Pyro/PyMC) — retrained weekly on GCP or VPS. At query time: compute P(A > B) from posterior samples stored in D1.
 
 ### D3. Thompson Sampling for Exploration
 
-When Hermes generates title candidates, it doesn't always pick the top-ranked. It samples from the posterior:
+When Hermes generates title candidates, it samples from the posterior rather than always picking the top-ranked:
 
 ```
 P(select variant A) = P(A's latent CTR > B's latent CTR | data)
 ```
 
-This naturally balances exploration vs exploitation. Low-uncertainty features are exploited; high-uncertainty features are explored.
+Low-uncertainty features are exploited; high-uncertainty features are explored.
 
-### D4. Continual Ingestion Pipeline
+### D4. Title Testing Reality — Evidence Quality
 
-```
-1. YouTube A/B test completes (Test & Compare)
-2. Farm Worker captures results: (title_a, title_b, impressions, clicks, winner)
-3. Worker POSTs to /api/models/upworthy/ingest
-4. Bayesian engine updates posteriors in D1
-5. Weekly: full HMC retrain on GCP, compare new posteriors to old
-6. If posterior shift > threshold: flag for human review
-```
+Native YouTube testing capabilities, eligibility, and Analytics API exposure may not match the idealized pipeline. The ingestion layer must handle multiple experiment types with different evidence weights:
 
-### D5. D1 Schema for Bayesian State
+| Source | Evidence Weight | Notes |
+|--------|----------------|-------|
+| YouTube Test & Compare (randomized) | 1.0 | Gold standard |
+| Sequential title swap (non-randomized) | 0.25 | Time/audience composition changes |
+| Thumbnail test | 0.6 | Quasi-randomized |
+| Observational (video A vs video B) | 0.1 | Too many confounds |
+| External dataset (Upworthy) | 0.5 | Causal within source domain |
 
 ```sql
 CREATE TABLE title_posteriors (
@@ -548,6 +421,7 @@ CREATE TABLE title_experiments (
   impressions_a INTEGER, clicks_a INTEGER,
   impressions_b INTEGER, clicks_b INTEGER,
   winner TEXT,
+  evidence_quality REAL DEFAULT 0.1,
   started_at TEXT, completed_at TEXT,
   ingested_at TEXT DEFAULT (datetime('now'))
 );
@@ -555,151 +429,183 @@ CREATE TABLE title_experiments (
 CREATE TABLE title_posterior_snapshots (
   snapshot_id TEXT PRIMARY KEY,
   snapshot_date TEXT NOT NULL,
-  feature_posteriors JSON NOT NULL,  -- full posterior state
+  feature_posteriors JSON NOT NULL,
   model_version TEXT NOT NULL,
   created_at TEXT DEFAULT (datetime('now'))
 );
 ```
 
+The `evidence_quality` column prevents nonrandomized title swaps from updating the causal posterior with the same weight as randomized experiments.
+
 ---
 
 ## E. GCP Credit Strategy ($300)
 
-### E1. BigQuery ($5/TB) — Spend: ~$30
+The credit should fund **experiments that produce reusable assets**, not monthly infrastructure. Don't commit to recurring services before the corresponding model proves useful.
 
-| Dataset | Query Pattern | Cost/Month | Justification |
-|---------|---------------|------------|---------------|
-| Global Trending (26.4 GB tarball → BigQuery) | Cross-country diffusion analysis, IN→US lag computation | ~$2/month (scan filtered partitions) | Need SQL JOIN + GROUP BY across 104 countries. D1 can't handle 26 GB. |
-| YTCommentVerse (10.1 GB SQLite) | Comment taxonomy distribution, language-as-geography proxy | ~$1/month | Extract patterns from 32M comments. SQL in D1 would be slow. |
-| Clickstream (4.2 GB) | Gateway graph computation, entity adjacency | ~$0.50/month | Window functions for path analysis. One-time processing, infrequent refreshes. |
-| Cross-dataset joins | YouNiverse × Trending × Clickstream | ~$3/month | Find channels that appear in trending AND have breakout scores. |
+### E1. Principle: Experiments Over Infrastructure
 
-### E2. Vision API ($1.50/1000 images) — Spend: ~$20
+Least valuable allocations (defer or skip):
+- Cloud Run FFmpeg rendering ($80) — VPS FFmpeg has $0 marginal cost
+- Video Intelligence API ($50) — interesting but speculative; no demonstrated ROI
+- Vision API thumbnail analysis ($20) — same
 
-**Use case:** Analyzing competitor thumbnails for composition patterns. NOT for our own thumbnail generation (we use deterministic composition).
+Most valuable allocations:
+1. Processing datasets that are awkward locally (BigQuery)
+2. Model experiments with clear falsification conditions
+3. Expensive embedding/classification batches that create reusable assets
+4. Temporary GPU training where the artifact survives after credits expire
 
-**Monthly volume:** ~1000 thumbnails from breakout videos
-**Analysis:** Subject position, face count, text overlay area, color palette, composition rule (rule of thirds, centered, diagonal)
-**Output:** Thumbnail composition pattern library → feed into content genome
+### E2. Revised Budget
 
-### E3. Video Intelligence API ($1.50/minute) — Spend: ~$50
+| Spend | Service | Use | When |
+|-------|---------|-----|------|
+| $80-120 | Vertex AI / preemptible VMs | Model experiments + training: Bayesian title ranker, YouNiverse pilot, embedding batches | Phase 1-3 |
+| $30-50 | BigQuery | Large-dataset exploration: Global Trending extraction, cross-dataset joins, clickstream processing | Phase 4 |
+| $40-80 | Cloud Run GPU (preemptible) | Sanskrit translation benchmark/fine-tune — verify whether NLLB-200 works before committing | Phase 6 (deferred) |
+| $20-40 | Vision API / Video Intelligence | One-shot competitor analysis experiments — measure once, not monthly | Phase 5 |
+| $30 | Hold for validated bottlenecks | Spend only when a model proves useful and needs scaling | Ongoing |
 
-**Use case:** Detecting beats and pacing patterns in competitor documentary videos. NOT for our own content.
+### E3. BigQuery Allocation ($30-50)
 
-**Monthly volume:** ~30 minutes of analysis (3 competitor videos × 10 min each)
-**Analysis:** Shot boundary detection, label detection, explicit content detection, segment duration distribution
-**Output:** Pacing pattern library → feed into script generation
+| Dataset | Query Pattern | Cost | Notes |
+|---------|---------------|------|-------|
+| Global Trending extraction | IN→US diffusion analysis | ~$3 (one-time) | Extract tarball → BQ → explore diffusion signal |
+| YTCommentVerse | Comment language distribution | ~$1 (one-time) | Check if language-as-geography proxy exists |
+| Clickstream | Gateway entity graph | ~$2 (one-time) | Precompute gateway entities, cache in D1 |
+| Cross-dataset experiments | YouNiverse × Trending | ~$5 | Does breakout predict trending appearance? |
 
-### E4. Vertex AI (custom training) — Spend: ~$100
+### E4. Model Training Experiments ($80-120)
 
-| Model | Training Cost | Frequency | Notes |
-|-------|--------------|-----------|-------|
-| YouNiverse breakout predictor | ~$5 (small tabular data) | One-time + quarterly retrain | XGBoost on feature table. Data fits in memory. |
-| Upworthy Bayesian ranker | ~$3 (HMC on small data) | One-time + monthly retrain | Full posterior with Pyro. Small dataset (5K tests). |
-| Comment intent classifier | ~$15 (fine-tune DistilBERT) | One-time + quarterly retrain | Fine-tune on 10K labeled comments. |
-| NLLB fine-tune (Sanskrit→EN) | ~$40 (fine-tune on BPCC) | One-time | 496K pairs. Can use preemptible VMs. |
-| Reddit topic clustering | ~$2 (batch embedding) | Monthly | No training — just embedding computation. |
+| Experiment | Cost | Success Condition | Artifact |
+|-----------|------|-------------------|----------|
+| Upworthy Bayesian ranker (HMC) | ~$5 | Converges, predictive check passes | Posterior samples + model weights |
+| YouNiverse breakout pilot (toy XGBoost, validate label first) | ~$5 | Validated breakout label (Tier 1 redo) | Feature importance + label validation report |
+| Reddit embedding + HDBSCAN batch | ~$10 | Silhouette > 0.3 | Question clusters in R2 |
+| Vision API thumbnail pilot (200 images) | ~$3 | Detectable patterns in breakout thumbnails | Composition pattern library |
+| Sanskrit NLLB benchmark | ~$15 | BLEU > 25 on test set | Comparison of NLLB vs DeepSeek translation quality |
+| Total model experiments | ~$38 | — | — |
 
-### E5. Cloud Run (FFmpeg rendering) — Spend: ~$80
-
-**Use case:** Video rendering instead of VPS FFmpeg. Cloud Run scales to zero when not in use.
-
-**Monthly volume:** ~8 videos, ~$0.50/video in compute
-**Alternatives:** VPS FFmpeg (existing Hetzner, $0 marginal cost) is cheaper but less reliable. Cloud Run is the fallback if VPS is overloaded.
-
-### E6. Budget Summary
-
-| Service | Spend | Why |
-|---------|-------|-----|
-| BigQuery | ~$30 | Large-dataset SQL analytics |
-| Vision API | ~$20 | Competitor thumbnail analysis |
-| Video Intelligence | ~$50 | Competitor pacing analysis |
-| Vertex AI training | ~$100 | Custom model training |
-| Cloud Run rendering | ~$80 | FFmpeg rendering |
-| **Total** | **~$280** | Within $300 credit. Remaining $20 for overages. |
+Remaining $42-82 held for validated bottlenecks. Spend credits only when a model proves useful in shadow deployment.
 
 ---
 
-## F. Integration with Control Plane
+## F. Evidence Contracts — Unified Model Response Schema
 
-### F1. Worker Endpoints for Real-Time Queries
+Every model endpoint returns the same envelope so Hermes can compare predictions across models without assuming equal calibration.
 
-Each ML model exposes a Worker endpoint:
+### F1. The Contract
+
+```json
+{
+  "model": "upworthy-title-ranker",
+  "model_version": "0.2.1",
+  "prediction": {
+    "value": 0.63,
+    "ci_90": [0.55, 0.71]
+  },
+  "evidence": {
+    "sample_size": 4182,
+    "domain": "Upworthy confirmatory, 2013-2015",
+    "data_period": "2013-01 to 2015-12",
+    "last_updated": "2026-07-20",
+    "external_validation": false
+  },
+  "limitations": [
+    "Upworthy headline effects may not transfer to YouTube documentary titles",
+    "No validation on documentary-domain data"
+  ],
+  "operational_status": "shadow"
+}
+```
+
+Every field is required. The schema:
+
+| Field | Always Present | Purpose |
+|-------|---------------|---------|
+| `model` | Yes | Which model produced this |
+| `model_version` | Yes | Semver — enables rollback |
+| `prediction.value` | Yes | Point estimate |
+| `prediction.ci_90` | Yes | 90% credible/confidence interval |
+| `evidence.sample_size` | Yes | How many observations |
+| `evidence.domain` | Yes | What population was this trained/validated on |
+| `evidence.data_period` | Yes | Time range of training data |
+| `evidence.last_updated` | Yes | Freshness timestamp |
+| `evidence.external_validation` | Yes | Has this been validated outside training domain? |
+| `limitations` | Yes | At least one limitation |
+| `operational_status` | Yes | experimental / shadow / candidate / production / deprecated |
+
+This prevents Hermes from comparing a validated probability (n=5,000, external validation passed) with an uncalibrated heuristic as though both are equivalent.
+
+### F2. Hermes Consumption
+
+Hermes should never receive a naked `0.63`. It reads:
+
+```text
+model: upworthy-title-ranker
+version: 0.2.1
+prediction: title_a beats title_b with 0.63 probability
+domain: Upworthy 2013-2015
+confidence: small transfer weight to YouTube
+status: shadow
+```
+
+A shadow status means "use as directional prior, don't deploy as ranker until manually approved." Hermes can still use the prediction — but weighted by the evidence quality.
+
+### F3. Worker Endpoints
+
+Each model exposes a Worker endpoint returning the evidence contract:
 
 | Endpoint | Model | Cache |
 |----------|-------|-------|
-| `POST /api/models/youniverse/predict-breakout` | YouNiverse XGBoost | 1 hour TTL |
-| `POST /api/models/upworthy/rank-titles` | Upworthy Bayesian | 24 hour TTL (topic-dependent) |
-| `POST /api/models/upworthy/ingest` | Upworthy ingestion | No cache |
-| `POST /api/models/ytcomments/classify-intent` | Comment classifier | 72 hour TTL |
-| `POST /api/models/assets/search` | CLIP asset retriever | 1 hour TTL |
-| `GET /api/models/global-trending/predict-diffusion?topic=X` | Diffusion predictor | 24 hour TTL |
-| `GET /api/models/clickstream/gateways?entity=X` | Gateway graph | 7 day TTL (dataset is monthly) |
+| `POST /api/models/upworthy/rank-titles` | Upworthy Bayesian | 24h TTL |
+| `POST /api/models/upworthy/ingest` | Ingestion | No cache |
+| `POST /api/models/assets/search` | CLIP asset retriever | 1h TTL |
+| `GET /api/reddit/questions?topic=X` | Reddit clusters | 24h TTL |
+| `GET /api/models/clickstream/gateways?entity=X` | Gateway graph | 7d TTL |
+| `POST /api/models/predict-breakout` | YouNiverse (Phase 5) | 1h TTL |
+| `GET /api/models/predict-diffusion?topic=X` | Diffusion (Phase 5) | 24h TTL |
 
-All endpoints are routed through AI Gateway for caching, fallback, and cost tracking.
+### F4. Scheduled Batch Jobs
 
-### F2. Scheduled Batch Jobs
+| Job | Frequency | What It Does |
+|-----|-----------|-------------|
+| Reddit recluster | Biweekly | Re-embed + re-cluster, upload to R2 |
+| Clickstream update | Monthly | Recompute gateway graph from new dump |
+| Upworthy posterior update | Monthly | Full HMC posterior update |
+| YouNiverse breakout recompute | Weekly | Full recomputation of breakout scores |
+| Model health check | Daily | Ping all endpoints, check freshness, flag stale predictions |
 
-| Job | Frequency | What It Does | Where |
-|-----|-----------|-------------|-------|
-| YouNiverse model retrain | Monthly | Retrain breakout classifier with latest data | GCP Vertex AI → export ONNX to R2 |
-| Upworthy posterior update | Weekly | Full HMC posterior update | GCP Vertex AI → export to D1 |
-| Reddit recluster | Biweekly | Re-embed + re-cluster Reddit submissions | VPS → upload to R2 |
-| Comment classifier retrain | Monthly | Fine-tune on new labeled data | GCP Vertex AI → export ONNX to R2 |
-| Clickstream update | Monthly | Recompute gateway graph from new dump | GCP BigQuery → upload to D1 |
-| Global Trending update | Monthly | Re-extract from tarball, recompute diffusion model | GCP BigQuery → upload to R2 |
-| YouNiverse breakout recompute | Weekly | Full recomputation of breakout scores from scratch | Farm D1 (Cloudflare cron) |
+### F5. Approval Gates with Model Predictions
 
-### F3. Gateway for LLM Calls with Caching
-
-AI Gateway sits in front of ALL LLM calls:
+When Hermes presents a treatment for approval, every model prediction includes its evidence contract:
 
 ```
-Hermes → AI Gateway → DeepSeek (primary)
-                        └── Workers AI Llama 4 (fallback)
+┌──────────────────────────────────────────────────────────────┐
+│ Treatment: "Why Enlightenment Does Not Destroy the Ego"      │
+│                                                              │
+│ Model Predictions:                                            │
+│                                                              │
+│ Title rank: 0.63                                             │
+│   [upworthy-title-ranker v0.2.1, shadow, n=4182, Upworthy]  │
+│                                                              │
+│ Gap score: 0.72                                              │
+│   [gap-map v1.1.0, production, n=30 queries, YouTube API]   │
+│                                                              │
+│ Reddit opportunity: 0.68                                     │
+│   [reddit-clusters v0.1.0, experimental, n=12 subreddits]   │
+│                                                              │
+│ [Approve] [Revise] [Terminate]                                │
+└──────────────────────────────────────────────────────────────┘
 ```
 
-**Cache key format:**
-```
-sha256(model_version + prompt_version + input_asset_hash)
-```
-
-**Cache hit rates:**
-- Hook classification: ~80% cacheable (same topics recur)
-- Thumbnail analysis: ~60% cacheable (similar images)
-- Script generation: 0% cacheable (always unique)
-- Treatment generation: ~30% cacheable (similar topic clusters)
-
-### F4. Approval Gates with Model Predictions
-
-When Hermes presents a treatment for human approval, the dashboard shows:
-
-```
-┌─────────────────────────────────────────────────────────┐
-│ Treatment: "Why Enlightenment Does Not Destroy the Ego" │
-│                                                         │
-│ 📊 Model Predictions:                                    │
-│   Title rank: 0.63 (beats "Enlightenment and the Ego")  │
-│   Breakout probability: 0.34 (vs channel baseline 0.10) │
-│   Gap score: 0.72 (strong)                               │
-│   Reddit opportunity: 0.68 (specialist_depth × mass)     │
-│   Western demand: 0.45 (moderate)                        │
-│                                                         │
-│ 🧠 Bayesian Title Priors Applied:                        │
-│   "actually" +29% lift (n=238, CI wide)                  │
-│   question mark -22% lift (n=1,882, CI tight)            │
-│   imperative opening +16% lift (n=464, CI moderate)     │
-│                                                         │
-│ 📝 Research Pack: 12 claims, 18 sources, all verified    │
-│ 🖼️ Visual Assets: 8 candidates (3 Met, 2 DPLA, 3 FLUX)  │
-│                                                         │
-│ [Approve] [Revise: weak hook] [Terminate]                │
-└─────────────────────────────────────────────────────────┘
-```
+The human sees both the prediction and the evidence quality. A shadow prediction next to a production prediction is visually distinguishable.
 
 ---
 
 ## G. Implementation Roadmap
+
+The system's first real success criterion: **Did it help choose and produce a better first ten videos?** Build the evidence contracts, title engine, research retrieval, and approval loop first. Make the rest earn its place through ablation and measurable decision improvement.
 
 ### Phase 0: What We Have Today (Done)
 
@@ -717,80 +623,78 @@ When Hermes presents a treatment for human approval, the dashboard shows:
 | Hermes agent | Installed, Telegram gateway, skills system |
 | Market scan skill | 75-channel daily monitoring |
 
-### Phase 1: Bayesian Title Engine + Holdout Replication (~1 week)
+### Phase 1: Evidence Substrate (~1 week)
 
-**Goal:** A production-ready Bayesian title ranker with uncertainty quantification.
-
-**Tasks:**
-1. Download Upworthy holdout dataset (already designed in `blueprint-datasets-download.md`)
-2. Re-run existing analysis on holdout dataset — check if per-feature directions replicate
-3. Implement Bayesian Beta-Binomial model (Pyro on VPS or GCP)
-4. Add CIs to all per-feature win rates
-5. Add permutation test (shuffle winner labels 1,000x, compare to null distribution)
-6. Deploy title ranker as Worker: `POST /api/models/upworthy/rank-titles`
-7. Implement D1 schema for posterior storage (title_posteriors, title_experiments)
-8. Add ingestion endpoint: `POST /api/models/upworthy/ingest`
-
-**Deliverable:** Hermes can query `rank-titles(topic, candidate_a, candidate_b) → probability + CIs`.
-
-### Phase 2: YouNiverse Breakout Model + Gap Score Model (~2 weeks)
-
-**Goal:** Predict breakout probability for any topic on any channel profile.
+**Goal:** A common schema for all model predictions so Hermes never receives a naked score. Prevents nine incompatible mini-systems.
 
 **Tasks:**
-1. Build YouNiverse feature table (log subs, category, duration, title features, channel median, etc.)
-2. Train XGBoost breakout classifier with bootstrap CIs
-3. Validate against multiple baselines (views/day, age-bin percentile, raw views)
-4. Export to ONNX, deploy to Workers AI
-5. Build gap score model: given search queries, predict gap score + confidence interval
-6. Integrate with Vectorize: topic-similarity index
+1. Design and implement **evidence contract schema** (see Section F)
+2. Build **model registry** D1 table (model_id, version, status, last_updated, domain, endpoint_url)
+3. Add **lineage tracking** to all existing research outputs (dataset hashes, code commits, formula versions)
+4. Add **freshness metadata** to every R2 dataset (last_updated timestamp)
+5. Build a simple **prediction logging** endpoint: `POST /api/models/log-prediction`
+6. Replicate Upworthy analysis on **holdout dataset** — check if per-feature directions replicate
+7. Add **confidence intervals** to existing per-feature win rates
+8. Add **permutation test** (shuffle winner labels 1,000x, compare to null distribution)
 
-**Deliverable:** Hermes queries `predict-breakout(topic, channel_profile) → probability + CIs`.
+**Deliverable:** Every model endpoint returns the same envelope. Hermes can distinguish validated predictions from exploratory heuristics.
 
-### Phase 3: Reddit Question Clusters + Reddit Opportunity Scoring (~1 week)
+### Phase 2: Title Belief Engine (~1 week)
 
-**Goal:** Structured question clusters with opportunity scores that feed directly into treatment generation.
-
-**Tasks:**
-1. Run Reddit extraction script (already designed in `reddit-extraction-guide.md`)
-2. Embed all submission titles (Workers AI batch or VPS)
-3. Cluster with HDBSCAN
-4. Compute opportunity scores per cluster
-5. Store in R2 as Parquet
-6. Build DuckDB query worker: `GET /api/reddit/questions?topic=X`
-7. Build recommendation graph from top-voted comments
-
-**Deliverable:** Hermes queries `reddit/questions?topic=Chinnamasta` → returns question clusters, opportunity scores, recommended sources.
-
-### Phase 4: Global Trending Cross-Country Model + Clickstream Gateway Graph (~2 weeks)
-
-**Goal:** Predict cross-country topic diffusion and narrative entry frames.
+**Goal:** Bayesian Beta-Binomial posteriors for all title features, deployed as exploratory.
 
 **Tasks:**
-1. Extract Global Trending tarball (26.4 GB) into BigQuery
-2. Build cross-country diffusion features (IN rank, category, language, IN→US lag)
-3. Train Cox survival model or logistic regression
-4. Deploy diffusion predictor: `GET /api/models/global-trending/predict-diffusion`
-5. Process clickstream data: aggregate gateway entity pairs
-6. Deploy gateway lookup: `GET /api/models/clickstream/gateways?entity=X`
-7. Build Vectorize index for gateway entity similarity
+1. Build Model A **(descriptive Beta-Binomial posteriors)** — one per feature, CIs on everything
+2. Build Model B **(Bayesian logistic pairwise ranker)** — Pyro on VPS or GCP
+3. Deploy as **exploratory** (operational_status = "shadow")
+4. Build explanation display: at approval gates, show uncertainty, not just point estimates
+5. Implement D1 schema for posterior storage
+6. Add ingestion endpoint: `POST /api/models/upworthy/ingest`
+7. Feature belief registry dashboard: posterior plots per feature
 
-**Deliverable:** Hermes queries `predict-diffusion("Chinnamasta")` → `{cross_prob, expected_lag}`. Hermes queries `gateways("Chinnamasta")` → `["Kali", "Hindu_goddess", "Tantra"]`.
+**Deliverable:** Hermes queries `rank-titles(topic, a, b)` → probability + CIs + limitations. Dashboard shows title uncertainty at approval gates.
 
-### Phase 5: Full Integration with Control Plane + Dashboard (~2 weeks)
+### Phase 3: Research Intelligence (~2 weeks)
 
-**Goal:** All model predictions visible in the dashboard at every approval gate.
+**Goal:** Datasets that directly improve documentary production, not just prediction.
 
 **Tasks:**
-1. Wire all model endpoints into control plane Worker
-2. Add model predictions to approval gate display
-3. Implement heartbeat reporting from each model Worker
-4. Add "re-train model" button to dashboard (triggers Vertex AI pipeline)
-5. Build Bayesian title prior visualization (posterior plots per feature)
-6. Add model version tracking and rollback
-7. Implement AI Gateway caching for all model endpoints
+1. **Reddit clusters** — run extraction, embed, HDBSCAN, store in R2
+2. **Reddit recommendation graph** — from top-voted comments per subreddit
+3. **Visual asset retrieval** — CLIP embed museum captions, Vectorize index
+4. **Gateway entity graph** — process clickstream, cache in D1
+5. **Stack Exchange Q&A extractor** — deterministic DuckDB queries
+6. **Source-depth gate** — validate against SARIT + Muktabodha
+7. **Visual-depth gate** — validate against Met Museum + DPLA
+8. Build query endpoints: `GET /api/reddit/questions?topic=X`, `POST /api/assets/search`, `GET /api/clickstream/gateways?entity=X`
 
-**Deliverable:** Dashboard shows model predictions at every gate. Hermes gets model outputs as structured data.
+**Deliverable:** Hermes gets research packs, visual assets, and audience questions for any topic. Production bottleneck shifts from "can we research this?" to "which topic should we record?"
+
+### Phase 4: Validate Opportunity Labels (~1 week)
+
+**Goal:** Before training any predictive model, confirm the target labels are meaningful.
+
+**Tasks:**
+1. **Redo A1-A3 as Tier 1** — compare OLS residual, views/day, age-bin percentile against future view growth in YouNiverse time series. Bootstrap CIs. External outcome validation.
+2. **Test gap score stability** — 14-day collection ends (12 days remaining), compute week-over-week Spearman r. If r < 0.3, weekly cadence needs redesign.
+3. **Ablation study** — measure whether current opportunity score (weighted sum) ranks known breakout topics above non-breakout topics in YouNiverse. Run with all 5 components, then remove each one. Does any component add negative value?
+4. **Global Trending descriptive analysis** — extract tarball, answer: does IN-to-US diffusion actually happen at measurable rates for philosophy/religion categories? If not, skip the diffusion model entirely.
+
+**Deliverable:** Confirmed which labels are real (breakout metric, gap score) and which are noise. Opportunity score weights are empirically grounded, not guessed.
+
+### Phase 5: Train Opportunity Models (~2 weeks)
+
+**Goal:** Predictive models for the validated latent variables, deployed with evidence contracts.
+
+**Tasks:**
+1. **YouNiverse breakout classifier** (XGBoost, validated label from Phase 4)
+2. **Cross-country diffusion model** (only if Phase 4 found measurable diffusion signal)
+3. **Opportunity score as learned model** (replace hand-tuned weights with learned combination)
+4. Deploy all as **shadow** — running alongside existing heuristics, not replacing them
+5. Compare model predictions to heuristic scores for 30 days
+6. Only promote if model consistently outperforms heuristic
+
+**Deliverable:** Three predictive models deployed in shadow mode, being evaluated against current heuristic baselines.
 
 ### Phase 6: Online Learning from Own Production Data (Ongoing)
 
@@ -800,11 +704,29 @@ When Hermes presents a treatment for human approval, the dashboard shows:
 1. Implement YouTube Test & Compare capture → title_experiments table
 2. Weekly Bayesian posterior update from own A/B results
 3. Compare own posteriors to Upworthy priors — does the transfer hold?
-4. Implement genome feedback: which patterns predicted success?
-5. Monthly: re-train YouNiverse model with own channel data added
+4. Genome feedback: which patterns predicted success?
+5. Monthly: retrain YouNiverse model with own channel data added
 6. Quarterly: re-evaluate all opportunity score weights vs actual performance
 
 **Deliverable:** Models improve with every published video. Opportunity score weights are data-driven per channel.
+
+### Beyond: Choose What Evidence to Collect Next
+
+The system should eventually decide which video to make based on both expected production value AND expected information gain:
+
+```
+utility = production_value + information_gain_weight
+```
+
+Three production modes:
+
+| Mode | Goal | Example |
+|------|------|---------|
+| EXPLOIT | Maximize expected success | Highest-confidence topic, proven packaging |
+| EXPLORE | Test a high-uncertainty hypothesis | Topic with wide posterior — learn whether a whole class of topics works |
+| FOUNDATION | Create evergreen gateway content | "What Is Kashmir Shaivism?" — needed for later topics to be discoverable |
+
+This prevents the system from converging on a narrow formula. A video becomes both a piece of media and an experiment that improves the organism.
 
 ---
 
@@ -895,17 +817,18 @@ The models help pick topics that matter. They can't make you record faster. At ~
 
 ## Appendix: Model Deployment Matrix
 
-| Model | Framework | Infrastructure | Inference Cost | Training Frequency | Latency |
-|-------|-----------|---------------|----------------|-------------------|---------|
-| YouNiverse breakout | XGBoost → ONNX | Workers AI (CPU) | ~$0.001/query | Monthly on GCP Vertex | <100ms |
-| Upworthy title ranker | Bayesian LR (Pyro) | Workers AI (CPU) | ~$0.001/query | Weekly on GCP Vertex | <100ms |
-| Reddit question clusters | MiniLM + HDBSCAN | VPS (DuckDB) | ~$0 (batch) | Biweekly on VPS | ~1s (cached) |
-| Global Trending diffusion | Cox PH / Logistic | BigQuery + Workers AI | ~$0.01/month scan | Monthly on GCP BigQuery | ~2s (cached) |
-| Comment intent classifier | DistilBERT → ONNX | Workers AI (CPU) | ~$0.002/query | Monthly on GCP Vertex | <200ms |
-| CLIP asset retriever | CLIP → Vectorize | Workers AI + Vectorize | ~$0.001/query | One-time + on update | <50ms |
-| Gateway entity graph | Aggregation | BigQuery + D1 | ~$0.005/month | Monthly on GCP BigQuery | <20ms |
-| Stack Exchange extraction | Deterministic | DuckDB on R2 | ~$0 (batch) | One-time | ~500ms |
-| Sanskrit-English NMT | NLLB-200 fine-tune | GCP Cloud Run (GPU) | ~$0.01/translation | One-time | ~3s |
+| Model | Framework | Infrastructure | Status | Value | Phase |
+|-------|-----------|---------------|--------|-------|-------|
+| Upworthy Beta-Binomial (Model A) | Closed-form conjugate | Worker + D1 | ✅ Build now | High: uncertainty for every title decision | Phase 2 |
+| Upworthy Bayesian LR (Model B) | Pyro HMC | Workers AI + GCP training | ✅ Build now | High: pairwsie ranker with CIs | Phase 2 |
+| Reddit question clusters | MiniLM + HDBSCAN | VPS + DuckDB | ✅ Build now | High: directly improves topic selection | Phase 3 |
+| CLIP asset retriever | CLIP → Vectorize | Workers AI + Vectorize | ✅ Build now | High: visual assets for every topic | Phase 3 |
+| Gateway entity graph | Aggregation | BigQuery + D1 | ✅ Build now | High: narrative entry frames | Phase 3 |
+| Stack Exchange extraction | Deterministic | DuckDB on R2 | ✅ Build now | High: Q&A for research packs | Phase 3 |
+| YouNiverse breakout predictor | XGBoost → ONNX | Workers AI | ⏳ Wait for label validation | Medium: depends on breakout metric validity | Phase 5 |
+| Cross-country diffusion | Cox PH / Logistic | BigQuery | ⏳ Wait for descriptive analysis | Medium: signal may not exist | Phase 5 |
+| Comment intent classifier | DistilBERT → ONNX | Workers AI | ⏳ Wait for labeled data | Medium: requires 10K labeled comments | Phase 5 |
+| Sanskrit-English NMT | NLLB-200 fine-tune | GCP Cloud Run GPU | ❌ Separate project | Low: use existing translations instead | Deferred |
 
 ## Appendix: Worker Route Map
 
