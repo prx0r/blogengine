@@ -164,22 +164,34 @@ node scripts/daily-search-collection.mjs
 ## File Index
 
 ### Strategy (root level)
-`intelligence-pipeline.md`, `highsignalspec.md`, `channel-growth-algorithm.md`, `youtubemaster.md`, `youtubemaster2.md`, `brainstormcontent.md`
+`intelligence-pipeline.md`, `highsignalspec.md`, `channel-growth-algorithm.md`, `youtubemaster.md`, `youtubemaster2.md`, `brainstormcontent.md`, `buildthreads.md`
 
 ### Pipeline Specs
-`pipelines/README.md`, `pipelines/farm-implementation-plan.md`, `pipelines/the-loom.md`, `pipelines/r2-dataset-reference.md`, `pipelines/hermes-army/hermescloudflare.md`, `pipelines/youniverse/`, `pipelines/global-trending/`, `pipelines/yt30m-comments/`, `pipelines/regional-audit/`
+`pipelines/README.md`, `pipelines/farm-implementation-plan.md`, `pipelines/the-loom.md`, `pipelines/r2-dataset-reference.md`, `pipelines/hermes-army/hermescloudflare.md`, `pipelines/control-plane-design.md`, `pipelines/youniverse/`, `pipelines/global-trending/`, `pipelines/yt30m-comments/`, `pipelines/regional-audit/`
 
-### Farm Factory (hypothetical Workers code)
-`farm-factory/farm-template/`, `farm-factory/hermes-conductor/`, `farm-factory/dashboard/dashboard-spec.md`, `farm-factory/franchise-spec.md`, `farm-factory/docs/`, `farm-factory/scripts/`
+### Reddit Intelligence
+`pipelines/reddit-intelligence/README.md` — 30 subreddits, stream-filter design, object model
+`pipelines/reddit-intelligence/reddit-signal-taxonomy.md` — 4 signal layers, cross-subreddit opportunity detection
+`pipelines/reddit-intelligence/signal-quick-ref.md` — lookup card for signal → content decisions
+
+### Farm Template (deployable, not speculative)
+`farm-template/src/index.ts` — Worker with cron + workflow + API
+`farm-template/src/d1/schema.sql` — 8 tables (channels, videos, gap_map, hypotheses, pipeline_stages, fact_checks, api_usage)
+`farm-template/wrangler.jsonc` — bindings parameterized by FARM_ID
+`farm-template/scripts/create-farm.sh` — provision D1/R2/Queues, apply schema, insert channels
+`farm-template/docs/01-SETUP.md`, `02-RESEARCH.md`, `03-PRODUCTION.md`
 
 ### Data
-`data/research/youniverse/` (Layer 1 outputs), `data/research/layer2/` (Layer 2 outputs + daily collection), `data/reports/` (standardized JSON reports), `data/api-usage-log.csv`
+`data/research/youniverse/` (Layer 1 outputs + peer-reviewed report), `data/research/layer2/` (Layer 2 outputs + daily collection), `data/reports/` (standardized JSON reports), `data/api-usage-log.csv`
 
 ### Operations
-`operations/dataset-download.md`, `operations/layer1-handover.md`, `operations/build-plan.md`
+`operations/dataset-download.md`, `operations/layer1-handover.md`, `operations/build-plan.md`, `operations/research-schema.md` (experiment manifest format), `operations/research-inventory.md` (all 41 experiments tracked), `operations/research-workflow.md` (standardized experiment pattern), `operations/dataset-download-handover.md` (new dataset instructions), `operations/reddit-extraction-guide.md` (stream-filter code), `operations/blueprint-datasets-download.md` (Upworthy, Clickstream, museum datasets)
 
 ### Scripts
 `scripts/layer1-youniverse-test.py`, `scripts/test-underserved-claim.mjs`, `scripts/validate-data-report.py`, `scripts/wikipedia-validation.mjs`, `scripts/daily-search-collection.mjs`, `scripts/run-daily-search.sh`, `scripts/market-landscape.ts`
+
+### Reviews
+`reviews/farm-critique-analysis.md` — peer review of architecture and corrections
 
 ### Reference Docs
 `docs/api-ref/` (YouTube API), `docs/cloudflare-ref/` (Cloudflare API)
