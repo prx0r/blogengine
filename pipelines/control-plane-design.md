@@ -2,127 +2,209 @@
 
 ## Architecture
 
-The control plane is three things, not one:
-1. A **Worker** that receives status reports from farms and exposes an API
-2. A **D1 database** that stores pipeline state and pending approvals
-3. A **dashboard UI** on Cloudflare Pages that reads from the API
-
-Hermes doesn't change. It still calls HTTPS endpoints on farm Workers — same pattern as its existing astrology/journal API calls. The control plane is invisible to Hermes.
+Three components: a Worker API, a D1 database, and a dashboard UI. Hermes doesn't change — it still calls HTTPS endpoints on farm Workers directly, same as its existing astrology API calls.
 
 ## Data Flow
 
 ```
-1. HERMES proposes topic → POST /api/factory/produce on FARM WORKER
-2. FARM WORKFLOW starts → on every stage transition → POST to CONTROL PLANE
-3. FARM WORKFLOW hits WAIT_FOR_APPROVAL → POST to CONTROL PLANE (pending gate)
-4. DASHBOARD shows pending gates → reads from CONTROL PLANE API
-5. HUMAN clicks approve/reject → POST to CONTROL PLANE
-6. CONTROL PLANE sends signed command to FARM WORKER's control endpoint
-7. FARM WORKER verifies signature → executes against its own Workflow binding
-8. FARM WORKFLOW continues or halts
+1. FARM reaches WAIT_FOR_APPROVAL → POSTs gate to CONTROL PLANE (with artifact_hash)
+2. DASHBOARD displays pending gate → human sees exact version with hash
+3. HUMAN approves/rejects/revises → POST to CONTROL PLANE
+4. CONTROL PLANE atomically resolves gate, creates signed command
+5. CONTROL PLANE sends command to FARM WORKER's control endpoint
+6. FARM WORKER verifies signature, nonce, expiry, expected workflow state
+7. FARM WORKER verifies artifact hash still matches
+8. FARM WORKER applies command → emits pipeline event
+9. CONTROL PLANE marks command acknowledged + applied
 ```
 
-No step requires Hermes to receive a callback. The flow is synchronous from the human's perspective: click approve, farm moves to next step.
+The approval binds to an exact artifact hash, not a mutable database pointer.
 
-## Hermes Integration Points
-
-Hermes already calls HTTPS endpoints on Workers. The farm Worker exposes one new endpoint that Hermes calls:
-
-| Endpoint | Method | What Hermes Does | Timeline |
-|----------|--------|-------------------|----------|
-| `/api/factory/produce` | POST | Hermes proposes a topic using its existing skill system | Now — same pattern as astrology API |
-| `/api/factory/status` | GET | Hermes checks if a production is complete | After proposing |
-
-Hermes doesn't need to know about the control plane at all. It talks to farms directly, same as today.
-
-## D1 Schema (Control Plane)
+## Schema (5 tables)
 
 ```sql
 CREATE TABLE farms (
   farm_id TEXT PRIMARY KEY,
-  name TEXT,
-  niche TEXT,
+  name TEXT, niche TEXT,
   status TEXT DEFAULT 'active',
-  last_heartbeat TEXT,
+  health_status TEXT DEFAULT 'unknown',
+  auth_key_id TEXT,
+  worker_url TEXT,
+  last_heartbeat TEXT, last_event_at TEXT,
+  config_version TEXT,
   created_at TEXT
 );
 
-CREATE TABLE pipeline_events (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
+CREATE TABLE workflow_instances (
+  workflow_id TEXT PRIMARY KEY,
   farm_id TEXT NOT NULL,
-  workflow_id TEXT NOT NULL,
-  stage TEXT NOT NULL,
-  status TEXT NOT NULL,        -- running, completed, failed, waiting_approval
-  summary TEXT,                -- human-readable: "Treatment ready for: Chinnamasta"
-  created_at TEXT NOT NULL,
+  topic_id TEXT,
+  current_stage TEXT NOT NULL,
+  status TEXT NOT NULL,
+  active_gate_id TEXT,
+  started_at TEXT, updated_at TEXT, completed_at TEXT,
+  last_event_id TEXT,
   FOREIGN KEY (farm_id) REFERENCES farms(farm_id)
+);
+
+CREATE TABLE pipeline_events (
+  event_id TEXT UNIQUE,
+  farm_id TEXT NOT NULL, workflow_id TEXT NOT NULL,
+  sequence_no INTEGER,
+  event_type TEXT,
+  stage TEXT, status TEXT,
+  summary TEXT, payload_json TEXT,
+  occurred_at TEXT, received_at TEXT,
+  FOREIGN KEY (farm_id) REFERENCES farms(farm_id),
+  UNIQUE(farm_id, workflow_id, sequence_no)
 );
 
 CREATE TABLE approval_gates (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  farm_id TEXT NOT NULL,
-  workflow_id TEXT NOT NULL,
-  gate_type TEXT NOT NULL,     -- treatment, script, publish
-  summary TEXT,                -- human-readable: "Approve treatment for Chinnamasta"
-  payload_json TEXT,           -- small metadata from the farm
-  status TEXT DEFAULT 'pending', -- pending, approved, rejected
-  created_at TEXT NOT NULL,
-  resolved_at TEXT,
-  resolved_by TEXT,            -- "dashboard_user" or "hermes"
-  FOREIGN KEY (farm_id) REFERENCES farms(farm_id)
+  gate_id TEXT UNIQUE,
+  farm_id TEXT NOT NULL, workflow_id TEXT NOT NULL,
+  gate_type TEXT NOT NULL, gate_version INTEGER NOT NULL,
+  artifact_ref TEXT, artifact_hash TEXT,
+  summary TEXT, payload_json TEXT,
+  status TEXT DEFAULT 'pending',
+  decision TEXT, reason_codes JSON,
+  superseded_by TEXT,
+  expires_at TEXT,
+  created_at TEXT, resolved_at TEXT,
+  command_id TEXT,
+  UNIQUE(farm_id, workflow_id, gate_type, gate_version)
 );
 
 CREATE TABLE control_commands (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  farm_id TEXT NOT NULL,
-  workflow_id TEXT NOT NULL,
-  command_type TEXT NOT NULL,  -- approve_gate, reject_gate, pause, resume, terminate
-  payload_json TEXT,
-  status TEXT DEFAULT 'pending', -- pending, delivered, failed
-  created_at TEXT NOT NULL,
-  FOREIGN KEY (farm_id) REFERENCES farms(farm_id)
+  command_id TEXT UNIQUE,
+  farm_id TEXT, workflow_id TEXT,
+  gate_id TEXT,
+  command_type TEXT NOT NULL,
+  nonce TEXT UNIQUE, expires_at TEXT,
+  payload_json TEXT, response_json TEXT,
+  status TEXT DEFAULT 'pending',
+  attempt_count INTEGER DEFAULT 0,
+  last_attempt_at TEXT,
+  acknowledged_at TEXT, applied_at TEXT,
+  error_code TEXT, error_message TEXT,
+  created_at TEXT
 );
 ```
 
-That's 4 tables. The `pipeline_events` table is append-only (immutable log). The `approval_gates` table is the operational table. The `control_commands` table is for auditing what commands were sent.
+`pipeline_events` is the immutable history. `workflow_instances` is the current projection — dashboard reads this, not the event log. Gates carry `artifact_hash` so approval binds to an exact version.
 
-## Worker API Endpoints
+## Signed Command Format
 
+Every command from control plane to farm Worker includes:
+
+```json
+{
+  "command_id": "cmd_abc123",
+  "farm_id": "tantra",
+  "workflow_instance_id": "wf_xyz",
+  "action": "approve_gate",
+  "gate_id": "gate_789",
+  "timestamp": "2026-07-21T12:00:00Z",
+  "nonce": "a1b2c3d4",
+  "expires_at": "2026-07-21T12:05:00Z",
+  "body_hash": "sha256:...",
+  "signature": "hmac_sha256(...)"
+}
 ```
-POST /api/ingest/event          ← farms report stage transitions
-POST /api/ingest/gate           ← farms report WAIT_FOR_APPROVAL
-POST /api/ingest/heartbeat      ← farms report they're alive
 
-GET  /api/farms                 ← list all farms with status
-GET  /api/farms/:id             ← single farm drill-down
-GET  /api/farms/:id/events      ← recent pipeline events for a farm
+Farm verifies: farm_id matches, signature valid, nonce unused, timestamp within 5 minutes, expected workflow state. Never use a shared CONTROL_PLANE_TOKEN across farms — each farm has its own signing secret stored as a Worker secret, not in D1.
 
-GET  /api/gates                 ← all pending gates across all farms
-GET  /api/gates/:id             ← single gate detail
-POST /api/gates/:id/resolve     ← approve or reject a gate
+Command outcomes: pending → sent → acknowledged → applied → completed. Or: pending → sent → failed. The control plane never infers success from HTTP 200 alone.
 
-POST /api/control/:farm/:wf     ← send interrupt to a workflow instance
+## Gate Resolution
+
+Three outcomes, not two:
+
+- **Approve** → workflow continues. Stores artifact_hash that was approved.
+- **Revise** → returns to previous generation stage with reason_codes and notes. Does not kill the workflow.
+- **Terminate** → closes workflow, cancels pending gates.
+
+Resolution uses compare-and-set:
+
+```sql
+UPDATE approval_gates SET status = 'approved', decision = 'approve'
+WHERE gate_id = ? AND status = 'pending' AND gate_version = ?;
 ```
 
-The ingest endpoints are POST from farm Workers. The GET endpoints are for the dashboard. The resolve endpoint is for the dashboard. The control endpoint sends signed commands to farm Workers.
+If zero rows updated → 409 Conflict. Prevents stale approvals from old browser tabs.
+
+Structured reviewer feedback:
+```json
+{
+  "decision": "revise",
+  "reason_codes": ["weak_hook", "insufficient_sources"],
+  "notes": "The topic is good but the opening relies too heavily on supernatural framing."
+}
+```
 
 ## Dashboard Views
 
-Three views, server-rendered HTML from the Worker (no SPA framework):
+Three views, server-rendered HTML:
 
-**View 1: Farm Grid** — table of all farms with last heartbeat, current stage, pending gates count, status indicator. Click a farm to see its detail.
+**Approval Inbox** — the primary view. Each card shows: farm, topic, gate_type, age, artifact_version, artifact_hash, risk flags. Buttons: Approve (A), Revise (R), Terminate (X). Navigate with J/K.
 
-**View 2: Approval Inbox** — table of all pending approval_gates across all farms. Each row: farm, gate_type, summary, time since created, approve/reject buttons. This is the primary operational view — it's where you spend your time.
+**Farm Grid** — health status, current workflow count, oldest pending gate, last heartbeat, last successful production, 24h failure count.
 
-**View 3: Farm Detail** — pipeline event history for a specific farm, current workflow state, interrupt buttons per running instance. Shows the farm's last 50 pipeline_events in reverse chronological order.
+**Farm Detail** — workflow timeline, expandable raw event JSON, interrupt buttons (pause, resume, terminate, retry_stage, restart_from_stage).
+
+## Heartbeat
+
+Farm reports:
+```json
+{
+  "farm_id": "tantra",
+  "agent_alive": true,
+  "worker_reachable": true,
+  "queue_depth": 3,
+  "running_workflows": 1,
+  "oldest_job_age_seconds": 420,
+  "last_success_at": "...",
+  "config_version": "farm-template-0.4.1"
+}
+```
+
+Health states: healthy, degraded, stalled, offline, misconfigured.
+
+No heartbeat for 5 minutes → offline. Workflow stage unchanged beyond SLA → stalled. Repeated failures → degraded. Schema version mismatch → misconfigured.
+
+## Interrupt Semantics
+
+| Command | Effect |
+|---------|--------|
+| `pause` | Complete current atomic step, then stop. Not mid-write. |
+| `resume` | Only valid from paused state. |
+| `terminate` | Mark workflow terminal, cancel pending gates. |
+| `retry_stage` | Retry current failed stage with same inputs. |
+| `restart_from_stage` | New attempt preserving original event history. |
+
+`retry_stage` and `restart_from_stage` will be used more often than terminate.
+
+## Build Order
+
+**Critical vertical slice first:**
+1. farms + workflow_instances + pipeline_events + approval_gates + control_commands tables
+2. Authenticated event ingestion (POST from farms)
+3. Gate creation (farm hits WAIT_FOR_APPROVAL → gate appears)
+4. Approval inbox (dashboard reads pending gates)
+5. Atomic gate resolution + signed command delivery
+6. Farm command verification + application
+7. Command acknowledgement event
+
+Once this works end-to-end, add heartbeats, farm grid, interrupts, health calculations, farm detail view.
 
 ## Auth
 
-Cloudflare Access in front of the dashboard Worker. Zero Trust rules — your email only. No auth code.
+Cloudflare Access in front of the dashboard. Zero Trust — your email only. No auth code.
+
+Farm → control plane authentication uses per-farm secrets stored as Worker secrets, not in D1. A shared CONTROL_PLANE_TOKEN means compromise of one farm lets it impersonate all farms.
 
 ## Docker Compose
 
-The VPS runs Hermes agents in Docker. Each farm gets one container:
+One service block per farm. Add a farm: copy block, change FARM_ID, new .env file, `docker compose up -d`.
 
 ```yaml
 services:
@@ -134,24 +216,9 @@ services:
       - /data/farms/tantra:/farm
     mem_limit: 1g
     restart: unless-stopped
-
-  hermes-frontier:
-    image: hermes-base
-    container_name: hermes-frontier
-    env_file: ./farms/frontier/.env
-    volumes:
-      - /data/farms/frontier:/farm
-    mem_limit: 1g
-    restart: unless-stopped
-
-networks:
-  default:
-    driver: bridge
 ```
 
-Add a farm: copy the service block, change FARM_ID, create a new .env file, `docker compose up -d`.
-
-The .env file per farm:
+Per-farm .env (note: per-farm secret, not shared token):
 ```bash
 FARM_ID=tantra
 YOUTUBE_API_KEY=
@@ -159,18 +226,19 @@ R2_ACCESS_KEY_ID=          # scoped to this farm's bucket only
 R2_SECRET_ACCESS_KEY=
 D1_DATABASE_ID=
 CONTROL_PLANE_URL=https://control-plane.workers.dev
-CONTROL_PLANE_TOKEN=       # shared secret for authenticating to control plane
+CONTROL_PLANE_SECRET=      # PER-FARM secret, not shared
 ```
 
-## What This Replaces
+## Key Changes from V1
 
-Nothing in Hermes. The control plane is a new component. Hermes still proposes topics via HTTPS calls to farm Workers. The control plane handles the operational state tracking that Hermes currently can't do (no webhooks, no persistent state about running workflows).
-
-## What This Doesn't Replace
-
-- Hermes still chooses topics (its unique value)
-- Hermes still does research (its unique value)  
-- Hermes still calls farm Workers to start production
-- Each farm's content stays in its own D1/R2 with scoped credentials
-
-The control plane only stores what farms choose to report. It's a nervous system, not a brain.
+| V1 | V2 | Why |
+|----|----|-----|
+| 4 tables | 5 tables (added workflow_instances) | Current state projection is faster than scanning events |
+| Auto-increment IDs | Farm-generated event_id + UNIQUE constraints | Idempotency on retry |
+| No gate versioning | gate_version + artifact_hash + compare-and-set | Prevents stale approval from old browser tab |
+| Shared CONTROL_PLANE_TOKEN | Per-farm secret | Compromise of one farm doesn't compromise all |
+| Binary approve/reject | Approve / Revise / Terminate | Revision doesn't kill the workflow |
+| No artifact hash | artifact_hash on gates | Approve exact version, not mutable pointer |
+| Basic heartbeat | Health states + queue depth + config version | Dashboard is operational, not decorative |
+| Pause/resume/terminate | + retry_stage + restart_from_stage | Recovery without workflow death |
+| Build dashboard first | Build critical slice first (gate → approve → resume) | Without this working, the dashboard is decorative |
