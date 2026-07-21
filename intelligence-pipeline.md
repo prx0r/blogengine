@@ -1,187 +1,245 @@
-# Daily YouTube Intelligence Pipeline
+# YouTube Intelligence Pipeline — Structured Research
 
-Maximizing free API quota for topic confidence signals over time.
+## Stack
 
-## Quota Budget
+| Need | Tool | Cost |
+|------|------|------|
+| Compute | Cloudflare Workers | Free tier |
+| Cron | Workers Cron Triggers | Free |
+| Database | D1 (already used) | Free tier |
+| Storage | R2 | 10GB free |
+| LLM analysis | DeepSeek (existing key) | ~$0.50/1M tokens |
+| Thumbnail vision | DeepSeek vision or Workers AI | ~$0.50/1M tokens |
+| YouTube API | quota only | Free |
 
-| Bucket | Daily Limit | Cost | Max Throughput |
-|--------|-------------|------|----------------|
-| search.list | 100 calls | 1/call | 5,000 video refs |
-| General pool | 10,000 units | 1/call | 10,000 API calls |
-| videos.insert | 100 calls | 1/call | Not used |
-
-Search and general pool are **independent** — both can be fully exhausted daily.
-
----
-
-## Phase 1: Search (100 calls/day)
-
-### A. Core Niche Pulse — 48 calls
-12 themes × 4 queries, alternating region:
-- Odd days: IN (relevanceLanguage=en)
-- Even days: US
-
-48/day covers full landscape every 2 days.
-
-### B. Velocity Scan — 12 calls
-1 query per theme, order=date, last 7 days. Catches fresh uploads before they decay.
-
-### C. Gap Detection — 20 calls
-10 high-signal queries × 2 regions (IN + US). Diff reveals topics hot in India that haven't crossed to US.
-
-### D. Emerging Topics — 20 calls
-Rotate fresh queries: spanda, vijnana bhairava, kashmir shaivism meditation, tantraloka consciousness, kali tantra, bhairava philosophy, iccha, and so on.
+**No GCP needed.** Translation API is irrelevant — YouTube API returns `defaultAudioLanguage` and `snippet.defaultLanguage` for free. Natural Language API is redundant with DeepSeek. BigQuery is overkill — D1 + R2 handles it.
 
 ---
 
-## Phase 2: General Pool (~2,500 of 10,000 units)
+## Research Experiment 1: Within-Channel Breakout Analysis
 
-### 1. Harvest Search Results — ~200 units
-- videos.list: 100 calls (5,000 IDs at 50/batch)
-- channels.list: ~60 calls (unique channels)
-- Store: video_id, title, tags, category, duration, audioLanguage, viewCount, likeCount, commentCount, publishedAt
+### Hypothesis
+> Within a single channel, breakout videos differ from non-breakout videos in measurable ways across title, thumbnail, duration, and description hook. The pattern may differ by channel size.
 
-### 2. Known Channel Brain Scan — ~400 units
-For 200 tracked channels in CHANNEL_IDS:
-- channels.list: 4 calls (subscriber growth, videoCount)
-- playlistItems.list: 200 calls (latest 50 uploads each)
-- videos.list: ~200 calls (stats on all new uploads)
+### Why This Design
+- **Control for channel**: comparing across channels is noisy (different audiences, different production). Within-channel isolates the content variables.
+- **3 size tiers**: reveals whether the formula changes as a channel grows.
 
-### 3. Comment Mining — 50 units
-commentThreads.list on top 50 breakout videos. Extract audience questions → content ideas.
+### Method
 
-### 4. Topic Intelligence — 0 units (local computation)
-- Update patterns.json (title analysis, duration performance)
-- Compare today's breakouts vs 7-day trailing → topic lifecycles
-- Flag IN-EN channels growing >10% subscribers/week
+**Sample:**
+- 3 small channels (<10k subs)
+- 3 medium channels (10k-100k subs) 
+- 3 large channels (>100k subs)
+- All in our niche (Tantra, Kashmir Shaivism, spiritual philosophy)
 
-### Remaining: ~7,500 units spare
-For backfill, transcripts, deep-dive comment analysis, batch channel audits.
+**Per channel:**
+- Pull latest 100 videos via `playlistItems.list` + `videos.list`
+- Cost: 2 playlistItems + 2 videos.list = 4 units per channel = 36 units total
+
+**Per video, collect:**
+
+| Field | Source | Used For |
+|-------|--------|----------|
+| title | videos.list.snippet.title | Title pattern analysis |
+| description (full) | videos.list.snippet.description | Hook extraction (first 200 chars) |
+| tags | videos.list.snippet.tags | Topic keywords |
+| duration | videos.list.contentDetails.duration | Length analysis |
+| viewCount | videos.list.statistics | Breakout score computation |
+| likeCount | videos.list.statistics | Engagement quality |
+| commentCount | videos.list.statistics | Deep engagement |
+| publishedAt | videos.list.snippet.publishedAt | Recency weighting |
+| thumbnail url | videos.list.snippet.thumbnails.maxres | Vision analysis |
+| channel subscriberCount | channels.list | Size tier classification |
+
+### Computation
+
+**Breakout score** per video within its channel:
+```
+breakout_ratio = viewCount / median(viewCount of channel's last 100 videos)
+```
+
+Split into two groups per channel:
+- **Breakout** (top 25% by ratio)
+- **Baseline** (bottom 50% by ratio)
+
+**Title features** (local regex, 0 cost):
+- Length (chars, words)
+- Contains `?` (question title)
+- Contains `:` (colon title)
+- Starts with number
+- Contains quotes
+- Contains power words (secret, revealed, explained, truth, hidden)
+- All-caps words count
+- Emotional valence (positive/negative word list)
+- First word POS (verb, question word, noun)
+
+**Thumbnail features** (via LLM vision, ~$0.10 total for 900 thumbnails):
+- Does it have text? What does it say?
+- Composition type: talking head / text overlay / illustration / split
+- Color palette: warm / cool / high contrast / muted
+- Face present: yes/no, expression (urgent, calm, curious)
+- Style: photo, illustration, 3D render, text-only
+- Darkness level (dark academia vs bright)
+
+**Description hook** (first 200 chars, via LLM, ~$0.05):
+- Does it pose a question?
+- Does it state a bold claim?
+- Does it create curiosity gap?
+- Does it use storytelling frame?
+
+**Duration bin:**
+- <5min, 5-10, 10-20, 20-40, 40+
+
+### Output
+
+For each channel, a comparison table:
+
+| Variable | Breakout Avg | Baseline Avg | Diff | Signal |
+|----------|-------------|--------------|------|--------|
+| Title length | 54 chars | 42 chars | +12 | ? |
+| Question title | 40% | 15% | +25% | strong |
+| Duration | 14 min | 22 min | -8min | strong |
+| Warm thumbnail | 60% | 30% | +30% | strong |
+| Hook: question | 50% | 20% | +30% | strong |
+
+**Then cross-size comparison:** do small channels need different formulas than large?
 
 ---
 
-## What This Builds Over Time
+## Research Experiment 2: IN↔US Content Gap
 
-After 30 days:
+### Hypothesis
+> Topics that generate breakout videos in India (English language) have zero or minimal equivalent content in the US market, representing uncontested space.
 
-| Asset | Volume | Signal |
-|-------|--------|--------|
-| Topic Lifecycles | 3,600 videos/day tracked | Which niches rising/peaking/dying |
-| Channel Growth | 200 channels × 30 snapshots | Who's growing, topic drift |
-| Title Pattern DB | 108,000 titles analyzed | What title format predicts breakout |
-| Comment Corpus | 1,500 breakout threads | What audiences actually ask |
-| IN↔US Gap Map | 15 query pairs × 30 days | Topics that work in IN but not US yet |
-| Duration Matrix | Per-niche performance | Ideal video length per topic |
+### Method
+1. Run same 24 queries (6 niches × 4 queries) in IN and US regions
+2. Collect top 50 results per query
+3. Compare: for each topic cluster, is there US content?
+4. If a topic cluster shows IN breakouts but <2 US results → **gap confirmed**
 
-The topic lifecycle signal alone is worth it — you'll see "Theurgy" trend 2-3 weeks before peak, giving time to produce.
+**Cost:** 48 search calls (from 100/day bucket), ~100 general units for harvesting.
 
----
+### Output
+```
+Gap Report — 2026-07-21
+─────────────────────
+Tantra & Kashmir Shaivism
+  ├─ "Kashmir Shaivism consciousness" → IN: 4 breakouts, US: 0 breakouts  ◆ GAP
+  ├─ "36 tattvas explained" → IN: 2 breakouts, US: 1 breakout  ◆ GAP
+  └─ "Abhinavagupta Tantra" → IN: 0 breakouts, US: 0 breakouts  ◆ UNCONTESTED
 
-## Google Cloud Free Trial — Useful Services
-
-### Tier 1: Immediate Value (already wired or trivially additive)
-
-| Service | Free Tier | Use Case |
-|---------|-----------|----------|
-| **Natural Language API** | 5,000 units/month | Analyze video titles, descriptions, comments for entities, sentiment, syntax. Feed into topic clustering. |
-| **Translation API** | 500,000 chars/month | Translate Hindi/Tamil/Bengali channel titles and descriptions to find IN-EN channels we're missing. |
-| **Vision API** | 1,000 images/month | Analyze thumbnail composition of breakout videos (text detection, object classification, color analysis). |
-| **Cloud Storage** | 5 GB, 5,000 ops/month | Store daily scan snapshots as structured JSON (replace flat files). |
-
-### Tier 2: Growth Infrastructure
-
-| Service | Free Tier | Use Case |
-|---------|-----------|----------|
-| **BigQuery** | 10 GB storage, 1 TB queries/month | Data warehouse for all daily scans. Query across weeks: "show me all Tantra breakouts with >5x ratio that came from IN." |
-| **Cloud Scheduler + Cloud Functions** | 2 million invocations/month | Run the daily scan automatically at midnight. No manual trigger. |
-| **Cloud Run** | 2 million requests/month | Host scan scripts as containerized services. runs on free tier CPU. |
-| **Vertex AI** | Custom model training free tier | Train a breakout prediction model on historical data. Features: title, tags, duration, channel subs, region. |
-
-### Tier 3: Long-Term
-
-| Service | Free Tier | Use Case |
-|---------|-----------|----------|
-| **Speech-to-Text** | 60 minutes/month | Transcribe audio from top breakout videos. Analyze content quality vs. metadata alone. |
-| **Video Intelligence API** | 1,000 minutes/month | Detect scene labels, shot changes in competitor videos. Understand production patterns. |
-| **Document AI** | 1,000 pages/month | Parse PDFs in library/ for structured extraction. |
-| **Looker Studio** | Free | Dashboard showing daily breakout trends, channel growth, topic lifecycle visualizations. |
+Sufi & Illuminationist
+  └─ "Henry Corbin imaginal" → IN: 0, US: 1 breakout  ◆ SATURATED
+```
 
 ---
 
-## $300 Credit Backlog Sprint
+## Research Experiment 3: Title Formula Efficacy
 
-Don't wait 30 days to build signals. Use the $300 for a massive initial data retrieval.
+### Hypothesis
+> Certain title patterns predict breakout independent of channel size. These can be learned and applied systematically.
 
-### Constraints
-- **YouTube Data API**: 100 searches/day, 10,000 general units/day — quota resets daily, **cannot** be accelerated with credits. But over 90 days: 9,000 searches + 900,000 general units available.
-- **GCP services**: $300 pays for all the below with room to spare.
+### Method
+Aggregate across ALL videos from Experiment 1 (900 videos). Train a simple logistic regression (or just rank correlation) on:
+- Features: 15 title features (above)
+- Target: breakout_ratio
 
-### Week 1: Foundation
+**Implementation:** local Python or TypeScript with simple stats. No cloud services needed.
 
-| Day | YouTube API (daily) | GCP Credits |
-|-----|--------------------|-------------|
-| 1-7 | Run full 100-search scan daily with varied queries to maximize niche coverage. Harvest ALL results into `data/raw/` daily. | **Natural Language API** (~$50): Batch-entity-extract all 1,795 existing essays + 108 source texts → build a topic map of YOUR content. Compare against what's trending externally. |
+### Output
+```
+Title Formula Ranking (by breakout correlation)
+───────────────────────────────────────────────
+1. Question title          r=0.42  "What is Spanda?"
+2. Power word + colon      r=0.38  "The Secret: X"
+3. Number list             r=0.31  "5 Ways to X"
+4. Negative framing        r=0.27  "Why You're Wrong About X"
+5. Curiosity gap           r=0.24  "The One Thing X"
+...
+```
 
-**Outcome:** You know exactly what topics you've covered vs. what's breaking out.
+---
 
-### Week 2: Language Bridge
+## Research Experiment 4: Hook Library
 
-| Day | YouTube API | GCP Credits |
-|-----|------------|-------------|
-| 8-14 | Dedicate 50 searches/day to IN region with varied Indian languages (hi, ta, te, bn, ml). Collect ALL channel descriptions + video titles. | **Translation API** (~$100): Translate every Indian-language title and description collected. Build a corpus of "what Indian creators are making in local languages that maps to English gaps." |
+### Hypothesis
+> The first 2 lines of a video description (the hook) follow reproducible patterns that predict watch time and breakout.
 
-**Outcome:** You know every Indian channel making Tantra/Shaivism content regardless of language.
+### Method
+For all 900 videos, extract first 200 chars of `description`. Use an LLM to classify the hook into one of:
 
-### Week 3: Visual Intelligence
+1. **Question** — "What if everything you know about consciousness is wrong?"
+2. **Bold claim** — "Tantra is not what you think it is."
+3. **Story frame** — "In 10th century Kashmir, a philosopher changed everything."
+4. **Promise** — "By the end of this video, you'll understand the 36 tattvas."
+5. **Curiosity gap** — "There's a concept in Kashmir Shaivism that explains why..."
+6. **Challenge** — "Most spiritual teachers get this one thing wrong."
+7. **Direct address** — "You've been meditating wrong."
 
-| Day | YouTube API | GCP Credits |
-|-----|------------|-------------|
-| 15-21 | Harvest thumbnails from all breakout videos discovered so far. Pull their channel banners and avatar images too. | **Vision API** (~$75): Analyze 50,000 thumbnails for: text detected, color palette, composition type (talking head/text overlay/illustration), object detection. Also run thumbnail analysis on YOUR public/art/ collection for searchability. |
+**Cost:** 900 LLM classifications × ~200 tokens = 180k tokens ≈ $0.09
 
-**Outcome:** Know exactly what thumbnail styles correlate with breakout by niche.
+### Output
+```
+Hook Pattern        Breakout Rate
+──────────────────────────────────
+Bold claim          68%
+Curiosity gap       62%
+Question            58%
+Story frame         45%
+Promise             41%
+Direct address      32%
+Challenge           28%
+```
 
-### Week 4: Infrastructure + Automation
+---
 
-| Day | YouTube API | GCP Credits |
-|-----|------------|-------------|
-| 22-28 | Daily scans continue. By now you have ~28 days of velocity data on each niche. | **BigQuery** (~$25): Set up the data warehouse, import all daily scan data from weeks 1-3. **Cloud Scheduler + Cloud Functions** (~$0): Automate the daily scan. **Looker Studio** ($0): Build a live dashboard. |
+## Running the Experiments
 
-**Outcome:** Fully automated daily pipeline with dashboard.
+### Initial Setup (one-time)
 
-### Remaining credits (~$50)
-- Vertex AI training run: train a breakout prediction classifier
-- Speech-to-Text: transcribe top 10 competitor videos for content analysis
-- Document AI: parse a few rare PDFs
+| Step | API Cost | Time |
+|------|----------|------|
+| Select 9 channels manually (from recommendations + scan data) | 0 | 30min |
+| Pull 100 videos per channel | 36 units | 2 min |
+| Pull full video data (stats, descriptions) | 18 units | 1 min |
+| Pull channel subscriber counts | 1 unit | 1 sec |
+| Run title feature extraction (local) | 0 | 5 min |
+| Run thumbnail analysis (via LLM) | ~$0.10 | 10 min |
+| Run hook classification (via LLM) | ~$0.09 | 10 min |
+| Compile results | 0 | 5 min |
 
-### Total Cost: ~$300 (exactly the trial)
+### Daily Scan (ongoing, ~15 min/day)
 
-| Service | Spend |
-|---------|-------|
-| Natural Language API | $50 |
-| Translation API | $100 |
-| Vision API | $75 |
-| BigQuery | $25 |
-| Cloud Functions + Scheduler | ~$0 |
-| Looker Studio | $0 |
-| Vertex AI / Speech-to-Text / Document AI | ~$50 |
-| **Total** | **~$300** |
+| Step | API Cost |
+|------|----------|
+| 48 niche queries (12 themes × 4, alternating IN/US) | 48 search |
+| 12 velocity queries | 12 search |
+| 20 gap queries (10 × 2 regions) | 20 search |
+| 20 emerging topics | 20 search |
+| Harvest results → videos.list | ~100 units |
+| Update channel brain scan | ~400 units |
+| Comment mining on top breakouts | 50 units |
+| **Total** | **100 search + ~550 general** |
 
-### What You Have After 28 Days
+### Weekly
 
-| Asset | Volume | Confidence |
-|-------|--------|------------|
-| Topic Lifecycles | 28 daily snapshots | Medium — can see 4-week trends |
-| Channel Database | 5,000+ channels | High — every niche, every language |
-| IN↔US Gap Map | 5,600+ query comparisons | High — know exactly what's missing |
-| Title Pattern ML | 140,000+ titles | High — robust pattern detection |
-| Thumbnail Intelligence | 50,000 images analyzed | High — know winning visual formulas |
-| Comment Corpus | 1,400+ breakout threads | Medium — enough for entity mining |
-| Language Bridge | All Indian-lang channels | High — know every player |
+- Re-run Experiment 1 with updated data (new videos from known channels)
+- Update gap report
+- Update title formula ranking
+- Add any new channels to CHANNEL_IDS
 
-### Automation (Day 29+)
+---
 
-After week 4, the daily cost drops to ~$0:
-- YouTube quota is free (always)
-- Cloud Function for daily scan is under free tier
-- BigQuery storage for 1 year of daily data is ~$10
-- Natural Language API stay within free 5k units/month for ongoing analysis
+## Cloudflare Stack Details
+
+| Need | Instead of GCP | Why |
+|------|---------------|-----|
+| Computation | Workers (not Cloud Functions) | Already on Cloudflare, same free tier |
+| Thumbnail vision | DeepSeek/Workers AI (not Vision API) | LLM can describe thumbnails with more nuance than Vision API labels |
+| Entity extraction | DeepSeek (not Natural Language API) | More flexible, cheaper, LLM understands context |
+| Language detection | YouTube API `defaultAudioLanguage` (not Translation API) | Free, no translation needed — we just need to know if it's English |
+| Data warehouse | D1 + R2 (not BigQuery) | D1 handles the query load; R2 for raw snapshots |
+| Hook transcription | YouTube description field (not Speech-to-Text) | First 200 chars of description IS the hook for most creators. No audio processing needed. |
+| Scheduling | Workers Cron Triggers | Free, native to Cloudflare |
+| Storage | R2 | 10GB free, S3-compatible |
