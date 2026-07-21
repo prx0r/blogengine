@@ -22,22 +22,40 @@ The dashboard is a read/write view across all systems. It doesn't own any data �
 
 ### Hermes Prompting
 
-Each farm has a Hermes agent running in a Docker container on the VPS. Currently Hermes is prompted via Telegram. The dashboard adds a second channel: a chat panel per farm that POSTs to Hermes's API and displays responses.
+Each farm has a Hermes agent running in a Docker container on the VPS. Hermes already has a Telegram gateway running as a systemd service (`hermes-gateway.service`). The dashboard uses this existing gateway instead of adding a new HTTP endpoint.
 
-This means adding a lightweight HTTP endpoint to the Hermes Docker container — or using the Telegram API internally (the dashboard POSTs to Telegram as if it were a user, Hermes receives it via the existing gateway).
+The dashboard chat panel POSTs to Telegram's Bot API as if it were a user message. Hermes receives it via the existing Telegram gateway polling loop, processes it, and sends the response back. The dashboard displays the response.
 
-Each farm container has its own Hermes identity. The dashboard's chat panel targets a specific farm's Hermes. Hermes responds with "I'm the Tantra channel's research assistant" vs "I'm the Frontier Science channel's research assistant."
+**Decision: Use Telegram API, not a custom HTTP endpoint.** The Telegram gateway already exists, is running, has cron scheduling, and is battle-tested. Adding a second channel duplicates the auth surface and divides Hermes's attention. The dashboard simply wraps the Telegram API.
 
-Implementation sketch:
-- Add `HERMES_NAME` and `HERMES_PERSONALITY` to each farm's `.env` file
-- Dashboard chat panel sends `POST /api/hermes/chat` with `{ farm_id, message }`
-- Farm Worker forwards to Hermes Gateway or Telegram bot
-- Hermes responds via the same channel
-- Response shown in dashboard chat panel
+```python
+# Dashboard → Telegram Bot API → Hermes Gateway → Hermes → response
+import requests
+TOKEN = os.environ["TELEGRAM_BOT_TOKEN"]
+CHAT_ID = os.environ["TELEGRAM_CHAT_ID"]
+requests.post(f"https://api.telegram.org/bot{TOKEN}/sendMessage", json={
+    "chat_id": CHAT_ID,
+    "text": f"[dashboard] {message}",
+    "parse_mode": "Markdown"
+})
+```
+
+Each farm container has its own Hermes identity. The dashboard's chat panel targets a specific farm. Hermes responds with "I'm the Tantra channel's research assistant" vs "I'm the Frontier Science channel's research assistant."
+
+Per-farm identity:
+```bash
+# farms/tantra/.env
+HERMES_NAME="Ochema Guide"
+HERMES_PERSONALITY="You are a research assistant for a tantra documentary channel..."
+```
 
 ### FableCut Integration
 
-FableCut runs on localhost:7777 on the VPS. The dashboard embeds an iframe or a remote view via Cloudflare Tunnel.
+FableCut runs on localhost:7777 on the VPS. A cloudflared tunnel is already running (started Jul 20) exposing it to a `*.trycloudflare.com` URL. FableCut itself is running on port 7777.
+
+The dashboard embeds the tunnel URL in an iframe for timeline preview.
+
+**Status:** FableCut running. Tunnel running. Dashboard just needs the embed.
 
 The dashboard needs:
 - **Timeline preview** — embed FableCut's player view for the current video in production

@@ -240,6 +240,21 @@ node scripts/wikipedia-validation.mjs
 node scripts/daily-search-collection.mjs
 ```
 
+## Storage
+
+| Location | Size | Free | Use |
+|----------|------|------|-----|
+| Main disk (`/dev/sda1`) | 75 GB | 20 GB | System, code, git, tempfiles |
+| Volume (`/mnt/HC_Volume_106423434`) | 50 GB | 46 GB | Docker data directory, raw/ (old dataset downloads) |
+
+Docker's data directory was moved to the volume on Jul 21. Future Docker containers (TryPost, Hermes) will use volume storage automatically.
+
+The `raw/` directory on the volume contains leftover dataset download files (~600 MB) that are already in R2 and can be deleted.
+
+R2 bucket `research-datasets/` contains ~43 GB of datasets (YouNiverse, YTCommentVerse, Global Trending, Google Trends, Sanskrit GRETIL, Hindi transcripts). This is separate from the server — no storage pressure from R2.
+
+**If more local storage is needed:** increase the Hetzner volume (currently 50 GB, ~€2/mo). Can go to 100 GB (~€3/mo) or 200 GB (~€5/mo) from the Hetzner console.
+
 ## API Usage
 
 - YouTube search.list: 100 calls/day (separate bucket)

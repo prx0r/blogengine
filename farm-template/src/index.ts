@@ -165,10 +165,25 @@ export class ProduceVideoWorkflow extends WorkflowEntrypoint<Env> {
   }
 }
 
-// ── Helper Stubs (implement API calls in lib/) ──────────────────
+// ── Helper Stubs — ALL EMPTY. Must be implemented before farm can run. ──
+// The YouTube API client, research pipeline, and content generation functions
+// don't exist yet. This is a scaffold, not a working system.
+//
+// Implementation order:
+// 1. lib/youtube.ts — YouTube Data API client (search, videos, channels, playlistItems)
+// 2. lib/trends.ts — Google Trends client (western_demand signal)
+// 3. research/daily.ts — channel harvest → breakout scores → thumbnails → gap map
+// 4. content/treatment.ts — research pack → treatment → script (HOST/AI-COHOST)
+// 5. content/audio.ts — Deepgram Aura 2 TTS for AI-COHOST lines
+// 6. content/publish.ts — YouTube upload via API
+// See farm-template/docs/01-SETUP.md for full build order.
+//
+// The WorkflowEntrypoint and step.waitForApproval() below ARE real
+// Cloudflare Workflows APIs (docs.api-ref/cloudflare.md). The stubs
+// above are what they call — replace them with real implementations.
 
-async function harvestChannelUploads(channelId: string, env: Env) { /* TODO */ }
-async function computeBreakoutScores(env: Env) { /* TODO */ }
+async function harvestChannelUploads(channelId: string, env: Env) { throw new Error("Not implemented: lib/youtube.ts needed"); }
+async function computeBreakoutScores(env: Env) { throw new Error("Not implemented: research/daily.ts needed"); }
 async function classifyThumbnails(env: Env) { /* TODO */ }
 async function updateGapMap(env: Env) { /* TODO */ }
 async function pushOpportunities(env: Env) { /* TODO */ }

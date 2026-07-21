@@ -133,4 +133,19 @@ vs age-bin percentile → Spearman r + top-quartile precision + bootstrap CI →
          produce.
 ```
 
-**My recommendation:** Thread B today. Thread A this week. Thread G as soon as someone runs it on the YouNiverse time series. Threads C, D, E are valuable but can wait until the farm is producing videos and requesting data. Thread F only matters after Thread A is live.
+**Priority conflict:** Thread B (Upworthy title analysis) and Thread A (deploy farm) are not in tension — they're independent. Thread B produces a title prior that improves every video the farm will ever make, doesn't require deployment, and can be done in ~2 hours with just a CSV download. Thread A is the critical path to a running system but requires writing the YouTube API client first (~half a day). Do Thread B first (it's faster, it's useful), then Thread A (it unblocks everything).
+
+**My recommendation:** Thread B (~2h today). Thread A (~half a day this week). Thread G as soon as someone runs it on the YouNiverse time series. Threads C, D, E are valuable but can wait until the farm is producing videos and requesting data. Thread F only matters after Thread A is live.
+
+## Explicit Skip List (Do Not Work On)
+
+These are parts of the spec that are designed but should not be invested in right now:
+
+- **Content genome / global pattern library** — requires data from ≥2 running farms to have any signal. Building it now means populating it with guesses.
+- **Shadow farm simulator** — requires a validated breakout metric AND own production data to calibrate. Currently neither exists.
+- **Opportunity Exchange** — requires ≥2 farms to compete for topics. We have 0.
+- **Farm Template Marketplace** — requires a working farm template first. We have an untested one.
+- **Self-healing studio** — requires a running system that actually breaks. We have nothing to break yet.
+- **33 not-started experiments from research-inventory.md** — most are blocked by "write the pipeline script and run it," but none of them unblock anything. The 3 priorities in this doc (B, A, G) are sufficient.
+- **Dashboard UI polish** — the approval inbox is the only view that blocks work. Farm grid styling, animations, themes are waste.
+- **Cross-farm analytics** — requires ≥2 farms. We have 0.

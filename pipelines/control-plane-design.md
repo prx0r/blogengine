@@ -227,9 +227,37 @@ Once this works end-to-end, add heartbeats, farm grid, interrupts, health calcul
 
 ## Auth
 
-Cloudflare Access in front of the dashboard. Zero Trust — your email only. No auth code.
+### Dashboard → Human
 
-Farm → control plane authentication uses per-farm secrets stored as Worker secrets, not in D1. A shared CONTROL_PLANE_TOKEN means compromise of one farm lets it impersonate all farms.
+Cloudflare Access in front of the dashboard Worker. Zero Trust — your email or SSO group only. No auth code to write.
+
+### Farm → Control Plane
+
+Each farm has its own signing secret stored as a Cloudflare Worker secret on the control plane Worker, NOT in D1. The farm includes this secret in a signed header on each POST. The control plane verifies the signature and looks up which farm the secret belongs to.
+
+Implementation:
+
+```bash
+# On deploy, one per farm:
+echo "farm-secret-tantra" | npx wrangler secret put FARM_SECRET_tantra
+
+# The control plane iterates known secrets to verify:
+# secrets prefixed with FARM_SECRET_ map to farm IDs
+```
+
+A shared `CONTROL_PLANE_TOKEN` would mean compromise of one farm lets it impersonate all farms. This design prevents that — each secret authenticates exactly one farm.
+
+### Dashboard → TryPost
+
+TryPost manages its own auth. The dashboard doesn't need to authenticate to TryPost — it either embeds TryPost's UI via iframe or uses short-lived TryPost API tokens scoped to read-only analytics views.
+
+### Dashboard → FableCut
+
+FableCut's cloudflared tunnel generates a random `*.trycloudflare.com` URL each time the tunnel restarts. The dashboard reads the current URL from the farm's config or a status file. Cloudflare Access policies can restrict access to specific email addresses.
+
+### All Farm → TryPost API calls
+
+If TryPost supports per-workspace API keys (unverified — see Open Questions), each farm gets its own key. If only global keys exist, farm Workers should NOT call TryPost directly — the control plane mediates publishing requests to keep the isolation boundary intact.
 
 ## Docker Compose
 
