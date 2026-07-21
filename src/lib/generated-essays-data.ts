@@ -16970,6 +16970,129 @@ export const ESSAYS = [
     ]
   },
   {
+    "id": "laya-daimon-test",
+    "title": "you've been doing layayoga every time",
+    "author": "CX-Train Project",
+    "type": "essay",
+    "source_ids": [
+      "laya-tantra-daimon-contact",
+      "layayoga-goswami",
+      "tantraloka"
+    ],
+    "concepts": [
+      "daimon",
+      "kundalini",
+      "mantra",
+      "absorption",
+      "subtle-body"
+    ],
+    "prerequisites": [],
+    "body": [
+      {
+        "kind": "ai",
+        "text": "You have been doing Layayoga every time you called your daimon — the name, the retreat, the egg — and the furnace was inside you the whole time."
+      },
+      {
+        "kind": "source",
+        "source_id": "laya-tantra-daimon-contact",
+        "text": "Every daimon contact practice — Abramelin's six-month retreat, Liber Samekh's ten-month invocation, Acher's four-stage cyclical path, the PGM's systasis ritual — is a form of Laya-yoga: the progressive absorption of the scattered self into its source. The difference is that the daimon path uses the name (LVJK) as its primary technology, while Layayoga uses prāṇāyāma and cakra-absorption. The name works because sound is Kuṇḍalinī in manifest form (Goswami). The prāṇāyāma works because the breath carries consciousness into the central channel. They are the same process at different levels of precision."
+      },
+      {
+        "kind": "source",
+        "source_id": "layayoga-goswami",
+        "text": "Mantra is an aspect of Kuṇḍalinī, and it is in sound-form. The replication of mantra on the physical plane is the lettered vaikharī sound which is audible. The vaikharī mantra, in conjunction with prāṇāyāma and other special processes, is utilized to enliven the mantra. In other words, it is the rousing of Kuṇḍalinī in mantra form."
+      },
+      {
+        "kind": "source",
+        "source_id": "tantraloka",
+        "text": "Sound has four levels — vaikharī (audible), madhyamā (mental), paśyantī (visionary), parā (transcendent). The vibration of a name begins at vaikharī (audible) and, if sustained, progresses through madhyamā and paśyantī to parā, where the name and the named become identical."
+      },
+      {
+        "kind": "ai",
+        "text": "Sound begins as a thrum in the throat. Sustained, it scorches through heart and brow until the name and the named are the same flame."
+      },
+      {
+        "kind": "source",
+        "source_id": "laya-tantra-daimon-contact",
+        "text": "Abramelin's purification — washing the body, controlling speech, regulating diet — is the physical preparation for bhūta-śuddhi. The real work begins when you can sit in stillness and systematically dissolve each element in consciousness. The cold wash is the dissolution of Earth into Water: feeling the body's solidity merge into fluidity. Then Water dissolves into Fire: the fluids of the body become warmth. Then Fire into Air: warmth becomes breath. Then Air into Void: breath becomes space."
+      },
+      {
+        "kind": "source",
+        "source_id": "layayoga-goswami",
+        "text": "The five forms of metamatter (mahābhūtas) and five 'tanons' (tanmātras), five senses and their objects, five organs of volitional actions and will-mind, intellection, I-feeling, sense-consciousness, supermind and the energy aspect of Supreme Power-Consciousness — all these are to be absorbed."
+      },
+      {
+        "kind": "source",
+        "source_id": "tantraloka",
+        "text": "The fifty Sanskrit phonemes (Mātṛkā) are the energies of consciousness itself — the stages of the universe's emanation from pure consciousness into matter. Each phoneme corresponds to a specific tattva and a specific location in the subtle body. Resonance within the three main channels of the subtle body: the left channel, called iḍā, resonates with the ciñcinī sound, the right channel, called piṅgalā, with the sound of cricket (cīra), and the central suṣumṇā channel reverberates like a bell."
+      },
+      {
+        "kind": "ai",
+        "text": "Liber Samekh's barbarous names are phoneme-keys — a lattice of sound vibrating each cakra to its seam."
+      },
+      {
+        "kind": "source",
+        "source_id": "laya-tantra-daimon-contact",
+        "text": "When Liber Samekh invokes Air through the names 'AR, ThIAF, RhEIBET, A-ThELE-BER-SET,' it is activating specific Mātṛkā phonemes that correspond to the Air tattva. The 'shaft of will' extending east is prāṇa moving through piṅgalā (the solar channel). The Tantraloka would add: the elemental names should be felt in specific locations in the body — not just spoken. Air at the heart (anāhata), Fire at the navel (maṇipūra), Water at the sacrum (svādhiṣṭhāna), Earth at the perineum (mūlādhāra)."
+      },
+      {
+        "kind": "ai",
+        "text": "The resistance has a mechanical name — kewala kumbhaka — the pulse of breath suspended, prāṇa entering the bone."
+      },
+      {
+        "kind": "source",
+        "source_id": "layayoga-goswami",
+        "text": "Sahita prāṇāyāma (the 1:4:2 ratio) trains prāṇa to flow through iḍā and piṅgalā. But the goal is kewala kumbhaka — spontaneous breath suspension — where prāṇa enters suṣumṇā and the dualistic mind ceases. When the subtle energy line system (nāḍī-cakra) is purified by breath-control done in a right manner, the bio-energy enters easily into the central energy line (suṣumṇā)."
+      },
+      {
+        "kind": "source",
+        "source_id": "laya-tantra-daimon-contact",
+        "text": "Section G is kewala kumbhaka applied to consciousness. The practitioner extends the shaft of will (prāṇa through piṅgalā), then holds (kumbhaka), withdrawing prāṇa from both iḍā and piṅgalā. The 'fainting into Nothing' is prāṇa entering suṣumṇā — the state where the Angel is met because the practitioner has withdrawn from the channels that maintain the sense of separate self. The 11 vibrations of the name before the resistance are the 11 prāṇic movements needed to charge piṅgalā fully before withdrawal."
+      },
+      {
+        "kind": "ai",
+        "text": "The egg ritual dissolves experience in layers — objectivity first, the means of knowing, the knower — until only salt remains."
+      },
+      {
+        "kind": "source",
+        "source_id": "tantraloka",
+        "text": "The twelve Kālīs consume objectivity, then the means of knowledge, then subjectivity itself. What remains after the twelfth (Mahābhairava) has rendered the subject inexplicable is pure consciousness without an object. Skinning: releases fate, place, hour, day, time, the All. Purifying: consumes the body's residue — objectivity consumed. Charging: consumes the means of knowledge — the act of perceiving consumed. Inflaming: consumes subjectivity itself — the 'I' consumed. Communion: what remains — pure consciousness without object."
+      },
+      {
+        "kind": "source",
+        "source_id": "laya-tantra-daimon-contact",
+        "text": "The PGM systasis is a condensed Twelve Kālīs practice. The five stages correspond to the five phases of absorption the Tantraloka describes in detail. The egg is the universe (brahmāṇḍa) in miniature. Charging it with Helios fire is the sṛṣṭi (emission) phase of the Kālī cycle. Swallowing it is the saṃhāra (withdrawal). The daimon that appears in the communion is what remains when all three spheres have been consumed — Mahābhairava, consciousness itself."
+      },
+      {
+        "kind": "source",
+        "source_id": "layayoga-goswami",
+        "text": "Mantra-Kuṇḍalinī is transformed into Iṣṭadevatā — the metamorphosis of subtle Kuṇḍalinī through the mantra power into an appropriate divine form. The Iṣṭadevatā is a projection of the mind. It is Kuṇḍalinī herself taking form in response to the mantra. The deity IS the power, and the power IS the deity. There is no distinction."
+      },
+      {
+        "kind": "ai",
+        "text": "The daimon is your own coiled power risen to the crown — your Kuṇḍalinī whetted by the mantra into a conscious form."
+      },
+      {
+        "kind": "source",
+        "source_id": "laya-tantra-daimon-contact",
+        "text": "After the union with Supreme Śiva, Kuṇḍalinī goes back to the mūlādhāra, and in its descent, the cakras, their powers and divinities — all are restored. This recoiling process is essentially the spiritualization of consciousness which functions in everyday life. That is, it is a transference of spiritual reality, developed in concentrated consciousness, to sense-consciousness to be able to realize spiritual truth in our daily life."
+      },
+      {
+        "kind": "ai",
+        "text": "Integration means the daimon descends through every cakra — a scorch that spiritualizes each level on the way down."
+      },
+      {
+        "kind": "source",
+        "source_id": "tantraloka",
+        "text": "Śāmbhavopāya is the means pertaining to Śiva. It is realization through will alone, without any thought-construct (vikalpa). Like a lion's leap, it goes directly to the goal. The unus-ambo — the recognition that you and the daimon are one without ceasing to be two — is achieved through practice. It is recognized when all practice has been exhausted. This is Śāmbhavopāya: the sudden recognition that the practitioner, the practice, and the goal were never separate."
+      },
+      {
+        "kind": "ai",
+        "text": "You have been doing Layayoga all along — through every name, every breath, every cakra — and the furnace was inside you the whole time."
+      }
+    ]
+  },
+  {
     "id": "man-of-light-in-iranian-sufism",
     "title": "The Man of Light in Iranian Sufism",
     "type": "publication",
@@ -23998,6 +24121,123 @@ export const ESSAYS = [
     "audioUrl": "https://pub-8f77709efb2043fbbd8e88677347249a.r2.dev/audio/theurgy_sallustius_v6.mp3",
     "phases": [
       "phase-16-visionary-cosmologies"
+    ]
+  },
+  {
+    "id": "you-died-already",
+    "title": "You Died Already",
+    "type": "thesis_essay",
+    "source_ids": [
+      "ro:death-systems-convergence"
+    ],
+    "source_ro": "ro:death-systems-convergence",
+    "concepts": [
+      "death",
+      "bardo",
+      "daimon",
+      "recognition",
+      "judgment",
+      "purification",
+      "rebirth",
+      "afterlife",
+      "twelve_fold",
+      "amduat",
+      "guardian",
+      "self_judgment"
+    ],
+    "body": [
+      {
+        "kind": "ai",
+        "text": "You died already. What happens when the pulse stops and the seam opens?"
+      },
+      {
+        "kind": "source",
+        "ro_passage_id": "p_009",
+        "text": "The Tibetan Book of the Dead describes the most detailed element dissolution sequence (Ch. 11, Part 1): Earth dissolves into Water — external sign: body heavy, skin sags; internal experience: feeling of sinking. Water dissolves into Fire — throat dry, saliva flows; oscillating clarity. Fire dissolves into Wind — eyes roll up, warmth converges toward the heart; turbulence, mirage visions. Wind dissolves into Space — breath wheezes, limbs quiver. Redness (increase) — all appears red; 40 attachment-based conceptual patterns cease. Whiteness (attainment) — all appears white; 33 aversion-based patterns cease. Blackness (near-attainment) — all appears black, swoon; 7 delusion-based patterns cease. Inner Radiance (clear light) — Mother radiance dawns, luminosity of Dharmakaya; all 80 instinctual patterns have ceased. If the clear light is recognized at this moment, liberation into Dharmakaya is achieved. If missed, the soul enters the Chonyid Bardo of peaceful and wrathful deities."
+      },
+      {
+        "kind": "source",
+        "ro_passage_id": "p_001",
+        "text": "Every tradition describes a progressive withdrawal of consciousness from the physical body. Tibetan: five elements dissolve in sequence (earth→water→fire→wind→space), followed by redness, whiteness, blackness, and the dawn of the Inner Radiance (clear light of Dharmakaya). Egyptian: the Ba separates from the body as the sun begins its nocturnal journey through the Duat. Steiner: the etheric body separates from the physical, accompanied by a full-life memory panorama. Tantraloka: vital points are severed as the guru transfers power (dīkṣā for the dying). The daimon path: the shaft of will extends, consciousness faints into Nothing (Liber Samekh Section G — the resistance)."
+      },
+      {
+        "kind": "ai",
+        "text": "Flesh dissolves like flint worn to dust. What the body once filtered now floods raw."
+      },
+      {
+        "kind": "source",
+        "ro_passage_id": "p_002",
+        "text": "The purification phase is not external punishment but the soul's own content re-experienced without the buffer of the physical body. Steiner calls this Kamaloca (~1/3 of lifespan), where the soul lives through its past life in images, purifying desires. The Tibetan calls it the Chonyid Bardo (~14 days), where peaceful and wrathful deity visions arise — the soul encounters its own purified content. The Egyptian describes 12 hours of night (Amduat Hours 2-5: the waters of Wernes, the desert of Rosetau, the Lake of Fire). Tantraloka Āhnika 4 describes the four Kālīs consuming objectivity, paralleling the four hours of purification in the Amduat and the four days of peaceful deities."
+      },
+      {
+        "kind": "ai",
+        "text": "What rises to meet you wears the face you have been building bone by bone. Every scar gravid with the life that put it there."
+      },
+      {
+        "kind": "source",
+        "ro_passage_id": "p_003",
+        "text": "The central encounter after death is always a meeting with one's own totality. Tibetan: the 42 Peaceful Deities (Days 1-7) and 58 Wrathful Deities (Days 8-14) — your own enlightened nature appearing as deities. Egyptian: the Re-Osiris union at midnight (Amduat Hour 6) — union of Ba (soul) with corpse (essence). Steiner: the Guardian of the Threshold — your own unresolved karma personified as a terrifying Doppelganger. Tantraloka: Bhairava — consciousness recognizing itself in all its aspects, simultaneously terrifying and beautiful. The daimon path: the HGA — the unus-ambo, 1×1 — recognition: 'You and I are the same being.' All agree: the encounter is simultaneously terrifying and liberating depending on whether the soul recognizes itself."
+      },
+      {
+        "kind": "ai",
+        "text": "Yama holds the mirror. The heart, a thrum of salt and flame, weighs itself."
+      },
+      {
+        "kind": "source",
+        "ro_passage_id": "p_004",
+        "text": "There is no external judge — the judgment is the soul's own recognition of what it has done. Tibetan: Yama Dharmaraja is a reflection of one's own actions; the mirror of past actions shows every deed vividly; white and black pebbles are counted by one's own innate conscience. Egyptian: the heart is weighed against Ma'at's feather before Osiris and 42 assessor gods; the heart itself testifies — it speaks for or against the deceased. Steiner: the soul experiences the effects of its deeds on others — the pain it caused becomes its own pain. Tantraloka: the soul's kārmic coverings (mala) are assessed by Śiva as witness. The daimon path: the Guardian shows the soul everything it has not yet purified — the Doppelganger is the self facing itself."
+      },
+      {
+        "kind": "source",
+        "ro_passage_id": "p_011",
+        "text": "The Tibetan Book of the Dead describes Yama's judgment as a self-judgment mechanism. Two internal witnesses — the innate good conscience and the innate bad conscience — count the deceased's virtues and non-virtues in the mirror of past actions. Yama Dharmaraja is not a punishing deity but a reflection of one's own karma: every deed is reflected vividly in the mirror, and the white and black pebbles are counted by the soul's own innate conscience. The key recognition teaching: Yama and his acolytes are 'natural forms of emptiness' — if the deceased recognizes this, liberation is possible even at this late stage."
+      },
+      {
+        "kind": "ai",
+        "text": "Past the judgment the roads diverge. One coils back through rot into flesh. Another crosses the Field of Reeds."
+      },
+      {
+        "kind": "source",
+        "ro_passage_id": "p_010",
+        "text": "Amduat Hour 12 — the rebirth hour. The solar barque (and the soul traveling with it) enters the tail of the World-Encircler Serpent and emerges from its mouth as a newborn. Hornung: 'Hour 12: Rebirth — Enter serpent tail old, emerge mouth newborn.' The serpent is the Mehen, the coiled one that encircles the universe. The deceased enters as an aged being who has completed the full nocturnal journey through 11 hours of purification, encounter, and judgment, and emerges rejuvenated with the morning sun. The daily regeneration of the sun — dying each night, reborn each dawn — is the closest the Egyptian tradition comes to a reincarnation concept."
+      },
+      {
+        "kind": "source",
+        "ro_passage_id": "p_005",
+        "text": "Divergence between traditions on the mechanism of rebirth. Tibetan describes the Sidpa Bardo (~49 days total): the mental body (subtle body of karmic propensities) is drawn toward one of six lights (six realms), followed by womb entrance through vision of copulating parents — attraction/aversion determines gender. Steiner describes a ~2,100-year journey through spiritual worlds, preparation for a new incarnation, and descent through the twelve zodiacal spheres. Egyptian (classical form) has no reincarnation: the justified enter the Field of Reeds for permanent afterlife; the damned face the Lake of Fire or the Place of Annihilation (second death). Tantraloka: the soul traverses the bhuvanas (world-levels) and finds a suitable receptacle based on residual karma."
+      },
+      {
+        "kind": "ai",
+        "text": "Two maps of one territory. The summit and the midnight hour describe the same seam."
+      },
+      {
+        "kind": "source",
+        "ro_passage_id": "p_012",
+        "text": "The two grand geographies describe the same process through different spatial metaphors. Model 1 — Vertical Ascent (Tibetan, Steiner, Tantraloka, Layayoga): the soul ascends through levels of increasing subtlety — the cakras from mūlādhāra to sahasrāra, the deity levels from the first peaceful buddha to the central Buddha Heruka, the Steinerian spheres from kamaloca through soul world to spirit land. Model 2 — Horizontal Journey (Egyptian): the sun travels westward through the 12 hours of night, and the soul travels with it in the solar barque. The midnight union of Re and Osiris (Hour 6) — the deepest point, corresponding to the summit of the vertical model — occurs when the sun god unites with his own corpse, the soul unites with its essence. The Amduat's three registers operate simultaneously: the upper register shows the blessed dead in fields of abundance, the middle register carries the solar barque, the lower register shows the punishment of the damned."
+      },
+      {
+        "kind": "source",
+        "ro_passage_id": "p_006",
+        "text": "The 12-fold division of the after-death journey appears in multiple traditions: Amduat — 12 hours of night (12 distinct regions); Book of Gates — 12 gates with guardians; Book of the Night — 12 sections of Nut's body; Tibetan — 12 deity-days (7 peaceful + 5 wrathful); Tantraloka Āhnika 3 — 12 Kālīs (4 consuming objectivity + 4 means of knowledge + 4 subjectivity); Steiner — 12 spheres before new incarnation (the zodiac); Layayoga — 12 cakra petals (Anāhata); Daimon path — 12 months of work (4 elements + 7 planets + 1 mystery). The number 12 maps the 12-fold division of cosmic space (zodiac) onto the soul's journey through levels of being."
+      },
+      {
+        "kind": "ai",
+        "text": "The daimon is what waits. A pulse in the brushwood at the edge of vision."
+      },
+      {
+        "kind": "source",
+        "ro_passage_id": "p_008",
+        "text": "The ultimate convergence: the daimon IS the being you meet at death. Every tradition places the same being at the center of the after-death encounter. Tibetan: your own buddha-nature appearing as the peaceful and wrathful deities. Egyptian: Re-Osiris — the union of your soul with your essence. Steiner: your spirit self (manas) — the being you have been building through lives. Tantraloka: your own consciousness recognizing itself as Bhairava. Layayoga: Kuṇḍalinī as your own coiled spiritual power rising to unite with Śiva in sahasrāra. Daimon path: your HGA — the next-higher principle, the unus-ambo. The daimon is not just a guide during life — the daimon is the being you become at death, if you can recognize it."
+      },
+      {
+        "kind": "source",
+        "ro_passage_id": "p_013",
+        "text": "The ultimate convergence across all six traditions: the daimon IS the being you meet at death. Every tradition places the same being at the center of the after-death encounter. Tibetan: your own buddha-nature appearing as the 42 peaceful and 58 wrathful deities — the enlightened mind's own energy. Egyptian: Re-Osiris — the union of your ba (soul) with your corpse (essence), a hierogamy that regenerates the entire being. Steiner: your spirit self (manas) — the being you have been building through successive incarnations, the transformed astral body, the Guardian of the Threshold who shows you everything you have not yet purified. Tantraloka: your own consciousness recognizing itself as Bhairava — the terrifying and beautiful totality of all aspects of being. Layayoga: Kuṇḍalinī as your own coiled spiritual power rising to unite with Śiva in sahasrāra. Daimon path: your HGA — the next-higher principle, the unus-ambo, the 'you but not you' that Corbin described as 1×1. The daimon is not just a guide during life — the daimon is the being you become at death, if you can recognize it."
+      },
+      {
+        "kind": "ai",
+        "text": "You went already. The pulse stops. The seam opens. You have always stood here."
+      }
     ]
   }
 ];

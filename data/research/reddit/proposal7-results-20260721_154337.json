@@ -1,0 +1,1046 @@
+{
+  "experiment": "proposal-7-language-drift",
+  "timestamp": "20260721_154337",
+  "hypothesis": "Phase 1 to 2 transition is optimal production moment",
+  "falsification": "Videos published at transition do NOT outperform other phases on search CTR",
+  "data_source": "R2 reddit/submissions/batch-*.parquet",
+  "sample": {
+    "total_submissions_analyzed": 184088,
+    "subreddits_with_temporal_data": 9,
+    "transitions_detected": 0,
+    "at_transition_point": 0
+  },
+  "results": {
+    "phase_distributions_by_subreddit": {
+      "AdvaitaVedanta": {
+        "2014": {
+          "definitional": 0.2,
+          "practical": 0.0,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "unclassified": 0.8,
+          "total": 5
+        },
+        "2015": {
+          "definitional": 0.062,
+          "practical": 0.125,
+          "troubleshooting": 0.0,
+          "comparative": 0.062,
+          "unclassified": 0.75,
+          "total": 16
+        },
+        "2016": {
+          "definitional": 0.05,
+          "practical": 0.117,
+          "troubleshooting": 0.033,
+          "comparative": 0.033,
+          "unclassified": 0.767,
+          "total": 60
+        },
+        "2017": {
+          "definitional": 0.034,
+          "practical": 0.091,
+          "troubleshooting": 0.045,
+          "comparative": 0.023,
+          "unclassified": 0.807,
+          "total": 88
+        },
+        "2018": {
+          "definitional": 0.039,
+          "practical": 0.069,
+          "troubleshooting": 0.039,
+          "comparative": 0.02,
+          "unclassified": 0.833,
+          "total": 102
+        }
+      },
+      "Meditation": {
+        "2012": {
+          "definitional": 0.025,
+          "practical": 0.09,
+          "troubleshooting": 0.064,
+          "comparative": 0.009,
+          "unclassified": 0.812,
+          "total": 3979
+        },
+        "2013": {
+          "definitional": 0.029,
+          "practical": 0.092,
+          "troubleshooting": 0.064,
+          "comparative": 0.01,
+          "unclassified": 0.806,
+          "total": 6382
+        },
+        "2014": {
+          "definitional": 0.03,
+          "practical": 0.091,
+          "troubleshooting": 0.061,
+          "comparative": 0.011,
+          "unclassified": 0.807,
+          "total": 8756
+        },
+        "2015": {
+          "definitional": 0.025,
+          "practical": 0.105,
+          "troubleshooting": 0.061,
+          "comparative": 0.01,
+          "unclassified": 0.799,
+          "total": 10910
+        },
+        "2016": {
+          "definitional": 0.027,
+          "practical": 0.106,
+          "troubleshooting": 0.056,
+          "comparative": 0.011,
+          "unclassified": 0.801,
+          "total": 11323
+        },
+        "2017": {
+          "definitional": 0.026,
+          "practical": 0.102,
+          "troubleshooting": 0.063,
+          "comparative": 0.01,
+          "unclassified": 0.799,
+          "total": 12627
+        },
+        "2018": {
+          "definitional": 0.026,
+          "practical": 0.098,
+          "troubleshooting": 0.054,
+          "comparative": 0.012,
+          "unclassified": 0.809,
+          "total": 16462
+        }
+      },
+      "Tantra": {
+        "2012": {
+          "definitional": 0.0,
+          "practical": 0.0,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "unclassified": 1.0,
+          "total": 8
+        },
+        "2013": {
+          "definitional": 0.0,
+          "practical": 0.077,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "unclassified": 0.923,
+          "total": 39
+        },
+        "2014": {
+          "definitional": 0.024,
+          "practical": 0.048,
+          "troubleshooting": 0.071,
+          "comparative": 0.0,
+          "unclassified": 0.857,
+          "total": 42
+        },
+        "2015": {
+          "definitional": 0.012,
+          "practical": 0.006,
+          "troubleshooting": 0.006,
+          "comparative": 0.006,
+          "unclassified": 0.969,
+          "total": 161
+        },
+        "2016": {
+          "definitional": 0.01,
+          "practical": 0.036,
+          "troubleshooting": 0.005,
+          "comparative": 0.0,
+          "unclassified": 0.949,
+          "total": 197
+        },
+        "2017": {
+          "definitional": 0.006,
+          "practical": 0.048,
+          "troubleshooting": 0.012,
+          "comparative": 0.0,
+          "unclassified": 0.935,
+          "total": 168
+        },
+        "2018": {
+          "definitional": 0.019,
+          "practical": 0.089,
+          "troubleshooting": 0.038,
+          "comparative": 0.0,
+          "unclassified": 0.854,
+          "total": 213
+        }
+      },
+      "awakened": {
+        "2012": {
+          "definitional": 0.028,
+          "practical": 0.023,
+          "troubleshooting": 0.023,
+          "comparative": 0.0,
+          "unclassified": 0.925,
+          "total": 214
+        },
+        "2013": {
+          "definitional": 0.028,
+          "practical": 0.085,
+          "troubleshooting": 0.014,
+          "comparative": 0.009,
+          "unclassified": 0.863,
+          "total": 212
+        },
+        "2014": {
+          "definitional": 0.046,
+          "practical": 0.12,
+          "troubleshooting": 0.027,
+          "comparative": 0.006,
+          "unclassified": 0.8,
+          "total": 476
+        },
+        "2015": {
+          "definitional": 0.019,
+          "practical": 0.067,
+          "troubleshooting": 0.03,
+          "comparative": 0.009,
+          "unclassified": 0.874,
+          "total": 1602
+        },
+        "2016": {
+          "definitional": 0.032,
+          "practical": 0.042,
+          "troubleshooting": 0.04,
+          "comparative": 0.009,
+          "unclassified": 0.877,
+          "total": 2576
+        },
+        "2017": {
+          "definitional": 0.031,
+          "practical": 0.046,
+          "troubleshooting": 0.038,
+          "comparative": 0.011,
+          "unclassified": 0.874,
+          "total": 3679
+        },
+        "2018": {
+          "definitional": 0.034,
+          "practical": 0.053,
+          "troubleshooting": 0.043,
+          "comparative": 0.009,
+          "unclassified": 0.862,
+          "total": 5309
+        }
+      },
+      "hinduism": {
+        "2012": {
+          "definitional": 0.075,
+          "practical": 0.022,
+          "troubleshooting": 0.055,
+          "comparative": 0.002,
+          "unclassified": 0.846,
+          "total": 402
+        },
+        "2013": {
+          "definitional": 0.059,
+          "practical": 0.027,
+          "troubleshooting": 0.053,
+          "comparative": 0.006,
+          "unclassified": 0.856,
+          "total": 901
+        },
+        "2014": {
+          "definitional": 0.038,
+          "practical": 0.035,
+          "troubleshooting": 0.039,
+          "comparative": 0.01,
+          "unclassified": 0.878,
+          "total": 1361
+        },
+        "2015": {
+          "definitional": 0.043,
+          "practical": 0.022,
+          "troubleshooting": 0.036,
+          "comparative": 0.005,
+          "unclassified": 0.893,
+          "total": 2244
+        },
+        "2016": {
+          "definitional": 0.041,
+          "practical": 0.027,
+          "troubleshooting": 0.029,
+          "comparative": 0.005,
+          "unclassified": 0.897,
+          "total": 3014
+        },
+        "2017": {
+          "definitional": 0.041,
+          "practical": 0.032,
+          "troubleshooting": 0.024,
+          "comparative": 0.011,
+          "unclassified": 0.892,
+          "total": 4090
+        },
+        "2018": {
+          "definitional": 0.039,
+          "practical": 0.037,
+          "troubleshooting": 0.03,
+          "comparative": 0.005,
+          "unclassified": 0.889,
+          "total": 5554
+        }
+      },
+      "kundalini": {
+        "2012": {
+          "definitional": 0.0,
+          "practical": 0.0,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "unclassified": 1.0,
+          "total": 6
+        },
+        "2013": {
+          "definitional": 0.025,
+          "practical": 0.076,
+          "troubleshooting": 0.038,
+          "comparative": 0.013,
+          "unclassified": 0.848,
+          "total": 79
+        },
+        "2014": {
+          "definitional": 0.051,
+          "practical": 0.058,
+          "troubleshooting": 0.047,
+          "comparative": 0.011,
+          "unclassified": 0.834,
+          "total": 277
+        },
+        "2015": {
+          "definitional": 0.024,
+          "practical": 0.029,
+          "troubleshooting": 0.059,
+          "comparative": 0.011,
+          "unclassified": 0.877,
+          "total": 375
+        },
+        "2016": {
+          "definitional": 0.022,
+          "practical": 0.077,
+          "troubleshooting": 0.057,
+          "comparative": 0.007,
+          "unclassified": 0.837,
+          "total": 404
+        },
+        "2017": {
+          "definitional": 0.032,
+          "practical": 0.074,
+          "troubleshooting": 0.098,
+          "comparative": 0.002,
+          "unclassified": 0.794,
+          "total": 471
+        },
+        "2018": {
+          "definitional": 0.03,
+          "practical": 0.066,
+          "troubleshooting": 0.053,
+          "comparative": 0.012,
+          "unclassified": 0.839,
+          "total": 759
+        }
+      },
+      "nonduality": {
+        "2013": {
+          "definitional": 0.026,
+          "practical": 0.0,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "unclassified": 0.974,
+          "total": 39
+        },
+        "2014": {
+          "definitional": 0.0,
+          "practical": 0.035,
+          "troubleshooting": 0.018,
+          "comparative": 0.0,
+          "unclassified": 0.947,
+          "total": 57
+        },
+        "2015": {
+          "definitional": 0.029,
+          "practical": 0.029,
+          "troubleshooting": 0.057,
+          "comparative": 0.029,
+          "unclassified": 0.857,
+          "total": 35
+        },
+        "2016": {
+          "definitional": 0.048,
+          "practical": 0.095,
+          "troubleshooting": 0.048,
+          "comparative": 0.0,
+          "unclassified": 0.81,
+          "total": 21
+        },
+        "2017": {
+          "definitional": 0.047,
+          "practical": 0.0,
+          "troubleshooting": 0.047,
+          "comparative": 0.0,
+          "unclassified": 0.907,
+          "total": 43
+        },
+        "2018": {
+          "definitional": 0.042,
+          "practical": 0.014,
+          "troubleshooting": 0.028,
+          "comparative": 0.014,
+          "unclassified": 0.901,
+          "total": 142
+        }
+      },
+      "occult": {
+        "2012": {
+          "definitional": 0.036,
+          "practical": 0.034,
+          "troubleshooting": 0.045,
+          "comparative": 0.003,
+          "unclassified": 0.881,
+          "total": 1459
+        },
+        "2013": {
+          "definitional": 0.035,
+          "practical": 0.036,
+          "troubleshooting": 0.038,
+          "comparative": 0.007,
+          "unclassified": 0.884,
+          "total": 2743
+        },
+        "2014": {
+          "definitional": 0.033,
+          "practical": 0.036,
+          "troubleshooting": 0.044,
+          "comparative": 0.006,
+          "unclassified": 0.881,
+          "total": 5134
+        },
+        "2015": {
+          "definitional": 0.035,
+          "practical": 0.048,
+          "troubleshooting": 0.043,
+          "comparative": 0.007,
+          "unclassified": 0.867,
+          "total": 7662
+        },
+        "2016": {
+          "definitional": 0.035,
+          "practical": 0.046,
+          "troubleshooting": 0.047,
+          "comparative": 0.006,
+          "unclassified": 0.866,
+          "total": 8896
+        },
+        "2017": {
+          "definitional": 0.038,
+          "practical": 0.054,
+          "troubleshooting": 0.047,
+          "comparative": 0.006,
+          "unclassified": 0.856,
+          "total": 11072
+        },
+        "2018": {
+          "definitional": 0.038,
+          "practical": 0.05,
+          "troubleshooting": 0.05,
+          "comparative": 0.005,
+          "unclassified": 0.856,
+          "total": 15596
+        }
+      },
+      "spirituality": {
+        "2012": {
+          "definitional": 0.027,
+          "practical": 0.032,
+          "troubleshooting": 0.011,
+          "comparative": 0.009,
+          "unclassified": 0.923,
+          "total": 2468
+        },
+        "2013": {
+          "definitional": 0.032,
+          "practical": 0.05,
+          "troubleshooting": 0.02,
+          "comparative": 0.005,
+          "unclassified": 0.893,
+          "total": 3056
+        },
+        "2014": {
+          "definitional": 0.028,
+          "practical": 0.059,
+          "troubleshooting": 0.018,
+          "comparative": 0.005,
+          "unclassified": 0.891,
+          "total": 4507
+        },
+        "2015": {
+          "definitional": 0.035,
+          "practical": 0.059,
+          "troubleshooting": 0.03,
+          "comparative": 0.006,
+          "unclassified": 0.87,
+          "total": 2575
+        },
+        "2016": {
+          "definitional": 0.037,
+          "practical": 0.062,
+          "troubleshooting": 0.043,
+          "comparative": 0.006,
+          "unclassified": 0.851,
+          "total": 2454
+        },
+        "2017": {
+          "definitional": 0.034,
+          "practical": 0.067,
+          "troubleshooting": 0.043,
+          "comparative": 0.005,
+          "unclassified": 0.851,
+          "total": 3522
+        },
+        "2018": {
+          "definitional": 0.037,
+          "practical": 0.075,
+          "troubleshooting": 0.045,
+          "comparative": 0.009,
+          "unclassified": 0.834,
+          "total": 7051
+        }
+      }
+    },
+    "transitions": [],
+    "production_windows": [],
+    "cluster_phase_evolution": {
+      "how to meditate": {
+        "2012": {
+          "definitional": 0.15,
+          "practical": 0.234,
+          "troubleshooting": 0.073,
+          "comparative": 0.006,
+          "total": 1163
+        },
+        "2013": {
+          "definitional": 0.148,
+          "practical": 0.228,
+          "troubleshooting": 0.069,
+          "comparative": 0.009,
+          "total": 2067
+        },
+        "2014": {
+          "definitional": 0.145,
+          "practical": 0.247,
+          "troubleshooting": 0.07,
+          "comparative": 0.01,
+          "total": 3210
+        },
+        "2015": {
+          "definitional": 0.12,
+          "practical": 0.247,
+          "troubleshooting": 0.078,
+          "comparative": 0.007,
+          "total": 4287
+        },
+        "2016": {
+          "definitional": 0.127,
+          "practical": 0.233,
+          "troubleshooting": 0.077,
+          "comparative": 0.008,
+          "total": 5054
+        },
+        "2017": {
+          "definitional": 0.124,
+          "practical": 0.234,
+          "troubleshooting": 0.074,
+          "comparative": 0.007,
+          "total": 6286
+        },
+        "2018": {
+          "definitional": 0.129,
+          "practical": 0.238,
+          "troubleshooting": 0.07,
+          "comparative": 0.008,
+          "total": 9208
+        }
+      },
+      "how true is the following article about muhammed in hindu sc": {
+        "2018": {
+          "definitional": 0.0,
+          "practical": 0.0,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "total": 4
+        }
+      },
+      "why isnt lord rama worshiped during the time of the mahabhar": {
+        "2018": {
+          "definitional": 0.333,
+          "practical": 0.0,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "total": 3
+        }
+      },
+      "what is mindfulness how to remain mindful at work": {
+        "2015": {
+          "definitional": 0.667,
+          "practical": 1.0,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "total": 3
+        }
+      },
+      "are online puja and yagya effective": {
+        "2013": {
+          "definitional": 0.0,
+          "practical": 0.0,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "total": 5
+        }
+      },
+      "hindus of reddit what are the positive aspects of islam": {
+        "2017": {
+          "definitional": 1.0,
+          "practical": 0.0,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "total": 7
+        }
+      },
+      "is anyone familiar with joseph c lisiewski and the book cere": {
+        "2018": {
+          "definitional": 0.0,
+          "practical": 0.0,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "total": 3
+        }
+      },
+      "did i do it right": {
+        "2018": {
+          "definitional": 0.0,
+          "practical": 0.333,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "total": 3
+        }
+      },
+      "how would you use the second book of the lesser key of solom": {
+        "2014": {
+          "definitional": 0.0,
+          "practical": 0.0,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "total": 3
+        },
+        "2017": {
+          "definitional": 0.167,
+          "practical": 0.0,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "total": 6
+        },
+        "2018": {
+          "definitional": 0.143,
+          "practical": 0.0,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "total": 7
+        }
+      },
+      "how to find pitra dosha in horoscope its remedies     ": {
+        "2014": {
+          "definitional": 0.0,
+          "practical": 1.0,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "total": 4
+        }
+      },
+      "what did sri ramana maharshi mean by ii": {
+        "2018": {
+          "definitional": 0.167,
+          "practical": 0.333,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "total": 6
+        }
+      },
+      "is the theory of evolution of science really antireligion  o": {
+        "2016": {
+          "definitional": 0.0,
+          "practical": 0.667,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "total": 3
+        }
+      },
+      "has anyone else had that deja vu feeling where": {
+        "2018": {
+          "definitional": 0.2,
+          "practical": 0.0,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "total": 5
+        }
+      },
+      "i wrote an ebook on how to meditate to live fully in the pre": {
+        "2015": {
+          "definitional": 0.0,
+          "practical": 1.0,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "total": 3
+        }
+      },
+      "who are the seven immortals chiranjivi of hindu mythology pa": {
+        "2015": {
+          "definitional": 0.0,
+          "practical": 0.0,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "total": 4
+        }
+      },
+      "how do you stop the minds chatter  sadhguru": {
+        "2017": {
+          "definitional": 0.0,
+          "practical": 1.0,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "total": 5
+        }
+      },
+      "how to stop worrying about the future so you can be present ": {
+        "2017": {
+          "definitional": 0.0,
+          "practical": 1.0,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "total": 3
+        }
+      },
+      "do we see reality as it is  ted talk by donald hoffman 22min": {
+        "2015": {
+          "definitional": 0.333,
+          "practical": 0.333,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "total": 3
+        }
+      },
+      "what does it means this symbol on the top of the great seal ": {
+        "2018": {
+          "definitional": 0.333,
+          "practical": 0.333,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "total": 3
+        }
+      },
+      "anybody know how to record subliminal messages to holosync": {
+        "2018": {
+          "definitional": 0.0,
+          "practical": 1.0,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "total": 3
+        }
+      },
+      "how i made 12 000 in 20 days without spending a dime3iexx5z4": {
+        "2016": {
+          "definitional": 0.0,
+          "practical": 0.0,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "total": 5
+        }
+      },
+      "can you guys critique my writeup on nonduality": {
+        "2016": {
+          "definitional": 0.0,
+          "practical": 0.0,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "total": 7
+        },
+        "2017": {
+          "definitional": 0.0,
+          "practical": 0.0,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "total": 3
+        }
+      },
+      "is it possible to change in 24 hours": {
+        "2018": {
+          "definitional": 0.0,
+          "practical": 0.0,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "total": 7
+        }
+      },
+      "why is spontaneous human combustion considered a supernatura": {
+        "2016": {
+          "definitional": 0.0,
+          "practical": 0.0,
+          "troubleshooting": 0.571,
+          "comparative": 0.0,
+          "total": 7
+        }
+      },
+      "hindus of reddit what is the most miraculous or supernatural": {
+        "2016": {
+          "definitional": 1.0,
+          "practical": 0.0,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "total": 4
+        }
+      },
+      "who is the gold figurine": {
+        "2017": {
+          "definitional": 0.333,
+          "practical": 0.0,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "total": 3
+        }
+      },
+      "when you find yourself stressed ask yourself one question wi": {
+        "2017": {
+          "definitional": 0.0,
+          "practical": 0.0,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "total": 3
+        }
+      },
+      "how to read and understand the hermetic tarot part 1  vayu t": {
+        "2017": {
+          "definitional": 0.0,
+          "practical": 1.0,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "total": 3
+        }
+      },
+      "can people drain your energy from a distance constantly say ": {
+        "2017": {
+          "definitional": 0.0,
+          "practical": 0.0,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "total": 3
+        }
+      },
+      "can someone please tell me how synchronicities work with the": {
+        "2018": {
+          "definitional": 0.0,
+          "practical": 0.0,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "total": 5
+        }
+      },
+      "proof that the holy bible is the truth and we are living in ": {
+        "2017": {
+          "definitional": 1.0,
+          "practical": 0.0,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "total": 6
+        }
+      },
+      "how do i release desire craving and attachment": {
+        "2018": {
+          "definitional": 0.0,
+          "practical": 1.0,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "total": 3
+        }
+      },
+      "do you think everyones lives are  pre destined or meant to b": {
+        "2018": {
+          "definitional": 0.0,
+          "practical": 0.0,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "total": 3
+        }
+      },
+      "is awareness the philosophers stone": {
+        "2018": {
+          "definitional": 0.0,
+          "practical": 0.0,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "total": 3
+        }
+      },
+      "how can we live in the now in modern society for a less stre": {
+        "2018": {
+          "definitional": 0.0,
+          "practical": 1.0,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "total": 3
+        }
+      },
+      "do this when things let you down": {
+        "2018": {
+          "definitional": 0.0,
+          "practical": 0.0,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "total": 6
+        }
+      },
+      "how to use your potential consciousness to get to the ultima": {
+        "2018": {
+          "definitional": 0.0,
+          "practical": 1.0,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "total": 3
+        }
+      },
+      "how to go from insanity to enlightenment  full speech": {
+        "2018": {
+          "definitional": 0.0,
+          "practical": 1.0,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "total": 7
+        }
+      },
+      "how to relieve your anxiety in 30 seconds with the mindful p": {
+        "2018": {
+          "definitional": 0.5,
+          "practical": 0.0,
+          "troubleshooting": 0.25,
+          "comparative": 0.0,
+          "total": 4
+        }
+      },
+      "what are you experiences with reiki or energy healing practi": {
+        "2018": {
+          "definitional": 1.0,
+          "practical": 0.0,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "total": 3
+        }
+      },
+      "universe supports you when you accept what is": {
+        "2018": {
+          "definitional": 0.714,
+          "practical": 0.0,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "total": 7
+        }
+      },
+      "how to get rid of depression what is the real cause": {
+        "2018": {
+          "definitional": 1.0,
+          "practical": 1.0,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "total": 9
+        }
+      },
+      "do this everyday to have control over your life energies": {
+        "2018": {
+          "definitional": 0.0,
+          "practical": 0.0,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "total": 3
+        }
+      },
+      "a few days ago we witnessed the world hindu congress held in": {
+        "2018": {
+          "definitional": 0.0,
+          "practical": 0.0,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "total": 3
+        }
+      },
+      "do this simple experiment and increase your awareness": {
+        "2018": {
+          "definitional": 0.0,
+          "practical": 0.0,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "total": 7
+        }
+      },
+      "how does one classify their soul age if they feel they fit a": {
+        "2018": {
+          "definitional": 0.0,
+          "practical": 0.25,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "total": 4
+        }
+      },
+      "why spiritual teachings wont work for you the dark side of s": {
+        "2018": {
+          "definitional": 0.0,
+          "practical": 0.0,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "total": 3
+        }
+      },
+      "how negative thinking accelerates aging and how meditation c": {
+        "2018": {
+          "definitional": 0.0,
+          "practical": 0.0,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "total": 3
+        }
+      },
+      "how to stop being conscious how to turn off this awareness h": {
+        "2018": {
+          "definitional": 0.0,
+          "practical": 1.0,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "total": 3
+        }
+      },
+      "how catholic repackaging of an advaitic vedantic treatise fa": {
+        "2018": {
+          "definitional": 0.0,
+          "practical": 0.0,
+          "troubleshooting": 0.0,
+          "comparative": 0.0,
+          "total": 3
+        }
+      }
+    }
+  },
+  "gates": {
+    "sufficient_temporal_data": true,
+    "transitions_detectable": false
+  },
+  "interpretation": {
+    "what_it_means": "0 transitions detected. 0 subreddits at optimal production window with practical questions emerging.",
+    "what_it_does_NOT_mean": "Phase 1 topics are not worth producing -- early stage = less competition."
+  },
+  "next_step": "Cross-reference top P2 clusters with P7 transitions",
+  "limitations": [
+    "Pushshift ends 2023",
+    "Punctuation stripped -- phase classification uses regex on cleaned text",
+    "Cluster-level evolution only available for question clusters"
+  ]
+}

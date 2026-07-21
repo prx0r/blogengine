@@ -12,10 +12,10 @@ Extract ~15 GB of filtered Reddit data from Pushshift (2005-2023) across 30 topi
 
 ```bash
 # R2 — never commit these
-export AWS_ACCESS_KEY_ID="b31c6e90450f740629ac030f6e16eef4"
-export AWS_SECRET_ACCESS_KEY="cce64be980580e166482b2c64c6396d5ea25bdb889ff43f3782c0932a75a9b32"
+export AWS_ACCESS_KEY_ID="REDACTED_ACCESS_KEY"
+export AWS_SECRET_ACCESS_KEY="REDACTED_SECRET_KEY"
 export AWS_DEFAULT_REGION="auto"
-export S3_ENDPOINT="https://954612afb5a97bb15dddcdc70176813d.r2.cloudflarestorage.com"
+export S3_ENDPOINT="https://REDACTED_ACCOUNT_ID.r2.cloudflarestorage.com"
 ```
 
 ### Storage

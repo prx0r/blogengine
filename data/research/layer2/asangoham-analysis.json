@@ -1,0 +1,51 @@
+{
+  "channel": "Asangoham",
+  "channel_id": "UCct9aR7HC79Cv2g-9oDOTLw",
+  "subs": 1240000,
+  "total_videos": 361,
+  "total_views": 166249521,
+  "analyzed_videos": 200,
+  "median_views": 273358,
+  "mean_views": 522609,
+  "p90_views": 1306401,
+  "median_duration_min": 18.1,
+  "breakout_rate": 0.3,
+  "title_patterns_breakout_vs_normal": {
+    "has_question": {
+      "breakout": 0.475,
+      "normal": 0.424
+    },
+    "has_colon": {
+      "breakout": 0.164,
+      "normal": 0.18
+    },
+    "has_exclamation": {
+      "breakout": 0.0,
+      "normal": 0.022
+    },
+    "has_number": {
+      "breakout": 0.0,
+      "normal": 0.079
+    },
+    "starts_what": {
+      "breakout": 0.23,
+      "normal": 0.065
+    },
+    "starts_why": {
+      "breakout": 0.066,
+      "normal": 0.094
+    },
+    "starts_how": {
+      "breakout": 0.0,
+      "normal": 0.058
+    },
+    "starts_the": {
+      "breakout": 0.311,
+      "normal": 0.165
+    },
+    "word_count": {
+      "breakout": 6.066,
+      "normal": 6.906
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "sample": {
+    "channels": 50,
+    "videos": 744
+  },
+  "assumptions": {
+    "A1_ols_vs_raw": {
+      "median_overlap": NaN,
+      "pct_different": NaN,
+      "ci_95_overlap": [
+        NaN,
+        NaN
+      ],
+      "n_channels": 0,
+      "n_bootstrap": 1000,
+      "gate": "FAIL",
+      "interpretation": "nan% of breakout labels differ from raw views. Above 80% threshold \u2014 insufficient differentiation."
+    },
+    "A2_residual_vs_views_per_day": {
+      "median_overlap": NaN,
+      "pct_different": NaN,
+      "interpretation": "How much OLS residual differs from views/day baseline",
+      "gate": "FAIL"
+    },
+    "A3_loo_stability": {
+      "median_flip_rate": 0,
+      "n_channels": 0,
+      "interpretation": "0.0% of labels flip under leave-one-out",
+      "gate": "PASS"
+    }
+  },
+  "timestamp": "20260721_182135",
+  "duration_seconds": 0
+}

@@ -1,0 +1,2857 @@
+{
+  "experiment": "proposal-2-recurring-questions",
+  "timestamp": "20260721_154337",
+  "hypothesis": "Question frequency x persistence x spread predicts video demand",
+  "falsification": "High-scoring questions do NOT produce above-median watch time",
+  "data_source": "R2 reddit/submissions/batch-*.parquet",
+  "sample": {
+    "total_submissions_scanned": 184088,
+    "question_submissions_found": 37108,
+    "question_clusters_found": 101,
+    "questions_in_clusters": 31740
+  },
+  "results": {
+    "top_10_questions_by_demand": [
+      {
+        "topic": "how to meditate",
+        "cluster_id": 0,
+        "canonical_question": "how to meditate",
+        "total_occurrences": 31275,
+        "years_active": 7.0,
+        "unique_subreddits": 9,
+        "avg_score": 9.5,
+        "max_score": 8076,
+        "frequency": 10.351,
+        "persistence": 1.0,
+        "cross_subreddit_spread": 0.9,
+        "answer_quality_gap": 0.0,
+        "question_demand_score": 4.084,
+        "subreddits": [
+          "AdvaitaVedanta",
+          "Meditation",
+          "Tantra",
+          "awakened",
+          "hinduism",
+          "kundalini",
+          "nonduality",
+          "occult",
+          "spirituality"
+        ],
+        "title_examples": [
+          "what would roccult think about of linking to a primer for newbies in the sidebar",
+          "anyone here ever try holosync what are your thoughts about it",
+          "how spirituality works  a hilarious and insightful talk by a meditation teacher",
+          "how to trick your brain for happinessgreater good",
+          "what is traditionalism the sophia perennis mission statement"
+        ]
+      },
+      {
+        "topic": "how would you use the second book of the lesser key of solomon",
+        "cluster_id": 28,
+        "canonical_question": "how would you use the second book of the lesser key of solomon",
+        "total_occurrences": 17,
+        "years_active": 4.8,
+        "unique_subreddits": 1,
+        "avg_score": 10.7,
+        "max_score": 67,
+        "frequency": 2.89,
+        "persistence": 0.953,
+        "cross_subreddit_spread": 0.1,
+        "answer_quality_gap": 0.933,
+        "question_demand_score": 1.315,
+        "subreddits": [
+          "occult"
+        ],
+        "title_examples": [
+          "how would you use the second book of the lesser key of solomon",
+          "have you read the key of solomon",
+          "has anyone experienced strange things while reading the lesser key of solomon",
+          "what are the dignities of men as referred to in the lesser key",
+          "has anyone summoned any of demons that appear in the book the lesser key of solomon"
+        ]
+      },
+      {
+        "topic": "is it possible to change in 24 hours",
+        "cluster_id": 63,
+        "canonical_question": "is it possible to change in 24 hours",
+        "total_occurrences": 9,
+        "years_active": 3.7,
+        "unique_subreddits": 5,
+        "avg_score": 2.7,
+        "max_score": 15,
+        "frequency": 2.303,
+        "persistence": 0.736,
+        "cross_subreddit_spread": 0.5,
+        "answer_quality_gap": 0.985,
+        "question_demand_score": 1.18,
+        "subreddits": [
+          "Meditation",
+          "awakened",
+          "hinduism",
+          "occult",
+          "spirituality"
+        ],
+        "title_examples": [
+          "is there some sort of planet shift happening weird thinga have happened in the last 24 hours",
+          "how to do meditation for 24 hours",
+          "is it possible to change in 24 hours",
+          "is it possible to change in 24 hours",
+          "is it possible to change in 24 hours"
+        ]
+      },
+      {
+        "topic": "what did sri ramana maharshi mean by ii",
+        "cluster_id": 36,
+        "canonical_question": "what did sri ramana maharshi mean by ii",
+        "total_occurrences": 9,
+        "years_active": 3.8,
+        "unique_subreddits": 4,
+        "avg_score": 4.9,
+        "max_score": 21,
+        "frequency": 2.303,
+        "persistence": 0.759,
+        "cross_subreddit_spread": 0.4,
+        "answer_quality_gap": 0.979,
+        "question_demand_score": 1.154,
+        "subreddits": [
+          "AdvaitaVedanta",
+          "Meditation",
+          "awakened",
+          "hinduism"
+        ],
+        "title_examples": [
+          "who am i ramana maharshi the socalled perfect master",
+          "do you agree with ramana maharshi that there is no need for formal meditation unless youre a novice",
+          "does the ithought by sri ramana maharshi is the same as i am by nisargadatta",
+          "how worshipping works explained in simple logic by ramana maharshi",
+          "what is the purpose of selfrealisation sri ramana maharshi explains"
+        ]
+      },
+      {
+        "topic": "has anyone else had that deja vu feeling where",
+        "cluster_id": 38,
+        "canonical_question": "has anyone else had that deja vu feeling where",
+        "total_occurrences": 8,
+        "years_active": 4.2,
+        "unique_subreddits": 3,
+        "avg_score": 7.2,
+        "max_score": 17,
+        "frequency": 2.197,
+        "persistence": 0.847,
+        "cross_subreddit_spread": 0.3,
+        "answer_quality_gap": 0.983,
+        "question_demand_score": 1.115,
+        "subreddits": [
+          "Meditation",
+          "occult",
+          "spirituality"
+        ],
+        "title_examples": [
+          "has anyone else had that deja vu feeling where",
+          "has anyone had any insight about deja vu",
+          "does anyone have any theories on sleep paralysis dream interpretation or deja vu caused by dreams",
+          "can deja vu give you glimpses into the future leading up to your death",
+          "can dreams predict the future if yes please share about a time you experienced deja vu in real life that related to a dream"
+        ]
+      },
+      {
+        "topic": "why isnt lord rama worshiped during the time of the mahabharata",
+        "cluster_id": 9,
+        "canonical_question": "why isnt lord rama worshiped during the time of the mahabharata",
+        "total_occurrences": 7,
+        "years_active": 5.7,
+        "unique_subreddits": 2,
+        "avg_score": 2.4,
+        "max_score": 9,
+        "frequency": 2.079,
+        "persistence": 1.0,
+        "cross_subreddit_spread": 0.2,
+        "answer_quality_gap": 0.991,
+        "question_demand_score": 1.093,
+        "subreddits": [
+          "hinduism",
+          "spirituality"
+        ],
+        "title_examples": [
+          "why isnt lord rama worshiped during the time of the mahabharata",
+          "who is lord rama",
+          "why did lord rama kill vali from behind a tree",
+          "who were the brothers of lord rama",
+          "why lord rama born on earth"
+        ]
+      },
+      {
+        "topic": "what is your take on  and its relation to the golden rule and a cosmocentric wor",
+        "cluster_id": 13,
+        "canonical_question": "what is your take on  and its relation to the golden rule and a cosmocentric worldview",
+        "total_occurrences": 6,
+        "years_active": 5.3,
+        "unique_subreddits": 3,
+        "avg_score": 5.2,
+        "max_score": 17,
+        "frequency": 1.946,
+        "persistence": 1.0,
+        "cross_subreddit_spread": 0.3,
+        "answer_quality_gap": 0.983,
+        "question_demand_score": 1.082,
+        "subreddits": [
+          "Meditation",
+          "hinduism",
+          "spirituality"
+        ],
+        "title_examples": [
+          "what do true faith and the golden rule have in common",
+          "is there a vedic golden rule",
+          "what is your take on  and its relation to the golden rule and a cosmocentric worldview",
+          "what is your take on  and its relation to the golden rule and a cosmocentric worldview",
+          "what is the golden rule in hinduism"
+        ]
+      },
+      {
+        "topic": "can you guys critique my writeup on nonduality",
+        "cluster_id": 60,
+        "canonical_question": "can you guys critique my writeup on nonduality",
+        "total_occurrences": 11,
+        "years_active": 2.7,
+        "unique_subreddits": 2,
+        "avg_score": 1.1,
+        "max_score": 2,
+        "frequency": 2.485,
+        "persistence": 0.544,
+        "cross_subreddit_spread": 0.2,
+        "answer_quality_gap": 0.998,
+        "question_demand_score": 1.076,
+        "subreddits": [
+          "awakened",
+          "hinduism"
+        ],
+        "title_examples": [
+          "why we criticize mayavadis",
+          "can you guys critique my writeup on nonduality",
+          "can you guys critique my writeup on nonduality",
+          "can you guys critique my writeup on nonduality",
+          "can you guys critique my writeup on nonduality"
+        ]
+      },
+      {
+        "topic": "did i do it right",
+        "cluster_id": 26,
+        "canonical_question": "did i do it right",
+        "total_occurrences": 6,
+        "years_active": 4.8,
+        "unique_subreddits": 3,
+        "avg_score": 6.7,
+        "max_score": 9,
+        "frequency": 1.946,
+        "persistence": 0.959,
+        "cross_subreddit_spread": 0.3,
+        "answer_quality_gap": 0.991,
+        "question_demand_score": 1.068,
+        "subreddits": [
+          "Meditation",
+          "kundalini",
+          "occult"
+        ],
+        "title_examples": [
+          "did i do it right",
+          "did i do it right",
+          "did i do it right",
+          "did i do it right",
+          "how did you find the right practice for you"
+        ]
+      },
+      {
+        "topic": "hindus of reddit what are the positive aspects of islam",
+        "cluster_id": 21,
+        "canonical_question": "hindus of reddit what are the positive aspects of islam",
+        "total_occurrences": 10,
+        "years_active": 3.4,
+        "unique_subreddits": 1,
+        "avg_score": 1.6,
+        "max_score": 8,
+        "frequency": 2.398,
+        "persistence": 0.676,
+        "cross_subreddit_spread": 0.1,
+        "answer_quality_gap": 0.992,
+        "question_demand_score": 1.058,
+        "subreddits": [
+          "hinduism"
+        ],
+        "title_examples": [
+          "what are some of the best positive aspects of hinduism",
+          "hindus of reddit what are the positive aspects of islam",
+          "hindus of reddit what are the positive aspects of islam",
+          "hindus of reddit what are the positive aspects of islam",
+          "hindus of reddit what are the positive aspects of christianity"
+        ]
+      }
+    ],
+    "question_demand_scores": [
+      {
+        "topic": "how to meditate",
+        "cluster_id": 0,
+        "canonical_question": "how to meditate",
+        "total_occurrences": 31275,
+        "years_active": 7.0,
+        "unique_subreddits": 9,
+        "avg_score": 9.5,
+        "max_score": 8076,
+        "frequency": 10.351,
+        "persistence": 1.0,
+        "cross_subreddit_spread": 0.9,
+        "answer_quality_gap": 0.0,
+        "question_demand_score": 4.084,
+        "subreddits": [
+          "AdvaitaVedanta",
+          "Meditation",
+          "Tantra",
+          "awakened",
+          "hinduism",
+          "kundalini",
+          "nonduality",
+          "occult",
+          "spirituality"
+        ],
+        "title_examples": [
+          "what would roccult think about of linking to a primer for newbies in the sidebar",
+          "anyone here ever try holosync what are your thoughts about it",
+          "how spirituality works  a hilarious and insightful talk by a meditation teacher",
+          "how to trick your brain for happinessgreater good",
+          "what is traditionalism the sophia perennis mission statement"
+        ]
+      },
+      {
+        "topic": "how would you use the second book of the lesser key of solomon",
+        "cluster_id": 28,
+        "canonical_question": "how would you use the second book of the lesser key of solomon",
+        "total_occurrences": 17,
+        "years_active": 4.8,
+        "unique_subreddits": 1,
+        "avg_score": 10.7,
+        "max_score": 67,
+        "frequency": 2.89,
+        "persistence": 0.953,
+        "cross_subreddit_spread": 0.1,
+        "answer_quality_gap": 0.933,
+        "question_demand_score": 1.315,
+        "subreddits": [
+          "occult"
+        ],
+        "title_examples": [
+          "how would you use the second book of the lesser key of solomon",
+          "have you read the key of solomon",
+          "has anyone experienced strange things while reading the lesser key of solomon",
+          "what are the dignities of men as referred to in the lesser key",
+          "has anyone summoned any of demons that appear in the book the lesser key of solomon"
+        ]
+      },
+      {
+        "topic": "is it possible to change in 24 hours",
+        "cluster_id": 63,
+        "canonical_question": "is it possible to change in 24 hours",
+        "total_occurrences": 9,
+        "years_active": 3.7,
+        "unique_subreddits": 5,
+        "avg_score": 2.7,
+        "max_score": 15,
+        "frequency": 2.303,
+        "persistence": 0.736,
+        "cross_subreddit_spread": 0.5,
+        "answer_quality_gap": 0.985,
+        "question_demand_score": 1.18,
+        "subreddits": [
+          "Meditation",
+          "awakened",
+          "hinduism",
+          "occult",
+          "spirituality"
+        ],
+        "title_examples": [
+          "is there some sort of planet shift happening weird thinga have happened in the last 24 hours",
+          "how to do meditation for 24 hours",
+          "is it possible to change in 24 hours",
+          "is it possible to change in 24 hours",
+          "is it possible to change in 24 hours"
+        ]
+      },
+      {
+        "topic": "what did sri ramana maharshi mean by ii",
+        "cluster_id": 36,
+        "canonical_question": "what did sri ramana maharshi mean by ii",
+        "total_occurrences": 9,
+        "years_active": 3.8,
+        "unique_subreddits": 4,
+        "avg_score": 4.9,
+        "max_score": 21,
+        "frequency": 2.303,
+        "persistence": 0.759,
+        "cross_subreddit_spread": 0.4,
+        "answer_quality_gap": 0.979,
+        "question_demand_score": 1.154,
+        "subreddits": [
+          "AdvaitaVedanta",
+          "Meditation",
+          "awakened",
+          "hinduism"
+        ],
+        "title_examples": [
+          "who am i ramana maharshi the socalled perfect master",
+          "do you agree with ramana maharshi that there is no need for formal meditation unless youre a novice",
+          "does the ithought by sri ramana maharshi is the same as i am by nisargadatta",
+          "how worshipping works explained in simple logic by ramana maharshi",
+          "what is the purpose of selfrealisation sri ramana maharshi explains"
+        ]
+      },
+      {
+        "topic": "has anyone else had that deja vu feeling where",
+        "cluster_id": 38,
+        "canonical_question": "has anyone else had that deja vu feeling where",
+        "total_occurrences": 8,
+        "years_active": 4.2,
+        "unique_subreddits": 3,
+        "avg_score": 7.2,
+        "max_score": 17,
+        "frequency": 2.197,
+        "persistence": 0.847,
+        "cross_subreddit_spread": 0.3,
+        "answer_quality_gap": 0.983,
+        "question_demand_score": 1.115,
+        "subreddits": [
+          "Meditation",
+          "occult",
+          "spirituality"
+        ],
+        "title_examples": [
+          "has anyone else had that deja vu feeling where",
+          "has anyone had any insight about deja vu",
+          "does anyone have any theories on sleep paralysis dream interpretation or deja vu caused by dreams",
+          "can deja vu give you glimpses into the future leading up to your death",
+          "can dreams predict the future if yes please share about a time you experienced deja vu in real life that related to a dream"
+        ]
+      },
+      {
+        "topic": "why isnt lord rama worshiped during the time of the mahabharata",
+        "cluster_id": 9,
+        "canonical_question": "why isnt lord rama worshiped during the time of the mahabharata",
+        "total_occurrences": 7,
+        "years_active": 5.7,
+        "unique_subreddits": 2,
+        "avg_score": 2.4,
+        "max_score": 9,
+        "frequency": 2.079,
+        "persistence": 1.0,
+        "cross_subreddit_spread": 0.2,
+        "answer_quality_gap": 0.991,
+        "question_demand_score": 1.093,
+        "subreddits": [
+          "hinduism",
+          "spirituality"
+        ],
+        "title_examples": [
+          "why isnt lord rama worshiped during the time of the mahabharata",
+          "who is lord rama",
+          "why did lord rama kill vali from behind a tree",
+          "who were the brothers of lord rama",
+          "why lord rama born on earth"
+        ]
+      },
+      {
+        "topic": "what is your take on  and its relation to the golden rule and a cosmocentric wor",
+        "cluster_id": 13,
+        "canonical_question": "what is your take on  and its relation to the golden rule and a cosmocentric worldview",
+        "total_occurrences": 6,
+        "years_active": 5.3,
+        "unique_subreddits": 3,
+        "avg_score": 5.2,
+        "max_score": 17,
+        "frequency": 1.946,
+        "persistence": 1.0,
+        "cross_subreddit_spread": 0.3,
+        "answer_quality_gap": 0.983,
+        "question_demand_score": 1.082,
+        "subreddits": [
+          "Meditation",
+          "hinduism",
+          "spirituality"
+        ],
+        "title_examples": [
+          "what do true faith and the golden rule have in common",
+          "is there a vedic golden rule",
+          "what is your take on  and its relation to the golden rule and a cosmocentric worldview",
+          "what is your take on  and its relation to the golden rule and a cosmocentric worldview",
+          "what is the golden rule in hinduism"
+        ]
+      },
+      {
+        "topic": "can you guys critique my writeup on nonduality",
+        "cluster_id": 60,
+        "canonical_question": "can you guys critique my writeup on nonduality",
+        "total_occurrences": 11,
+        "years_active": 2.7,
+        "unique_subreddits": 2,
+        "avg_score": 1.1,
+        "max_score": 2,
+        "frequency": 2.485,
+        "persistence": 0.544,
+        "cross_subreddit_spread": 0.2,
+        "answer_quality_gap": 0.998,
+        "question_demand_score": 1.076,
+        "subreddits": [
+          "awakened",
+          "hinduism"
+        ],
+        "title_examples": [
+          "why we criticize mayavadis",
+          "can you guys critique my writeup on nonduality",
+          "can you guys critique my writeup on nonduality",
+          "can you guys critique my writeup on nonduality",
+          "can you guys critique my writeup on nonduality"
+        ]
+      },
+      {
+        "topic": "did i do it right",
+        "cluster_id": 26,
+        "canonical_question": "did i do it right",
+        "total_occurrences": 6,
+        "years_active": 4.8,
+        "unique_subreddits": 3,
+        "avg_score": 6.7,
+        "max_score": 9,
+        "frequency": 1.946,
+        "persistence": 0.959,
+        "cross_subreddit_spread": 0.3,
+        "answer_quality_gap": 0.991,
+        "question_demand_score": 1.068,
+        "subreddits": [
+          "Meditation",
+          "kundalini",
+          "occult"
+        ],
+        "title_examples": [
+          "did i do it right",
+          "did i do it right",
+          "did i do it right",
+          "did i do it right",
+          "how did you find the right practice for you"
+        ]
+      },
+      {
+        "topic": "hindus of reddit what are the positive aspects of islam",
+        "cluster_id": 21,
+        "canonical_question": "hindus of reddit what are the positive aspects of islam",
+        "total_occurrences": 10,
+        "years_active": 3.4,
+        "unique_subreddits": 1,
+        "avg_score": 1.6,
+        "max_score": 8,
+        "frequency": 2.398,
+        "persistence": 0.676,
+        "cross_subreddit_spread": 0.1,
+        "answer_quality_gap": 0.992,
+        "question_demand_score": 1.058,
+        "subreddits": [
+          "hinduism"
+        ],
+        "title_examples": [
+          "what are some of the best positive aspects of hinduism",
+          "hindus of reddit what are the positive aspects of islam",
+          "hindus of reddit what are the positive aspects of islam",
+          "hindus of reddit what are the positive aspects of islam",
+          "hindus of reddit what are the positive aspects of christianity"
+        ]
+      },
+      {
+        "topic": "do the mods pay any attention to this subreddit",
+        "cluster_id": 6,
+        "canonical_question": "do the mods pay any attention to this subreddit",
+        "total_occurrences": 5,
+        "years_active": 6.2,
+        "unique_subreddits": 3,
+        "avg_score": 7.0,
+        "max_score": 12,
+        "frequency": 1.792,
+        "persistence": 1.0,
+        "cross_subreddit_spread": 0.3,
+        "answer_quality_gap": 0.988,
+        "question_demand_score": 1.031,
+        "subreddits": [
+          "Meditation",
+          "awakened",
+          "occult"
+        ],
+        "title_examples": [
+          "do the mods pay any attention to this subreddit",
+          "how do i acknowledge my thoughts and pay attention to my breath at the same time",
+          "what are the different objects to pay attention while doing mindfulness meditation",
+          "what do the secret doesnt mention but you need to pay attention",
+          "how to pay attention to the breath while you are focused on other activities throughout the day"
+        ]
+      },
+      {
+        "topic": "anybody know how to record subliminal messages to holosync",
+        "cluster_id": 56,
+        "canonical_question": "anybody know how to record subliminal messages to holosync",
+        "total_occurrences": 5,
+        "years_active": 5.8,
+        "unique_subreddits": 3,
+        "avg_score": 2.0,
+        "max_score": 5,
+        "frequency": 1.792,
+        "persistence": 1.0,
+        "cross_subreddit_spread": 0.3,
+        "answer_quality_gap": 0.995,
+        "question_demand_score": 1.031,
+        "subreddits": [
+          "Meditation",
+          "occult",
+          "spirituality"
+        ],
+        "title_examples": [
+          "anybody know how to record subliminal messages to holosync",
+          "what do you think about subliminal audios",
+          "how to use symbol for subliminal comuniquation",
+          "subliminals 101  how to use subliminal messages",
+          "how to be a winner subliminal  get free subliminal mp3 for quick change"
+        ]
+      },
+      {
+        "topic": "who are the seven immortals chiranjivi of hindu mythology part 2",
+        "cluster_id": 44,
+        "canonical_question": "who are the seven immortals chiranjivi of hindu mythology part 2",
+        "total_occurrences": 8,
+        "years_active": 3.9,
+        "unique_subreddits": 1,
+        "avg_score": 1.2,
+        "max_score": 2,
+        "frequency": 2.197,
+        "persistence": 0.774,
+        "cross_subreddit_spread": 0.1,
+        "answer_quality_gap": 0.998,
+        "question_demand_score": 1.024,
+        "subreddits": [
+          "hinduism"
+        ],
+        "title_examples": [
+          "who are the seven immortals chiranjivi of hindu mythology part 2",
+          "who are the seven immortals chiranjivi of hindu mythology part 3",
+          "who are the seven immortals chiranjivi of hindu mythology part 4",
+          "who are the seven immortals chiranjivi of hindu mythology part 1",
+          "is there a damascus road experience equivalent in hindu mythology and if so what is the story"
+        ]
+      },
+      {
+        "topic": "how true is the following article about muhammed in hindu scriptures",
+        "cluster_id": 1,
+        "canonical_question": "how true is the following article about muhammed in hindu scriptures",
+        "total_occurrences": 6,
+        "years_active": 6.9,
+        "unique_subreddits": 1,
+        "avg_score": 3.2,
+        "max_score": 10,
+        "frequency": 1.946,
+        "persistence": 1.0,
+        "cross_subreddit_spread": 0.1,
+        "answer_quality_gap": 0.99,
+        "question_demand_score": 1.015,
+        "subreddits": [
+          "hinduism"
+        ],
+        "title_examples": [
+          "how true is the following article about muhammed in hindu scriptures",
+          "is there any hindu scriptures that mentioned anything about fasting ",
+          "do the hindu scriptures really discuss science in a way that could not have been known at the time it was written",
+          "are devdutt patnaiks books inconsistent with hindu scriptures",
+          "do hindu scriptures mention anything about dinosaurs"
+        ]
+      },
+      {
+        "topic": "what does it means this symbol on the top of the great seal of the united states",
+        "cluster_id": 53,
+        "canonical_question": "what does it means this symbol on the top of the great seal of the united states",
+        "total_occurrences": 6,
+        "years_active": 3.8,
+        "unique_subreddits": 3,
+        "avg_score": 0.7,
+        "max_score": 2,
+        "frequency": 1.946,
+        "persistence": 0.756,
+        "cross_subreddit_spread": 0.3,
+        "answer_quality_gap": 0.998,
+        "question_demand_score": 1.001,
+        "subreddits": [
+          "Meditation",
+          "hinduism",
+          "occult"
+        ],
+        "title_examples": [
+          "what does it means this symbol on the top of the great seal of the united states",
+          "has anyone had experiences with meditation retreats in central united states seeking recommendations",
+          "what does the rigveda say about dairy in the united states",
+          "can anyone recommend cheap meditation retreats inside the united states",
+          "after these christians win at the scotus how do you think evangelical politics will change in the united states do you think christians will finally apologize for their hatreds and bigotries"
+        ]
+      },
+      {
+        "topic": "what is mindfulness how to remain mindful at work",
+        "cluster_id": 16,
+        "canonical_question": "what is mindfulness how to remain mindful at work",
+        "total_occurrences": 6,
+        "years_active": 4.7,
+        "unique_subreddits": 1,
+        "avg_score": 15.2,
+        "max_score": 33,
+        "frequency": 1.946,
+        "persistence": 0.932,
+        "cross_subreddit_spread": 0.1,
+        "answer_quality_gap": 0.967,
+        "question_demand_score": 0.993,
+        "subreddits": [
+          "Meditation"
+        ],
+        "title_examples": [
+          "how can one remain mindful while browsing reddit",
+          "how do you remain mindful and calm when provoked",
+          "what is mindfulness how to remain mindful at work",
+          "what is mindfulness how to remain mindful at work",
+          "how to remain mindful during stressful time"
+        ]
+      },
+      {
+        "topic": "can artificial intelligence host consciousness and what are the consequences for",
+        "cluster_id": 15,
+        "canonical_question": "can artificial intelligence host consciousness and what are the consequences for magic either way",
+        "total_occurrences": 5,
+        "years_active": 4.9,
+        "unique_subreddits": 2,
+        "avg_score": 11.8,
+        "max_score": 40,
+        "frequency": 1.792,
+        "persistence": 0.981,
+        "cross_subreddit_spread": 0.2,
+        "answer_quality_gap": 0.96,
+        "question_demand_score": 0.991,
+        "subreddits": [
+          "Meditation",
+          "occult"
+        ],
+        "title_examples": [
+          "can artificial intelligence host consciousness and what are the consequences for magic either way",
+          "could meditation on thought processes lead to breakthroughs in the field of artificial intelligence",
+          "could a spirit inhabit artificial intelligence",
+          "would an artificial intelligence be able to perform magic",
+          "is artificial intelligence the fullfillment of biblical prophecy"
+        ]
+      },
+      {
+        "topic": "is anyone familiar with joseph c lisiewski and the book ceremonial magic amp the",
+        "cluster_id": 23,
+        "canonical_question": "is anyone familiar with joseph c lisiewski and the book ceremonial magic amp the power of evocation",
+        "total_occurrences": 6,
+        "years_active": 4.6,
+        "unique_subreddits": 1,
+        "avg_score": 10.0,
+        "max_score": 16,
+        "frequency": 1.946,
+        "persistence": 0.923,
+        "cross_subreddit_spread": 0.1,
+        "answer_quality_gap": 0.984,
+        "question_demand_score": 0.99,
+        "subreddits": [
+          "occult"
+        ],
+        "title_examples": [
+          "is anyone familiar with joseph c lisiewski and the book ceremonial magic amp the power of evocation",
+          "how to practice ceremonial magic with limited means",
+          "is it just me or do a lot of millennials shy away from ceremonial magic",
+          "what do you think about ceremonial magic and traditional witchcraft",
+          "what exactly is ceremonial magic"
+        ]
+      },
+      {
+        "topic": "why attain enlightenment",
+        "cluster_id": 20,
+        "canonical_question": "why attain enlightenment",
+        "total_occurrences": 5,
+        "years_active": 4.8,
+        "unique_subreddits": 2,
+        "avg_score": 5.8,
+        "max_score": 12,
+        "frequency": 1.792,
+        "persistence": 0.97,
+        "cross_subreddit_spread": 0.2,
+        "answer_quality_gap": 0.988,
+        "question_demand_score": 0.987,
+        "subreddits": [
+          "Meditation",
+          "awakened"
+        ],
+        "title_examples": [
+          "why attain enlightenment",
+          "is an hour of meditation a day enough to attain enlightenment within a couple lt10 years",
+          "is there any difference between the meditation done to just relax the mind and the one done to attain enlightenment",
+          "why most meditators will never attain enlightenment",
+          "can there be a method to attain enlightenment"
+        ]
+      },
+      {
+        "topic": "is the theory of evolution of science really antireligion  omtimes magazine",
+        "cluster_id": 37,
+        "canonical_question": "is the theory of evolution of science really antireligion  omtimes magazine",
+        "total_occurrences": 8,
+        "years_active": 2.7,
+        "unique_subreddits": 2,
+        "avg_score": 1.0,
+        "max_score": 1,
+        "frequency": 2.197,
+        "persistence": 0.546,
+        "cross_subreddit_spread": 0.2,
+        "answer_quality_gap": 0.999,
+        "question_demand_score": 0.981,
+        "subreddits": [
+          "Meditation",
+          "spirituality"
+        ],
+        "title_examples": [
+          "is the theory of evolution of science really antireligion  omtimes magazine",
+          "is buddha angry  omtimes magazine",
+          "are you honoring your soul  omtimes magazine",
+          "why we should not define the soul  omtimes magazine",
+          "how to meditate in this millionmileanhour world  omtimes magazine"
+        ]
+      },
+      {
+        "topic": "does ahimsa nonviolence require vegetarianism ",
+        "cluster_id": 8,
+        "canonical_question": "does ahimsa nonviolence require vegetarianism ",
+        "total_occurrences": 4,
+        "years_active": 5.5,
+        "unique_subreddits": 3,
+        "avg_score": 4.0,
+        "max_score": 7,
+        "frequency": 1.609,
+        "persistence": 1.0,
+        "cross_subreddit_spread": 0.3,
+        "answer_quality_gap": 0.993,
+        "question_demand_score": 0.97,
+        "subreddits": [
+          "Meditation",
+          "hinduism",
+          "occult"
+        ],
+        "title_examples": [
+          "does ahimsa nonviolence require vegetarianism ",
+          "does meditation require mental effort during the practice when you first begin",
+          "does the durga dvatrinsh naammala 32 names require initiation",
+          "what religions require you to pledge your soul"
+        ]
+      },
+      {
+        "topic": "how to take guided seriouslyhaving an open mind",
+        "cluster_id": 10,
+        "canonical_question": "how to take guided seriouslyhaving an open mind",
+        "total_occurrences": 5,
+        "years_active": 5.8,
+        "unique_subreddits": 1,
+        "avg_score": 3.2,
+        "max_score": 11,
+        "frequency": 1.792,
+        "persistence": 1.0,
+        "cross_subreddit_spread": 0.1,
+        "answer_quality_gap": 0.989,
+        "question_demand_score": 0.964,
+        "subreddits": [
+          "Meditation"
+        ],
+        "title_examples": [
+          "how to take guided seriouslyhaving an open mind",
+          "does meditation open the mind up to spiritual demonic influence",
+          "who says smartphones take you out of the moment used smartly they can open your mind and make you more present than ever",
+          "how does one meditate with an open mind as opposed to a closed mind turned inward",
+          "can i accidentaly open my mind eye"
+        ]
+      },
+      {
+        "topic": "is this obe or just a simple hypnagogic state",
+        "cluster_id": 29,
+        "canonical_question": "is this obe or just a simple hypnagogic state",
+        "total_occurrences": 4,
+        "years_active": 4.1,
+        "unique_subreddits": 4,
+        "avg_score": 4.0,
+        "max_score": 7,
+        "frequency": 1.609,
+        "persistence": 0.821,
+        "cross_subreddit_spread": 0.4,
+        "answer_quality_gap": 0.993,
+        "question_demand_score": 0.944,
+        "subreddits": [
+          "Meditation",
+          "awakened",
+          "occult",
+          "spirituality"
+        ],
+        "title_examples": [
+          "is this obe or just a simple hypnagogic state",
+          "has anyone tried the 90 day obe guide by robert bruce",
+          "what it is like to obe",
+          "did i have an obe"
+        ]
+      },
+      {
+        "topic": "can hypnosis and meditation help you lose weight",
+        "cluster_id": 41,
+        "canonical_question": "can hypnosis and meditation help you lose weight",
+        "total_occurrences": 6,
+        "years_active": 3.4,
+        "unique_subreddits": 2,
+        "avg_score": 1.3,
+        "max_score": 4,
+        "frequency": 1.946,
+        "persistence": 0.683,
+        "cross_subreddit_spread": 0.2,
+        "answer_quality_gap": 0.996,
+        "question_demand_score": 0.943,
+        "subreddits": [
+          "Meditation",
+          "spirituality"
+        ],
+        "title_examples": [
+          "can hypnosis and meditation help you lose weight",
+          "how anger helps you lose weight and gain selfconfidence",
+          "can meditation help me to lose weight",
+          "did meditation make it easier to lose weight",
+          "how meditation helps you to lose weight and stay healthy"
+        ]
+      },
+      {
+        "topic": "how to get rid of depression what is the real cause",
+        "cluster_id": 91,
+        "canonical_question": "how to get rid of depression what is the real cause",
+        "total_occurrences": 9,
+        "years_active": 0.1,
+        "unique_subreddits": 5,
+        "avg_score": 0.3,
+        "max_score": 2,
+        "frequency": 2.303,
+        "persistence": 0.027,
+        "cross_subreddit_spread": 0.5,
+        "answer_quality_gap": 0.998,
+        "question_demand_score": 0.943,
+        "subreddits": [
+          "Meditation",
+          "awakened",
+          "hinduism",
+          "occult",
+          "spirituality"
+        ],
+        "title_examples": [
+          "how to get rid of depression what is the real cause",
+          "how to get rid of depression what is the real cause",
+          "how to get rid of depression what is the real cause",
+          "how to get rid of depression what is the real cause",
+          "how to get rid of depression what is the real cause"
+        ]
+      },
+      {
+        "topic": "should i meditate before or after i jack off",
+        "cluster_id": 5,
+        "canonical_question": "should i meditate before or after i jack off",
+        "total_occurrences": 4,
+        "years_active": 6.0,
+        "unique_subreddits": 2,
+        "avg_score": 2.8,
+        "max_score": 8,
+        "frequency": 1.609,
+        "persistence": 1.0,
+        "cross_subreddit_spread": 0.2,
+        "answer_quality_gap": 0.992,
+        "question_demand_score": 0.936,
+        "subreddits": [
+          "Meditation",
+          "occult"
+        ],
+        "title_examples": [
+          "should i meditate before or after i jack off",
+          "jack kerouac on how to meditate",
+          "what to use after jack kornfields beginner book",
+          "does jack parsons really opened a portal under the babalon working"
+        ]
+      },
+      {
+        "topic": "why do i reflect while meditating",
+        "cluster_id": 11,
+        "canonical_question": "why do i reflect while meditating",
+        "total_occurrences": 4,
+        "years_active": 5.5,
+        "unique_subreddits": 2,
+        "avg_score": 232.2,
+        "max_score": 921,
+        "frequency": 1.609,
+        "persistence": 1.0,
+        "cross_subreddit_spread": 0.2,
+        "answer_quality_gap": 0.079,
+        "question_demand_score": 0.936,
+        "subreddits": [
+          "Meditation",
+          "awakened"
+        ],
+        "title_examples": [
+          "why do i reflect while meditating",
+          "why should you meditate or reflect  besthealthline",
+          "i found what is probably going to be my next favorite spot to meditate and reflect while on a hike yesterday",
+          "can unintelligent people not self reflect"
+        ]
+      },
+      {
+        "topic": "do we see reality as it is  ted talk by donald hoffman 22min",
+        "cluster_id": 51,
+        "canonical_question": "do we see reality as it is  ted talk by donald hoffman 22min",
+        "total_occurrences": 5,
+        "years_active": 3.1,
+        "unique_subreddits": 4,
+        "avg_score": 11.0,
+        "max_score": 25,
+        "frequency": 1.792,
+        "persistence": 0.616,
+        "cross_subreddit_spread": 0.4,
+        "answer_quality_gap": 0.975,
+        "question_demand_score": 0.936,
+        "subreddits": [
+          "Meditation",
+          "awakened",
+          "occult",
+          "spirituality"
+        ],
+        "title_examples": [
+          "do we see reality as it is  ted talk by donald hoffman 22min",
+          "how do you perceive the world  i saw this ted talk at university and felt like it had a place here",
+          "what is a person supposed to do with the rest of their time on earth once they have achieved enlightenment a ted talk about the spiritual path",
+          "could meditation stimulate the right hemisphere ted talk",
+          "do we see reality as it really is  a ted talk"
+        ]
+      },
+      {
+        "topic": "how i feel trying to meditate with add without an aid",
+        "cluster_id": 17,
+        "canonical_question": "how i feel trying to meditate with add without an aid",
+        "total_occurrences": 5,
+        "years_active": 4.1,
+        "unique_subreddits": 2,
+        "avg_score": 30.2,
+        "max_score": 139,
+        "frequency": 1.792,
+        "persistence": 0.811,
+        "cross_subreddit_spread": 0.2,
+        "answer_quality_gap": 0.861,
+        "question_demand_score": 0.934,
+        "subreddits": [
+          "Meditation",
+          "spirituality"
+        ],
+        "title_examples": [
+          "how i feel trying to meditate with add without an aid",
+          "how i feel when im trying to meditate",
+          "how to do empathy 10min howto video this something im trying to do",
+          "does anyone else have a compulsive muscle twitchtic and find it a problem when trying to meditate",
+          "how do i know a method works when im trying"
+        ]
+      },
+      {
+        "topic": "what do you think of hare krishnas",
+        "cluster_id": 33,
+        "canonical_question": "what do you think of hare krishnas",
+        "total_occurrences": 5,
+        "years_active": 4.4,
+        "unique_subreddits": 1,
+        "avg_score": 8.0,
+        "max_score": 12,
+        "frequency": 1.792,
+        "persistence": 0.875,
+        "cross_subreddit_spread": 0.1,
+        "answer_quality_gap": 0.988,
+        "question_demand_score": 0.922,
+        "subreddits": [
+          "hinduism"
+        ],
+        "title_examples": [
+          "what do you think of hare krishnas",
+          "why do hare krishnas insist that people who deny the personal form of a god are atheists and insinuate that they do it to be free of any rules and regulations",
+          "are the people who call themselves hare krishnas representative of hinduism",
+          "what does the word hare means as in hare rama hare rama  ",
+          "do hare krishnas consume dairy products"
+        ]
+      },
+      {
+        "topic": "is there a way you know is wrong",
+        "cluster_id": 3,
+        "canonical_question": "is there a way you know is wrong",
+        "total_occurrences": 3,
+        "years_active": 6.2,
+        "unique_subreddits": 3,
+        "avg_score": 2.3,
+        "max_score": 5,
+        "frequency": 1.386,
+        "persistence": 1.0,
+        "cross_subreddit_spread": 0.3,
+        "answer_quality_gap": 0.995,
+        "question_demand_score": 0.895,
+        "subreddits": [
+          "Meditation",
+          "occult",
+          "spirituality"
+        ],
+        "title_examples": [
+          "is there a way you know is wrong",
+          "is the end goal of all our pursuits in one way or another whether we know it or not to be happy",
+          "is there a definite way to know whether someone is actually your friend or may be using you for nefarious purposes"
+        ]
+      },
+      {
+        "topic": "who else has pulled back from full on rituals due to family member concerns",
+        "cluster_id": 12,
+        "canonical_question": "who else has pulled back from full on rituals due to family member concerns",
+        "total_occurrences": 3,
+        "years_active": 5.3,
+        "unique_subreddits": 3,
+        "avg_score": 8.0,
+        "max_score": 13,
+        "frequency": 1.386,
+        "persistence": 1.0,
+        "cross_subreddit_spread": 0.3,
+        "answer_quality_gap": 0.987,
+        "question_demand_score": 0.895,
+        "subreddits": [
+          "hinduism",
+          "occult",
+          "spirituality"
+        ],
+        "title_examples": [
+          "who else has pulled back from full on rituals due to family member concerns",
+          "how does a 5dholding love vibration deal with narcissistic family member",
+          "what to conduct on 1year death anniversary of family member"
+        ]
+      },
+      {
+        "topic": "how do you even begin to feel energy flow through you while meditating",
+        "cluster_id": 14,
+        "canonical_question": "how do you even begin to feel energy flow through you while meditating",
+        "total_occurrences": 3,
+        "years_active": 5.6,
+        "unique_subreddits": 3,
+        "avg_score": 13.7,
+        "max_score": 40,
+        "frequency": 1.386,
+        "persistence": 1.0,
+        "cross_subreddit_spread": 0.3,
+        "answer_quality_gap": 0.96,
+        "question_demand_score": 0.895,
+        "subreddits": [
+          "Meditation",
+          "occult",
+          "spirituality"
+        ],
+        "title_examples": [
+          "how do you even begin to feel energy flow through you while meditating",
+          "can you feel the energy right now soak it up and help flood human consciousness with it",
+          "is it possible to feel the energy of someone youre close with"
+        ]
+      },
+      {
+        "topic": "my friend recently died is there any ritual i could perform for her",
+        "cluster_id": 30,
+        "canonical_question": "my friend recently died is there any ritual i could perform for her",
+        "total_occurrences": 5,
+        "years_active": 3.9,
+        "unique_subreddits": 1,
+        "avg_score": 8.6,
+        "max_score": 25,
+        "frequency": 1.792,
+        "persistence": 0.783,
+        "cross_subreddit_spread": 0.1,
+        "answer_quality_gap": 0.975,
+        "question_demand_score": 0.892,
+        "subreddits": [
+          "occult"
+        ],
+        "title_examples": [
+          "my friend recently died is there any ritual i could perform for her",
+          "is there a ritual to perform that can hide my altar from the eyes of others",
+          "whats your favorite daily ritual and how do you perform it",
+          "is there a ritual to perform to steal the blacknessbrownness of someone for myself",
+          "what kind of ritual do you perform when youre trying to increase productivity"
+        ]
+      },
+      {
+        "topic": "how to stop resisting life and go with the flow and letting go",
+        "cluster_id": 42,
+        "canonical_question": "how to stop resisting life and go with the flow and letting go",
+        "total_occurrences": 4,
+        "years_active": 3.8,
+        "unique_subreddits": 3,
+        "avg_score": 10.2,
+        "max_score": 29,
+        "frequency": 1.609,
+        "persistence": 0.753,
+        "cross_subreddit_spread": 0.3,
+        "answer_quality_gap": 0.971,
+        "question_demand_score": 0.888,
+        "subreddits": [
+          "Meditation",
+          "awakened",
+          "spirituality"
+        ],
+        "title_examples": [
+          "lauriehuston what are you resisting",
+          "how to stop resisting life and go with the flow and letting go",
+          "how to stop resisting life and go with the flow and letting go",
+          "how to stop resisting a better life"
+        ]
+      },
+      {
+        "topic": "why is spontaneous human combustion considered a supernatural rather than biolog",
+        "cluster_id": 64,
+        "canonical_question": "why is spontaneous human combustion considered a supernatural rather than biological thing",
+        "total_occurrences": 8,
+        "years_active": 0.8,
+        "unique_subreddits": 3,
+        "avg_score": 1.2,
+        "max_score": 5,
+        "frequency": 2.197,
+        "persistence": 0.162,
+        "cross_subreddit_spread": 0.3,
+        "answer_quality_gap": 0.995,
+        "question_demand_score": 0.887,
+        "subreddits": [
+          "kundalini",
+          "occult",
+          "spirituality"
+        ],
+        "title_examples": [
+          "why is spontaneous human combustion considered a supernatural rather than biological thing",
+          "why is spontaneous human combustion considered a supernatural rather than biological thing",
+          "why is spontaneous human combustion considered a supernatural rather than biological thing",
+          "is spontaneous human combustion shc caused by failed kundalini or soul energy",
+          "is spontaneous human combustion shc caused by failed kundalini or soul energy"
+        ]
+      },
+      {
+        "topic": "what started out as me chuckling over an xkcd left me wondering what exactly i a",
+        "cluster_id": 40,
+        "canonical_question": "what started out as me chuckling over an xkcd left me wondering what exactly i am doing when im not paying attention",
+        "total_occurrences": 4,
+        "years_active": 4.2,
+        "unique_subreddits": 2,
+        "avg_score": 10.2,
+        "max_score": 31,
+        "frequency": 1.609,
+        "persistence": 0.849,
+        "cross_subreddit_spread": 0.2,
+        "answer_quality_gap": 0.969,
+        "question_demand_score": 0.886,
+        "subreddits": [
+          "Meditation",
+          "occult"
+        ],
+        "title_examples": [
+          "what started out as me chuckling over an xkcd left me wondering what exactly i am doing when im not paying attention",
+          "why meditation poses are worth paying attention",
+          "does anyone else have trouble paying attention during a headspace session",
+          "does paying attention mean noticing details you hadnt noticed before"
+        ]
+      },
+      {
+        "topic": "how do you stop the minds chatter  sadhguru",
+        "cluster_id": 49,
+        "canonical_question": "how do you stop the minds chatter  sadhguru",
+        "total_occurrences": 7,
+        "years_active": 2.3,
+        "unique_subreddits": 1,
+        "avg_score": 113.3,
+        "max_score": 435,
+        "frequency": 2.079,
+        "persistence": 0.453,
+        "cross_subreddit_spread": 0.1,
+        "answer_quality_gap": 0.565,
+        "question_demand_score": 0.878,
+        "subreddits": [
+          "Meditation"
+        ],
+        "title_examples": [
+          "how do you stop the minds chatter a simple way to view the problem of constant internal dialogue during meditation from sadhguru",
+          "interesting video on how do you stop the minds chatter",
+          "how do you stop the minds chatter",
+          "how to stop the minds chatter  this really helped me quiet my mind when meditating",
+          "how do you stop the minds chatter  aho"
+        ]
+      },
+      {
+        "topic": "how to go from insanity to enlightenment  full speech",
+        "cluster_id": 84,
+        "canonical_question": "how to go from insanity to enlightenment  full speech",
+        "total_occurrences": 7,
+        "years_active": 0.3,
+        "unique_subreddits": 5,
+        "avg_score": 0.9,
+        "max_score": 3,
+        "frequency": 2.079,
+        "persistence": 0.053,
+        "cross_subreddit_spread": 0.5,
+        "answer_quality_gap": 0.997,
+        "question_demand_score": 0.877,
+        "subreddits": [
+          "Meditation",
+          "awakened",
+          "hinduism",
+          "occult",
+          "spirituality"
+        ],
+        "title_examples": [
+          "how to go from insanity to enlightenment",
+          "how to go from insanity to enlightenment  sadhguru",
+          "how to go from insanity to enlightenment full speech",
+          "how to go from insanity to enlightenment full speech",
+          "how to go from insanity to enlightenment  full speech"
+        ]
+      },
+      {
+        "topic": "do this simple experiment and increase your awareness",
+        "cluster_id": 94,
+        "canonical_question": "do this simple experiment and increase your awareness",
+        "total_occurrences": 7,
+        "years_active": 0.2,
+        "unique_subreddits": 5,
+        "avg_score": 0.1,
+        "max_score": 1,
+        "frequency": 2.079,
+        "persistence": 0.048,
+        "cross_subreddit_spread": 0.5,
+        "answer_quality_gap": 0.999,
+        "question_demand_score": 0.876,
+        "subreddits": [
+          "Meditation",
+          "awakened",
+          "hinduism",
+          "occult",
+          "spirituality"
+        ],
+        "title_examples": [
+          "do this simple experiment and increase your awareness",
+          "do this simple experiment and increase your awareness",
+          "do this simple experiment and increase your awareness",
+          "do this simple experiment and increase your awareness",
+          "do this simple experiment and increase your awareness"
+        ]
+      },
+      {
+        "topic": "how to relieve your anxiety in 30 seconds with the mindful pause",
+        "cluster_id": 87,
+        "canonical_question": "how to relieve your anxiety in 30 seconds with the mindful pause",
+        "total_occurrences": 5,
+        "years_active": 3.1,
+        "unique_subreddits": 2,
+        "avg_score": 30.6,
+        "max_score": 105,
+        "frequency": 1.792,
+        "persistence": 0.621,
+        "cross_subreddit_spread": 0.2,
+        "answer_quality_gap": 0.895,
+        "question_demand_score": 0.871,
+        "subreddits": [
+          "Meditation",
+          "occult"
+        ],
+        "title_examples": [
+          "how to relieve your anxiety in 30 seconds with the mindful pause",
+          "what is meditation in 30 seconds",
+          "forbes 30 under 30 millionaire chris kelsey discusses what is consciousness",
+          "how 30 seconds of exercise can help you live longer",
+          "when i run for more than 30 min sometimes i feel very clam"
+        ]
+      },
+      {
+        "topic": "universe supports you when you accept what is",
+        "cluster_id": 90,
+        "canonical_question": "universe supports you when you accept what is",
+        "total_occurrences": 7,
+        "years_active": 0.1,
+        "unique_subreddits": 5,
+        "avg_score": 0.7,
+        "max_score": 3,
+        "frequency": 2.079,
+        "persistence": 0.017,
+        "cross_subreddit_spread": 0.5,
+        "answer_quality_gap": 0.997,
+        "question_demand_score": 0.865,
+        "subreddits": [
+          "Meditation",
+          "awakened",
+          "hinduism",
+          "occult",
+          "spirituality"
+        ],
+        "title_examples": [
+          "when you accept the unacceptable universe supports you",
+          "when you accept the unacceptable universe supports you",
+          "universe supports you when you accept what is",
+          "universe supports you when you accept what is",
+          "universe supports you when you accept what is"
+        ]
+      },
+      {
+        "topic": "who am i responsible for",
+        "cluster_id": 24,
+        "canonical_question": "who am i responsible for",
+        "total_occurrences": 4,
+        "years_active": 3.7,
+        "unique_subreddits": 2,
+        "avg_score": 1.5,
+        "max_score": 4,
+        "frequency": 1.609,
+        "persistence": 0.745,
+        "cross_subreddit_spread": 0.2,
+        "answer_quality_gap": 0.996,
+        "question_demand_score": 0.852,
+        "subreddits": [
+          "occult",
+          "spirituality"
+        ],
+        "title_examples": [
+          "who am i responsible for",
+          "why god is never responsible for the fruits of ones deeds",
+          "what chakra is responsible for hair loss",
+          "do you know that you are responsible even for the formation of your body everything you encounter is your own design nobody else is responsible for it for endless lives you have been responsible wholly and solely to know more visit the page here "
+        ]
+      },
+      {
+        "topic": "how to meditate by slipping into it",
+        "cluster_id": 48,
+        "canonical_question": "how to meditate by slipping into it",
+        "total_occurrences": 4,
+        "years_active": 3.1,
+        "unique_subreddits": 3,
+        "avg_score": 2.8,
+        "max_score": 6,
+        "frequency": 1.609,
+        "persistence": 0.624,
+        "cross_subreddit_spread": 0.3,
+        "answer_quality_gap": 0.994,
+        "question_demand_score": 0.845,
+        "subreddits": [
+          "Meditation",
+          "occult",
+          "spirituality"
+        ],
+        "title_examples": [
+          "how do i prevent myself from slipping back into old harmful habits",
+          "how to meditate by slipping into it",
+          "how to meditate by slipping into it",
+          "is the us slipping into a theocracy"
+        ]
+      },
+      {
+        "topic": "how can i specifically target impatience and add type emotions",
+        "cluster_id": 77,
+        "canonical_question": "how can i specifically target impatience and add type emotions",
+        "total_occurrences": 4,
+        "years_active": 3.5,
+        "unique_subreddits": 2,
+        "avg_score": 3.2,
+        "max_score": 5,
+        "frequency": 1.609,
+        "persistence": 0.709,
+        "cross_subreddit_spread": 0.2,
+        "answer_quality_gap": 0.995,
+        "question_demand_score": 0.839,
+        "subreddits": [
+          "Meditation",
+          "occult"
+        ],
+        "title_examples": [
+          "how can i specifically target impatience and add type emotions",
+          "is it dangerous for the target if cast multiple of the same type of spell on some",
+          "can sigilservitors target someone other than your target ",
+          "is it more beneficial to complete the daily target in one sitting"
+        ]
+      },
+      {
+        "topic": "how to transform any crisis loss or change into an opportunity for personal grow",
+        "cluster_id": 45,
+        "canonical_question": "how to transform any crisis loss or change into an opportunity for personal growth",
+        "total_occurrences": 4,
+        "years_active": 3.5,
+        "unique_subreddits": 2,
+        "avg_score": 3.0,
+        "max_score": 8,
+        "frequency": 1.609,
+        "persistence": 0.705,
+        "cross_subreddit_spread": 0.2,
+        "answer_quality_gap": 0.992,
+        "question_demand_score": 0.838,
+        "subreddits": [
+          "awakened",
+          "spirituality"
+        ],
+        "title_examples": [
+          "how to transform any crisis loss or change into an opportunity for personal growth",
+          "why personal growth can be like riding a bus in the dark",
+          "how can i use suffering as a tool for personal growth",
+          "how do i use suffering as a tool for my own personal growth"
+        ]
+      },
+      {
+        "topic": "who dreams the dream that we call reality  neti neti method",
+        "cluster_id": 58,
+        "canonical_question": "who dreams the dream that we call reality  neti neti method",
+        "total_occurrences": 4,
+        "years_active": 2.9,
+        "unique_subreddits": 3,
+        "avg_score": 4.0,
+        "max_score": 6,
+        "frequency": 1.609,
+        "persistence": 0.589,
+        "cross_subreddit_spread": 0.3,
+        "answer_quality_gap": 0.994,
+        "question_demand_score": 0.833,
+        "subreddits": [
+          "AdvaitaVedanta",
+          "awakened",
+          "hinduism"
+        ],
+        "title_examples": [
+          "eli5 what is neti neti and how does it work",
+          "who dreams the dream that we call reality  neti neti method",
+          "who dreams the dream that we call reality  neti neti method",
+          "is neti neti the key to discovering who you are"
+        ]
+      },
+      {
+        "topic": "what symbols has followed you around for most of your life and have you determin",
+        "cluster_id": 88,
+        "canonical_question": "what symbols has followed you around for most of your life and have you determined its message",
+        "total_occurrences": 3,
+        "years_active": 5.0,
+        "unique_subreddits": 1,
+        "avg_score": 7.0,
+        "max_score": 20,
+        "frequency": 1.386,
+        "persistence": 1.0,
+        "cross_subreddit_spread": 0.1,
+        "answer_quality_gap": 0.98,
+        "question_demand_score": 0.829,
+        "subreddits": [
+          "occult"
+        ],
+        "title_examples": [
+          "what symbols has followed you around for most of your life and have you determined its message",
+          "can you be followed by a demon after attempting to harm someone",
+          "when you followed the manfisher"
+        ]
+      },
+      {
+        "topic": "are you materialistic if so its not your fault",
+        "cluster_id": 34,
+        "canonical_question": "are you materialistic if so its not your fault",
+        "total_occurrences": 3,
+        "years_active": 4.4,
+        "unique_subreddits": 2,
+        "avg_score": 0.7,
+        "max_score": 1,
+        "frequency": 1.386,
+        "persistence": 0.885,
+        "cross_subreddit_spread": 0.2,
+        "answer_quality_gap": 0.999,
+        "question_demand_score": 0.824,
+        "subreddits": [
+          "occult",
+          "spirituality"
+        ],
+        "title_examples": [
+          "are you materialistic if so its not your fault",
+          "are these deaths my fault",
+          "ive been abused in every possible way by a group of men at work and society tells me its my fault is there anything i can do to make them including everyone that says it was all my fault pay real money as a way to make it up for me"
+        ]
+      },
+      {
+        "topic": "should you see your doctor for thrush treatments",
+        "cluster_id": 27,
+        "canonical_question": "should you see your doctor for thrush treatments",
+        "total_occurrences": 3,
+        "years_active": 3.9,
+        "unique_subreddits": 3,
+        "avg_score": 0.7,
+        "max_score": 2,
+        "frequency": 1.386,
+        "persistence": 0.777,
+        "cross_subreddit_spread": 0.3,
+        "answer_quality_gap": 0.998,
+        "question_demand_score": 0.821,
+        "subreddits": [
+          "Meditation",
+          "Tantra",
+          "occult"
+        ],
+        "title_examples": [
+          "should you see your doctor for thrush treatments",
+          "my doctor has no clue on how to handle meditation",
+          "can i sell my hair to a witch doctor"
+        ]
+      },
+      {
+        "topic": "can most people make the choices that are right for them",
+        "cluster_id": 52,
+        "canonical_question": "can most people make the choices that are right for them",
+        "total_occurrences": 4,
+        "years_active": 3.3,
+        "unique_subreddits": 2,
+        "avg_score": 134.0,
+        "max_score": 526,
+        "frequency": 1.609,
+        "persistence": 0.653,
+        "cross_subreddit_spread": 0.2,
+        "answer_quality_gap": 0.474,
+        "question_demand_score": 0.821,
+        "subreddits": [
+          "Meditation",
+          "spirituality"
+        ],
+        "title_examples": [
+          "can most people make the choices that are right for them",
+          "can most people make the choices that are right for them",
+          "when we find ourselves judging others for the choices they make",
+          "has meditation drawn you to make other lifestyle choices"
+        ]
+      },
+      {
+        "topic": "do this when things let you down",
+        "cluster_id": 82,
+        "canonical_question": "do this when things let you down",
+        "total_occurrences": 6,
+        "years_active": 0.5,
+        "unique_subreddits": 4,
+        "avg_score": 1.3,
+        "max_score": 4,
+        "frequency": 1.946,
+        "persistence": 0.109,
+        "cross_subreddit_spread": 0.4,
+        "answer_quality_gap": 0.996,
+        "question_demand_score": 0.818,
+        "subreddits": [
+          "Meditation",
+          "awakened",
+          "occult",
+          "spirituality"
+        ],
+        "title_examples": [
+          "when things let you down watch this  eckhart",
+          "when things let you down watch this  eckhart",
+          "do this when things let you down",
+          "do this when things let you down",
+          "do this when things let you down"
+        ]
+      },
+      {
+        "topic": "can anyone refer me to a good website to learn more about chakras and meditation",
+        "cluster_id": 73,
+        "canonical_question": "can anyone refer me to a good website to learn more about chakras and meditation",
+        "total_occurrences": 3,
+        "years_active": 4.3,
+        "unique_subreddits": 2,
+        "avg_score": 10.3,
+        "max_score": 25,
+        "frequency": 1.386,
+        "persistence": 0.865,
+        "cross_subreddit_spread": 0.2,
+        "answer_quality_gap": 0.975,
+        "question_demand_score": 0.817,
+        "subreddits": [
+          "Meditation",
+          "occult"
+        ],
+        "title_examples": [
+          "can anyone refer me to a good website to learn more about chakras and meditation",
+          "does anyone know a good website to read translated greek papyri texts and spells",
+          "can somebody tell me a good website to go to for psalms spells"
+        ]
+      },
+      {
+        "topic": "do buddhist monasteries have any medical programs if so what kind xpost rbuddhis",
+        "cluster_id": 22,
+        "canonical_question": "do buddhist monasteries have any medical programs if so what kind xpost rbuddhism",
+        "total_occurrences": 4,
+        "years_active": 3.6,
+        "unique_subreddits": 1,
+        "avg_score": 2.5,
+        "max_score": 4,
+        "frequency": 1.609,
+        "persistence": 0.722,
+        "cross_subreddit_spread": 0.1,
+        "answer_quality_gap": 0.996,
+        "question_demand_score": 0.81,
+        "subreddits": [
+          "Meditation"
+        ],
+        "title_examples": [
+          "do buddhist monasteries have any medical programs if so what kind xpost rbuddhism",
+          "awakened trauma amp illness after meditation  how to find a teacher xpost to rbuddhism",
+          "is meditation a death realization xpost rbuddhism",
+          "what meditation manuals  approaches strictly follow the buddhas original teachings xpost rbuddhism"
+        ]
+      },
+      {
+        "topic": "are you on google",
+        "cluster_id": 4,
+        "canonical_question": "are you on google",
+        "total_occurrences": 4,
+        "years_active": 2.6,
+        "unique_subreddits": 3,
+        "avg_score": 194.5,
+        "max_score": 428,
+        "frequency": 1.609,
+        "persistence": 0.515,
+        "cross_subreddit_spread": 0.3,
+        "answer_quality_gap": 0.572,
+        "question_demand_score": 0.808,
+        "subreddits": [
+          "Meditation",
+          "occult",
+          "spirituality"
+        ],
+        "title_examples": [
+          "are you on google",
+          "do we need protection from st google",
+          "google trends 2014 how to meditate ",
+          "how to meditate no 4 in google trends results in 2014"
+        ]
+      },
+      {
+        "topic": "how to stop worrying about the future so you can be present and peaceful in the ",
+        "cluster_id": 50,
+        "canonical_question": "how to stop worrying about the future so you can be present and peaceful in the moment",
+        "total_occurrences": 5,
+        "years_active": 2.1,
+        "unique_subreddits": 2,
+        "avg_score": 143.0,
+        "max_score": 477,
+        "frequency": 1.792,
+        "persistence": 0.419,
+        "cross_subreddit_spread": 0.2,
+        "answer_quality_gap": 0.523,
+        "question_demand_score": 0.804,
+        "subreddits": [
+          "Meditation",
+          "awakened"
+        ],
+        "title_examples": [
+          "how to stop worrying about the future so you can be present and peaceful in the moment",
+          "how to stop worrying ",
+          "how to stop worrying yourself to death",
+          "how to get out of your head and stop worrying about things that are out of your control  mindfulness technique",
+          "how to get out of your head and stop worrying about things outside of your control  mindfulness meditation explained simply"
+        ]
+      },
+      {
+        "topic": "how can i meditate on whether or not shes right for me please help",
+        "cluster_id": 57,
+        "canonical_question": "how can i meditate on whether or not shes right for me please help",
+        "total_occurrences": 4,
+        "years_active": 2.5,
+        "unique_subreddits": 3,
+        "avg_score": 1.0,
+        "max_score": 2,
+        "frequency": 1.609,
+        "persistence": 0.502,
+        "cross_subreddit_spread": 0.3,
+        "answer_quality_gap": 0.998,
+        "question_demand_score": 0.804,
+        "subreddits": [
+          "Meditation",
+          "awakened",
+          "spirituality"
+        ],
+        "title_examples": [
+          "how can i meditate on whether or not shes right for me please help",
+          "what do i do about a friend who always thinks hes right",
+          "what do i do about a friend who always thinks shes right",
+          "could i be the guy who thinks hes an orange forever"
+        ]
+      },
+      {
+        "topic": "how to become immortal",
+        "cluster_id": 62,
+        "canonical_question": "how to become immortal",
+        "total_occurrences": 4,
+        "years_active": 2.3,
+        "unique_subreddits": 3,
+        "avg_score": 2.0,
+        "max_score": 5,
+        "frequency": 1.609,
+        "persistence": 0.46,
+        "cross_subreddit_spread": 0.3,
+        "answer_quality_gap": 0.995,
+        "question_demand_score": 0.79,
+        "subreddits": [
+          "hinduism",
+          "occult",
+          "spirituality"
+        ],
+        "title_examples": [
+          "how to become immortal",
+          "how to become an immortal",
+          "what body becomes immortal when we say chiranjivi",
+          "what would you do if you were immortal"
+        ]
+      },
+      {
+        "topic": "can someone please tell me how synchronicities work with the archetypes and the ",
+        "cluster_id": 75,
+        "canonical_question": "can someone please tell me how synchronicities work with the archetypes and the collective uncurious with astrology",
+        "total_occurrences": 6,
+        "years_active": 1.1,
+        "unique_subreddits": 2,
+        "avg_score": 5.2,
+        "max_score": 16,
+        "frequency": 1.946,
+        "persistence": 0.225,
+        "cross_subreddit_spread": 0.2,
+        "answer_quality_gap": 0.984,
+        "question_demand_score": 0.79,
+        "subreddits": [
+          "awakened",
+          "occult"
+        ],
+        "title_examples": [
+          "are the archetypes of collective unconscious in our nature or in our nurture",
+          "how is the collective unconscious linked to mythology",
+          "are the archetypes what connect the collective unconscious and mythology together",
+          "can someone please tell me how synchronicities work with the archetypes and the collective uncurious with astrology",
+          "can someone please tell me how synchronicities work with the archetypes and the collective uncurious with astrology"
+        ]
+      },
+      {
+        "topic": "proof that the holy bible is the truth and we are living in the last days years ",
+        "cluster_id": 76,
+        "canonical_question": "proof that the holy bible is the truth and we are living in the last days years of bible prophecy do you know where you are going when you die watch this documentary to get caught up on what is really going on",
+        "total_occurrences": 6,
+        "years_active": 0.0,
+        "unique_subreddits": 4,
+        "avg_score": 0.3,
+        "max_score": 1,
+        "frequency": 1.946,
+        "persistence": 0.007,
+        "cross_subreddit_spread": 0.4,
+        "answer_quality_gap": 0.999,
+        "question_demand_score": 0.784,
+        "subreddits": [
+          "Meditation",
+          "hinduism",
+          "occult",
+          "spirituality"
+        ],
+        "title_examples": [
+          "proof that the holy bible is the truth and we are living in the last days years of bible prophecy do you know where you are going when you die watch this documentary to get caught up on what is really going on",
+          "proof that the holy bible is the truth and we are living in the last days years of bible prophecy do you know where you are going when you die watch this documentary to get caught up on what is really going on",
+          "proof that the holy bible is the truth and we are living in the last days years of bible prophecy do you know where you are going when you die watch this documentary to get caught up on what is really going on",
+          "proof that the holy bible is the truth and we are living in the last days years of bible prophecy do you know where you are going when you die watch this documentary to get caught up on what is really going on",
+          "proof that the holy bible is the truth and we are living in the last days years of bible prophecy do you know where you are going when you die watch this documentary to get caught up on what is really going on"
+        ]
+      },
+      {
+        "topic": "does population growth invalidate reincarnation",
+        "cluster_id": 85,
+        "canonical_question": "does population growth invalidate reincarnation",
+        "total_occurrences": 3,
+        "years_active": 3.3,
+        "unique_subreddits": 3,
+        "avg_score": 5.0,
+        "max_score": 10,
+        "frequency": 1.386,
+        "persistence": 0.658,
+        "cross_subreddit_spread": 0.3,
+        "answer_quality_gap": 0.99,
+        "question_demand_score": 0.781,
+        "subreddits": [
+          "awakened",
+          "hinduism",
+          "occult"
+        ],
+        "title_examples": [
+          "does population growth invalidate reincarnation",
+          "what percentage of the population is enlightened",
+          "occult census what is our population size"
+        ]
+      },
+      {
+        "topic": "what is will and how do you get it and how do you know how much will you have no",
+        "cluster_id": 32,
+        "canonical_question": "what is will and how do you get it and how do you know how much will you have noob",
+        "total_occurrences": 3,
+        "years_active": 3.7,
+        "unique_subreddits": 2,
+        "avg_score": 6.3,
+        "max_score": 15,
+        "frequency": 1.386,
+        "persistence": 0.734,
+        "cross_subreddit_spread": 0.2,
+        "answer_quality_gap": 0.985,
+        "question_demand_score": 0.774,
+        "subreddits": [
+          "occult",
+          "spirituality"
+        ],
+        "title_examples": [
+          "what is will and how do you get it and how do you know how much will you have noob",
+          "what spiritually noob people should know before they proceed",
+          "noob here im intrested how do i start"
+        ]
+      },
+      {
+        "topic": "do you see repetitive numbers on when you look at the time",
+        "cluster_id": 100,
+        "canonical_question": "do you see repetitive numbers on when you look at the time",
+        "total_occurrences": 3,
+        "years_active": 3.6,
+        "unique_subreddits": 2,
+        "avg_score": 5.3,
+        "max_score": 13,
+        "frequency": 1.386,
+        "persistence": 0.72,
+        "cross_subreddit_spread": 0.2,
+        "answer_quality_gap": 0.987,
+        "question_demand_score": 0.769,
+        "subreddits": [
+          "Meditation",
+          "spirituality"
+        ],
+        "title_examples": [
+          "do you see repetitive numbers on when you look at the time",
+          "how to meditate while working a repetitive job for 8 hours long",
+          "what to do with repetitive freetime"
+        ]
+      },
+      {
+        "topic": "why i think time is an illusion xpost from  rpsychonaut",
+        "cluster_id": 7,
+        "canonical_question": "why i think time is an illusion xpost from  rpsychonaut",
+        "total_occurrences": 3,
+        "years_active": 2.9,
+        "unique_subreddits": 3,
+        "avg_score": 7.3,
+        "max_score": 19,
+        "frequency": 1.386,
+        "persistence": 0.575,
+        "cross_subreddit_spread": 0.3,
+        "answer_quality_gap": 0.981,
+        "question_demand_score": 0.754,
+        "subreddits": [
+          "Meditation",
+          "awakened",
+          "occult"
+        ],
+        "title_examples": [
+          "why i think time is an illusion xpost from  rpsychonaut",
+          "the buddhists seem to be right why is that xpost from rpsychonaut",
+          "is verbal communication an egoic concept xpost to rpsychonaut"
+        ]
+      },
+      {
+        "topic": "is it wrong to view meditation as an exercise an brain as the muscle",
+        "cluster_id": 35,
+        "canonical_question": "is it wrong to view meditation as an exercise an brain as the muscle",
+        "total_occurrences": 3,
+        "years_active": 3.7,
+        "unique_subreddits": 1,
+        "avg_score": 63.0,
+        "max_score": 185,
+        "frequency": 1.386,
+        "persistence": 0.739,
+        "cross_subreddit_spread": 0.1,
+        "answer_quality_gap": 0.815,
+        "question_demand_score": 0.742,
+        "subreddits": [
+          "Meditation"
+        ],
+        "title_examples": [
+          "is it wrong to view meditation as an exercise an brain as the muscle",
+          "is it wrong to view meditation as exercise and the brain as the target",
+          "do you consider meditation as an exercise for your brain or as giving it a rest"
+        ]
+      },
+      {
+        "topic": "how is lovecraftian occultism generally viewed",
+        "cluster_id": 55,
+        "canonical_question": "how is lovecraftian occultism generally viewed",
+        "total_occurrences": 3,
+        "years_active": 3.2,
+        "unique_subreddits": 2,
+        "avg_score": 5.0,
+        "max_score": 14,
+        "frequency": 1.386,
+        "persistence": 0.631,
+        "cross_subreddit_spread": 0.2,
+        "answer_quality_gap": 0.986,
+        "question_demand_score": 0.739,
+        "subreddits": [
+          "Meditation",
+          "occult"
+        ],
+        "title_examples": [
+          "how is lovecraftian occultism generally viewed",
+          "what do you generally think about",
+          "are people with autism generally more sensitive to or curious about occultism"
+        ]
+      },
+      {
+        "topic": "who is the gold figurine",
+        "cluster_id": 67,
+        "canonical_question": "who is the gold figurine",
+        "total_occurrences": 4,
+        "years_active": 1.9,
+        "unique_subreddits": 2,
+        "avg_score": 4.2,
+        "max_score": 15,
+        "frequency": 1.609,
+        "persistence": 0.385,
+        "cross_subreddit_spread": 0.2,
+        "answer_quality_gap": 0.985,
+        "question_demand_score": 0.732,
+        "subreddits": [
+          "hinduism",
+          "occult"
+        ],
+        "title_examples": [
+          "who is the gold figurine",
+          "can anyone identify the markings on this mysterious gold ring i have",
+          "what is achilless gold",
+          "how to deal with relationshipspure gold advice  sadhguru"
+        ]
+      },
+      {
+        "topic": "how do i stop having imaginary arguments in my head",
+        "cluster_id": 39,
+        "canonical_question": "how do i stop having imaginary arguments in my head",
+        "total_occurrences": 3,
+        "years_active": 3.4,
+        "unique_subreddits": 1,
+        "avg_score": 76.7,
+        "max_score": 194,
+        "frequency": 1.386,
+        "persistence": 0.676,
+        "cross_subreddit_spread": 0.1,
+        "answer_quality_gap": 0.806,
+        "question_demand_score": 0.721,
+        "subreddits": [
+          "Meditation"
+        ],
+        "title_examples": [
+          "how do i stop having imaginary arguments in my head",
+          "how do i stop having imaginary arguments with my ex gf ",
+          "how do i think about people during meditation whiteout falling into my old habit of having imaginary arguments"
+        ]
+      },
+      {
+        "topic": "what you should aim for",
+        "cluster_id": 54,
+        "canonical_question": "what you should aim for",
+        "total_occurrences": 3,
+        "years_active": 3.3,
+        "unique_subreddits": 1,
+        "avg_score": 494.0,
+        "max_score": 1470,
+        "frequency": 1.386,
+        "persistence": 0.661,
+        "cross_subreddit_spread": 0.1,
+        "answer_quality_gap": 0.0,
+        "question_demand_score": 0.716,
+        "subreddits": [
+          "Meditation"
+        ],
+        "title_examples": [
+          "what you should aim for",
+          "what is the main aim of mediation",
+          "should i aim for minimal distractions while meditating"
+        ]
+      },
+      {
+        "topic": "are indians proud of hinduism should they be what are your thoughts",
+        "cluster_id": 18,
+        "canonical_question": "are indians proud of hinduism should they be what are your thoughts",
+        "total_occurrences": 3,
+        "years_active": 3.2,
+        "unique_subreddits": 1,
+        "avg_score": 9.0,
+        "max_score": 11,
+        "frequency": 1.386,
+        "persistence": 0.646,
+        "cross_subreddit_spread": 0.1,
+        "answer_quality_gap": 0.989,
+        "question_demand_score": 0.711,
+        "subreddits": [
+          "hinduism"
+        ],
+        "title_examples": [
+          "are indians proud of hinduism should they be what are your thoughts",
+          "are malaysian indians being treated as secondclass citizens",
+          "from macaulay to frawley from doniger to elst why do many indians need white saviours"
+        ]
+      },
+      {
+        "topic": "how to bring your mind body and spirit into balance using ancient solfeggio freq",
+        "cluster_id": 25,
+        "canonical_question": "how to bring your mind body and spirit into balance using ancient solfeggio frequencies",
+        "total_occurrences": 4,
+        "years_active": 1.1,
+        "unique_subreddits": 3,
+        "avg_score": 1.2,
+        "max_score": 2,
+        "frequency": 1.609,
+        "persistence": 0.214,
+        "cross_subreddit_spread": 0.3,
+        "answer_quality_gap": 0.998,
+        "question_demand_score": 0.708,
+        "subreddits": [
+          "Meditation",
+          "awakened",
+          "spirituality"
+        ],
+        "title_examples": [
+          "how to bring your mind body and spirit into balance using ancient solfeggio frequencies",
+          "how to bring your mind body and spirit into balance and harmony using the power of mindfulness",
+          "how the mind body and spirit combine to create you",
+          "how to heal your mind body and spirit using light and sound"
+        ]
+      },
+      {
+        "topic": "what would life be like if the way becomes clear",
+        "cluster_id": 61,
+        "canonical_question": "what would life be like if the way becomes clear",
+        "total_occurrences": 3,
+        "years_active": 2.6,
+        "unique_subreddits": 2,
+        "avg_score": 3.3,
+        "max_score": 5,
+        "frequency": 1.386,
+        "persistence": 0.514,
+        "cross_subreddit_spread": 0.2,
+        "answer_quality_gap": 0.995,
+        "question_demand_score": 0.7,
+        "subreddits": [
+          "awakened",
+          "spirituality"
+        ],
+        "title_examples": [
+          "what would life be like if the way becomes clear",
+          "would you say life is more like a movie or a video game",
+          "do you guys treat your life like a game"
+        ]
+      },
+      {
+        "topic": "can anyone explain why there is a star of david on this jain temple bell",
+        "cluster_id": 2,
+        "canonical_question": "can anyone explain why there is a star of david on this jain temple bell",
+        "total_occurrences": 3,
+        "years_active": 2.0,
+        "unique_subreddits": 2,
+        "avg_score": 2.3,
+        "max_score": 7,
+        "frequency": 1.386,
+        "persistence": 0.409,
+        "cross_subreddit_spread": 0.2,
+        "answer_quality_gap": 0.993,
+        "question_demand_score": 0.665,
+        "subreddits": [
+          "hinduism",
+          "occult"
+        ],
+        "title_examples": [
+          "can anyone explain why there is a star of david on this jain temple bell",
+          "is there a correspondence between the swastika and the star of david this link shows an interesting pattern underlying a rectangular swastika and a line shaped star of david",
+          "what is your take on this symbol skull inside the star of david"
+        ]
+      },
+      {
+        "topic": "how i made 12 000 in 20 days without spending a dime3iexx5z4z",
+        "cluster_id": 59,
+        "canonical_question": "how i made 12 000 in 20 days without spending a dime3iexx5z4z",
+        "total_occurrences": 5,
+        "years_active": 0.0,
+        "unique_subreddits": 2,
+        "avg_score": 0.4,
+        "max_score": 1,
+        "frequency": 1.792,
+        "persistence": 0.0,
+        "cross_subreddit_spread": 0.2,
+        "answer_quality_gap": 0.999,
+        "question_demand_score": 0.664,
+        "subreddits": [
+          "hinduism",
+          "occult"
+        ],
+        "title_examples": [
+          "how i made 12 000 in 20 days without spending a dime3iexx5z4z",
+          "how i made 13 000 in 24 days without spending a dime 5ebdt24mm",
+          "how i made 12 365 in 26 days without spending a dime 9jawc7dt4",
+          "how i made 12365 in 26 days without spending a dime cs9d2gsa7",
+          "how i made 12 365 in 26 days without spending a dime re3xl9g"
+        ]
+      },
+      {
+        "topic": "how to incorporate hindu traditions in a wedding",
+        "cluster_id": 71,
+        "canonical_question": "how to incorporate hindu traditions in a wedding",
+        "total_occurrences": 3,
+        "years_active": 2.5,
+        "unique_subreddits": 1,
+        "avg_score": 4.0,
+        "max_score": 6,
+        "frequency": 1.386,
+        "persistence": 0.491,
+        "cross_subreddit_spread": 0.1,
+        "answer_quality_gap": 0.994,
+        "question_demand_score": 0.659,
+        "subreddits": [
+          "hinduism"
+        ],
+        "title_examples": [
+          "how to incorporate hindu traditions in a wedding",
+          "what happens after an hindu wedding",
+          "can someone walk me through a proper hindu wedding"
+        ]
+      },
+      {
+        "topic": " what is luciferian doctrine",
+        "cluster_id": 46,
+        "canonical_question": " what is luciferian doctrine",
+        "total_occurrences": 3,
+        "years_active": 2.1,
+        "unique_subreddits": 1,
+        "avg_score": 11.3,
+        "max_score": 25,
+        "frequency": 1.386,
+        "persistence": 0.422,
+        "cross_subreddit_spread": 0.1,
+        "answer_quality_gap": 0.975,
+        "question_demand_score": 0.636,
+        "subreddits": [
+          "occult"
+        ],
+        "title_examples": [
+          " what is luciferian doctrine",
+          "is anyone familiar with fords begining luciferian magick some confusion here",
+          "would you consider or work with the islamic shaytan iblis as a luciferian archetype"
+        ]
+      },
+      {
+        "topic": "what kind of egoism should one have it should be such that people accept it to k",
+        "cluster_id": 72,
+        "canonical_question": "what kind of egoism should one have it should be such that people accept it to know more on science behind ego visit here at ",
+        "total_occurrences": 4,
+        "years_active": 1.0,
+        "unique_subreddits": 1,
+        "avg_score": 1.2,
+        "max_score": 2,
+        "frequency": 1.609,
+        "persistence": 0.195,
+        "cross_subreddit_spread": 0.1,
+        "answer_quality_gap": 0.998,
+        "question_demand_score": 0.635,
+        "subreddits": [
+          "spirituality"
+        ],
+        "title_examples": [
+          "what kind of egoism should one have it should be such that people accept it to know more on science behind ego visit here at ",
+          "what is the nature of egoism it spends away everything in its power to know the science behind egoism ",
+          "do you know the real science behind the ego nature of egoism is not moha illusory attachment mohas nature is egoism moha is the origin of egoism read here more about ego amp its effects ",
+          "do you know that to give advice that is not requested god calls egoism read more on egoism amp god "
+        ]
+      },
+      {
+        "topic": "are online puja and yagya effective",
+        "cluster_id": 19,
+        "canonical_question": "are online puja and yagya effective",
+        "total_occurrences": 5,
+        "years_active": 0.0,
+        "unique_subreddits": 1,
+        "avg_score": 1.0,
+        "max_score": 1,
+        "frequency": 1.792,
+        "persistence": 0.01,
+        "cross_subreddit_spread": 0.1,
+        "answer_quality_gap": 0.999,
+        "question_demand_score": 0.634,
+        "subreddits": [
+          "spirituality"
+        ],
+        "title_examples": [
+          "are online puja and yagya effective",
+          "are online puja and yagya effective",
+          "are online puja and yagya effective",
+          "are online puja and yagya effective",
+          "are online puja and yagya effective"
+        ]
+      },
+      {
+        "topic": "how to find pitra dosha in horoscope its remedies     ",
+        "cluster_id": 31,
+        "canonical_question": "how to find pitra dosha in horoscope its remedies     ",
+        "total_occurrences": 4,
+        "years_active": 0.3,
+        "unique_subreddits": 2,
+        "avg_score": 1.0,
+        "max_score": 1,
+        "frequency": 1.609,
+        "persistence": 0.064,
+        "cross_subreddit_spread": 0.2,
+        "answer_quality_gap": 0.999,
+        "question_demand_score": 0.624,
+        "subreddits": [
+          "hinduism",
+          "spirituality"
+        ],
+        "title_examples": [
+          "how to find pitra dosha in horoscope its remedies     ",
+          "how to find pitra dosha in horoscope its remedies     ",
+          "how to find pitra dosha in horoscope its remedies     ",
+          "how to find pitra dosha in horoscope its remedies     "
+        ]
+      },
+      {
+        "topic": "why do the candles have to be a certain color for different rituals",
+        "cluster_id": 68,
+        "canonical_question": "why do the candles have to be a certain color for different rituals",
+        "total_occurrences": 3,
+        "years_active": 1.7,
+        "unique_subreddits": 1,
+        "avg_score": 3.3,
+        "max_score": 8,
+        "frequency": 1.386,
+        "persistence": 0.346,
+        "cross_subreddit_spread": 0.1,
+        "answer_quality_gap": 0.992,
+        "question_demand_score": 0.611,
+        "subreddits": [
+          "occult"
+        ],
+        "title_examples": [
+          "why do the candles have to be a certain color for different rituals",
+          "what color candles are used for venus",
+          "what kind of candles do you prefer for rituals"
+        ]
+      },
+      {
+        "topic": "hindus of reddit what is the most miraculous or supernatural thing that you have",
+        "cluster_id": 65,
+        "canonical_question": "hindus of reddit what is the most miraculous or supernatural thing that you have experienced",
+        "total_occurrences": 4,
+        "years_active": 0.0,
+        "unique_subreddits": 2,
+        "avg_score": 4.2,
+        "max_score": 7,
+        "frequency": 1.609,
+        "persistence": 0.002,
+        "cross_subreddit_spread": 0.2,
+        "answer_quality_gap": 0.993,
+        "question_demand_score": 0.604,
+        "subreddits": [
+          "hinduism",
+          "occult"
+        ],
+        "title_examples": [
+          "hindus of reddit what is the most miraculous or supernatural thing that you have experienced",
+          "occultists of reddit what is the most miraculous or supernatural thing that you have experienced",
+          "occultists of reddit what is the most miraculous or supernatural thing that you have experienced",
+          "hindus of reddit what is the most miraculous or supernatural thing that you have experienced"
+        ]
+      },
+      {
+        "topic": "how steve jobs trained his own brain",
+        "cluster_id": 47,
+        "canonical_question": "how steve jobs trained his own brain",
+        "total_occurrences": 3,
+        "years_active": 1.6,
+        "unique_subreddits": 1,
+        "avg_score": 2.7,
+        "max_score": 7,
+        "frequency": 1.386,
+        "persistence": 0.312,
+        "cross_subreddit_spread": 0.1,
+        "answer_quality_gap": 0.993,
+        "question_demand_score": 0.6,
+        "subreddits": [
+          "Meditation"
+        ],
+        "title_examples": [
+          "how steve jobs trained his brain with meditation",
+          "how steve jobs trained his own brain",
+          "how steve jobs trained his own brain"
+        ]
+      },
+      {
+        "topic": "should mantras be in the present tense of a desire",
+        "cluster_id": 86,
+        "canonical_question": "should mantras be in the present tense of a desire",
+        "total_occurrences": 3,
+        "years_active": 0.9,
+        "unique_subreddits": 2,
+        "avg_score": 3.3,
+        "max_score": 6,
+        "frequency": 1.386,
+        "persistence": 0.175,
+        "cross_subreddit_spread": 0.2,
+        "answer_quality_gap": 0.994,
+        "question_demand_score": 0.587,
+        "subreddits": [
+          "Meditation",
+          "occult"
+        ],
+        "title_examples": [
+          "should mantras be in the present tense of a desire",
+          "should i write sigils in present tense or future tense",
+          "do you relax your body as much as you can or keep it a little tense"
+        ]
+      },
+      {
+        "topic": "i wrote an ebook on how to meditate to live fully in the present and connect to ",
+        "cluster_id": 43,
+        "canonical_question": "i wrote an ebook on how to meditate to live fully in the present and connect to the universal life force of love",
+        "total_occurrences": 3,
+        "years_active": 0.3,
+        "unique_subreddits": 3,
+        "avg_score": 0.7,
+        "max_score": 2,
+        "frequency": 1.386,
+        "persistence": 0.064,
+        "cross_subreddit_spread": 0.3,
+        "answer_quality_gap": 0.998,
+        "question_demand_score": 0.584,
+        "subreddits": [
+          "awakened",
+          "nonduality",
+          "spirituality"
+        ],
+        "title_examples": [
+          "i wrote an ebook on how to meditate to live fully in the present and connect to the universal life force of love",
+          "hey guys i wrote an ebook on how to learn how to meditate to live fully in the present and connect to the universal life force of love",
+          "introducing the meditating cat  an ebook i wrote learn how to meditate to live fully in the present and connect to the universal life force of love"
+        ]
+      },
+      {
+        "topic": "are we awakening as a planet here in 2016",
+        "cluster_id": 66,
+        "canonical_question": "are we awakening as a planet here in 2016",
+        "total_occurrences": 3,
+        "years_active": 0.7,
+        "unique_subreddits": 2,
+        "avg_score": 15.7,
+        "max_score": 32,
+        "frequency": 1.386,
+        "persistence": 0.141,
+        "cross_subreddit_spread": 0.2,
+        "answer_quality_gap": 0.968,
+        "question_demand_score": 0.576,
+        "subreddits": [
+          "occult",
+          "spirituality"
+        ],
+        "title_examples": [
+          "are we awakening as a planet here in 2016",
+          "2016 why is this year so fucked up",
+          "what was the best thing that happened to you in 2016"
+        ]
+      },
+      {
+        "topic": "how does one classify their soul age if they feel they fit aspects of both young",
+        "cluster_id": 95,
+        "canonical_question": "how does one classify their soul age if they feel they fit aspects of both younger and older soul age classification aspects",
+        "total_occurrences": 4,
+        "years_active": 0.0,
+        "unique_subreddits": 1,
+        "avg_score": 1.0,
+        "max_score": 1,
+        "frequency": 1.609,
+        "persistence": 0.0,
+        "cross_subreddit_spread": 0.1,
+        "answer_quality_gap": 0.999,
+        "question_demand_score": 0.57,
+        "subreddits": [
+          "spirituality"
+        ],
+        "title_examples": [
+          "how do you categorize your soul age if you feel like you fit aspects of both older and younger soul ages",
+          "how does one classify their soul age if they feel they fit aspects of both younger and older soul age aspects",
+          "how does one classify their soul age if they feel they fit aspects of both younger and older soul age classification aspects",
+          "how does one classify their soul age if they feel they fit aspects of both younger and older soul age classification aspects"
+        ]
+      },
+      {
+        "topic": "how to use your potential consciousness to get to the ultimate nature  sadhguru",
+        "cluster_id": 83,
+        "canonical_question": "how to use your potential consciousness to get to the ultimate nature  sadhguru",
+        "total_occurrences": 3,
+        "years_active": 0.0,
+        "unique_subreddits": 3,
+        "avg_score": 0.7,
+        "max_score": 1,
+        "frequency": 1.386,
+        "persistence": 0.0,
+        "cross_subreddit_spread": 0.3,
+        "answer_quality_gap": 0.999,
+        "question_demand_score": 0.562,
+        "subreddits": [
+          "awakened",
+          "hinduism",
+          "spirituality"
+        ],
+        "title_examples": [
+          "how to use your potential consciousness to get to the ultimate nature  sadhguru",
+          "how to use your potential consciousness to get to the ultimate nature  sadhguru",
+          "how to use your potential consciousness to get to the ultimate nature  sadhguru"
+        ]
+      },
+      {
+        "topic": "do this everyday to have control over your life energies",
+        "cluster_id": 92,
+        "canonical_question": "do this everyday to have control over your life energies",
+        "total_occurrences": 3,
+        "years_active": 0.0,
+        "unique_subreddits": 3,
+        "avg_score": 0.3,
+        "max_score": 1,
+        "frequency": 1.386,
+        "persistence": 0.001,
+        "cross_subreddit_spread": 0.3,
+        "answer_quality_gap": 0.999,
+        "question_demand_score": 0.562,
+        "subreddits": [
+          "awakened",
+          "hinduism",
+          "occult"
+        ],
+        "title_examples": [
+          "do this everyday to have control over your life energies",
+          "do this everyday to have control over your life energies",
+          "do this everyday to have control over your life energies"
+        ]
+      },
+      {
+        "topic": "why spiritual teachings wont work for you the dark side of spirituality",
+        "cluster_id": 96,
+        "canonical_question": "why spiritual teachings wont work for you the dark side of spirituality",
+        "total_occurrences": 3,
+        "years_active": 0.0,
+        "unique_subreddits": 3,
+        "avg_score": 0.3,
+        "max_score": 1,
+        "frequency": 1.386,
+        "persistence": 0.0,
+        "cross_subreddit_spread": 0.3,
+        "answer_quality_gap": 0.999,
+        "question_demand_score": 0.562,
+        "subreddits": [
+          "Meditation",
+          "awakened",
+          "occult"
+        ],
+        "title_examples": [
+          "why spiritual teachings wont work for you  the dark side of spirituality",
+          "why spiritual teachings wont work for you the dark side of spirituality",
+          "why spiritual teachings wont work for you the dark side of spirituality"
+        ]
+      },
+      {
+        "topic": "how negative thinking accelerates aging and how meditation can be used to revers",
+        "cluster_id": 97,
+        "canonical_question": "how negative thinking accelerates aging and how meditation can be used to reverse its effects based on elizabeth blackburns 2009 nobel winner work on telomeres protectivecaps on our chromosomes and its unnecessary degradation due to mental stress",
+        "total_occurrences": 3,
+        "years_active": 0.0,
+        "unique_subreddits": 2,
+        "avg_score": 227.3,
+        "max_score": 573,
+        "frequency": 1.386,
+        "persistence": 0.005,
+        "cross_subreddit_spread": 0.2,
+        "answer_quality_gap": 0.427,
+        "question_demand_score": 0.531,
+        "subreddits": [
+          "Meditation",
+          "awakened"
+        ],
+        "title_examples": [
+          "how negative thinking accelerates aging and how meditation can be used to reverse its effects based on elizabeth blackburns 2009 nobel winner work on telomeres protectivecaps on our chromosomes and its unnecessary degradation due to mental stress",
+          "how meditation can be used to reverse the effects of aging based on elizabeth blackburns 2009 nobel winner work on telomeres protectivecaps on our chromosomes and its unnecessary degradation due to mental stress",
+          "how negative thinking causes aging and how meditation can be used to reverse its effects based on elizabeth blackburns 2009 nobel winner work on telomeres protectivecaps on our chromosomes and its unnecessary degradation due to mental stress"
+        ]
+      },
+      {
+        "topic": "do you think everyones lives are  pre destined or meant to be even with horrific",
+        "cluster_id": 79,
+        "canonical_question": "do you think everyones lives are  pre destined or meant to be even with horrific tragedies",
+        "total_occurrences": 3,
+        "years_active": 0.0,
+        "unique_subreddits": 2,
+        "avg_score": 4.3,
+        "max_score": 7,
+        "frequency": 1.386,
+        "persistence": 0.0,
+        "cross_subreddit_spread": 0.2,
+        "answer_quality_gap": 0.993,
+        "question_demand_score": 0.529,
+        "subreddits": [
+          "awakened",
+          "spirituality"
+        ],
+        "title_examples": [
+          "do you think everyones lives are  pre destined or meant to be even with horrific tragedies",
+          "do you think everyones lives are  pre destined or meant to be even with horrific tragedies",
+          "do you think everyones lives are  pre destined or meant to be even with horrific tragedies"
+        ]
+      },
+      {
+        "topic": "how can we live in the now in modern society for a less stressful life im worrie",
+        "cluster_id": 81,
+        "canonical_question": "how can we live in the now in modern society for a less stressful life im worried about a career choice what type of job to get what i want for my future how can i make this less stressful",
+        "total_occurrences": 3,
+        "years_active": 0.0,
+        "unique_subreddits": 2,
+        "avg_score": 2.0,
+        "max_score": 3,
+        "frequency": 1.386,
+        "persistence": 0.0,
+        "cross_subreddit_spread": 0.2,
+        "answer_quality_gap": 0.997,
+        "question_demand_score": 0.529,
+        "subreddits": [
+          "awakened",
+          "hinduism"
+        ],
+        "title_examples": [
+          "how can we live in the now in modern society for a less stressful life im worried about a career choice what type of job to get what i want for my future how can i make this less stressful",
+          "how can we live in the now in modern society for a less stressful life im worried about a career choice what type of job to get what i want for my future how can i make this less stressful",
+          "how can we live in the now in modern society for a less stressful life im worried about a career choice what type of job to get what i want for my future how can i make this less stressful"
+        ]
+      },
+      {
+        "topic": "how to stop being conscious how to turn off this awareness how to go to nothingn",
+        "cluster_id": 98,
+        "canonical_question": "how to stop being conscious how to turn off this awareness how to go to nothingness",
+        "total_occurrences": 3,
+        "years_active": 0.0,
+        "unique_subreddits": 2,
+        "avg_score": 4.0,
+        "max_score": 9,
+        "frequency": 1.386,
+        "persistence": 0.0,
+        "cross_subreddit_spread": 0.2,
+        "answer_quality_gap": 0.991,
+        "question_demand_score": 0.529,
+        "subreddits": [
+          "awakened",
+          "spirituality"
+        ],
+        "title_examples": [
+          "how to stop being conscious how to turn off this awareness how to go to nothingness",
+          "how to stop being conscious how to turn off this awareness how to go to nothingness",
+          "how to stop being conscious how to turn off this awareness how to go to nothingness"
+        ]
+      },
+      {
+        "topic": "is awareness the philosophers stone",
+        "cluster_id": 80,
+        "canonical_question": "is awareness the philosophers stone",
+        "total_occurrences": 3,
+        "years_active": 0.3,
+        "unique_subreddits": 1,
+        "avg_score": 5.7,
+        "max_score": 12,
+        "frequency": 1.386,
+        "persistence": 0.065,
+        "cross_subreddit_spread": 0.1,
+        "answer_quality_gap": 0.988,
+        "question_demand_score": 0.517,
+        "subreddits": [
+          "occult"
+        ],
+        "title_examples": [
+          "is awareness the philosophers stone",
+          "who has felt a philosophers stone",
+          "is there an actual physical philosophers stone"
+        ]
+      },
+      {
+        "topic": "when you find yourself stressed ask yourself one question will this matter in 5 ",
+        "cluster_id": 69,
+        "canonical_question": "when you find yourself stressed ask yourself one question will this matter in 5 years from now if yes then do something about the situation if no then let it go",
+        "total_occurrences": 3,
+        "years_active": 0.3,
+        "unique_subreddits": 1,
+        "avg_score": 0.7,
+        "max_score": 1,
+        "frequency": 1.386,
+        "persistence": 0.051,
+        "cross_subreddit_spread": 0.1,
+        "answer_quality_gap": 0.999,
+        "question_demand_score": 0.512,
+        "subreddits": [
+          "Meditation"
+        ],
+        "title_examples": [
+          "when you find yourself stressed ask yourself one question will this matter in 5 years from now if yes then do something about the situation if no then let it go",
+          "when you find yourself stressed ask yourself one question will this matter in 5 years from now if yes then do something about the situation if no then let it go",
+          "when you find yourself stressed ask yourself one question will this matter in 5 years from now if yes then do something about the situation if no then let it go"
+        ]
+      },
+      {
+        "topic": "how to read and understand the hermetic tarot part 1  vayu tiger",
+        "cluster_id": 70,
+        "canonical_question": "how to read and understand the hermetic tarot part 1  vayu tiger",
+        "total_occurrences": 3,
+        "years_active": 0.0,
+        "unique_subreddits": 1,
+        "avg_score": 19.7,
+        "max_score": 53,
+        "frequency": 1.386,
+        "persistence": 0.005,
+        "cross_subreddit_spread": 0.1,
+        "answer_quality_gap": 0.947,
+        "question_demand_score": 0.497,
+        "subreddits": [
+          "occult"
+        ],
+        "title_examples": [
+          "how to read and understand the hermetic tarot part 1  vayu tiger",
+          "how to read and understand the hermetic tarot part 1  vayu tiger",
+          "how to read and understand the hermetic tarot part 2  vayu tiger"
+        ]
+      },
+      {
+        "topic": "can people drain your energy from a distance constantly say if you have a very v",
+        "cluster_id": 74,
+        "canonical_question": "can people drain your energy from a distance constantly say if you have a very very strong bond with someone",
+        "total_occurrences": 3,
+        "years_active": 0.0,
+        "unique_subreddits": 1,
+        "avg_score": 4.3,
+        "max_score": 11,
+        "frequency": 1.386,
+        "persistence": 0.0,
+        "cross_subreddit_spread": 0.1,
+        "answer_quality_gap": 0.989,
+        "question_demand_score": 0.495,
+        "subreddits": [
+          "spirituality"
+        ],
+        "title_examples": [
+          "can people drain your energy from a distance constantly say if you have a very very strong bond with someone",
+          "can people drain your energy from a distance constantly say if you have a very very strong bond with someone",
+          "can people drain your energy from a distance constantly say if you have a very very strong bond with someone"
+        ]
+      },
+      {
+        "topic": "how do i release desire craving and attachment",
+        "cluster_id": 78,
+        "canonical_question": "how do i release desire craving and attachment",
+        "total_occurrences": 3,
+        "years_active": 0.0,
+        "unique_subreddits": 1,
+        "avg_score": 1.3,
+        "max_score": 2,
+        "frequency": 1.386,
+        "persistence": 0.0,
+        "cross_subreddit_spread": 0.1,
+        "answer_quality_gap": 0.998,
+        "question_demand_score": 0.495,
+        "subreddits": [
+          "spirituality"
+        ],
+        "title_examples": [
+          "how do i release desire craving and attachment",
+          "how do i release desire craving and attachment",
+          "how do i release desire craving and attachment"
+        ]
+      },
+      {
+        "topic": "what are you experiences with reiki or energy healing practices can they be inte",
+        "cluster_id": 89,
+        "canonical_question": "what are you experiences with reiki or energy healing practices can they be integrated into everyday life as an individual is attunement necessary",
+        "total_occurrences": 3,
+        "years_active": 0.0,
+        "unique_subreddits": 1,
+        "avg_score": 2.3,
+        "max_score": 3,
+        "frequency": 1.386,
+        "persistence": 0.0,
+        "cross_subreddit_spread": 0.1,
+        "answer_quality_gap": 0.997,
+        "question_demand_score": 0.495,
+        "subreddits": [
+          "occult"
+        ],
+        "title_examples": [
+          "what are you experiences with reiki or energy healing practices can they be integrated into everyday life as an individual is attunement necessary",
+          "what are you experiences with reiki or energy healing practices can they be integrated into everyday life as an individual is attunement necessary",
+          "what are you experiences with reiki or energy healing practices can they be integrated into everyday life as an individual is attunement necessary"
+        ]
+      },
+      {
+        "topic": "a few days ago we witnessed the world hindu congress held in chicago usa why don",
+        "cluster_id": 93,
+        "canonical_question": "a few days ago we witnessed the world hindu congress held in chicago usa why dont we also have a national hindu conference held annually in india",
+        "total_occurrences": 3,
+        "years_active": 0.0,
+        "unique_subreddits": 1,
+        "avg_score": 1.3,
+        "max_score": 2,
+        "frequency": 1.386,
+        "persistence": 0.0,
+        "cross_subreddit_spread": 0.1,
+        "answer_quality_gap": 0.998,
+        "question_demand_score": 0.495,
+        "subreddits": [
+          "hinduism"
+        ],
+        "title_examples": [
+          "a few days ago we witnessed the world hindu congress held in chicago usa why dont we also have a national hindu conference held annually in india",
+          "a few days ago we witnessed the world hindu congress held in chicago usa why dont we also have a national hindu conference held annually in india",
+          "a few days ago we witnessed the world hindu congress held in chicago usa why dont we also have a national hindu conference held annually in india"
+        ]
+      },
+      {
+        "topic": "how catholic repackaging of an advaitic vedantic treatise fable destroyed its pu",
+        "cluster_id": 99,
+        "canonical_question": "how catholic repackaging of an advaitic vedantic treatise fable destroyed its purpose",
+        "total_occurrences": 3,
+        "years_active": 0.0,
+        "unique_subreddits": 1,
+        "avg_score": 6.7,
+        "max_score": 18,
+        "frequency": 1.386,
+        "persistence": 0.0,
+        "cross_subreddit_spread": 0.1,
+        "answer_quality_gap": 0.982,
+        "question_demand_score": 0.495,
+        "subreddits": [
+          "hinduism"
+        ],
+        "title_examples": [
+          "how catholic repackaging of an advaitic vedantic treatise fable destroyed its purpose",
+          "how catholic repackaging of an advaitic vedantic treatise fable destroyed its purpose",
+          "how catholic repackaging of an advaitic vedantic treatise fable destroyed its purpose"
+        ]
+      }
+    ],
+    "noise_submissions": 5368
+  },
+  "gates": {
+    "sufficient_clusters": true
+  },
+  "interpretation": {
+    "what_it_means": "Identified 101 question clusters across 37108 submissions. Top clusters show strong cross-subreddit spread.",
+    "what_it_does_NOT_mean": "Without Google Trends validation, search demand vs Reddit frequency unconfirmed."
+  },
+  "next_step": "Validate top 5 clusters against Google Trends, then schedule as production candidates",
+  "limitations": [
+    "Pushshift data ends 2023",
+    "Pushshift stripped punctuation -- question detection uses regex heuristics",
+    "Comments data not available -- answer_quality_gap estimated from submission scores",
+    "TF-IDF + DBSCAN used instead of embeddings + HDBSCAN for performance"
+  ]
+}

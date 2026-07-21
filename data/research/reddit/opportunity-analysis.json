@@ -1,0 +1,1989 @@
+{
+  "generated": "2026-07-21",
+  "source": "reddit-clusters-v2",
+  "total_questions_analyzed": 22277,
+  "total_clusters_input": 129,
+  "total_clusters_clean": 40,
+  "opportunities": [
+    {
+      "size": 608,
+      "median_score": 3.5,
+      "demand_score": 2128.0,
+      "terms": [
+        "hinduism",
+        "hindu",
+        "does",
+        "know",
+        "im",
+        "like"
+      ],
+      "subreddits": [
+        "AdvaitaVedanta",
+        "Meditation",
+        "Tantra",
+        "awakened",
+        "hinduism",
+        "occult",
+        "spirituality"
+      ],
+      "roles": [
+        "mass",
+        "practitioner",
+        "specialist"
+      ],
+      "has_specialist": true,
+      "has_mass": true,
+      "translation_gap": true,
+      "layer_span": 3,
+      "potential_ros": [
+        "ro:advaita-vedanta",
+        "ro:meditation-practice",
+        "ro:ritual-practice",
+        "ro:tantra-philosophy",
+        "ro:vedas"
+      ]
+    },
+    {
+      "size": 283,
+      "median_score": 3.0,
+      "demand_score": 849.0,
+      "terms": [
+        "meditate",
+        "meditation",
+        "im",
+        "like",
+        "meditating",
+        "know"
+      ],
+      "subreddits": [
+        "AdvaitaVedanta",
+        "Meditation",
+        "awakened",
+        "hinduism",
+        "occult",
+        "spirituality"
+      ],
+      "roles": [
+        "mass",
+        "practitioner",
+        "specialist"
+      ],
+      "has_specialist": true,
+      "has_mass": true,
+      "translation_gap": true,
+      "layer_span": 3,
+      "potential_ros": [
+        "ro:advaita-vedanta",
+        "ro:meditation-practice",
+        "ro:ritual-practice",
+        "ro:vedas"
+      ]
+    },
+    {
+      "size": 144,
+      "median_score": 3.0,
+      "demand_score": 432.0,
+      "terms": [
+        "meditation",
+        "meditating",
+        "like",
+        "eyes",
+        "does",
+        "im"
+      ],
+      "subreddits": [
+        "AdvaitaVedanta",
+        "Meditation",
+        "awakened",
+        "kundalini",
+        "occult",
+        "spirituality"
+      ],
+      "roles": [
+        "mass",
+        "practitioner",
+        "specialist"
+      ],
+      "has_specialist": true,
+      "has_mass": true,
+      "translation_gap": true,
+      "layer_span": 3,
+      "potential_ros": [
+        "ro:advaita-vedanta",
+        "ro:kundalini-awakening",
+        "ro:meditation-practice",
+        "ro:ritual-practice",
+        "ro:vedas"
+      ]
+    },
+    {
+      "size": 133,
+      "median_score": 3.0,
+      "demand_score": 399.0,
+      "terms": [
+        "meditation",
+        "meditate",
+        "day",
+        "time",
+        "minutes",
+        "long"
+      ],
+      "subreddits": [
+        "AdvaitaVedanta",
+        "Meditation",
+        "hinduism",
+        "kundalini",
+        "occult",
+        "spirituality"
+      ],
+      "roles": [
+        "mass",
+        "practitioner",
+        "specialist"
+      ],
+      "has_specialist": true,
+      "has_mass": true,
+      "translation_gap": true,
+      "layer_span": 3,
+      "potential_ros": [
+        "ro:advaita-vedanta",
+        "ro:kundalini-awakening",
+        "ro:meditation-practice",
+        "ro:ritual-practice",
+        "ro:vedas"
+      ]
+    },
+    {
+      "size": 81,
+      "median_score": 3.0,
+      "demand_score": 243.0,
+      "terms": [
+        "kundalini",
+        "does",
+        "awakening",
+        "kundalini awakening",
+        "energy",
+        "im"
+      ],
+      "subreddits": [
+        "Meditation",
+        "Tantra",
+        "hinduism",
+        "kundalini",
+        "occult",
+        "spirituality"
+      ],
+      "roles": [
+        "mass",
+        "practitioner",
+        "specialist"
+      ],
+      "has_specialist": true,
+      "has_mass": true,
+      "translation_gap": true,
+      "layer_span": 3,
+      "potential_ros": [
+        "ro:energy-body",
+        "ro:kundalini-awakening",
+        "ro:meditation-practice",
+        "ro:ritual-practice",
+        "ro:tantra-philosophy"
+      ]
+    },
+    {
+      "size": 60,
+      "median_score": 2.5,
+      "demand_score": 150.0,
+      "terms": [
+        "enlightenment",
+        "enlightened",
+        "does",
+        "buddha",
+        "spiritual",
+        "know"
+      ],
+      "subreddits": [
+        "AdvaitaVedanta",
+        "Meditation",
+        "awakened",
+        "hinduism",
+        "kundalini",
+        "occult",
+        "spirituality"
+      ],
+      "roles": [
+        "mass",
+        "practitioner",
+        "specialist"
+      ],
+      "has_specialist": true,
+      "has_mass": true,
+      "translation_gap": true,
+      "layer_span": 3,
+      "potential_ros": [
+        "ro:advaita-vedanta",
+        "ro:enlightenment-liberation",
+        "ro:kundalini-awakening",
+        "ro:meditation-practice",
+        "ro:ritual-practice",
+        "ro:vedas"
+      ]
+    },
+    {
+      "size": 40,
+      "median_score": 2.0,
+      "demand_score": 80.0,
+      "terms": [
+        "chakras",
+        "chakra",
+        "does",
+        "heart",
+        "heart chakra",
+        "open"
+      ],
+      "subreddits": [
+        "Meditation",
+        "Tantra",
+        "awakened",
+        "hinduism",
+        "kundalini",
+        "occult",
+        "spirituality"
+      ],
+      "roles": [
+        "mass",
+        "practitioner",
+        "specialist"
+      ],
+      "has_specialist": true,
+      "has_mass": true,
+      "translation_gap": true,
+      "layer_span": 3,
+      "potential_ros": [
+        "ro:chakra-system",
+        "ro:kundalini-awakening",
+        "ro:meditation-practice",
+        "ro:ritual-practice",
+        "ro:tantra-philosophy"
+      ]
+    },
+    {
+      "size": 52,
+      "median_score": 1.5,
+      "demand_score": 78.0,
+      "terms": [
+        "want",
+        "know",
+        "start",
+        "did",
+        "rich",
+        "seek"
+      ],
+      "subreddits": [
+        "AdvaitaVedanta",
+        "Meditation",
+        "awakened",
+        "hinduism",
+        "kundalini",
+        "occult",
+        "spirituality"
+      ],
+      "roles": [
+        "mass",
+        "practitioner",
+        "specialist"
+      ],
+      "has_specialist": true,
+      "has_mass": true,
+      "translation_gap": true,
+      "layer_span": 3,
+      "potential_ros": [
+        "ro:advaita-vedanta",
+        "ro:kundalini-awakening",
+        "ro:meditation-practice",
+        "ro:ritual-practice",
+        "ro:vedas"
+      ]
+    },
+    {
+      "size": 35,
+      "median_score": 1.0,
+      "demand_score": 35.0,
+      "terms": [
+        "ego",
+        "does",
+        "self",
+        "possible",
+        "im",
+        "rid"
+      ],
+      "subreddits": [
+        "AdvaitaVedanta",
+        "Meditation",
+        "awakened",
+        "occult",
+        "spirituality"
+      ],
+      "roles": [
+        "mass",
+        "practitioner",
+        "specialist"
+      ],
+      "has_specialist": true,
+      "has_mass": true,
+      "translation_gap": true,
+      "layer_span": 3,
+      "potential_ros": [
+        "ro:advaita-vedanta",
+        "ro:meditation-practice",
+        "ro:ritual-practice",
+        "ro:vedas"
+      ]
+    }
+  ],
+  "translation_gaps": [
+    {
+      "size": 608,
+      "median_score": 3.5,
+      "demand_score": 2128.0,
+      "terms": [
+        "hinduism",
+        "hindu",
+        "does",
+        "know",
+        "im",
+        "like"
+      ],
+      "subreddits": [
+        "AdvaitaVedanta",
+        "Meditation",
+        "Tantra",
+        "awakened",
+        "hinduism",
+        "occult",
+        "spirituality"
+      ],
+      "roles": [
+        "mass",
+        "practitioner",
+        "specialist"
+      ],
+      "has_specialist": true,
+      "has_mass": true,
+      "translation_gap": true,
+      "layer_span": 3,
+      "potential_ros": [
+        "ro:advaita-vedanta",
+        "ro:meditation-practice",
+        "ro:ritual-practice",
+        "ro:tantra-philosophy",
+        "ro:vedas"
+      ]
+    },
+    {
+      "size": 283,
+      "median_score": 3.0,
+      "demand_score": 849.0,
+      "terms": [
+        "meditate",
+        "meditation",
+        "im",
+        "like",
+        "meditating",
+        "know"
+      ],
+      "subreddits": [
+        "AdvaitaVedanta",
+        "Meditation",
+        "awakened",
+        "hinduism",
+        "occult",
+        "spirituality"
+      ],
+      "roles": [
+        "mass",
+        "practitioner",
+        "specialist"
+      ],
+      "has_specialist": true,
+      "has_mass": true,
+      "translation_gap": true,
+      "layer_span": 3,
+      "potential_ros": [
+        "ro:advaita-vedanta",
+        "ro:meditation-practice",
+        "ro:ritual-practice",
+        "ro:vedas"
+      ]
+    },
+    {
+      "size": 144,
+      "median_score": 3.0,
+      "demand_score": 432.0,
+      "terms": [
+        "meditation",
+        "meditating",
+        "like",
+        "eyes",
+        "does",
+        "im"
+      ],
+      "subreddits": [
+        "AdvaitaVedanta",
+        "Meditation",
+        "awakened",
+        "kundalini",
+        "occult",
+        "spirituality"
+      ],
+      "roles": [
+        "mass",
+        "practitioner",
+        "specialist"
+      ],
+      "has_specialist": true,
+      "has_mass": true,
+      "translation_gap": true,
+      "layer_span": 3,
+      "potential_ros": [
+        "ro:advaita-vedanta",
+        "ro:kundalini-awakening",
+        "ro:meditation-practice",
+        "ro:ritual-practice",
+        "ro:vedas"
+      ]
+    },
+    {
+      "size": 133,
+      "median_score": 3.0,
+      "demand_score": 399.0,
+      "terms": [
+        "meditation",
+        "meditate",
+        "day",
+        "time",
+        "minutes",
+        "long"
+      ],
+      "subreddits": [
+        "AdvaitaVedanta",
+        "Meditation",
+        "hinduism",
+        "kundalini",
+        "occult",
+        "spirituality"
+      ],
+      "roles": [
+        "mass",
+        "practitioner",
+        "specialist"
+      ],
+      "has_specialist": true,
+      "has_mass": true,
+      "translation_gap": true,
+      "layer_span": 3,
+      "potential_ros": [
+        "ro:advaita-vedanta",
+        "ro:kundalini-awakening",
+        "ro:meditation-practice",
+        "ro:ritual-practice",
+        "ro:vedas"
+      ]
+    },
+    {
+      "size": 81,
+      "median_score": 3.0,
+      "demand_score": 243.0,
+      "terms": [
+        "kundalini",
+        "does",
+        "awakening",
+        "kundalini awakening",
+        "energy",
+        "im"
+      ],
+      "subreddits": [
+        "Meditation",
+        "Tantra",
+        "hinduism",
+        "kundalini",
+        "occult",
+        "spirituality"
+      ],
+      "roles": [
+        "mass",
+        "practitioner",
+        "specialist"
+      ],
+      "has_specialist": true,
+      "has_mass": true,
+      "translation_gap": true,
+      "layer_span": 3,
+      "potential_ros": [
+        "ro:energy-body",
+        "ro:kundalini-awakening",
+        "ro:meditation-practice",
+        "ro:ritual-practice",
+        "ro:tantra-philosophy"
+      ]
+    },
+    {
+      "size": 60,
+      "median_score": 2.5,
+      "demand_score": 150.0,
+      "terms": [
+        "enlightenment",
+        "enlightened",
+        "does",
+        "buddha",
+        "spiritual",
+        "know"
+      ],
+      "subreddits": [
+        "AdvaitaVedanta",
+        "Meditation",
+        "awakened",
+        "hinduism",
+        "kundalini",
+        "occult",
+        "spirituality"
+      ],
+      "roles": [
+        "mass",
+        "practitioner",
+        "specialist"
+      ],
+      "has_specialist": true,
+      "has_mass": true,
+      "translation_gap": true,
+      "layer_span": 3,
+      "potential_ros": [
+        "ro:advaita-vedanta",
+        "ro:enlightenment-liberation",
+        "ro:kundalini-awakening",
+        "ro:meditation-practice",
+        "ro:ritual-practice",
+        "ro:vedas"
+      ]
+    },
+    {
+      "size": 40,
+      "median_score": 2.0,
+      "demand_score": 80.0,
+      "terms": [
+        "chakras",
+        "chakra",
+        "does",
+        "heart",
+        "heart chakra",
+        "open"
+      ],
+      "subreddits": [
+        "Meditation",
+        "Tantra",
+        "awakened",
+        "hinduism",
+        "kundalini",
+        "occult",
+        "spirituality"
+      ],
+      "roles": [
+        "mass",
+        "practitioner",
+        "specialist"
+      ],
+      "has_specialist": true,
+      "has_mass": true,
+      "translation_gap": true,
+      "layer_span": 3,
+      "potential_ros": [
+        "ro:chakra-system",
+        "ro:kundalini-awakening",
+        "ro:meditation-practice",
+        "ro:ritual-practice",
+        "ro:tantra-philosophy"
+      ]
+    },
+    {
+      "size": 52,
+      "median_score": 1.5,
+      "demand_score": 78.0,
+      "terms": [
+        "want",
+        "know",
+        "start",
+        "did",
+        "rich",
+        "seek"
+      ],
+      "subreddits": [
+        "AdvaitaVedanta",
+        "Meditation",
+        "awakened",
+        "hinduism",
+        "kundalini",
+        "occult",
+        "spirituality"
+      ],
+      "roles": [
+        "mass",
+        "practitioner",
+        "specialist"
+      ],
+      "has_specialist": true,
+      "has_mass": true,
+      "translation_gap": true,
+      "layer_span": 3,
+      "potential_ros": [
+        "ro:advaita-vedanta",
+        "ro:kundalini-awakening",
+        "ro:meditation-practice",
+        "ro:ritual-practice",
+        "ro:vedas"
+      ]
+    },
+    {
+      "size": 35,
+      "median_score": 1.0,
+      "demand_score": 35.0,
+      "terms": [
+        "ego",
+        "does",
+        "self",
+        "possible",
+        "im",
+        "rid"
+      ],
+      "subreddits": [
+        "AdvaitaVedanta",
+        "Meditation",
+        "awakened",
+        "occult",
+        "spirituality"
+      ],
+      "roles": [
+        "mass",
+        "practitioner",
+        "specialist"
+      ],
+      "has_specialist": true,
+      "has_mass": true,
+      "translation_gap": true,
+      "layer_span": 3,
+      "potential_ros": [
+        "ro:advaita-vedanta",
+        "ro:meditation-practice",
+        "ro:ritual-practice",
+        "ro:vedas"
+      ]
+    }
+  ],
+  "all_topics": [
+    {
+      "size": 608,
+      "median_score": 3.5,
+      "demand_score": 2128.0,
+      "terms": [
+        "hinduism",
+        "hindu",
+        "does",
+        "know",
+        "im",
+        "like"
+      ],
+      "subreddits": [
+        "AdvaitaVedanta",
+        "Meditation",
+        "Tantra",
+        "awakened",
+        "hinduism",
+        "occult",
+        "spirituality"
+      ],
+      "roles": [
+        "mass",
+        "practitioner",
+        "specialist"
+      ],
+      "has_specialist": true,
+      "has_mass": true,
+      "translation_gap": true,
+      "layer_span": 3,
+      "potential_ros": [
+        "ro:advaita-vedanta",
+        "ro:meditation-practice",
+        "ro:ritual-practice",
+        "ro:tantra-philosophy",
+        "ro:vedas"
+      ]
+    },
+    {
+      "size": 283,
+      "median_score": 3.0,
+      "demand_score": 849.0,
+      "terms": [
+        "meditate",
+        "meditation",
+        "im",
+        "like",
+        "meditating",
+        "know"
+      ],
+      "subreddits": [
+        "AdvaitaVedanta",
+        "Meditation",
+        "awakened",
+        "hinduism",
+        "occult",
+        "spirituality"
+      ],
+      "roles": [
+        "mass",
+        "practitioner",
+        "specialist"
+      ],
+      "has_specialist": true,
+      "has_mass": true,
+      "translation_gap": true,
+      "layer_span": 3,
+      "potential_ros": [
+        "ro:advaita-vedanta",
+        "ro:meditation-practice",
+        "ro:ritual-practice",
+        "ro:vedas"
+      ]
+    },
+    {
+      "size": 144,
+      "median_score": 3.0,
+      "demand_score": 432.0,
+      "terms": [
+        "meditation",
+        "meditating",
+        "like",
+        "eyes",
+        "does",
+        "im"
+      ],
+      "subreddits": [
+        "AdvaitaVedanta",
+        "Meditation",
+        "awakened",
+        "kundalini",
+        "occult",
+        "spirituality"
+      ],
+      "roles": [
+        "mass",
+        "practitioner",
+        "specialist"
+      ],
+      "has_specialist": true,
+      "has_mass": true,
+      "translation_gap": true,
+      "layer_span": 3,
+      "potential_ros": [
+        "ro:advaita-vedanta",
+        "ro:kundalini-awakening",
+        "ro:meditation-practice",
+        "ro:ritual-practice",
+        "ro:vedas"
+      ]
+    },
+    {
+      "size": 133,
+      "median_score": 3.0,
+      "demand_score": 399.0,
+      "terms": [
+        "meditation",
+        "meditate",
+        "day",
+        "time",
+        "minutes",
+        "long"
+      ],
+      "subreddits": [
+        "AdvaitaVedanta",
+        "Meditation",
+        "hinduism",
+        "kundalini",
+        "occult",
+        "spirituality"
+      ],
+      "roles": [
+        "mass",
+        "practitioner",
+        "specialist"
+      ],
+      "has_specialist": true,
+      "has_mass": true,
+      "translation_gap": true,
+      "layer_span": 3,
+      "potential_ros": [
+        "ro:advaita-vedanta",
+        "ro:kundalini-awakening",
+        "ro:meditation-practice",
+        "ro:ritual-practice",
+        "ro:vedas"
+      ]
+    },
+    {
+      "size": 81,
+      "median_score": 3.0,
+      "demand_score": 243.0,
+      "terms": [
+        "kundalini",
+        "does",
+        "awakening",
+        "kundalini awakening",
+        "energy",
+        "im"
+      ],
+      "subreddits": [
+        "Meditation",
+        "Tantra",
+        "hinduism",
+        "kundalini",
+        "occult",
+        "spirituality"
+      ],
+      "roles": [
+        "mass",
+        "practitioner",
+        "specialist"
+      ],
+      "has_specialist": true,
+      "has_mass": true,
+      "translation_gap": true,
+      "layer_span": 3,
+      "potential_ros": [
+        "ro:energy-body",
+        "ro:kundalini-awakening",
+        "ro:meditation-practice",
+        "ro:ritual-practice",
+        "ro:tantra-philosophy"
+      ]
+    },
+    {
+      "size": 60,
+      "median_score": 2.5,
+      "demand_score": 150.0,
+      "terms": [
+        "enlightenment",
+        "enlightened",
+        "does",
+        "buddha",
+        "spiritual",
+        "know"
+      ],
+      "subreddits": [
+        "AdvaitaVedanta",
+        "Meditation",
+        "awakened",
+        "hinduism",
+        "kundalini",
+        "occult",
+        "spirituality"
+      ],
+      "roles": [
+        "mass",
+        "practitioner",
+        "specialist"
+      ],
+      "has_specialist": true,
+      "has_mass": true,
+      "translation_gap": true,
+      "layer_span": 3,
+      "potential_ros": [
+        "ro:advaita-vedanta",
+        "ro:enlightenment-liberation",
+        "ro:kundalini-awakening",
+        "ro:meditation-practice",
+        "ro:ritual-practice",
+        "ro:vedas"
+      ]
+    },
+    {
+      "size": 40,
+      "median_score": 2.0,
+      "demand_score": 80.0,
+      "terms": [
+        "chakras",
+        "chakra",
+        "does",
+        "heart",
+        "heart chakra",
+        "open"
+      ],
+      "subreddits": [
+        "Meditation",
+        "Tantra",
+        "awakened",
+        "hinduism",
+        "kundalini",
+        "occult",
+        "spirituality"
+      ],
+      "roles": [
+        "mass",
+        "practitioner",
+        "specialist"
+      ],
+      "has_specialist": true,
+      "has_mass": true,
+      "translation_gap": true,
+      "layer_span": 3,
+      "potential_ros": [
+        "ro:chakra-system",
+        "ro:kundalini-awakening",
+        "ro:meditation-practice",
+        "ro:ritual-practice",
+        "ro:tantra-philosophy"
+      ]
+    },
+    {
+      "size": 52,
+      "median_score": 1.5,
+      "demand_score": 78.0,
+      "terms": [
+        "want",
+        "know",
+        "start",
+        "did",
+        "rich",
+        "seek"
+      ],
+      "subreddits": [
+        "AdvaitaVedanta",
+        "Meditation",
+        "awakened",
+        "hinduism",
+        "kundalini",
+        "occult",
+        "spirituality"
+      ],
+      "roles": [
+        "mass",
+        "practitioner",
+        "specialist"
+      ],
+      "has_specialist": true,
+      "has_mass": true,
+      "translation_gap": true,
+      "layer_span": 3,
+      "potential_ros": [
+        "ro:advaita-vedanta",
+        "ro:kundalini-awakening",
+        "ro:meditation-practice",
+        "ro:ritual-practice",
+        "ro:vedas"
+      ]
+    },
+    {
+      "size": 35,
+      "median_score": 1.0,
+      "demand_score": 35.0,
+      "terms": [
+        "ego",
+        "does",
+        "self",
+        "possible",
+        "im",
+        "rid"
+      ],
+      "subreddits": [
+        "AdvaitaVedanta",
+        "Meditation",
+        "awakened",
+        "occult",
+        "spirituality"
+      ],
+      "roles": [
+        "mass",
+        "practitioner",
+        "specialist"
+      ],
+      "has_specialist": true,
+      "has_mass": true,
+      "translation_gap": true,
+      "layer_span": 3,
+      "potential_ros": [
+        "ro:advaita-vedanta",
+        "ro:meditation-practice",
+        "ro:ritual-practice",
+        "ro:vedas"
+      ]
+    },
+    {
+      "size": 357,
+      "median_score": 5.0,
+      "demand_score": 1785.0,
+      "terms": [
+        "occult",
+        "like",
+        "know",
+        "does",
+        "im",
+        "practice"
+      ],
+      "subreddits": [
+        "Meditation",
+        "awakened",
+        "kundalini",
+        "occult",
+        "spirituality"
+      ],
+      "roles": [
+        "mass",
+        "practitioner"
+      ],
+      "has_specialist": false,
+      "has_mass": true,
+      "translation_gap": false,
+      "layer_span": 2,
+      "potential_ros": [
+        "ro:kundalini-awakening",
+        "ro:meditation-practice",
+        "ro:ritual-practice"
+      ]
+    },
+    {
+      "size": 317,
+      "median_score": 3.0,
+      "demand_score": 951.0,
+      "terms": [
+        "does",
+        "symbol",
+        "mean",
+        "know",
+        "symbols",
+        "does know"
+      ],
+      "subreddits": [
+        "Meditation",
+        "awakened",
+        "hinduism",
+        "kundalini",
+        "occult",
+        "spirituality"
+      ],
+      "roles": [
+        "mass",
+        "practitioner"
+      ],
+      "has_specialist": false,
+      "has_mass": true,
+      "translation_gap": false,
+      "layer_span": 2,
+      "potential_ros": [
+        "ro:kundalini-awakening",
+        "ro:meditation-practice",
+        "ro:ritual-practice"
+      ]
+    },
+    {
+      "size": 181,
+      "median_score": 4.0,
+      "demand_score": 724.0,
+      "terms": [
+        "thoughts",
+        "mind",
+        "meditation",
+        "just",
+        "thought",
+        "im"
+      ],
+      "subreddits": [
+        "Meditation",
+        "awakened",
+        "hinduism",
+        "kundalini",
+        "occult",
+        "spirituality"
+      ],
+      "roles": [
+        "mass",
+        "practitioner"
+      ],
+      "has_specialist": false,
+      "has_mass": true,
+      "translation_gap": false,
+      "layer_span": 2,
+      "potential_ros": [
+        "ro:kundalini-awakening",
+        "ro:meditation-practice",
+        "ro:ritual-practice"
+      ]
+    },
+    {
+      "size": 163,
+      "median_score": 4.0,
+      "demand_score": 652.0,
+      "terms": [
+        "people",
+        "im",
+        "feel",
+        "like",
+        "just",
+        "dont"
+      ],
+      "subreddits": [
+        "Meditation",
+        "awakened",
+        "hinduism",
+        "kundalini",
+        "occult",
+        "spirituality"
+      ],
+      "roles": [
+        "mass",
+        "practitioner"
+      ],
+      "has_specialist": false,
+      "has_mass": true,
+      "translation_gap": false,
+      "layer_span": 2,
+      "potential_ros": [
+        "ro:kundalini-awakening",
+        "ro:meditation-practice",
+        "ro:ritual-practice"
+      ]
+    },
+    {
+      "size": 240,
+      "median_score": 2.0,
+      "demand_score": 480.0,
+      "terms": [
+        "does",
+        "life",
+        "benefits",
+        "practice",
+        "help",
+        "im"
+      ],
+      "subreddits": [
+        "Meditation",
+        "awakened",
+        "hinduism",
+        "occult",
+        "spirituality"
+      ],
+      "roles": [
+        "mass",
+        "practitioner"
+      ],
+      "has_specialist": false,
+      "has_mass": true,
+      "translation_gap": false,
+      "layer_span": 2,
+      "potential_ros": [
+        "ro:meditation-practice",
+        "ro:ritual-practice"
+      ]
+    },
+    {
+      "size": 137,
+      "median_score": 3.0,
+      "demand_score": 411.0,
+      "terms": [
+        "breath",
+        "breathing",
+        "focus",
+        "meditation",
+        "just",
+        "does"
+      ],
+      "subreddits": [
+        "Meditation",
+        "awakened",
+        "occult"
+      ],
+      "roles": [
+        "mass",
+        "practitioner"
+      ],
+      "has_specialist": false,
+      "has_mass": true,
+      "translation_gap": false,
+      "layer_span": 2,
+      "potential_ros": [
+        "ro:meditation-practice",
+        "ro:pranayama-breath"
+      ]
+    },
+    {
+      "size": 74,
+      "median_score": 5.0,
+      "demand_score": 370.0,
+      "terms": [
+        "awakening",
+        "awakened",
+        "does",
+        "people",
+        "woke",
+        "like"
+      ],
+      "subreddits": [
+        "Meditation",
+        "awakened",
+        "hinduism",
+        "kundalini",
+        "occult",
+        "spirituality"
+      ],
+      "roles": [
+        "mass",
+        "practitioner"
+      ],
+      "has_specialist": false,
+      "has_mass": true,
+      "translation_gap": false,
+      "layer_span": 2,
+      "potential_ros": [
+        "ro:kundalini-awakening",
+        "ro:meditation-practice",
+        "ro:ritual-practice"
+      ]
+    },
+    {
+      "size": 116,
+      "median_score": 3.0,
+      "demand_score": 348.0,
+      "terms": [
+        "god",
+        "does",
+        "gods",
+        "christianity",
+        "deity",
+        "jesus"
+      ],
+      "subreddits": [
+        "Meditation",
+        "awakened",
+        "hinduism",
+        "occult",
+        "spirituality"
+      ],
+      "roles": [
+        "mass",
+        "practitioner"
+      ],
+      "has_specialist": false,
+      "has_mass": true,
+      "translation_gap": false,
+      "layer_span": 2,
+      "potential_ros": [
+        "ro:deity-worship",
+        "ro:meditation-practice",
+        "ro:ritual-practice"
+      ]
+    },
+    {
+      "size": 111,
+      "median_score": 3.0,
+      "demand_score": 333.0,
+      "terms": [
+        "reality",
+        "consciousness",
+        "truth",
+        "world",
+        "universe",
+        "does"
+      ],
+      "subreddits": [
+        "Meditation",
+        "awakened",
+        "hinduism",
+        "nonduality",
+        "occult",
+        "spirituality"
+      ],
+      "roles": [
+        "mass",
+        "practitioner"
+      ],
+      "has_specialist": false,
+      "has_mass": true,
+      "translation_gap": false,
+      "layer_span": 2,
+      "potential_ros": [
+        "ro:consciousness-nonduality",
+        "ro:meditation-practice",
+        "ro:ritual-practice"
+      ]
+    },
+    {
+      "size": 72,
+      "median_score": 4.0,
+      "demand_score": 288.0,
+      "terms": [
+        "books",
+        "read",
+        "book",
+        "does",
+        "im",
+        "pdf"
+      ],
+      "subreddits": [
+        "Meditation",
+        "awakened",
+        "hinduism",
+        "occult",
+        "spirituality"
+      ],
+      "roles": [
+        "mass",
+        "practitioner"
+      ],
+      "has_specialist": false,
+      "has_mass": true,
+      "translation_gap": false,
+      "layer_span": 2,
+      "potential_ros": [
+        "ro:meditation-practice",
+        "ro:ritual-practice"
+      ]
+    },
+    {
+      "size": 94,
+      "median_score": 3.0,
+      "demand_score": 282.0,
+      "terms": [
+        "spirits",
+        "spirit",
+        "ive",
+        "im",
+        "like",
+        "just"
+      ],
+      "subreddits": [
+        "Meditation",
+        "awakened",
+        "occult",
+        "spirituality"
+      ],
+      "roles": [
+        "mass",
+        "practitioner"
+      ],
+      "has_specialist": false,
+      "has_mass": true,
+      "translation_gap": false,
+      "layer_span": 2,
+      "potential_ros": [
+        "ro:meditation-practice",
+        "ro:ritual-practice"
+      ]
+    },
+    {
+      "size": 129,
+      "median_score": 2.0,
+      "demand_score": 258.0,
+      "terms": [
+        "spiritual",
+        "spirituality",
+        "people",
+        "life",
+        "religion",
+        "just"
+      ],
+      "subreddits": [
+        "Meditation",
+        "awakened",
+        "hinduism",
+        "occult",
+        "spirituality"
+      ],
+      "roles": [
+        "mass",
+        "practitioner"
+      ],
+      "has_specialist": false,
+      "has_mass": true,
+      "translation_gap": false,
+      "layer_span": 2,
+      "potential_ros": [
+        "ro:meditation-practice",
+        "ro:ritual-practice"
+      ]
+    },
+    {
+      "size": 84,
+      "median_score": 3.0,
+      "demand_score": 252.0,
+      "terms": [
+        "astrology",
+        "moon",
+        "does",
+        "sun",
+        "like",
+        "ive"
+      ],
+      "subreddits": [
+        "awakened",
+        "hinduism",
+        "occult",
+        "spirituality"
+      ],
+      "roles": [
+        "mass",
+        "practitioner"
+      ],
+      "has_specialist": false,
+      "has_mass": true,
+      "translation_gap": false,
+      "layer_span": 2,
+      "potential_ros": [
+        "ro:ritual-practice"
+      ]
+    },
+    {
+      "size": 80,
+      "median_score": 3.0,
+      "demand_score": 240.0,
+      "terms": [
+        "sigil",
+        "sigils",
+        "does",
+        "make",
+        "charge",
+        "just"
+      ],
+      "subreddits": [
+        "occult",
+        "spirituality"
+      ],
+      "roles": [
+        "mass",
+        "practitioner"
+      ],
+      "has_specialist": false,
+      "has_mass": true,
+      "translation_gap": false,
+      "layer_span": 2,
+      "potential_ros": [
+        "ro:ritual-practice"
+      ]
+    },
+    {
+      "size": 66,
+      "median_score": 3.5,
+      "demand_score": 231.0,
+      "terms": [
+        "make",
+        "ritual",
+        "candle",
+        "altar",
+        "like",
+        "use"
+      ],
+      "subreddits": [
+        "Meditation",
+        "awakened",
+        "hinduism",
+        "occult",
+        "spirituality"
+      ],
+      "roles": [
+        "mass",
+        "practitioner"
+      ],
+      "has_specialist": false,
+      "has_mass": true,
+      "translation_gap": false,
+      "layer_span": 2,
+      "potential_ros": [
+        "ro:meditation-practice",
+        "ro:ritual-practice"
+      ]
+    },
+    {
+      "size": 107,
+      "median_score": 2.0,
+      "demand_score": 214.0,
+      "terms": [
+        "soul",
+        "death",
+        "happens",
+        "heaven",
+        "die",
+        "believe"
+      ],
+      "subreddits": [
+        "Meditation",
+        "awakened",
+        "hinduism",
+        "kundalini",
+        "occult",
+        "spirituality"
+      ],
+      "roles": [
+        "mass",
+        "practitioner"
+      ],
+      "has_specialist": false,
+      "has_mass": true,
+      "translation_gap": false,
+      "layer_span": 2,
+      "potential_ros": [
+        "ro:death-afterlife",
+        "ro:kundalini-awakening",
+        "ro:meditation-practice",
+        "ro:ritual-practice"
+      ]
+    },
+    {
+      "size": 50,
+      "median_score": 4.0,
+      "demand_score": 200.0,
+      "terms": [
+        "sleep",
+        "meditation",
+        "meditate",
+        "asleep",
+        "fall",
+        "bed"
+      ],
+      "subreddits": [
+        "Meditation",
+        "awakened",
+        "hinduism",
+        "occult",
+        "spirituality"
+      ],
+      "roles": [
+        "mass",
+        "practitioner"
+      ],
+      "has_specialist": false,
+      "has_mass": true,
+      "translation_gap": false,
+      "layer_span": 2,
+      "potential_ros": [
+        "ro:meditation-practice",
+        "ro:ritual-practice"
+      ]
+    },
+    {
+      "size": 61,
+      "median_score": 3.0,
+      "demand_score": 183.0,
+      "terms": [
+        "sit",
+        "meditation",
+        "sitting",
+        "straight",
+        "posture",
+        "position"
+      ],
+      "subreddits": [
+        "Meditation",
+        "hinduism",
+        "kundalini",
+        "spirituality"
+      ],
+      "roles": [
+        "mass",
+        "practitioner"
+      ],
+      "has_specialist": false,
+      "has_mass": true,
+      "translation_gap": false,
+      "layer_span": 2,
+      "potential_ros": [
+        "ro:kundalini-awakening",
+        "ro:meditation-practice",
+        "ro:ritual-practice"
+      ]
+    },
+    {
+      "size": 52,
+      "median_score": 3.0,
+      "demand_score": 156.0,
+      "terms": [
+        "crystals",
+        "does",
+        "think",
+        "circle",
+        "tree",
+        "hermetic"
+      ],
+      "subreddits": [
+        "awakened",
+        "hinduism",
+        "occult",
+        "spirituality"
+      ],
+      "roles": [
+        "mass",
+        "practitioner"
+      ],
+      "has_specialist": false,
+      "has_mass": true,
+      "translation_gap": false,
+      "layer_span": 2,
+      "potential_ros": [
+        "ro:ritual-practice"
+      ]
+    },
+    {
+      "size": 63,
+      "median_score": 2.0,
+      "demand_score": 126.0,
+      "terms": [
+        "think",
+        "guys",
+        "thoughts",
+        "does",
+        "guys think",
+        "youtube"
+      ],
+      "subreddits": [
+        "Meditation",
+        "awakened",
+        "hinduism",
+        "kundalini",
+        "occult",
+        "spirituality"
+      ],
+      "roles": [
+        "mass",
+        "practitioner"
+      ],
+      "has_specialist": false,
+      "has_mass": true,
+      "translation_gap": false,
+      "layer_span": 2,
+      "potential_ros": [
+        "ro:kundalini-awakening",
+        "ro:meditation-practice",
+        "ro:ritual-practice"
+      ]
+    },
+    {
+      "size": 61,
+      "median_score": 2.0,
+      "demand_score": 122.0,
+      "terms": [
+        "dreams",
+        "dream",
+        "lucid",
+        "does",
+        "just",
+        "think"
+      ],
+      "subreddits": [
+        "Meditation",
+        "awakened",
+        "hinduism",
+        "occult",
+        "spirituality"
+      ],
+      "roles": [
+        "mass",
+        "practitioner"
+      ],
+      "has_specialist": false,
+      "has_mass": true,
+      "translation_gap": false,
+      "layer_span": 2,
+      "potential_ros": [
+        "ro:dream-lucid",
+        "ro:meditation-practice",
+        "ro:ritual-practice"
+      ]
+    },
+    {
+      "size": 50,
+      "median_score": 2.0,
+      "demand_score": 100.0,
+      "terms": [
+        "life",
+        "purpose",
+        "meaning",
+        "meaning life",
+        "know",
+        "does"
+      ],
+      "subreddits": [
+        "Meditation",
+        "awakened",
+        "hinduism",
+        "kundalini",
+        "nonduality",
+        "occult",
+        "spirituality"
+      ],
+      "roles": [
+        "mass",
+        "practitioner"
+      ],
+      "has_specialist": false,
+      "has_mass": true,
+      "translation_gap": false,
+      "layer_span": 2,
+      "potential_ros": [
+        "ro:consciousness-nonduality",
+        "ro:kundalini-awakening",
+        "ro:meditation-practice",
+        "ro:ritual-practice"
+      ]
+    },
+    {
+      "size": 91,
+      "median_score": 1.0,
+      "demand_score": 91.0,
+      "terms": [
+        "demons",
+        "summon",
+        "demon",
+        "like",
+        "know",
+        "im"
+      ],
+      "subreddits": [
+        "Meditation",
+        "occult"
+      ],
+      "roles": [
+        "mass",
+        "practitioner"
+      ],
+      "has_specialist": false,
+      "has_mass": true,
+      "translation_gap": false,
+      "layer_span": 2,
+      "potential_ros": [
+        "ro:meditation-practice"
+      ]
+    },
+    {
+      "size": 17,
+      "median_score": 4.0,
+      "demand_score": 68.0,
+      "terms": [
+        "wearing",
+        "head",
+        "wear",
+        "devi",
+        "lord",
+        "red"
+      ],
+      "subreddits": [
+        "awakened",
+        "hinduism",
+        "occult"
+      ],
+      "roles": [
+        "mass",
+        "practitioner"
+      ],
+      "has_specialist": false,
+      "has_mass": true,
+      "translation_gap": false,
+      "layer_span": 2,
+      "potential_ros": [
+        "ro:devi-goddess"
+      ]
+    },
+    {
+      "size": 51,
+      "median_score": 1.0,
+      "demand_score": 51.0,
+      "terms": [
+        "spell",
+        "spells",
+        "love",
+        "love spell",
+        "know",
+        "love spells"
+      ],
+      "subreddits": [
+        "Tantra",
+        "occult"
+      ],
+      "roles": [
+        "practitioner",
+        "specialist"
+      ],
+      "has_specialist": true,
+      "has_mass": false,
+      "translation_gap": false,
+      "layer_span": 2,
+      "potential_ros": [
+        "ro:tantra-philosophy"
+      ]
+    },
+    {
+      "size": 51,
+      "median_score": 1.0,
+      "demand_score": 51.0,
+      "terms": [
+        "energy",
+        "healing",
+        "use",
+        "does",
+        "body",
+        "want"
+      ],
+      "subreddits": [
+        "Meditation",
+        "awakened",
+        "hinduism",
+        "kundalini",
+        "occult",
+        "spirituality"
+      ],
+      "roles": [
+        "mass",
+        "practitioner"
+      ],
+      "has_specialist": false,
+      "has_mass": true,
+      "translation_gap": false,
+      "layer_span": 2,
+      "potential_ros": [
+        "ro:energy-body",
+        "ro:kundalini-awakening",
+        "ro:meditation-practice",
+        "ro:ritual-practice"
+      ]
+    },
+    {
+      "size": 10,
+      "median_score": 5.0,
+      "demand_score": 50.0,
+      "terms": [
+        "dimensions",
+        "like",
+        "dimension",
+        "matter",
+        "difference",
+        "time"
+      ],
+      "subreddits": [
+        "kundalini",
+        "occult",
+        "spirituality"
+      ],
+      "roles": [
+        "mass",
+        "practitioner"
+      ],
+      "has_specialist": false,
+      "has_mass": true,
+      "translation_gap": false,
+      "layer_span": 2,
+      "potential_ros": [
+        "ro:kundalini-awakening",
+        "ro:ritual-practice"
+      ]
+    },
+    {
+      "size": 14,
+      "median_score": 3.5,
+      "demand_score": 49.0,
+      "terms": [
+        "happen",
+        "say",
+        "people",
+        "just",
+        "like",
+        "truly"
+      ],
+      "subreddits": [
+        "Meditation",
+        "awakened",
+        "hinduism",
+        "nonduality",
+        "occult",
+        "spirituality"
+      ],
+      "roles": [
+        "mass",
+        "practitioner"
+      ],
+      "has_specialist": false,
+      "has_mass": true,
+      "translation_gap": false,
+      "layer_span": 2,
+      "potential_ros": [
+        "ro:consciousness-nonduality",
+        "ro:meditation-practice",
+        "ro:ritual-practice"
+      ]
+    },
+    {
+      "size": 119,
+      "median_score": 5.0,
+      "demand_score": 595.0,
+      "terms": [
+        "magick",
+        "magic",
+        "does",
+        "chaos",
+        "like",
+        "think"
+      ],
+      "subreddits": [
+        "occult"
+      ],
+      "roles": [
+        "practitioner"
+      ],
+      "has_specialist": false,
+      "has_mass": false,
+      "translation_gap": false,
+      "layer_span": 1,
+      "potential_ros": []
+    },
+    {
+      "size": 26,
+      "median_score": 8.5,
+      "demand_score": 221.0,
+      "terms": [
+        "roccult",
+        "does",
+        "does roccult",
+        "roccult think",
+        "think",
+        "like"
+      ],
+      "subreddits": [
+        "occult"
+      ],
+      "roles": [
+        "practitioner"
+      ],
+      "has_specialist": false,
+      "has_mass": false,
+      "translation_gap": false,
+      "layer_span": 1,
+      "potential_ros": []
+    },
+    {
+      "size": 12,
+      "median_score": 0.5,
+      "demand_score": 6.0,
+      "terms": [
+        "succubus",
+        "summon",
+        "possible",
+        "summon succubus",
+        "know",
+        "occult"
+      ],
+      "subreddits": [
+        "occult"
+      ],
+      "roles": [
+        "practitioner"
+      ],
+      "has_specialist": false,
+      "has_mass": false,
+      "translation_gap": false,
+      "layer_span": 1,
+      "potential_ros": []
+    }
+  ]
+}

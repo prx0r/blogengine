@@ -16,7 +16,7 @@
       "relevanceLanguage": "en",
       "maxResults": 15,
       "timeWindowMonths": 12,
-      "publishedAfter": "2025-07-21T06:24:59.938Z",
+      "publishedAfter": "2025-07-21T09:54:11.397Z",
       "audioVerification": "videos.list part=snippet, checked defaultAudioLanguage == 'en'",
       "gapScoreMinimumINChannels": 5,
       "queries": [
@@ -204,39 +204,39 @@
       },
       {
         "name": "videos.list",
-        "calls": 0,
+        "calls": 13,
         "bucket": "general_pool",
         "dailyLimit": 10000,
-        "remaining": 10000
+        "remaining": 9987
       }
     ],
-    "general_pool_units": 0,
+    "general_pool_units": 13,
     "total_budget_used_pct": {
       "search_list": 0.9,
-      "general_pool": 0
+      "general_pool": 0.0013
     }
   },
   "verification": {
     "gates": {
       "V01_all_queries_returned": {
         "status": "FAIL",
-        "detail": "IN:0/30 US:0/30 GB:0/30"
+        "detail": "IN:30/30 US:30/30 GB:29/30"
       },
       "V01b_english_audio_checked": {
-        "status": "FAIL",
-        "detail": "0 videos checked via videos.list, 0 confirmed English audio"
+        "status": "PASS",
+        "detail": "621 videos checked via videos.list, 109 confirmed English audio"
       },
       "V02_gap_score_computed": {
-        "status": "FAIL",
-        "detail": "0/30 queries have valid gap_score (30 had <5 IN channels, marked null)"
+        "status": "PASS",
+        "detail": "29/30 queries have valid gap_score (1 had <5 IN channels, marked null)"
       },
       "V03_api_usage_tracked": {
-        "status": "FAIL",
-        "detail": "90 search.list + 0 videos.list calls"
+        "status": "PASS",
+        "detail": "90 search.list + 13 videos.list calls"
       },
       "V04_threshold_applied": {
         "status": "PASS",
-        "detail": "gap threshold >= 0.3, 0/30 queries classified as gaps (30 had insufficient IN data for reliable score)"
+        "detail": "gap threshold >= 0.3, 16/30 queries classified as gaps (1 had insufficient IN data for reliable score)"
       }
     },
     "all_pass": false,
@@ -245,553 +245,6374 @@
   "data": {
     "summary": {
       "totalQueries": 30,
-      "queriesWithGap": 0,
+      "queriesWithGap": 16,
       "gapThreshold": 0.3,
-      "queriesWithInsufficientINData": 30,
-      "totalUniqueChannels": 0,
-      "inOnlyChannels": 0,
-      "englishAudioChannels": 0,
-      "totalVideosChecked": 0,
-      "englishAudioCount": 0,
-      "nonEnglishAudioCount": 0,
-      "nullAudioCount": 0,
-      "channelsVisibleInIN": 0,
-      "channelsVisibleInUS": 0,
-      "channelsVisibleInGB": 0,
+      "queriesWithInsufficientINData": 1,
+      "totalUniqueChannels": 410,
+      "inOnlyChannels": 89,
+      "englishAudioChannels": 69,
+      "totalVideosChecked": 621,
+      "englishAudioCount": 109,
+      "nonEnglishAudioCount": 308,
+      "nullAudioCount": 204,
+      "channelsVisibleInIN": 273,
+      "channelsVisibleInUS": 280,
+      "channelsVisibleInGB": 270,
       "ukDataInsufficientQueries": [
-        "Kashmir Shaivism consciousness",
-        "tantra philosophy explained",
-        "Abhinavagupta philosophy",
-        "36 tattvas explained",
-        "spanda vibration consciousness",
-        "pratyabhijna recognition philosophy",
-        "Bhairava tantra explained",
-        "Kali tantra history",
-        "Chinnamasta goddess meaning",
-        "Bagalamukhi tantra",
-        "Dhumatavi goddess",
-        "ten mahavidyas explained",
-        "cremation ground tantra",
-        "Aghori philosophy explained",
-        "tantric meditation practices",
-        "kundalini tantra awakening",
-        "chakra tantra explained",
-        "nyasa tantric ritual",
-        "tantric black magic history",
-        "abhicara tantra rituals",
-        "vamachara left hand path",
-        "tantra sexual rituals history",
-        "pancha makara five ms",
-        "tantric skull staff kapalika",
-        "tantraloka abhinavagupta explained",
-        "kashmir shaivism history",
-        "tantric texts history",
-        "yogini temples history",
-        "siddha tradition tantra",
-        "kaula tantra history"
+        "tantric texts history"
       ]
     },
-    "channels": [],
+    "channels": [
+      {
+        "channelId": "UC-Hg6aMJ44d4FkDoGi_OEOQ",
+        "channel": "Tantra Talks",
+        "visibility": "all_three",
+        "queryCount": 10,
+        "topics": [
+          "deity",
+          "practice",
+          "taboo",
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UCCwE3WuhwGTlzfKGGiJpxuA",
+        "channel": "TantraEducation",
+        "visibility": "all_three",
+        "queryCount": 8,
+        "topics": [
+          "philosophy",
+          "practice",
+          "taboo"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCcYzLCs3zrQIBVHYA1sK2sw",
+        "channel": "Sadhguru",
+        "visibility": "all_three",
+        "queryCount": 8,
+        "topics": [
+          "philosophy",
+          "practice",
+          "historical",
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UCLRdy3ER7KoXkRgHJkPSn8A",
+        "channel": "Tantrik Spirituality",
+        "visibility": "all_three",
+        "queryCount": 6,
+        "topics": [
+          "deity",
+          "taboo",
+          "historical",
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCeVXHRFXbGPROkR_YWxhPmg",
+        "channel": "American Advaita",
+        "visibility": "all_three",
+        "queryCount": 5,
+        "topics": [
+          "philosophy",
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCneyi-aYq4VIBYIAQgWmk_w",
+        "channel": "Ranveer Allahbadia",
+        "visibility": "all_three",
+        "queryCount": 5,
+        "topics": [
+          "deity",
+          "practice",
+          "taboo"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCIlnaYS4YnITOqnwLdooHwg",
+        "channel": "Vedic Priyanshi",
+        "visibility": "all_three",
+        "queryCount": 5,
+        "topics": [
+          "deity",
+          "practice",
+          "taboo"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCGH2LlwqMVrjJC_YraCS6hQ",
+        "channel": "SanatanSanssaar Ai",
+        "visibility": "all_three",
+        "queryCount": 5,
+        "topics": [
+          "taboo",
+          "historical",
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCCzbGchzIoA0uBqa2QItbHQ",
+        "channel": "The Eastern Lens",
+        "visibility": "all_three",
+        "queryCount": 4,
+        "topics": [
+          "philosophy",
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCzBvAIHPZ_Y7chhoN5ebv_A",
+        "channel": "Best Of TRS | English",
+        "visibility": "IN_GB",
+        "queryCount": 4,
+        "topics": [
+          "philosophy",
+          "deity",
+          "historical",
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCaPkhc_NUTriySjVCbFqtlA",
+        "channel": "The Supreme Lord Krishna said",
+        "visibility": "all_three",
+        "queryCount": 4,
+        "topics": [
+          "philosophy",
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UChdtExghJznqBnoTziEDE4w",
+        "channel": "The Tantric Archive",
+        "visibility": "all_three",
+        "queryCount": 4,
+        "topics": [
+          "practice",
+          "taboo",
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UC9ySkAvOD-3jYV17s07feew",
+        "channel": "Tantra for the Soul",
+        "visibility": "all_three",
+        "queryCount": 4,
+        "topics": [
+          "practice",
+          "taboo",
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCpWTzuzZV4MFc-rW-UB8fsw",
+        "channel": "Rudraksha Tantra Archive",
+        "visibility": "IN_GB",
+        "queryCount": 4,
+        "topics": [
+          "practice",
+          "taboo",
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC2fOi_FoxVbLitSIenlANTA",
+        "channel": "Mind Has Mountains",
+        "visibility": "all_three",
+        "queryCount": 3,
+        "topics": [
+          "philosophy",
+          "taboo",
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC0SL9zVE00Inywpip5dbnmQ",
+        "channel": "Adhyatmik Sutra",
+        "visibility": "all_three",
+        "queryCount": 3,
+        "topics": [
+          "philosophy",
+          "taboo",
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCJnmcJUeujf1AZnmwsq9g7A",
+        "channel": "MUVA HISTORY",
+        "visibility": "all_three",
+        "queryCount": 3,
+        "topics": [
+          "philosophy",
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCvTDk3sJ-F5OZo9gVkCpUzw",
+        "channel": "Mystical Adhvika",
+        "visibility": "all_three",
+        "queryCount": 3,
+        "topics": [
+          "philosophy",
+          "taboo",
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCYT7DuabLROeUJoYg0t14Wg",
+        "channel": "SpiritualConce",
+        "visibility": "all_three",
+        "queryCount": 3,
+        "topics": [
+          "philosophy",
+          "deity",
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCs4ZkTG1CZdOogoQSEedbRg",
+        "channel": "DΛIVIK ƧΉΛKƬIYΛ",
+        "visibility": "IN_only",
+        "queryCount": 3,
+        "topics": [
+          "philosophy",
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UChY48I4uKBGENQJbEeRt7QA",
+        "channel": "Rajarshi Nandy",
+        "visibility": "all_three",
+        "queryCount": 3,
+        "topics": [
+          "deity",
+          "practice",
+          "taboo"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCx_q8NErFLqrAXBHrZ-BzEA",
+        "channel": "Ghantee Media",
+        "visibility": "all_three",
+        "queryCount": 3,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UCGeE6Jsxon-D5Zda-msFx1Q",
+        "channel": "Divine WTFacts",
+        "visibility": "all_three",
+        "queryCount": 3,
+        "topics": [
+          "deity",
+          "taboo"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCJ16f6tSSMoV-IRvDLRq9xA",
+        "channel": "Aadhyatm TV",
+        "visibility": "IN_only",
+        "queryCount": 3,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCMD8HKvbaMdqrd8sq3-Rlyw",
+        "channel": "The Mumta Podcast ",
+        "visibility": "IN_only",
+        "queryCount": 3,
+        "topics": [
+          "deity",
+          "practice",
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCYicfrJxAQOa55Whw2-oo_w",
+        "channel": "The Real One",
+        "visibility": "all_three",
+        "queryCount": 3,
+        "topics": [
+          "deity",
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC-Dov8zUqzXAaMa-e9N_lvw",
+        "channel": "Prabhubhakti Podcast",
+        "visibility": "all_three",
+        "queryCount": 3,
+        "topics": [
+          "practice",
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCgqRjwkU4Pw7TzTh6YA4ogg",
+        "channel": " Beyond thiinking",
+        "visibility": "all_three",
+        "queryCount": 3,
+        "topics": [
+          "practice",
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCQxAIptZImtjve65zuHGM2g",
+        "channel": "Sanatan Family ",
+        "visibility": "all_three",
+        "queryCount": 3,
+        "topics": [
+          "practice",
+          "taboo"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCKyZZpTZmZgcj9kWyNaAK_Q",
+        "channel": "Saatvik",
+        "visibility": "all_three",
+        "queryCount": 3,
+        "topics": [
+          "practice",
+          "deity",
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCbpDhm4EBvaMzu2cZap1sjw",
+        "channel": "pallavi kwatra",
+        "visibility": "all_three",
+        "queryCount": 3,
+        "topics": [
+          "practice",
+          "taboo"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC1JV7-hvhF7JtWxc8_MRXcA",
+        "channel": "Am Nothing And Everything",
+        "visibility": "all_three",
+        "queryCount": 2,
+        "topics": [
+          "philosophy",
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCWs69uyTVA-byqsrVYnJciw",
+        "channel": "Chaitanya Darshan - English",
+        "visibility": "all_three",
+        "queryCount": 2,
+        "topics": [
+          "philosophy",
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UCLFdIVSqQ7mJdQzDVrgw1kA",
+        "channel": "Dharma Servant",
+        "visibility": "all_three",
+        "queryCount": 2,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UC-WPIO7eGfsB6ypOcMEZgvw",
+        "channel": "Kitabi Dunia | Sanatan Wisdom 🕉️",
+        "visibility": "IN_only",
+        "queryCount": 2,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC0BnRu6SypaH6TXEBmaf5GQ",
+        "channel": "Zero Jatin Show",
+        "visibility": "IN_US",
+        "queryCount": 2,
+        "topics": [
+          "philosophy",
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCQDm-3t1O1rKXk2gTO-og1Q",
+        "channel": "Mystic A Voice",
+        "visibility": "IN_US",
+        "queryCount": 2,
+        "topics": [
+          "philosophy",
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCYlhkrkOnUBNHV0Gz5V83TA",
+        "channel": "The Awakening Energy by Skeed",
+        "visibility": "all_three",
+        "queryCount": 2,
+        "topics": [
+          "philosophy",
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UC9hMhmEnNq2HCJt4aRdY37A",
+        "channel": "Ultimate Reviewers",
+        "visibility": "all_three",
+        "queryCount": 2,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UCBMMJeJv1wlw4J2mbikJavQ",
+        "channel": "shishir sonchay",
+        "visibility": "all_three",
+        "queryCount": 2,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UC4Ec0zegHUKY2WPmzYcgvKw",
+        "channel": "Spiritual Spirit",
+        "visibility": "all_three",
+        "queryCount": 2,
+        "topics": [
+          "philosophy",
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCKf1HJ-ZyFT4zuobqdc9ZbQ",
+        "channel": "David Deven Dubois Tantra",
+        "visibility": "all_three",
+        "queryCount": 2,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UCLzDFDoeOZq1QeuNAKyCQ-w",
+        "channel": "AMRTASPANDA",
+        "visibility": "all_three",
+        "queryCount": 2,
+        "topics": [
+          "philosophy",
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCDi6MJr4NPlJoBq3rCIoBHg",
+        "channel": "Abhyagam - अभ्यागम",
+        "visibility": "IN_only",
+        "queryCount": 2,
+        "topics": [
+          "philosophy",
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCLSe2fz6ycuEXwM5NKw7VLQ",
+        "channel": "वाचन ",
+        "visibility": "all_three",
+        "queryCount": 2,
+        "topics": [
+          "deity",
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC883qwuhVvuk6IJhoY444YA",
+        "channel": "ShortWala Story",
+        "visibility": "IN_only",
+        "queryCount": 2,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCpESGVz_4KaI3duvhfedf7g",
+        "channel": "Christopher Wallis (Hareesh)",
+        "visibility": "all_three",
+        "queryCount": 2,
+        "topics": [
+          "deity",
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UCXMGyTNFYv6sci4yT_O13tQ",
+        "channel": "JyotiSakti – Vedic Wisdom (Bobby Cherian)",
+        "visibility": "all_three",
+        "queryCount": 2,
+        "topics": [
+          "deity",
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCl9kzNuO5U8mS2VD2BEuA4w",
+        "channel": "Dharma Path Tales",
+        "visibility": "all_three",
+        "queryCount": 2,
+        "topics": [
+          "deity",
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCuOqEioJJ6pf_yiUYquRRHg",
+        "channel": "The Hidden Darshan",
+        "visibility": "all_three",
+        "queryCount": 2,
+        "topics": [
+          "deity",
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCZYlZgTlPrEPpj27a0TOlBw",
+        "channel": "Deviant Tales",
+        "visibility": "all_three",
+        "queryCount": 2,
+        "topics": [
+          "deity",
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCkaQZL2IZ9nNQ3xsHKvKATQ",
+        "channel": "Smita Venkatesh ",
+        "visibility": "all_three",
+        "queryCount": 2,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCfqYeqSPekWE6tQEZHTnx1w",
+        "channel": "Om Swami",
+        "visibility": "all_three",
+        "queryCount": 2,
+        "topics": [
+          "deity",
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UCPcYS4-sd0WgiL9yfzFfk_g",
+        "channel": "Isha Darshan ",
+        "visibility": "all_three",
+        "queryCount": 2,
+        "topics": [
+          "deity",
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCiIC3VAyRMSXGOrpPFmKdCg",
+        "channel": "ImagiSto ",
+        "visibility": "all_three",
+        "queryCount": 2,
+        "topics": [
+          "deity",
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCP0dKyAu7UiYJQx03m5jzzA",
+        "channel": "Dev Katha",
+        "visibility": "all_three",
+        "queryCount": 2,
+        "topics": [
+          "deity",
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCdOJEaQo8JRRA09qYfVABzg",
+        "channel": "Mantras By AI",
+        "visibility": "all_three",
+        "queryCount": 2,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCM2JCM9go87N0wzcGhnCrhg",
+        "channel": "Guru Gyan",
+        "visibility": "IN_only",
+        "queryCount": 2,
+        "topics": [
+          "deity",
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCzsdqIq-4SM9lmkZtaKGSCg",
+        "channel": "Power of Chants",
+        "visibility": "all_three",
+        "queryCount": 2,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCVu4FJTayEHhowf_zpIJo5w",
+        "channel": "My Digital Jockey Clips",
+        "visibility": "all_three",
+        "queryCount": 2,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCweYOQeFy32lkjtVdH2DK9A",
+        "channel": "Sanatan Clips 2.0",
+        "visibility": "all_three",
+        "queryCount": 2,
+        "topics": [
+          "practice",
+          "taboo"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCZkDTadnY9j0SYjw5aW5rtg",
+        "channel": "Sushil Gurujee",
+        "visibility": "all_three",
+        "queryCount": 2,
+        "topics": [
+          "practice",
+          "taboo"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCnQ2NHZ_mUS6fYuW8krNurw",
+        "channel": "Explained by Sohum",
+        "visibility": "all_three",
+        "queryCount": 2,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UC25kxVFVS78m5hcucYHAHQA",
+        "channel": "Sacred Sanatan Stories",
+        "visibility": "IN_GB",
+        "queryCount": 2,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCPa-P4SZBgG0DMtxDUYVAEw",
+        "channel": "OSHO Himalayas Wellness Resort",
+        "visibility": "IN_only",
+        "queryCount": 2,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC2gmm9Ssxx8R-cdAoCvjzRQ",
+        "channel": "Pods Central",
+        "visibility": "IN_only",
+        "queryCount": 2,
+        "topics": [
+          "practice",
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCDc06KOw3SQgBbxrPJNGzmg",
+        "channel": "SriKul",
+        "visibility": "all_three",
+        "queryCount": 2,
+        "topics": [
+          "practice",
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UCJyeqQy_fpkRy6022-9Hc3A",
+        "channel": "MANA",
+        "visibility": "all_three",
+        "queryCount": 2,
+        "topics": [
+          "practice",
+          "taboo"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCserKfRW6zuNJy8QF_WQ4jw",
+        "channel": "Astro Sadhguru Mantra",
+        "visibility": "all_three",
+        "queryCount": 2,
+        "topics": [
+          "practice",
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCyCfKwfBqqETeQPb8MfRtbQ",
+        "channel": "Cosmic Wisdom with Shivam",
+        "visibility": "all_three",
+        "queryCount": 2,
+        "topics": [
+          "practice",
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCCS2BV-YqzL6o3bveAPWmtA",
+        "channel": "Sepia Diaries",
+        "visibility": "all_three",
+        "queryCount": 2,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCCUpd49UXPZ7jpsUNn84E-w",
+        "channel": "Asura Astro",
+        "visibility": "all_three",
+        "queryCount": 2,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCk4J-oEylPxeNvRpRhmMh8w",
+        "channel": "Breaking Barriers with Priyaa Somani",
+        "visibility": "all_three",
+        "queryCount": 2,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCJJkUAcq908uEdzbJKjd51A",
+        "channel": "Aanchal Raj Kumar",
+        "visibility": "all_three",
+        "queryCount": 2,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC6Vrz87Uan6hKdiiIUuJEuQ",
+        "channel": "Kamakhya Tantra Marg",
+        "visibility": "all_three",
+        "queryCount": 2,
+        "topics": [
+          "taboo",
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCPkAVTAPo8-M04JmNr5_dgw",
+        "channel": "Spiritualified (English)",
+        "visibility": "all_three",
+        "queryCount": 2,
+        "topics": [
+          "historical",
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UCbkQTNG9gFqGo6OZw6KQQxg",
+        "channel": "Chakralytics",
+        "visibility": "all_three",
+        "queryCount": 2,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UCtut7zTIoUOH5h9E-5oGkUA",
+        "channel": "Awake Sanatan",
+        "visibility": "all_three",
+        "queryCount": 2,
+        "topics": [
+          "historical",
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCmIx-3kxXzq42F9T-hTzhCg",
+        "channel": "Neo Dharmism",
+        "visibility": "all_three",
+        "queryCount": 2,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCzdMY6Qsv9CrsNCPgtZlrIw",
+        "channel": "TRS Clips | The Ranveer Show Clips",
+        "visibility": "all_three",
+        "queryCount": 2,
+        "topics": [
+          "historical",
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC-tjKElpxMvdoBYDBaWQNHA",
+        "channel": "Tantric Meditation Practice",
+        "visibility": "all_three",
+        "queryCount": 2,
+        "topics": [
+          "historical",
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCHkcTMok_d0y4Y7ajeLSnmg",
+        "channel": "Mystic Monk",
+        "visibility": "all_three",
+        "queryCount": 2,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCHvjpGGyj_6T1KTqn8lriuw",
+        "channel": "Vedicfolks",
+        "visibility": "all_three",
+        "queryCount": 2,
+        "topics": [
+          "historical",
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCEwztSHH-S6sUHe1S0jHCtw",
+        "channel": "Shoonya Clips",
+        "visibility": "other",
+        "queryCount": 2,
+        "topics": [
+          "philosophy",
+          "practice"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCpu8LGbPoRhPeY7fUxjqasA",
+        "channel": "David William Pearce",
+        "visibility": "other",
+        "queryCount": 2,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCMRGVpWagFqO0bz1Z7IPsng",
+        "channel": "Kissey ",
+        "visibility": "other",
+        "queryCount": 2,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCT2Iw5HWDSQa1lesPk23jMQ",
+        "channel": "SHLLOKA ",
+        "visibility": "other",
+        "queryCount": 2,
+        "topics": [
+          "historical",
+          "practice"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCHDSxu4l4hhoq4QsCyCD2yQ",
+        "channel": "INTERNET YOGI TELUGU",
+        "visibility": "GB_only",
+        "queryCount": 2,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCT0Tv_IoXNpAfNTN2tWO4Kg",
+        "channel": "Alex Shailer",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCCNoXRH9OtoFHz1ZSvZuUfQ",
+        "channel": "Atma Gyan",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCtKc9lEQxucXlPaXqkSFN1Q",
+        "channel": "GuruVaani",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC9rcvB46WX4M3rFjGjRiqSA",
+        "channel": "THE Great Spiritual Awakening",
+        "visibility": "IN_US",
+        "queryCount": 1,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCo4wYjUniSFrr18Cf5QB2Dg",
+        "channel": "Sivananda Ashram Yoga Retreat Bahamas",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UCX-SI-FE7HvdwcMx64l6NCQ",
+        "channel": "Beyond Conscious",
+        "visibility": "IN_GB",
+        "queryCount": 1,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "IN",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCc6FUAZOMJaF4UHQaX3xKJg",
+        "channel": "The Aesthetics of Truth",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCeHg-mvmn_Jf_pGJdNxWxgA",
+        "channel": "Gaurish Akki Studio",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC-i3-6n3PjkJ3UjOa965KWg",
+        "channel": "Mystic's Digest With Shivam",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC_j8OSfe_nRSrXj5uj8kFug",
+        "channel": "Divya Itihaas",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCp1mRTkVlqDnxz_9S0YD9YQ",
+        "channel": "Philosophies for Life",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UCPF5G9iD57EOLXKhsjt5tyA",
+        "channel": "Book Dark Reader",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC0Qb7WEWW3xBop_6LC4t7qQ",
+        "channel": "Unplugged Shubhankar",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCmDTOj9yUaP561Mf6Yqup7g",
+        "channel": "Serinity on Waves ",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UCrnP_DCObGOYa5AR18cvw9w",
+        "channel": "Mental Pleasures",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC36UlWBhvfmiM5T1XZROA2Q",
+        "channel": "Ashutosh Angiras",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCFOm3wTS5E7JvBa6ofVGTlA",
+        "channel": "Legends of Bharat ",
+        "visibility": "IN_GB",
+        "queryCount": 1,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "IN",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCF88FMIlf41SpGMa-EGUp7Q",
+        "channel": "Vidya Parampara",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCMW237Jmqj4T-ArVfErZgsg",
+        "channel": "Shobha Rana Clips",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCjZQYEF6B6qFtxpPaT5zPlA",
+        "channel": "Midnight Mysticism",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UChYlfX83Pj173b9ysaBNBgQ",
+        "channel": "आगम गुरुकुल​ | Aagama Gurukulam",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC1LP4N3sVMrskpE4iSAjvvQ",
+        "channel": "Chaitanya Darshan",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCO6V5r9Ripxa_USmK-c5aKQ",
+        "channel": "Dr. Vinnith Pullavarayar ",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCt2Gxa6tB2lOEygSqMQ37yg",
+        "channel": "The Apex Mind",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UCcPoCgP7FSswXv8wyG_j6vQ",
+        "channel": "Gyan Ganga -  \"Jeev se Shiv\" ",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCSAF6DpbemYg6HTsnCYytFA",
+        "channel": "Dang! Life Mastery",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCM6kXQ2n4BH-7Oci53SSffw",
+        "channel": "Trika School of Tantra",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCekBl4Nru9IVqel1v6foovA",
+        "channel": "Padma Shakti",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCUgCoNl_c66cgmz2qeuR6_w",
+        "channel": "Find Yourself by ABK",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCpIANKoSrT41nZ_1okQZ-2w",
+        "channel": "Aditi",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCwCbQYbtd7hShLME_JUrk1Q",
+        "channel": "Don Lee Daniels",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCVwzwPV83Qo05WOIbOvHTLA",
+        "channel": "Swami Jyotirmayananda Live",
+        "visibility": "IN_US",
+        "queryCount": 1,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UCX5Ie5g2nkzCDXRm_8nGKIg",
+        "channel": "Atmanam Viddhi Know Thyself",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCNZnK6NfDQ9VM5prellZhPw",
+        "channel": "SyllabuswithRohit ",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC2oYa1r-30SS0xzzR9EViKg",
+        "channel": "Anant Gyaan",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCD7sfaHA-STxwwI3QlZVETQ",
+        "channel": "सनातन नेत्र - SanatanNetra",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCq2EyAAa42VWIA1YqUKAciQ",
+        "channel": "Anand Universe Official ",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC-XOhfF5WfN9Dn4bqYk9j_Q",
+        "channel": "Awakening Aura ",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCZg1jJGOFFsMxBL2rCF4AgA",
+        "channel": "OSHO",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCeDs-845_DAUzQr47VRXp3w",
+        "channel": "Sanatani AI",
+        "visibility": "IN_US",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCy1pbosyy31vMzyOZI6-f1w",
+        "channel": "Bhakti_sagar",
+        "visibility": "IN_GB",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCpkwdB00t2qlLAXY5mpbpgA",
+        "channel": "DAIVIK SHAKTIYA shorts",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCnYiTCfI0KIKRv6nxj99Ehg",
+        "channel": "Best Of TRS हिंदी | Hindi",
+        "visibility": "IN_US",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCYlKuAJt63yZjEIRaDwnjcw",
+        "channel": "The Mohit Talk Show",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCpl2Fny8hJKZ1qtPZhv23eQ",
+        "channel": "sᴀɴᴀᴛᴀɴɪ_ᴀᴍɪᴛ🩷",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCq8_V4I3z3KFYnM0--wNQ-w",
+        "channel": "namo budhay 1M ",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCQ1r_gh8tqHNiBZWFauNwkQ",
+        "channel": "AatmaVani",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCQGoA1CLimNaQcx6aUS67XQ",
+        "channel": "Śrī Śakti Tribe",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCNLE7qSL7fJercGZEdzHb3A",
+        "channel": "Gaanam Ai",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UClnJxSjoP4383wJOEK8Yc4A",
+        "channel": "Stories from Sanathana Dharma",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCynDAnr1iIdO6c0DY1Wy4uw",
+        "channel": "Sukanta Pal",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UCz3yLQRzcbOgzbz0PemtsPA",
+        "channel": "Mythical Krithika",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC2utlFpjijRA1p3kDNdjAog",
+        "channel": "Shiva Speaks",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCdaIXUsF3ZGTfJWa0wY1bRg",
+        "channel": "Social Copyright By Shweta Jaya",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCfeB8acVj6LNcHQC7ynsdEQ",
+        "channel": "कंकाली काली साधना शक्ति केंद्र",
+        "visibility": "IN_GB",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCVJPPhz0FTdH9lktZu00isQ",
+        "channel": "आचार्य भरत जी महाराज",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCV2xMjrzkeaG86gYWyrLCrQ",
+        "channel": "Podcast Wala",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCluJiVMBJt4p-Li87ny429Q",
+        "channel": "Mantra Ka Mandir ",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCIf14GhVJlT7OFrtg9BN8fg",
+        "channel": "Ravindra mankar Meditation",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCfBZ0_HonvlP-QnOUpz_NKA",
+        "channel": "DivineRas",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC0enUvN1AwRbrrpiYAtZOgg",
+        "channel": "DivineMantra",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCSu3CHWAcAzhxVWrKFzuriA",
+        "channel": "Kalala Kovela",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCm_aKcjPxKYTRrmTH_VvFNA",
+        "channel": "Podtak30",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCwfA0NGbZc5sJEkvW-CuSBQ",
+        "channel": "Lost Echos",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCo709uigDULcQn8SIAugnFw",
+        "channel": "Bhakti ki kathaye",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC9S3Iu3wR9bMAjouI0VKO5Q",
+        "channel": "Rajesh Gowda",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCj68YHxp_glMUjDc9oHwQUA",
+        "channel": "Sanatani Itihaas",
+        "visibility": "IN_US",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCJFWBnq4aZAFbaDS8AhUdKw",
+        "channel": "Prashnakundli",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCV_g3fN1jKFmollNHGBrx2w",
+        "channel": "Shishir Kumar",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UCDgsNbc3sZ1D9_zD4Y-mByA",
+        "channel": "Dr. Manmit Kumarr",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCxKNovaofMVQttl-tvMHeFA",
+        "channel": "Adbhut Rahasya",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCPb4UHZGd07yLjBhOqmlx9g",
+        "channel": "ManifestAuraByCharu",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCJMcEP20Lalkc9cdka85w0A",
+        "channel": "True Realms",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCKTRfpn0bFDbmWgioTGWC6w",
+        "channel": "The Hindu Lok",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCr4H6lWObEAr-Mqh9fHvZfA",
+        "channel": "Free Buddhist Audio",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCWge9Ld1Ph0WcMc4to_PZYA",
+        "channel": "$hivayogi",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCst0hQqoFvIYq_x-7UL8k6Q",
+        "channel": "Pixowl Tantra Talks",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCdUMf68OBNaNuffg2Lf4CTQ",
+        "channel": "CoreSpirituality",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCyL1eMQkDKAAagv_OlTSvoQ",
+        "channel": "Wanderer Abhishek",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCjFLgG2pZngdIF3ISLRTBCQ",
+        "channel": "AdyaTatva",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCwJwVecYGlhDQg95NW5glvw",
+        "channel": "Eternal Bhakti ",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UClhHB0_iXbn8Cc0x5YzcvIg",
+        "channel": "Khabargaon",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCfZF2mRSK5d7WfI9c7BOluQ",
+        "channel": "Bhavesh",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCqrGdsiR1hPetpksJFd5M1Q",
+        "channel": "Mr Perfectly Lost",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCDbtC-KGuP1MhPmgrlV8CSA",
+        "channel": " Toon Explainer",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UCh0ub9dJfw6mhaFVgg58tJg",
+        "channel": "civilplusIT Techno",
+        "visibility": "IN_US",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCR_tAyjJ77YUnJnM_N_3HMg",
+        "channel": "Aghor Podcast",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCc5JXsqVUAvdC5O1gC5F8Zg",
+        "channel": "Facts, Info & History",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UC9XKPbtdfNF9sZ9SIVggpYA",
+        "channel": "Ved Rahasya Bharat",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCjvEnB5v4DBSFXMywa6bf9Q",
+        "channel": "Aim High 360",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCKn8UXvcvWW9Dql2ppPDtEQ",
+        "channel": "Theosophical Society",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UCS0s6BFzIcvC2gTH52_vBEA",
+        "channel": "OSHO International",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UCWOaPyVI66nGEeTX3g1c7Ug",
+        "channel": "EST Show",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCt_VEOE4ylkcHghg81I_iDg",
+        "channel": "Yogi Hemdutt Giri — Dhyan Yogi",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCz7W-zkAL7DjQDPEEcobg3w",
+        "channel": "Somananda Tantra School",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UCgNXEK7kaSoWFsVUl8Dr8lA",
+        "channel": "Yogi Arunananda Muni",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCnifmL8hnSDYB3kgaSblXQA",
+        "channel": "Kartik InsightTales\n",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCkzM02nvd1wg7DU-nHF_QGg",
+        "channel": "Bhakti in hindi",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCHMDsI0nQzluEEyyre68fPw",
+        "channel": "  Satguru Arhant",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCzY_Cs8BBogdT-Y_KpBgc1A",
+        "channel": "S4W – Beyond Mind",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCMRGZVBONPV-pBPUmeY3NYA",
+        "channel": "HypnoMSTR - SONG OF POWER",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UCgdOTd4vKflV4R-icSjEGGA",
+        "channel": "Seeds of awakening",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCNl9bawXiVyU78BZBqER77A",
+        "channel": "Colleen Grady ★ Kundalini Education",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCgqFSxdF6gggWEbbeqc80xw",
+        "channel": "Quantum Spirit ",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UCp8NQk7AkKz8OmQXVqCPSlg",
+        "channel": "Forgotten Chronicles",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UC2fhyNp-57PFxUXPF0MtX6A",
+        "channel": "Vismaya",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCKhZAI2qXm89dmqylvP6MIA",
+        "channel": "EPIC  Sphere ",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCTzrchd72D_3pRK70JfBnPA",
+        "channel": "YTMahendra Podcast",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCKjFQcRLQcwfGWbFKQljouA",
+        "channel": "The Cyber Zeel",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC7bY4gHRuUro-dYH9tJv_Mw",
+        "channel": "Healing therapy ",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCEJ4qUmQ0bEZHpOZ0FsLgjw",
+        "channel": "Gaurab Rijal",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCvhh18ZLBBxNuQSrLvgngXA",
+        "channel": "SatyamShakti Astro & More | Poonam Dutta",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCaElp1rB3Hy99Xh1iaLaf1g",
+        "channel": "Meenakshi ",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UCUbZuH_QRE5wqbvQ2T9n6_A",
+        "channel": "Aarti",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCSSuXlonnJQABWoEn04Y2VA",
+        "channel": "AstheticPanditG",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCe41bxv8H7mU9WTWVdVfSEA",
+        "channel": "The Temple Girl",
+        "visibility": "IN_US",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCUU-omuUBrwuBRKoccLlK9g",
+        "channel": "Divine India",
+        "visibility": "IN_US",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCH3pkLXHGkc64_kOaqym4lg",
+        "channel": "Prince Singh",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCiGGz90A1WF_zcMC0F74ZeA",
+        "channel": "POD GURU",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCCyP1bZGzPgFAOjTuvVPH0w",
+        "channel": "Podcast with Arijit Chakraborty (Bengali Version)",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCL45vGj96oH1f8J8qzSl3gg",
+        "channel": "Tiwari G Talk Show",
+        "visibility": "IN_GB",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "IN",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCPdg66EWPM-n8aOy-n_zUow",
+        "channel": "Rrami Talks",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCGIz28YRK3CUy-3YhlKFq0w",
+        "channel": "Pod with Shivam ",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCURG8Jv8fpoI_yoK5AAbMMQ",
+        "channel": "News Pinch",
+        "visibility": "IN_GB",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "IN",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UChKjQM7K-NM4x79Giq3PAnw",
+        "channel": "Asia Live TV Astrology",
+        "visibility": "IN_GB",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "IN",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCq-MF8wuMR_DoHWkr1LM7Ww",
+        "channel": "kAnchana pITham",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCFUN6V7Tsgwzc9eSnj0WJrg",
+        "channel": "Mystical Adhvika",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCAFRBOjGJC9A61AWM9jv3sw",
+        "channel": "The Podcastiyy Show",
+        "visibility": "IN_US",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCSxjbQMDmcot814H5PoO_TQ",
+        "channel": "SSP Clips",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCRGrWMHdiyYkECXkvIDsKyA",
+        "channel": "SciMyth Nexus\n\n",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCzmj1OTqy8p0FcCGl4OY6IA",
+        "channel": "Sakshi TV Subhamasthu",
+        "visibility": "IN_US",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCO4dMrE781wMC7pjLGJWbYg",
+        "channel": "Vamachara - Topic",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCIZf26z0u9Ey-uPjUI2i5lg",
+        "channel": "Sephirah Shamanism",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCQU9VlV2BYxwMpPppPXv-wA",
+        "channel": "Aposento - Topic",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCB1kL24dFitqlnKiwH_d3mA",
+        "channel": "The Relentless Pursuit Podcast ",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCSE4lX-BpM5FynjUjCOgIhA",
+        "channel": "Voice Of Kali ",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCCdP96dOBuheTVIvJwGd5IQ",
+        "channel": "Baal Kadmon",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCWbnGiQKqbK5vpdpSiY5Gtw",
+        "channel": "Unknown India Podcast Stories",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UCR9roav4Am7XTd0rsxfSSLg",
+        "channel": "KadakkClips",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCjAKI6_0lpG7d3SHar9a6YQ",
+        "channel": "Forbidden Yoga",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCCYMdQd-B2NYp1g3EU9K1MA",
+        "channel": "Dreams of History",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCt4uf72E7eruof_aR_fu0Ng",
+        "channel": "Bhakti Dip",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCquW1dPbV3aY-rGNAzDt6lg",
+        "channel": "THE BHARATVARSH",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC2qCwXkzFBtEVKMgGBrQAxQ",
+        "channel": "Sensual Secrets Revealed",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UCxlndEltmjcpHqQB5SB1hSg",
+        "channel": "Sex Reimagined",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UC_hnZhBLcg9kGkO2SAuP_Yw",
+        "channel": "The Manas Show ",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC0rP9aVtwn8dt5KhTJFXPaQ",
+        "channel": "Srishti Sthiti Laya",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCyiJmYgl2u9hYu280y5qjvQ",
+        "channel": "DIGDARSHAN ASTRO",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCR-79mpjMRNg1rlAD-BtRww",
+        "channel": "Exotic India",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCM1eFa0ciZrSpAxG-pPRbeg",
+        "channel": "Dr Pooja Sharmaa- Astrologer & Paranormal Expert",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC4I4k41dSerMi6TOxfFZHZw",
+        "channel": "Songe Sangita",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCo9ZLjsFQ8M9sHweg9Zb9-Q",
+        "channel": "Vishwa Ki Pukaar",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCT8sfDJto4gsQNJWZuKdZMg",
+        "channel": "Vedavidhya",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCXF0YudKIeoe_RRhzBBk5CA",
+        "channel": "Om Vajrapani Hum",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCxq2FkLzjwI1tHyLRQwiYaA",
+        "channel": "Hindu Matrix",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCn-Pn55gA8PzZJSRDCrWuVg",
+        "channel": "Adi Suyash",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC3nhAUpe7aBm1rFCBgoWWcA",
+        "channel": "Sangam Talks",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCcTvh25XtsNyITj00WEUpcw",
+        "channel": "Smart Telugu Minds",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCS4SucsgYhA1WbrnpQrYEcg",
+        "channel": "@history._.facts_.1232",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCgRf62bnK3uX4N-YEhG4Jog",
+        "channel": "Sleepy Classes IAS",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCZOKv_xnTzyLD9RJmbBUV9Q",
+        "channel": "Vedanta Society of New York",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UC1RL8IUPj7yBsYeWOT8VOYQ",
+        "channel": "Chronicles of Sanatana",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC9MMymQxT6vIxz5ScyG-bkg",
+        "channel": "Tattva Gyan",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCD7L_SEy5ko4Uw4mjbXDy0w",
+        "channel": "FYI by Aditya Goel",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCAPz2bZVHaeBpZExd_28WyQ",
+        "channel": "Brain Gyan Facts",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCfV52XSpDSZC5HBLjHRJMlQ",
+        "channel": "The Spotlight Podcast",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCPsHDLtJErVwz27FN6rZfyg",
+        "channel": "Gupt Tantra Rahasya",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC8HRYUBXTHv4mJ67Y5FitSg",
+        "channel": "Hyper Quest",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC1J3kM8aTYHtgdEsvfgqThg",
+        "channel": "Agyaat Parth",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCN3E7eOxJcQyEN83jNQZEEQ",
+        "channel": "Hitesh ",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCfzXBG-K4C0-XNjGpRLLAEw",
+        "channel": "Spiritual Weave (English)",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UCdefYfRohqSQt6EI4DVC_9w",
+        "channel": "Priyansh Shukla",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC6LZ3LHgo8pphx9cjOYciPA",
+        "channel": "The Poetic Word",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCl2DCj3sY2pNoHWzP9NjrMg",
+        "channel": "Madhya Pradesh Tourism",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC3nQL6wXInFIArFiSkn7gmA",
+        "channel": "games",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC4YWuOWHV9TJsOOtBY3J6Fw",
+        "channel": "Apna Box",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC5r_PuHtszCkR4eJzabLpeA",
+        "channel": "Story teller of Bharat",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC3qm01OzTsKKKlkOx2z-cuQ",
+        "channel": "Dvaya Facts",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCDwH9HAMn8EpIJ8y1q7ws1A",
+        "channel": "OM PRAKASH SONI VLOGS 3.0",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UChOHAoVKJ3coNFomdN-evBA",
+        "channel": "BhaktiOne",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCq0ZifO2YFPU-bHIENulflw",
+        "channel": "Storytrails",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCg047Rn6uwSE3-WyGO1kJfA",
+        "channel": "Vijaya Mavuru",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCTBWbV_T6BzBOC509mjAjCw",
+        "channel": "Siddha Tantra Arts",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UC_WPjFWAnQ7BV1fN4S3x3Zg",
+        "channel": "Being Doctor",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCxiQ1jAqnDwoV85kW_SIgrg",
+        "channel": "VISIO NEWS",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCRj2aBTAD04whSOONc_g_aw",
+        "channel": "SVL Telugu",
+        "visibility": "IN_US",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCkixh9gwyOgLFwZpgQb9MWA",
+        "channel": "The Rudrayan",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UC25AXB1cXdrvGrJYbn5B68g",
+        "channel": "The Practical Mystic",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UC7Qwdn7ZgHKc2d0FQH10p7g",
+        "channel": "ItihaasLok",
+        "visibility": "IN_only",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCmdk_e6aj-hp237Ae-xKpnw",
+        "channel": "Tantrik Teachings",
+        "visibility": "all_three",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "IN",
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCHqV21AHMmdJ_RynWqwmZEA",
+        "channel": "Beyond The Mind",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UCEq4yZ4Mb4Ko5Cd5TwmXPLg",
+        "channel": "Educational cosmos",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC4IdK8LJzbmc0EwCN2TayYw",
+        "channel": "possible sharma",
+        "visibility": "US_only",
+        "queryCount": 1,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "US"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC8LfTFmbL-6sxcu0DLOV6Ig",
+        "channel": "Mahasiddha Yoga (Mahasiddha Yoga)",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UCAZQ7T4_ftRm-3rRTAcJSyw",
+        "channel": "Dr. Madhvi Prasad",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCKkiZ0u_opvMmQCxMbs4aAg",
+        "channel": "KAAL KA NARTAN",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCPt3zcxZ3NTNsRNxmaGcSJA",
+        "channel": "Stay Spiritual",
+        "visibility": "US_only",
+        "queryCount": 1,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "US"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCITlqVfxGUZVGDPdPmngI8g",
+        "channel": "The Servitor of God",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UChCS44EDbIBmvJQwiVjMxFQ",
+        "channel": "divyamlife",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UCJL_kEHR455-QN5QIoQNj3A",
+        "channel": "Ulrich Mohrhoff",
+        "visibility": "US_only",
+        "queryCount": 1,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "US"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UC-5EpyMkkR6e9gjeHh5gnoA",
+        "channel": "NOT JUSTT FACT",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCNAroSMP_8B2TOURH77mA1A",
+        "channel": "The Transformation Network",
+        "visibility": "US_only",
+        "queryCount": 1,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "US"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UC7xnpLLguxXtCMD8dOlqO_w",
+        "channel": "Veiled",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCMJYFvV2S1_N7Z1G3JDdzHw",
+        "channel": "Tantra Enthusiast",
+        "visibility": "US_only",
+        "queryCount": 1,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "US"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCOeytFtm5AqiR6_3M1C_1hw",
+        "channel": "Alchemy Yoga & Meditation Center",
+        "visibility": "US_only",
+        "queryCount": 1,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "US"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCl1Cxpe7qN0BaEn1GBq_NvQ",
+        "channel": "Tattva Darshan",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC1fpxMn3FLKjIpsm5YAeDYA",
+        "channel": "Audiobook Haven ",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCskshdY-kNHqkvKtnBCWEkw",
+        "channel": "Spirition",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UCmNxN6iUJvkOvL7zu8rDLHA",
+        "channel": "Echoes Of Emptiness",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC5o-x2uCY1z7C4qWgjuhwwQ",
+        "channel": "തിരുനേത്രം",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCvuoYhuM2TsRIvfRZgld0Lw",
+        "channel": "SWAMI YO",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCMMZrMUtOj5vfTLKfB1VTJw",
+        "channel": "Mittal Motion Movies",
+        "visibility": "US_only",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "US"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCU2-geJZsNbHJ8ZkkWODrYQ",
+        "channel": "Yagnaseni",
+        "visibility": "US_only",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "US"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCZ0hNUqXDl0YWh3ulUZy1jQ",
+        "channel": "V R RAJA",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCRnEU355ttgimkXQSKbJURw",
+        "channel": "Kahaani",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCnYnl-ToBijPm9j37X9DjQw",
+        "channel": "Yaduvanshi Epics",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCQ8Q4Bk35l4Ll5R03Urv1rg",
+        "channel": "Pritee Jagesh",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCKhHogYSDVqmepFaUluuBEg",
+        "channel": "Bhairavidham official",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCxRJ245w3hawmhOZu-vXk_Q",
+        "channel": "Lex Horror",
+        "visibility": "US_only",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "US"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC4Y35mD4Fbetw7sfM4HWziA",
+        "channel": "Divine Machine",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCBfcb2o2j0AnTLCCaKf1uRw",
+        "channel": "Spiritual Melodiez",
+        "visibility": "US_only",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "US"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCDUtypnATozNE48Sv_zEk0A",
+        "channel": "Kashi Archan Foundation",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC7Vg5gFmEbAb9KJEoYk0_rQ",
+        "channel": "Shakti Swarup",
+        "visibility": "US_only",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "US"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCKmLcdmDzfohWSBRCwaZqfQ",
+        "channel": "SHIVSHAKTI SIDDHESHWAR AKHADA",
+        "visibility": "US_only",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "US"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCbFJ5-l0RpbH0T_dHnCo1YA",
+        "channel": "Sanatan Secrets by Devansh",
+        "visibility": "US_only",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "US"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCmoBmrF_e_zeKR32Ni0H82Q",
+        "channel": "The Mantra Sanctuary",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCQMsk0xFv8i3EeALWH8Wmyw",
+        "channel": "The Orbis Tales",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UCd1eaKw1-3PM5qkMmS9ggLQ",
+        "channel": "Dharma Decoded",
+        "visibility": "US_only",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "US"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCf09mlA5w84Q8Hvrj7U5ygA",
+        "channel": "The  Bharataadi Occult",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC-EZ9c0C84xfHsVq8WlyBeg",
+        "channel": "Kaalchakra Vidya",
+        "visibility": "US_only",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "US"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCLZmC9NeNYbuNKfoxcLDULA",
+        "channel": "Divine Connection",
+        "visibility": "US_only",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "US"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC2XrguTdB0PqtfWbSGQOwOw",
+        "channel": "maastrostage ",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCyuhnnrJbL5NJWHxuEWQi3Q",
+        "channel": "RaterGolpo",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCNNv3PTAf9XLP7QCiWaE4PA",
+        "channel": "Veils of Fire: The Himalayan Shaman Podcast",
+        "visibility": "US_only",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "US"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UCKxmUw1nvB1Frgxvl-KVMnA",
+        "channel": "PureBhakti official",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCOYBmazzLAGIWDm3mTAm0Gw",
+        "channel": "The Must With Manav",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC2FXu0kEUz8Ms-l0KE_Afsg",
+        "channel": "Unity Through All Beliefs",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCP7gKuhxz461fYqJLbJKWVA",
+        "channel": "Aren Sol Tantra",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC2e7a9TPIzjzQ83ET5XMZXw",
+        "channel": "Yoga Tantra Healing ",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCYbdsDLwVy5T9RK8erTg7cg",
+        "channel": "Mariya Grinina",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC4esyRJuQ6Ijiq648AkH7QQ",
+        "channel": "Monica Mesa Dasi | Tantra & Yoga teacher",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCU1LeSVq9ZHGOZfy8YOKrFA",
+        "channel": "Tantric Flame",
+        "visibility": "US_only",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "US"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UC07OWDw77gIQCnKwTY9nUMg",
+        "channel": "BeYoNd ThE MiNd",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCbImJNWsxa4iH_8Bo-LjKuA",
+        "channel": "Sankalpa Breath",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UCA_yWQWKUAFATozqhT4akBg",
+        "channel": "Lovemotives Meditation Music",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UCo5hMDCYZVdT3i79Ij5_JOA",
+        "channel": "Brainpower Healing",
+        "visibility": "US_only",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "US"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCTetXtfMNzsY2hBIO_RP-CQ",
+        "channel": "Sound Relaxions",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCp4AoytujRIDStBGP0Y_8mg",
+        "channel": "Narelle QHHT With Me",
+        "visibility": "US_only",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "US"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC7qWJpnpl1Ne7dlpaqGVsrw",
+        "channel": "mysticdiffusion",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UChI5shAyOgYE2CYzQgWPvGg",
+        "channel": "AyurPrana+",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCYNU0MsfmD0P9DIs2S8cplg",
+        "channel": "bekindofficial",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCtCrCEpu4aOdKuQtltAUjag",
+        "channel": "Whatif",
+        "visibility": "US_only",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "US"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UC66ekSYdCozKWboMe8QN-qw",
+        "channel": "Being Shiva Foundation",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UCqFg6QnwgtVHo1iFgpxrx-A",
+        "channel": "The Sanskrit Channel",
+        "visibility": "US_only",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "US"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UCy7tUy2g7mxHqiaGjD0bnvA",
+        "channel": "POV Unpopular ",
+        "visibility": "US_only",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "US"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCT_TPqa7sZatvyEE-fHQIFw",
+        "channel": "Ayush D Gupta",
+        "visibility": "US_only",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "US"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCew-pajn__JQuaiT9RUO_ow",
+        "channel": "Tarun Sharma Show",
+        "visibility": "US_only",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "US"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC2AFa0zFjR2ZkieLFJq5ZJw",
+        "channel": "Rahasya Mandal",
+        "visibility": "US_only",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "US"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCxsWVekYVmRI8sbPY4ngqKg",
+        "channel": "Namo Shreemannarayanaya",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UCs04I0f6Kwa-ujMlIqrJLJw",
+        "channel": "Heresiarch Dari",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCioHsxVm8fXaqiPjtmuZFcQ",
+        "channel": "Lantern Bridge",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC9hiJEKLE63gHot-TlQzcIw",
+        "channel": "Secrets of Aghora",
+        "visibility": "US_only",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "US"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UCnD9rzdX0NwNJ_rn8nJbzIg",
+        "channel": "Natalie Maloy ",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCch1bXVfjbIy4JQE1nLVxvw",
+        "channel": "Sahara Rose",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCMIe7SdWhbYmakkAUEgqT9A",
+        "channel": "Des O'Connor Tonight",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCIbFGC_idL7X2VMHuvoYNvQ",
+        "channel": "Sex Ritual Radio",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCNFyc_WHg0Q5WyaFEPAktpw",
+        "channel": "Ricerche Vediche Jagannatha Vallabha",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCDgDb-G6dlL4UJ34mKWbjZQ",
+        "channel": "Agnibha Majhi",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCs1bhiK1Mm54feFYUlb4gZA",
+        "channel": "Gold & Silver jewellery Designs🪙",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCVwpYbn2mMuvPE59tgGBTvw",
+        "channel": "odia all service",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCDLibes52B6qqq1OrLDwYCw",
+        "channel": "Sweety Sharma ",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC0XueCdyzMsFLi9UQLiBY9g",
+        "channel": "Astro Arun Pandit",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCuItyhnDi9WmkNjhMOTFfKQ",
+        "channel": "Maya unveiled",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCv9QYVVn7GJSvFbM06qftjg",
+        "channel": "Trika vivant (EYI)  avec Emma",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCbuMYW8nlkCWz5ij9FQpoeg",
+        "channel": "Interesting History",
+        "visibility": "US_only",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "US"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UChA_hUY3f8WdMmLBd23Yu7Q",
+        "channel": "Oka Nimisham",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC9j_b3CUu22t2wEmcUrk7FQ",
+        "channel": "Kathryn Kuppan",
+        "visibility": "US_only",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "US"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCEU0KgRKIjMVO-P8kyvEPhQ",
+        "channel": "Mystical Monk",
+        "visibility": "US_only",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "US"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UCoHSSOVW0MmelW54HU_ZLSg",
+        "channel": "Eternal Lamp",
+        "visibility": "US_only",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "US"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCDa10VbYzhqMIkXR9Pa2SPQ",
+        "channel": "Glitch in the Code",
+        "visibility": "US_only",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "US"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UChweV2uNlWpo5gqsCJq64bg",
+        "channel": "PAURANIK_TALKS",
+        "visibility": "US_only",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "US"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCgyCgtQqAj8u6SQAKaH7Unw",
+        "channel": "Tantrasara",
+        "visibility": "US_only",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "US"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCbjQG9s80ylEiXaMS1Em3yw",
+        "channel": "Speaking Archaeologically",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC27WiUqSBc5UQ18N-cPsnnA",
+        "channel": "Adi Anant Mahadev",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCINMvp_Eyql3N4XbdT88BZA",
+        "channel": "JourneyFolio",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCigobKw7FsgwK0lcczBeSZA",
+        "channel": "Scrolls Beyond Time",
+        "visibility": "US_only",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "US"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCPuHymC2zW4O-Fi97XawbVA",
+        "channel": "MidnightSnuffing",
+        "visibility": "US_only",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "US"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC1zM44ajqxfYd9F24OI5PyQ",
+        "channel": "Heather Elton Yoga",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UCTL1Cj4cQjPfhWWNHGKdQsQ",
+        "channel": "Chakrasiddh Holistic Healing & Research Centre",
+        "visibility": "US_only",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "US"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCYeU1a_L_pXuQd5pyAv_pgA",
+        "channel": "Naropa Wisdom Traditions",
+        "visibility": "US_only",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "US"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCH_rrmQbr_yPyd7vZpyjGWQ",
+        "channel": "ШКОЛА ШАКТИ",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCSsWnWwv_2tK6aTtSRoIkdA",
+        "channel": "healingwithmayoori",
+        "visibility": "other",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "US",
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UCeDZCa3VrRQvzBlVR-oVVmA",
+        "channel": "Bernardo Kastrup 🇪🇺",
+        "visibility": "GB_only",
+        "queryCount": 1,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCMO1_GnB0uaWcNyE3o0ia5w",
+        "channel": "noopur chowdhary",
+        "visibility": "GB_only",
+        "queryCount": 1,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCLc0ywIJl5SsHksyWIwi69Q",
+        "channel": "Rajada's World",
+        "visibility": "GB_only",
+        "queryCount": 1,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UC-UnuhTYxpoGn99Z5crQQdw",
+        "channel": "KRISHNABOON",
+        "visibility": "GB_only",
+        "queryCount": 1,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UCLFvF3dgAhZ0qDJVzGe--LA",
+        "channel": "Athmeeyatha",
+        "visibility": "GB_only",
+        "queryCount": 1,
+        "topics": [
+          "philosophy"
+        ],
+        "regionsPresent": [
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC4Nq3oJ_e6y0cV5JS_2tEtA",
+        "channel": "OnePath",
+        "visibility": "GB_only",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UCK6xoofzZGdlAlJYP2elSZQ",
+        "channel": "Myths & Madness",
+        "visibility": "GB_only",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCVFtCTDX62MQBYoMgKoAIMg",
+        "channel": "Taan tales",
+        "visibility": "GB_only",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCmQ0Z8XdIIT42HegTXnyoYA",
+        "channel": "The 5th Head",
+        "visibility": "GB_only",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCPQ7OQ031D3QdhI2WBzQ2BA",
+        "channel": "Daily Dose Of Hinduism",
+        "visibility": "GB_only",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCWa7g407x-lYfFFqnTntfaQ",
+        "channel": "Bhakti Clipz",
+        "visibility": "GB_only",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UChwbZEdZI23_OOilv3zPqbw",
+        "channel": "Dhyana Nada",
+        "visibility": "GB_only",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCm5EqVl3P2qnbUoLN7Ti7Jg",
+        "channel": "Rahasya Purana",
+        "visibility": "GB_only",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCsw7IOTNn3tgqWTSdXq4SUQ",
+        "channel": "Apiica Sharrma",
+        "visibility": "GB_only",
+        "queryCount": 1,
+        "topics": [
+          "deity"
+        ],
+        "regionsPresent": [
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UC6-cyMZJhxpMv5QsbQr0heg",
+        "channel": "TARANATH TANTRICK OFFICIAL",
+        "visibility": "GB_only",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCMzjmBRZxKGoKrJ-Ev0rTtQ",
+        "channel": "Net Worth Ascent",
+        "visibility": "GB_only",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UCzyJur_dNuCp2btCESe6Zkw",
+        "channel": "Ilona Moore",
+        "visibility": "GB_only",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC_8-29aJXcHCSSqUUSB4V_A",
+        "channel": "Awakening With Paramahansa Yogananda",
+        "visibility": "GB_only",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UCeySpSjzlgn0Mhno7mizmrA",
+        "channel": "Spoken Pages",
+        "visibility": "GB_only",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCsh2yTuCdKpMhYhIBH4U8NA",
+        "channel": "SangamTalks Religion & Spirituality",
+        "visibility": "GB_only",
+        "queryCount": 1,
+        "topics": [
+          "practice"
+        ],
+        "regionsPresent": [
+          "GB"
+        ],
+        "audioIsEnglish": true
+      },
+      {
+        "channelId": "UCWmdr33ZTRRiBCDNB3LaUPw",
+        "channel": "Azaan",
+        "visibility": "GB_only",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCx8Z14PpntdaxCt2hakbQLQ",
+        "channel": "The Lallantop",
+        "visibility": "GB_only",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCANp2YejdjMHJ4rIuce93oA",
+        "channel": "History by Mae",
+        "visibility": "GB_only",
+        "queryCount": 1,
+        "topics": [
+          "taboo"
+        ],
+        "regionsPresent": [
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCR8fLtGCOSu6MYXaCOG0mJA",
+        "channel": "Kasheer History Foundation",
+        "visibility": "GB_only",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UC74yFf11HqOLk6Rm9Vlt-NA",
+        "channel": "Tantrādhva",
+        "visibility": "GB_only",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCdEDHZZhu00GBsrlruD4IeQ",
+        "channel": "Adi Suyash English",
+        "visibility": "GB_only",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCOLhxcOZJsfpGA0wwHyuz9g",
+        "channel": "Vigya",
+        "visibility": "GB_only",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCxhBb3kP1gaJwpZpv-1pW5A",
+        "channel": "IANS TV",
+        "visibility": "GB_only",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCVh3jvAboe4v9KAtEpJ5xvQ",
+        "channel": "Behind Artifact",
+        "visibility": "GB_only",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "GB"
+        ],
+        "audioIsEnglish": false
+      },
+      {
+        "channelId": "UCE9jqtm1tRNfzCsWeVFw-Fw",
+        "channel": "Takshak",
+        "visibility": "GB_only",
+        "queryCount": 1,
+        "topics": [
+          "historical"
+        ],
+        "regionsPresent": [
+          "GB"
+        ],
+        "audioIsEnglish": true
+      }
+    ],
     "queryAnalysis": [
-      {
-        "query": "Kashmir Shaivism consciousness",
-        "topic": "philosophy",
-        "inResults": 0,
-        "usResults": 0,
-        "gbResults": 0,
-        "inChannels": 0,
-        "usChannels": 0,
-        "gbChannels": 0,
-        "inOnlyWestern": 0,
-        "gapScore": null,
-        "ukDataQuality": "insufficient_data",
-        "inEnglishAudio": 0,
-        "inNonEnglishOrUnknown": 0
-      },
-      {
-        "query": "tantra philosophy explained",
-        "topic": "philosophy",
-        "inResults": 0,
-        "usResults": 0,
-        "gbResults": 0,
-        "inChannels": 0,
-        "usChannels": 0,
-        "gbChannels": 0,
-        "inOnlyWestern": 0,
-        "gapScore": null,
-        "ukDataQuality": "insufficient_data",
-        "inEnglishAudio": 0,
-        "inNonEnglishOrUnknown": 0
-      },
-      {
-        "query": "Abhinavagupta philosophy",
-        "topic": "philosophy",
-        "inResults": 0,
-        "usResults": 0,
-        "gbResults": 0,
-        "inChannels": 0,
-        "usChannels": 0,
-        "gbChannels": 0,
-        "inOnlyWestern": 0,
-        "gapScore": null,
-        "ukDataQuality": "insufficient_data",
-        "inEnglishAudio": 0,
-        "inNonEnglishOrUnknown": 0
-      },
-      {
-        "query": "36 tattvas explained",
-        "topic": "philosophy",
-        "inResults": 0,
-        "usResults": 0,
-        "gbResults": 0,
-        "inChannels": 0,
-        "usChannels": 0,
-        "gbChannels": 0,
-        "inOnlyWestern": 0,
-        "gapScore": null,
-        "ukDataQuality": "insufficient_data",
-        "inEnglishAudio": 0,
-        "inNonEnglishOrUnknown": 0
-      },
-      {
-        "query": "spanda vibration consciousness",
-        "topic": "philosophy",
-        "inResults": 0,
-        "usResults": 0,
-        "gbResults": 0,
-        "inChannels": 0,
-        "usChannels": 0,
-        "gbChannels": 0,
-        "inOnlyWestern": 0,
-        "gapScore": null,
-        "ukDataQuality": "insufficient_data",
-        "inEnglishAudio": 0,
-        "inNonEnglishOrUnknown": 0
-      },
-      {
-        "query": "pratyabhijna recognition philosophy",
-        "topic": "philosophy",
-        "inResults": 0,
-        "usResults": 0,
-        "gbResults": 0,
-        "inChannels": 0,
-        "usChannels": 0,
-        "gbChannels": 0,
-        "inOnlyWestern": 0,
-        "gapScore": null,
-        "ukDataQuality": "insufficient_data",
-        "inEnglishAudio": 0,
-        "inNonEnglishOrUnknown": 0
-      },
-      {
-        "query": "Bhairava tantra explained",
-        "topic": "deity",
-        "inResults": 0,
-        "usResults": 0,
-        "gbResults": 0,
-        "inChannels": 0,
-        "usChannels": 0,
-        "gbChannels": 0,
-        "inOnlyWestern": 0,
-        "gapScore": null,
-        "ukDataQuality": "insufficient_data",
-        "inEnglishAudio": 0,
-        "inNonEnglishOrUnknown": 0
-      },
-      {
-        "query": "Kali tantra history",
-        "topic": "deity",
-        "inResults": 0,
-        "usResults": 0,
-        "gbResults": 0,
-        "inChannels": 0,
-        "usChannels": 0,
-        "gbChannels": 0,
-        "inOnlyWestern": 0,
-        "gapScore": null,
-        "ukDataQuality": "insufficient_data",
-        "inEnglishAudio": 0,
-        "inNonEnglishOrUnknown": 0
-      },
-      {
-        "query": "Chinnamasta goddess meaning",
-        "topic": "deity",
-        "inResults": 0,
-        "usResults": 0,
-        "gbResults": 0,
-        "inChannels": 0,
-        "usChannels": 0,
-        "gbChannels": 0,
-        "inOnlyWestern": 0,
-        "gapScore": null,
-        "ukDataQuality": "insufficient_data",
-        "inEnglishAudio": 0,
-        "inNonEnglishOrUnknown": 0
-      },
-      {
-        "query": "Bagalamukhi tantra",
-        "topic": "deity",
-        "inResults": 0,
-        "usResults": 0,
-        "gbResults": 0,
-        "inChannels": 0,
-        "usChannels": 0,
-        "gbChannels": 0,
-        "inOnlyWestern": 0,
-        "gapScore": null,
-        "ukDataQuality": "insufficient_data",
-        "inEnglishAudio": 0,
-        "inNonEnglishOrUnknown": 0
-      },
-      {
-        "query": "Dhumatavi goddess",
-        "topic": "deity",
-        "inResults": 0,
-        "usResults": 0,
-        "gbResults": 0,
-        "inChannels": 0,
-        "usChannels": 0,
-        "gbChannels": 0,
-        "inOnlyWestern": 0,
-        "gapScore": null,
-        "ukDataQuality": "insufficient_data",
-        "inEnglishAudio": 0,
-        "inNonEnglishOrUnknown": 0
-      },
-      {
-        "query": "ten mahavidyas explained",
-        "topic": "deity",
-        "inResults": 0,
-        "usResults": 0,
-        "gbResults": 0,
-        "inChannels": 0,
-        "usChannels": 0,
-        "gbChannels": 0,
-        "inOnlyWestern": 0,
-        "gapScore": null,
-        "ukDataQuality": "insufficient_data",
-        "inEnglishAudio": 0,
-        "inNonEnglishOrUnknown": 0
-      },
-      {
-        "query": "cremation ground tantra",
-        "topic": "practice",
-        "inResults": 0,
-        "usResults": 0,
-        "gbResults": 0,
-        "inChannels": 0,
-        "usChannels": 0,
-        "gbChannels": 0,
-        "inOnlyWestern": 0,
-        "gapScore": null,
-        "ukDataQuality": "insufficient_data",
-        "inEnglishAudio": 0,
-        "inNonEnglishOrUnknown": 0
-      },
-      {
-        "query": "Aghori philosophy explained",
-        "topic": "practice",
-        "inResults": 0,
-        "usResults": 0,
-        "gbResults": 0,
-        "inChannels": 0,
-        "usChannels": 0,
-        "gbChannels": 0,
-        "inOnlyWestern": 0,
-        "gapScore": null,
-        "ukDataQuality": "insufficient_data",
-        "inEnglishAudio": 0,
-        "inNonEnglishOrUnknown": 0
-      },
-      {
-        "query": "tantric meditation practices",
-        "topic": "practice",
-        "inResults": 0,
-        "usResults": 0,
-        "gbResults": 0,
-        "inChannels": 0,
-        "usChannels": 0,
-        "gbChannels": 0,
-        "inOnlyWestern": 0,
-        "gapScore": null,
-        "ukDataQuality": "insufficient_data",
-        "inEnglishAudio": 0,
-        "inNonEnglishOrUnknown": 0
-      },
-      {
-        "query": "kundalini tantra awakening",
-        "topic": "practice",
-        "inResults": 0,
-        "usResults": 0,
-        "gbResults": 0,
-        "inChannels": 0,
-        "usChannels": 0,
-        "gbChannels": 0,
-        "inOnlyWestern": 0,
-        "gapScore": null,
-        "ukDataQuality": "insufficient_data",
-        "inEnglishAudio": 0,
-        "inNonEnglishOrUnknown": 0
-      },
-      {
-        "query": "chakra tantra explained",
-        "topic": "practice",
-        "inResults": 0,
-        "usResults": 0,
-        "gbResults": 0,
-        "inChannels": 0,
-        "usChannels": 0,
-        "gbChannels": 0,
-        "inOnlyWestern": 0,
-        "gapScore": null,
-        "ukDataQuality": "insufficient_data",
-        "inEnglishAudio": 0,
-        "inNonEnglishOrUnknown": 0
-      },
-      {
-        "query": "nyasa tantric ritual",
-        "topic": "practice",
-        "inResults": 0,
-        "usResults": 0,
-        "gbResults": 0,
-        "inChannels": 0,
-        "usChannels": 0,
-        "gbChannels": 0,
-        "inOnlyWestern": 0,
-        "gapScore": null,
-        "ukDataQuality": "insufficient_data",
-        "inEnglishAudio": 0,
-        "inNonEnglishOrUnknown": 0
-      },
-      {
-        "query": "tantric black magic history",
-        "topic": "taboo",
-        "inResults": 0,
-        "usResults": 0,
-        "gbResults": 0,
-        "inChannels": 0,
-        "usChannels": 0,
-        "gbChannels": 0,
-        "inOnlyWestern": 0,
-        "gapScore": null,
-        "ukDataQuality": "insufficient_data",
-        "inEnglishAudio": 0,
-        "inNonEnglishOrUnknown": 0
-      },
-      {
-        "query": "abhicara tantra rituals",
-        "topic": "taboo",
-        "inResults": 0,
-        "usResults": 0,
-        "gbResults": 0,
-        "inChannels": 0,
-        "usChannels": 0,
-        "gbChannels": 0,
-        "inOnlyWestern": 0,
-        "gapScore": null,
-        "ukDataQuality": "insufficient_data",
-        "inEnglishAudio": 0,
-        "inNonEnglishOrUnknown": 0
-      },
-      {
-        "query": "vamachara left hand path",
-        "topic": "taboo",
-        "inResults": 0,
-        "usResults": 0,
-        "gbResults": 0,
-        "inChannels": 0,
-        "usChannels": 0,
-        "gbChannels": 0,
-        "inOnlyWestern": 0,
-        "gapScore": null,
-        "ukDataQuality": "insufficient_data",
-        "inEnglishAudio": 0,
-        "inNonEnglishOrUnknown": 0
-      },
-      {
-        "query": "tantra sexual rituals history",
-        "topic": "taboo",
-        "inResults": 0,
-        "usResults": 0,
-        "gbResults": 0,
-        "inChannels": 0,
-        "usChannels": 0,
-        "gbChannels": 0,
-        "inOnlyWestern": 0,
-        "gapScore": null,
-        "ukDataQuality": "insufficient_data",
-        "inEnglishAudio": 0,
-        "inNonEnglishOrUnknown": 0
-      },
       {
         "query": "pancha makara five ms",
         "topic": "taboo",
-        "inResults": 0,
-        "usResults": 0,
-        "gbResults": 0,
-        "inChannels": 0,
-        "usChannels": 0,
-        "gbChannels": 0,
-        "inOnlyWestern": 0,
-        "gapScore": null,
-        "ukDataQuality": "insufficient_data",
+        "inResults": 15,
+        "usResults": 9,
+        "gbResults": 9,
+        "inChannels": 10,
+        "usChannels": 9,
+        "gbChannels": 9,
+        "inOnlyWestern": 9,
+        "gapScore": 0.9,
+        "ukDataQuality": "adequate",
         "inEnglishAudio": 0,
-        "inNonEnglishOrUnknown": 0
-      },
-      {
-        "query": "tantric skull staff kapalika",
-        "topic": "taboo",
-        "inResults": 0,
-        "usResults": 0,
-        "gbResults": 0,
-        "inChannels": 0,
-        "usChannels": 0,
-        "gbChannels": 0,
-        "inOnlyWestern": 0,
-        "gapScore": null,
-        "ukDataQuality": "insufficient_data",
-        "inEnglishAudio": 0,
-        "inNonEnglishOrUnknown": 0
-      },
-      {
-        "query": "tantraloka abhinavagupta explained",
-        "topic": "historical",
-        "inResults": 0,
-        "usResults": 0,
-        "gbResults": 0,
-        "inChannels": 0,
-        "usChannels": 0,
-        "gbChannels": 0,
-        "inOnlyWestern": 0,
-        "gapScore": null,
-        "ukDataQuality": "insufficient_data",
-        "inEnglishAudio": 0,
-        "inNonEnglishOrUnknown": 0
-      },
-      {
-        "query": "kashmir shaivism history",
-        "topic": "historical",
-        "inResults": 0,
-        "usResults": 0,
-        "gbResults": 0,
-        "inChannels": 0,
-        "usChannels": 0,
-        "gbChannels": 0,
-        "inOnlyWestern": 0,
-        "gapScore": null,
-        "ukDataQuality": "insufficient_data",
-        "inEnglishAudio": 0,
-        "inNonEnglishOrUnknown": 0
+        "inNonEnglishOrUnknown": 15
       },
       {
         "query": "tantric texts history",
         "topic": "historical",
-        "inResults": 0,
-        "usResults": 0,
+        "inResults": 15,
+        "usResults": 15,
         "gbResults": 0,
-        "inChannels": 0,
-        "usChannels": 0,
+        "inChannels": 15,
+        "usChannels": 13,
         "gbChannels": 0,
-        "inOnlyWestern": 0,
-        "gapScore": null,
+        "inOnlyWestern": 11,
+        "gapScore": 0.7333333333333333,
         "ukDataQuality": "insufficient_data",
+        "inEnglishAudio": 1,
+        "inNonEnglishOrUnknown": 14
+      },
+      {
+        "query": "chakra tantra explained",
+        "topic": "practice",
+        "inResults": 15,
+        "usResults": 15,
+        "gbResults": 15,
+        "inChannels": 14,
+        "usChannels": 13,
+        "gbChannels": 15,
+        "inOnlyWestern": 8,
+        "gapScore": 0.5714285714285714,
+        "ukDataQuality": "adequate",
+        "inEnglishAudio": 5,
+        "inNonEnglishOrUnknown": 10
+      },
+      {
+        "query": "tantra philosophy explained",
+        "topic": "philosophy",
+        "inResults": 15,
+        "usResults": 15,
+        "gbResults": 15,
+        "inChannels": 13,
+        "usChannels": 13,
+        "gbChannels": 14,
+        "inOnlyWestern": 7,
+        "gapScore": 0.5384615384615384,
+        "ukDataQuality": "adequate",
+        "inEnglishAudio": 2,
+        "inNonEnglishOrUnknown": 13
+      },
+      {
+        "query": "tantra sexual rituals history",
+        "topic": "taboo",
+        "inResults": 15,
+        "usResults": 15,
+        "gbResults": 15,
+        "inChannels": 13,
+        "usChannels": 10,
+        "gbChannels": 9,
+        "inOnlyWestern": 7,
+        "gapScore": 0.5384615384615384,
+        "ukDataQuality": "adequate",
+        "inEnglishAudio": 2,
+        "inNonEnglishOrUnknown": 13
+      },
+      {
+        "query": "Dhumatavi goddess",
+        "topic": "deity",
+        "inResults": 15,
+        "usResults": 15,
+        "gbResults": 15,
+        "inChannels": 15,
+        "usChannels": 15,
+        "gbChannels": 13,
+        "inOnlyWestern": 8,
+        "gapScore": 0.5333333333333333,
+        "ukDataQuality": "adequate",
+        "inEnglishAudio": 1,
+        "inNonEnglishOrUnknown": 14
+      },
+      {
+        "query": "Bagalamukhi tantra",
+        "topic": "deity",
+        "inResults": 15,
+        "usResults": 15,
+        "gbResults": 15,
+        "inChannels": 11,
+        "usChannels": 14,
+        "gbChannels": 14,
+        "inOnlyWestern": 5,
+        "gapScore": 0.45454545454545453,
+        "ukDataQuality": "adequate",
         "inEnglishAudio": 0,
-        "inNonEnglishOrUnknown": 0
+        "inNonEnglishOrUnknown": 15
+      },
+      {
+        "query": "kundalini tantra awakening",
+        "topic": "practice",
+        "inResults": 15,
+        "usResults": 15,
+        "gbResults": 15,
+        "inChannels": 14,
+        "usChannels": 15,
+        "gbChannels": 15,
+        "inOnlyWestern": 6,
+        "gapScore": 0.42857142857142855,
+        "ukDataQuality": "adequate",
+        "inEnglishAudio": 4,
+        "inNonEnglishOrUnknown": 11
       },
       {
         "query": "yogini temples history",
         "topic": "historical",
-        "inResults": 0,
-        "usResults": 0,
-        "gbResults": 0,
-        "inChannels": 0,
-        "usChannels": 0,
-        "gbChannels": 0,
-        "inOnlyWestern": 0,
-        "gapScore": null,
-        "ukDataQuality": "insufficient_data",
-        "inEnglishAudio": 0,
-        "inNonEnglishOrUnknown": 0
-      },
-      {
-        "query": "siddha tradition tantra",
-        "topic": "historical",
-        "inResults": 0,
-        "usResults": 0,
-        "gbResults": 0,
-        "inChannels": 0,
-        "usChannels": 0,
-        "gbChannels": 0,
-        "inOnlyWestern": 0,
-        "gapScore": null,
-        "ukDataQuality": "insufficient_data",
-        "inEnglishAudio": 0,
-        "inNonEnglishOrUnknown": 0
+        "inResults": 15,
+        "usResults": 15,
+        "gbResults": 15,
+        "inChannels": 13,
+        "usChannels": 13,
+        "gbChannels": 13,
+        "inOnlyWestern": 5,
+        "gapScore": 0.38461538461538464,
+        "ukDataQuality": "adequate",
+        "inEnglishAudio": 2,
+        "inNonEnglishOrUnknown": 13
       },
       {
         "query": "kaula tantra history",
         "topic": "historical",
-        "inResults": 0,
-        "usResults": 0,
-        "gbResults": 0,
-        "inChannels": 0,
-        "usChannels": 0,
-        "gbChannels": 0,
+        "inResults": 15,
+        "usResults": 15,
+        "gbResults": 15,
+        "inChannels": 11,
+        "usChannels": 9,
+        "gbChannels": 11,
+        "inOnlyWestern": 4,
+        "gapScore": 0.36363636363636365,
+        "ukDataQuality": "adequate",
+        "inEnglishAudio": 2,
+        "inNonEnglishOrUnknown": 13
+      },
+      {
+        "query": "Kali tantra history",
+        "topic": "deity",
+        "inResults": 15,
+        "usResults": 15,
+        "gbResults": 15,
+        "inChannels": 14,
+        "usChannels": 15,
+        "gbChannels": 14,
+        "inOnlyWestern": 5,
+        "gapScore": 0.35714285714285715,
+        "ukDataQuality": "adequate",
+        "inEnglishAudio": 2,
+        "inNonEnglishOrUnknown": 13
+      },
+      {
+        "query": "cremation ground tantra",
+        "topic": "practice",
+        "inResults": 15,
+        "usResults": 15,
+        "gbResults": 15,
+        "inChannels": 14,
+        "usChannels": 14,
+        "gbChannels": 14,
+        "inOnlyWestern": 5,
+        "gapScore": 0.35714285714285715,
+        "ukDataQuality": "adequate",
+        "inEnglishAudio": 2,
+        "inNonEnglishOrUnknown": 13
+      },
+      {
+        "query": "36 tattvas explained",
+        "topic": "philosophy",
+        "inResults": 15,
+        "usResults": 15,
+        "gbResults": 15,
+        "inChannels": 13,
+        "usChannels": 13,
+        "gbChannels": 13,
+        "inOnlyWestern": 4,
+        "gapScore": 0.3076923076923077,
+        "ukDataQuality": "adequate",
+        "inEnglishAudio": 3,
+        "inNonEnglishOrUnknown": 12
+      },
+      {
+        "query": "Chinnamasta goddess meaning",
+        "topic": "deity",
+        "inResults": 15,
+        "usResults": 15,
+        "gbResults": 15,
+        "inChannels": 13,
+        "usChannels": 13,
+        "gbChannels": 13,
+        "inOnlyWestern": 4,
+        "gapScore": 0.3076923076923077,
+        "ukDataQuality": "adequate",
+        "inEnglishAudio": 5,
+        "inNonEnglishOrUnknown": 10
+      },
+      {
+        "query": "tantric meditation practices",
+        "topic": "practice",
+        "inResults": 15,
+        "usResults": 15,
+        "gbResults": 15,
+        "inChannels": 13,
+        "usChannels": 13,
+        "gbChannels": 14,
+        "inOnlyWestern": 4,
+        "gapScore": 0.3076923076923077,
+        "ukDataQuality": "adequate",
+        "inEnglishAudio": 5,
+        "inNonEnglishOrUnknown": 10
+      },
+      {
+        "query": "tantric black magic history",
+        "topic": "taboo",
+        "inResults": 15,
+        "usResults": 15,
+        "gbResults": 15,
+        "inChannels": 13,
+        "usChannels": 13,
+        "gbChannels": 14,
+        "inOnlyWestern": 4,
+        "gapScore": 0.3076923076923077,
+        "ukDataQuality": "adequate",
+        "inEnglishAudio": 0,
+        "inNonEnglishOrUnknown": 15
+      },
+      {
+        "query": "Kashmir Shaivism consciousness",
+        "topic": "philosophy",
+        "inResults": 15,
+        "usResults": 15,
+        "gbResults": 15,
+        "inChannels": 14,
+        "usChannels": 13,
+        "gbChannels": 13,
+        "inOnlyWestern": 4,
+        "gapScore": 0.2857142857142857,
+        "ukDataQuality": "adequate",
+        "inEnglishAudio": 3,
+        "inNonEnglishOrUnknown": 12
+      },
+      {
+        "query": "Abhinavagupta philosophy",
+        "topic": "philosophy",
+        "inResults": 15,
+        "usResults": 15,
+        "gbResults": 15,
+        "inChannels": 7,
+        "usChannels": 10,
+        "gbChannels": 9,
+        "inOnlyWestern": 2,
+        "gapScore": 0.2857142857142857,
+        "ukDataQuality": "adequate",
+        "inEnglishAudio": 0,
+        "inNonEnglishOrUnknown": 15
+      },
+      {
+        "query": "Bhairava tantra explained",
+        "topic": "deity",
+        "inResults": 15,
+        "usResults": 15,
+        "gbResults": 15,
+        "inChannels": 14,
+        "usChannels": 15,
+        "gbChannels": 15,
+        "inOnlyWestern": 4,
+        "gapScore": 0.2857142857142857,
+        "ukDataQuality": "adequate",
+        "inEnglishAudio": 1,
+        "inNonEnglishOrUnknown": 14
+      },
+      {
+        "query": "ten mahavidyas explained",
+        "topic": "deity",
+        "inResults": 15,
+        "usResults": 15,
+        "gbResults": 15,
+        "inChannels": 14,
+        "usChannels": 12,
+        "gbChannels": 13,
+        "inOnlyWestern": 4,
+        "gapScore": 0.2857142857142857,
+        "ukDataQuality": "adequate",
+        "inEnglishAudio": 2,
+        "inNonEnglishOrUnknown": 13
+      },
+      {
+        "query": "vamachara left hand path",
+        "topic": "taboo",
+        "inResults": 15,
+        "usResults": 15,
+        "gbResults": 15,
+        "inChannels": 14,
+        "usChannels": 12,
+        "gbChannels": 12,
+        "inOnlyWestern": 4,
+        "gapScore": 0.2857142857142857,
+        "ukDataQuality": "adequate",
+        "inEnglishAudio": 2,
+        "inNonEnglishOrUnknown": 13
+      },
+      {
+        "query": "Aghori philosophy explained",
+        "topic": "practice",
+        "inResults": 15,
+        "usResults": 15,
+        "gbResults": 15,
+        "inChannels": 15,
+        "usChannels": 15,
+        "gbChannels": 15,
+        "inOnlyWestern": 4,
+        "gapScore": 0.26666666666666666,
+        "ukDataQuality": "adequate",
+        "inEnglishAudio": 3,
+        "inNonEnglishOrUnknown": 12
+      },
+      {
+        "query": "pratyabhijna recognition philosophy",
+        "topic": "philosophy",
+        "inResults": 15,
+        "usResults": 15,
+        "gbResults": 15,
+        "inChannels": 8,
+        "usChannels": 7,
+        "gbChannels": 8,
+        "inOnlyWestern": 2,
+        "gapScore": 0.25,
+        "ukDataQuality": "adequate",
+        "inEnglishAudio": 1,
+        "inNonEnglishOrUnknown": 14
+      },
+      {
+        "query": "kashmir shaivism history",
+        "topic": "historical",
+        "inResults": 15,
+        "usResults": 15,
+        "gbResults": 15,
+        "inChannels": 15,
+        "usChannels": 14,
+        "gbChannels": 14,
+        "inOnlyWestern": 3,
+        "gapScore": 0.2,
+        "ukDataQuality": "adequate",
+        "inEnglishAudio": 1,
+        "inNonEnglishOrUnknown": 14
+      },
+      {
+        "query": "tantraloka abhinavagupta explained",
+        "topic": "historical",
+        "inResults": 15,
+        "usResults": 15,
+        "gbResults": 15,
+        "inChannels": 11,
+        "usChannels": 8,
+        "gbChannels": 10,
+        "inOnlyWestern": 2,
+        "gapScore": 0.18181818181818182,
+        "ukDataQuality": "adequate",
+        "inEnglishAudio": 2,
+        "inNonEnglishOrUnknown": 13
+      },
+      {
+        "query": "spanda vibration consciousness",
+        "topic": "philosophy",
+        "inResults": 15,
+        "usResults": 15,
+        "gbResults": 15,
+        "inChannels": 9,
+        "usChannels": 11,
+        "gbChannels": 9,
+        "inOnlyWestern": 1,
+        "gapScore": 0.1111111111111111,
+        "ukDataQuality": "adequate",
+        "inEnglishAudio": 3,
+        "inNonEnglishOrUnknown": 12
+      },
+      {
+        "query": "siddha tradition tantra",
+        "topic": "historical",
+        "inResults": 15,
+        "usResults": 15,
+        "gbResults": 15,
+        "inChannels": 9,
+        "usChannels": 10,
+        "gbChannels": 9,
+        "inOnlyWestern": 1,
+        "gapScore": 0.1111111111111111,
+        "ukDataQuality": "adequate",
+        "inEnglishAudio": 8,
+        "inNonEnglishOrUnknown": 7
+      },
+      {
+        "query": "nyasa tantric ritual",
+        "topic": "practice",
+        "inResults": 15,
+        "usResults": 15,
+        "gbResults": 15,
+        "inChannels": 14,
+        "usChannels": 13,
+        "gbChannels": 13,
+        "inOnlyWestern": 1,
+        "gapScore": 0.07142857142857142,
+        "ukDataQuality": "adequate",
+        "inEnglishAudio": 2,
+        "inNonEnglishOrUnknown": 13
+      },
+      {
+        "query": "abhicara tantra rituals",
+        "topic": "taboo",
+        "inResults": 15,
+        "usResults": 15,
+        "gbResults": 15,
+        "inChannels": 15,
+        "usChannels": 15,
+        "gbChannels": 15,
+        "inOnlyWestern": 1,
+        "gapScore": 0.06666666666666667,
+        "ukDataQuality": "adequate",
+        "inEnglishAudio": 2,
+        "inNonEnglishOrUnknown": 13
+      },
+      {
+        "query": "tantric skull staff kapalika",
+        "topic": "taboo",
+        "inResults": 3,
+        "usResults": 3,
+        "gbResults": 3,
+        "inChannels": 2,
+        "usChannels": 2,
+        "gbChannels": 2,
         "inOnlyWestern": 0,
         "gapScore": null,
-        "ukDataQuality": "insufficient_data",
+        "ukDataQuality": "adequate",
         "inEnglishAudio": 0,
-        "inNonEnglishOrUnknown": 0
+        "inNonEnglishOrUnknown": 3
       }
     ],
     "gapTopicClusters": {
       "philosophy": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        0.5384615384615384,
+        0.3076923076923077,
+        0.2857142857142857,
+        0.2857142857142857,
+        0.25,
+        0.1111111111111111
       ],
       "deity": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        0.5333333333333333,
+        0.45454545454545453,
+        0.35714285714285715,
+        0.3076923076923077,
+        0.2857142857142857,
+        0.2857142857142857
       ],
       "practice": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        0.5714285714285714,
+        0.42857142857142855,
+        0.35714285714285715,
+        0.3076923076923077,
+        0.26666666666666666,
+        0.07142857142857142
       ],
       "taboo": [
-        null,
-        null,
-        null,
-        null,
-        null,
+        0.9,
+        0.5384615384615384,
+        0.3076923076923077,
+        0.2857142857142857,
+        0.06666666666666667,
         null
       ],
       "historical": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        0.7333333333333333,
+        0.38461538461538464,
+        0.36363636363636365,
+        0.2,
+        0.18181818181818182,
+        0.1111111111111111
       ]
     },
     "audioQuality": {
-      "totalVideosChecked": 0,
-      "englishAudio": 0,
-      "nonEnglishAudio": 0,
-      "noAudioLanguageMetadata": 0,
-      "audioLanguageBreakdown": {}
+      "totalVideosChecked": 621,
+      "englishAudio": 109,
+      "nonEnglishAudio": 308,
+      "noAudioLanguageMetadata": 204,
+      "audioLanguageBreakdown": {
+        "null": 204,
+        "en-GB": 8,
+        "en-IN": 48,
+        "hi-Latn": 6,
+        "en": 109,
+        "zxx": 6,
+        "en-AU": 16,
+        "kn": 4,
+        "hi": 155,
+        "en-US": 31,
+        "te": 8,
+        "sa": 4,
+        "ne": 1,
+        "ml": 3,
+        "bn-IN": 3,
+        "bn": 7,
+        "en-CA": 4,
+        "or": 1,
+        "fr": 2,
+        "ru": 1
+      }
     }
   }
 }

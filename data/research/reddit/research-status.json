@@ -5,9 +5,9 @@
     "notes": "Waiting for comments Parquet in R2"
   },
   "proposal_2_recurring_questions": {
-    "status": "ready_to_run",
+    "status": "completed",
     "depends_on": "submissions_data",
-    "notes": "Data in R2. Requires DuckDB query + clustering + Google Trends"
+    "notes": "Completed 20260721_154337. 101 clusters from 37108 question-like submissions."
   },
   "proposal_3_controversy_engagement": {
     "status": "not_started",
@@ -30,9 +30,9 @@
     "notes": "Waiting for comments Parquet in R2"
   },
   "proposal_7_language_drift": {
-    "status": "ready_to_run",
+    "status": "completed",
     "depends_on": "submissions_data",
-    "notes": "Data in R2. Same embedding pass as Proposal 2"
+    "notes": "Completed 20260721_154337. 0 transitions across 9 subreddits."
   },
-  "last_updated": "2026-07-21T15:00:00Z"
+  "last_updated": "2026-07-21T15:43:55Z"
 }

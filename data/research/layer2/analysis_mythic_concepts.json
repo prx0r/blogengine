@@ -1,0 +1,108 @@
+{
+  "channel": "Mythic_Concepts",
+  "channel_id": "UCP-Q2kBu2KKDDFPxl-qa6QA",
+  "subs": 37000,
+  "total_videos": 4,
+  "total_views": 1068158,
+  "analyzed_videos": 4,
+  "median_views": 208040,
+  "mean_views": 267059,
+  "p90_views": 564945,
+  "max_views": 642163,
+  "median_duration_min": 41.0,
+  "breakout_rate": 0.25,
+  "output_per_month": 0.3,
+  "title_patterns": {
+    "has_question": {
+      "breakout": 1.0,
+      "normal": 0.333,
+      "delta": 0.667
+    },
+    "has_colon": {
+      "breakout": 0.0,
+      "normal": 0.333,
+      "delta": -0.333
+    },
+    "has_exclamation": {
+      "breakout": 0.0,
+      "normal": 0.0,
+      "delta": 0.0
+    },
+    "has_number": {
+      "breakout": 0.0,
+      "normal": 0.0,
+      "delta": 0.0
+    },
+    "starts_what": {
+      "breakout": 0.0,
+      "normal": 0.0,
+      "delta": 0.0
+    },
+    "starts_why": {
+      "breakout": 0.0,
+      "normal": 0.0,
+      "delta": 0.0
+    },
+    "starts_how": {
+      "breakout": 0.0,
+      "normal": 0.0,
+      "delta": 0.0
+    },
+    "starts_the": {
+      "breakout": 0.0,
+      "normal": 0.0,
+      "delta": 0.0
+    },
+    "word_count": {
+      "breakout": 11.0,
+      "normal": 7.333,
+      "delta": 3.667
+    }
+  },
+  "videos": [
+    {
+      "video_id": "No2w-7-SZqA",
+      "title": "Who is Kali? Indian Goddess of Time, Death, and Change, Explained",
+      "views": 642163,
+      "likes": 26503,
+      "comments": 2482,
+      "duration_min": 34.3,
+      "like_ratio": 4.1,
+      "published": "2022-03-16",
+      "is_breakout": true
+    },
+    {
+      "video_id": "ELD_wvy1vUk",
+      "title": "Harappans, Aryans, and the BMAC: Indian Origins",
+      "views": 384771,
+      "likes": 13317,
+      "comments": 3444,
+      "duration_min": 47.6,
+      "like_ratio": 3.5,
+      "published": "2022-05-02",
+      "is_breakout": false
+    },
+    {
+      "video_id": "v4jvNfGHjlw",
+      "title": "Chaos and Creation",
+      "views": 31309,
+      "likes": 1935,
+      "comments": 239,
+      "duration_min": 86.8,
+      "like_ratio": 6.2,
+      "published": "2022-02-27",
+      "is_breakout": false
+    },
+    {
+      "video_id": "OgzYqgYna3o",
+      "title": "Is Mythology True? Are the Gods Real? How Does Kali Explain Time?",
+      "views": 9996,
+      "likes": 802,
+      "comments": 201,
+      "duration_min": 22.4,
+      "like_ratio": 8.0,
+      "published": "2023-02-09",
+      "is_breakout": false
+    }
+  ]
+}

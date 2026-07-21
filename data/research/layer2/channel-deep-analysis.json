@@ -1,0 +1,162 @@
+{
+  "generated": "2026-07-21",
+  "method": "YouTube API: playlistItems.list + videos.list",
+  "cost_units": 4,
+  "analysis_script": "scripts/probes/asangoham-deep-dive.py",
+  "channels": {
+    "ESOTERICA": {
+      "channel_id": "UCoydhtfFSk1fZXNRnkGnneQ",
+      "subs": 1120000,
+      "total_videos": 498,
+      "analyzed_videos": 200,
+      "total_channel_views": 70838884,
+      "median_views": 49487,
+      "mean_views": 125759,
+      "p90_views": 268776,
+      "max_views": 1652741,
+      "median_duration_min": 37.9,
+      "breakout_rate": 0.32,
+      "like_ratio": 6.5,
+      "output_per_month": 6.9,
+      "title_patterns": {
+        "questions_breakout_pct": 45.3,
+        "questions_normal_pct": 11.0,
+        "questions_delta": 34.3,
+        "what_start_breakout_pct": 25.0,
+        "how_start_breakout_pct": 18.8,
+        "the_start_breakout_pct": 23.4,
+        "numbers_breakout_pct": 9.4,
+        "numbers_delta": -32.5,
+        "word_count_breakout": 10.75
+      },
+      "top_titles": [
+        {
+          "views": 1652741,
+          "title": "How did Yahweh Become God? The Origins of Monotheism"
+        },
+        {
+          "views": 1184052,
+          "title": "Who is Baal \u2014 How a Storm Deity Fought Sea, Death and Yahweh"
+        },
+        {
+          "views": 1120427,
+          "title": "Who was the Historical Jesus?"
+        },
+        {
+          "views": 1024362,
+          "title": "The First Necromancer \u2014 How a Medieval Sorcerer Combined Astrology"
+        },
+        {
+          "views": 799846,
+          "title": "Who was Solomon? How a King of Israel became the Master of Demons"
+        }
+      ],
+      "worst_titles": [
+        {
+          "views": 5750,
+          "title": "Medieval Scribes & How to Collect Medieval Scribal Arts"
+        },
+        {
+          "views": 7967,
+          "title": "Win 400+ Year Old Alchemy or Demonology"
+        },
+        {
+          "views": 8219,
+          "title": "End of Summer Sale \u2014 20% off at Esoterica Rare Books"
+        }
+      ],
+      "finding": "Questions massively outperform (+34%). What/How openings dominate. 35-40 min sweet spot. Numbers in titles kill performance."
+    },
+    "Asangoham": {
+      "channel_id": "UC3OA1M34StuW8jhZFSXd2Jw",
+      "subs": 355000,
+      "total_videos": 134,
+      "analyzed_videos": 134,
+      "total_channel_views": 29407623,
+      "median_views": 87062,
+      "mean_views": 219512,
+      "p90_views": 567466,
+      "max_views": 2123193,
+      "median_duration_min": 18.3,
+      "breakout_rate": 0.3,
+      "like_ratio": 2.8,
+      "output_per_month": 2.4,
+      "title_patterns": {
+        "the_start_breakout_pct": 77.5,
+        "the_start_normal_pct": 53.2,
+        "the_start_delta": 24.3,
+        "colons_breakout_pct": 22.5,
+        "colons_normal_pct": 33.0,
+        "colons_delta": -10.5,
+        "numbers_breakout_pct": 7.5,
+        "numbers_delta": -6.3,
+        "questions_breakout_pct": 5.0,
+        "word_count_breakout": 7.08
+      },
+      "top_titles": [
+        {
+          "views": 2123193,
+          "title": "The Dark & Divine Side Of Kundalini Yoga"
+        },
+        {
+          "views": 1930113,
+          "title": "The Bizarre Life Of Sri Anandamayi Ma"
+        },
+        {
+          "views": 1920114,
+          "title": "The Ancient Science Of AUM Mantra"
+        },
+        {
+          "views": 1190150,
+          "title": "The Bizarre Life of Alan Watts"
+        },
+        {
+          "views": 1078329,
+          "title": "The Secret Teachings Of Vajrayana Buddhism"
+        }
+      ],
+      "worst_titles": [
+        {
+          "views": 6259,
+          "title": "4 Ancient Spiritual States You Should NEVER Enter"
+        },
+        {
+          "views": 10365,
+          "title": "Why Suffering Is Good"
+        },
+        {
+          "views": 10715,
+          "title": "Thich Nhat Hanh: The Monk Who Changed The West Forever"
+        }
+      ],
+      "patterns_reused": [
+        {
+          "pattern": "The Esoteric Path Very Few Walk On: Mysticism Part {N}",
+          "count": 3,
+          "avg_views": 159465
+        },
+        {
+          "pattern": "{N} Enlightened Masters Who Went Completely 'Insane'",
+          "count": 2,
+          "avg_views": 285341
+        }
+      ],
+      "finding": "'The [Secret/Ancient/Bizarre] Of [Topic]' formula dominates. 'The' start +24%. Reuses winning patterns with number swaps. 18 min sweet spot."
+    }
+  },
+  "cross_channel_insights": {
+    "both_agree_on": [
+      "Numbers in titles underperform",
+      "Declarative curiosity beats abstract concepts",
+      "Channel size doesn't limit breakout potential",
+      "Consistent schedule matters more than frequency"
+    ],
+    "they_differ_on": [
+      "Questions: ESOTERICA +34% breakout, Asangoham neutral",
+      "Duration: ESOTERICA 38 min sweet spot, Asangoham 18 min",
+      "Output: ESOTERICA 6.9/mo, Asangoham 2.4/mo",
+      "Title formula: ESOTERICA varies fresh questions, Asangoham reuses templates"
+    ],
+    "recommendation": "Hybrid approach \u2014 question titles for broad topics (ESOTERICA style), 'The [X] Of [Y]' formula for niche subjects (Asangoham style). Target 20-30 min, 4-5 videos/month."
+  }
+}

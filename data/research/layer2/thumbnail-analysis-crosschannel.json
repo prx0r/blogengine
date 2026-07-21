@@ -1,0 +1,49 @@
+{
+  "generated": "2026-07-21",
+  "total_videos": 1843,
+  "breakout_count": 558,
+  "normal_count": 1285,
+  "vision_api_reliability": "Labels and faces are accurate. Text detection picks up background text (books, manuscripts). Word count metric is noisy.",
+  "analysis_method": "Google Cloud Vision API: LABEL_DETECTION + TEXT_DETECTION + IMAGE_PROPERTIES + FACE_DETECTION",
+  "findings": {
+    "text_presence": {
+      "breakout_pct": 81.4,
+      "normal_pct": 84.9,
+      "insight": "Nearly universal. Text presence alone is not a differentiator."
+    },
+    "faces_overall": {
+      "breakout_pct": 49.5,
+      "normal_pct": 51.4,
+      "insight": "Faces are NEUTRAL overall (49% vs 51%). The 'faces bad' finding was cross-channel noise.",
+      "per_channel": "Varies by channel. ESOTERICA faces neutral (19% vs 18%). Philosophy Tube faces positive. Check per-channel data."
+    },
+    "colors": {
+      "breakout_dark_pct": 63,
+      "normal_dark_pct": 67,
+      "breakout_light_pct": 16,
+      "normal_light_pct": 12,
+      "insight": "Breakout thumbnails are slightly lighter. Not a strong signal."
+    },
+    "text_word_count_caveat": {
+      "breakout_median_words": 4,
+      "normal_median_words": 5,
+      "warning": "Word count includes background text from books and manuscripts. The meaningful signal is DESIGNED text overlay (1-5 words) vs BACKGROUND text (books, documents)."
+    },
+    "strongest_signal": {
+      "source": "ESOTERICA within-channel analysis (controls for title format)",
+      "finding": "Breakout thumbnails have ~6 designed words vs 21 background-inflated words for normal. Designed 1-3 word overlay outperforms no text or cluttered background text.",
+      "breakout_text_pct": 97,
+      "non_breakout_text_pct": 93,
+      "breakout_face_pct": 19,
+      "non_breakout_face_pct": 18
+    }
+  },
+  "best_practices": {
+    "thumbnail_style": "Designed graphic composition (not photo of person/object)",
+    "thumbnail_text": "1-3 punchy designed words. Never rely on text from a book/page photo.",
+    "faces": "Neutral \u2014 don't avoid, don't force. Let the topic dictate.",
+    "colors": "Dark theme works but add contrast. Avoid all-dark with no highlights.",
+    "title_style": "Question format ('What is X?') or 'The [Secret/Ancient] Of [Topic]'",
+    "duration": "18-25 minutes"
+  }
+}

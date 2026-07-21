@@ -1,0 +1,80 @@
+{
+  "generated": "2026-07-21",
+  "method": "Google Cloud Vision API (label, text, color, face, object detection)",
+  "api_key_note": "Set VISION_API_KEY env var to reuse",
+  "total_thumbnails_analyzed": 528,
+  "breakout_count": 171,
+  "normal_count": 357,
+  "channels_covered": 10,
+  "findings": {
+    "text_on_thumbnail": {
+      "breakout_pct": 88,
+      "normal_pct": 87,
+      "insight": "Text is nearly universal. Not a differentiator.",
+      "avg_words_breakout": 6.3,
+      "avg_words_normal": 11.7,
+      "insight_words": "BREAKOUT thumbnails have HALF the words (6.3 vs 11.7). Shorter, punchier text wins."
+    },
+    "faces": {
+      "breakout_pct": 22,
+      "normal_pct": 30,
+      "multiple_faces_breakout_pct": 2,
+      "multiple_faces_normal_pct": 8,
+      "insight": "Faces UNDERPERFORM. Only 22% of breakouts have faces vs 30% of normal. Multiple faces especially bad. Counterintuitive — everyone recommends faces on thumbnails, but not in THIS niche."
+    },
+    "visual_style": {
+      "breakout_prefers": {
+        "Animation": {"description": "Illustrated/graphic/designed — not a photograph", "delta_pct": 6.9, "breakout_freq_pct": 25.1, "normal_freq_pct": 18.2},
+        "Graphics": {"description": "Graphic design elements, text overlays, composited visuals", "delta_pct": 6.5, "breakout_freq_pct": 40.9, "normal_freq_pct": 34.5},
+        "Symbol": {"description": "Iconic or symbolic imagery (not literal photography)", "delta_pct": 5.7, "breakout_freq_pct": 16.4, "normal_freq_pct": 10.6},
+        "Clip art": {"description": "Stylized illustrations, vector graphics, drawn elements", "delta_pct": 3.9, "breakout_freq_pct": 5.3, "normal_freq_pct": 1.4}
+      },
+      "normal_prefers": {
+        "Photo caption": {"description": "Photograph with caption text overlay", "delta_pct": -4.3, "breakout_freq_pct": 4.1, "normal_freq_pct": 8.4},
+        "Facial expression": {"description": "Visible human face with expression", "delta_pct": -4.1, "breakout_freq_pct": 9.9, "normal_freq_pct": 14.0},
+        "Eyewear/Glasses": {"description": "Subject wearing glasses", "delta_pct": -3.7, "breakout_freq_pct": 1.2, "normal_freq_pct": 4.9},
+        "Flesh": {"description": "Visible skin/body parts", "delta_pct": -3.6, "breakout_freq_pct": 1.8, "normal_freq_pct": 5.3}
+      },
+      "insight": "GRAPHIC/ILLUSTRATED style beats PHOTOGRAPHIC style in this niche. Designed compositions with symbols and text overlays outperform photos of people."
+    },
+    "dominant_colors": {
+      "breakout_darker_than_normal": false,
+      "explanation": "Breakout thumbnails trend LIGHTER than normal thumbnails",
+      "black_dark_breakout_pct": 57,
+      "black_dark_normal_pct": 70,
+      "white_light_breakout_pct": 22,
+      "white_light_normal_pct": 16,
+      "grey_muted_breakout_pct": 10,
+      "grey_muted_normal_pct": 13,
+      "insight": "Normal thumbnails are 70% dark/black. Breakout thumbnails are more likely to have light/white backgrounds (22% vs 16%). Don't default to dark."
+    },
+    "top_trigger_words_on_breakout_thumbnails": [
+      {"word": "life", "count": 9, "context": "Used in biographical/spiritual titles"},
+      {"word": "don't/never/stop", "count": 9, "context": "Negation/imperative — provocative framing"},
+      {"word": "occult", "count": 8, "context": "Strong niche signal word"},
+      {"word": "alchemy", "count": 6, "context": "Specific high-interest topic"},
+      {"word": "power", "count": 4, "context": "Curiosity/ancient secrets framing"},
+      {"word": "origins", "count": 4, "context": "Historical/narrative framing"},
+      {"word": "jesus", "count": 3, "context": "Broad appeal religious figure"},
+      {"word": "gnostic", "count": 3, "context": "Niche esoteric signal"},
+      {"word": "magic", "count": 3, "context": "Broad appeal occult topic"},
+      {"word": "divine", "count": 3, "context": "Spiritual framing"},
+      {"word": "death", "count": 2, "context": "Dark/high-interest topic"},
+      {"word": "secret", "count": 2, "context": "Curiosity gap framing"}
+    ],
+    "objects_detected": {
+      "common_on_both": ["Text", "Picture frame", "Sign", "Poster"],
+      "breakout_more_common": ["Symbol", "Icon", "Logo", "Diagram"],
+      "normal_more_common": ["Face", "Person", "Human face", "Glasses"]
+    }
+  },
+  "combined_production_spec": {
+    "title": "Question format ('What is X?') or 'The [Secret/Ancient] Of [Topic]' — proven formulas",
+    "duration": "18-25 minutes",
+    "thumbnail_style": "Illustrated/graphic design (not photo of person)",
+    "thumbnail_text": "Short (< 7 words), high-impact trigger words",
+    "thumbnail_colors": "Light/white background, contrasting text, avoid all-dark",
+    "thumbnail_faces": "Avoid faces. Use symbols, icons, or illustrated elements instead.",
+    "trigger_words_for_thumbnail": ["occult", "alchemy", "secret", "origins", "power", "divine", "gnostic", "magic", "death"]
+  }
+}

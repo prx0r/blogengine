@@ -8,7 +8,7 @@ Every proposal is designed to be run by an agent without requiring deep domain k
 Understand the hypothesis, formula, and methodology.
 
 ### 2. Run the extraction
-Each proposal lists specific queries against the Reddit Parquet files in R2. Use DuckDB on the VPS:
+Each proposal lists specific queries against the Reddit Parquet files in R2 (217 files, ~84 GB). Use DuckDB on the VPS:
 
 ```bash
 # Credentials (set fresh each session)
@@ -16,20 +16,53 @@ export AWS_ACCESS_KEY_ID="b31c6e90450f740629ac030f6e16eef4"
 export AWS_SECRET_ACCESS_KEY="cce64be980580e166482b2c64c6396d5ea25bdb889ff43f3782c0932a75a9b32"
 export AWS_DEFAULT_REGION="auto"
 export S3_ENDPOINT="https://954612afb5a97bb15dddcdc70176813d.r2.cloudflarestorage.com"
-
-# DuckDB query example
-python3 -c "
-import duckdb
-con = duckdb.connect()
-con.execute(\"INSTALL httpfs; LOAD httpfs;\")
-con.execute(\"SET s3_region='auto';\")
-con.execute(\"SET s3_access_key_id='...';\")
-con.execute(\"SET s3_secret_access_key='...';\")
-con.execute(\"SET s3_endpoint='954612afb5a97bb15dddcdc70176813d.r2.cloudflarestorage.com';\")
-con.execute(\"SET s3_url_style='path';\")
-# ... run query
-"
 ```
+
+**Memory warning:** The full Pushshift archive is 217 Parquet files. Never load all files at once with `read_parquet('s3://.../*.parquet')` — it OOMs the VPS (7.75 GB RAM). Do NOT use pandas `.fetchdf()` — it doubles memory (DuckDB buffer + DataFrame copy) and Python doesn't release it back.
+
+Use DuckDB-only processing: create a persistent table, INSERT per file, then COPY to a single output Parquet:
+
+```python
+import duckdb, subprocess as sp, os, time
+
+S3 = "s3://research-datasets/reddit/full"
+con = duckdb.connect()
+con.execute("INSTALL httpfs; LOAD httpfs;")
+for k, v in [("s3_region","auto"), ("s3_endpoint","954612afb5a97bb15dddcdc70176813d.r2.cloudflarestorage.com"),
+             ("s3_access_key_id","b31c6e90450f740629ac030f6e16eef4"),
+             ("s3_secret_access_key","cce64be980580e166482b2c64c6396d5ea25bdb889ff43f3782c0932a75a9b32"),
+             ("s3_url_style","path")]:
+    con.execute(f"SET {k}='{v}'")
+
+SUBS = ("'Tantra','KashmirShaivism','hinduism','spirituality','occult','kundalini','Meditation'")
+
+# List files
+result = sp.run(["aws", "s3", "ls", f"s3://research-datasets/reddit/full/", "--endpoint-url", os.environ['S3_ENDPOINT']],
+                capture_output=True, text=True)
+files = [l.split()[-1] for l in result.stdout.strip().split('\n') if l]
+
+# Process one file at a time — pure DuckDB, no pandas
+con.execute(f"CREATE TABLE filtered AS SELECT subreddit, title, score, created_utc \
+              FROM read_parquet('{S3}/{files[0]}') WHERE subreddit IN ({SUBS}) AND title IS NOT NULL")
+start = time.time()
+for i, fname in enumerate(files[1:], 1):
+    con.execute(f"INSERT INTO filtered SELECT subreddit, title, score, created_utc \
+                  FROM read_parquet('{S3}/{fname}') WHERE subreddit IN ({SUBS}) AND title IS NOT NULL")
+    if i % 25 == 0:
+        print(f"  {i}/{len(files)} files ({time.time()-start:.0f}s)")
+
+# Export
+con.execute("COPY filtered TO '/tmp/filtered_submissions.parquet' (FORMAT PARQUET)")
+sp.run(["aws", "s3", "cp", "/tmp/filtered_submissions.parquet",
+        "s3://research-datasets/reddit/processed/submissions_all.parquet",
+        "--endpoint-url", os.environ['S3_ENDPOINT']])
+
+# Then run queries against the single filtered file
+con.execute("SELECT count(*) FROM read_parquet('s3://research-datasets/reddit/processed/submissions_all.parquet')")
+print(f"Total: {con.fetchone()[0]} rows")
+```
+
+This keeps everything in DuckDB's C memory manager, uses ~500 MB peak, and finishes in ~5 minutes.
 
 ### 3. Record output to `data/research/reddit/{proposal-name}-{timestamp}.json`
 Use the JSON schema specified in each proposal.
