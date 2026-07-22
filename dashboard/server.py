@@ -3,6 +3,7 @@
 import json, os, re, subprocess, glob, urllib.request, time, threading, sys
 from pathlib import Path
 from flask import Flask, jsonify, request, send_from_directory
+from flask_cors import CORS
 
 ROOT = Path(__file__).parent.parent
 _cache = {}
@@ -39,6 +40,7 @@ def cached(key, ttl=60):
     return deco
 
 app = Flask(__name__, static_folder="static")
+CORS(app, origins=[os.environ.get("CORS_ORIGIN", "*")])
 
 ROOT = Path("/root/projects/blog")
 BLUEPRINTS = ROOT / "tantrafiles" / "blueprints"
@@ -208,6 +210,24 @@ def api_generate(bp_id):
         return jsonify({"output": r.stdout, "error": r.stderr[:500] if r.returncode != 0 else ""})
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
+@app.route("/api/validate")
+def api_validate():
+    """Run comprehensive video validation (blueprint + storyboard + vision)."""
+    bp_id = request.args.get("blueprint", "")
+    sb_slug = request.args.get("storyboard", "")
+    try:
+        cmd = ["node", str(ROOT / "scripts/validate-video.mjs"), "--json", "--skip-vision"]
+        if bp_id:
+            cmd.append(f"--blueprint={bp_id}")
+        if sb_slug:
+            cmd.append(f"--storyboard={sb_slug}")
+        r = subprocess.run(cmd, capture_output=True, text=True, timeout=20)
+        if r.returncode in (0, 1):
+            return jsonify(json.loads(r.stdout))
+        return jsonify({"error": r.stderr[:500], "passed": False})
+    except Exception as e:
+        return jsonify({"error": str(e), "passed": False}), 500
 
 @app.route("/api/analytics/overview")
 def api_analytics():

@@ -21,5 +21,40 @@
   "mood": [],
   "color_palette": [],
   "entities_depicted": [],
-  "composition": ""
+  "composition": "",
+  "vision_labels": [
+    "Wing",
+    "Drawing",
+    "Illustration",
+    "Fictional character",
+    "Sketch",
+    "Line art",
+    "Angel",
+    "Supernatural creature",
+    "Figure drawing"
+  ],
+  "vision_objects": [
+    "Painting",
+    "Picture frame"
+  ],
+  "web_entities": [
+    "Paper",
+    "Papermaking",
+    "Deckle",
+    "Paper recycling",
+    "Drawing"
+  ],
+  "face_count": 0,
+  "dominant_colors": [
+    "#d8c1a9",
+    "#b5a087",
+    "#958068"
+  ],
+  "safe_search": {
+    "adult": "VERY_UNLIKELY",
+    "violence": "VERY_UNLIKELY",
+    "racy": "POSSIBLE"
+  },
+  "thumbnail_score": 85,
+  "thumbnail_verdict": "\u2b50 EXCELLENT"
 }

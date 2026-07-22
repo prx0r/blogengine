@@ -36,5 +36,42 @@
   "mood": [],
   "color_palette": [],
   "entities_depicted": [],
-  "composition": ""
+  "composition": "",
+  "vision_labels": [
+    "Porcelain",
+    "Pottery",
+    "Artifact",
+    "Antique",
+    "Ceramic",
+    "Dishware",
+    "Creative arts",
+    "Serveware",
+    "Ancient history",
+    "Stoneware",
+    "Collectable",
+    "Platter"
+  ],
+  "vision_objects": [
+    "Plate"
+  ],
+  "web_entities": [
+    "Astrology",
+    "Image",
+    "Los Angeles County Museum of Art",
+    "Islamic art",
+    "The Metropolitan Museum of Art"
+  ],
+  "face_count": 0,
+  "dominant_colors": [
+    "#85745d",
+    "#64523c",
+    "#aa9883"
+  ],
+  "safe_search": {
+    "adult": "VERY_UNLIKELY",
+    "violence": "VERY_UNLIKELY",
+    "racy": "VERY_UNLIKELY"
+  },
+  "thumbnail_score": 68,
+  "thumbnail_verdict": "\ud83d\udc4d GOOD"
 }

@@ -1,0 +1,47 @@
+{
+  "module_id": "timeline",
+  "name": "Timeline",
+  "description": "Sequential events displayed chronologically. Used for life story, historical sequence, or process.",
+  "trigger": "label contains 'timeline', 'sequence', 'life', 'chronology', 'history', 'development', 'evolution', 'stages'",
+  "duration_sec": {"min": 15, "max": 25, "default": 18},
+  "layout": {
+    "style": "horizontal_timeline",
+    "events": {
+      "max_events": 5,
+      "font": "EB Garamond",
+      "size": 28,
+      "color": "#FFE8C8",
+      "date_color": "#FFD700",
+      "date_size": 24
+    },
+    "background": {
+      "color": "#0D1117",
+      "opacity": 0.85
+    },
+    "line": {
+      "color": "#FFD700",
+      "width": 2,
+      "opacity": 0.6
+    }
+  },
+  "animation": {
+    "reveal": {
+      "type": "progressive_reveal",
+      "note": "Each event appears in sequence synced to narration",
+      "event_duration": 3
+    },
+    "transition_in": "fade",
+    "transition_out": "fade",
+    "transition_duration": 0.5
+  },
+  "image_requirements": {
+    "needs_generated_image": true,
+    "data_source": "extracted from narration dates/events",
+    "fallback": "use text-on-black with sequential bullets if timeline can't be generated"
+  },
+  "output": {
+    "type": "generated_image_on_V1",
+    "format": "1280x720",
+    "layer": "V1"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "module_id": "lower-third",
+  "name": "Lower Third",
+  "description": "Name, place, or concept label overlaid on artwork. Used when introducing a new figure or location.",
+  "trigger": "narration introduces a proper noun for the first time (name, place, text title)",
+  "duration_sec": {"min": 6, "max": 10, "default": 8},
+  "layout": {
+    "name": {
+      "font": "Cormorant Garamond",
+      "size": 44,
+      "color": "#FFD700",
+      "uppercase": true,
+      "position": "lower_left",
+      "margin_bottom": 40,
+      "margin_left": 40
+    },
+    "subtitle": {
+      "font": "EB Garamond",
+      "size": 32,
+      "color": "#FFE8C8",
+      "position": "below_name",
+      "margin_left": 40,
+      "max_width": 600
+    }
+  },
+  "animation": {
+    "slide_in": {
+      "type": "slide_up",
+      "duration_sec": 0.5
+    },
+    "slide_out": {
+      "type": "slide_down",
+      "duration_sec": 0.3
+    }
+  },
+  "usage_rules": {
+    "show_on_first_mention_only": true,
+    "linger_for": "full segment or until next name is introduced"
+  },
+  "output": {
+    "type": "overlay_on_V1",
+    "format": "1280x720",
+    "layer": "V2"
+  }
+}

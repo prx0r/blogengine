@@ -21,5 +21,29 @@
   "mood": [],
   "color_palette": [],
   "entities_depicted": [],
-  "composition": ""
+  "composition": "",
+  "vision_labels": [],
+  "vision_objects": [
+    "Painting"
+  ],
+  "web_entities": [
+    "Picture Frame",
+    "Image",
+    "Photograph",
+    "Painting",
+    "Illustration"
+  ],
+  "face_count": 0,
+  "dominant_colors": [
+    "#aa9d9a",
+    "#ae9986",
+    "#c6b7b2"
+  ],
+  "safe_search": {
+    "adult": "VERY_UNLIKELY",
+    "violence": "VERY_UNLIKELY",
+    "racy": "UNLIKELY"
+  },
+  "thumbnail_score": 66,
+  "thumbnail_verdict": "\ud83d\udc4d GOOD"
 }

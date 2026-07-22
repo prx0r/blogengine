@@ -21,5 +21,39 @@
   "mood": [],
   "color_palette": [],
   "entities_depicted": [],
-  "composition": ""
+  "composition": "",
+  "vision_labels": [
+    "Art",
+    "Brown",
+    "Visual arts",
+    "Painting",
+    "Creative arts",
+    "Illustration",
+    "Motif",
+    "Rug",
+    "Picture frame"
+  ],
+  "vision_objects": [
+    "Picture frame"
+  ],
+  "web_entities": [
+    "The Juilliard School",
+    "Motif",
+    "Music theory",
+    "Composition",
+    "Literature"
+  ],
+  "face_count": 0,
+  "dominant_colors": [
+    "#b79e80",
+    "#cab294",
+    "#526267"
+  ],
+  "safe_search": {
+    "adult": "VERY_UNLIKELY",
+    "violence": "VERY_UNLIKELY",
+    "racy": "UNLIKELY"
+  },
+  "thumbnail_score": 83,
+  "thumbnail_verdict": "\u2b50 EXCELLENT"
 }

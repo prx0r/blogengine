@@ -1,0 +1,44 @@
+{
+  "module_id": "text-on-black",
+  "name": "Text on Black",
+  "description": "Key insight or claim displayed on solid dark background. No attribution — use quote-card when attribution is needed.",
+  "trigger": "segment_role is 'hook', 'closing', 'reversal', 'synthesis' or narration contains a single declarative claim",
+  "duration_sec": {"min": 6, "max": 12, "default": 8},
+  "layout": {
+    "text": {
+      "font": "EB Garamond",
+      "size": 56,
+      "color": "#FFE8C8",
+      "align": "center",
+      "line_height": 1.3,
+      "max_lines": 4,
+      "position": "center"
+    },
+    "background": {
+      "color": "#0D1117",
+      "opacity": 1.0
+    }
+  },
+  "animation": {
+    "text_fade": {
+      "type": "fade_in",
+      "duration_sec": 1.0
+    },
+    "clip_static": true,
+    "note": "No Ken Burns — text should be perfectly readable",
+    "transition_in": "fade",
+    "transition_out": "fade",
+    "transition_duration": 0.5
+  },
+  "usage_rules": {
+    "max_per_video": 3,
+    "spacing": "at least 60s between text-on-black cards",
+    "avoid": "use quote-card instead when source is attributed"
+  },
+  "output": {
+    "type": "generated_image_on_V1",
+    "format": "1280x720",
+    "background_color": "#0D1117",
+    "layer": "V1"
+  }
+}

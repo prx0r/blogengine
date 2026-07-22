@@ -1,0 +1,61 @@
+{
+  "module_id": "quote-image",
+  "name": "Quote + Image",
+  "description": "Quote text overlaid on related artwork. Combines visual context with quoted material. Use when the art is relevant to the quote.",
+  "trigger": "narration has quotation marks AND a related artwork exists with matching concepts",
+  "duration_sec": {"min": 10, "max": 18, "default": 14},
+  "layout": {
+    "artwork": {
+      "fill": "full_screen",
+      "brightness": 0.4,
+      "saturation": 0.7,
+      "note": "Art is dimmed to make text readable"
+    },
+    "quote_text": {
+      "font": "EB Garamond",
+      "size": 52,
+      "color": "#FFE8C8",
+      "align": "center",
+      "line_height": 1.3,
+      "max_lines": 5,
+      "position": "center",
+      "shadow": {
+        "color": "#000000",
+        "opacity": 0.6,
+        "blur": 4
+      }
+    },
+    "attribution": {
+      "font": "Cormorant Garamond",
+      "size": 32,
+      "color": "#FFD700",
+      "align": "center",
+      "position": "below_quote",
+      "prefix": "— "
+    }
+  },
+  "animation": {
+    "ken_burns": {
+      "style": "gentle_float",
+      "start_scale": 1.02,
+      "end_scale": 1.06,
+      "note": "Very gentle — too much motion makes text hard to read"
+    },
+    "text_reveal": {
+      "type": "fade_in",
+      "duration_sec": 1.5
+    },
+    "transition_in": "crossfade",
+    "transition_out": "crossfade",
+    "transition_duration": 0.5
+  },
+  "usage_rules": {
+    "prefer_over": "quote-card when art has direct conceptual match to quote content",
+    "avoid": "busy art with fine detail that makes text unreadable"
+  },
+  "output": {
+    "type": "image_clip_on_V1_with_generated_overlay",
+    "format": "1280x720",
+    "layer": "V1 (text baked into image)"
+  }
+}

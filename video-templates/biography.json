@@ -1,0 +1,181 @@
+{
+  "template_id": "biography-v1",
+  "name": "Biography — Figure Documentary",
+  "description": "Standard documentary format: figure's life, context, significance. Good for Abhinavagupta, Lakshmanjoo, yogi spotlights.",
+  "channels": ["Tantra Files", "Yogi Spotlights"],
+  "segments": 12,
+  "sub_beats_per_segment": 3,
+  "total_sub_beats": 36,
+  "target_duration_min": 12,
+  "global": {
+    "fps": 25,
+    "width": 1280,
+    "height": 720,
+    "background": "#1a0a00",
+    "ken_burns": {
+      "enabled": true,
+      "min_zoom": 1.0,
+      "max_zoom": 1.15,
+      "easing": "linear",
+      "pan_px": 15,
+      "style_cycle": ["zoom_in_right", "zoom_in_left", "zoom_out", "drift_diagonal"]
+    },
+    "transitions": {
+      "between_sub_beats": {"type": "fade", "duration": 0.5},
+      "between_segments": {"type": "crossfade", "duration": 1.0}
+    },
+    "filter_preset": "cinematic",
+    "text_overlay": {
+      "lower_third": {"font": "EB Garamond", "size": 48, "color": "#FFE8C8"},
+      "title_card": {"font": "Cormorant Garamond", "size": 72, "color": "#FFD700", "uppercase": true}
+    },
+    "music": {
+      "ambient_drone": {"src": "/library/sfx/ambient-drone.mp3", "volume": 0.15, "track": "A2"},
+      "bell_transition": {"src": "/library/sfx/bell.mp3", "volume": 0.4, "track": "A3"},
+      "emphasis_hit": {"src": "/library/sfx/impact-soft.mp3", "volume": 0.3, "track": "A3"}
+    }
+  },
+  "segment_structure": [
+    {
+      "role": "hook",
+      "title": "Opening Hook",
+      "sub_beats": [
+        {"label": "Mystery Question", "image_type": "atmospheric_wide", "duration_sec": 15, "sfx": "bell"},
+        {"label": "The Figure", "image_type": "portrait_full", "duration_sec": 12, "sfx": null},
+        {"label": "Why They Matter", "image_type": "symbolic_detail", "duration_sec": 15, "sfx": "emphasis"}
+      ]
+    },
+    {
+      "role": "context",
+      "title": "Historical Context",
+      "sub_beats": [
+        {"label": "Time and Place", "image_type": "landscape_setting", "duration_sec": 18, "sfx": null},
+        {"label": "World Events", "image_type": "period_art", "duration_sec": 15, "sfx": null},
+        {"label": "Cultural Background", "image_type": "manuscript_scene", "duration_sec": 15, "sfx": "bell"}
+      ]
+    },
+    {
+      "role": "early_life",
+      "title": "Early Life",
+      "sub_beats": [
+        {"label": "Birth and Family", "image_type": "portrait_detail", "duration_sec": 15, "sfx": null},
+        {"label": "Early Influences", "image_type": "teacher_disciple", "duration_sec": 18, "sfx": null},
+        {"label": "First Teachings", "image_type": "study_scene", "duration_sec": 15, "sfx": "bell"}
+      ]
+    },
+    {
+      "role": "practice",
+      "title": "Daily Practice",
+      "sub_beats": [
+        {"label": "Morning Ritual", "image_type": "ritual_scene", "duration_sec": 15, "sfx": "water"},
+        {"label": "Meditation", "image_type": "meditation_scene", "duration_sec": 18, "sfx": null},
+        {"label": "Teaching Students", "image_type": "teaching_scene", "duration_sec": 18, "sfx": null}
+      ]
+    },
+    {
+      "role": "works",
+      "title": "Major Works",
+      "sub_beats": [
+        {"label": "Writing Process", "image_type": "manuscript_detail", "duration_sec": 15, "sfx": null},
+        {"label": "Key Text", "image_type": "manuscript_full", "duration_sec": 18, "sfx": "bell"},
+        {"label": "Ideas Explained", "image_type": "diagram_symbolic", "duration_sec": 20, "sfx": null}
+      ]
+    },
+    {
+      "role": "philosophy",
+      "title": "Core Philosophy",
+      "sub_beats": [
+        {"label": "Central Insight", "image_type": "symbolic_detail", "duration_sec": 20, "sfx": "emphasis"},
+        {"label": "Key Concepts", "image_type": "diagram_mandala", "duration_sec": 18, "sfx": null},
+        {"label": "How It Fits Together", "image_type": "cosmic_scene", "duration_sec": 18, "sfx": null}
+      ]
+    },
+    {
+      "role": "transmission",
+      "title": "Teaching and Transmission",
+      "sub_beats": [
+        {"label": "Students", "image_type": "teaching_scene", "duration_sec": 15, "sfx": null},
+        {"label": "Lineage", "image_type": "lineage_diagram", "duration_sec": 15, "sfx": null},
+        {"label": "Legacy", "image_type": "temple_detail", "duration_sec": 18, "sfx": "bell"}
+      ]
+    },
+    {
+      "role": "daily_life",
+      "title": "Daily Life",
+      "sub_beats": [
+        {"label": "Simple Living", "image_type": "everyday_scene", "duration_sec": 12, "sfx": null},
+        {"label": "Character", "image_type": "portrait_detail", "duration_sec": 15, "sfx": null},
+        {"label": "Human Side", "image_type": "landscape_intimate", "duration_sec": 18, "sfx": null}
+      ]
+    },
+    {
+      "role": "world",
+      "title": "Their World",
+      "sub_beats": [
+        {"label": "Geography", "image_type": "map_landscape", "duration_sec": 15, "sfx": null},
+        {"label": "Culture", "image_type": "temple_full", "duration_sec": 18, "sfx": "bell"},
+        {"label": "Historical Forces", "image_type": "period_scene", "duration_sec": 18, "sfx": null}
+      ]
+    },
+    {
+      "role": "personality",
+      "title": "Personality",
+      "sub_beats": [
+        {"label": "Character Traits", "image_type": "portrait_intimate", "duration_sec": 15, "sfx": null},
+        {"label": "Quotes", "image_type": "quote_card", "duration_sec": 12, "sfx": null},
+        {"label": "Anecdotes", "image_type": "narrative_scene", "duration_sec": 18, "sfx": "emphasis"}
+      ]
+    },
+    {
+      "role": "reflection",
+      "title": "Evening Reflection",
+      "sub_beats": [
+        {"label": "Contemplation", "image_type": "contemplation_scene", "duration_sec": 15, "sfx": "bell"},
+        {"label": "Integration", "image_type": "symbolic_detail", "duration_sec": 18, "sfx": null},
+        {"label": "The Path", "image_type": "path_journey", "duration_sec": 15, "sfx": null}
+      ]
+    },
+    {
+      "role": "closing",
+      "title": "Closing — The Dance",
+      "sub_beats": [
+        {"label": "Final Words", "image_type": "symbolic_detail", "duration_sec": 12, "sfx": "bell"},
+        {"label": "The Dance of the Instrument", "image_type": "dance_nataraja", "duration_sec": 15, "sfx": null},
+        {"label": "Outro Card", "image_type": "channel_branding", "duration_sec": 8, "sfx": null}
+      ]
+    }
+  ],
+  "image_type_map": {
+    "atmospheric_wide": {"search": ["landscape", "mountain", "temple", "valley"], "min_width": 1200},
+    "portrait_full": {"search": ["portrait", "statue", "figure", "sculpture", "deity"], "min_width": 500},
+    "portrait_detail": {"search": ["face", "head", "bust", "close-up", "detail"], "min_width": 500},
+    "portrait_intimate": {"search": ["portrait", "face", "expression", "quiet"], "min_width": 300},
+    "landscape_setting": {"search": ["landscape", "mountain", "valley", "kashmir", "himalaya"], "min_width": 1200},
+    "landscape_intimate": {"search": ["landscape", "courtyard", "garden", "path"], "min_width": 800},
+    "temple_full": {"search": ["temple", "shrine", "architecture", "stone"], "min_width": 800},
+    "temple_detail": {"search": ["temple", "carving", "pillar", "sculpture", "detail"], "min_width": 500},
+    "manuscript_scene": {"search": ["manuscript", "writing", "book", "script", "birch"], "min_width": 500},
+    "manuscript_detail": {"search": ["manuscript", "text", "script", "letter", "folio"], "min_width": 500},
+    "manuscript_full": {"search": ["manuscript", "book", "folio", "page", "spread"], "min_width": 800},
+    "meditation_scene": {"search": ["meditation", "buddha", "seated", "lotus"], "min_width": 500},
+    "teaching_scene": {"search": ["teaching", "teacher", "guru", "disciple", "transmission"], "min_width": 500},
+    "teacher_disciple": {"search": ["teacher", "guru", "disciple", "transmission", "student"], "min_width": 500},
+    "study_scene": {"search": ["study", "scholar", "reading", "manuscript", "library"], "min_width": 500},
+    "ritual_scene": {"search": ["ritual", "fire", "offering", "puja", "ceremony", "lamp"], "min_width": 500},
+    "diagram_symbolic": {"search": ["diagram", "symbol", "yantra", "mandala", "cosmological"], "min_width": 500},
+    "diagram_mandala": {"search": ["mandala", "cosmos", "wheel", "circle", "yantra", "sri"], "min_width": 800},
+    "symbolic_detail": {"search": ["symbol", "detail", "close-up", "motif", "emblem"], "min_width": 300},
+    "cosmic_scene": {"search": ["cosmos", "universe", "mandala", "astrology", "celestial"], "min_width": 800},
+    "narrative_scene": {"search": ["narrative", "story", "scene", "figures", "composition"], "min_width": 800},
+    "period_art": {"search": ["painting", "art", "period", "historical", "traditional"], "min_width": 800},
+    "period_scene": {"search": ["painting", "scene", "court", "village", "daily", "period"], "min_width": 800},
+    "everyday_scene": {"search": ["daily", "life", "village", "meal", "walking", "simple"], "min_width": 500},
+    "contemplation_scene": {"search": ["meditation", "contemplation", "evening", "alone", "silence"], "min_width": 500},
+    "path_journey": {"search": ["path", "journey", "way", "road", "mountain", "pilgrim"], "min_width": 800},
+    "dance_nataraja": {"search": ["nataraja", "dance", "shiva", "dancing", "tandava", "bronze"], "min_width": 500},
+    "quote_card": {"search": [], "min_width": 0, "generated": true},
+    "channel_branding": {"search": [], "min_width": 0, "generated": true},
+    "map_landscape": {"search": ["map", "kashmir", "india", "himalaya", "geography"], "min_width": 800},
+    "lineage_diagram": {"search": ["lineage", "transmission", "tree", "diagram", "genealogy"], "min_width": 500}
+  }
+}

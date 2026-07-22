@@ -1,0 +1,42 @@
+{
+  "module_id": "side-by-side",
+  "name": "Side by Side",
+  "description": "Two images compared side by side. Used when narration contrasts two figures, objects, or time periods.",
+  "trigger": "label contains 'compare', 'contrast', 'versus', 'vs', 'before', 'after', 'two', 'both', 'difference'",
+  "duration_sec": {"min": 12, "max": 20, "default": 15},
+  "layout": {
+    "split": "50/50 vertical",
+    "left_image": {
+      "position": "left_half",
+      "animation": "gentle_float",
+      "start_scale": 1.02,
+      "end_scale": 1.06
+    },
+    "right_image": {
+      "position": "right_half",
+      "animation": "gentle_float",
+      "start_scale": 1.02,
+      "end_scale": 1.06
+    },
+    "divider": {
+      "color": "#FFD700",
+      "width": 2,
+      "opacity": 0.5
+    }
+  },
+  "animation": {
+    "transition_in": "crossfade",
+    "transition_out": "crossfade",
+    "transition_duration": 0.5
+  },
+  "image_requirements": {
+    "needs_two_images": true,
+    "composition": "both images should be same orientation (both portrait or both landscape)",
+    "fallback": "full-bleed-art if only one image available"
+  },
+  "output": {
+    "type": "composite_image_on_V1",
+    "format": "1280x720",
+    "layer": "V1"
+  }
+}

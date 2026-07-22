@@ -28,5 +28,45 @@
   "mood": [],
   "color_palette": [],
   "entities_depicted": [],
-  "composition": ""
+  "composition": "",
+  "vision_labels": [
+    "Head",
+    "Nose",
+    "Beard",
+    "Temple",
+    "Art",
+    "Facial hair",
+    "History",
+    "Painting",
+    "Visual arts",
+    "Prophet",
+    "Artifact",
+    "Mythology",
+    "Ancient history",
+    "Byzantine architecture",
+    "Middle Ages"
+  ],
+  "vision_objects": [
+    "Person"
+  ],
+  "web_entities": [
+    "Reasonable Faith, Third Edition: Christian Truth and Apologetics",
+    "Jesus: Apocalyptic Prophet of the New Millennium",
+    "Gospel of Thomas",
+    "Christ Pantocrator",
+    "Jesus Prayer"
+  ],
+  "face_count": 0,
+  "dominant_colors": [
+    "#dfbc7e",
+    "#6c4d3a",
+    "#c29e67"
+  ],
+  "safe_search": {
+    "adult": "VERY_UNLIKELY",
+    "violence": "VERY_UNLIKELY",
+    "racy": "UNLIKELY"
+  },
+  "thumbnail_score": 80,
+  "thumbnail_verdict": "\u2b50 EXCELLENT"
 }

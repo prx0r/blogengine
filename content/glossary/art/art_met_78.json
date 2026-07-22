@@ -21,5 +21,45 @@
   "mood": [],
   "color_palette": [],
   "entities_depicted": [],
-  "composition": ""
+  "composition": "",
+  "vision_labels": [
+    "Forehead",
+    "Sculpture",
+    "Temple",
+    "Statue",
+    "Artifact",
+    "Stone carving",
+    "Carving",
+    "Classical sculpture",
+    "Thorax",
+    "Meditation",
+    "Creative arts",
+    "Mythology",
+    "Ancient history",
+    "Guru",
+    "Relief"
+  ],
+  "vision_objects": [
+    "Sculpture"
+  ],
+  "web_entities": [
+    "Akshobhya",
+    "Buddha in art",
+    "Buddhist art",
+    "Gesture",
+    "Buddhist temple"
+  ],
+  "face_count": 0,
+  "dominant_colors": [
+    "#323231",
+    "#9e9fa2",
+    "#4c2c1c"
+  ],
+  "safe_search": {
+    "adult": "VERY_UNLIKELY",
+    "violence": "VERY_UNLIKELY",
+    "racy": "UNLIKELY"
+  },
+  "thumbnail_score": 68,
+  "thumbnail_verdict": "\ud83d\udc4d GOOD"
 }

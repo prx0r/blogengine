@@ -1,0 +1,552 @@
+{
+  "name": "Why Did Tantric Ascetics Turn a Human Skull Into a Sacred Bowl",
+  "width": 1280,
+  "height": 720,
+  "fps": 25,
+  "background": "#0D1117",
+  "revision": 1,
+  "media": [
+    {
+      "id": "m_seg-01-hook",
+      "name": "seg-01-hook.mp3",
+      "kind": "audio",
+      "src": "/media/seg-01-hook.mp3",
+      "duration": 39.096
+    },
+    {
+      "id": "m_seg-01-hook_art",
+      "name": "met_39600.jpg",
+      "kind": "image",
+      "src": "/media/met_39600.jpg",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "m_seg-02-orientation",
+      "name": "seg-02-orientation.mp3",
+      "kind": "audio",
+      "src": "/media/seg-02-orientation.mp3",
+      "duration": 35.832
+    },
+    {
+      "id": "m_seg-02-orientation_art",
+      "name": "met_38606.jpg",
+      "kind": "image",
+      "src": "/media/met_38606.jpg",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "m_seg-03-evidence",
+      "name": "seg-03-evidence.mp3",
+      "kind": "audio",
+      "src": "/media/seg-03-evidence.mp3",
+      "duration": 39.984
+    },
+    {
+      "id": "m_seg-03-evidence_art",
+      "name": "met_72421.jpg",
+      "kind": "image",
+      "src": "/media/met_72421.jpg",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "m_seg-04-object-reveal",
+      "name": "seg-04-object-reveal.mp3",
+      "kind": "audio",
+      "src": "/media/seg-04-object-reveal.mp3",
+      "duration": 37.776
+    },
+    {
+      "id": "m_seg-04-object-reveal_art",
+      "name": "met_73384.jpg",
+      "kind": "image",
+      "src": "/media/met_73384.jpg",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "m_seg-05-evidence",
+      "name": "seg-05-evidence.mp3",
+      "kind": "audio",
+      "src": "/media/seg-05-evidence.mp3",
+      "duration": 42.696
+    },
+    {
+      "id": "m_seg-05-evidence_art",
+      "name": "met_39600.jpg",
+      "kind": "image",
+      "src": "/media/met_39600.jpg",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "m_seg-06-reversal",
+      "name": "seg-06-reversal.mp3",
+      "kind": "audio",
+      "src": "/media/seg-06-reversal.mp3",
+      "duration": 39.192
+    },
+    {
+      "id": "m_seg-06-reversal_art",
+      "name": "met_74902.jpg",
+      "kind": "image",
+      "src": "/media/met_74902.jpg",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "m_seg-07-hypothesis-test",
+      "name": "seg-07-hypothesis-test.mp3",
+      "kind": "audio",
+      "src": "/media/seg-07-hypothesis-test.mp3",
+      "duration": 43.584
+    },
+    {
+      "id": "m_seg-07-hypothesis-test_art",
+      "name": "met_78192.jpg",
+      "kind": "image",
+      "src": "/media/met_78192.jpg",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "m_seg-08-theoretical-decode",
+      "name": "seg-08-theoretical-decode.mp3",
+      "kind": "audio",
+      "src": "/media/seg-08-theoretical-decode.mp3",
+      "duration": 37.968
+    },
+    {
+      "id": "m_seg-08-theoretical-decode_art",
+      "name": "met_78191.jpg",
+      "kind": "image",
+      "src": "/media/met_78191.jpg",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "m_seg-09-contradiction",
+      "name": "seg-09-contradiction.mp3",
+      "kind": "audio",
+      "src": "/media/seg-09-contradiction.mp3",
+      "duration": 43.44
+    },
+    {
+      "id": "m_seg-09-contradiction_art",
+      "name": "met_38606.jpg",
+      "kind": "image",
+      "src": "/media/met_38606.jpg",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "m_seg-10-synthesis",
+      "name": "seg-10-synthesis.mp3",
+      "kind": "audio",
+      "src": "/media/seg-10-synthesis.mp3",
+      "duration": 46.488
+    },
+    {
+      "id": "m_seg-10-synthesis_art",
+      "name": "met_73384.jpg",
+      "kind": "image",
+      "src": "/media/met_73384.jpg",
+      "width": 1280,
+      "height": 720
+    }
+  ],
+  "clips": [
+    {
+      "id": "clip_seg-01-hook_v1",
+      "track": 0,
+      "start": 0.0,
+      "duration": 39.096,
+      "mediaId": "m_seg-01-hook_art",
+      "kind": "image",
+      "effects": [
+        {
+          "name": "ken_burns",
+          "params": {
+            "startScale": 1.0,
+            "endScale": 1.1,
+            "panX": 0,
+            "panY": 0
+          }
+        },
+        {
+          "name": "mystical-dark",
+          "params": {
+            "contrast": 1.15,
+            "saturation": 0.85,
+            "shadows": -0.05,
+            "highlights": -0.03
+          }
+        }
+      ],
+      "transitionIn": null,
+      "transitionOut": "fade",
+      "transitionDuration": 0.5
+    },
+    {
+      "id": "clip_seg-01-hook_a1",
+      "track": 1,
+      "start": 0.0,
+      "duration": 39.096,
+      "mediaId": "m_seg-01-hook",
+      "kind": "audio"
+    },
+    {
+      "id": "clip_seg-02-orientation_v1",
+      "track": 0,
+      "start": 39.096,
+      "duration": 35.832,
+      "mediaId": "m_seg-02-orientation_art",
+      "kind": "image",
+      "effects": [
+        {
+          "name": "ken_burns",
+          "params": {
+            "startScale": 1.0,
+            "endScale": 1.12,
+            "panX": 15,
+            "panY": 0
+          }
+        },
+        {
+          "name": "mystical-dark",
+          "params": {
+            "contrast": 1.15,
+            "saturation": 0.85,
+            "shadows": -0.05,
+            "highlights": -0.03
+          }
+        }
+      ],
+      "transitionIn": "fade",
+      "transitionOut": "fade",
+      "transitionDuration": 0.5
+    },
+    {
+      "id": "clip_seg-02-orientation_a1",
+      "track": 1,
+      "start": 39.096,
+      "duration": 35.832,
+      "mediaId": "m_seg-02-orientation",
+      "kind": "audio"
+    },
+    {
+      "id": "clip_seg-03-evidence_v1",
+      "track": 0,
+      "start": 74.928,
+      "duration": 39.984,
+      "mediaId": "m_seg-03-evidence_art",
+      "kind": "image",
+      "effects": [
+        {
+          "name": "ken_burns",
+          "params": {
+            "startScale": 1.12,
+            "endScale": 1.0,
+            "panX": 0,
+            "panY": 0
+          }
+        },
+        {
+          "name": "mystical-dark",
+          "params": {
+            "contrast": 1.15,
+            "saturation": 0.85,
+            "shadows": -0.05,
+            "highlights": -0.03
+          }
+        }
+      ],
+      "transitionIn": "fade",
+      "transitionOut": "fade",
+      "transitionDuration": 0.5
+    },
+    {
+      "id": "clip_seg-03-evidence_a1",
+      "track": 1,
+      "start": 74.928,
+      "duration": 39.984,
+      "mediaId": "m_seg-03-evidence",
+      "kind": "audio"
+    },
+    {
+      "id": "clip_seg-04-object-reveal_v1",
+      "track": 0,
+      "start": 114.912,
+      "duration": 37.776,
+      "mediaId": "m_seg-04-object-reveal_art",
+      "kind": "image",
+      "effects": [
+        {
+          "name": "ken_burns",
+          "params": {
+            "startScale": 1.05,
+            "endScale": 1.12,
+            "panX": -5,
+            "panY": 5
+          }
+        },
+        {
+          "name": "mystical-dark",
+          "params": {
+            "contrast": 1.15,
+            "saturation": 0.85,
+            "shadows": -0.05,
+            "highlights": -0.03
+          }
+        }
+      ],
+      "transitionIn": "fade",
+      "transitionOut": "fade",
+      "transitionDuration": 0.5
+    },
+    {
+      "id": "clip_seg-04-object-reveal_a1",
+      "track": 1,
+      "start": 114.912,
+      "duration": 37.776,
+      "mediaId": "m_seg-04-object-reveal",
+      "kind": "audio"
+    },
+    {
+      "id": "clip_seg-05-evidence_v1",
+      "track": 0,
+      "start": 152.688,
+      "duration": 42.696,
+      "mediaId": "m_seg-05-evidence_art",
+      "kind": "image",
+      "effects": [
+        {
+          "name": "ken_burns",
+          "params": {
+            "startScale": 1.0,
+            "endScale": 1.12,
+            "panX": -15,
+            "panY": 0
+          }
+        },
+        {
+          "name": "mystical-dark",
+          "params": {
+            "contrast": 1.15,
+            "saturation": 0.85,
+            "shadows": -0.05,
+            "highlights": -0.03
+          }
+        }
+      ],
+      "transitionIn": "fade",
+      "transitionOut": "fade",
+      "transitionDuration": 0.5
+    },
+    {
+      "id": "clip_seg-05-evidence_a1",
+      "track": 1,
+      "start": 152.688,
+      "duration": 42.696,
+      "mediaId": "m_seg-05-evidence",
+      "kind": "audio"
+    },
+    {
+      "id": "clip_seg-06-reversal_v1",
+      "track": 0,
+      "start": 195.384,
+      "duration": 39.192,
+      "mediaId": "m_seg-06-reversal_art",
+      "kind": "image",
+      "effects": [
+        {
+          "name": "ken_burns",
+          "params": {
+            "startScale": 1.02,
+            "endScale": 1.06,
+            "panX": 0,
+            "panY": -3
+          }
+        },
+        {
+          "name": "mystical-dark",
+          "params": {
+            "contrast": 1.15,
+            "saturation": 0.85,
+            "shadows": -0.05,
+            "highlights": -0.03
+          }
+        }
+      ],
+      "transitionIn": "fade",
+      "transitionOut": "fade",
+      "transitionDuration": 0.5
+    },
+    {
+      "id": "clip_seg-06-reversal_a1",
+      "track": 1,
+      "start": 195.384,
+      "duration": 39.192,
+      "mediaId": "m_seg-06-reversal",
+      "kind": "audio"
+    },
+    {
+      "id": "clip_seg-07-hypothesis-test_v1",
+      "track": 0,
+      "start": 234.576,
+      "duration": 43.584,
+      "mediaId": "m_seg-07-hypothesis-test_art",
+      "kind": "image",
+      "effects": [
+        {
+          "name": "ken_burns",
+          "params": {
+            "startScale": 1.0,
+            "endScale": 1.1,
+            "panX": 0,
+            "panY": 0
+          }
+        },
+        {
+          "name": "mystical-dark",
+          "params": {
+            "contrast": 1.15,
+            "saturation": 0.85,
+            "shadows": -0.05,
+            "highlights": -0.03
+          }
+        }
+      ],
+      "transitionIn": "fade",
+      "transitionOut": "fade",
+      "transitionDuration": 0.5
+    },
+    {
+      "id": "clip_seg-07-hypothesis-test_a1",
+      "track": 1,
+      "start": 234.576,
+      "duration": 43.584,
+      "mediaId": "m_seg-07-hypothesis-test",
+      "kind": "audio"
+    },
+    {
+      "id": "clip_seg-08-theoretical-decode_v1",
+      "track": 0,
+      "start": 278.16,
+      "duration": 37.968,
+      "mediaId": "m_seg-08-theoretical-decode_art",
+      "kind": "image",
+      "effects": [
+        {
+          "name": "ken_burns",
+          "params": {
+            "startScale": 1.0,
+            "endScale": 1.12,
+            "panX": 15,
+            "panY": 0
+          }
+        },
+        {
+          "name": "mystical-dark",
+          "params": {
+            "contrast": 1.15,
+            "saturation": 0.85,
+            "shadows": -0.05,
+            "highlights": -0.03
+          }
+        }
+      ],
+      "transitionIn": "fade",
+      "transitionOut": "fade",
+      "transitionDuration": 0.5
+    },
+    {
+      "id": "clip_seg-08-theoretical-decode_a1",
+      "track": 1,
+      "start": 278.16,
+      "duration": 37.968,
+      "mediaId": "m_seg-08-theoretical-decode",
+      "kind": "audio"
+    },
+    {
+      "id": "clip_seg-09-contradiction_v1",
+      "track": 0,
+      "start": 316.128,
+      "duration": 43.44,
+      "mediaId": "m_seg-09-contradiction_art",
+      "kind": "image",
+      "effects": [
+        {
+          "name": "ken_burns",
+          "params": {
+            "startScale": 1.12,
+            "endScale": 1.0,
+            "panX": 0,
+            "panY": 0
+          }
+        },
+        {
+          "name": "mystical-dark",
+          "params": {
+            "contrast": 1.15,
+            "saturation": 0.85,
+            "shadows": -0.05,
+            "highlights": -0.03
+          }
+        }
+      ],
+      "transitionIn": "fade",
+      "transitionOut": "fade",
+      "transitionDuration": 0.5
+    },
+    {
+      "id": "clip_seg-09-contradiction_a1",
+      "track": 1,
+      "start": 316.128,
+      "duration": 43.44,
+      "mediaId": "m_seg-09-contradiction",
+      "kind": "audio"
+    },
+    {
+      "id": "clip_seg-10-synthesis_v1",
+      "track": 0,
+      "start": 359.568,
+      "duration": 46.488,
+      "mediaId": "m_seg-10-synthesis_art",
+      "kind": "image",
+      "effects": [
+        {
+          "name": "ken_burns",
+          "params": {
+            "startScale": 1.05,
+            "endScale": 1.12,
+            "panX": -5,
+            "panY": 5
+          }
+        },
+        {
+          "name": "mystical-dark",
+          "params": {
+            "contrast": 1.15,
+            "saturation": 0.85,
+            "shadows": -0.05,
+            "highlights": -0.03
+          }
+        }
+      ],
+      "transitionIn": "fade",
+      "transitionOut": "fade",
+      "transitionDuration": 0.5
+    },
+    {
+      "id": "clip_seg-10-synthesis_a1",
+      "track": 1,
+      "start": 359.568,
+      "duration": 46.488,
+      "mediaId": "m_seg-10-synthesis",
+      "kind": "audio"
+    }
+  ]
+}

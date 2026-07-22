@@ -1,0 +1,54 @@
+{
+  "module_id": "quote-card",
+  "name": "Quote Card",
+  "description": "Full-screen quote with attribution. Triggered when storyboard narration contains quoted text.",
+  "trigger": "narration contains quotation marks (\"...\") or segment role is 'quote'",
+  "duration_sec": {"min": 8, "max": 20, "default": 12},
+  "layout": {
+    "quote_text": {
+      "font": "EB Garamond",
+      "size": 64,
+      "color": "#FFE8C8",
+      "align": "center",
+      "line_height": 1.4,
+      "max_lines": 6
+    },
+    "attribution": {
+      "font": "Cormorant Garamond",
+      "size": 36,
+      "color": "#FFD700",
+      "align": "center",
+      "position": "below_quote",
+      "prefix": "— "
+    },
+    "background": {
+      "color": "#0D1117",
+      "opacity": 0.85
+    }
+  },
+  "animation": {
+    "text_reveal": {
+      "type": "typewriter",
+      "duration_sec": 2.0,
+      "chars_per_second": 15
+    },
+    "attribution_fade": {
+      "type": "fade_in",
+      "duration_sec": 0.8,
+      "delay_sec": 1.5
+    },
+    "clip_duration_min": 8
+  },
+  "example": {
+    "quote": "Sometimes, one who wishes to dance must take his own instrument down off the wall.",
+    "attribution": "Abhinavagupta",
+    "source": "Tantrāloka"
+  },
+  "output": {
+    "type": "generated_image_on_V1",
+    "format": "1280x720",
+    "background_color": "#0D1117",
+    "layer": "V1",
+    "generation_tool": "generate-quote-card.py --style centered_sparse"
+  }
+}

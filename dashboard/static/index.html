@@ -79,6 +79,8 @@ button.fc{background:#003545;color:var(--cyan);border-color:var(--cyan)}
 
 <div class="nav">
   <a class="fc active" onclick="showPage('fablecut')">⚡ Editor</a>
+  <a onclick="showPage('fablecut-embed')">🎬 Watch</a>
+  <a onclick="showPage('validate')">✓ Validate</a>
   <a onclick="showPage('blueprints')">Blueprints</a>
   <a onclick="showPage('channels')">Channels</a>
   <a onclick="showPage('analytics')">Analytics</a>
@@ -117,6 +119,32 @@ button.fc{background:#003545;color:var(--cyan);border-color:var(--cyan)}
   </div>
 </div>
 
+<!-- VALIDATION -->
+<div id="page-validate" class="page">
+  <div class="flex mb-8 wrap">
+    <h2 style="font-size:16px;flex:1">✓ Video Validation</h2>
+    <select id="val-bp" style="background:var(--bg);border:1px solid var(--border);color:var(--text);padding:4px 8px;border-radius:4px;font-size:12px"></select>
+    <button class="primary" onclick="runValidation()" style="font-size:12px;padding:4px 10px">Run</button>
+  </div>
+  <div id="val-status" class="stat-row"></div>
+  <div id="val-results" style="font-size:13px;font-family:monospace"></div>
+  <div id="val-detail" style="margin-top:12px"></div>
+</div>
+
+<!-- FABLECUT FULLSCREEN EMBED -->
+<div id="page-fablecut-embed" class="page" style="padding:0;display:flex;flex-direction:column">
+  <div style="background:var(--surface);border-bottom:1px solid var(--border);padding:6px 12px;display:flex;align-items:center;gap:10px;flex-shrink:0">
+    <span style="font-weight:600;font-size:13px">🎬 FableCut Editor</span>
+    <span id="fc-embed-status" class="badge green">running</span>
+    <span class="text-sm text-dim" style="flex:1">fablecut.tantrafiles.xyz</span>
+    <a href="https://fablecut.tantrafiles.xyz" target="_blank" style="color:var(--cyan);font-size:12px">Open in new tab ↗</a>
+  </div>
+  <iframe id="fc-iframe" src="https://fablecut.tantrafiles.xyz"
+    style="flex:1;width:100%;border:none;background:#000"
+    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+    sandbox="allow-same-origin allow-scripts allow-forms allow-popups"></iframe>
+</div>
+
 <!-- BLUEPRINTS -->
 <div id="page-blueprints" class="page">
   <h2 style="font-size:16px;margin-bottom:8px">All Blueprints</h2>
@@ -140,6 +168,7 @@ button.fc{background:#003545;color:var(--cyan);border-color:var(--cyan)}
 
 <script>
 let _bps = [];
+const API_BASE = window.API_BASE || '';
 
 function showPage(id) {
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
@@ -152,7 +181,7 @@ function showPage(id) {
   if (id==='analytics') anLoad();
 }
 
-async function api(p){try{const r=await fetch(p);return await r.json()}catch(e){return{error:e.message}}}
+async function api(p){try{const r=await fetch(API_BASE+p);return await r.json()}catch(e){return{error:e.message}}}
 
 // ── QUICK SCORE ──
 let _qsTimer=null;
@@ -264,6 +293,60 @@ async function anLoad(){
       <div class="stat-card" style="flex:1;padding:8px"><div class="lbl">Brk%</div><div class="val" style="font-size:16px">${(c.breakout_rate*100).toFixed(0)}%</div></div>
     </div></div>
   `).join('');
+}
+
+// ── VALIDATION ──
+async function valInit() {
+  const bps = await api('/api/blueprints');
+  const sel = document.getElementById('val-bp');
+  sel.innerHTML = '<option value="">Current project (no blueprint)</option>' +
+    (bps.blueprints||[]).map(b => `<option value="${b.id}">${b.id}: ${b.title.slice(0,40)}</option>`).join('');
+}
+
+async function runValidation() {
+  const el = document.getElementById('val-results');
+  const st = document.getElementById('val-status');
+  const dt = document.getElementById('val-detail');
+  el.innerHTML = 'Running validation...';
+  dt.innerHTML = '';
+  
+  const bp = document.getElementById('val-bp').value;
+  let url = '/api/validate';
+  if (bp) url += '?blueprint=' + encodeURIComponent(bp);
+  
+  const d = await api(url);
+  
+  if (d.error) {
+    el.innerHTML = `<span style="color:var(--gold)">Error: ${d.error}</span>`;
+    return;
+  }
+  
+  const passed = d.passed;
+  const score = d.score;
+  const icon = passed ? '✅' : '❌';
+  const color = passed ? 'var(--green)' : 'var(--gold)';
+  
+  st.innerHTML = `
+    <div class="stat-card"><div class="lbl">Score</div><div class="val" style="color:${color}">${score}%</div><div class="sub">${passed ? 'PASSED' : 'FAILED'}</div></div>
+    <div class="stat-card"><div class="lbl">Checks</div><div class="val">${d.checks.length}</div><div class="sub">${d.checks.filter(c=>c.passed).length} passed</div></div>
+    <div class="stat-card"><div class="lbl">Duration</div><div class="val">${d.summary?.duration || '?'}min</div><div class="sub">${d.summary?.clips || 0} clips</div></div>
+    <div class="stat-card"><div class="lbl">Project</div><div class="val" style="font-size:14px">${(d.project||'').slice(0,30)}</div></div>
+  `;
+  
+  let html = '';
+  for (const c of d.checks) {
+    const ic = c.passed ? '✅' : '❌';
+    html += `<div style="padding:3px 0;border-bottom:1px solid rgba(48,54,61,0.3)">${ic} <strong>${c.id}</strong> ${c.text} <span class="text-dim">(${c.weight}pts)</span>`;
+    if (c.detail) html += `<br><span class="text-dim" style="margin-left:24px;font-size:11px">${c.detail}</span>`;
+    html += `</div>`;
+  }
+  el.innerHTML = html;
+  
+  // Warnings
+  if (d.warnings && d.warnings.length > 0) {
+    dt.innerHTML = '<div style="background:rgba(210,153,34,0.1);border:1px solid var(--gold);border-radius:6px;padding:10px">' +
+      d.warnings.map(w => `<div style="font-size:12px">⚠ ${w}</div>`).join('') + '</div>';
+  }
 }
 
 // Init

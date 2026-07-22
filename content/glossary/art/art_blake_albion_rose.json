@@ -36,5 +36,39 @@
   "mood": [],
   "color_palette": [],
   "entities_depicted": [],
-  "composition": ""
+  "composition": "",
+  "vision_labels": [
+    "Drawing",
+    "Art",
+    "Sketch",
+    "Figure drawing",
+    "Illustration",
+    "Barechestedness",
+    "Line art",
+    "Abdomen",
+    "Stomach"
+  ],
+  "vision_objects": [
+    "Painting"
+  ],
+  "web_entities": [
+    "The Dance of Albion (Glad Day)",
+    "Glad Day or The Dance of Albion",
+    "National Gallery of Art",
+    "Albion Rose",
+    "Art"
+  ],
+  "face_count": 0,
+  "dominant_colors": [
+    "#cdbeac",
+    "#ae9f8e",
+    "#e9dbca"
+  ],
+  "safe_search": {
+    "adult": "POSSIBLE",
+    "violence": "UNLIKELY",
+    "racy": "VERY_LIKELY"
+  },
+  "thumbnail_score": 91,
+  "thumbnail_verdict": "\u2b50 EXCELLENT"
 }

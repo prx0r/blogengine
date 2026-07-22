@@ -1,0 +1,31 @@
+{
+  "module_id": "map-diagram",
+  "name": "Map / Diagram",
+  "description": "Annotated geographic map, lineage chart, or conceptual diagram. Used for spatial or relational content.",
+  "trigger": "label contains 'map', 'geography', 'lineage', 'diagram', 'concept', 'relationship', 'genealogy', 'transmission'",
+  "duration_sec": {"min": 12, "max": 20, "default": 15},
+  "animation": {
+    "ken_burns": {
+      "style": "pan_across",
+      "start_scale": 1.08,
+      "end_scale": 1.08,
+      "pan_start": -30,
+      "pan_end": 30,
+      "easing": "linear",
+      "note": "Slow pan across the map/diagram from left to right"
+    },
+    "transition_in": "crossfade",
+    "transition_out": "crossfade",
+    "transition_duration": 0.5
+  },
+  "image_requirements": {
+    "type": "map, lineage tree, mandala, concept map, timeline",
+    "source": "art gallery or generated diagram",
+    "aspect_ratio": "prefer wider aspect (e.g. 16:9) for pan effect"
+  },
+  "output": {
+    "type": "image_clip_on_V1",
+    "format": "1280x720",
+    "layer": "V1"
+  }
+}

@@ -33,5 +33,37 @@
   "mood": [],
   "color_palette": [],
   "entities_depicted": [],
-  "composition": ""
+  "composition": "",
+  "vision_labels": [
+    "Paper",
+    "Book",
+    "Publication",
+    "Handwriting",
+    "Document",
+    "Letter",
+    "Ink"
+  ],
+  "vision_objects": [
+    "Painting"
+  ],
+  "web_entities": [
+    "Rosary of the Philosophers",
+    "Alchemy",
+    "\u30e6\u30f3\u30b0\u5fc3\u7406\u5b66\u3078\u306e\u62db\u5f85: \u30e6\u30f3\u30b0\u5168\u96c6\u30c4\u30a2\u30fc\u30ac\u30a4\u30c9",
+    "De Alchemia",
+    "Individuation"
+  ],
+  "face_count": 0,
+  "dominant_colors": [
+    "#8d7558",
+    "#ad9677",
+    "#6d563a"
+  ],
+  "safe_search": {
+    "adult": "POSSIBLE",
+    "violence": "UNLIKELY",
+    "racy": "VERY_LIKELY"
+  },
+  "thumbnail_score": 47,
+  "thumbnail_verdict": "\ud83d\udc4e POOR"
 }

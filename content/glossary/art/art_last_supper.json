@@ -30,5 +30,33 @@
   "mood": [],
   "color_palette": [],
   "entities_depicted": [],
-  "composition": ""
+  "composition": "",
+  "vision_labels": [
+    "Visual arts",
+    "Painting",
+    "Beard",
+    "Modern art",
+    "Prophet"
+  ],
+  "vision_objects": [],
+  "web_entities": [
+    "The Last Supper",
+    "Renaissance",
+    "Painting",
+    "Mural",
+    "Art"
+  ],
+  "face_count": 4,
+  "dominant_colors": [
+    "#aaa09b",
+    "#453b34",
+    "#574d46"
+  ],
+  "safe_search": {
+    "adult": "VERY_UNLIKELY",
+    "violence": "VERY_UNLIKELY",
+    "racy": "POSSIBLE"
+  },
+  "thumbnail_score": 76,
+  "thumbnail_verdict": "\ud83d\udc4d GOOD"
 }

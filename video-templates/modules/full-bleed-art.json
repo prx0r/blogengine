@@ -1,0 +1,29 @@
+{
+  "module_id": "full-bleed-art",
+  "name": "Full Bleed Art",
+  "description": "Full-screen artwork with Ken Burns animation. No text. Primary visual module.",
+  "trigger": "default — used when no other module matches",
+  "duration_sec": {"min": 8, "max": 25, "default": 12},
+  "animation": {
+    "ken_burns": {
+      "enabled": true,
+      "style_cycle": ["zoom_in_slow", "pan_right", "pan_left", "zoom_out", "drift_diagonal"],
+      "min_zoom": 1.0,
+      "max_zoom": 1.12,
+      "easing": "linear",
+      "no_repeat_within": 3
+    },
+    "transition_in": "crossfade",
+    "transition_out": "crossfade",
+    "transition_duration": 0.5
+  },
+  "filter": {
+    "name": "channel_preset",
+    "note": "Uses channel-specific filter (mystical-dark, golden-imaginal, etc.)"
+  },
+  "output": {
+    "type": "image_clip_on_V1",
+    "format": "1280x720",
+    "layer": "V1"
+  }
+}

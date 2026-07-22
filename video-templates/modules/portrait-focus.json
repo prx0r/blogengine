@@ -1,0 +1,30 @@
+{
+  "module_id": "portrait-focus",
+  "name": "Portrait Focus",
+  "description": "Tight crop on a figure's face or upper body. Slow zoom to draw attention to expression.",
+  "trigger": "label contains 'portrait', 'figure', 'person', 'guru', 'master', 'sage', 'teacher'",
+  "duration_sec": {"min": 10, "max": 18, "default": 14},
+  "animation": {
+    "ken_burns": {
+      "style": "zoom_in_slow",
+      "start_scale": 1.0,
+      "end_scale": 1.06,
+      "pan": 0,
+      "easing": "ease_in_out",
+      "note": "Gentle zoom — too much movement on faces feels unnatural"
+    },
+    "transition_in": "crossfade",
+    "transition_out": "crossfade",
+    "transition_duration": 0.5
+  },
+  "image_requirements": {
+    "framing": "tight crop on face/upper body",
+    "avoid": "full body, wide shots, groups",
+    "fallback": "full-bleed-art if no portrait available"
+  },
+  "output": {
+    "type": "image_clip_on_V1",
+    "format": "1280x720",
+    "layer": "V1"
+  }
+}

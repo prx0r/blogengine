@@ -21,5 +21,36 @@
   "mood": [],
   "color_palette": [],
   "entities_depicted": [],
-  "composition": ""
+  "composition": "",
+  "vision_labels": [
+    "Brown",
+    "Book",
+    "Paper Product",
+    "Rug",
+    "Book cover",
+    "Publication"
+  ],
+  "vision_objects": [
+    "Book"
+  ],
+  "web_entities": [
+    "The Conference of the Birds",
+    "Book",
+    "Neyshabur",
+    "Language of the birds",
+    "Language"
+  ],
+  "face_count": 0,
+  "dominant_colors": [
+    "#dbc09f",
+    "#887051",
+    "#9e6a43"
+  ],
+  "safe_search": {
+    "adult": "VERY_UNLIKELY",
+    "violence": "VERY_UNLIKELY",
+    "racy": "UNLIKELY"
+  },
+  "thumbnail_score": 44,
+  "thumbnail_verdict": "\ud83d\udc4e POOR"
 }

@@ -33,5 +33,40 @@
   "mood": [],
   "color_palette": [],
   "entities_depicted": [],
-  "composition": ""
+  "composition": "",
+  "vision_labels": [
+    "Painting",
+    "Illustration",
+    "Mythology",
+    "Fictional character",
+    "Graphics",
+    "Guru",
+    "Fiction"
+  ],
+  "vision_objects": [
+    "Person",
+    "Person",
+    "Clothing",
+    "Person"
+  ],
+  "web_entities": [
+    "Book of Ezekiel",
+    "Ezekiel's Vision",
+    "Merkabah mysticism",
+    "Ezekiel 1",
+    "King James Version"
+  ],
+  "face_count": 0,
+  "dominant_colors": [
+    "#c2c2c2",
+    "#9d9d9d",
+    "#7a7a7a"
+  ],
+  "safe_search": {
+    "adult": "VERY_UNLIKELY",
+    "violence": "VERY_UNLIKELY",
+    "racy": "POSSIBLE"
+  },
+  "thumbnail_score": 93,
+  "thumbnail_verdict": "\u2b50 EXCELLENT"
 }

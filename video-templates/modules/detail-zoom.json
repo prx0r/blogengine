@@ -1,0 +1,30 @@
+{
+  "module_id": "detail-zoom",
+  "name": "Detail Zoom",
+  "description": "Extreme close-up of an object, artifact, or detail. Used for material/texture descriptions.",
+  "trigger": "label contains 'detail', 'close', 'object', 'artifact', 'texture', 'material', 'manuscript', 'sculpture'",
+  "duration_sec": {"min": 8, "max": 15, "default": 10},
+  "animation": {
+    "ken_burns": {
+      "style": "push_in_fast",
+      "start_scale": 1.0,
+      "end_scale": 1.15,
+      "pan": 0,
+      "easing": "ease_out",
+      "note": "Pronounced zoom — reveals detail the narration is describing"
+    },
+    "transition_in": "crossfade",
+    "transition_out": "crossfade",
+    "transition_duration": 0.5
+  },
+  "image_requirements": {
+    "framing": "tight crop on the object",
+    "source": "art gallery or museum image with clear detail area",
+    "fallback": "full-bleed-art if no detail image available"
+  },
+  "output": {
+    "type": "image_clip_on_V1",
+    "format": "1280x720",
+    "layer": "V1"
+  }
+}
