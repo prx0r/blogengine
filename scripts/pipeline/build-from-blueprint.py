@@ -8,8 +8,17 @@ Usage:
   python3 scripts/pipeline/build-from-blueprint.py TBP-026 --skip-voiceover
 """
 
-import json, os, re, subprocess, sys, time, urllib.request, shutil
+import json, os, re, subprocess, sys, time, urllib.request, shutil, socket
 from pathlib import Path
+
+# Use Tor SOCKS proxy if available for downloads (bypasses Hetzner blocks)
+try:
+    import socks
+    socks.set_default_proxy(socks.SOCKS5, "localhost", 9050)
+    socket.socket = socks.socksocket
+    TOR_AVAILABLE = True
+except:
+    TOR_AVAILABLE = False
 
 ROOT = Path(__file__).parent.parent.parent
 BLUEPRINTS = ROOT / "tantrafiles" / "blueprints"
@@ -44,17 +53,30 @@ def parse_blueprint(path):
         if in_assets and line.startswith('## '):
             in_assets = False
         if in_assets:
-            # Wikimedia
-            m = re.search(r'https?://upload\.wikimedia\.org[^\s\)]+', line)
+            # Wikimedia  (both upload.wikimedia.org and commons.wikimedia.org)
+            m = re.search(r'https?://upload\.wikimedia\.org[^\s\)\]]+', line)
             if m: assets.append(("image", m.group(0)))
-            m = re.search(r'https?://commons\.wikimedia\.org/wiki/Special:FilePath/[^\s\)]+', line)
+            m = re.search(r'https?://commons\.wikimedia\.org/wiki/Special:[^\s\)\]]+', line)
             if m: assets.append(("image", m.group(0)))
+            # Direct image URLs from the blueprint
+            m = re.search(r'https?://[^\s\)\]]+\.(jpg|jpeg|png|gif|webp)', line, re.IGNORECASE)
+            if m and 'wikimedia' in m.group(0).lower() or 'metmuseum' in m.group(0).lower():
+                assets.append(("image", m.group(0)))
             # Met Museum
-            m = re.search(r'https?://collectionapi\.metmuseum\.org[^\s\)]+', line)
+            m = re.search(r'https?://collectionapi\.metmuseum\.org[^\s\)\]]+', line)
             if m: assets.append(("image", m.group(0)))
             # YouTube
-            m = re.search(r'(https?://www\.youtube\.com/watch\?v=[^\s&\)]+)', line)
+            m = re.search(r'(https?://www\.youtube\.com/watch\?v=[^\s&\)\]]+)', line)
             if m: assets.append(("video", m.group(0)))
+    
+    # Deduplicate
+    seen = set()
+    unique = []
+    for kind, url in assets:
+        if url not in seen:
+            seen.add(url)
+            unique.append((kind, url))
+    assets[:] = unique
     
     # Get beats and their narration
     beats = []
