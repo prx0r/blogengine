@@ -59,6 +59,20 @@ The skull-cup transformed death from an object of avoidance into a portable ritu
 - *Mattavilāsaprahasana* — Sanskrit comedy featuring a lost skull-bowl
 - Tufts thesis: "Utilizing Terror" on skull cup material culture
 
+## Related Papers (from research)
+
+Papers on consciousness, cognition, and Indian philosophy stored at:
+`content/sources/consciousness/abhinavagupta/`
+
+Key papers:
+1. *A Cognitive Science View of Abhinavagupta* — connects Trika philosophy to cognitive science
+2. *Consciousness in Western and Indian Philosophy* — comparative analysis
+3. *Indic Science of Consciousness: A Chronological Overview*
+4. *Mind and Consciousness in Indian Philosophy*
+5. *Western and Indian Theories of Consciousness* — cross-cultural framework
+6. More papers by Loriliai Biernacki in `more_papers_by_loriliai_biernacki/`
+7. *P.R. Sarkar's Yogic Philosophy* — dissolves mind-body problem (relevant to skull-cup as boundary object)
+
 ## Decision: RESEARCH MORE
 
 Full claim ledger (CLM-001 through CLM-040), source ledger (SRC-001 through SRC-019), 32 asset IDs, 10 diagram IDs, 8 theory IDs available in blueprint source. Pipeline ready.
