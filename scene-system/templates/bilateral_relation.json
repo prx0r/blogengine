@@ -1,0 +1,43 @@
+{
+  "name": "Bilateral Relation",
+  "key": "bilateral_relation",
+  "scene_count": 5,
+  "primitives": [
+    "arrow",
+    "dot",
+    "line",
+    "ring",
+    "text"
+  ],
+  "operators": [
+    "align",
+    "oscillate",
+    "reveal"
+  ],
+  "backgrounds": [
+    "dark",
+    "light"
+  ],
+  "example_scenes": [
+    {
+      "title": "City in a mirror",
+      "id": "dream.city_in_a_mirror.v1",
+      "duration": 28
+    },
+    {
+      "title": "The secret life of matter",
+      "id": "alchemy.the_secret_life_of_matter.v1",
+      "duration": 34
+    },
+    {
+      "title": "As above, so below",
+      "id": "alchemy.as_above,_so_below.v1",
+      "duration": 31
+    },
+    {
+      "title": "Two truths",
+      "id": "emptiness.two_truths.v1",
+      "duration": 31
+    }
+  ]
+}

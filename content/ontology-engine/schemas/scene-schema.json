@@ -1,0 +1,250 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Semantic Scene Specification",
+  "type": "object",
+  "properties": {
+    "scene_id": {
+      "type": "string"
+    },
+    "tradition": {
+      "type": "string"
+    },
+    "entities": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Entity"
+      }
+    },
+    "relations": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Relation"
+      }
+    },
+    "operators": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Operator"
+      }
+    },
+    "visual_archetypes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/VisualArchetype"
+      }
+    },
+    "narrative": {
+      "type": "string"
+    },
+    "continuity": {
+      "$ref": "#/definitions/Continuity"
+    },
+    "guard_results": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/GuardResult"
+      }
+    },
+    "truth_status": {
+      "type": "string",
+      "enum": [
+        "textual",
+        "inferred",
+        "speculative",
+        "comparative"
+      ]
+    },
+    "causal_mode": {
+      "type": "string",
+      "enum": [
+        "atemporal",
+        "temporal",
+        "simultaneous",
+        "cyclic"
+      ]
+    },
+    "temporal_mode": {
+      "type": "string",
+      "enum": [
+        "instantaneous",
+        "gradual",
+        "eternal",
+        "cyclic"
+      ]
+    }
+  },
+  "required": [
+    "scene_id",
+    "tradition",
+    "entities",
+    "relations"
+  ],
+  "definitions": {
+    "Entity": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "sanskrit": {
+          "type": "string"
+        },
+        "tradition": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "deity",
+            "concept",
+            "principle",
+            "tattva",
+            "state",
+            "method",
+            "practice",
+            "process",
+            "event",
+            "sefirah"
+          ]
+        },
+        "canonical_id": {
+          "type": "string"
+        },
+        "visual_archetype": {
+          "type": "string"
+        },
+        "position": {
+          "type": "string"
+        },
+        "color": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name"
+      ]
+    },
+    "Relation": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "from": {
+          "type": "string"
+        },
+        "to": {
+          "type": "string"
+        },
+        "canonical": {
+          "type": "string"
+        },
+        "visual": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "from",
+        "to"
+      ]
+    },
+    "Operator": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "target": {
+          "type": "string"
+        },
+        "duration": {
+          "type": "number"
+        },
+        "delay": {
+          "type": "number"
+        },
+        "easing": {
+          "type": "string"
+        },
+        "to": {
+          "type": "number"
+        },
+        "frequency": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "id",
+        "target"
+      ]
+    },
+    "VisualArchetype": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "target": {
+          "type": "string"
+        },
+        "position": {
+          "type": "string"
+        },
+        "scale": {
+          "type": "number"
+        },
+        "opacity": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "id",
+        "position"
+      ]
+    },
+    "Continuity": {
+      "type": "object",
+      "properties": {
+        "in_tokens": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "out_tokens": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "preserve_entities": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "GuardResult": {
+      "type": "object",
+      "properties": {
+        "rule": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "PASS",
+            "FAIL",
+            "WARN"
+          ]
+        }
+      }
+    }
+  }
+}

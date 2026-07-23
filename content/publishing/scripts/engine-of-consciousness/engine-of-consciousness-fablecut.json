@@ -1,0 +1,1980 @@
+{
+  "name": "The Engine of Consciousness \u2014 Spanda and the Hidden Pulse",
+  "width": 1280,
+  "height": 720,
+  "fps": 25,
+  "background": "#0D1117",
+  "revision": 1,
+  "media": [
+    {
+      "id": "m_drone",
+      "name": "ambient-drone.mp3",
+      "kind": "audio",
+      "src": "/media/ambient-drone.mp3",
+      "duration": 361.408
+    },
+    {
+      "id": "m_seg-01-hook_audio",
+      "name": "seg-01-hook.mp3",
+      "kind": "audio",
+      "src": "/media/seg-01-hook.mp3",
+      "duration": 35.664
+    },
+    {
+      "id": "m_seg-01-hook_a0",
+      "name": "thangka32.png",
+      "kind": "image",
+      "src": "/media/thangka32.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "m_seg-01-hook_a1",
+      "name": "thangka53.png",
+      "kind": "image",
+      "src": "/media/thangka53.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "m_seg-01-hook_a2",
+      "name": "art_blake_albion_rose.jpg",
+      "kind": "image",
+      "src": "/media/art_blake_albion_rose.jpg",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "m_seg-02-wheel_audio",
+      "name": "seg-02-wheel.mp3",
+      "kind": "audio",
+      "src": "/media/seg-02-wheel.mp3",
+      "duration": 42.024
+    },
+    {
+      "id": "m_seg-02-wheel_a0",
+      "name": "art_mandala.jpg",
+      "kind": "image",
+      "src": "/media/art_mandala.jpg",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "m_seg-02-wheel_a1",
+      "name": "thangka4.png",
+      "kind": "image",
+      "src": "/media/thangka4.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "m_seg-02-wheel_a2",
+      "name": "thangka9.png",
+      "kind": "image",
+      "src": "/media/thangka9.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "m_seg-03-six-names_audio",
+      "name": "seg-03-six-names.mp3",
+      "kind": "audio",
+      "src": "/media/seg-03-six-names.mp3",
+      "duration": 34.656
+    },
+    {
+      "id": "m_seg-03-six-names_a0",
+      "name": "thangka626.png",
+      "kind": "image",
+      "src": "/media/thangka626.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "m_seg-03-six-names_a1",
+      "name": "thangka4.png",
+      "kind": "image",
+      "src": "/media/thangka4.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "m_seg-03-six-names_a2",
+      "name": "art_met_mandala_of_the_bodhisattva_hannya_prajnaparamita.jpg",
+      "kind": "image",
+      "src": "/media/art_met_mandala_of_the_bodhisattva_hannya_prajnaparamita.jpg",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "m_seg-04-mantra_audio",
+      "name": "seg-04-mantra.mp3",
+      "kind": "audio",
+      "src": "/media/seg-04-mantra.mp3",
+      "duration": 35.256
+    },
+    {
+      "id": "m_seg-04-mantra_a0",
+      "name": "thangka1088.png",
+      "kind": "image",
+      "src": "/media/thangka1088.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "m_seg-04-mantra_a1",
+      "name": "thangka32.png",
+      "kind": "image",
+      "src": "/media/thangka32.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "m_seg-04-mantra_a2",
+      "name": "thangka54.png",
+      "kind": "image",
+      "src": "/media/thangka54.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "m_seg-05-perception_audio",
+      "name": "seg-05-perception.mp3",
+      "kind": "audio",
+      "src": "/media/seg-05-perception.mp3",
+      "duration": 40.56
+    },
+    {
+      "id": "m_seg-05-perception_a0",
+      "name": "thangka56.png",
+      "kind": "image",
+      "src": "/media/thangka56.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "m_seg-05-perception_a1",
+      "name": "thangka11.png",
+      "kind": "image",
+      "src": "/media/thangka11.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "m_seg-05-perception_a2",
+      "name": "thangka15.png",
+      "kind": "image",
+      "src": "/media/thangka15.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "m_seg-06-fish_audio",
+      "name": "seg-06-fish.mp3",
+      "kind": "audio",
+      "src": "/media/seg-06-fish.mp3",
+      "duration": 36.984
+    },
+    {
+      "id": "m_seg-06-fish_a0",
+      "name": "thangka156.png",
+      "kind": "image",
+      "src": "/media/thangka156.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "m_seg-06-fish_a1",
+      "name": "thangka301.png",
+      "kind": "image",
+      "src": "/media/thangka301.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "m_seg-06-fish_a2",
+      "name": "art_met_shiva_as_lord_of_dance_nataraja.jpg",
+      "kind": "image",
+      "src": "/media/art_met_shiva_as_lord_of_dance_nataraja.jpg",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "m_seg-07-time_audio",
+      "name": "seg-07-time.mp3",
+      "kind": "audio",
+      "src": "/media/seg-07-time.mp3",
+      "duration": 38.256
+    },
+    {
+      "id": "m_seg-07-time_a0",
+      "name": "art_fludd_macrocosm.png",
+      "kind": "image",
+      "src": "/media/art_fludd_macrocosm.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "m_seg-07-time_a1",
+      "name": "art_mandala.jpg",
+      "kind": "image",
+      "src": "/media/art_mandala.jpg",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "m_seg-07-time_a2",
+      "name": "thangka1.png",
+      "kind": "image",
+      "src": "/media/thangka1.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "m_seg-08-wave_audio",
+      "name": "seg-08-wave.mp3",
+      "kind": "audio",
+      "src": "/media/seg-08-wave.mp3",
+      "duration": 32.712
+    },
+    {
+      "id": "m_seg-08-wave_a0",
+      "name": "thangka6.png",
+      "kind": "image",
+      "src": "/media/thangka6.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "m_seg-08-wave_a1",
+      "name": "thangka626.png",
+      "kind": "image",
+      "src": "/media/thangka626.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "m_seg-08-wave_a2",
+      "name": "art_mandala.jpg",
+      "kind": "image",
+      "src": "/media/art_mandala.jpg",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "m_seg-09-play_audio",
+      "name": "seg-09-play.mp3",
+      "kind": "audio",
+      "src": "/media/seg-09-play.mp3",
+      "duration": 33.552
+    },
+    {
+      "id": "m_seg-09-play_a0",
+      "name": "art_met_shiva_as_lord_of_dance_nataraja.jpg",
+      "kind": "image",
+      "src": "/media/art_met_shiva_as_lord_of_dance_nataraja.jpg",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "m_seg-09-play_a1",
+      "name": "thangka156.png",
+      "kind": "image",
+      "src": "/media/thangka156.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "m_seg-09-play_a2",
+      "name": "thangka639.png",
+      "kind": "image",
+      "src": "/media/thangka639.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "m_seg-10-closing_audio",
+      "name": "seg-10-closing.mp3",
+      "kind": "audio",
+      "src": "/media/seg-10-closing.mp3",
+      "duration": 21.744
+    },
+    {
+      "id": "m_seg-10-closing_a0",
+      "name": "art_met_shiva_as_lord_of_dance_nataraja.jpg",
+      "kind": "image",
+      "src": "/media/art_met_shiva_as_lord_of_dance_nataraja.jpg",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "m_seg-10-closing_a1",
+      "name": "thangka6.png",
+      "kind": "image",
+      "src": "/media/thangka6.png",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": "m_seg-10-closing_a2",
+      "name": "art_met_shiva_as_lord_of_dance_nataraja.jpg",
+      "kind": "image",
+      "src": "/media/art_met_shiva_as_lord_of_dance_nataraja.jpg",
+      "width": 1280,
+      "height": 720
+    }
+  ],
+  "clips": [
+    {
+      "id": "a_seg-01-hook",
+      "track": "A1",
+      "start": 0.0,
+      "duration": 35.664,
+      "mediaId": "m_seg-01-hook_audio",
+      "kind": "audio"
+    },
+    {
+      "id": "v_seg-01-hook_0",
+      "track": "V1",
+      "start": 0.0,
+      "duration": 11.888,
+      "mediaId": "m_seg-01-hook_a0",
+      "kind": "image",
+      "props": {
+        "filterPreset": "mystical-dark"
+      },
+      "keyframes": {
+        "scale": [
+          {
+            "t": 0,
+            "v": 1.0
+          },
+          {
+            "t": 11.888,
+            "v": 1.1
+          }
+        ],
+        "positionX": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 11.888,
+            "v": 0
+          }
+        ],
+        "positionY": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 11.888,
+            "v": 0
+          }
+        ],
+        "speed": [
+          {
+            "t": 0,
+            "v": 1.0
+          }
+        ]
+      },
+      "transitionIn": "fade",
+      "transitionOut": "crossfade",
+      "transitionDuration": 0.5
+    },
+    {
+      "id": "v_seg-01-hook_1",
+      "track": "V1",
+      "start": 11.888,
+      "duration": 11.888,
+      "mediaId": "m_seg-01-hook_a1",
+      "kind": "image",
+      "props": {
+        "filterPreset": "mystical-dark"
+      },
+      "keyframes": {
+        "scale": [
+          {
+            "t": 0,
+            "v": 1.0
+          },
+          {
+            "t": 11.888,
+            "v": 1.12
+          }
+        ],
+        "positionX": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 11.888,
+            "v": 15
+          }
+        ],
+        "positionY": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 11.888,
+            "v": 0
+          }
+        ],
+        "speed": [
+          {
+            "t": 0,
+            "v": 1.0
+          }
+        ]
+      },
+      "transitionIn": "crossfade",
+      "transitionOut": "crossfade",
+      "transitionDuration": 0.5
+    },
+    {
+      "id": "v_seg-01-hook_2",
+      "track": "V1",
+      "start": 23.776,
+      "duration": 11.888,
+      "mediaId": "m_seg-01-hook_a2",
+      "kind": "image",
+      "props": {
+        "filterPreset": "mystical-dark"
+      },
+      "keyframes": {
+        "scale": [
+          {
+            "t": 0,
+            "v": 1.12
+          },
+          {
+            "t": 11.888000000000002,
+            "v": 1.0
+          }
+        ],
+        "positionX": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 11.888000000000002,
+            "v": 0
+          }
+        ],
+        "positionY": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 11.888000000000002,
+            "v": 0
+          }
+        ],
+        "speed": [
+          {
+            "t": 0,
+            "v": 1.0
+          }
+        ]
+      },
+      "transitionIn": "crossfade",
+      "transitionOut": "crossfade",
+      "transitionDuration": 0.5
+    },
+    {
+      "id": "a_seg-02-wheel",
+      "track": "A1",
+      "start": 35.664,
+      "duration": 42.024,
+      "mediaId": "m_seg-02-wheel_audio",
+      "kind": "audio"
+    },
+    {
+      "id": "v_seg-02-wheel_0",
+      "track": "V1",
+      "start": 35.664,
+      "duration": 14.008,
+      "mediaId": "m_seg-02-wheel_a0",
+      "kind": "image",
+      "props": {
+        "filterPreset": "mystical-dark"
+      },
+      "keyframes": {
+        "scale": [
+          {
+            "t": 0,
+            "v": 1.05
+          },
+          {
+            "t": 14.008000000000001,
+            "v": 1.12
+          }
+        ],
+        "positionX": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 14.008000000000001,
+            "v": -5
+          }
+        ],
+        "positionY": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 14.008000000000001,
+            "v": 5
+          }
+        ],
+        "speed": [
+          {
+            "t": 0,
+            "v": 1.0
+          }
+        ]
+      },
+      "transitionIn": "crossfade",
+      "transitionOut": "crossfade",
+      "transitionDuration": 0.5
+    },
+    {
+      "id": "v_seg-02-wheel_1",
+      "track": "V1",
+      "start": 49.672,
+      "duration": 14.008,
+      "mediaId": "m_seg-02-wheel_a1",
+      "kind": "image",
+      "props": {
+        "filterPreset": "mystical-dark"
+      },
+      "keyframes": {
+        "scale": [
+          {
+            "t": 0,
+            "v": 1.0
+          },
+          {
+            "t": 14.008000000000001,
+            "v": 1.12
+          }
+        ],
+        "positionX": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 14.008000000000001,
+            "v": -15
+          }
+        ],
+        "positionY": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 14.008000000000001,
+            "v": 0
+          }
+        ],
+        "speed": [
+          {
+            "t": 0,
+            "v": 1.0
+          }
+        ]
+      },
+      "transitionIn": "crossfade",
+      "transitionOut": "crossfade",
+      "transitionDuration": 0.5
+    },
+    {
+      "id": "v_seg-02-wheel_2",
+      "track": "V1",
+      "start": 63.68,
+      "duration": 14.008,
+      "mediaId": "m_seg-02-wheel_a2",
+      "kind": "image",
+      "props": {
+        "filterPreset": "mystical-dark"
+      },
+      "keyframes": {
+        "scale": [
+          {
+            "t": 0,
+            "v": 1.02
+          },
+          {
+            "t": 14.008,
+            "v": 1.06
+          }
+        ],
+        "positionX": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 14.008,
+            "v": 0
+          }
+        ],
+        "positionY": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 14.008,
+            "v": -3
+          }
+        ],
+        "speed": [
+          {
+            "t": 0,
+            "v": 1.0
+          }
+        ]
+      },
+      "transitionIn": "crossfade",
+      "transitionOut": "crossfade",
+      "transitionDuration": 0.5
+    },
+    {
+      "id": "a_seg-03-six-names",
+      "track": "A1",
+      "start": 77.688,
+      "duration": 34.656,
+      "mediaId": "m_seg-03-six-names_audio",
+      "kind": "audio"
+    },
+    {
+      "id": "v_seg-03-six-names_0",
+      "track": "V1",
+      "start": 77.688,
+      "duration": 11.552,
+      "mediaId": "m_seg-03-six-names_a0",
+      "kind": "image",
+      "props": {
+        "filterPreset": "mystical-dark"
+      },
+      "keyframes": {
+        "scale": [
+          {
+            "t": 0,
+            "v": 1.0
+          },
+          {
+            "t": 11.552,
+            "v": 1.1
+          }
+        ],
+        "positionX": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 11.552,
+            "v": 0
+          }
+        ],
+        "positionY": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 11.552,
+            "v": 0
+          }
+        ],
+        "speed": [
+          {
+            "t": 0,
+            "v": 1.0
+          }
+        ]
+      },
+      "transitionIn": "crossfade",
+      "transitionOut": "crossfade",
+      "transitionDuration": 0.5
+    },
+    {
+      "id": "v_seg-03-six-names_1",
+      "track": "V1",
+      "start": 89.24,
+      "duration": 11.552,
+      "mediaId": "m_seg-03-six-names_a1",
+      "kind": "image",
+      "props": {
+        "filterPreset": "mystical-dark"
+      },
+      "keyframes": {
+        "scale": [
+          {
+            "t": 0,
+            "v": 1.0
+          },
+          {
+            "t": 11.552,
+            "v": 1.12
+          }
+        ],
+        "positionX": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 11.552,
+            "v": 15
+          }
+        ],
+        "positionY": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 11.552,
+            "v": 0
+          }
+        ],
+        "speed": [
+          {
+            "t": 0,
+            "v": 1.0
+          }
+        ]
+      },
+      "transitionIn": "crossfade",
+      "transitionOut": "crossfade",
+      "transitionDuration": 0.5
+    },
+    {
+      "id": "v_seg-03-six-names_2",
+      "track": "V1",
+      "start": 100.792,
+      "duration": 11.552,
+      "mediaId": "m_seg-03-six-names_a2",
+      "kind": "image",
+      "props": {
+        "filterPreset": "mystical-dark"
+      },
+      "keyframes": {
+        "scale": [
+          {
+            "t": 0,
+            "v": 1.12
+          },
+          {
+            "t": 11.552,
+            "v": 1.0
+          }
+        ],
+        "positionX": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 11.552,
+            "v": 0
+          }
+        ],
+        "positionY": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 11.552,
+            "v": 0
+          }
+        ],
+        "speed": [
+          {
+            "t": 0,
+            "v": 1.0
+          }
+        ]
+      },
+      "transitionIn": "crossfade",
+      "transitionOut": "crossfade",
+      "transitionDuration": 0.5
+    },
+    {
+      "id": "a_seg-04-mantra",
+      "track": "A1",
+      "start": 112.344,
+      "duration": 35.256,
+      "mediaId": "m_seg-04-mantra_audio",
+      "kind": "audio"
+    },
+    {
+      "id": "v_seg-04-mantra_0",
+      "track": "V1",
+      "start": 112.344,
+      "duration": 11.752,
+      "mediaId": "m_seg-04-mantra_a0",
+      "kind": "image",
+      "props": {
+        "filterPreset": "mystical-dark"
+      },
+      "keyframes": {
+        "scale": [
+          {
+            "t": 0,
+            "v": 1.05
+          },
+          {
+            "t": 11.752,
+            "v": 1.12
+          }
+        ],
+        "positionX": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 11.752,
+            "v": -5
+          }
+        ],
+        "positionY": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 11.752,
+            "v": 5
+          }
+        ],
+        "speed": [
+          {
+            "t": 0,
+            "v": 1.0
+          }
+        ]
+      },
+      "transitionIn": "crossfade",
+      "transitionOut": "crossfade",
+      "transitionDuration": 0.5
+    },
+    {
+      "id": "v_seg-04-mantra_1",
+      "track": "V1",
+      "start": 124.096,
+      "duration": 11.752,
+      "mediaId": "m_seg-04-mantra_a1",
+      "kind": "image",
+      "props": {
+        "filterPreset": "mystical-dark"
+      },
+      "keyframes": {
+        "scale": [
+          {
+            "t": 0,
+            "v": 1.0
+          },
+          {
+            "t": 11.752,
+            "v": 1.12
+          }
+        ],
+        "positionX": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 11.752,
+            "v": -15
+          }
+        ],
+        "positionY": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 11.752,
+            "v": 0
+          }
+        ],
+        "speed": [
+          {
+            "t": 0,
+            "v": 1.0
+          }
+        ]
+      },
+      "transitionIn": "crossfade",
+      "transitionOut": "crossfade",
+      "transitionDuration": 0.5
+    },
+    {
+      "id": "v_seg-04-mantra_2",
+      "track": "V1",
+      "start": 135.848,
+      "duration": 11.752,
+      "mediaId": "m_seg-04-mantra_a2",
+      "kind": "image",
+      "props": {
+        "filterPreset": "mystical-dark"
+      },
+      "keyframes": {
+        "scale": [
+          {
+            "t": 0,
+            "v": 1.02
+          },
+          {
+            "t": 11.751999999999999,
+            "v": 1.06
+          }
+        ],
+        "positionX": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 11.751999999999999,
+            "v": 0
+          }
+        ],
+        "positionY": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 11.751999999999999,
+            "v": -3
+          }
+        ],
+        "speed": [
+          {
+            "t": 0,
+            "v": 1.0
+          }
+        ]
+      },
+      "transitionIn": "crossfade",
+      "transitionOut": "crossfade",
+      "transitionDuration": 0.5
+    },
+    {
+      "id": "a_seg-05-perception",
+      "track": "A1",
+      "start": 147.6,
+      "duration": 40.56,
+      "mediaId": "m_seg-05-perception_audio",
+      "kind": "audio"
+    },
+    {
+      "id": "v_seg-05-perception_0",
+      "track": "V1",
+      "start": 147.6,
+      "duration": 13.52,
+      "mediaId": "m_seg-05-perception_a0",
+      "kind": "image",
+      "props": {
+        "filterPreset": "mystical-dark"
+      },
+      "keyframes": {
+        "scale": [
+          {
+            "t": 0,
+            "v": 1.0
+          },
+          {
+            "t": 13.520000000000001,
+            "v": 1.1
+          }
+        ],
+        "positionX": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 13.520000000000001,
+            "v": 0
+          }
+        ],
+        "positionY": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 13.520000000000001,
+            "v": 0
+          }
+        ],
+        "speed": [
+          {
+            "t": 0,
+            "v": 1.0
+          }
+        ]
+      },
+      "transitionIn": "crossfade",
+      "transitionOut": "crossfade",
+      "transitionDuration": 0.5
+    },
+    {
+      "id": "v_seg-05-perception_1",
+      "track": "V1",
+      "start": 161.12,
+      "duration": 13.52,
+      "mediaId": "m_seg-05-perception_a1",
+      "kind": "image",
+      "props": {
+        "filterPreset": "mystical-dark"
+      },
+      "keyframes": {
+        "scale": [
+          {
+            "t": 0,
+            "v": 1.0
+          },
+          {
+            "t": 13.520000000000001,
+            "v": 1.12
+          }
+        ],
+        "positionX": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 13.520000000000001,
+            "v": 15
+          }
+        ],
+        "positionY": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 13.520000000000001,
+            "v": 0
+          }
+        ],
+        "speed": [
+          {
+            "t": 0,
+            "v": 1.0
+          }
+        ]
+      },
+      "transitionIn": "crossfade",
+      "transitionOut": "crossfade",
+      "transitionDuration": 0.5
+    },
+    {
+      "id": "v_seg-05-perception_2",
+      "track": "V1",
+      "start": 174.64,
+      "duration": 13.52,
+      "mediaId": "m_seg-05-perception_a2",
+      "kind": "image",
+      "props": {
+        "filterPreset": "mystical-dark"
+      },
+      "keyframes": {
+        "scale": [
+          {
+            "t": 0,
+            "v": 1.12
+          },
+          {
+            "t": 13.52,
+            "v": 1.0
+          }
+        ],
+        "positionX": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 13.52,
+            "v": 0
+          }
+        ],
+        "positionY": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 13.52,
+            "v": 0
+          }
+        ],
+        "speed": [
+          {
+            "t": 0,
+            "v": 1.0
+          }
+        ]
+      },
+      "transitionIn": "crossfade",
+      "transitionOut": "crossfade",
+      "transitionDuration": 0.5
+    },
+    {
+      "id": "a_seg-06-fish",
+      "track": "A1",
+      "start": 188.16,
+      "duration": 36.984,
+      "mediaId": "m_seg-06-fish_audio",
+      "kind": "audio"
+    },
+    {
+      "id": "v_seg-06-fish_0",
+      "track": "V1",
+      "start": 188.16,
+      "duration": 12.328,
+      "mediaId": "m_seg-06-fish_a0",
+      "kind": "image",
+      "props": {
+        "filterPreset": "mystical-dark"
+      },
+      "keyframes": {
+        "scale": [
+          {
+            "t": 0,
+            "v": 1.05
+          },
+          {
+            "t": 12.328000000000001,
+            "v": 1.12
+          }
+        ],
+        "positionX": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 12.328000000000001,
+            "v": -5
+          }
+        ],
+        "positionY": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 12.328000000000001,
+            "v": 5
+          }
+        ],
+        "speed": [
+          {
+            "t": 0,
+            "v": 1.0
+          }
+        ]
+      },
+      "transitionIn": "crossfade",
+      "transitionOut": "crossfade",
+      "transitionDuration": 0.5
+    },
+    {
+      "id": "v_seg-06-fish_1",
+      "track": "V1",
+      "start": 200.488,
+      "duration": 12.328,
+      "mediaId": "m_seg-06-fish_a1",
+      "kind": "image",
+      "props": {
+        "filterPreset": "mystical-dark"
+      },
+      "keyframes": {
+        "scale": [
+          {
+            "t": 0,
+            "v": 1.0
+          },
+          {
+            "t": 12.328000000000001,
+            "v": 1.12
+          }
+        ],
+        "positionX": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 12.328000000000001,
+            "v": -15
+          }
+        ],
+        "positionY": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 12.328000000000001,
+            "v": 0
+          }
+        ],
+        "speed": [
+          {
+            "t": 0,
+            "v": 1.0
+          }
+        ]
+      },
+      "transitionIn": "crossfade",
+      "transitionOut": "crossfade",
+      "transitionDuration": 0.5
+    },
+    {
+      "id": "v_seg-06-fish_2",
+      "track": "V1",
+      "start": 212.816,
+      "duration": 12.328,
+      "mediaId": "m_seg-06-fish_a2",
+      "kind": "image",
+      "props": {
+        "filterPreset": "mystical-dark"
+      },
+      "keyframes": {
+        "scale": [
+          {
+            "t": 0,
+            "v": 1.02
+          },
+          {
+            "t": 12.328,
+            "v": 1.06
+          }
+        ],
+        "positionX": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 12.328,
+            "v": 0
+          }
+        ],
+        "positionY": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 12.328,
+            "v": -3
+          }
+        ],
+        "speed": [
+          {
+            "t": 0,
+            "v": 1.0
+          }
+        ]
+      },
+      "transitionIn": "crossfade",
+      "transitionOut": "crossfade",
+      "transitionDuration": 0.5
+    },
+    {
+      "id": "a_seg-07-time",
+      "track": "A1",
+      "start": 225.144,
+      "duration": 38.256,
+      "mediaId": "m_seg-07-time_audio",
+      "kind": "audio"
+    },
+    {
+      "id": "v_seg-07-time_0",
+      "track": "V1",
+      "start": 225.144,
+      "duration": 12.752,
+      "mediaId": "m_seg-07-time_a0",
+      "kind": "image",
+      "props": {
+        "filterPreset": "mystical-dark"
+      },
+      "keyframes": {
+        "scale": [
+          {
+            "t": 0,
+            "v": 1.0
+          },
+          {
+            "t": 12.752,
+            "v": 1.1
+          }
+        ],
+        "positionX": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 12.752,
+            "v": 0
+          }
+        ],
+        "positionY": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 12.752,
+            "v": 0
+          }
+        ],
+        "speed": [
+          {
+            "t": 0,
+            "v": 1.0
+          }
+        ]
+      },
+      "transitionIn": "crossfade",
+      "transitionOut": "crossfade",
+      "transitionDuration": 0.5
+    },
+    {
+      "id": "v_seg-07-time_1",
+      "track": "V1",
+      "start": 237.896,
+      "duration": 12.752,
+      "mediaId": "m_seg-07-time_a1",
+      "kind": "image",
+      "props": {
+        "filterPreset": "mystical-dark"
+      },
+      "keyframes": {
+        "scale": [
+          {
+            "t": 0,
+            "v": 1.0
+          },
+          {
+            "t": 12.752,
+            "v": 1.12
+          }
+        ],
+        "positionX": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 12.752,
+            "v": 15
+          }
+        ],
+        "positionY": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 12.752,
+            "v": 0
+          }
+        ],
+        "speed": [
+          {
+            "t": 0,
+            "v": 1.0
+          }
+        ]
+      },
+      "transitionIn": "crossfade",
+      "transitionOut": "crossfade",
+      "transitionDuration": 0.5
+    },
+    {
+      "id": "v_seg-07-time_2",
+      "track": "V1",
+      "start": 250.648,
+      "duration": 12.752,
+      "mediaId": "m_seg-07-time_a2",
+      "kind": "image",
+      "props": {
+        "filterPreset": "mystical-dark"
+      },
+      "keyframes": {
+        "scale": [
+          {
+            "t": 0,
+            "v": 1.12
+          },
+          {
+            "t": 12.751999999999999,
+            "v": 1.0
+          }
+        ],
+        "positionX": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 12.751999999999999,
+            "v": 0
+          }
+        ],
+        "positionY": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 12.751999999999999,
+            "v": 0
+          }
+        ],
+        "speed": [
+          {
+            "t": 0,
+            "v": 1.0
+          }
+        ]
+      },
+      "transitionIn": "crossfade",
+      "transitionOut": "crossfade",
+      "transitionDuration": 0.5
+    },
+    {
+      "id": "a_seg-08-wave",
+      "track": "A1",
+      "start": 263.4,
+      "duration": 32.712,
+      "mediaId": "m_seg-08-wave_audio",
+      "kind": "audio"
+    },
+    {
+      "id": "v_seg-08-wave_0",
+      "track": "V1",
+      "start": 263.4,
+      "duration": 10.904,
+      "mediaId": "m_seg-08-wave_a0",
+      "kind": "image",
+      "props": {
+        "filterPreset": "mystical-dark"
+      },
+      "keyframes": {
+        "scale": [
+          {
+            "t": 0,
+            "v": 1.05
+          },
+          {
+            "t": 10.904000000000002,
+            "v": 1.12
+          }
+        ],
+        "positionX": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 10.904000000000002,
+            "v": -5
+          }
+        ],
+        "positionY": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 10.904000000000002,
+            "v": 5
+          }
+        ],
+        "speed": [
+          {
+            "t": 0,
+            "v": 1.0
+          }
+        ]
+      },
+      "transitionIn": "crossfade",
+      "transitionOut": "crossfade",
+      "transitionDuration": 0.5
+    },
+    {
+      "id": "v_seg-08-wave_1",
+      "track": "V1",
+      "start": 274.304,
+      "duration": 10.904,
+      "mediaId": "m_seg-08-wave_a1",
+      "kind": "image",
+      "props": {
+        "filterPreset": "mystical-dark"
+      },
+      "keyframes": {
+        "scale": [
+          {
+            "t": 0,
+            "v": 1.0
+          },
+          {
+            "t": 10.904000000000002,
+            "v": 1.12
+          }
+        ],
+        "positionX": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 10.904000000000002,
+            "v": -15
+          }
+        ],
+        "positionY": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 10.904000000000002,
+            "v": 0
+          }
+        ],
+        "speed": [
+          {
+            "t": 0,
+            "v": 1.0
+          }
+        ]
+      },
+      "transitionIn": "crossfade",
+      "transitionOut": "crossfade",
+      "transitionDuration": 0.5
+    },
+    {
+      "id": "v_seg-08-wave_2",
+      "track": "V1",
+      "start": 285.208,
+      "duration": 10.904,
+      "mediaId": "m_seg-08-wave_a2",
+      "kind": "image",
+      "props": {
+        "filterPreset": "mystical-dark"
+      },
+      "keyframes": {
+        "scale": [
+          {
+            "t": 0,
+            "v": 1.02
+          },
+          {
+            "t": 10.904,
+            "v": 1.06
+          }
+        ],
+        "positionX": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 10.904,
+            "v": 0
+          }
+        ],
+        "positionY": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 10.904,
+            "v": -3
+          }
+        ],
+        "speed": [
+          {
+            "t": 0,
+            "v": 1.0
+          }
+        ]
+      },
+      "transitionIn": "crossfade",
+      "transitionOut": "crossfade",
+      "transitionDuration": 0.5
+    },
+    {
+      "id": "a_seg-09-play",
+      "track": "A1",
+      "start": 296.112,
+      "duration": 33.552,
+      "mediaId": "m_seg-09-play_audio",
+      "kind": "audio"
+    },
+    {
+      "id": "v_seg-09-play_0",
+      "track": "V1",
+      "start": 296.112,
+      "duration": 11.184,
+      "mediaId": "m_seg-09-play_a0",
+      "kind": "image",
+      "props": {
+        "filterPreset": "mystical-dark"
+      },
+      "keyframes": {
+        "scale": [
+          {
+            "t": 0,
+            "v": 1.0
+          },
+          {
+            "t": 11.184,
+            "v": 1.1
+          }
+        ],
+        "positionX": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 11.184,
+            "v": 0
+          }
+        ],
+        "positionY": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 11.184,
+            "v": 0
+          }
+        ],
+        "speed": [
+          {
+            "t": 0,
+            "v": 1.0
+          }
+        ]
+      },
+      "transitionIn": "crossfade",
+      "transitionOut": "crossfade",
+      "transitionDuration": 0.5
+    },
+    {
+      "id": "v_seg-09-play_1",
+      "track": "V1",
+      "start": 307.296,
+      "duration": 11.184,
+      "mediaId": "m_seg-09-play_a1",
+      "kind": "image",
+      "props": {
+        "filterPreset": "mystical-dark"
+      },
+      "keyframes": {
+        "scale": [
+          {
+            "t": 0,
+            "v": 1.0
+          },
+          {
+            "t": 11.184,
+            "v": 1.12
+          }
+        ],
+        "positionX": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 11.184,
+            "v": 15
+          }
+        ],
+        "positionY": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 11.184,
+            "v": 0
+          }
+        ],
+        "speed": [
+          {
+            "t": 0,
+            "v": 1.0
+          }
+        ]
+      },
+      "transitionIn": "crossfade",
+      "transitionOut": "crossfade",
+      "transitionDuration": 0.5
+    },
+    {
+      "id": "v_seg-09-play_2",
+      "track": "V1",
+      "start": 318.48,
+      "duration": 11.184,
+      "mediaId": "m_seg-09-play_a2",
+      "kind": "image",
+      "props": {
+        "filterPreset": "mystical-dark"
+      },
+      "keyframes": {
+        "scale": [
+          {
+            "t": 0,
+            "v": 1.12
+          },
+          {
+            "t": 11.184000000000001,
+            "v": 1.0
+          }
+        ],
+        "positionX": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 11.184000000000001,
+            "v": 0
+          }
+        ],
+        "positionY": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 11.184000000000001,
+            "v": 0
+          }
+        ],
+        "speed": [
+          {
+            "t": 0,
+            "v": 1.0
+          }
+        ]
+      },
+      "transitionIn": "crossfade",
+      "transitionOut": "crossfade",
+      "transitionDuration": 0.5
+    },
+    {
+      "id": "a_seg-10-closing",
+      "track": "A1",
+      "start": 329.664,
+      "duration": 21.744,
+      "mediaId": "m_seg-10-closing_audio",
+      "kind": "audio"
+    },
+    {
+      "id": "v_seg-10-closing_0",
+      "track": "V1",
+      "start": 329.664,
+      "duration": 7.248,
+      "mediaId": "m_seg-10-closing_a0",
+      "kind": "image",
+      "props": {
+        "filterPreset": "mystical-dark"
+      },
+      "keyframes": {
+        "scale": [
+          {
+            "t": 0,
+            "v": 1.05
+          },
+          {
+            "t": 7.248,
+            "v": 1.12
+          }
+        ],
+        "positionX": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 7.248,
+            "v": -5
+          }
+        ],
+        "positionY": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 7.248,
+            "v": 5
+          }
+        ],
+        "speed": [
+          {
+            "t": 0,
+            "v": 1.0
+          }
+        ]
+      },
+      "transitionIn": "crossfade",
+      "transitionOut": "crossfade",
+      "transitionDuration": 0.5
+    },
+    {
+      "id": "v_seg-10-closing_1",
+      "track": "V1",
+      "start": 336.912,
+      "duration": 7.248,
+      "mediaId": "m_seg-10-closing_a1",
+      "kind": "image",
+      "props": {
+        "filterPreset": "mystical-dark"
+      },
+      "keyframes": {
+        "scale": [
+          {
+            "t": 0,
+            "v": 1.0
+          },
+          {
+            "t": 7.248,
+            "v": 1.12
+          }
+        ],
+        "positionX": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 7.248,
+            "v": -15
+          }
+        ],
+        "positionY": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 7.248,
+            "v": 0
+          }
+        ],
+        "speed": [
+          {
+            "t": 0,
+            "v": 1.0
+          }
+        ]
+      },
+      "transitionIn": "crossfade",
+      "transitionOut": "crossfade",
+      "transitionDuration": 0.5
+    },
+    {
+      "id": "v_seg-10-closing_2",
+      "track": "V1",
+      "start": 344.16,
+      "duration": 7.248,
+      "mediaId": "m_seg-10-closing_a2",
+      "kind": "image",
+      "props": {
+        "filterPreset": "mystical-dark"
+      },
+      "keyframes": {
+        "scale": [
+          {
+            "t": 0,
+            "v": 1.02
+          },
+          {
+            "t": 7.247999999999999,
+            "v": 1.06
+          }
+        ],
+        "positionX": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 7.247999999999999,
+            "v": 0
+          }
+        ],
+        "positionY": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 7.247999999999999,
+            "v": -3
+          }
+        ],
+        "speed": [
+          {
+            "t": 0,
+            "v": 1.0
+          }
+        ]
+      },
+      "transitionIn": "crossfade",
+      "transitionOut": "crossfade",
+      "transitionDuration": 0.5
+    },
+    {
+      "id": "a_drone",
+      "track": "A2",
+      "start": 0,
+      "duration": 353.408,
+      "mediaId": "m_drone",
+      "kind": "audio",
+      "props": {
+        "volume": 0.12
+      }
+    }
+  ]
+}

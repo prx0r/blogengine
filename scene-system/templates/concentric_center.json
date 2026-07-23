@@ -1,0 +1,43 @@
+{
+  "name": "Concentric Center",
+  "key": "concentric_center",
+  "scene_count": 6,
+  "primitives": [
+    "arrow",
+    "dot",
+    "line",
+    "ring",
+    "text"
+  ],
+  "operators": [
+    "align",
+    "oscillate",
+    "reveal"
+  ],
+  "backgrounds": [
+    "dark",
+    "light"
+  ],
+  "example_scenes": [
+    {
+      "title": "Vast mind, still sky",
+      "id": "dream.vast_mind,_still_sky.v1",
+      "duration": 28
+    },
+    {
+      "title": "Dependent arising",
+      "id": "emptiness.dependent_arising.v1",
+      "duration": 34
+    },
+    {
+      "title": "Hearing from within",
+      "id": "mantra.hearing_from_within.v1",
+      "duration": 28
+    },
+    {
+      "title": "Still center",
+      "id": "plotinus.still_center.v1",
+      "duration": 28
+    }
+  ]
+}

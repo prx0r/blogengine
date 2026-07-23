@@ -1,0 +1,151 @@
+{
+  "relations": {
+    "identity": {
+      "symbol": "≡",
+      "type": "equivalence",
+      "arity": 2,
+      "commutative": true
+    },
+    "non-identity": {
+      "symbol": "≢",
+      "type": "non-equivalence",
+      "arity": 2,
+      "commutative": true
+    },
+    "emanation": {
+      "symbol": "→",
+      "type": "directional",
+      "arity": 2,
+      "commutative": false,
+      "name_skt": "ābhāsa"
+    },
+    "containment": {
+      "symbol": "⊃",
+      "type": "directional",
+      "arity": 2,
+      "commutative": false,
+      "name_skt": "ādhāra"
+    },
+    "coincidence": {
+      "symbol": "∩",
+      "type": "intersection",
+      "arity": 2,
+      "commutative": true,
+      "name_skt": "samavāya"
+    },
+    "resonance": {
+      "symbol": "≋",
+      "type": "mutual",
+      "arity": 2,
+      "commutative": true,
+      "name_skt": "spanda"
+    },
+    "recognition": {
+      "symbol": "↻",
+      "type": "reflexive",
+      "arity": 1,
+      "name_skt": "pratyabhijñā"
+    },
+    "negation": {
+      "symbol": "¬",
+      "type": "unary",
+      "arity": 1,
+      "name_skt": "apoha"
+    },
+    "gradation": {
+      "symbol": "<",
+      "type": "comparison",
+      "arity": 2,
+      "commutative": false,
+      "name_skt": "adhyāropa"
+    },
+    "dissolution": {
+      "symbol": "↓",
+      "type": "directional",
+      "arity": 2,
+      "commutative": false,
+      "name_skt": "laya"
+    },
+    "transformation": {
+      "symbol": "⇝",
+      "type": "directional",
+      "arity": 2,
+      "commutative": false,
+      "name_skt": "pariṇāma"
+    },
+    "non-difference": {
+      "symbol": "≃",
+      "type": "equivalence",
+      "arity": 2,
+      "commutative": true,
+      "name_skt": "abheda"
+    },
+    "difference": {
+      "symbol": "≄",
+      "type": "non-equivalence",
+      "arity": 2,
+      "commutative": true,
+      "name_skt": "bheda"
+    },
+    "difference-and-non-difference": {
+      "symbol": "⨝",
+      "type": "dialectical",
+      "arity": 2,
+      "commutative": true,
+      "name_skt": "bhedābheda"
+    },
+    "inherence": {
+      "symbol": "⊏",
+      "type": "directional",
+      "arity": 2,
+      "commutative": false,
+      "name_skt": "samavāya"
+    },
+    "self-luminosity": {
+      "symbol": "◎",
+      "type": "reflexive",
+      "arity": 1,
+      "name_skt": "svaprakāśa"
+    },
+    "witnessing": {
+      "symbol": "👁",
+      "type": "reflexive",
+      "arity": 1,
+      "name_skt": "sākṣin"
+    },
+    "contraction": {
+      "symbol": "∨",
+      "type": "unary",
+      "arity": 1,
+      "name_skt": "saṃkoca"
+    },
+    "expansion": {
+      "symbol": "∧",
+      "type": "unary",
+      "arity": 1,
+      "name_skt": "vikāsa"
+    },
+    "triadic-oscillation": {
+      "symbol": "∆",
+      "type": "ternary",
+      "arity": 3,
+      "name_skt": "trika-spanda"
+    },
+    "paradoxical-identity": {
+      "symbol": "≅",
+      "type": "paradox",
+      "arity": 2,
+      "name_skt": "camatkāra"
+    },
+    "non-equivalence": {
+      "symbol": "!==",
+      "type": "non-equivalence",
+      "arity": 2,
+      "commutative": true
+    }
+  },
+  "meta": {
+    "description": "Canonical set of relations",
+    "version": "1.0.0"
+  }
+}

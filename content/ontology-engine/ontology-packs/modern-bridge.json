@@ -1,0 +1,209 @@
+{
+  "pack_id": "modern-bridge",
+  "tradition": "Modern Cross-Traditional Bridge",
+  "entities": [
+    {
+      "id": "ultimate-reality-bridge",
+      "name": "Ultimate Reality",
+      "type": "concept",
+      "canonical_id": "ultimate-reality",
+      "visual_archetype": "bindu",
+      "mappings": {
+        "trika-tantraloka": "parama-shiva",
+        "plotinus-ennéads": "the-one",
+        "advaita-vedanta": "brahman",
+        "buddhist-philosophy": "dharma-kaya",
+        "lurianic-kabbalah": "ein-sof",
+        "hermetic-qabalah": "ain-soph-aur"
+      }
+    },
+    {
+      "id": "consciousness-bridge",
+      "name": "Consciousness",
+      "type": "concept",
+      "canonical_id": "consciousness",
+      "visual_archetype": "eye",
+      "mappings": {
+        "trika-tantraloka": "prakasha",
+        "advaita-vedanta": "saksin",
+        "yogacara-vijnanavada": "vijnapti-matrata",
+        "plotinus-ennéads": "nous"
+      }
+    },
+    {
+      "id": "self-bridge",
+      "name": "Self",
+      "type": "concept",
+      "canonical_id": "selfhood",
+      "visual_archetype": "bindu",
+      "mappings": {
+        "trika-tantraloka": "aham",
+        "advaita-vedanta": "atman",
+        "buddhist-philosophy": "anatman",
+        "yogacara-vijnanavada": "manas",
+        "hermetic-qabalah": "tiferet"
+      }
+    },
+    {
+      "id": "creative-energy-bridge",
+      "name": "Creative Energy",
+      "type": "concept",
+      "canonical_id": "dynamic-energy",
+      "visual_archetype": "wave",
+      "mappings": {
+        "trika-tantraloka": "shakti",
+        "hermetic-qabalah": "binah",
+        "yogacara-vijnanavada": "alaya-vijnana",
+        "lurianic-kabbalah": "reshimu"
+      }
+    },
+    {
+      "id": "liberation-bridge",
+      "name": "Liberation",
+      "type": "state",
+      "canonical_id": "liberation",
+      "visual_archetype": "void",
+      "mappings": {
+        "advaita-vedanta": "moksha",
+        "buddhist-philosophy": "nirvana",
+        "trika-tantraloka": "pratyabhijna",
+        "plotinus-ennéads": "henosis",
+        "lurianic-kabbalah": "tikkun"
+      }
+    },
+    {
+      "id": "suffering-bridge",
+      "name": "Suffering / Limitation",
+      "type": "state",
+      "canonical_id": "limitation",
+      "visual_archetype": "contraction",
+      "mappings": {
+        "buddhist-philosophy": "duhkha",
+        "advaita-vedanta": "avidya",
+        "trika-tantraloka": "maya",
+        "lurianic-kabbalah": "shevirat-ha-kelim"
+      }
+    },
+    {
+      "id": "contemplation-bridge",
+      "name": "Contemplative Practice",
+      "type": "practice",
+      "canonical_id": "sacred-practice",
+      "visual_archetype": "flame",
+      "mappings": {
+        "trika-tantraloka": "pratyabhijna",
+        "plotinus-ennéads": "periagoge",
+        "lurianic-kabbalah": "tikkun",
+        "hermetic-qabalah": "middle-pillar",
+        "iamblichus-mysteries": "theurgy-iamblichus"
+      }
+    },
+    {
+      "id": "emptiness-plenitude-bridge",
+      "name": "Emptiness / Plenitude",
+      "type": "concept",
+      "canonical_id": "emptiness-plenitude",
+      "visual_archetype": "void",
+      "mappings": {
+        "madhyamaka-nagarjuna": "sunyata-madhyamaka",
+        "trika-tantraloka": "anuttara",
+        "hermetic-qabalah": "ain-soph-aur"
+      }
+    },
+    {
+      "id": "unity-plurality-bridge",
+      "name": "Unity / Plurality",
+      "type": "concept",
+      "canonical_id": "unity-plurality",
+      "visual_archetype": "mandala",
+      "mappings": {
+        "proclus-elements": "the-one-proclus & henads",
+        "trika-tantraloka": "trika",
+        "hermetic-qabalah": "sefirot"
+      }
+    },
+    {
+      "id": "paradox-bridge",
+      "name": "Paradox",
+      "type": "method",
+      "canonical_id": "paradox",
+      "visual_archetype": "hexagram",
+      "mappings": {
+        "madhyamaka-nagarjuna": "catuskoti",
+        "trika-tantraloka": "camatkara",
+        "advaita-vedanta": "adhyasa"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from": "ultimate-reality-bridge",
+      "type": "emanation",
+      "to": "consciousness-bridge",
+      "canonical": "→"
+    },
+    {
+      "from": "consciousness-bridge",
+      "type": "emanation",
+      "to": "self-bridge",
+      "canonical": "→"
+    },
+    {
+      "from": "self-bridge",
+      "type": "non-difference",
+      "to": "ultimate-reality-bridge",
+      "canonical": "≃"
+    },
+    {
+      "from": "creative-energy-bridge",
+      "type": "resonance",
+      "to": "ultimate-reality-bridge",
+      "canonical": "≋"
+    },
+    {
+      "from": "liberation-bridge",
+      "type": "dissolution",
+      "to": "ultimate-reality-bridge",
+      "canonical": "↓"
+    },
+    {
+      "from": "suffering-bridge",
+      "type": "negation",
+      "to": "liberation-bridge",
+      "canonical": "¬"
+    },
+    {
+      "from": "suffering-bridge",
+      "type": "transformation",
+      "to": "liberation-bridge",
+      "canonical": "⇝"
+    },
+    {
+      "from": "contemplation-bridge",
+      "type": "transformation",
+      "to": "liberation-bridge",
+      "canonical": "⇝"
+    },
+    {
+      "from": "emptiness-plenitude-bridge",
+      "type": "paradoxical-identity",
+      "to": "ultimate-reality-bridge",
+      "canonical": "≅"
+    },
+    {
+      "from": "unity-plurality-bridge",
+      "type": "triadic-oscillation",
+      "to": "ultimate-reality-bridge",
+      "canonical": "∆"
+    },
+    {
+      "from": "paradox-bridge",
+      "type": "non-difference",
+      "to": "emptiness-plenitude-bridge",
+      "canonical": "≃"
+    }
+  ],
+  "meta": {
+    "version": "1.0.0"
+  }
+}

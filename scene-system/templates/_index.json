@@ -1,0 +1,444 @@
+{
+  "total_templates": 11,
+  "templates": {
+    "bilateral_relation": {
+      "name": "Bilateral Relation",
+      "key": "bilateral_relation",
+      "scene_count": 5,
+      "primitives": [
+        "arrow",
+        "dot",
+        "line",
+        "ring",
+        "text"
+      ],
+      "operators": [
+        "align",
+        "oscillate",
+        "reveal"
+      ],
+      "backgrounds": [
+        "dark",
+        "light"
+      ],
+      "example_scenes": [
+        {
+          "title": "City in a mirror",
+          "id": "dream.city_in_a_mirror.v1",
+          "duration": 28
+        },
+        {
+          "title": "The secret life of matter",
+          "id": "alchemy.the_secret_life_of_matter.v1",
+          "duration": 34
+        },
+        {
+          "title": "As above, so below",
+          "id": "alchemy.as_above,_so_below.v1",
+          "duration": 31
+        },
+        {
+          "title": "Two truths",
+          "id": "emptiness.two_truths.v1",
+          "duration": 31
+        }
+      ]
+    },
+    "unknown": {
+      "name": "Unknown",
+      "key": "unknown",
+      "scene_count": 153,
+      "primitives": [
+        "arrow",
+        "card",
+        "dot",
+        "flower",
+        "line",
+        "ring",
+        "silhouette",
+        "text"
+      ],
+      "operators": [
+        "align",
+        "oscillate",
+        "radiate",
+        "reveal"
+      ],
+      "backgrounds": [
+        "dark",
+        "light",
+        "unknown"
+      ],
+      "example_scenes": [
+        {
+          "title": "Dreamer dreaming dreamer",
+          "id": "dream.dreamer_dreaming_dreamer.v1",
+          "duration": 30
+        },
+        {
+          "title": "Waking, dream, sleep, fourth",
+          "id": "dream.waking,_dream,_sleep,_fourth.v1",
+          "duration": 28
+        },
+        {
+          "title": "Loosening solidity",
+          "id": "dream.loosening_solidity.v1",
+          "duration": 28
+        },
+        {
+          "title": "Awake without moving",
+          "id": "dream.awake_without_moving.v1",
+          "duration": 28
+        }
+      ]
+    },
+    "quote_card": {
+      "name": "Quote Card",
+      "key": "quote_card",
+      "scene_count": 2,
+      "primitives": [],
+      "operators": [],
+      "backgrounds": [
+        "light"
+      ],
+      "example_scenes": [
+        {
+          "title": "Mind paints the world",
+          "id": "dream.mind_paints_the_world.v1",
+          "duration": 30
+        },
+        {
+          "title": "Beyond being",
+          "id": "plotinus.beyond_being.v1",
+          "duration": 28
+        }
+      ]
+    },
+    "wave_field": {
+      "name": "Wave Field",
+      "key": "wave_field",
+      "scene_count": 4,
+      "primitives": [
+        "arrow",
+        "card",
+        "dot",
+        "flower",
+        "line",
+        "ring",
+        "silhouette",
+        "text"
+      ],
+      "operators": [
+        "align",
+        "oscillate",
+        "radiate",
+        "reveal"
+      ],
+      "backgrounds": [
+        "dark",
+        "light"
+      ],
+      "example_scenes": [
+        {
+          "title": "Thought-wave",
+          "id": "dream.thought_wave.v1",
+          "duration": 28
+        },
+        {
+          "title": "Pain is juice",
+          "id": "rasa.pain_is_juice.v1",
+          "duration": 30
+        },
+        {
+          "title": "Crest, crash, dissolve",
+          "id": "rasa.crest,_crash,_dissolve.v1",
+          "duration": 30
+        },
+        {
+          "title": "The letter matrix",
+          "id": "mantra.the_letter_matrix.v1",
+          "duration": 30
+        }
+      ]
+    },
+    "concentric_center": {
+      "name": "Concentric Center",
+      "key": "concentric_center",
+      "scene_count": 6,
+      "primitives": [
+        "arrow",
+        "dot",
+        "line",
+        "ring",
+        "text"
+      ],
+      "operators": [
+        "align",
+        "oscillate",
+        "reveal"
+      ],
+      "backgrounds": [
+        "dark",
+        "light"
+      ],
+      "example_scenes": [
+        {
+          "title": "Vast mind, still sky",
+          "id": "dream.vast_mind,_still_sky.v1",
+          "duration": 28
+        },
+        {
+          "title": "Dependent arising",
+          "id": "emptiness.dependent_arising.v1",
+          "duration": 34
+        },
+        {
+          "title": "Hearing from within",
+          "id": "mantra.hearing_from_within.v1",
+          "duration": 28
+        },
+        {
+          "title": "Still center",
+          "id": "plotinus.still_center.v1",
+          "duration": 28
+        }
+      ]
+    },
+    "vessel_reception": {
+      "name": "Vessel Reception",
+      "key": "vessel_reception",
+      "scene_count": 5,
+      "primitives": [
+        "arrow",
+        "dot",
+        "flower",
+        "line",
+        "ring",
+        "silhouette",
+        "text"
+      ],
+      "operators": [
+        "align",
+        "oscillate",
+        "radiate",
+        "reveal"
+      ],
+      "backgrounds": [
+        "dark",
+        "light"
+      ],
+      "example_scenes": [
+        {
+          "title": "Fist to cup",
+          "id": "rasa.fist_to_cup.v1",
+          "duration": 30
+        },
+        {
+          "title": "Tasting, not consuming",
+          "id": "rasa.tasting,_not_consuming.v1",
+          "duration": 32
+        },
+        {
+          "title": "Everything is empty",
+          "id": "emptiness.everything_is_empty.v1",
+          "duration": 30
+        },
+        {
+          "title": "You are a verb",
+          "id": "emptiness.you_are_a_verb.v1",
+          "duration": 29
+        }
+      ]
+    },
+    "aperture": {
+      "name": "Aperture",
+      "key": "aperture",
+      "scene_count": 3,
+      "primitives": [
+        "arrow",
+        "dot",
+        "line",
+        "ring",
+        "text"
+      ],
+      "operators": [
+        "align",
+        "oscillate",
+        "reveal"
+      ],
+      "backgrounds": [
+        "dark",
+        "light"
+      ],
+      "example_scenes": [
+        {
+          "title": "An organ of perception",
+          "id": "imaginal.an_organ_of_perception.v1",
+          "duration": 34
+        },
+        {
+          "title": "The open door",
+          "id": "imaginal.the_open_door.v1",
+          "duration": 28
+        },
+        {
+          "title": "Breath to vowel",
+          "id": "mantra.breath_to_vowel.v1",
+          "duration": 30
+        }
+      ]
+    },
+    "body_axis": {
+      "name": "Body Axis",
+      "key": "body_axis",
+      "scene_count": 6,
+      "primitives": [
+        "arrow",
+        "card",
+        "dot",
+        "flower",
+        "line",
+        "ring",
+        "silhouette",
+        "text"
+      ],
+      "operators": [
+        "align",
+        "oscillate",
+        "radiate",
+        "reveal"
+      ],
+      "backgrounds": [
+        "dark",
+        "light"
+      ],
+      "example_scenes": [
+        {
+          "title": "The person of light",
+          "id": "imaginal.the_person_of_light.v1",
+          "duration": 35
+        },
+        {
+          "title": "Body, soul, spirit",
+          "id": "alchemy.body,_soul,_spirit.v1",
+          "duration": 30
+        },
+        {
+          "title": "The celestial rose",
+          "id": "dante.the_celestial_rose.v1",
+          "duration": 31
+        },
+        {
+          "title": "The mantra body",
+          "id": "mantra.the_mantra_body.v1",
+          "duration": 30
+        }
+      ]
+    },
+    "vertical_sequence": {
+      "name": "Vertical Sequence",
+      "key": "vertical_sequence",
+      "scene_count": 9,
+      "primitives": [
+        "arrow",
+        "dot",
+        "line",
+        "ring",
+        "text"
+      ],
+      "operators": [
+        "align",
+        "oscillate",
+        "reveal"
+      ],
+      "backgrounds": [
+        "dark",
+        "light"
+      ],
+      "example_scenes": [
+        {
+          "title": "Light upon light",
+          "id": "imaginal.light_upon_light.v1",
+          "duration": 32
+        },
+        {
+          "title": "Emptiness is empty",
+          "id": "emptiness.emptiness_is_empty.v1",
+          "duration": 29
+        },
+        {
+          "title": "Nine circles",
+          "id": "dante.nine_circles.v1",
+          "duration": 34
+        },
+        {
+          "title": "Seven terraces",
+          "id": "dante.seven_terraces.v1",
+          "duration": 35
+        }
+      ]
+    },
+    "grid_dissolution": {
+      "name": "Grid Dissolution",
+      "key": "grid_dissolution",
+      "scene_count": 3,
+      "primitives": [
+        "arrow",
+        "dot",
+        "flower",
+        "line",
+        "ring",
+        "silhouette",
+        "text"
+      ],
+      "operators": [
+        "align",
+        "oscillate",
+        "radiate",
+        "reveal"
+      ],
+      "backgrounds": [
+        "dark"
+      ],
+      "example_scenes": [
+        {
+          "title": "Separate subtle and gross",
+          "id": "alchemy.separate_subtle_and_gross.v1",
+          "duration": 32
+        },
+        {
+          "title": "Solve et coagula",
+          "id": "alchemy.solve_et_coagula.v1",
+          "duration": 32
+        },
+        {
+          "title": "Time is relation",
+          "id": "emptiness.time_is_relation.v1",
+          "duration": 31
+        }
+      ]
+    },
+    "radial_relation": {
+      "name": "Radial Relation",
+      "key": "radial_relation",
+      "scene_count": 2,
+      "primitives": [],
+      "operators": [],
+      "backgrounds": [
+        "light"
+      ],
+      "example_scenes": [
+        {
+          "title": "Sound becomes world",
+          "id": "mantra.sound_becomes_world.v1",
+          "duration": 30
+        },
+        {
+          "title": "Names and stars",
+          "id": "theurgy.names_and_stars.v1",
+          "duration": 28
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "name": "Body Axis",
+  "key": "body_axis",
+  "scene_count": 6,
+  "primitives": [
+    "arrow",
+    "card",
+    "dot",
+    "flower",
+    "line",
+    "ring",
+    "silhouette",
+    "text"
+  ],
+  "operators": [
+    "align",
+    "oscillate",
+    "radiate",
+    "reveal"
+  ],
+  "backgrounds": [
+    "dark",
+    "light"
+  ],
+  "example_scenes": [
+    {
+      "title": "The person of light",
+      "id": "imaginal.the_person_of_light.v1",
+      "duration": 35
+    },
+    {
+      "title": "Body, soul, spirit",
+      "id": "alchemy.body,_soul,_spirit.v1",
+      "duration": 30
+    },
+    {
+      "title": "The celestial rose",
+      "id": "dante.the_celestial_rose.v1",
+      "duration": 31
+    },
+    {
+      "title": "The mantra body",
+      "id": "mantra.the_mantra_body.v1",
+      "duration": 30
+    }
+  ]
+}

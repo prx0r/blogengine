@@ -1,0 +1,159 @@
+{
+  "scene_id": "advaita-superimposition",
+  "tradition": "advaita_shankara",
+  "truth_status": "textual",
+  "causal_mode": "atemporal",
+  "temporal_mode": "instantaneous",
+  "entities": [
+    {
+      "id": "advaita_brahman",
+      "name": "Brahman",
+      "sanskrit": "ब्रह्मन्",
+      "type": "principle",
+      "canonical_id": "ultimate-reality",
+      "visual_archetype": "void"
+    },
+    {
+      "id": "advaita_atman",
+      "name": "Ātman",
+      "sanskrit": "आत्मन्",
+      "type": "principle",
+      "canonical_id": "self",
+      "visual_archetype": "bindu"
+    },
+    {
+      "id": "advaita_maya",
+      "name": "Māyā",
+      "sanskrit": "माया",
+      "type": "principle",
+      "canonical_id": "illusion",
+      "visual_archetype": "mirror"
+    },
+    {
+      "id": "advaita_jiva",
+      "name": "Jīva",
+      "sanskrit": "जीव",
+      "type": "principle",
+      "canonical_id": "individual-soul",
+      "visual_archetype": "seed"
+    },
+    {
+      "id": "advaita_avidya",
+      "name": "Avidyā",
+      "sanskrit": "अविद्या",
+      "type": "principle",
+      "canonical_id": "ignorance",
+      "visual_archetype": "contraction"
+    },
+    {
+      "id": "advaita_adhyasa",
+      "name": "Adhyāsa",
+      "sanskrit": "अध्यास",
+      "type": "principle",
+      "canonical_id": "superimposition",
+      "visual_archetype": "mirror"
+    }
+  ],
+  "relations": [
+    {
+      "type": "identity",
+      "from": "advaita_brahman",
+      "to": "advaita_atman",
+      "canonical": "≡",
+      "visual": "merge_labels"
+    },
+    {
+      "type": "transformation",
+      "from": "advaita_adhyasa",
+      "to": "advaita_avidya",
+      "canonical": "⇝",
+      "visual": "overlay_applied"
+    },
+    {
+      "type": "negation",
+      "from": "advaita_avidya",
+      "to": "advaita_atman",
+      "canonical": "¬",
+      "visual": "veil_drop"
+    },
+    {
+      "type": "emanation",
+      "from": "advaita_brahman",
+      "to": "advaita_maya",
+      "canonical": "→",
+      "visual": "field_generation"
+    },
+    {
+      "type": "containment",
+      "from": "advaita_maya",
+      "to": "advaita_jiva",
+      "canonical": "⊃",
+      "visual": "nesting"
+    },
+    {
+      "type": "non-difference",
+      "from": "advaita_jiva",
+      "to": "advaita_atman",
+      "canonical": "≃",
+      "visual": "pulse_alignment"
+    },
+    {
+      "type": "difference",
+      "from": "advaita_jiva",
+      "to": "advaita_atman",
+      "canonical": "≄",
+      "visual": "offset_split"
+    }
+  ],
+  "operators": [
+    {
+      "id": "appear",
+      "target": "advaita_brahman",
+      "duration": 1.0,
+      "easing": "ease_out"
+    },
+    {
+      "id": "self_manifest",
+      "target": "advaita_maya",
+      "duration": 2.0,
+      "delay": 0.5
+    },
+    {
+      "id": "condition_arise",
+      "target": "advaita_avidya",
+      "duration": 1.5,
+      "delay": 2.0
+    },
+    {
+      "id": "recognize",
+      "target": "advaita_atman",
+      "duration": 3.0
+    }
+  ],
+  "continuity": {
+    "in_tokens": [
+      "clear_field"
+    ],
+    "out_tokens": [
+      "unchanged_field",
+      "overlay_removed"
+    ],
+    "preserve_entities": [
+      "advaita_shankara.atman"
+    ]
+  },
+  "guard_results": [
+    {
+      "rule": "brahman_not_transformed",
+      "status": "PASS"
+    },
+    {
+      "rule": "knowledge_not_creation",
+      "status": "PASS"
+    },
+    {
+      "rule": "advaita_false_friend_maya",
+      "status": "PASS"
+    }
+  ]
+}

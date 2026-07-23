@@ -580,11 +580,11 @@ Stored as environment variables or session-only:
 
 | Credential | Value / Location |
 |------------|-----------------|
-| Cloudflare API Token | `cfat_2c32BYrGAzy4FM4tUYZIyQZqPIc0nyGFiWMp5lBn9e17cd57` |
-| Cloudflare DNS Token | `cfut_e2iMVQEgDlvnOtFuLvfaUfQwfk4YDhUkAgJWmaJY5ab9f317` |
-| R2 Access Key ID | `b31c6e90450f740629ac030f6e16eef4` |
-| R2 Secret Access Key | `cce64be980580e166482b2c64c6396d5ea25bdb889ff43f3782c0932a75a9b32` |
-| R2 Endpoint | `https://954612afb5a97bb15dddcdc70176813d.r2.cloudflarestorage.com` |
-| Account ID | `954612afb5a97bb15dddcdc70176813d` |
-| Telegram Bot Token | In env (`TELEGRAM_BOT_TOKEN`) |
-| Tunnel Token | Embedded in `~/.cloudflared/studio-dashboard.json` |
+| Cloudflare API Token | Env: `CLOUDFLARE_API_TOKEN` |
+| Cloudflare DNS Token | Uses API token |
+| R2 Access Key ID | Env: `R2_ACCESS_KEY` |
+| R2 Secret Access Key | Env: `R2_SECRET_KEY` |
+| R2 Endpoint | Env: `R2_ENDPOINT` |
+| Account ID | Env: `CLOUDFLARE_ACCOUNT_ID` or `954612afb5a97bb15dddcdc70176813d` |
+| Telegram Bot Token | Env: `TELEGRAM_BOT_TOKEN` |
+| Tunnel Token | `~/.cloudflared/studio-dashboard.json` |

@@ -1,0 +1,48 @@
+{
+  "name": "Unknown",
+  "key": "unknown",
+  "scene_count": 153,
+  "primitives": [
+    "arrow",
+    "card",
+    "dot",
+    "flower",
+    "line",
+    "ring",
+    "silhouette",
+    "text"
+  ],
+  "operators": [
+    "align",
+    "oscillate",
+    "radiate",
+    "reveal"
+  ],
+  "backgrounds": [
+    "dark",
+    "light",
+    "unknown"
+  ],
+  "example_scenes": [
+    {
+      "title": "Dreamer dreaming dreamer",
+      "id": "dream.dreamer_dreaming_dreamer.v1",
+      "duration": 30
+    },
+    {
+      "title": "Waking, dream, sleep, fourth",
+      "id": "dream.waking,_dream,_sleep,_fourth.v1",
+      "duration": 28
+    },
+    {
+      "title": "Loosening solidity",
+      "id": "dream.loosening_solidity.v1",
+      "duration": 28
+    },
+    {
+      "title": "Awake without moving",
+      "id": "dream.awake_without_moving.v1",
+      "duration": 28
+    }
+  ]
+}

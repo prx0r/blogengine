@@ -1,0 +1,194 @@
+{
+  "pack_id": "advaita-vedanta",
+  "tradition": "Advaita Vedanta",
+  "primary_text": "Brahma-sūtra with Śaṅkara's commentary",
+  "entities": [
+    {
+      "id": "brahman",
+      "name": "Brahman",
+      "sanskrit": "ब्रह्मन्",
+      "type": "principle",
+      "canonical_id": "ultimate-reality",
+      "visual_archetype": "bindu"
+    },
+    {
+      "id": "atman",
+      "name": "Ātman",
+      "sanskrit": "आत्मन्",
+      "type": "principle",
+      "canonical_id": "self",
+      "visual_archetype": "bindu"
+    },
+    {
+      "id": "maya-advaita",
+      "name": "Māyā",
+      "sanskrit": "माया",
+      "type": "principle",
+      "canonical_id": "illusion",
+      "visual_archetype": "void"
+    },
+    {
+      "id": "avidya",
+      "name": "Avidyā",
+      "sanskrit": "अविद्या",
+      "type": "principle",
+      "canonical_id": "ignorance",
+      "visual_archetype": "contraction"
+    },
+    {
+      "id": "ishvara",
+      "name": "Īśvara",
+      "sanskrit": "ईश्वर",
+      "type": "deity",
+      "canonical_id": "personal-god",
+      "visual_archetype": "eye"
+    },
+    {
+      "id": "jiva",
+      "name": "Jīva",
+      "sanskrit": "जीव",
+      "type": "principle",
+      "canonical_id": "individual-soul",
+      "visual_archetype": "seed"
+    },
+    {
+      "id": "nirguna-brahman",
+      "name": "Nirguṇa Brahman",
+      "sanskrit": "निर्गुण ब्रह्मन्",
+      "type": "principle",
+      "canonical_id": "unqualified-absolute",
+      "visual_archetype": "void"
+    },
+    {
+      "id": "saguna-brahman",
+      "name": "Saguṇa Brahman",
+      "sanskrit": "सगुण ब्रह्मन्",
+      "type": "principle",
+      "canonical_id": "qualified-absolute",
+      "visual_archetype": "mandala"
+    },
+    {
+      "id": "moksha",
+      "name": "Mokṣa",
+      "sanskrit": "मोक्ष",
+      "type": "state",
+      "canonical_id": "liberation",
+      "visual_archetype": "bindu"
+    },
+    {
+      "id": "adhyasa",
+      "name": "Adhyāsa",
+      "sanskrit": "अध्यास",
+      "type": "principle",
+      "canonical_id": "superimposition",
+      "visual_archetype": "mirror"
+    },
+    {
+      "id": "saksin",
+      "name": "Sākṣin",
+      "sanskrit": "साक्षिन्",
+      "type": "principle",
+      "canonical_id": "witness",
+      "visual_archetype": "eye"
+    },
+    {
+      "id": "vyavaharika",
+      "name": "Vyāvahārika",
+      "sanskrit": "व्यावहारिक",
+      "type": "state",
+      "canonical_id": "empirical-reality",
+      "visual_archetype": "net"
+    },
+    {
+      "id": "paramarthika",
+      "name": "Pāramārthika",
+      "sanskrit": "पारमार्थिक",
+      "type": "state",
+      "canonical_id": "absolute-reality",
+      "visual_archetype": "bindu"
+    }
+  ],
+  "relations": [
+    {
+      "from": "brahman",
+      "type": "identity",
+      "to": "atman",
+      "canonical": "≡"
+    },
+    {
+      "from": "brahman",
+      "type": "non-difference",
+      "to": "atman",
+      "canonical": "≃"
+    },
+    {
+      "from": "brahman",
+      "type": "emanation",
+      "to": "maya-advaita",
+      "canonical": "→"
+    },
+    {
+      "from": "maya-advaita",
+      "type": "negation",
+      "to": "brahman",
+      "canonical": "¬"
+    },
+    {
+      "from": "brahman",
+      "type": "containment",
+      "to": "ishvara",
+      "canonical": "⊃"
+    },
+    {
+      "from": "avidya",
+      "type": "negation",
+      "to": "atman",
+      "canonical": "¬"
+    },
+    {
+      "from": "adhyasa",
+      "type": "transformation",
+      "to": "avidya",
+      "canonical": "⇝"
+    },
+    {
+      "from": "moksha",
+      "type": "recognition",
+      "to": "atman",
+      "canonical": "↻"
+    },
+    {
+      "from": "jiva",
+      "type": "non-difference",
+      "to": "atman",
+      "canonical": "≃"
+    },
+    {
+      "from": "jiva",
+      "type": "difference",
+      "to": "atman",
+      "canonical": "≄"
+    },
+    {
+      "from": "saksin",
+      "type": "witnessing",
+      "to": "jiva",
+      "canonical": "👁"
+    },
+    {
+      "from": "vyavaharika",
+      "type": "containment",
+      "to": "paramarthika",
+      "canonical": "⊃"
+    },
+    {
+      "from": "nirguna-brahman",
+      "type": "non-difference",
+      "to": "saguna-brahman",
+      "canonical": "≃"
+    }
+  ],
+  "meta": {
+    "version": "1.0.0"
+  }
+}

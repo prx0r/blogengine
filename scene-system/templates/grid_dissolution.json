@@ -1,0 +1,40 @@
+{
+  "name": "Grid Dissolution",
+  "key": "grid_dissolution",
+  "scene_count": 3,
+  "primitives": [
+    "arrow",
+    "dot",
+    "flower",
+    "line",
+    "ring",
+    "silhouette",
+    "text"
+  ],
+  "operators": [
+    "align",
+    "oscillate",
+    "radiate",
+    "reveal"
+  ],
+  "backgrounds": [
+    "dark"
+  ],
+  "example_scenes": [
+    {
+      "title": "Separate subtle and gross",
+      "id": "alchemy.separate_subtle_and_gross.v1",
+      "duration": 32
+    },
+    {
+      "title": "Solve et coagula",
+      "id": "alchemy.solve_et_coagula.v1",
+      "duration": 32
+    },
+    {
+      "title": "Time is relation",
+      "id": "emptiness.time_is_relation.v1",
+      "duration": 31
+    }
+  ]
+}

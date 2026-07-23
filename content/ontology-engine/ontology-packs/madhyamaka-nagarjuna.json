@@ -1,0 +1,136 @@
+{
+  "pack_id": "madhyamaka-nagarjuna",
+  "tradition": "Madhyamaka (Nāgārjuna)",
+  "primary_text": "Mūlamadhyamaka-kārikā",
+  "entities": [
+    {
+      "id": "sunyata-madhyamaka",
+      "name": "Śūnyatā",
+      "sanskrit": "शून्यता",
+      "type": "principle",
+      "canonical_id": "emptiness",
+      "visual_archetype": "void"
+    },
+    {
+      "id": "pratityasamutpada-madhyamaka",
+      "name": "Pratītyasamutpāda",
+      "sanskrit": "प्रतीत्यसमुत्पाद",
+      "type": "principle",
+      "canonical_id": "dependent-origination",
+      "visual_archetype": "net"
+    },
+    {
+      "id": "svabhava",
+      "name": "Svabhāva",
+      "sanskrit": "स्वभाव",
+      "type": "principle",
+      "canonical_id": "self-nature",
+      "visual_archetype": "bindu"
+    },
+    {
+      "id": "two-truths",
+      "name": "Two Truths",
+      "sanskrit": "सत्यद्वय",
+      "type": "principle",
+      "canonical_id": "two-truths",
+      "visual_archetype": "threshold"
+    },
+    {
+      "id": "samvriti-satya",
+      "name": "Saṃvṛti-satya",
+      "sanskrit": "संवृतिसत्य",
+      "type": "principle",
+      "canonical_id": "conventional-truth",
+      "visual_archetype": "net"
+    },
+    {
+      "id": "paramartha-satya",
+      "name": "Paramārtha-satya",
+      "sanskrit": "परमार्थसत्य",
+      "type": "principle",
+      "canonical_id": "ultimate-truth",
+      "visual_archetype": "void"
+    },
+    {
+      "id": "madhyamaka-prasanga",
+      "name": "Prasaṅga",
+      "sanskrit": "प्रसङ्ग",
+      "type": "method",
+      "canonical_id": "dialectical-method",
+      "visual_archetype": "mirror"
+    },
+    {
+      "id": "catuskoti",
+      "name": "Catuṣkoṭi",
+      "sanskrit": "चतुष्कोटि",
+      "type": "method",
+      "canonical_id": "tetralemma",
+      "visual_archetype": "cross"
+    }
+  ],
+  "relations": [
+    {
+      "from": "pratityasamutpada-madhyamaka",
+      "type": "identity",
+      "to": "sunyata-madhyamaka",
+      "canonical": "≡"
+    },
+    {
+      "from": "sunyata-madhyamaka",
+      "type": "negation",
+      "to": "svabhava",
+      "canonical": "¬"
+    },
+    {
+      "from": "samvriti-satya",
+      "type": "non-difference",
+      "to": "paramartha-satya",
+      "canonical": "≃"
+    },
+    {
+      "from": "paramartha-satya",
+      "type": "non-difference",
+      "to": "sunyata-madhyamaka",
+      "canonical": "≃"
+    },
+    {
+      "from": "catuskoti",
+      "type": "triadic-oscillation",
+      "to": "sunyata-madhyamaka",
+      "canonical": "∆"
+    },
+    {
+      "from": "madhyamaka-prasanga",
+      "type": "negation",
+      "to": "svabhava",
+      "canonical": "¬"
+    },
+    {
+      "from": "svabhava",
+      "type": "negation",
+      "to": "pratityasamutpada-madhyamaka",
+      "canonical": "¬"
+    },
+    {
+      "from": "sunyata-madhyamaka",
+      "type": "paradoxical-identity",
+      "to": "pratityasamutpada-madhyamaka",
+      "canonical": "≅"
+    },
+    {
+      "from": "two-truths",
+      "type": "containment",
+      "to": "samvriti-satya",
+      "canonical": "⊃"
+    },
+    {
+      "from": "two-truths",
+      "type": "containment",
+      "to": "paramartha-satya",
+      "canonical": "⊃"
+    }
+  ],
+  "meta": {
+    "version": "1.0.0"
+  }
+}

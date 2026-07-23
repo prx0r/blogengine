@@ -1,0 +1,158 @@
+{
+  "pack_id": "buddhist-philosophy",
+  "tradition": "Buddhist Philosophy",
+  "primary_text": "Various",
+  "entities": [
+    {
+      "id": "nirvana",
+      "name": "Nirvāṇa",
+      "sanskrit": "निर्वाण",
+      "type": "state",
+      "canonical_id": "liberation",
+      "visual_archetype": "void"
+    },
+    {
+      "id": "samsara",
+      "name": "Saṃsāra",
+      "sanskrit": "संसार",
+      "type": "state",
+      "canonical_id": "cyclical-existence",
+      "visual_archetype": "spiral"
+    },
+    {
+      "id": "sunyata",
+      "name": "Śūnyatā",
+      "sanskrit": "शून्यता",
+      "type": "principle",
+      "canonical_id": "emptiness",
+      "visual_archetype": "void"
+    },
+    {
+      "id": "pratityasamutpada",
+      "name": "Pratītyasamutpāda",
+      "sanskrit": "प्रतीत्यसमुत्पाद",
+      "type": "principle",
+      "canonical_id": "dependent-origination",
+      "visual_archetype": "net"
+    },
+    {
+      "id": "dharma-kaya",
+      "name": "Dharmakāya",
+      "sanskrit": "धर्मकाय",
+      "type": "principle",
+      "canonical_id": "ultimate-reality",
+      "visual_archetype": "void"
+    },
+    {
+      "id": "tathata",
+      "name": "Tathatā",
+      "sanskrit": "तथता",
+      "type": "principle",
+      "canonical_id": "suchness",
+      "visual_archetype": "bindu"
+    },
+    {
+      "id": "upaya",
+      "name": "Upāya",
+      "sanskrit": "उपाय",
+      "type": "principle",
+      "canonical_id": "skillful-means",
+      "visual_archetype": "thread"
+    },
+    {
+      "id": "buddha-nature",
+      "name": "Buddha-nature",
+      "sanskrit": "तथागतगर्भ",
+      "type": "principle",
+      "canonical_id": "inherent-potential",
+      "visual_archetype": "seed"
+    },
+    {
+      "id": "anatman",
+      "name": "Anātman",
+      "sanskrit": "अनात्मन्",
+      "type": "principle",
+      "canonical_id": "no-self",
+      "visual_archetype": "void"
+    },
+    {
+      "id": "duhkha",
+      "name": "Duḥkha",
+      "sanskrit": "दुःख",
+      "type": "principle",
+      "canonical_id": "suffering",
+      "visual_archetype": "contraction"
+    }
+  ],
+  "relations": [
+    {
+      "from": "samsara",
+      "type": "non-difference",
+      "to": "nirvana",
+      "canonical": "≃"
+    },
+    {
+      "from": "nirvana",
+      "type": "identity",
+      "to": "sunyata",
+      "canonical": "≡"
+    },
+    {
+      "from": "pratityasamutpada",
+      "type": "identity",
+      "to": "sunyata",
+      "canonical": "≡"
+    },
+    {
+      "from": "dharma-kaya",
+      "type": "non-difference",
+      "to": "tathata",
+      "canonical": "≃"
+    },
+    {
+      "from": "upaya",
+      "type": "transformation",
+      "to": "nirvana",
+      "canonical": "⇝"
+    },
+    {
+      "from": "anatman",
+      "type": "negation",
+      "to": "atman",
+      "canonical": "¬"
+    },
+    {
+      "from": "buddha-nature",
+      "type": "containment",
+      "to": "tathata",
+      "canonical": "⊃"
+    },
+    {
+      "from": "sunyata",
+      "type": "paradoxical-identity",
+      "to": "tathata",
+      "canonical": "≅"
+    },
+    {
+      "from": "buddha-nature",
+      "type": "resonance",
+      "to": "sunyata",
+      "canonical": "≋"
+    },
+    {
+      "from": "buddha-nature",
+      "type": "resonance",
+      "to": "tathata",
+      "canonical": "≋"
+    },
+    {
+      "from": "duhkha",
+      "type": "emanation",
+      "to": "samsara",
+      "canonical": "→"
+    }
+  ],
+  "meta": {
+    "version": "1.0.0"
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "scene_id": "tzimtzum-primal-contraction",
+  "title": "Tzimtzum: The Primal Contraction",
+  "tradition": "lurianic-kabbalah",
+  "narrative": "The Ein Sof contracted itself to create a void, a space for creation.",
+  "entities": [
+    {
+      "id": "ein-sof-entity",
+      "name": "Ein Sof",
+      "hebrew": "אין סוף",
+      "type": "principle",
+      "visual_archetype": "void",
+      "position": "full_screen",
+      "color": "white"
+    },
+    {
+      "id": "void-entity",
+      "name": "Primordial Void",
+      "hebrew": "צמצום החינם",
+      "type": "concept",
+      "visual_archetype": "void",
+      "position": "center",
+      "color": "crimson"
+    },
+    {
+      "id": "kav-entity",
+      "name": "Kav",
+      "hebrew": "קו",
+      "type": "principle",
+      "visual_archetype": "thread",
+      "position": "vertical",
+      "color": "crimson"
+    }
+  ],
+  "relations": [
+    {
+      "type": "contraction",
+      "from": "ein-sof-entity",
+      "to": "void-entity",
+      "canonical": "∨",
+      "visual": "shrinking_to_point"
+    },
+    {
+      "type": "emanation",
+      "from": "void-entity",
+      "to": "kav-entity",
+      "canonical": "→",
+      "visual": "ray_of_light"
+    },
+    {
+      "type": "paradoxical-identity",
+      "from": "ein-sof-entity",
+      "to": "void-entity",
+      "canonical": "≅",
+      "visual": "simultaneous_presence"
+    }
+  ],
+  "operators": [
+    {
+      "id": "contract",
+      "target": "ein-sof-entity",
+      "duration": 3.0,
+      "to": 0.01
+    },
+    {
+      "id": "suspend",
+      "target": "void-entity",
+      "duration": 1.0,
+      "delay": 3.0
+    },
+    {
+      "id": "appear",
+      "target": "kav-entity",
+      "duration": 0.5,
+      "delay": 4.0
+    }
+  ],
+  "timeline": {
+    "duration": 5.0,
+    "keyframes": [
+      {
+        "time": 0.0,
+        "action": "full white screen (ein sof)"
+      },
+      {
+        "time": 3.0,
+        "action": "contract to tiny crimson point"
+      },
+      {
+        "time": 3.5,
+        "action": "void appears as black space around the point"
+      },
+      {
+        "time": 4.0,
+        "action": "kav ray extends downward"
+      },
+      {
+        "time": 5.0,
+        "action": "suspend"
+      }
+    ]
+  }
+}

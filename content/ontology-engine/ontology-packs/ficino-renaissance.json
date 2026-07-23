@@ -1,0 +1,122 @@
+{
+  "pack_id": "ficino-renaissance",
+  "tradition": "Renaissance Neoplatonism (Ficino)",
+  "primary_text": "Platonic Theology",
+  "entities": [
+    {
+      "id": "god-ficino",
+      "name": "God",
+      "type": "principle",
+      "canonical_id": "ultimate-reality",
+      "visual_archetype": "bindu"
+    },
+    {
+      "id": "angelic-mind",
+      "name": "Angelic Mind",
+      "type": "principle",
+      "canonical_id": "intellect",
+      "visual_archetype": "mandala"
+    },
+    {
+      "id": "world-soul",
+      "name": "World Soul",
+      "type": "principle",
+      "canonical_id": "soul",
+      "visual_archetype": "spiral"
+    },
+    {
+      "id": "human-soul",
+      "name": "Human Soul",
+      "type": "principle",
+      "canonical_id": "human-soul",
+      "visual_archetype": "eye"
+    },
+    {
+      "id": "platonic-love",
+      "name": "Platonic Love",
+      "type": "concept",
+      "canonical_id": "love",
+      "visual_archetype": "flame"
+    },
+    {
+      "id": "contemplation",
+      "name": "Contemplation",
+      "type": "practice",
+      "canonical_id": "contemplation",
+      "visual_archetype": "threshold"
+    },
+    {
+      "id": "immortality-soul",
+      "name": "Immortality of the Soul",
+      "type": "principle",
+      "canonical_id": "immortality",
+      "visual_archetype": "lotus"
+    },
+    {
+      "id": "natural-magic",
+      "name": "Natural Magic",
+      "type": "practice",
+      "canonical_id": "sacred-practice",
+      "visual_archetype": "net"
+    }
+  ],
+  "relations": [
+    {
+      "from": "god-ficino",
+      "type": "emanation",
+      "to": "angelic-mind",
+      "canonical": "→"
+    },
+    {
+      "from": "angelic-mind",
+      "type": "emanation",
+      "to": "world-soul",
+      "canonical": "→"
+    },
+    {
+      "from": "world-soul",
+      "type": "emanation",
+      "to": "human-soul",
+      "canonical": "→"
+    },
+    {
+      "from": "human-soul",
+      "type": "containment",
+      "to": "world-soul",
+      "canonical": "⊃"
+    },
+    {
+      "from": "human-soul",
+      "type": "containment",
+      "to": "god-ficino",
+      "canonical": "⊃"
+    },
+    {
+      "from": "platonic-love",
+      "type": "transformation",
+      "to": "contemplation",
+      "canonical": "⇝"
+    },
+    {
+      "from": "contemplation",
+      "type": "dissolution",
+      "to": "god-ficino",
+      "canonical": "↓"
+    },
+    {
+      "from": "human-soul",
+      "type": "paradoxical-identity",
+      "to": "god-ficino",
+      "canonical": "≅"
+    },
+    {
+      "from": "natural-magic",
+      "type": "resonance",
+      "to": "god-ficino",
+      "canonical": "≋"
+    }
+  ],
+  "meta": {
+    "version": "1.0.0"
+  }
+}

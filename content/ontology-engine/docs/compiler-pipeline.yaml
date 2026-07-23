@@ -1,0 +1,48 @@
+passes:
+  -
+    id: semantic_validation
+    input: semantic-scene
+    output: validated-scene
+    checks:
+      - ontology exists
+      - operators valid
+      - truth status
+      - cross tradition rules
+  -
+    id: guard_engine
+    input: validated-scene
+    output: safe-scene
+    checks:
+      - non-equivalence
+      - ritual restrictions
+      - causal mode
+      - temporal mode
+  -
+    id: visual_planner
+    input: safe-scene
+    output: visual-plan
+    responsibility:
+      - select archetypes
+      - camera language
+      - layout
+      - negative space
+      - continuity
+  -
+    id: asset_resolver
+    input: visual-plan
+    output: resolved-assets
+    responsibility:
+      - SVG lookup
+      - layer lookup
+      - fallback assets
+      - animation capability
+  -
+    id: macro_expander
+    input: resolved-assets
+    output: motion-plan
+    responsibility:
+      - semantic operator → renderer macros
+  -
+    id: motion_canvas_backend
+    input: motion-plan
+    output: typescript

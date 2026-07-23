@@ -1,0 +1,116 @@
+{
+  "mappings": [
+    {
+      "source": {
+        "tradition": "trika-tantraloka",
+        "entity": "parama-shiva"
+      },
+      "target": {
+        "tradition": "plotinus-ennéads",
+        "entity": "the-one"
+      },
+      "canonical_relation": "≃",
+      "strength": "strong",
+      "note": "Both are first principle, but parama-shiva includes dynamic self-awareness."
+    },
+    {
+      "source": {
+        "tradition": "trika-tantraloka",
+        "entity": "prakasha"
+      },
+      "target": {
+        "tradition": "plotinus-ennéads",
+        "entity": "nous"
+      },
+      "canonical_relation": "≃",
+      "strength": "moderate"
+    },
+    {
+      "source": {
+        "tradition": "advaita-vedanta",
+        "entity": "brahman"
+      },
+      "target": {
+        "tradition": "trika-tantraloka",
+        "entity": "parama-shiva"
+      },
+      "canonical_relation": "≃",
+      "strength": "strong"
+    },
+    {
+      "source": {
+        "tradition": "buddhist-philosophy",
+        "entity": "sunyata"
+      },
+      "target": {
+        "tradition": "madhyamaka-nagarjuna",
+        "entity": "sunyata-madhyamaka"
+      },
+      "canonical_relation": "≡",
+      "strength": "identity"
+    },
+    {
+      "source": {
+        "tradition": "buddhist-philosophy",
+        "entity": "sunyata"
+      },
+      "target": {
+        "tradition": "trika-tantraloka",
+        "entity": "anuttara"
+      },
+      "canonical_relation": "≅",
+      "strength": "paradoxical"
+    },
+    {
+      "source": {
+        "tradition": "lurianic-kabbalah",
+        "entity": "tzimtzum"
+      },
+      "target": {
+        "tradition": "trika-tantraloka",
+        "entity": "maya"
+      },
+      "canonical_relation": "≋",
+      "strength": "moderate"
+    },
+    {
+      "source": {
+        "tradition": "lurianic-kabbalah",
+        "entity": "ein-sof"
+      },
+      "target": {
+        "tradition": "hermetic-qabalah",
+        "entity": "ain-soph-aur"
+      },
+      "canonical_relation": "≡",
+      "strength": "identity"
+    },
+    {
+      "source": {
+        "tradition": "hermetic-qabalah",
+        "entity": "tiferet"
+      },
+      "target": {
+        "tradition": "trika-tantraloka",
+        "entity": "aham-idam"
+      },
+      "canonical_relation": "≋",
+      "strength": "weak"
+    },
+    {
+      "source": {
+        "tradition": "madhyamaka-nagarjuna",
+        "entity": "catuskoti"
+      },
+      "target": {
+        "tradition": "trika-tantraloka",
+        "entity": "camatkara"
+      },
+      "canonical_relation": "≋",
+      "strength": "weak"
+    }
+  ],
+  "meta": {
+    "version": "1.0.0"
+  }
+}

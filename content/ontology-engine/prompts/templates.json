@@ -1,0 +1,24 @@
+{
+  "templates": [
+    {
+      "id": "generate-scene",
+      "name": "Generate Scene from Philosophy",
+      "prompt": "Given philosophical passage from {tradition}, generate scene spec..."
+    },
+    {
+      "id": "map-across-traditions",
+      "name": "Map Entity Across Traditions",
+      "prompt": "Map entity '{entity}' from {source_tradition} to {target_traditions}..."
+    },
+    {
+      "id": "visualize-relation",
+      "name": "Suggest Visual for Relation",
+      "prompt": "Given relation '{relation}' between {entity_a} and {entity_b}, suggest visual..."
+    },
+    {
+      "id": "generate-essay-scenes",
+      "name": "Generate Scenes from Essay",
+      "prompt": "Break down the following essay into ontology scenes: {essay}..."
+    }
+  ]
+}

@@ -1,0 +1,246 @@
+{
+  "pack_id": "trika-tantraloka",
+  "tradition": "Kashmir Shaivism (Trika)",
+  "primary_text": "Tantrāloka of Abhinavagupta",
+  "entities": [
+    {
+      "id": "parama-shiva",
+      "name": "Paramāśiva",
+      "sanskrit": "परमशिव",
+      "type": "deity",
+      "canonical_id": "ultimate-reality",
+      "visual_archetype": "bindu"
+    },
+    {
+      "id": "shakti",
+      "name": "Śakti",
+      "sanskrit": "शक्ति",
+      "type": "deity",
+      "canonical_id": "dynamic-energy",
+      "visual_archetype": "wave"
+    },
+    {
+      "id": "shiva-shakti",
+      "name": "Śiva-Śakti",
+      "sanskrit": "शिवशक्ति",
+      "type": "principle",
+      "canonical_id": "unity-duality",
+      "visual_archetype": "hexagram"
+    },
+    {
+      "id": "spanda",
+      "name": "Spanda",
+      "sanskrit": "स्पन्द",
+      "type": "principle",
+      "canonical_id": "cosmic-pulse",
+      "visual_archetype": "wave"
+    },
+    {
+      "id": "anuttara",
+      "name": "Anuttara",
+      "sanskrit": "अनुत्तर",
+      "type": "principle",
+      "canonical_id": "ground",
+      "visual_archetype": "bindu"
+    },
+    {
+      "id": "prakasha",
+      "name": "Prakāśa",
+      "sanskrit": "प्रकाश",
+      "type": "principle",
+      "canonical_id": "light",
+      "visual_archetype": "eye"
+    },
+    {
+      "id": "vimarsha",
+      "name": "Vimarśa",
+      "sanskrit": "विमर्श",
+      "type": "principle",
+      "canonical_id": "reflection",
+      "visual_archetype": "mirror"
+    },
+    {
+      "id": "pratyabhijna",
+      "name": "Pratyabhijñā",
+      "sanskrit": "प्रत्यभिज्ञा",
+      "type": "principle",
+      "canonical_id": "recognition",
+      "visual_archetype": "mirror"
+    },
+    {
+      "id": "camatkara",
+      "name": "Camatkāra",
+      "sanskrit": "चमत्कार",
+      "type": "principle",
+      "canonical_id": "aesthetic-wonder",
+      "visual_archetype": "eye"
+    },
+    {
+      "id": "aham",
+      "name": "Aham",
+      "sanskrit": "अहम्",
+      "type": "concept",
+      "canonical_id": "self",
+      "visual_archetype": "bindu"
+    },
+    {
+      "id": "idam",
+      "name": "Idam",
+      "sanskrit": "इदम्",
+      "type": "concept",
+      "canonical_id": "other",
+      "visual_archetype": "threshold"
+    },
+    {
+      "id": "aham-idam",
+      "name": "Aham-Idam",
+      "sanskrit": "अहमिदम्",
+      "type": "principle",
+      "canonical_id": "subject-object-unity",
+      "visual_archetype": "hexagram"
+    },
+    {
+      "id": "maya",
+      "name": "Māyā",
+      "sanskrit": "माया",
+      "type": "principle",
+      "canonical_id": "limitation",
+      "visual_archetype": "contraction"
+    },
+    {
+      "id": "unmesha",
+      "name": "Unmeṣa",
+      "sanskrit": "उन्मेष",
+      "type": "state",
+      "canonical_id": "expansion",
+      "visual_archetype": "eye"
+    },
+    {
+      "id": "nimesha",
+      "name": "Nimeṣa",
+      "sanskrit": "निमेष",
+      "type": "state",
+      "canonical_id": "contraction",
+      "visual_archetype": "eye"
+    },
+    {
+      "id": "turiya",
+      "name": "Turīya",
+      "sanskrit": "तुरीय",
+      "type": "state",
+      "canonical_id": "fourth-state",
+      "visual_archetype": "void"
+    },
+    {
+      "id": "svatantrya",
+      "name": "Svatantrya",
+      "sanskrit": "स्वातन्त्र्य",
+      "type": "principle",
+      "canonical_id": "freedom",
+      "visual_archetype": "expansion"
+    },
+    {
+      "id": "trika",
+      "name": "Trika",
+      "sanskrit": "त्रिक",
+      "type": "principle",
+      "canonical_id": "triad",
+      "visual_archetype": "triangle-up"
+    }
+  ],
+  "relations": [
+    {
+      "from": "parama-shiva",
+      "type": "emanation",
+      "to": "shakti",
+      "canonical": "→"
+    },
+    {
+      "from": "shakti",
+      "type": "containment",
+      "to": "parama-shiva",
+      "canonical": "⊃"
+    },
+    {
+      "from": "parama-shiva",
+      "type": "identity",
+      "to": "shiva-shakti",
+      "canonical": "≡"
+    },
+    {
+      "from": "prakasha",
+      "type": "non-difference",
+      "to": "vimarsha",
+      "canonical": "≃"
+    },
+    {
+      "from": "anuttara",
+      "type": "emanation",
+      "to": "prakasha",
+      "canonical": "→"
+    },
+    {
+      "from": "prakasha",
+      "type": "emanation",
+      "to": "vimarsha",
+      "canonical": "→"
+    },
+    {
+      "from": "aham",
+      "type": "non-difference",
+      "to": "idam",
+      "canonical": "≃"
+    },
+    {
+      "from": "pratyabhijna",
+      "type": "recognition",
+      "to": "aham",
+      "canonical": "↻"
+    },
+    {
+      "from": "spanda",
+      "type": "resonance",
+      "to": "unmesha",
+      "canonical": "≋"
+    },
+    {
+      "from": "spanda",
+      "type": "resonance",
+      "to": "nimesha",
+      "canonical": "≋"
+    },
+    {
+      "from": "maya",
+      "type": "negation",
+      "to": "svatantrya",
+      "canonical": "¬"
+    },
+    {
+      "from": "camatkara",
+      "type": "paradoxical-identity",
+      "to": "aham-idam",
+      "canonical": "≅"
+    },
+    {
+      "from": "trika",
+      "type": "triadic-oscillation",
+      "to": "parama-shiva",
+      "canonical": "∆"
+    },
+    {
+      "from": "trika",
+      "type": "triadic-oscillation",
+      "to": "shakti",
+      "canonical": "∆"
+    },
+    {
+      "from": "trika",
+      "type": "triadic-oscillation",
+      "to": "nara",
+      "canonical": "∆"
+    }
+  ],
+  "meta": {
+    "version": "1.0.0"
+  }
+}

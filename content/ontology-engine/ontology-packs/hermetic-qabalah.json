@@ -1,0 +1,256 @@
+{
+  "pack_id": "hermetic-qabalah",
+  "tradition": "Hermetic Qabalah",
+  "primary_text": "Various",
+  "entities": [
+    {
+      "id": "ain-soph-aur",
+      "name": "Ain Soph Aur",
+      "hebrew": "אין סוף אור",
+      "type": "principle",
+      "canonical_id": "ultimate-reality",
+      "visual_archetype": "void"
+    },
+    {
+      "id": "keter",
+      "name": "Keter",
+      "hebrew": "כתר",
+      "type": "sefirah",
+      "canonical_id": "crown",
+      "visual_archetype": "bindu"
+    },
+    {
+      "id": "chokhmah",
+      "name": "Chokhmah",
+      "hebrew": "חכמה",
+      "type": "sefirah",
+      "canonical_id": "wisdom",
+      "visual_archetype": "pillar"
+    },
+    {
+      "id": "binah",
+      "name": "Binah",
+      "hebrew": "בינה",
+      "type": "sefirah",
+      "canonical_id": "understanding",
+      "visual_archetype": "void"
+    },
+    {
+      "id": "daath",
+      "name": "Da'ath",
+      "hebrew": "דעת",
+      "type": "sefirah",
+      "canonical_id": "knowledge",
+      "visual_archetype": "threshold"
+    },
+    {
+      "id": "chesed",
+      "name": "Chesed",
+      "hebrew": "חסד",
+      "type": "sefirah",
+      "canonical_id": "mercy",
+      "visual_archetype": "expansion"
+    },
+    {
+      "id": "gevurah",
+      "name": "Gevurah",
+      "hebrew": "גבורה",
+      "type": "sefirah",
+      "canonical_id": "severity",
+      "visual_archetype": "contraction"
+    },
+    {
+      "id": "tiferet",
+      "name": "Tiferet",
+      "hebrew": "תפארת",
+      "type": "sefirah",
+      "canonical_id": "beauty",
+      "visual_archetype": "hexagram"
+    },
+    {
+      "id": "netzach",
+      "name": "Netzach",
+      "hebrew": "נצח",
+      "type": "sefirah",
+      "canonical_id": "victory",
+      "visual_archetype": "pillar"
+    },
+    {
+      "id": "hod",
+      "name": "Hod",
+      "hebrew": "הוד",
+      "type": "sefirah",
+      "canonical_id": "splendor",
+      "visual_archetype": "mirror"
+    },
+    {
+      "id": "yesod",
+      "name": "Yesod",
+      "hebrew": "יסוד",
+      "type": "sefirah",
+      "canonical_id": "foundation",
+      "visual_archetype": "moon"
+    },
+    {
+      "id": "malkuth",
+      "name": "Malkuth",
+      "hebrew": "מלכות",
+      "type": "sefirah",
+      "canonical_id": "kingdom",
+      "visual_archetype": "lotus"
+    },
+    {
+      "id": "abyss",
+      "name": "The Abyss",
+      "type": "concept",
+      "canonical_id": "abyss",
+      "visual_archetype": "void"
+    },
+    {
+      "id": "middle-pillar",
+      "name": "Middle Pillar",
+      "type": "concept",
+      "canonical_id": "central-axis",
+      "visual_archetype": "pillar"
+    },
+    {
+      "id": "qelippot",
+      "name": "Qelippot",
+      "hebrew": "קליפות",
+      "type": "concept",
+      "canonical_id": "impurity-shells",
+      "visual_archetype": "contraction"
+    }
+  ],
+  "relations": [
+    {
+      "from": "ain-soph-aur",
+      "type": "emanation",
+      "to": "keter",
+      "canonical": "→"
+    },
+    {
+      "from": "keter",
+      "type": "emanation",
+      "to": "chokhmah",
+      "canonical": "→"
+    },
+    {
+      "from": "chokhmah",
+      "type": "emanation",
+      "to": "binah",
+      "canonical": "→"
+    },
+    {
+      "from": "binah",
+      "type": "emanation",
+      "to": "daath",
+      "canonical": "→"
+    },
+    {
+      "from": "chesed",
+      "type": "emanation",
+      "to": "gevurah",
+      "canonical": "→"
+    },
+    {
+      "from": "gevurah",
+      "type": "transformation",
+      "to": "tiferet",
+      "canonical": "⇝"
+    },
+    {
+      "from": "tiferet",
+      "type": "emanation",
+      "to": "netzach",
+      "canonical": "→"
+    },
+    {
+      "from": "netzach",
+      "type": "emanation",
+      "to": "hod",
+      "canonical": "→"
+    },
+    {
+      "from": "hod",
+      "type": "emanation",
+      "to": "yesod",
+      "canonical": "→"
+    },
+    {
+      "from": "yesod",
+      "type": "emanation",
+      "to": "malkuth",
+      "canonical": "→"
+    },
+    {
+      "from": "chesed",
+      "type": "expansion",
+      "to": "tiferet",
+      "canonical": "∧"
+    },
+    {
+      "from": "gevurah",
+      "type": "contraction",
+      "to": "tiferet",
+      "canonical": "∨"
+    },
+    {
+      "from": "tiferet",
+      "type": "resonance",
+      "to": "keter",
+      "canonical": "≋"
+    },
+    {
+      "from": "middle-pillar",
+      "type": "containment",
+      "to": "keter",
+      "canonical": "⊃"
+    },
+    {
+      "from": "middle-pillar",
+      "type": "containment",
+      "to": "daath",
+      "canonical": "⊃"
+    },
+    {
+      "from": "middle-pillar",
+      "type": "containment",
+      "to": "tiferet",
+      "canonical": "⊃"
+    },
+    {
+      "from": "middle-pillar",
+      "type": "containment",
+      "to": "yesod",
+      "canonical": "⊃"
+    },
+    {
+      "from": "middle-pillar",
+      "type": "containment",
+      "to": "malkuth",
+      "canonical": "⊃"
+    },
+    {
+      "from": "ain-soph-aur",
+      "type": "paradoxical-identity",
+      "to": "keter",
+      "canonical": "≅"
+    },
+    {
+      "from": "tiferet",
+      "type": "identity",
+      "to": "middle-pillar",
+      "canonical": "≡"
+    },
+    {
+      "from": "daath",
+      "type": "non-equivalence",
+      "to": "ain-soph-aur",
+      "canonical": "!=="
+    }
+  ],
+  "meta": {
+    "version": "1.0.0"
+  }
+}

@@ -1,0 +1,16 @@
+resolution_order:
+  - exact asset id
+  - semantic tag
+  - archetype
+  - style family
+  - generic fallback
+score_weights:
+  tradition_affinity: 3
+  semantic_tags: 5
+  supported_operator: 4
+  style_family: 2
+  performance_cost: -1
+fallback_policy:
+  missing_asset: replace by archetype
+  missing_animation: replace by renderer macro
+  missing_layer: flatten svg

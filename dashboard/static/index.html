@@ -79,7 +79,10 @@ button.fc{background:#003545;color:var(--cyan);border-color:var(--cyan)}
 
 <div class="nav">
   <a class="fc active" onclick="showPage('fablecut')">⚡ Editor</a>
-  <a onclick="showPage('fablecut-embed')">🎬 Watch</a>
+  <a onclick="showPage('review')">✎ Review</a>
+  <a onclick="showPage('feedback')">⚑ Feedback</a>
+  <a onclick="showPage('scenes')">◈ Library</a>
+  <a onclick="showPage('sreview')">◎ Scene Review</a>
   <a onclick="showPage('validate')">✓ Validate</a>
   <a onclick="showPage('blueprints')">Blueprints</a>
   <a onclick="showPage('channels')">Channels</a>
@@ -131,18 +134,72 @@ button.fc{background:#003545;color:var(--cyan);border-color:var(--cyan)}
   <div id="val-detail" style="margin-top:12px"></div>
 </div>
 
-<!-- FABLECUT FULLSCREEN EMBED -->
-<div id="page-fablecut-embed" class="page" style="padding:0;display:flex;flex-direction:column">
-  <div style="background:var(--surface);border-bottom:1px solid var(--border);padding:6px 12px;display:flex;align-items:center;gap:10px;flex-shrink:0">
-    <span style="font-weight:600;font-size:13px">🎬 FableCut Editor</span>
-    <span id="fc-embed-status" class="badge green">running</span>
-    <span class="text-sm text-dim" style="flex:1">fablecut.tantrafiles.xyz</span>
-    <a href="https://fablecut.tantrafiles.xyz" target="_blank" style="color:var(--cyan);font-size:12px">Open in new tab ↗</a>
+<!-- REVIEW -->
+<div id="page-review" class="page" style="padding:0;display:flex;overflow:hidden">
+  <div style="width:260px;min-width:260px;background:var(--surface);border-right:1px solid var(--border);display:flex;flex-direction:column;overflow:hidden">
+    <div style="padding:8px 10px;border-bottom:1px solid var(--border);font-size:11px;font-weight:600;color:var(--gold)">VIDEOS</div>
+    <div id="rv-list" style="flex:1;overflow-y:auto;padding:4px"></div>
   </div>
-  <iframe id="fc-iframe" src="https://fablecut.tantrafiles.xyz"
-    style="flex:1;width:100%;border:none;background:#000"
-    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
-    sandbox="allow-same-origin allow-scripts allow-forms allow-popups"></iframe>
+  <div style="flex:1;display:flex;flex-direction:column;overflow:hidden">
+    <div style="height:55%;min-height:260px;background:#000;display:flex;align-items:center;justify-content:center" id="rv-player-area">
+      <div id="rv-placeholder" style="color:var(--dim);text-align:center;font-size:12px">
+        <div style="font-size:24px;margin-bottom:4px">◈</div>
+        select a video
+      </div>
+      <video id="rv-player" controls style="max-width:100%;max-height:100%;display:none" preload="metadata"></video>
+    </div>
+    <div id="rv-info" style="display:none;padding:5px 12px;background:var(--surface);border-top:1px solid var(--border);font-size:11px;flex-shrink:0">
+      <span id="rv-title" style="color:var(--text);font-weight:500"></span>
+      <span id="rv-meta" style="color:var(--dim);margin-left:8px"></span>
+    </div>
+    <div style="flex:1;background:var(--surface);border-top:1px solid var(--border);display:flex;flex-direction:column;overflow:hidden">
+      <div style="padding:4px 12px;border-bottom:1px solid var(--border);font-size:10px;color:var(--gold);flex-shrink:0">FEEDBACK</div>
+      <div id="rv-comments" style="flex:1;overflow-y:auto;padding:6px 12px;font-size:11px"></div>
+    </div>
+  </div>
+</div>
+
+<!-- FEEDBACK OVERVIEW -->
+<div id="page-feedback" class="page">
+  <h2 style="font-size:14px;margin-bottom:8px">⚑ Feedback Overview</h2>
+  <div style="font-size:11px;color:var(--dim);margin-bottom:12px">All comments across all videos — ordered by recency</div>
+  <div id="fb-list" style="font-size:12px"></div>
+</div>
+
+<!-- SCENE REVIEW -->
+<div id="page-sreview" class="page" style="padding:0;display:flex;overflow:hidden">
+  <div style="width:260px;min-width:260px;background:var(--surface);border-right:1px solid var(--border);display:flex;flex-direction:column;overflow:hidden">
+    <div style="padding:8px 10px;border-bottom:1px solid var(--border);font-size:11px;font-weight:600;color:var(--gold)">SCENES</div>
+    <div style="padding:4px 8px;border-bottom:1px solid var(--border)">
+      <input id="ss-search" placeholder="filter by concept, pack..." onkeyup="ssFilter()" style="width:100%;background:var(--bg);border:1px solid var(--border);padding:4px 6px;border-radius:3px;color:var(--text);font-size:10px">
+    </div>
+    <div style="font-size:9px;color:var(--dim);padding:2px 8px" id="ss-count"></div>
+    <div id="ss-list" style="flex:1;overflow-y:auto;padding:4px"></div>
+  </div>
+  <div style="flex:1;display:flex;flex-direction:column;overflow:hidden">
+    <div style="height:50%;min-height:200px;background:#000;display:flex;align-items:center;justify-content:center" id="ss-player-area">
+      <div id="ss-placeholder" style="color:var(--dim);text-align:center;font-size:11px">select a scene</div>
+      <video id="ss-player" controls style="max-width:100%;max-height:100%;display:none" preload="metadata"></video>
+    </div>
+    <div id="ss-info" style="display:none;padding:4px 10px;background:var(--surface);border-top:1px solid var(--border);font-size:10px;flex-shrink:0">
+      <span id="ss-title" style="color:var(--gold);font-weight:500"></span>
+      <span id="ss-meta" style="color:var(--dim);margin-left:6px"></span>
+    </div>
+    <div style="flex:1;background:var(--surface);border-top:1px solid var(--border);display:flex;flex-direction:column;overflow:hidden">
+      <div style="padding:3px 10px;border-bottom:1px solid var(--border);font-size:9px;color:var(--gold);flex-shrink:0">SCENE FEEDBACK</div>
+      <div id="ss-comments" style="flex:1;overflow-y:auto;padding:4px 10px;font-size:10px"></div>
+    </div>
+  </div>
+</div>
+
+<!-- SCENE CATALOG -->
+<div id="page-scenes" class="page">
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
+    <h2 style="font-size:14px">◈ Scene Library</h2>
+    <input id="sc-search" placeholder="search by concept, primitive, template..." onkeyup="scSearch(event)" style="flex:1;background:var(--bg);border:1px solid var(--border);padding:5px 10px;border-radius:4px;color:var(--text);font-size:12px;font-family:inherit">
+    <span id="sc-count" style="font-size:10px;color:var(--dim)"></span>
+  </div>
+  <div id="sc-results" style="font-size:12px"></div>
 </div>
 
 <!-- BLUEPRINTS -->
@@ -179,9 +236,13 @@ function showPage(id) {
   if (id==='blueprints') bpLoad();
   if (id==='channels') chLoad();
   if (id==='analytics') anLoad();
+  if (id==='review') rvLoad();
+  if (id==='feedback') fbLoad();
+  if (id==='scenes') scInit();
+  if (id==='sreview') ssInit();
 }
 
-async function api(p){try{const r=await fetch(API_BASE+p);return await r.json()}catch(e){return{error:e.message}}}
+async function api(p, opts){try{const r=await fetch(API_BASE+p, opts||{});return await r.json()}catch(e){return{error:e.message}}}
 
 // ── QUICK SCORE ──
 let _qsTimer=null;
@@ -295,6 +356,335 @@ async function anLoad(){
   `).join('');
 }
 
+// ── REVIEW ──
+let rvVideos = [];
+let rvCurrent = null;
+let rvFilter = 'all';
+let rvReviewed = new Set();
+
+function rvLoadReviewed() {
+  try { rvReviewed = new Set(JSON.parse(localStorage.getItem('rv_reviewed') || '[]')); } catch(e) {}
+}
+function rvSaveReviewed() {
+  localStorage.setItem('rv_reviewed', JSON.stringify([...rvReviewed]));
+}
+
+async function rvLoad() {
+  const d = await api('/api/review/videos');
+  rvVideos = d || [];
+  rvRenderList();
+}
+
+function rvRenderList() {
+  const el = document.getElementById('rv-list');
+  let videos = rvVideos;
+  if (rvFilter === 'unreviewed') videos = videos.filter(v => !rvReviewed.has(v.id));
+  else if (rvFilter === 'reviewed') videos = videos.filter(v => rvReviewed.has(v.id));
+
+  el.innerHTML = `
+    <div style="display:flex;gap:2px;margin-bottom:4px;padding:2px 4px">
+      <span onclick="rvSetFilter('all')" style="font-size:10px;cursor:pointer;padding:2px 6px;border-radius:3px;${rvFilter==='all'?'background:var(--gold);color:#000':'color:var(--dim)'}">all</span>
+      <span onclick="rvSetFilter('unreviewed')" style="font-size:10px;cursor:pointer;padding:2px 6px;border-radius:3px;${rvFilter==='unreviewed'?'background:var(--gold);color:#000':'color:var(--dim)'}">new</span>
+      <span onclick="rvSetFilter('reviewed')" style="font-size:10px;cursor:pointer;padding:2px 6px;border-radius:3px;${rvFilter==='reviewed'?'background:var(--gold);color:#000':'color:var(--dim)'}">seen</span>
+    </div>
+    <div style="font-size:9px;color:var(--dim);padding:0 4px 4px">${videos.filter(v=>!rvReviewed.has(v.id)).length} unreviewed · ⌀ ${videos.some(v=>v.avgRating) ? videos.reduce((s,v)=>s+(v.avgRating||0),0)/videos.filter(v=>v.avgRating).length : '—'}</div>
+  ` + (videos.length ? videos.map(v => {
+    const done = rvReviewed.has(v.id);
+    const active = rvCurrent && rvCurrent.id === v.id ? 'style="background:var(--surface2);border-color:var(--gold)"' : '';
+    const avg = v.avgRating ? `★${v.avgRating.toFixed(1)}` : '';
+    return `<div ${active} onclick="rvSelect('${v.id}')" style="cursor:pointer;padding:6px 8px;border-radius:3px;border:1px solid transparent;margin-bottom:1px">
+      <div style="font-size:11px;font-weight:500;color:${done?'var(--dim)':'var(--text)'}">${done?'✓ ':''}${v.title}</div>
+      <div style="font-size:9px;color:var(--dim)">${v.duration}s · ${v.scenes}sc ${avg ? '· '+avg : ''} · ${done?'★ done':'⬡ new'}</div>
+    </div>`;
+  }).join('') : '<div style="padding:12px;text-align:center;color:var(--dim);font-size:10px">all reviewed ✓</div>');
+}
+
+function rvSetFilter(f) {
+  rvFilter = f;
+  rvRenderList();
+}
+
+async function rvSelect(id) {
+  const d = await api(`/api/review/videos/${id}`);
+  rvCurrent = d;
+  document.getElementById('rv-title').textContent = d.title;
+  document.getElementById('rv-meta').textContent = `${d.duration}s · ${d.scenes} scenes`;
+  document.getElementById('rv-info').style.display = '';
+
+  const player = document.getElementById('rv-player');
+  const placeholder = document.getElementById('rv-placeholder');
+  if (d.mp4Key) {
+    player.style.display = '';
+    placeholder.style.display = 'none';
+    player.src = `${API_BASE}/api/r2/${d.mp4Key}`;
+    player.load();
+  } else {
+    player.style.display = 'none';
+    placeholder.style.display = '';
+  }
+  rvRenderComments((d.comments || []), id);
+  rvLoad();
+}
+
+function rvRenderComments(comments, videoId) {
+  const el = document.getElementById('rv-comments');
+  el.innerHTML = `
+    <div style="margin-bottom:8px;font-size:10px;color:var(--dim)">${comments.length} feedback entries</div>
+    ${comments.length ? comments.map(c => `
+      <div style="margin-bottom:8px;padding-bottom:8px;border-bottom:1px solid #1a1a1f">
+        <div><span style="font-size:10px;color:var(--gold)">${esc(c.author)}</span>
+        ${c.rating ? `<span style="color:var(--gold);font-size:11px;margin-left:4px">${'★'.repeat(c.rating)}${'☆'.repeat(5-c.rating)}</span>` : ''}
+        <span style="font-size:9px;color:var(--dim);margin-left:6px">${c.created_at ? new Date(c.created_at).toLocaleDateString() : ''}</span></div>
+        <div style="font-size:11px;margin-top:3px;color:var(--text)">${esc(c.comment)}</div>
+      </div>
+    `).join('') : '<div style="text-align:center;color:var(--dim);padding:12px;font-size:11px">no feedback yet — add yours below</div>'}
+
+    <div style="margin-top:8px;border-top:1px solid #1a1a1f;padding-top:8px">
+      <div style="display:flex;gap:6px;align-items:center;margin-bottom:6px">
+        <input id="rv-author" placeholder="name" value="Thomas" style="background:var(--bg);border:1px solid var(--border);padding:4px 8px;border-radius:3px;color:var(--text);font-size:11px;width:100px">
+        <div id="rv-stars" style="display:flex;gap:1px;cursor:pointer">${[1,2,3,4,5].map(i => `<span data-v="${i}" onclick="rvSetStar(${i})" style="font-size:16px;color:#333">☆</span>`).join('')}</div>
+      </div>
+      <textarea id="rv-text" placeholder="feedback / notes..." style="width:100%;background:var(--bg);border:1px solid var(--border);padding:6px 8px;border-radius:3px;color:var(--text);font-size:11px;resize:vertical;min-height:36px;font-family:inherit;box-sizing:border-box"></textarea>
+      <button onclick="rvSubmit('${videoId}')" style="margin-top:4px;background:var(--gold);color:#0c0c0f;border:none;padding:4px 14px;border-radius:3px;font-size:11px;font-weight:600;cursor:pointer">submit</button>
+    </div>
+  `;
+  window._rvRating = 0;
+}
+
+function rvSetStar(n) {
+  window._rvRating = n;
+  document.querySelectorAll('#rv-stars span').forEach(el => {
+    const v = parseInt(el.dataset.v);
+    el.textContent = v <= n ? '★' : '☆';
+    el.style.color = v <= n ? 'var(--gold)' : '#333';
+  });
+}
+
+async function rvSubmit(videoId) {
+  const comment = document.getElementById('rv-text').value.trim();
+  if (!comment) return;
+  await api(`/api/review/videos/${videoId}/comments`, {
+    method: 'POST',
+    body: JSON.stringify({
+      author: document.getElementById('rv-author').value || 'Thomas',
+      rating: window._rvRating || null,
+      comment,
+    }),
+  });
+  rvReviewed.add(videoId);
+  rvSaveReviewed();
+  document.getElementById('rv-text').value = '';
+  window._rvRating = 0;
+  rvSelect(videoId);
+}
+
+function esc(s){const d=document.createElement('div');d.textContent=s;return d.innerHTML}
+
+// ── FEEDBACK OVERVIEW ──
+async function fbLoad() {
+  const videos = await api('/api/review/videos');
+  const all = [];
+  for (const v of videos) {
+    const cs = await api(`/api/review/videos/${v.id}/comments`);
+    if (!cs || !cs.length) continue;
+    for (const c of cs) all.push({ ...c, videoTitle: v.title, videoId: v.id });
+  }
+  all.sort((a, b) => b.created_at?.localeCompare(a.created_at || '') || 0);
+
+  const el = document.getElementById('fb-list');
+  if (!all.length) {
+    el.innerHTML = '<div style="text-align:center;padding:24px;color:var(--dim)">no feedback yet</div>';
+    return;
+  }
+  // Compute averages
+  const ratings = all.filter(c => c.rating);
+  const avg = ratings.length ? (ratings.reduce((s, c) => s + c.rating, 0) / ratings.length).toFixed(1) : '—';
+  const dist = [0,0,0,0,0];
+  ratings.forEach(c => { if (c.rating >= 1 && c.rating <= 5) dist[5 - c.rating]++; });
+
+  el.innerHTML = `
+    <div class="card" style="margin-bottom:10px">
+      <div style="font-size:12px;font-weight:600">General Rating</div>
+      <div style="font-size:24px;font-weight:700;color:var(--gold);margin:4px 0">${avg} ★</div>
+      <div style="font-size:10px;color:var(--dim)">${ratings.length} ratings · ${all.length} total comments</div>
+      <div style="margin-top:6px">${dist.map((n, i) => `
+        <div style="display:flex;align-items:center;gap:4px;font-size:10px;margin:1px 0">
+          <span style="width:12px">${5-i}★</span>
+          <div style="flex:1;height:8px;background:var(--bg);border-radius:3px">
+            <div style="height:100%;width:${ratings.length ? (n/ratings.length*100) : 0}%;background:var(--gold);border-radius:3px"></div>
+          </div>
+          <span style="width:20px;text-align:right">${n}</span>
+        </div>
+      `).join('')}</div>
+    </div>
+    <div style="font-size:10px;color:var(--dim);margin-bottom:6px">${all.length} comments across ${videos.length} videos</div>
+  ` + all.map(c => `
+    <div class="card" style="margin-bottom:4px;padding:8px 10px">
+      <div style="display:flex;justify-content:space-between;font-size:10px">
+        <span style="color:var(--gold)">${esc(c.author)}</span>
+        <span style="color:var(--dim)">${c.created_at ? new Date(c.created_at).toLocaleDateString() : ''}</span>
+      </div>
+      <div style="font-size:11px;font-weight:500;color:var(--accent);margin:2px 0">
+        <a href="#" onclick="showPage('review');rvSelect('${c.videoId}');return false" style="color:var(--accent)">${esc(c.videoTitle)}</a>
+        ${c.rating ? `<span style="color:var(--gold);font-size:11px;margin-left:4px">${'★'.repeat(c.rating)}${'☆'.repeat(5-c.rating)}</span>` : ''}
+      </div>
+      <div style="font-size:11px;color:var(--text);line-height:1.5">${esc(c.comment)}</div>
+    </div>
+  `).join('');
+}
+
+// ── SCENE CATALOG ──
+let _scTimer = null;
+let _scAll = null;
+
+async function scInit() {
+  const d = await api('/api/catalog');
+  _scAll = d.scenes || [];
+  document.getElementById('sc-count').textContent = `${d.total_scenes || _scAll.length} scenes · ${d.total_packs || '?'} packs`;
+  scShowResults(_scAll.slice(0, 30));
+}
+
+function scSearch(e) {
+  clearTimeout(_scTimer);
+  _scTimer = setTimeout(async () => {
+    const q = document.getElementById('sc-search').value.trim();
+    if (!q) { scShowResults((_scAll || []).slice(0, 30)); return; }
+    const r = await api('/api/catalog/search?q=' + encodeURIComponent(q));
+    scShowResults(r);
+  }, 250);
+}
+
+function scShowResults(scenes) {
+  const el = document.getElementById('sc-results');
+  if (!scenes || !scenes.length) {
+    el.innerHTML = '<div style="text-align:center;padding:24px;color:var(--dim)">no matching scenes</div>';
+    return;
+  }
+  el.innerHTML = scenes.map(s => {
+    const m = s.meaning || {};
+    const v = s.visual || {};
+    const prims = (v.primitives || []).join(', ');
+    const ops = (v.operators || []).join(', ');
+    const funcs = (m.narrative_functions || []).join(', ');
+    const temp = s.template_family || s.source?.pack || '?';
+    const dur = s.timing?.default_duration || s.source?.original_end || '?';
+    const clips = s.clips || (s.clip ? [s.clip] : []);
+    return `<div class="card" style="margin-bottom:4px;padding:8px 10px">
+      <div style="display:flex;justify-content:space-between;font-size:11px">
+        <span style="font-weight:600;color:var(--gold)">${esc(s.title || s.id)}</span>
+        <span class="badge">${temp}</span>
+      </div>
+      <div style="font-size:10px;color:var(--dim);margin:2px 0">
+        ${funcs} · ${dur}s · ${prims} ${ops ? '· '+ops : ''}
+      </div>
+      <div style="font-size:10px;color:var(--accent)">${esc(m.primary || '')}</div>
+    </div>`;
+  }).join('');
+}
+
+// ── SCENE REVIEW ──
+let ssScenes = [];
+let ssCurrent = null;
+let ssFilterStr = '';
+
+async function ssInit() {
+  const d = await api('/api/scenes');
+  ssScenes = d || [];
+  ssRender();
+}
+
+function ssFilter() {
+  ssFilterStr = document.getElementById('ss-search').value.toLowerCase();
+  ssRender();
+}
+
+function ssRender() {
+  const el = document.getElementById('ss-list');
+  const filtered = ssFilterStr ? ssScenes.filter(s => JSON.stringify(s).toLowerCase().includes(ssFilterStr)) : ssScenes;
+  document.getElementById('ss-count').textContent = `${filtered.length} / ${ssScenes.length} scenes`;
+  el.innerHTML = filtered.slice(0, 100).map(s => {
+    const id = s.id || '';
+    const active = ssCurrent && ssCurrent.id === id ? 'style="background:var(--surface2)"' : '';
+    const pack = s.source?.pack || '';
+    const dur = s.timing?.default_duration || s.source?.original_end || '';
+    return `<div ${active} onclick="ssSelect('${esc(id)}')" style="cursor:pointer;padding:4px 6px;border-radius:3px;margin-bottom:1px;font-size:10px">
+      <div style="color:var(--text);font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${esc(s.title || id)}</div>
+      <div style="color:var(--dim)">${pack} ${dur ? '· '+dur+'s' : ''}</div>
+    </div>`;
+  }).join('');
+}
+
+async function ssSelect(id) {
+  const d = await api(`/api/scenes/${id}`);
+  ssCurrent = d;
+  document.getElementById('ss-title').textContent = d.title || d.id;
+  const m = d.meaning || {};
+  const v = d.visual || {};
+  document.getElementById('ss-meta').textContent = `${d.source?.pack || ''} · ${v.layout || ''} · ${(v.primitives||[]).join(',')}`;
+  document.getElementById('ss-info').style.display = '';
+
+  const player = document.getElementById('ss-player');
+  const placeholder = document.getElementById('ss-placeholder');
+  const clip = d.clip || d.clips?.[0] || '';
+  if (clip) {
+    const url = `${API_BASE}/api/r2/renders/${id}/${clip.split('/').pop()}`;
+    player.style.display = '';
+    placeholder.style.display = 'none';
+    player.src = url;
+    player.load();
+  } else {
+    player.style.display = 'none';
+    placeholder.style.display = '';
+    placeholder.innerHTML = `${esc(d.title)}<br><span style="font-size:9px;color:var(--dim)">no clip available</span>`;
+  }
+  ssRenderComments(d.comments || [], id);
+  ssRender();
+}
+
+function ssRenderComments(comments, sceneId) {
+  const el = document.getElementById('ss-comments');
+  el.innerHTML = `
+    <div style="margin-bottom:4px;font-size:9px;color:var(--dim)">${comments.length} comments</div>
+    ${comments.length ? comments.map(c => `
+      <div style="margin-bottom:4px;padding-bottom:4px;border-bottom:1px solid #1a1a1f">
+        <div><span style="font-size:9px;color:var(--gold)">${esc(c.author || '?')}</span>
+        ${c.rating ? `<span style="color:var(--gold);font-size:10px">${'★'.repeat(c.rating)}${'☆'.repeat(5-c.rating)}</span>` : ''}
+        <span style="font-size:8px;color:var(--dim)">${c.created_at ? new Date(c.created_at).toLocaleDateString() : ''}</span></div>
+        <div style="font-size:10px;margin-top:2px">${esc(c.comment)}</div>
+      </div>
+    `).join('') : '<div style="text-align:center;color:var(--dim);padding:8px;font-size:9px">no feedback yet</div>'}
+    <div style="margin-top:4px;border-top:1px solid #1a1a1f;padding-top:4px">
+      <textarea id="ss-text" placeholder="scene feedback..." style="width:100%;background:var(--bg);border:1px solid var(--border);padding:4px 6px;border-radius:3px;color:var(--text);font-size:10px;resize:vertical;min-height:28px;font-family:inherit;box-sizing:border-box"></textarea>
+      <div style="display:flex;gap:4px;margin-top:3px;align-items:center">
+        <div id="ss-stars" style="display:flex;gap:1px;cursor:pointer">${[1,2,3,4,5].map(i => `<span data-v="${i}" onclick="ssSetStar(${i})" style="font-size:14px;color:#333">☆</span>`).join('')}</div>
+        <button onclick="ssSubmit('${sceneId}')" style="background:var(--gold);color:#000;border:none;padding:2px 10px;border-radius:3px;font-size:10px;font-weight:600;cursor:pointer">send</button>
+      </div>
+    </div>
+  `;
+  window._ssRating = 0;
+}
+
+function ssSetStar(n) {
+  window._ssRating = n;
+  document.querySelectorAll('#ss-stars span').forEach(el => {
+    const v = parseInt(el.dataset.v);
+    el.textContent = v <= n ? '★' : '☆';
+    el.style.color = v <= n ? 'var(--gold)' : '#333';
+  });
+}
+
+async function ssSubmit(sceneId) {
+  const text = document.getElementById('ss-text').value.trim();
+  if (!text) return;
+  await api(`/api/scenes/${sceneId}/comments`, {
+    method: 'POST',
+    body: JSON.stringify({ author: 'Thomas', rating: window._ssRating || null, comment: text }),
+  });
+  document.getElementById('ss-text').value = '';
+  window._ssRating = 0;
+  ssSelect(sceneId);
+}
+
 // ── VALIDATION ──
 async function valInit() {
   const bps = await api('/api/blueprints');
@@ -351,6 +741,7 @@ async function runValidation() {
 
 // Init
 fcInit();
+rvLoadReviewed();
 </script>
 </body>
 </html>

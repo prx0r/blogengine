@@ -1,0 +1,47 @@
+{
+  "name": "Wave Field",
+  "key": "wave_field",
+  "scene_count": 4,
+  "primitives": [
+    "arrow",
+    "card",
+    "dot",
+    "flower",
+    "line",
+    "ring",
+    "silhouette",
+    "text"
+  ],
+  "operators": [
+    "align",
+    "oscillate",
+    "radiate",
+    "reveal"
+  ],
+  "backgrounds": [
+    "dark",
+    "light"
+  ],
+  "example_scenes": [
+    {
+      "title": "Thought-wave",
+      "id": "dream.thought_wave.v1",
+      "duration": 28
+    },
+    {
+      "title": "Pain is juice",
+      "id": "rasa.pain_is_juice.v1",
+      "duration": 30
+    },
+    {
+      "title": "Crest, crash, dissolve",
+      "id": "rasa.crest,_crash,_dissolve.v1",
+      "duration": 30
+    },
+    {
+      "title": "The letter matrix",
+      "id": "mantra.the_letter_matrix.v1",
+      "duration": 30
+    }
+  ]
+}

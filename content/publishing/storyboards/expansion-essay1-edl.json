@@ -1,0 +1,137 @@
+{
+  "essay": "expansion-essay1.md",
+  "total_scenes": 9,
+  "total_duration_seconds": 137.0,
+  "estimated_duration": "2m 17s",
+  "scenes": [
+    {
+      "scene_id": "scene-01",
+      "rhetorical_function": "hook",
+      "narration_excerpt": "# the engine of consciousness",
+      "visual_treatment": "abstract_diagram",
+      "camera": "holds_on_center",
+      "art_requirement": null,
+      "text_style": "emphasis_phrase",
+      "forbidden": [
+        "fast_cuts",
+        "multiple_artworks"
+      ],
+      "duration_seconds": 11.5,
+      "transition_out": "fade_to_white"
+    },
+    {
+      "scene_id": "scene-02",
+      "rhetorical_function": "establish",
+      "narration_excerpt": "There is a pulse happening in you right now that is not your heartbeat. It is not your breath moving through your lungs. It is something more fundamental — the substrate of every thought you have ever...",
+      "visual_treatment": "manuscript_quote",
+      "camera": "slow_push",
+      "art_requirement": "manuscript_or_portrait",
+      "text_style": "sanskrit_term",
+      "forbidden": [
+        "diagram_before_text"
+      ],
+      "duration_seconds": 16.0,
+      "transition_out": "dissolve"
+    },
+    {
+      "scene_id": "scene-03",
+      "rhetorical_function": "define",
+      "narration_excerpt": "Six names for one thing. When you are about to speak and the word is already there before your mouth moves — that pulse. When a thought arrives from somewhere you did not consciously send for it — tha...",
+      "visual_treatment": "diagram_unfold",
+      "camera": "pan_across_diagram",
+      "art_requirement": null,
+      "text_style": "numbered_list",
+      "forbidden": [
+        "static_screen"
+      ],
+      "duration_seconds": 19.5,
+      "transition_out": "cut_to_center"
+    },
+    {
+      "scene_id": "scene-04",
+      "rhetorical_function": "establish",
+      "narration_excerpt": "Now: say a word out loud. Any word. Feel how the breath has to move, how the throat shapes the air, how the sound carries intention. Now imagine doing that with a syllable chosen specifically because ...",
+      "visual_treatment": "manuscript_quote",
+      "camera": "slow_push",
+      "art_requirement": "manuscript_or_portrait",
+      "text_style": "sanskrit_term",
+      "forbidden": [
+        "diagram_before_text"
+      ],
+      "duration_seconds": 16.0,
+      "transition_out": "dissolve"
+    },
+    {
+      "scene_id": "scene-05",
+      "rhetorical_function": "analogy",
+      "narration_excerpt": "A tuning fork across a room begins to ring when its note is struck. The mantra meets spanda the same way — by resonance. The way your own voice makes a glass tremble without touching it.",
+      "visual_treatment": "split_screen",
+      "camera": "steady",
+      "art_requirement": "paired_images",
+      "text_style": "comparison_label",
+      "forbidden": [
+        "single_image"
+      ],
+      "duration_seconds": 14.0,
+      "transition_out": "dissolve_to_main"
+    },
+    {
+      "scene_id": "scene-06",
+      "rhetorical_function": "establish",
+      "narration_excerpt": "What does this pulse feel like when it becomes constant, unbroken? The Tantraloka answers with two images that refuse spiritual abstraction:\n\n\"The plane of the Belly of the Fish is that of the univers...",
+      "visual_treatment": "manuscript_quote",
+      "camera": "slow_push",
+      "art_requirement": "manuscript_or_portrait",
+      "text_style": "sanskrit_term",
+      "forbidden": [
+        "diagram_before_text"
+      ],
+      "duration_seconds": 16.0,
+      "transition_out": "dissolve"
+    },
+    {
+      "scene_id": "scene-07",
+      "rhetorical_function": "chain",
+      "narration_excerpt": "Time → Breath → Spanda → Void → Consciousness. The pulse: the middle link between the breath you feel right now and the stillness that holds it. The breath is time itself — condensed into rhythm, a th...",
+      "visual_treatment": "diagram_cascade",
+      "camera": "track_through",
+      "art_requirement": null,
+      "text_style": "sequential_labels",
+      "forbidden": [
+        "break_chain",
+        "reverse_order"
+      ],
+      "duration_seconds": 17.0,
+      "transition_out": "dissolve_to_next"
+    },
+    {
+      "scene_id": "scene-08",
+      "rhetorical_function": "establish",
+      "narration_excerpt": "And every pulse along this chain is real. A fact of the body. A fact of the breath:\n\n\"Thus, the emanation and withdrawal of all things is established in consciousness, and so the innumerable pulsation...",
+      "visual_treatment": "manuscript_quote",
+      "camera": "slow_push",
+      "art_requirement": "manuscript_or_portrait",
+      "text_style": "sanskrit_term",
+      "forbidden": [
+        "diagram_before_text"
+      ],
+      "duration_seconds": 16.0,
+      "transition_out": "dissolve"
+    },
+    {
+      "scene_id": "scene-09",
+      "rhetorical_function": "closing",
+      "narration_excerpt": "Let Abhinavagupta have the last word: \"The sixth bliss is complete expansion — the Cosmic Bliss of the universal activity of consciousness in the fully liberated state.\"",
+      "visual_treatment": "return_to_center",
+      "camera": "pull_back",
+      "art_requirement": "opening_art_if_any",
+      "text_style": "final_phrase",
+      "forbidden": [
+        "new_material",
+        "cut_abruptly"
+      ],
+      "duration_seconds": 11.0,
+      "transition_out": "fade_to_end"
+    }
+  ]
+}

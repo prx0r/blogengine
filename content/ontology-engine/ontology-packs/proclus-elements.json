@@ -1,0 +1,124 @@
+{
+  "pack_id": "proclus-elements",
+  "tradition": "Neoplatonism (Proclus)",
+  "primary_text": "Elements of Theology",
+  "entities": [
+    {
+      "id": "the-one-proclus",
+      "name": "The One",
+      "sanskrit": "τὸ ἕν",
+      "type": "principle",
+      "canonical_id": "ultimate-reality",
+      "visual_archetype": "bindu"
+    },
+    {
+      "id": "henads",
+      "name": "Henads",
+      "sanskrit": "ἑνάδες",
+      "type": "principle",
+      "canonical_id": "divine-units",
+      "visual_archetype": "lotus"
+    },
+    {
+      "id": "being-life-intellect",
+      "name": "Being-Life-Intellect",
+      "sanskrit": "ὄν-ζωή-νοῦς",
+      "type": "triad",
+      "canonical_id": "triad",
+      "visual_archetype": "triangle-up"
+    },
+    {
+      "id": "mone",
+      "name": "Monē",
+      "sanskrit": "μονή",
+      "type": "principle",
+      "canonical_id": "abiding",
+      "visual_archetype": "bindu"
+    },
+    {
+      "id": "proodos",
+      "name": "Proodos",
+      "sanskrit": "πρόοδος",
+      "type": "principle",
+      "canonical_id": "emanation",
+      "visual_archetype": "wave"
+    },
+    {
+      "id": "epistrophe-proclus",
+      "name": "Epistrophē",
+      "sanskrit": "ἐπιστροφή",
+      "type": "principle",
+      "canonical_id": "return",
+      "visual_archetype": "spiral"
+    },
+    {
+      "id": "theurgy",
+      "name": "Theurgy",
+      "sanskrit": "θεουργία",
+      "type": "practice",
+      "canonical_id": "sacred-practice",
+      "visual_archetype": "flame"
+    },
+    {
+      "id": "sunthema",
+      "name": "Sunthēma",
+      "sanskrit": "σύνθημα",
+      "type": "concept",
+      "canonical_id": "signature",
+      "visual_archetype": "seed"
+    }
+  ],
+  "relations": [
+    {
+      "from": "the-one-proclus",
+      "type": "emanation",
+      "to": "henads",
+      "canonical": "→"
+    },
+    {
+      "from": "mone",
+      "type": "containment",
+      "to": "proodos",
+      "canonical": "⊃"
+    },
+    {
+      "from": "proodos",
+      "type": "emanation",
+      "to": "epistrophe-proclus",
+      "canonical": "→"
+    },
+    {
+      "from": "epistrophe-proclus",
+      "type": "dissolution",
+      "to": "mone",
+      "canonical": "↓"
+    },
+    {
+      "from": "mone",
+      "type": "triadic-oscillation",
+      "to": "proodos",
+      "canonical": "∆"
+    },
+    {
+      "from": "mone",
+      "type": "triadic-oscillation",
+      "to": "epistrophe-proclus",
+      "canonical": "∆"
+    },
+    {
+      "from": "sunthema",
+      "type": "resonance",
+      "to": "the-one-proclus",
+      "canonical": "≋"
+    },
+    {
+      "from": "the-one-proclus",
+      "type": "non-difference",
+      "to": "henads",
+      "canonical": "≃"
+    }
+  ],
+  "meta": {
+    "version": "1.0.0"
+  }
+}

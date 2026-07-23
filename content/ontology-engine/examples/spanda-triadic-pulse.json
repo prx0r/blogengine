@@ -1,0 +1,146 @@
+{
+  "scene_id": "spanda-triadic-pulse",
+  "title": "Spanda as the Triadic Pulse",
+  "tradition": "trika-tantraloka",
+  "narrative": "Spanda is the cosmic throb between Śiva and Śakti, the threefold pulse of manifestation, maintenance, and dissolution.",
+  "entities": [
+    {
+      "id": "siva",
+      "name": "Śiva",
+      "sanskrit": "शिव",
+      "type": "deity",
+      "visual_archetype": "bindu",
+      "position": "center",
+      "color": "crimson"
+    },
+    {
+      "id": "sakti",
+      "name": "Śakti",
+      "sanskrit": "शक्ति",
+      "type": "deity",
+      "visual_archetype": "wave",
+      "position": "encircling",
+      "color": "black_ink"
+    },
+    {
+      "id": "spanda-entity",
+      "name": "Spanda",
+      "sanskrit": "स्पन्द",
+      "type": "principle",
+      "visual_archetype": "wave",
+      "position": "between",
+      "color": "crimson"
+    },
+    {
+      "id": "trika-entity",
+      "name": "Trika",
+      "sanskrit": "त्रिक",
+      "type": "principle",
+      "visual_archetype": "triangle-up",
+      "position": "above",
+      "color": "black_ink"
+    }
+  ],
+  "relations": [
+    {
+      "type": "emanation",
+      "from": "siva",
+      "to": "sakti",
+      "canonical": "→",
+      "visual": "line_from_center"
+    },
+    {
+      "type": "resonance",
+      "from": "siva",
+      "to": "sakti",
+      "canonical": "≋",
+      "visual": "pulsing_wave"
+    },
+    {
+      "type": "triadic-oscillation",
+      "from": "trika-entity",
+      "to": "siva",
+      "canonical": "∆",
+      "visual": "triangle"
+    },
+    {
+      "type": "triadic-oscillation",
+      "from": "trika-entity",
+      "to": "sakti",
+      "canonical": "∆",
+      "visual": "triangle"
+    },
+    {
+      "type": "triadic-oscillation",
+      "from": "trika-entity",
+      "to": "nara",
+      "canonical": "∆",
+      "visual": "triangle"
+    }
+  ],
+  "operators": [
+    {
+      "id": "appear",
+      "target": "siva",
+      "duration": 0.5,
+      "easing": "ease_out"
+    },
+    {
+      "id": "expand",
+      "target": "sakti",
+      "duration": 1.0,
+      "easing": "ease_in_out"
+    },
+    {
+      "id": "pulse",
+      "target": "spanda-entity",
+      "duration": 2.0,
+      "frequency": 0.5
+    },
+    {
+      "id": "appear",
+      "target": "trika-entity",
+      "duration": 0.8,
+      "delay": 1.5,
+      "easing": "ease_out"
+    }
+  ],
+  "timeline": {
+    "duration": 4.0,
+    "keyframes": [
+      {
+        "time": 0.0,
+        "action": "background white"
+      },
+      {
+        "time": 0.5,
+        "action": "appear siva as crimson bindu"
+      },
+      {
+        "time": 1.0,
+        "action": "expand sakti as black ink wave encircling"
+      },
+      {
+        "time": 1.5,
+        "action": "begin spanda pulse between siva and sakti"
+      },
+      {
+        "time": 2.5,
+        "action": "appear trika triangle above"
+      },
+      {
+        "time": 3.5,
+        "action": "all elements resonate together"
+      },
+      {
+        "time": 4.0,
+        "action": "suspend"
+      }
+    ]
+  },
+  "audio_cue": {
+    "voiceover": "Spanda. The cosmic pulse.",
+    "tone": "contemplative",
+    "pacing": "slow"
+  }
+}

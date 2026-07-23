@@ -1,0 +1,130 @@
+{
+  "pack_id": "plotinus-ennéads",
+  "tradition": "Neoplatonism (Plotinus)",
+  "primary_text": "Ennéads of Plotinus",
+  "entities": [
+    {
+      "id": "the-one",
+      "name": "The One",
+      "sanskrit": "τὸ ἕν",
+      "type": "principle",
+      "canonical_id": "ultimate-reality",
+      "visual_archetype": "bindu"
+    },
+    {
+      "id": "nous",
+      "name": "Nous (Intellect)",
+      "sanskrit": "νοῦς",
+      "type": "principle",
+      "canonical_id": "intellect",
+      "visual_archetype": "mandala"
+    },
+    {
+      "id": "psyche",
+      "name": "Psyche (Soul)",
+      "sanskrit": "ψυχή",
+      "type": "principle",
+      "canonical_id": "soul",
+      "visual_archetype": "spiral"
+    },
+    {
+      "id": "hyle",
+      "name": "Hyle (Matter)",
+      "sanskrit": "ὕλη",
+      "type": "principle",
+      "canonical_id": "materiality",
+      "visual_archetype": "void"
+    },
+    {
+      "id": "henosis",
+      "name": "Henosis",
+      "sanskrit": "ἕνωσις",
+      "type": "state",
+      "canonical_id": "union",
+      "visual_archetype": "bindu"
+    },
+    {
+      "id": "procession",
+      "name": "Procession",
+      "sanskrit": "προβολή",
+      "type": "principle",
+      "canonical_id": "emanation",
+      "visual_archetype": "wave"
+    },
+    {
+      "id": "epistrophe",
+      "name": "Epistrophe",
+      "sanskrit": "ἐπιστροφή",
+      "type": "principle",
+      "canonical_id": "return",
+      "visual_archetype": "spiral"
+    },
+    {
+      "id": "periagoge",
+      "name": "Periagōgē",
+      "sanskrit": "περιαγωγή",
+      "type": "principle",
+      "canonical_id": "conversion",
+      "visual_archetype": "threshold"
+    }
+  ],
+  "relations": [
+    {
+      "from": "the-one",
+      "type": "emanation",
+      "to": "nous",
+      "canonical": "→"
+    },
+    {
+      "from": "nous",
+      "type": "emanation",
+      "to": "psyche",
+      "canonical": "→"
+    },
+    {
+      "from": "psyche",
+      "type": "emanation",
+      "to": "hyle",
+      "canonical": "→"
+    },
+    {
+      "from": "the-one",
+      "type": "containment",
+      "to": "nous",
+      "canonical": "⊃"
+    },
+    {
+      "from": "the-one",
+      "type": "containment",
+      "to": "psyche",
+      "canonical": "⊃"
+    },
+    {
+      "from": "hyle",
+      "type": "dissolution",
+      "to": "the-one",
+      "canonical": "↓"
+    },
+    {
+      "from": "epistrophe",
+      "type": "dissolution",
+      "to": "the-one",
+      "canonical": "↓"
+    },
+    {
+      "from": "henosis",
+      "type": "identity",
+      "to": "the-one",
+      "canonical": "≡"
+    },
+    {
+      "from": "the-one",
+      "type": "paradoxical-identity",
+      "to": "nous",
+      "canonical": "≅"
+    }
+  ],
+  "meta": {
+    "version": "1.0.0"
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "pack_id": "lurianic-kabbalah",
+  "tradition": "Lurianic Kabbalah",
+  "primary_text": "Etz Chaim",
+  "entities": [
+    {
+      "id": "ein-sof",
+      "name": "Ein Sof",
+      "hebrew": "אין סוף",
+      "type": "principle",
+      "canonical_id": "ultimate-reality",
+      "visual_archetype": "void"
+    },
+    {
+      "id": "tzimtzum",
+      "name": "Tzimtzum",
+      "hebrew": "צמצום",
+      "type": "principle",
+      "canonical_id": "contraction",
+      "visual_archetype": "contraction"
+    },
+    {
+      "id": "kav",
+      "name": "Kav",
+      "hebrew": "קו",
+      "type": "principle",
+      "canonical_id": "emanation",
+      "visual_archetype": "thread"
+    },
+    {
+      "id": "shevirat-ha-kelim",
+      "name": "Shevirat ha-Kelim",
+      "hebrew": "שבירת הכלים",
+      "type": "event",
+      "canonical_id": "cosmic-shattering",
+      "visual_archetype": "net"
+    },
+    {
+      "id": "tikkun",
+      "name": "Tikkun",
+      "hebrew": "תיקון",
+      "type": "principle",
+      "canonical_id": "restoration",
+      "visual_archetype": "mandala"
+    },
+    {
+      "id": "partzufim",
+      "name": "Partzufim",
+      "hebrew": "פרצופים",
+      "type": "deity",
+      "canonical_id": "divine-configurations",
+      "visual_archetype": "eye"
+    },
+    {
+      "id": "kelipot",
+      "name": "Kelipot",
+      "hebrew": "קליפות",
+      "type": "concept",
+      "canonical_id": "impurity-shells",
+      "visual_archetype": "contraction"
+    },
+    {
+      "id": "adam-kadmon",
+      "name": "Adam Kadmon",
+      "hebrew": "אדם קדמון",
+      "type": "deity",
+      "canonical_id": "primordial-human",
+      "visual_archetype": "pillar"
+    },
+    {
+      "id": "sefirot",
+      "name": "Sefirot",
+      "hebrew": "ספירות",
+      "type": "principle",
+      "canonical_id": "divine-emanations",
+      "visual_archetype": "tree"
+    },
+    {
+      "id": "hinam",
+      "name": "Ẓimẓum ha-Ḥinam",
+      "hebrew": "צמצום החינם",
+      "type": "concept",
+      "canonical_id": "primordial-void",
+      "visual_archetype": "void"
+    },
+    {
+      "id": "reshimu",
+      "name": "Reshimu",
+      "hebrew": "רשימו",
+      "type": "concept",
+      "canonical_id": "residual-trace",
+      "visual_archetype": "seed"
+    }
+  ],
+  "relations": [
+    {
+      "from": "ein-sof",
+      "type": "contraction",
+      "to": "tzimtzum",
+      "canonical": "∨"
+    },
+    {
+      "from": "tzimtzum",
+      "type": "emanation",
+      "to": "hinam",
+      "canonical": "→"
+    },
+    {
+      "from": "hinam",
+      "type": "containment",
+      "to": "kav",
+      "canonical": "⊃"
+    },
+    {
+      "from": "kav",
+      "type": "emanation",
+      "to": "adam-kadmon",
+      "canonical": "→"
+    },
+    {
+      "from": "adam-kadmon",
+      "type": "emanation",
+      "to": "sefirot",
+      "canonical": "→"
+    },
+    {
+      "from": "shevirat-ha-kelim",
+      "type": "transformation",
+      "to": "kelipot",
+      "canonical": "⇝"
+    },
+    {
+      "from": "tikkun",
+      "type": "dissolution",
+      "to": "shevirat-ha-kelim",
+      "canonical": "↓"
+    },
+    {
+      "from": "tikkun",
+      "type": "transformation",
+      "to": "partzufim",
+      "canonical": "⇝"
+    },
+    {
+      "from": "ein-sof",
+      "type": "paradoxical-identity",
+      "to": "hinam",
+      "canonical": "≅"
+    },
+    {
+      "from": "adam-kadmon",
+      "type": "containment",
+      "to": "sefirot",
+      "canonical": "⊃"
+    },
+    {
+      "from": "reshimu",
+      "type": "resonance",
+      "to": "ein-sof",
+      "canonical": "≋"
+    },
+    {
+      "from": "tzimtzum",
+      "type": "non-equivalence",
+      "to": "ein-sof",
+      "canonical": "!=="
+    }
+  ],
+  "meta": {
+    "version": "1.0.0"
+  }
+}

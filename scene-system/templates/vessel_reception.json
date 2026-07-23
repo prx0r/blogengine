@@ -1,0 +1,46 @@
+{
+  "name": "Vessel Reception",
+  "key": "vessel_reception",
+  "scene_count": 5,
+  "primitives": [
+    "arrow",
+    "dot",
+    "flower",
+    "line",
+    "ring",
+    "silhouette",
+    "text"
+  ],
+  "operators": [
+    "align",
+    "oscillate",
+    "radiate",
+    "reveal"
+  ],
+  "backgrounds": [
+    "dark",
+    "light"
+  ],
+  "example_scenes": [
+    {
+      "title": "Fist to cup",
+      "id": "rasa.fist_to_cup.v1",
+      "duration": 30
+    },
+    {
+      "title": "Tasting, not consuming",
+      "id": "rasa.tasting,_not_consuming.v1",
+      "duration": 32
+    },
+    {
+      "title": "Everything is empty",
+      "id": "emptiness.everything_is_empty.v1",
+      "duration": 30
+    },
+    {
+      "title": "You are a verb",
+      "id": "emptiness.you_are_a_verb.v1",
+      "duration": 29
+    }
+  ]
+}

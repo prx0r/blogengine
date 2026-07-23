@@ -1,0 +1,172 @@
+{
+  "pack_id": "yogacara-vijnanavada",
+  "tradition": "Yogācāra (Vijñānavāda)",
+  "primary_text": "Saṃdhinirmocana-sūtra",
+  "entities": [
+    {
+      "id": "vijnapti-matrata",
+      "name": "Vijñapti-mātratā",
+      "sanskrit": "विज्ञप्तिमात्रता",
+      "type": "principle",
+      "canonical_id": "consciousness-only",
+      "visual_archetype": "mirror"
+    },
+    {
+      "id": "alaya-vijnana",
+      "name": "Ālayavijñāna",
+      "sanskrit": "आलयविज्ञान",
+      "type": "principle",
+      "canonical_id": "store-consciousness",
+      "visual_archetype": "seed"
+    },
+    {
+      "id": "manas",
+      "name": "Manas",
+      "sanskrit": "मनस्",
+      "type": "principle",
+      "canonical_id": "self-consciousness",
+      "visual_archetype": "eye"
+    },
+    {
+      "id": "pravritti-vijnana",
+      "name": "Pravṛtti-vijñāna",
+      "sanskrit": "प्रवृत्तिविज्ञान",
+      "type": "principle",
+      "canonical_id": "active-consciousness",
+      "visual_archetype": "lotus"
+    },
+    {
+      "id": "paratantra",
+      "name": "Paratantra-svabhāva",
+      "sanskrit": "परतन्त्रस्वभाव",
+      "type": "principle",
+      "canonical_id": "dependent-nature",
+      "visual_archetype": "net"
+    },
+    {
+      "id": "parikalpita",
+      "name": "Parikalpita-svabhāva",
+      "sanskrit": "परिकल्पितस्वभाव",
+      "type": "principle",
+      "canonical_id": "imagined-nature",
+      "visual_archetype": "mirror"
+    },
+    {
+      "id": "parinishpanna",
+      "name": "Pariṇiṣpanna-svabhāva",
+      "sanskrit": "परिनिष्पन्नस्वभाव",
+      "type": "principle",
+      "canonical_id": "perfected-nature",
+      "visual_archetype": "void"
+    },
+    {
+      "id": "trisvabhava",
+      "name": "Trisvabhāva",
+      "sanskrit": "त्रिस्वभाव",
+      "type": "principle",
+      "canonical_id": "three-natures",
+      "visual_archetype": "triangle-up"
+    },
+    {
+      "id": "asraya-paravritti",
+      "name": "Āśraya-parāvṛtti",
+      "sanskrit": "आश्रयपरावृत्ति",
+      "type": "state",
+      "canonical_id": "transformation-of-base",
+      "visual_archetype": "threshold"
+    },
+    {
+      "id": "bijas",
+      "name": "Bījas",
+      "sanskrit": "बीज",
+      "type": "concept",
+      "canonical_id": "karmic-seeds",
+      "visual_archetype": "seed"
+    },
+    {
+      "id": "vasanas",
+      "name": "Vāsanās",
+      "sanskrit": "वासना",
+      "type": "concept",
+      "canonical_id": "karmic-traces",
+      "visual_archetype": "thread"
+    }
+  ],
+  "relations": [
+    {
+      "from": "alaya-vijnana",
+      "type": "containment",
+      "to": "bijas",
+      "canonical": "⊃"
+    },
+    {
+      "from": "alaya-vijnana",
+      "type": "containment",
+      "to": "vasanas",
+      "canonical": "⊃"
+    },
+    {
+      "from": "alaya-vijnana",
+      "type": "emanation",
+      "to": "manas",
+      "canonical": "→"
+    },
+    {
+      "from": "manas",
+      "type": "emanation",
+      "to": "pravritti-vijnana",
+      "canonical": "→"
+    },
+    {
+      "from": "parikalpita",
+      "type": "negation",
+      "to": "parinishpanna",
+      "canonical": "¬"
+    },
+    {
+      "from": "paratantra",
+      "type": "non-difference",
+      "to": "parinishpanna",
+      "canonical": "≃"
+    },
+    {
+      "from": "asraya-paravritti",
+      "type": "transformation",
+      "to": "alaya-vijnana",
+      "canonical": "⇝"
+    },
+    {
+      "from": "vijnapti-matrata",
+      "type": "non-difference",
+      "to": "parinishpanna",
+      "canonical": "≃"
+    },
+    {
+      "from": "trisvabhava",
+      "type": "triadic-oscillation",
+      "to": "parikalpita",
+      "canonical": "∆"
+    },
+    {
+      "from": "trisvabhava",
+      "type": "triadic-oscillation",
+      "to": "paratantra",
+      "canonical": "∆"
+    },
+    {
+      "from": "trisvabhava",
+      "type": "triadic-oscillation",
+      "to": "parinishpanna",
+      "canonical": "∆"
+    },
+    {
+      "from": "alaya-vijnana",
+      "type": "paradoxical-identity",
+      "to": "vijnapti-matrata",
+      "canonical": "≅"
+    }
+  ],
+  "meta": {
+    "version": "1.0.0"
+  }
+}

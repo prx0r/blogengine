@@ -1,0 +1,116 @@
+{
+  "pack_id": "iamblichus-mysteries",
+  "tradition": "Neoplatonism (Iamblichus)",
+  "primary_text": "De Mysteriis",
+  "entities": [
+    {
+      "id": "the-one-iamblichus",
+      "name": "The One",
+      "type": "principle",
+      "canonical_id": "ultimate-reality",
+      "visual_archetype": "bindu"
+    },
+    {
+      "id": "hypercosmic-gods",
+      "name": "Hypercosmic Gods",
+      "type": "deity",
+      "canonical_id": "transcendent-divinities",
+      "visual_archetype": "eye"
+    },
+    {
+      "id": "encosmic-gods",
+      "name": "Encosmic Gods",
+      "type": "deity",
+      "canonical_id": "immanent-divinities",
+      "visual_archetype": "mandala"
+    },
+    {
+      "id": "daimons",
+      "name": "Daimons",
+      "type": "deity",
+      "canonical_id": "intermediary-beings",
+      "visual_archetype": "thread"
+    },
+    {
+      "id": "heroes",
+      "name": "Heroes",
+      "type": "deity",
+      "canonical_id": "heroic-souls",
+      "visual_archetype": "flame"
+    },
+    {
+      "id": "theurgy-iamblichus",
+      "name": "Theurgy",
+      "type": "practice",
+      "canonical_id": "sacred-practice",
+      "visual_archetype": "flame"
+    },
+    {
+      "id": "sunthemata",
+      "name": "Sunthēmata",
+      "type": "concept",
+      "canonical_id": "signature",
+      "visual_archetype": "seed"
+    },
+    {
+      "id": "ascent-soul",
+      "name": "Ascent of the Soul",
+      "type": "process",
+      "canonical_id": "spiritual-ascent",
+      "visual_archetype": "spiral"
+    }
+  ],
+  "relations": [
+    {
+      "from": "the-one-iamblichus",
+      "type": "emanation",
+      "to": "hypercosmic-gods",
+      "canonical": "→"
+    },
+    {
+      "from": "hypercosmic-gods",
+      "type": "emanation",
+      "to": "encosmic-gods",
+      "canonical": "→"
+    },
+    {
+      "from": "encosmic-gods",
+      "type": "emanation",
+      "to": "daimons",
+      "canonical": "→"
+    },
+    {
+      "from": "daimons",
+      "type": "emanation",
+      "to": "heroes",
+      "canonical": "→"
+    },
+    {
+      "from": "theurgy-iamblichus",
+      "type": "recognition",
+      "to": "sunthemata",
+      "canonical": "↻"
+    },
+    {
+      "from": "sunthemata",
+      "type": "resonance",
+      "to": "hypercosmic-gods",
+      "canonical": "≋"
+    },
+    {
+      "from": "ascent-soul",
+      "type": "dissolution",
+      "to": "the-one-iamblichus",
+      "canonical": "↓"
+    },
+    {
+      "from": "the-one-iamblichus",
+      "type": "paradoxical-identity",
+      "to": "hypercosmic-gods",
+      "canonical": "≅"
+    }
+  ],
+  "meta": {
+    "version": "1.0.0"
+  }
+}

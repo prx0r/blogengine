@@ -1,0 +1,91 @@
+{
+  "non-equivalences": [
+    {
+      "entity_a": {
+        "tradition": "trika-tantraloka",
+        "entity": "parama-shiva"
+      },
+      "entity_b": {
+        "tradition": "advaita-vedanta",
+        "entity": "brahman"
+      },
+      "rule": "Paramaśiva includes dynamic self-awareness (prakāśa-vimarśa); Brahman is pure consciousness without content.",
+      "canonical_relation": "≄"
+    },
+    {
+      "entity_a": {
+        "tradition": "buddhist-philosophy",
+        "entity": "anatman"
+      },
+      "entity_b": {
+        "tradition": "trika-tantraloka",
+        "entity": "aham"
+      },
+      "rule": "Anātman denies permanent self; Aham is the universal 'I'.",
+      "canonical_relation": "≠"
+    },
+    {
+      "entity_a": {
+        "tradition": "advaita-vedanta",
+        "entity": "maya-advaita"
+      },
+      "entity_b": {
+        "tradition": "trika-tantraloka",
+        "entity": "shakti"
+      },
+      "rule": "Māyā in Advaita is illusory; Śakti in Trika is real.",
+      "canonical_relation": "≄"
+    },
+    {
+      "entity_a": {
+        "tradition": "madhyamaka-nagarjuna",
+        "entity": "sunyata-madhyamaka"
+      },
+      "entity_b": {
+        "tradition": "trika-tantraloka",
+        "entity": "parama-shiva"
+      },
+      "rule": "Śūnyatā is lack of svabhāva; Paramāśiva is fullness of being.",
+      "canonical_relation": "≄"
+    },
+    {
+      "entity_a": {
+        "tradition": "plotinus-ennéads",
+        "entity": "the-one"
+      },
+      "entity_b": {
+        "tradition": "trika-tantraloka",
+        "entity": "parama-shiva"
+      },
+      "rule": "Plotinus' One is beyond self-awareness; Trika's Paramāśiva is svaprakāśa.",
+      "canonical_relation": "≄"
+    },
+    {
+      "entity_a": {
+        "tradition": "yogacara-vijnanavada",
+        "entity": "vijnapti-matrata"
+      },
+      "entity_b": {
+        "tradition": "advaita-vedanta",
+        "entity": "brahman"
+      },
+      "rule": "Consciousness-only vs. ground of mind and matter.",
+      "canonical_relation": "≄"
+    },
+    {
+      "entity_a": {
+        "tradition": "lurianic-kabbalah",
+        "entity": "ein-sof"
+      },
+      "entity_b": {
+        "tradition": "madhyamaka-nagarjuna",
+        "entity": "sunyata-madhyamaka"
+      },
+      "rule": "Ein Sof is Infinite fullness; Śūnyatā is emptiness.",
+      "canonical_relation": "≄"
+    }
+  ],
+  "meta": {
+    "version": "1.0.0"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "Aperture",
+  "key": "aperture",
+  "scene_count": 3,
+  "primitives": [
+    "arrow",
+    "dot",
+    "line",
+    "ring",
+    "text"
+  ],
+  "operators": [
+    "align",
+    "oscillate",
+    "reveal"
+  ],
+  "backgrounds": [
+    "dark",
+    "light"
+  ],
+  "example_scenes": [
+    {
+      "title": "An organ of perception",
+      "id": "imaginal.an_organ_of_perception.v1",
+      "duration": 34
+    },
+    {
+      "title": "The open door",
+      "id": "imaginal.the_open_door.v1",
+      "duration": 28
+    },
+    {
+      "title": "Breath to vowel",
+      "id": "mantra.breath_to_vowel.v1",
+      "duration": 30
+    }
+  ]
+}

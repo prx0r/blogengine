@@ -1,0 +1,78 @@
+{
+  "scene_id": "spanda-hook",
+  "tradition": "trika-tantraloka",
+  "truth_status": "textual",
+  "causal_mode": "atemporal",
+  "temporal_mode": "gradual",
+
+  "narrative": "There is a pulse happening in you right now that is not your heartbeat...",
+
+  "entities": [
+    {"id": "bindu", "name": "Bindu", "sanskrit": "बिन्दु", "type": "principle", "canonical_id": "center", "visual_archetype": "bindu", "position": "center", "color": "crimson",
+     "params": {"svg_path": "/root/projects/FableCut/library/svg/spanda/pulse-field-01.svg", "radius": 12}},
+    {"id": "field", "name": "Field", "sanskrit": "क्षेत्र", "type": "concept", "canonical_id": "field", "visual_archetype": "field", "position": "encircling", "color": "black_ink",
+     "params": {"svg_path": "/root/projects/FableCut/library/svg/spanda/pulse-field-03.svg", "ring_count": 5}},
+    {"id": "sanskrit-title", "name": "Spanda", "sanskrit": "स्पन्द", "type": "concept", "canonical_id": "pulse", "visual_archetype": "eye", "position": "above", "color": "black_ink"},
+    {"id": "phrase-heartbeat", "name": "not your heartbeat", "type": "concept", "visual_archetype": "threshold", "position": "below", "color": "grey"},
+    {"id": "phrase-breath", "name": "not your breath", "type": "concept", "visual_archetype": "threshold", "position": "below", "color": "grey"},
+    {"id": "phrase-fundamental", "name": "something more fundamental", "type": "concept", "visual_archetype": "threshold", "position": "below", "color": "grey"}
+  ],
+
+  "relations": [
+    {"type": "containment", "from": "field", "to": "bindu", "canonical": "⊃", "visual": "encircling_rings"}
+  ],
+
+  "operators": [
+    {"id": "appear", "target": "bindu", "duration": 2.0, "easing": "ease_out"},
+    {"id": "pulse", "target": "bindu", "duration": 33.0, "delay": 0.5, "frequency": 0.25},
+    {"id": "expand", "target": "field", "duration": 3.0, "delay": 0.5, "easing": "ease_out"},
+    {"id": "appear", "target": "phrase-heartbeat", "duration": 0.5, "delay": 1.5, "easing": "ease_out"},
+    {"id": "dissolve", "target": "phrase-heartbeat", "duration": 0.6, "delay": 3.5, "easing": "ease_out"},
+    {"id": "appear", "target": "phrase-breath", "duration": 0.5, "delay": 3.8, "easing": "ease_out"},
+    {"id": "dissolve", "target": "phrase-breath", "duration": 0.6, "delay": 5.8, "easing": "ease_out"},
+    {"id": "appear", "target": "phrase-fundamental", "duration": 0.5, "delay": 6.1, "easing": "ease_out"},
+    {"id": "dissolve", "target": "phrase-fundamental", "duration": 0.6, "delay": 9.0, "easing": "ease_out"},
+    {"id": "appear", "target": "sanskrit-title", "duration": 0.8, "delay": 10.0, "easing": "ease_out"},
+    {"id": "dissolve", "target": "sanskrit-title", "duration": 0.5, "delay": 17.0, "easing": "ease_out"},
+    {"id": "appear", "target": "sanskrit-title", "duration": 0.8, "delay": 25.0, "easing": "ease_out"}
+  ],
+
+  "timeline": {
+    "duration": 35.0,
+    "phrases": [
+      {"word": "pulse", "time": 0.62, "action": "bindu_first_breathe"},
+      {"word": "heartbeat", "time": 2.8, "action": "phrase-heartbeat appear"},
+      {"word": "breath", "time": 4.8, "action": "phrase-heartbeat dissolve, phrase-breath appear"},
+      {"word": "fundamental", "time": 8.3, "action": "phrase-breath dissolve, phrase-fundamental appear"},
+      {"word": "spanda", "time": 26.1, "action": "spanda_title_appears"}
+    ],
+    "keyframes": [
+      {"time": 0.0, "action": "background white"},
+      {"time": 0.3, "action": "bindu appears center"},
+      {"time": 0.6, "action": "bindu first subtle pulse"},
+      {"time": 0.8, "action": "field rings begin appearing around bindu"},
+      {"time": 2.0, "action": "phrase 'not your heartbeat' appears below"},
+      {"time": 4.0, "action": "phrase changes to 'not your breath'"},
+      {"time": 6.3, "action": "phrase changes to 'something more fundamental'"},
+      {"time": 9.5, "action": "phrase fades out"},
+      {"time": 10.0, "action": "sanskrit 'स्पन्द' fades in above"},
+      {"time": 26.0, "action": "sanskrit 'स्पन्द' reappears as narrator says spanda"},
+      {"time": 35.0, "action": "hold for transition"}
+    ]
+  },
+
+  "shots": [
+    {"id": "s01a", "start": 0.0, "end": 35.0, "camera": {"mode": "hold", "zoom": 1.0}}
+  ],
+
+  "continuity": {
+    "in_tokens": ["black_to_white"],
+    "out_tokens": ["preserve_bindu_for_scene_2"],
+    "preserve_entities": ["bindu"]
+  },
+
+  "guard_results": [
+    {"rule": "no_heartbeat_visual", "status": "PASS"},
+    {"rule": "sanskrit_font_loaded", "status": "PASS"}
+  ]
+}
