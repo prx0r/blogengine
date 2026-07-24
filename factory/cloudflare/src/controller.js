@@ -53,17 +53,24 @@ function validateMotifs(report) {
   return errors;
 }
 
-function validateStoryboard(shots, audioDur) {
+function validateStoryboard(shots, audioDur, minShots, maxShots) {
   const errors = [];
   if (!Array.isArray(shots) || shots.length === 0) return ['Storyboard is empty'];
+  
+  // Shot count — hard gate derived from audio duration
+  const minCount = minShots || Math.max(8, Math.floor(audioDur / 10));
+  const recCount = Math.round(audioDur / 7);
+  if (shots.length < minCount) {
+    errors.push(`Shot count ${shots.length} below minimum ${minCount} for ${audioDur}s audio (recommended ${recCount})`);
+  }
+  if (maxShots && shots.length > maxShots) {
+    errors.push(`Shot count ${shots.length} exceeds maximum ${maxShots}`);
+  }
   
   // Unique shot IDs
   const ids = shots.map(s => s.shot_id);
   const dupes = ids.filter((id, i) => ids.indexOf(id) !== i);
   if (dupes.length) errors.push(`Duplicate shot IDs: ${[...new Set(dupes)].join(', ')}`);
-  
-  // Timing
-  const durs = shots.map(s => s.duration_seconds || s.duration || 0).filter(d => d > 0);
   if (durs.length) {
     const avg = durs.reduce((a, b) => a + b, 0) / durs.length;
     const max = Math.max(...durs);
@@ -425,7 +432,9 @@ Output JSON: { "render_pack_py": "complete python script here...", "code_review_
           const shots = parsed.shots || (Array.isArray(parsed) ? parsed : []);
           if (shots.length > 0) {
             const audioDur = row.est_audio_duration || 240;
-            validationErrors = validateStoryboard(shots, audioDur);
+            const minShots = row.minimum_shot_count || Math.max(8, Math.floor(audioDur / 10));
+            const maxShots = row.maximum_shot_count || 0;
+            validationErrors = validateStoryboard(shots, audioDur, minShots, maxShots);
           }
         }
         // code_review: validate if we got violations
