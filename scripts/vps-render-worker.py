@@ -57,12 +57,13 @@ def fail_task(tid, code, msg):
 def execute(task):
     tid = task["task_id"]
     manifest = json.loads(task.get("input_manifest_json", "{}"))
-    r2k = ""
-    if isinstance(manifest.get("render_script"), dict):
+    # Try render_code_r2 (new), then render_script.r2_key (legacy)
+    r2k = manifest.get("render_code_r2", "")
+    if not r2k and isinstance(manifest.get("render_script"), dict):
         r2k = manifest["render_script"].get("r2_key", "")
 
     if not r2k:
-        fail_task(tid, "NO_SCRIPT", "no render_script.r2_key in manifest")
+        fail_task(tid, "NO_SCRIPT", f"no render_code_r2/render_script in manifest keys: {list(manifest.keys())}")
         return
 
     td = WORK_DIR / tid
@@ -116,9 +117,17 @@ def execute(task):
         fail_task(tid, "NO_OUTPUT", "renderer produced no MP4 files")
         return
 
+    # Upload to slug-based path so video endpoint can serve it
+    slug = manifest.get("slug", tid)
+    stage = manifest.get("stage", "draft_render")
+    output_dir = manifest.get("outputDir", f"renders/{slug}")
+
     outputs = {"shots_rendered": 0, "files": []}
     for mp4 in mp4s:
-        dst = f"renders/worker/{tid}/{mp4.name}"
+        if mp4.stem in ("draft", "final", "shot"):
+            dst = f"{output_dir}/{mp4.name}"
+        else:
+            dst = f"{output_dir}/{mp4.name}"
         try:
             s3.upload_file(str(mp4), "factory-assets", dst)
             outputs["shots_rendered"] += 1
@@ -126,10 +135,10 @@ def execute(task):
         except Exception as e:
             print(f"  ⚠ upload failed for {mp4.name}: {e}")
 
-    # Upload any PNGs too
+    # Upload contact sheets and motion strips to preview path
     for png in td.rglob("*.png"):
         try:
-            s3.upload_file(str(png), "factory-assets", f"renders/worker/{tid}/{png.name}")
+            s3.upload_file(str(png), "factory-assets", f"{output_dir}/preview/{png.name}")
         except Exception:
             pass
 
