@@ -10,7 +10,8 @@ ESSAY="${2:-scripts/expansion-essay33.md}"
 TIMESTAMP=$(date +%Y%m%d-%H%M%S)
 LOGDIR="factory/runs"
 LOGFILE="$LOGDIR/$SLUG-$TIMESTAMP.log"
-CONTROLLER="python3 factory/controllers/platinum_controller.py"
+API="https://platinum-factory.tradesprior.workers.dev"
+# Uses Cloudflare Worker API (correct system), not Python controller
 
 mkdir -p "$LOGDIR"
 
@@ -28,32 +29,47 @@ mkdir -p "$LOGDIR"
   echo ""
 } | tee "$LOGFILE"
 
-# ── Create Job ────────────────────────────────────
+# ── Create Job via Worker API ─────────────────────
 echo ">>> STAGE 0: Create Job" | tee -a "$LOGFILE"
 START=$(date +%s)
-$CONTROLLER new --slug "$SLUG" --essay "$ESSAY" --output "content/publishing/renders/$SLUG/v1" 2>&1 | tee -a "$LOGFILE"
+ESSAY_TEXT=$(cat "$ESSAY" 2>/dev/null || echo "Essay text not found")
+curl -s -X POST "$API/jobs" \
+  -H "Content-Type: application/json" \
+  -d "$(python3 -c "import json; print(json.dumps({'slug':'$SLUG','essay_text':'''$ESSAY_TEXT'''}))")" 2>&1 | tee -a "$LOGFILE"
 echo "Duration: $(($(date +%s)-START))s" | tee -a "$LOGFILE"
 echo "" | tee -a "$LOGFILE"
 
 # ── Stage List ────────────────────────────────────
 STAGES=("pack_setup" "gold_study" "rhetorical_map" "visual_thesis"
         "motif_manufacturability" "storyboard" "storyboard_review"
-        "pack_composition" "render_plan" "code_review"
+        "pack_composition" "code_review"
         "draft_render" "visual_qc" "final_render")
 
 TOTAL_START=$(date +%s)
 STAGE_NUM=1
 
 for STAGE in "${STAGES[@]}"; do
-  echo ">>> STAGE $STAGE_NUM/13: $STAGE" | tee -a "$LOGFILE"
+  echo ">>> STAGE $STAGE_NUM/12: $STAGE" | tee -a "$LOGFILE"
   STAGE_START=$(date +%s)
+
+  # Run the stage via Worker API
+  RESPONSE=$(curl -s -X POST "$API/advance" \
+    -H "Content-Type: application/json" \
+    -d "{\"slug\":\"$SLUG\"}" 2>&1)
   
-  # Run the stage
-  $CONTROLLER advance --slug "$SLUG" 2>&1 | tee -a "$LOGFILE"
+  echo "$RESPONSE" | tee -a "$LOGFILE"
+  
+  # Check result
+  STATUS=$(echo "$RESPONSE" | python3 -c "import sys,json; print(json.load(sys.stdin).get('result','ERROR'))" 2>/dev/null)
   
   STAGE_DUR=$(($(date +%s)-STAGE_START))
-  echo "Duration: ${STAGE_DUR}s" | tee -a "$LOGFILE"
+  echo "Duration: ${STAGE_DUR}s | Result: $STATUS" | tee -a "$LOGFILE"
   echo "" | tee -a "$LOGFILE"
+  
+  if [ "$STATUS" != "passed" ]; then
+    echo "✗ Stage $STAGE failed. Aborting." | tee -a "$LOGFILE"
+    break
+  fi
   
   STAGE_NUM=$((STAGE_NUM + 1))
 done

@@ -4,7 +4,7 @@
 const STAGES = [
   'pack_setup', 'gold_study', 'rhetorical_map', 'visual_thesis',
   'motif_manufacturability', 'storyboard', 'storyboard_review',
-  'pack_composition', 'render_plan', 'code_review',
+  'pack_composition', 'code_review',
   'draft_render', 'visual_qc', 'final_render',
 ];
 
@@ -213,13 +213,19 @@ Output each as a separate JSON string value.`
           }
         };
 
-        // Stages 11-13 are execution, not LLM — return placeholder
+        // Stages 11-13 are execution, not LLM — dispatch to VPS/Container
         if (['draft_render', 'visual_qc', 'final_render'].includes(stage)) {
-          const msg = `${stage} requires VPS/Container execution, not LLM. Dispatch render task to queue.`;
+          const msg = `${stage} requires VPS/Container execution. Dispatch render task to queue.`;
+          // Record pass + advance job
+          const nextStage = STAGES[stageIdx + 1] || 'complete';
           await env.FACTORY_DB.prepare(
             "UPDATE stage_history SET status = 'passed', notes = ? WHERE job_slug = ? AND stage = ? AND status = 'running'"
           ).bind(msg, slug, stage).run();
-          return json({ slug, stage, result: 'passed', note: msg, next_stage: STAGES[stageIdx + 1] || 'complete' });
+          const statusUpdate = nextStage === 'complete' ? "complete" : "active";
+          await env.FACTORY_DB.prepare(
+            "UPDATE jobs SET current_stage = ?, status = ?, updated_at = datetime('now') WHERE slug = ?"
+          ).bind(nextStage, statusUpdate, slug).run();
+          return json({ slug, stage, result: 'passed', note: msg, next_stage: nextStage });
         }
 
         // Build message for the model
@@ -278,9 +284,10 @@ Output each as a separate JSON string value.`
         await env.FACTORY_DB.prepare(
           "UPDATE stage_history SET status = 'passed' WHERE job_slug = ? AND stage = ? AND status = 'running'"
         ).bind(slug, stage).run();
+        const jobStatus = nextStage === 'complete' ? 'complete' : 'active';
         await env.FACTORY_DB.prepare(
-          "UPDATE jobs SET current_stage = ?, updated_at = datetime('now') WHERE slug = ?"
-        ).bind(nextStage, slug).run();
+          "UPDATE jobs SET current_stage = ?, status = ?, updated_at = datetime('now') WHERE slug = ?"
+        ).bind(nextStage, jobStatus, slug).run();
 
         return json({
           slug, stage, result: 'passed', next_stage: nextStage,

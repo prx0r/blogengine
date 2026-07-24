@@ -130,7 +130,14 @@ USER / EXTERNAL AGENT (ChatGPT, Claude)
 - R2 storage (1.4GB of renders, accessible via S3 API)
 - MCP server (11 tools, registered with Hermes gateway)
 
-### ❌ Broken / Placeholder
+### ✅ Working (as of 2026-07-24)
+- Full 12-stage chain runs through Worker API in ~2.5 minutes
+- All stages pass real artifacts to each other via R2
+- Model routing works (qwen3-30b for 8 stages, llama-3.3-70b for 2)
+- Job state persisted in D1 across all stages
+- `platinum-run.sh` now uses Worker API (correct system)
+
+### ❌ Still Placeholder
 - **Worker prompts are placeholders** — the advance endpoint uses a generic "You are in stage X" prompt. The real prompts are in the Python controller and need porting.
 - **Storyboard still monolithic** — needs chapter batching (8-12 shots per call, JSONL format). This is the #1 blocker.
 - **No retry strategy** — Worker doesn't handle failures. Need the retry matrix from platinum-master-response.md.

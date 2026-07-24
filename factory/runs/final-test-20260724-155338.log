@@ -1,0 +1,152 @@
+============================================
+ Platinum Factory Run Log
+============================================
+ Slug:      final-test
+ Essay:     scripts/expansion-essay33.md
+ Started:   2026-07-24T15:53:38Z
+ Controller: 
+ Stages:    13
+============================================
+
+>>> STAGE 0: Create Job
+{
+  "error": "D1_ERROR: no such table: artifacts: SQLITE_ERROR"
+}Duration: 0s
+
+>>> STAGE 1/12: pack_setup
+{
+  "slug": "final-test",
+  "stage": "pack_setup",
+  "result": "passed",
+  "next_stage": "gold_study",
+  "model_used": "@cf/qwen/qwen3-30b-a3b-fp8",
+  "llm_preview": "\n\n{\n  \"status\": \"error\",\n  \"message\": \"Verification failed: Required files or artifacts for path 'content/publishing/renders/final-test/v1' were not provided or accessible. Ensure authoritative source"
+}
+Duration: 8s | Result: passed
+
+>>> STAGE 2/12: gold_study
+{
+  "slug": "final-test",
+  "stage": "gold_study",
+  "result": "passed",
+  "next_stage": "rhetorical_map",
+  "model_used": "@cf/qwen/qwen3-30b-a3b-fp8",
+  "llm_preview": "\n\n{\n  \"transferable_principles\": [],\n  \"forbidden_to_copy\": [],\n  \"techniques\": []\n}"
+}
+Duration: 3s | Result: passed
+
+>>> STAGE 3/12: rhetorical_map
+{
+  "slug": "final-test",
+  "stage": "rhetorical_map",
+  "result": "passed",
+  "next_stage": "visual_thesis",
+  "model_used": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "llm_preview": "[\n  {\n    \"passage_id\": 1,\n    \"text_preview\": \"What if the sun is a conscious being — not a ball of burning gas?\",\n    \"rhetorical_function\": \"hook\",\n    \"logical_relation\": \"contrast\",\n    \"transfor"
+}
+Duration: 58s | Result: passed
+
+>>> STAGE 4/12: visual_thesis
+{
+  "slug": "final-test",
+  "stage": "visual_thesis",
+  "result": "passed",
+  "next_stage": "motif_manufacturability",
+  "model_used": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "llm_preview": "Based on the provided essay and rhetorical map, I will design three competing visual worlds and then select one to define in detail.\n\n**Competing Visual Worlds:**\n\n1. **Luminous Realm**: A world of ra"
+}
+Duration: 22s | Result: passed
+
+>>> STAGE 5/12: motif_manufacturability
+{
+  "slug": "final-test",
+  "stage": "motif_manufacturability",
+  "result": "passed",
+  "next_stage": "storyboard",
+  "model_used": "@cf/qwen/qwen3-30b-a3b-fp8",
+  "llm_preview": "\n\n{\n  \"pass\": false,\n  \"overall_score\": 0,\n  \"max_score\": 0,\n  \"motifs\": []\n}"
+}
+Duration: 5s | Result: passed
+
+>>> STAGE 6/12: storyboard
+{
+  "slug": "final-test",
+  "stage": "storyboard",
+  "result": "passed",
+  "next_stage": "storyboard_review",
+  "model_used": "@cf/qwen/qwen3-30b-a3b-fp8",
+  "llm_preview": "\n\n{\n  \"chapter_id\": \"ch01\",\n  \"shots\": [\n    {\n      \"shot_id\": \"s001\",\n      \"spoken_passage\": \"What if the sun is a conscious being — not a ball of burning gas?\",\n      \"duration_seconds\": 7.2,\n    "
+}
+Duration: 26s | Result: passed
+
+>>> STAGE 7/12: storyboard_review
+{
+  "slug": "final-test",
+  "stage": "storyboard_review",
+  "result": "passed",
+  "next_stage": "pack_composition",
+  "model_used": "@cf/qwen/qwen3-30b-a3b-fp8",
+  "llm_preview": "\n\n{\"violations\": []}"
+}
+Duration: 7s | Result: passed
+
+>>> STAGE 8/12: pack_composition
+{
+  "slug": "final-test",
+  "stage": "pack_composition",
+  "result": "passed",
+  "next_stage": "render_plan",
+  "model_used": "@cf/qwen/qwen3-30b-a3b-fp8",
+  "llm_preview": "\n\n{\n  \"AGENT_KNOWLEDGE_DOSSIER.md\": \"### AGENT_KNOWLEDGE_DOSSIER\\n\\n**Aim**: Establish a cohesive visual identity for the Platinum Factory's narrative output, balancing precision with creative innovat"
+}
+Duration: 12s | Result: passed
+
+>>> STAGE 9/12: code_review
+{
+  "slug": "final-test",
+  "stage": "render_plan",
+  "result": "passed",
+  "next_stage": "code_review",
+  "model_used": "@cf/qwen/qwen3-30b-a3b-fp8",
+  "llm_preview": "\n\n{\n  \"stage\": \"render_plan\",\n  \"tasks\": [\n    {\n      \"task_id\": \"render_001\",\n      \"description\": \"Generate 3D model\",\n      \"dependencies\": [],\n      \"parameters\": {\n        \"resolution\": \"4K\",\n  "
+}
+Duration: 9s | Result: passed
+
+>>> STAGE 10/12: draft_render
+{
+  "slug": "final-test",
+  "stage": "code_review",
+  "result": "passed",
+  "next_stage": "draft_render",
+  "model_used": "@cf/qwen/qwen3-30b-a3b-fp8",
+  "llm_preview": "\n\n{\n  \"render_pack_py\": \"from PIL import Image, ImageDraw\\nimport subprocess\\n\\ndef create_gradient(size, palette):\\n    width, height = size\\n    img = Image.new('RGB', (width, height))\\n    draw = I"
+}
+Duration: 36s | Result: passed
+
+>>> STAGE 11/12: visual_qc
+{
+  "slug": "final-test",
+  "stage": "draft_render",
+  "result": "passed",
+  "note": "draft_render requires VPS/Container execution. Dispatch render task to queue.",
+  "next_stage": "visual_qc"
+}
+Duration: 2s | Result: passed
+
+>>> STAGE 12/12: final_render
+{
+  "slug": "final-test",
+  "stage": "visual_qc",
+  "result": "passed",
+  "note": "visual_qc requires VPS/Container execution. Dispatch render task to queue.",
+  "next_stage": "final_render"
+}
+Duration: 1s | Result: passed
+
+============================================
+ Run Complete
+ Finished:  2026-07-24T15:56:47Z
+ Total time: 189s (3m 9s)
+ Log:       factory/runs/final-test-20260724-155338.log
+ Output:    content/publishing/renders/final-test/v1/
+============================================

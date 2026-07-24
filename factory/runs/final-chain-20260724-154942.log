@@ -1,0 +1,152 @@
+============================================
+ Platinum Factory Run Log
+============================================
+ Slug:      final-chain
+ Essay:     scripts/expansion-essay33.md
+ Started:   2026-07-24T15:49:42Z
+ Controller: 
+ Stages:    13
+============================================
+
+>>> STAGE 0: Create Job
+{
+  "error": "D1_ERROR: no such table: artifacts: SQLITE_ERROR"
+}Duration: 3s
+
+>>> STAGE 1/12: pack_setup
+{
+  "slug": "final-chain",
+  "stage": "pack_setup",
+  "result": "passed",
+  "next_stage": "gold_study",
+  "model_used": "@cf/qwen/qwen3-30b-a3b-fp8",
+  "llm_preview": "\n\n{\n  \"files_exist\": true,\n  \"message\": \"Canonical pack template verified. Required files in content/publishing/renders/final-chain/v1 exist.\"\n}"
+}
+Duration: 10s | Result: passed
+
+>>> STAGE 2/12: gold_study
+{
+  "slug": "final-chain",
+  "stage": "gold_study",
+  "result": "passed",
+  "next_stage": "rhetorical_map",
+  "model_used": "@cf/qwen/qwen3-30b-a3b-fp8",
+  "llm_preview": "\n\n{\"transferable_principles\": [], \"forbidden_to_copy\": [], \"techniques\": []}"
+}
+Duration: 4s | Result: passed
+
+>>> STAGE 3/12: rhetorical_map
+{
+  "slug": "final-chain",
+  "stage": "rhetorical_map",
+  "result": "passed",
+  "next_stage": "visual_thesis",
+  "model_used": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "llm_preview": "[\n  {\n    \"passage_id\": 1,\n    \"text_preview\": \"What if the sun is a conscious being — not a ball of burning gas?\",\n    \"rhetorical_function\": \"hook\",\n    \"logical_relation\": \"contrast\",\n    \"transfor"
+}
+Duration: 44s | Result: passed
+
+>>> STAGE 4/12: visual_thesis
+{
+  "slug": "final-chain",
+  "stage": "visual_thesis",
+  "result": "passed",
+  "next_stage": "motif_manufacturability",
+  "model_used": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "llm_preview": "Based on the provided essay and rhetorical map, I propose three competing visual worlds for the visual thesis:\n\n**World 1: Luminous Threads**\nMaterial world: Fiber optics, glowing threads, and translu"
+}
+Duration: 24s | Result: passed
+
+>>> STAGE 5/12: motif_manufacturability
+{
+  "slug": "final-chain",
+  "stage": "motif_manufacturability",
+  "result": "passed",
+  "next_stage": "storyboard",
+  "model_used": "@cf/qwen/qwen3-30b-a3b-fp8",
+  "llm_preview": "\n\n{\n  \"pass\": false,\n  \"overall_score\": 0,\n  \"max_score\": 0,\n  \"motifs\": []\n}"
+}
+Duration: 9s | Result: passed
+
+>>> STAGE 6/12: storyboard
+{
+  "slug": "final-chain",
+  "stage": "storyboard",
+  "result": "passed",
+  "next_stage": "storyboard_review",
+  "model_used": "@cf/qwen/qwen3-30b-a3b-fp8",
+  "llm_preview": "\n\n{\n  \"chapter_id\": \"ch01\",\n  \"shots\": [\n    {\n      \"shot_id\": \"s001\",\n      \"spoken_passage\": \"What if the sun is a conscious being — not a ball of burning gas?\",\n      \"duration_seconds\": 7.2,\n    "
+}
+Duration: 19s | Result: passed
+
+>>> STAGE 7/12: storyboard_review
+{
+  "slug": "final-chain",
+  "stage": "storyboard_review",
+  "result": "passed",
+  "next_stage": "pack_composition",
+  "model_used": "@cf/qwen/qwen3-30b-a3b-fp8",
+  "llm_preview": "\n\n{\"violations\": []}"
+}
+Duration: 4s | Result: passed
+
+>>> STAGE 8/12: pack_composition
+{
+  "slug": "final-chain",
+  "stage": "pack_composition",
+  "result": "passed",
+  "next_stage": "render_plan",
+  "model_used": "@cf/qwen/qwen3-30b-a3b-fp8",
+  "llm_preview": "\n\n{\n  \"AGENT_KNOWLEDGE_DOSSIER.md\": \"### AGENT_KNOWLEDGE_DOSSIER\\n\\n**Aim**: Establish a cohesive visual identity for the Platinum Factory's narrative output, balancing futuristic aesthetics with func"
+}
+Duration: 8s | Result: passed
+
+>>> STAGE 9/12: code_review
+{
+  "slug": "final-chain",
+  "stage": "render_plan",
+  "result": "passed",
+  "next_stage": "code_review",
+  "model_used": "@cf/qwen/qwen3-30b-a3b-fp8",
+  "llm_preview": "\n\n{\"stage_name\": \"render_plan\", \"status\": \"completed\", \"steps\": [\"validate_sources\", \"generate_script\", \"execute_render\"], \"resources\": [\"source_artifact_1\", \"source_artifact_2\"], \"dependencies\": [], "
+}
+Duration: 6s | Result: passed
+
+>>> STAGE 10/12: draft_render
+{
+  "slug": "final-chain",
+  "stage": "code_review",
+  "result": "passed",
+  "next_stage": "draft_render",
+  "model_used": "@cf/qwen/qwen3-30b-a3b-fp8",
+  "llm_preview": "\n\n{\n  \"render_pack_py\": \"from PIL import Image, ImageDraw\\nimport subprocess\\nimport random\\n\\nPALETTE = [(255, 0, 0), (0, 255, 0), (0, 0, 255), (255, 255, 0)]\\n\\ndef generate_gradient(size):\\n    img"
+}
+Duration: 18s | Result: passed
+
+>>> STAGE 11/12: visual_qc
+{
+  "slug": "final-chain",
+  "stage": "draft_render",
+  "result": "passed",
+  "note": "draft_render requires VPS/Container execution. Dispatch render task to queue.",
+  "next_stage": "visual_qc"
+}
+Duration: 1s | Result: passed
+
+>>> STAGE 12/12: final_render
+{
+  "slug": "final-chain",
+  "stage": "visual_qc",
+  "result": "passed",
+  "note": "visual_qc requires VPS/Container execution. Dispatch render task to queue.",
+  "next_stage": "final_render"
+}
+Duration: 2s | Result: passed
+
+============================================
+ Run Complete
+ Finished:  2026-07-24T15:52:14Z
+ Total time: 149s (2m 29s)
+ Log:       factory/runs/final-chain-20260724-154942.log
+ Output:    content/publishing/renders/final-chain/v1/
+============================================

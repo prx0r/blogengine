@@ -1,0 +1,259 @@
+============================================
+ Platinum Factory Run Log
+============================================
+ Slug:      auto-test
+ Essay:     scripts/expansion-essay33.md
+ Started:   2026-07-24T15:37:24Z
+ Controller: python3 factory/controllers/platinum_controller.py
+ Stages:    13
+============================================
+
+>>> STAGE 0: Create Job
+  Template files copied to content/publishing/renders/auto-test/v1
+Created job 'auto-test'
+  Stage: pack_setup
+  Output: content/publishing/renders/auto-test/v1
+
+Next: python3 /root/projects/blog/factory/controllers/platinum_controller.py advance --slug auto-test
+Duration: 0s
+
+>>> STAGE 1/13: pack_setup
+
+============================================================
+Stage: pack_setup
+  Initialize pack directory with canonical template
+  Attempt: 1/1
+============================================================
+
+  Running stage via direct API call...
+  Running stage pack_setup via direct API call...
+  ──────────────────────────────────────────────────
+  ✓ Response received (971 chars)
+  ──────────────────────────────────────────────────
+  ✓ Saved to storyboard.json
+  Hermes response: ```json
+{
+  "pack_setup_report": {
+    "slug": "auto-test",
+    "version": "v1",
+    "stage": "PACK_SETUP",
+    "status": "PASS",
+    "timestamp": "2024-05-24Z",
+    "verification_details": {
+      "t...
+  Validating outputs...
+
+✓ Stage pack_setup PASSED
+  Next stage: gold_study
+  Next: python3 /root/projects/blog/factory/controllers/platinum_controller.py advance --slug auto-test
+Duration: 18s
+
+>>> STAGE 2/13: gold_study
+
+============================================================
+Stage: gold_study
+  Study gold/platinum packs, extract signatures
+  Attempt: 1/2
+============================================================
+
+  Running stage via direct API call...
+  Running stage gold_study via direct API call...
+  ──────────────────────────────────────────────────
+  ✓ Response received (4310 chars)
+  ──────────────────────────────────────────────────
+  ✓ Saved to gold_signatures.json
+  Hermes response: ```json
+{
+  "gold_signatures": [
+    {
+      "pack": "stones_are_watching",
+      "transferable_principles": [
+        "Use concrete, object-based motif names (e.g., watching_stones, bishop_codex) tha...
+  Validating outputs...
+
+✓ Stage gold_study PASSED
+  Next stage: rhetorical_map
+  Next: python3 /root/projects/blog/factory/controllers/platinum_controller.py advance --slug auto-test
+Duration: 23s
+
+>>> STAGE 3/13: rhetorical_map
+
+============================================================
+Stage: rhetorical_map
+  Read essay, extract transformations per passage
+  Attempt: 1/2
+============================================================
+
+  Running stage via direct API call...
+  Running stage rhetorical_map via direct API call...
+  ──────────────────────────────────────────────────
+  ✓ Response received (2724 chars)
+  ──────────────────────────────────────────────────
+  ✓ Saved to rhetorical_map.json
+  Hermes response: Executing RHETORICAL_MAP for essay `scripts/expansion-essay33.md` (slug: auto-test).  
+Generated `rhetorical_map.json`:
+
+```json
+{
+  "meta": {
+    "essay": "scripts/expansion-essay33.md",
+    "slug": ...
+  Validating outputs...
+
+✓ Stage rhetorical_map PASSED
+  Next stage: visual_thesis
+  Next: python3 /root/projects/blog/factory/controllers/platinum_controller.py advance --slug auto-test
+Duration: 66s
+
+>>> STAGE 4/13: visual_thesis
+
+============================================================
+Stage: visual_thesis
+  Design visual thesis + 3 candidate visual worlds
+  Attempt: 1/2
+============================================================
+
+  Running stage via direct API call...
+  Running stage visual_thesis via direct API call...
+  ──────────────────────────────────────────────────
+  ✓ Response received (0 chars)
+  ──────────────────────────────────────────────────
+  ✓ Saved to visual_thesis.md
+  Hermes response: ...
+  Validating outputs...
+
+✓ Stage visual_thesis PASSED
+  Next stage: motif_manufacturability
+  Next: python3 /root/projects/blog/factory/controllers/platinum_controller.py advance --slug auto-test
+Duration: 85s
+
+>>> STAGE 5/13: motif_manufacturability
+
+============================================================
+Stage: motif_manufacturability
+  Lint all motifs for drawability (score ≥12/16)
+  Attempt: 1/3
+============================================================
+
+  Running stage via direct API call...
+  Running stage motif_manufacturability via direct API call...
+  ──────────────────────────────────────────────────
+  ✓ Response received (967 chars)
+  ──────────────────────────────────────────────────
+  ✓ Saved to motif_lint_report.json
+  Hermes response: ```json
+{
+  "pass": true,
+  "overall_score": 62,
+  "max_score": 64,
+  "motifs": [
+    {
+      "name": "turing_switch",
+      "score": 16,
+      "errors": []
+    },
+    {
+      "name": "mirror_wall",
+ ...
+  Validating outputs...
+
+✓ Stage motif_manufacturability PASSED
+  Next stage: storyboard
+  Next: python3 /root/projects/blog/factory/controllers/platinum_controller.py advance --slug auto-test
+Duration: 50s
+
+>>> STAGE 6/13: storyboard
+
+============================================================
+Stage: storyboard
+  Build per-shot storyboard with visual_audio_alignment
+  Attempt: 1/3
+============================================================
+
+  Running stage via direct API call...
+  Running stage storyboard via direct API call...
+  ──────────────────────────────────────────────────
+  ✓ Response received (0 chars)
+  ──────────────────────────────────────────────────
+  Hermes response: ...
+  Validating outputs...
+
+✗ Stage storyboard FAILED validation:
+  - Shot count 0 below minimum 35 for ~315.6s audio
+
+Retries left: 2
+Next: python3 /root/projects/blog/factory/controllers/platinum_controller.py retry --slug auto-test
+Duration: 85s
+
+>>> STAGE 7/13: storyboard_review
+
+============================================================
+Stage: storyboard
+  Build per-shot storyboard with visual_audio_alignment
+  Attempt: 2/3
+============================================================
+
+  Running stage via direct API call...
+  Running stage storyboard via direct API call...
+  ──────────────────────────────────────────────────
+  ✓ Response received (0 chars)
+  ──────────────────────────────────────────────────
+  Hermes response: ...
+  Validating outputs...
+
+✗ Stage storyboard FAILED validation:
+  - Shot count 0 below minimum 35 for ~315.6s audio
+
+Retries left: 1
+Next: python3 /root/projects/blog/factory/controllers/platinum_controller.py retry --slug auto-test
+Duration: 80s
+
+>>> STAGE 8/13: pack_composition
+
+============================================================
+Stage: storyboard
+  Build per-shot storyboard with visual_audio_alignment
+  Attempt: 3/3
+============================================================
+
+  Running stage via direct API call...
+  Running stage storyboard via direct API call...
+  ──────────────────────────────────────────────────
+  ✓ Response received (0 chars)
+  ──────────────────────────────────────────────────
+  Hermes response: ...
+  Validating outputs...
+
+✗ Stage storyboard FAILED validation:
+  - Shot count 0 below minimum 35 for ~315.6s audio
+
+Retries left: 0
+Duration: 81s
+
+>>> STAGE 9/13: render_plan
+✗ Max retries (3) exceeded for stage storyboard. Job failed.
+Duration: 1s
+
+>>> STAGE 10/13: code_review
+Job is already failed.
+Duration: 0s
+
+>>> STAGE 11/13: draft_render
+Job is already failed.
+Duration: 0s
+
+>>> STAGE 12/13: visual_qc
+Job is already failed.
+Duration: 0s
+
+>>> STAGE 13/13: final_render
+Job is already failed.
+Duration: 0s
+
+============================================
+ Run Complete
+ Finished:  2026-07-24T15:45:33Z
+ Total time: 489s (8m 9s)
+ Log:       factory/runs/auto-test-20260724-153724.log
+ Output:    content/publishing/renders/auto-test/v1/
+============================================
