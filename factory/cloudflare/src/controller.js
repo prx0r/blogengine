@@ -503,18 +503,23 @@ Output JSON: { "render_pack_py": "complete python script here...", "code_review_
            AND heartbeat_at < datetime('now', '-5 minutes')`
         ).run();
         
-        // Atomic claim — conditional UPDATE returns affected rows
+        // Find the next pending task
+        const pending = await env.FACTORY_DB.prepare(
+          "SELECT task_id FROM render_tasks WHERE status = 'pending' ORDER BY created_at ASC LIMIT 1"
+        ).first();
+        if (!pending) return json({ note: 'no pending tasks' });
+        
+        // Claim it atomically
         const result = await env.FACTORY_DB.prepare(
           `UPDATE render_tasks SET status = 'claimed', claimed_by = ?, claimed_at = datetime('now'), heartbeat_at = datetime('now')
-           WHERE task_id = (SELECT task_id FROM render_tasks WHERE status = 'pending' ORDER BY created_at ASC LIMIT 1)
-           AND status = 'pending'`
-        ).bind('vps-' + Date.now()).run();
+           WHERE task_id = ? AND status = 'pending'`
+        ).bind('vps-' + Date.now(), pending.task_id).run();
         
-        if (!result.changes || result.changes === 0) return json({ note: 'no pending tasks' });
+        if (!result.changes || result.changes === 0) return json({ note: 'claim race lost' });
         
         const updated = await env.FACTORY_DB.prepare(
-          "SELECT * FROM render_tasks WHERE claimed_by = ? AND status = 'claimed' ORDER BY claimed_at DESC LIMIT 1"
-        ).bind('vps-' + Date.now()).first();
+          "SELECT * FROM render_tasks WHERE task_id = ?"
+        ).bind(pending.task_id).first();
         return json(updated);
       } catch (e) { return json({ error: e.message }, 500); }
     }
