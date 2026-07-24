@@ -1,0 +1,52 @@
+{
+  "slug": "fresh-run-1784903346",
+  "essay_path": "scripts/expansion-essay33.md",
+  "output_dir": "content/publishing/renders/fresh-run-1784903346/v1",
+  "created_at": "2026-07-24T14:29:06.416294",
+  "current_stage": "failed",
+  "stage_history": [
+    {
+      "stage": "pack_setup",
+      "status": "passed",
+      "notes": "",
+      "timestamp": "2026-07-24T14:29:28.539499",
+      "attempt": 1
+    },
+    {
+      "stage": "gold_study",
+      "status": "failed",
+      "notes": "Missing output: gold_signatures.json",
+      "timestamp": "2026-07-24T14:29:50.661682",
+      "attempt": 1
+    },
+    {
+      "stage": "gold_study",
+      "status": "failed",
+      "notes": "Missing output: gold_signatures.json",
+      "timestamp": "2026-07-24T14:30:07.244530",
+      "attempt": 2
+    },
+    {
+      "stage": "gold_study",
+      "status": "failed",
+      "notes": "Max retries (2) exceeded for gold_study",
+      "timestamp": "2026-07-24T14:30:07.301694",
+      "attempt": 3
+    }
+  ],
+  "artifacts": {
+    "essay_path": "scripts/expansion-essay33.md"
+  },
+  "retries": {
+    "pack_setup": 0,
+    "gold_study": 2
+  },
+  "failed_shots": [],
+  "approved_shots": [],
+  "production_mode": "film_pack",
+  "target_shot_duration": 6.5,
+  "est_audio_duration": 315.6,
+  "recommended_shot_count": 49,
+  "minimum_shot_count": 35,
+  "maximum_shot_count": 89
+}

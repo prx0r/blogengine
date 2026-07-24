@@ -479,6 +479,37 @@ def call_hermes_for_stage(job: dict, stage: Stage) -> str:
     
     print(f"  ✓ Response received ({len(result)} chars)")
     print(f"  {'─'*50}")
+    
+    # Save the LLM response to the appropriate output file
+    output_dir = Path(job["output_dir"])
+    config = STAGE_CONFIG[stage]
+    
+    # Extract JSON from markdown code blocks if present
+    import re
+    json_match = re.search(r'```(?:json)?\s*\n?(.*?)\n?```', result, re.DOTALL)
+    cleaned = json_match.group(1) if json_match else result
+    
+    # Try to parse as JSON and save
+    try:
+        parsed = json.loads(cleaned)
+        # Save to first expected output file
+        for out in config["outputs"]:
+            if out.endswith(".json") and not out.endswith("/*"):
+                out_path = output_dir / out
+                with open(out_path, "w") as f:
+                    json.dump(parsed, f, indent=2)
+                print(f"  ✓ Saved to {out}")
+                break
+    except json.JSONDecodeError:
+        # Not JSON — save as markdown/text to first .md output
+        for out in config["outputs"]:
+            if out.endswith(".md"):
+                out_path = output_dir / out
+                with open(out_path, "w") as f:
+                    f.write(cleaned)
+                print(f"  ✓ Saved to {out}")
+                break
+    
     return result
 
 
