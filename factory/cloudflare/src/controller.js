@@ -452,19 +452,52 @@ Output each as a separate JSON string value.`
 
     // ── RENDER TASK ENDPOINTS ─────────────────────────────────────
     
+    // Auth check for render endpoints
+    function checkAuth(req) {
+      const token = env.RENDER_WORKER_TOKEN || 'dev-token';
+      const auth = req.headers.get('Authorization') || '';
+      return auth === `Bearer ${token}`;
+    }
+    
+    // POST /render-tasks — create a render task manually (for smoke tests)
+    if (method === 'POST' && path === '/render-tasks') {
+      try {
+        const body = await request.json();
+        const taskId = body.task_id || `rt_manual_${Date.now()}`;
+        await env.FACTORY_DB.prepare(
+          `INSERT INTO render_tasks (task_id, job_slug, stage, task_type, renderer, status, input_manifest_json)
+           VALUES (?, ?, ?, ?, ?, 'pending', ?)`
+        ).bind(taskId, body.job_slug || 'manual', body.stage || 'draft_render',
+               body.task_type || 'draft_render', body.renderer || 'pil-custom-v1',
+               JSON.stringify(body.inputs || {})).run();
+        return json({ task_id: taskId, status: 'pending' });
+      } catch (e) { return json({ error: e.message }, 500); }
+    }
+    
     // GET /render-tasks/claim — claim next pending task (polled by VPS)
     if (method === 'GET' && path === '/render-tasks/claim') {
       try {
-        const row = await env.FACTORY_DB.prepare(
-          "SELECT * FROM render_tasks WHERE status = 'pending' ORDER BY created_at ASC LIMIT 1"
-        ).first();
-        if (!row) return json({ note: 'no pending tasks' });
+        if (!checkAuth(request)) return json({ error: 'unauthorized' }, 401);
         
+        // Stale task reaper: reset claimed/rendering tasks with old heartbeats
         await env.FACTORY_DB.prepare(
-          "UPDATE render_tasks SET status = 'claimed', claimed_by = ?, claimed_at = datetime('now'), heartbeat_at = datetime('now') WHERE task_id = ?"
-        ).bind('vps-' + Date.now(), row.task_id).run();
+          `UPDATE render_tasks SET status = 'pending', claimed_by = NULL, attempt = attempt + 1
+           WHERE status IN ('claimed', 'rendering')
+           AND heartbeat_at < datetime('now', '-5 minutes')`
+        ).run();
         
-        const updated = await env.FACTORY_DB.prepare("SELECT * FROM render_tasks WHERE task_id = ?").bind(row.task_id).first();
+        // Atomic claim — conditional UPDATE returns affected rows
+        const result = await env.FACTORY_DB.prepare(
+          `UPDATE render_tasks SET status = 'claimed', claimed_by = ?, claimed_at = datetime('now'), heartbeat_at = datetime('now')
+           WHERE task_id = (SELECT task_id FROM render_tasks WHERE status = 'pending' ORDER BY created_at ASC LIMIT 1)
+           AND status = 'pending'`
+        ).bind('vps-' + Date.now()).run();
+        
+        if (!result.changes || result.changes === 0) return json({ note: 'no pending tasks' });
+        
+        const updated = await env.FACTORY_DB.prepare(
+          "SELECT * FROM render_tasks WHERE claimed_by = ? AND status = 'claimed' ORDER BY claimed_at DESC LIMIT 1"
+        ).bind('vps-' + Date.now()).first();
         return json(updated);
       } catch (e) { return json({ error: e.message }, 500); }
     }
@@ -473,8 +506,9 @@ Output each as a separate JSON string value.`
     const taskMatch = path.match(/^\/render-tasks\/([^/]+)\/heartbeat$/);
     if (taskMatch && method === 'POST') {
       try {
+        if (!checkAuth(request)) return json({ error: 'unauthorized' }, 401);
         await env.FACTORY_DB.prepare(
-          "UPDATE render_tasks SET heartbeat_at = datetime('now') WHERE task_id = ?"
+          "UPDATE render_tasks SET heartbeat_at = datetime('now') WHERE task_id = ? AND status IN ('claimed', 'rendering')"
         ).bind(taskMatch[1]).run();
         return json({ status: 'ok' });
       } catch (e) { return json({ error: e.message }, 500); }
@@ -484,10 +518,15 @@ Output each as a separate JSON string value.`
     const completeMatch = path.match(/^\/render-tasks\/([^/]+)\/complete$/);
     if (completeMatch && method === 'POST') {
       try {
+        if (!checkAuth(request)) return json({ error: 'unauthorized' }, 401);
+        
         const taskId = completeMatch[1];
         const body = await request.json();
         const row = await env.FACTORY_DB.prepare("SELECT * FROM render_tasks WHERE task_id = ?").bind(taskId).first();
         if (!row) return json({ error: 'task not found' }, 404);
+        
+        // Idempotency: already completed
+        if (row.status === 'completed') return json({ task_id: taskId, result: 'already_completed' });
         
         if (body.status === 'completed') {
           const nextStageIdx = STAGES.indexOf(row.stage) + 1;
