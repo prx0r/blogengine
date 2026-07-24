@@ -1,0 +1,40 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "platinum-factory",
+  "main": "factory/cloudflare/src/controller.ts",
+  "compatibility_date": "2025-07-01",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "account_id": "954612afb5a97bb15dddcdc70176813d",
+  "vars": {
+    "ENVIRONMENT": "production"
+  },
+  "d1_databases": [
+    {
+      "binding": "FACTORY_DB",
+      "database_name": "platinum-factory-db",
+      "database_id": "dd8eb40f-9eb0-41c0-9324-99c5d9c118f9"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "FACTORY_ASSETS",
+      "bucket_name": "factory-assets"
+    }
+  ],
+  "vectorize_indexes": [
+    {
+      "binding": "ASSET_VECTORIZE",
+      "index_name": "atlas-global"
+    }
+  ],
+  "ai": {
+    "binding": "AI"
+  },
+  "triggers": {
+    "crons": [
+      "0 */6 * * *"
+    ]
+  }
+}
