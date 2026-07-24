@@ -15,10 +15,11 @@ API = "https://platinum-factory.tradesprior.workers.dev"
 WORK_DIR = Path("/tmp/platinum-render-tasks")
 WORK_DIR.mkdir(parents=True, exist_ok=True)
 
-# R2 credentials
-R2_ENDPOINT = "https://954612afb5a97bb15dddcdc70176813d.r2.cloudflarestorage.com"
-R2_KEY = "6c27ffefc9dee5c15ca19ca99d2ecccf"
-R2_SECRET = "085826a53d9c16e60e8dab3c89f575a3eef51a5e1fe8e9d2b9323adeca5d598d"
+# R2 credentials — load from environment, NOT hardcoded
+import os
+R2_ENDPOINT = os.environ.get("R2_ENDPOINT", "https://954612afb5a97bb15dddcdc70176813d.r2.cloudflarestorage.com")
+R2_KEY = os.environ.get("R2_KEY", "")
+R2_SECRET = os.environ.get("R2_SECRET", "")
 
 
 def api_get(path):

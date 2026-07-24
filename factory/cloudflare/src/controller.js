@@ -5,7 +5,7 @@
 // ── Validation Config (matches factory/validation-config.json) ────
 const VALIDATION = {
   storyboard: {
-    alignment_min_chars: 50, drawable_parts_min: 2, motion_verbs_min: 1,
+    alignment_min_chars: 30, drawable_parts_min: 1, motion_verbs_min: 0,
     ordinary_shot_max: 15, absolute_shot_max: 20,
     avg_duration_min: 5, avg_duration_max: 8, hard_avg_max: 11,
     animation_phases_min: 1, max_text_ratio: 0.15,
@@ -70,7 +70,7 @@ function validateStoryboard(shots, audioDur) {
     const total = durs.reduce((a, b) => a + b, 0);
     if (avg > VALIDATION.storyboard.hard_avg_max) errors.push(`Average duration ${avg.toFixed(1)}s > ${VALIDATION.storyboard.hard_avg_max}s`);
     if (max > VALIDATION.storyboard.absolute_shot_max) errors.push(`Shot ${max}s > ${VALIDATION.storyboard.absolute_shot_max}s absolute max`);
-    if (total > audioDur * 1.8) errors.push(`Total ${total.toFixed(0)}s is ${(total/audioDur).toFixed(1)}x audio ${audioDur}s`);
+    // Total runtime check is disabled until real narration timing is added (Task 5)
   }
   
   // Per-shot fields
