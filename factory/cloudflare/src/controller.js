@@ -553,6 +553,34 @@ Output each as a separate JSON string value.`
       } catch (e) { return json({ error: e.message }, 500); }
     }
 
+    // GET /video/:slug — serve rendered video from R2
+    const videoMatch = path.match(/^\/video\/([^/]+)$/);
+    if (videoMatch && method === 'GET') {
+      try {
+        const slug = videoMatch[1];
+        // Try final.mp4 first, then any MP4
+        const keys = [
+          `renders/${slug}/final.mp4`,
+          `renders/${slug}/draft.mp4`,
+        ];
+        let object = null;
+        let usedKey = '';
+        for (const key of keys) {
+          object = await env.FACTORY_ASSETS.get(key);
+          if (object) { usedKey = key; break; }
+        }
+        if (!object) return json({ error: 'video not found' }, 404);
+        
+        return new Response(object.body, {
+          headers: {
+            'Content-Type': 'video/mp4',
+            'Cache-Control': 'public, max-age=3600',
+            'Access-Control-Allow-Origin': '*',
+          }
+        });
+      } catch (e) { return json({ error: e.message }, 500); }
+    }
+
     return json({ error: 'not found' }, 404);
   },
 };
