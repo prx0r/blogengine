@@ -54,6 +54,17 @@ ffmpeg -i draft.mp4 -i narration.wav -c:v copy -c:a aac final.mp4
 
 The video endpoint immediately serves whatever lands at `renders/{slug}/final.mp4` in R2.
 
+## Deploy
+
+The code is committed to git. To deploy the updated Worker:
+```bash
+export CLOUDFLARE_API_TOKEN="valid-token-here"
+cd /root/projects/blog
+npx wrangler deploy --no-bundle factory/cloudflare/src/controller.js --name platinum-factory
+```
+
+⚠️ **All known CF API tokens are currently invalid.** The Worker at `platinum-factory.tradesprior.workers.dev` still runs the old pipeline. Generate a new Workers API token and deploy before running essays.
+
 ## The Final Test
 
 > "Does shot three make someone say, 'that is exactly what this concept looks like'?"
