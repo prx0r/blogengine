@@ -143,6 +143,7 @@ function validateStoryboard(shots, audioDur, minShots, maxShots) {
   }
   
   // Per-shot fields
+  const contract = null; // Will be set if visual_contract.json is loaded
   for (const s of shots) {
     const alignment = s.visual_audio_alignment || {};
     const why = alignment.why_it_matches || alignment.why_this_visual_matches || '';
@@ -156,6 +157,110 @@ function validateStoryboard(shots, audioDur, minShots, maxShots) {
     if (s.duration_seconds > VALIDATION.storyboard.ordinary_shot_max && !s.over_15_reason) {
       errors.push(`Shot ${s.shot_id}: ${s.duration_seconds}s > 15s requires documented over_15_reason`);
     }
+    // Contract usage validation (non-blocking warnings)
+    if (s.contract_usage) {
+      const usage = s.contract_usage;
+      if (!usage.materials_used?.length) errors.push(`Shot ${s.shot_id}: contract_usage.materials_used is empty`);
+      if (!usage.motion_verbs_used?.length) errors.push(`Shot ${s.shot_id}: contract_usage.motion_verbs_used is empty`);
+    }
+  }
+  return errors;
+}
+
+// ── Contract Compilers (deterministic, no LLM) ──────────────────
+
+function compileVisualContract(thesisObj) {
+  // Converts visual_thesis.json output into a binding machine-readable contract.
+  if (!thesisObj || typeof thesisObj !== 'object') return null;
+  return {
+    contract_version: 'visual-contract-v1',
+    materials: thesisObj.materials || [],
+    spatial_model: thesisObj.spatial_model || '',
+    allowed_motion_verbs: thesisObj.motion_verbs || [],
+    recurring_systems: Object.entries(thesisObj.motif_system || {}).map(([k, v]) => ({
+      system_id: v?.name || k,
+      drawable_parts: v?.drawable_parts || [],
+      transformation_arc: v?.transformation_arc || '',
+    })),
+    palette: Object.fromEntries(
+      Object.entries(thesisObj.color_assignments || {}).map(([k, v]) => [k, v])
+    ),
+    forbidden: thesisObj.forbidden_cliches_avoided || [],
+    opening_state: thesisObj.opening_state || '',
+    closing_state: thesisObj.closing_state || '',
+    resolution_arc: thesisObj.resolution_arc || '',
+  };
+}
+
+function compileChapterContracts(beats, audioDur) {
+  // Takes rhetorical_map output (array of beat objects) and audio duration.
+  // Returns per-chapter contracts with shot budgets.
+  if (!Array.isArray(beats) || beats.length === 0) return [];
+  
+  const totalBeats = beats.length;
+  const targetShots = Math.round(audioDur / 7);
+  const minTotal = Math.max(10, Math.ceil(audioDur / 9));
+  const maxTotal = Math.round(audioDur / 4.5);
+  
+  // Group beats into chapters (5-10 beats per chapter)
+  const CHARS_PER_BEAT_PREVIEW = 60;
+  const CHAPTER_SIZE = Math.min(8, Math.max(3, Math.ceil(totalBeats / 6)));
+  const chapters = [];
+  
+  for (let i = 0; i < totalBeats; i += CHAPTER_SIZE) {
+    const chapterBeats = beats.slice(i, Math.min(i + CHAPTER_SIZE, totalBeats));
+    const fraction = chapterBeats.length / totalBeats;
+    const chMin = Math.max(4, Math.round(minTotal * fraction));
+    const chTarget = Math.round(targetShots * fraction);
+    const chMax = Math.round(maxTotal * fraction);
+    
+    chapters.push({
+      chapter_id: `ch${String(chapters.length + 1).padStart(2, '0')}`,
+      beats: chapterBeats.map(b => ({
+        passage_id: b.passage_id,
+        text_preview: (b.text_preview || '').slice(0, CHARS_PER_BEAT_PREVIEW),
+        operation_verb: b.operation_verb || '',
+        subject: b.subject || '',
+      })),
+      audio_seconds: Math.round(audioDur * fraction * 10) / 10,
+      shot_budget: {
+        minimum: chMin,
+        target: chTarget,
+        maximum: chMax,
+      },
+    });
+  }
+  
+  return chapters;
+}
+
+function validateShotAgainstContract(shot, contract) {
+  // Returns errors if a shot violates the visual contract.
+  const errors = [];
+  const usage = shot.contract_usage || {};
+  const materials = usage.materials_used || [];
+  const spatial = usage.spatial_system_used || '';
+  const verbs = usage.motion_verbs_used || [];
+  const systems = usage.recurring_systems_used || [];
+  
+  // Must use at least one allowed material
+  if (contract.materials?.length && !materials.some(m => contract.materials.includes(m))) {
+    errors.push(`Shot ${shot.shot_id}: materials ${materials.join(',')} not in contract [${contract.materials.join(',')}]`);
+  }
+  // Must use allowed spatial model
+  if (contract.spatial_model && spatial && spatial !== contract.spatial_model) {
+    errors.push(`Shot ${shot.shot_id}: spatial "${spatial}" not in contract "${contract.spatial_model}"`);
+  }
+  // Verbs must be allowed
+  if (contract.allowed_motion_verbs?.length && verbs.length) {
+    const badVerbs = verbs.filter(v => !contract.allowed_motion_verbs.includes(v));
+    if (badVerbs.length) errors.push(`Shot ${shot.shot_id}: forbidden verbs ${badVerbs.join(',')}`);
+  }
+  // Forbidden material check
+  if (contract.forbidden?.length) {
+    const motifName = (shot.concrete_motif?.motif_id || shot.concrete_motif_id || '').toLowerCase();
+    const hitForbidden = contract.forbidden.find(f => motifName.includes(f.toLowerCase()));
+    if (hitForbidden) errors.push(`Shot ${shot.shot_id}: motif "${motifName}" uses forbidden concept "${hitForbidden}"`);
   }
   return errors;
 }
@@ -288,7 +393,8 @@ export default {
           'visual_program.json', 'visual_thesis.md', 'storyboard.json',
           'storyboard_review.json', 'AGENT_KNOWLEDGE_DOSSIER.md',
           'STYLE_EVOLUTION.md', 'PRODUCTION_BLUEPRINT.md',
-          'render_plan.json', 'render_pack.py', 'code_review.json'
+          'render_plan.json', 'render_pack.py', 'code_review.json',
+          'visual_contract.json', 'chapter_contracts.json',
         ];
         for (const key of artifactKeys) {
           try {
@@ -373,35 +479,41 @@ Output JSON:
           },
           'storyboard': {
             role: 'user',
-            content: `You are the Storyboard Designer. Convert every logical transformation from the rhetorical map into a visible physical event.
+            content: `You are the Storyboard Designer. Generate EXACTLY one chapter's worth of shots. The chapter contract below is BINDING — every shot must conform.
 
-SOURCE ESSAY:\n<essay>\n${(artifacts['source_essay.md'] || '').slice(0, 8000)}\n</essay>
+CHAPTER CONTRACT:
+${(artifacts['chapter_contracts.json'] || 'No chapters').slice(0, 4000)}
+
+VISUAL CONTRACT (binding — materials, spatial model, verbs, palette):
+${(artifacts['visual_contract.json'] || 'No contract').slice(0, 3000)}
+
+SOURCE ESSAY:\n<essay>\n${(artifacts['source_essay.md'] || '').slice(0, 6000)}\n</essay>
 
 RHETORICAL MAP (transformations):\n${(artifacts['rhetorical_map.json'] || 'N/A').slice(0, 3000)}
 
-VISUAL THESIS (world design):\n${(artifacts['visual_thesis.json'] || 'N/A').slice(0, 3000)}
-
 DESIGN RULES:
-- Every shot MUST correspond to a passage in the rhetorical map
+- Every shot MUST correspond to a beat in the chapter contract
 - Each shot: a BEFORE state → visible OPERATION → AFTER state
 - Continuity: the end-state of shot N physically enters shot N+1
-- Motif names MUST be concrete nouns (e.g. "watching_stones", "bishop_codex", "inner_lattice", "crystal_growth")
-- NO abstract names: "consciousness_state", "awareness_system", "unity_field", "divine_energy" — these will be REJECTED
-- Use only materials and spatial models from the visual thesis
+- Motif names MUST be concrete nouns (e.g. "watching_stones", "inner_lattice", "crystal_growth")
+- NO abstract names: "consciousness_state", "awareness_system", "unity_field"
+- Use ONLY materials from the visual contract
+- Use ONLY motion verbs from the visual contract
+- Use ONLY palette colors from the visual contract
 - Each shot must be drawable: 2-8 specific physical parts
-- Minimum shots for this essay: ${Math.max(10, Math.ceil((row.est_audio_duration || 240) / 9))}
+- You MUST return between ${(JSON.parse(artifacts['chapter_contracts.json'] || '[]')[0]?.shot_budget?.minimum || 4)} and ${(JSON.parse(artifacts['chapter_contracts.json'] || '[]')[0]?.shot_budget?.maximum || 12)} shots
 
-Output a flat JSON array of shot objects (NOT grouped by chapter):
+Output a flat JSON array of shot objects:
 [{
-  "shot_id": "s001",
+  "shot_id": "ch01_s001",
   "spoken_passage": "which passage text this covers",
   "duration_seconds": 6.5,
-  "visual_mode": "choose from: interior_detail|axial_view|field_view|threshold_crossing|transformation_close|split_screen|manuscript_detail|aerial_view|cross_section|emergence_view",
+  "visual_mode": "choose from: interior_detail|threshold_crossing|transformation_close|manuscript_detail|cross_section|emergence_view|axial_view",
   "visual_audio_alignment": {
     "transformation_asserted": "the logical operation being shown",
     "before_state": "what viewer sees at u=0",
     "after_state": "what viewer sees at u=1",
-    "physical_operation": "the concrete visible action (one verb from motion_grammar)",
+    "physical_operation": "the concrete visible action (one verb from visual contract)",
     "what_viewer_sees": "description of the shot",
     "why_it_matches": "minimum 30 characters explaining why this shot enacts this passage"
   },
@@ -409,6 +521,12 @@ Output a flat JSON array of shot objects (NOT grouped by chapter):
     "motif_id": "concrete_noun_name",
     "drawable_parts": ["part1","part2","part3"],
     "motion_verbs": ["verb1","verb2"]
+  },
+  "contract_usage": {
+    "materials_used": ["which contract materials"],
+    "spatial_system_used": "contract spatial_model",
+    "motion_verbs_used": ["which approved verbs"],
+    "recurring_systems_used": ["which systems appear"]
   },
   "continuity": {
     "inherits_from_previous": ["what carries over"],
@@ -431,7 +549,7 @@ Output a flat JSON array of shot objects (NOT grouped by chapter):
 
 STORYBOARD:\n${(artifacts['storyboard.json'] || 'N/A').slice(0, 10000)}
 
-VISUAL THESIS:\n${(artifacts['visual_thesis.json'] || 'N/A').slice(0, 3000)}
+VISUAL CONTRACT (binding — materials, palette, verbs):\n${(artifacts['visual_contract.json'] || 'N/A').slice(0, 3000)}
 
 RUNTIME API — your scene functions receive:
 - frame_number (int): 0-based frame index
@@ -443,30 +561,32 @@ RUNTIME API — your scene functions receive:
 - Returns: PIL Image (mode 'RGBA' or 'RGB')
 
 You must import: from PIL import Image, ImageDraw, ImageFilter, ImageFont, ImageChops
-Available helpers: Image.new(), ImageDraw.Draw(), .polygon(), .ellipse(), .rectangle(), .text(), .rotate(), .resize(), .crop(), .filter(), ImageFilter.GaussianBlur, ImageChops.composite()
 
-SCENE FUNCTION PATTERN:
-def scene_001(frame_number, t, u, idx, width=1280, height=720):
-    img = Image.new('RGBA', (width, height), (26, 29, 35, 255))  # void background
-    draw = ImageDraw.Draw(img)
-    # Three temporal phases:
-    # u < 0.33: initial state
-    # 0.33 <= u < 0.66: transformation
-    # u >= 0.66: resolved state
-    # At u=0.72, the frame should be display-worthy
-    return img.convert('RGB')
+PALETTE IS IMMUTABLE. Available colors (use these EXACT symbols, never raw RGB):
+- PARCHMENT = (245, 242, 238)
+- INK = (40, 40, 42)
+- GOLD = (180, 150, 60)
+- CRIMSON = (160, 55, 55)
+- LAPIS = (55, 75, 120)
+- SILVER = (180, 188, 195)
+- DARK = (50, 52, 55)
+- WHITE = (250, 248, 244)
+- VOID = (26, 29, 35)
 
 HARD RULES:
+- NO raw RGB tuples in scene code (e.g. (150, 75, 0) is FORBIDDEN)
+- NO hex color strings
+- Use ONLY the palette constants above
 - Each function 15-40 lines
 - 3+ semantically distinct phases across the duration
-- Uses colors from visual thesis palette
-- Uses concrete materials, not generic shapes
+- Uses concrete materials from the visual contract, not generic shapes
 - Motif must have drawable parts that physically transform
 - Add a "mature_frame" at u=0.72 that could be published as a still
+- Scene functions must use (ctx, t, u) signature, not (frame_number, t, u, idx)
 
 Output JSON:
 {
-  "render_pack_py": "from PIL import Image, ImageDraw, ImageFilter, ImageChops\nimport math, json, os, subprocess\n\ndef scene_001(frame_number, t, u, idx, width=1280, height=720):\n    ...\n\ndef scene_002(frame_number, t, u, idx, width=1280, height=720):\n    ...\n\nSCENE_FUNCTIONS = [scene_001, scene_002, ...]\n# Runtime handles frame loop, ffmpeg, concat — do NOT include those",
+  "render_pack_py": "from PIL import Image, ImageDraw, ImageFilter, ImageChops\nimport math\n\n# Palette constants\nPARCHMENT = (245, 242, 238)\nINK = (40, 40, 42)\nGOLD = (180, 150, 60)\nCRIMSON = (160, 55, 55)\nLAPIS = (55, 75, 120)\nSILVER = (180, 188, 195)\nDARK = (50, 52, 55)\nWHITE = (250, 248, 244)\nVOID = (26, 29, 35)\n\ndef scene_ch01_s001(ctx, t, u):\n    img = Image.new('RGB', (1280, 720), WHITE)\n    draw = ImageDraw.Draw(img)\n    # Three temporal phases:\n    # u < 0.33: initial state\n    # 0.33 <= u < 0.66: transformation\n    # u >= 0.66: resolved state\n    # At u=0.72, the frame should be display-worthy\n    return img\n\nSCENE_FUNCTIONS = [scene_ch01_s001, scene_ch01_s002, ...]\n# Runtime handles frame loop, ffmpeg, concat — do NOT include those",
   "code_review_json": {
     "violations": [],
     "notes": "Scene functions only. Runtime handles FPS, ffmpeg, concat."
@@ -557,13 +677,15 @@ Output JSON:
         ];
 
         // Model routing — cheap models for classification, better for creative
+        // All stages use qwen3-30b (cheap, ~$0.051/M tokens).
+        // Only upgrade to expensive models when a vision-capable stage exists.
         const modelMap = {
           'pack_setup': '@cf/qwen/qwen3-30b-a3b-fp8',
-          'rhetorical_map': '@cf/meta/llama-3.3-70b-instruct-fp8-fast',
-          'visual_thesis': '@cf/meta/llama-3.3-70b-instruct-fp8-fast',
-          'storyboard': '@cf/meta/llama-3.3-70b-instruct-fp8-fast',
-          'code_review': '@cf/meta/llama-3.3-70b-instruct-fp8-fast',
-          'visual_qc': '@cf/meta/llama-3.3-70b-instruct-fp8-fast',
+          'rhetorical_map': '@cf/qwen/qwen3-30b-a3b-fp8',
+          'visual_thesis': '@cf/qwen/qwen3-30b-a3b-fp8',
+          'storyboard': '@cf/qwen/qwen3-30b-a3b-fp8',
+          'code_review': '@cf/qwen/qwen3-30b-a3b-fp8',
+          'visual_qc': '@cf/qwen/qwen3-30b-a3b-fp8',
         };
         const model = modelMap[stage] || '@cf/qwen/qwen3-30b-a3b-fp8';
 
@@ -621,6 +743,18 @@ Output JSON:
           if (!py.includes('def scene_')) {
             validationErrors.push('render_pack_py missing scene functions');
           }
+          // Check for raw RGB tuples (forbidden — must use palette constants)
+          const rawRGB = py.match(/\(\s*\d{1,3}\s*,\s*\d{1,3}\s*,\s*\d{1,3}\s*(?:,\s*\d{1,3}\s*)?\)/g);
+          if (rawRGB) {
+            // Filter out known palette constant definitions
+            const knownPalette = ['PARCHMENT', 'INK', 'GOLD', 'CRIMSON', 'LAPIS', 'SILVER', 'DARK', 'WHITE', 'VOID'];
+            const inDefinition = (m) => knownPalette.some(name => 
+              py.slice(Math.max(0, py.indexOf(m) - 30), py.indexOf(m)).includes(name));
+            const violations = rawRGB.filter(m => !inDefinition(m));
+            if (violations.length > 3) {
+              validationErrors.push(`render_pack_py uses ${violations.length} raw RGB tuples — use palette constants instead`);
+            }
+          }
           if (parsed.code_review_json?.violations?.length > 0) {
             validationErrors.push(...parsed.code_review_json.violations.map(v => `Code violation: ${v}`));
           }
@@ -646,6 +780,23 @@ Output JSON:
         const r2Key = `${outputDir}/${stage}.json`;
         const cleanOutput = parsed ? JSON.stringify(parsed, null, 2) : stripMarkdown(llmResponse);
         await env.FACTORY_ASSETS.put(r2Key, cleanOutput);
+
+        // Compile visual contract from visual_thesis output
+        if (stage === 'visual_thesis' && parsed) {
+          const contract = compileVisualContract(parsed);
+          if (contract) {
+            await env.FACTORY_ASSETS.put(`${outputDir}/visual_contract.json`, JSON.stringify(contract, null, 2));
+          }
+        }
+
+        // Compile chapter contracts from rhetorical_map output
+        if (stage === 'rhetorical_map' && parsed) {
+          const audioDur = row.est_audio_duration || 240;
+          const chapters = compileChapterContracts(Array.isArray(parsed) ? parsed : [parsed], audioDur);
+          if (chapters.length) {
+            await env.FACTORY_ASSETS.put(`${outputDir}/chapter_contracts.json`, JSON.stringify(chapters, null, 2));
+          }
+        }
 
         // Advance
         const nextStage = STAGES[stageIdx + 1] || 'complete';

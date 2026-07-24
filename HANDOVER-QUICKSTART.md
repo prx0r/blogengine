@@ -63,7 +63,7 @@ cd /root/projects/blog
 npx wrangler deploy --no-bundle factory/cloudflare/src/controller.js --name platinum-factory
 ```
 
-⚠️ **All known CF API tokens are currently invalid.** The Worker at `platinum-factory.tradesprior.workers.dev` still runs the old pipeline. Generate a new Workers API token and deploy before running essays.
+⚠️ **All known CF API tokens are currently invalid.** Generate a new Workers API token and deploy before running essays.
 
 ## The Final Test
 

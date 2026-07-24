@@ -32,17 +32,22 @@ class RenderContext:
     output_dir: Path = Path("output")
     assets: dict = field(default_factory=dict)
 
-# ── PALETTE HELPERS ──────────────────────────────
+# ── PALETTE (frozen — all generated code must use these symbols) ──
 PALETTE = {
-    "white": (245, 242, 238),
-    "black": (40, 40, 40),
-    "crimson": (180, 50, 50),
-    "gold": (180, 150, 60),
-    "grey": (200, 195, 190),
-    "dark": (60, 60, 65),
+    "PARCHMENT": (245, 242, 238),
+    "INK": (40, 40, 42),
+    "GOLD": (180, 150, 60),
+    "GOLD_LIGHT": (210, 190, 130),
+    "CRIMSON": (160, 55, 55),
+    "LAPIS": (55, 75, 120),
+    "SILVER": (180, 188, 195),
+    "DARK": (50, 52, 55),
+    "WHITE": (250, 248, 244),
+    "VOID": (26, 29, 35),
 }
 
-def canvas(bg=PALETTE["white"]):
+def canvas(bg=PALETTE["PARCHMENT"]):
+    return Image.new("RGB", (W, H), bg)
     return Image.new("RGB", (W, H), bg)
 
 # ── FILM ──────────────────────────────────────────
@@ -108,7 +113,7 @@ class Film:
             n_frames = max(1, int(dur * FPS))
             ctx = RenderContext(shot_id=sid, frame_count=n_frames, output_dir=self.shot_dir)
 
-            strip = Image.new("RGB", (W * 4, H), PALETTE["white"])
+            strip = Image.new("RGB", (W * 4, H), PALETTE["PARCHMENT"])
             for i, u in enumerate(times):
                 fi = int(u * (n_frames - 1))
                 t_val = fi / FPS
@@ -118,7 +123,7 @@ class Film:
             strip.save(str(strip_dir / f"{sid}_strip.jpg"))
 
         # Full contact sheet — one representative frame per shot
-        sheet = Image.new("RGB", (W * 4, H * ((len(self.scenes) + 3) // 4)), PALETTE["grey"])
+        sheet = Image.new("RGB", (W * 4, H * ((len(self.scenes) + 3) // 4)), PALETTE["SILVER"])
         for i, spec in enumerate(self.scenes):
             dur = spec.duration
             n_frames = max(1, int(dur * FPS))
