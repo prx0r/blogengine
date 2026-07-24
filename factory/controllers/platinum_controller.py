@@ -17,7 +17,9 @@ from pathlib import Path
 from datetime import datetime
 from typing import Optional, Any
 
-ROOT = Path(__file__).resolve().parent.parent
+FILE_DIR = Path(__file__).resolve().parent              # factory/controllers/
+FACTORY_ROOT = FILE_DIR.parent                          # factory/
+REPO_ROOT = FACTORY_ROOT.parent                         # project root
 JOBS_DIR = Path(__file__).resolve().parent / ".jobs"
 
 # ── STAGE DEFINITION ───────────────────────────────────────────────
@@ -70,7 +72,7 @@ STAGE_DESCRIPTIONS = {
 }
 
 # Each stage: input artifacts required, output artifacts produced, max retries
-TEMPLATE_DIR = Path(__file__).resolve().parent / "pack-template"
+TEMPLATE_DIR = FACTORY_ROOT / "template"  # factory/template/
 
 STAGE_CONFIG = {
     Stage.PACK_SETUP: {
@@ -421,7 +423,7 @@ def validate_stage_output(job: dict, stage: Stage) -> list[str]:
 
 def call_llm_direct(prompt: str, system_prompt: str = "") -> str:
     """Call the LLM API directly (no Hermes subprocess overhead)."""
-    api_key = open(ROOT / ".env.local").read().split("VIDEO_LLM_API_KEY=")[1].split("\n")[0].strip().strip('"')
+    api_key = open(REPO_ROOT / ".env.local").read().split("VIDEO_LLM_API_KEY=")[1].split("\n")[0].strip().strip('"')
     
     messages = []
     if system_prompt:
@@ -460,7 +462,7 @@ def call_hermes_for_stage(job: dict, stage: Stage) -> str:
     prompt = build_stage_prompt(job, stage)
     
     # Load the skill content as system prompt for context
-    skill_path = ROOT / "hermes/skills/platinum-designer/SKILL.md"
+    skill_path = REPO_ROOT / "hermes/skills/platinum-designer/SKILL.md"
     system_prompt = ""
     if skill_path.exists():
         system_prompt = f"You are Hermes, a platinum visual designer. Follow the process below:\n\n{skill_path.read_text()[:4000]}"

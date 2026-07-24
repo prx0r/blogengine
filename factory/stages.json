@@ -1,0 +1,110 @@
+{
+  "schema_version": "factory-stages-v2",
+  "description": "Single source of truth for the platinum factory stage machine.",
+  "stages": [
+    {
+      "id": "pack_setup",
+      "description": "Initialize pack directory with canonical template",
+      "inputs": ["essay_text"],
+      "outputs": ["pack_setup_report.json"],
+      "max_attempts": 1,
+      "prompt_template": "platinum-controller/pack-setup"
+    },
+    {
+      "id": "gold_study",
+      "description": "Study gold/platinum packs, extract signatures",
+      "inputs": ["essay_text"],
+      "outputs": ["gold_signatures.json"],
+      "max_attempts": 2,
+      "prompt_template": "platinum-controller/gold-study"
+    },
+    {
+      "id": "rhetorical_map",
+      "description": "Read essay, extract transformations per passage",
+      "inputs": ["essay_text", "gold_signatures.json"],
+      "outputs": ["rhetorical_map.json"],
+      "max_attempts": 2,
+      "prompt_template": "platinum-controller/rhetorical-map"
+    },
+    {
+      "id": "visual_thesis",
+      "description": "Design visual thesis + 3 candidate visual worlds",
+      "inputs": ["essay_text", "rhetorical_map.json", "gold_signatures.json"],
+      "outputs": ["visual_thesis.md", "visual_program.json"],
+      "max_attempts": 2,
+      "prompt_template": "platinum-controller/visual-thesis"
+    },
+    {
+      "id": "motif_manufacturability",
+      "description": "Lint all motifs for drawability (score >=12/16)",
+      "inputs": ["visual_program.json"],
+      "outputs": ["motif_lint_report.json"],
+      "max_attempts": 3,
+      "prompt_template": "platinum-controller/motif-lint"
+    },
+    {
+      "id": "storyboard",
+      "description": "Build per-shot storyboard with visual_audio_alignment",
+      "inputs": ["rhetorical_map.json", "visual_thesis.md", "visual_program.json"],
+      "outputs": ["storyboard.json"],
+      "max_attempts": 3,
+      "prompt_template": "platinum-controller/storyboard"
+    },
+    {
+      "id": "storyboard_review",
+      "description": "Adversarial review: alignment, diversity, no gold-copy",
+      "inputs": ["storyboard.json", "gold_signatures.json"],
+      "outputs": ["storyboard_review.json"],
+      "max_attempts": 3,
+      "prompt_template": "platinum-controller/storyboard-review"
+    },
+    {
+      "id": "pack_composition",
+      "description": "Write AGENT_KNOWLEDGE_DOSSIER, STYLE_EVOLUTION, PRODUCTION_BLUEPRINT",
+      "inputs": ["storyboard.json", "storyboard_review.json", "visual_program.json"],
+      "outputs": ["AGENT_KNOWLEDGE_DOSSIER.md", "STYLE_EVOLUTION.md", "PRODUCTION_BLUEPRINT.md"],
+      "max_attempts": 2,
+      "prompt_template": "platinum-controller/pack-composition"
+    },
+    {
+      "id": "render_plan",
+      "description": "Plan each shot: primitives, layers, phases, line counts",
+      "inputs": ["storyboard.json", "storyboard_review.json", "AGENT_KNOWLEDGE_DOSSIER.md"],
+      "outputs": ["render_plan.json"],
+      "max_attempts": 2,
+      "prompt_template": "platinum-controller/render-plan"
+    },
+    {
+      "id": "code_review",
+      "description": "Inspect scene functions: no dispatch, phase count, text ratio",
+      "inputs": ["render_plan.json", "STYLE_EVOLUTION.md"],
+      "outputs": ["render_pack.py", "code_review.json"],
+      "max_attempts": 2,
+      "prompt_template": "platinum-controller/code-review"
+    },
+    {
+      "id": "draft_render",
+      "description": "Render low-res preview for visual QC",
+      "inputs": ["render_pack.py", "code_review.json"],
+      "outputs": ["scenes/*.mp4", "draft_report.json"],
+      "max_attempts": 2,
+      "prompt_template": "platinum-controller/draft-render"
+    },
+    {
+      "id": "visual_qc",
+      "description": "Silent-film test + similarity QC + motion check",
+      "inputs": ["scenes/*.mp4", "storyboard.json"],
+      "outputs": ["visual_qc_report.json"],
+      "max_attempts": 3,
+      "prompt_template": "platinum-controller/visual-qc"
+    },
+    {
+      "id": "final_render",
+      "description": "Render final high-res with audio",
+      "inputs": ["visual_qc_report.json"],
+      "outputs": ["final.mp4", "alignment_report.json", "contact_sheet.jpg"],
+      "max_attempts": 1,
+      "prompt_template": "platinum-controller/final-render"
+    }
+  ]
+}

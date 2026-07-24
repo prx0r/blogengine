@@ -8,6 +8,7 @@ export interface Env {
   ENVIRONMENT?: string;
 }
 
+// Stage list — must match factory/stages.json (single source of truth)
 const STAGES = [
   'pack_setup', 'gold_study', 'rhetorical_map', 'visual_thesis',
   'motif_manufacturability', 'storyboard', 'storyboard_review',
@@ -53,23 +54,22 @@ export default {
     if (method === 'POST' && path === '/jobs') {
       const body: any = await request.json();
       const slug = body.slug;
-      const essayPath = body.essay_path || `scripts/expansion-essay-${slug}.md`;
+      const essayText = body.essay_text || body.text || '';
 
-      // Estimate audio duration
-      const fs = await import('fs');
-      let wordCount = 500;
-      try { wordCount = fs.readFileSync(essayPath, 'utf-8').split(/\s+/).length; } catch {}
+      // Estimate audio duration from word count
+      let wordCount = essayText.split(/\s+/).filter((w: string) => w.length > 0).length;
+      if (wordCount < 10) wordCount = 500; // fallback if no text provided
 
       const audioDur = (wordCount / 150) * 60;
       const minShots = Math.max(10, Math.round(audioDur / 9.0));
       const maxShots = Math.round(audioDur / 4.0) + 10;
 
       await env.FACTORY_DB.prepare(
-        `INSERT INTO jobs (slug, essay_path, output_dir, production_mode, est_audio_duration,
+        `INSERT INTO jobs (slug, output_dir, production_mode, est_audio_duration,
           recommended_shot_count, minimum_shot_count, maximum_shot_count, current_stage, status)
-         VALUES (?, ?, ?, ?, ?, ?, ?, ?, 'pack_setup', 'active')`
+         VALUES (?, ?, ?, ?, ?, ?, ?, 'pack_setup', 'active')`
       ).bind(
-        slug, essayPath, `content/publishing/renders/${slug}/v1`, 'film_pack',
+        slug, `content/publishing/renders/${slug}/v1`, 'film_pack',
         Math.round(audioDur * 10) / 10, Math.round(audioDur / 6.5),
         minShots, maxShots
       ).run();

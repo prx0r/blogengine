@@ -7,7 +7,10 @@ Then connect from ChatGPT Desktop, Claude Desktop, Cursor, etc.
 import json, sys, os, subprocess, urllib.request
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent.parent
+MCP_DIR = Path(__file__).resolve().parent               # factory/cloudflare/src/
+FACTORY_ROOT = MCP_DIR.parent.parent                     # factory/
+REPO_ROOT = FACTORY_ROOT.parent                          # project root
+ROOT = FACTORY_ROOT  # shorthand for backward compat
 API = "https://platinum-factory.tradesprior.workers.dev"
 
 # ── API HELPERS ────────────────────────────────────
@@ -24,7 +27,7 @@ def api_post(path, data):
 
 def call_llm(prompt, system=""):
     """Call deepseek-v4-flash for creative work."""
-    key = open(ROOT / ".env.local").read().split("VIDEO_LLM_API_KEY=")[1].split("\n")[0].strip().strip('"')
+    key = open(REPO_ROOT / ".env.local").read().split("VIDEO_LLM_API_KEY=")[1].split("\n")[0].strip().strip('"')
     messages = []
     if system: messages.append({"role": "system", "content": system})
     messages.append({"role": "user", "content": prompt})
@@ -172,15 +175,15 @@ def handle(method, params, msg_id):
             elif name == "factory_get_storyboard":
                 slug = args["slug"]
                 job = api_get(f"/jobs/{slug}")
-                path = f"{ROOT}/{job['output_dir']}/storyboard.json"
+                path = f"{REPO_ROOT}/{job['output_dir']}/storyboard.json"
                 with open(path) as f:
                     result = json.load(f)
 
             elif name == "factory_get_visual_thesis":
                 slug = args["slug"]
                 job = api_get(f"/jobs/{slug}")
-                vp_path = f"{ROOT}/{job['output_dir']}/visual_program.json"
-                vt_path = f"{ROOT}/{job['output_dir']}/visual_thesis.md"
+                vp_path = f"{REPO_ROOT}/{job['output_dir']}/visual_program.json"
+                vt_path = f"{REPO_ROOT}/{job['output_dir']}/visual_thesis.md"
                 result = {}
                 if os.path.exists(vp_path):
                     with open(vp_path) as f:
@@ -190,23 +193,23 @@ def handle(method, params, msg_id):
                         result["visual_thesis"] = f.read()[:2000]
 
             elif name == "factory_list_gold_packs":
-                with open(ROOT / "factory/registry/gold-pack-registry.json") as f:
+                with open(FACTORY_ROOT / "registry/gold-pack-registry.json") as f:
                     result = json.load(f)
 
             elif name == "factory_get_pack_template":
                 section = args.get("section", "all")
-                base = ROOT / "factory/template"
+                base = FACTORY_ROOT / "template"
                 result = {}
                 for f in base.iterdir():
                     if f.is_file() and f.suffix in (".md", ".json"):
                         result[f.name] = f.read_text()[:1000]
 
             elif name == "factory_read_essay":
-                p = ROOT / args["path"]
+                p = REPO_ROOT / args["path"]
                 result = p.read_text() if p.exists() else f"File not found: {p}"
 
             elif name == "factory_read_gold_pack":
-                with open(ROOT / "factory/registry/gold-pack-registry.json") as f:
+                with open(FACTORY_ROOT / "registry/gold-pack-registry.json") as f:
                     registry = json.load(f)
                 pack = None
                 for p in registry["gold_packs"]:
@@ -214,7 +217,7 @@ def handle(method, params, msg_id):
                         pack = p
                         break
                 if pack:
-                    p = ROOT / pack["path"] / args["file"]
+                    p = REPO_ROOT / pack["path"] / args["file"]
                     result = p.read_text()[:3000] if p.exists() else f"File not found: {p}"
                 else:
                     result = f"Pack {args['pack_id']} not found"
