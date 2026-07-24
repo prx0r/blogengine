@@ -8,7 +8,7 @@ const text = fs.readFileSync(pgmPath, "utf-8");
 
 const openai = new OpenAI({
   baseURL: "https://opencode.ai/zen/go/v1",
-  apiKey: process.env.OPENCODE_GO_API_KEY || "sk-SDjjQ8NtTdpM2OmWl3GXDrPlhcQiLvZln60mSVVcJQ3rkg7trYHQoLKshcKSeg0Y",
+  apiKey: process.env.OPENCODE_GO_API_KEY || "process.env.OPENCODE_API_KEY || "KEY_REMOVED_SECURITY"",
 });
 
 // ── Find all PGM spell headings ──

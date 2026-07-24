@@ -199,17 +199,63 @@ python3 factory/controllers/platinum_controller.py advance --slug my-essay
 
 ---
 
-## 9. The Immediate Task
+## 9. Current Build Status (as of 2026-07-24)
 
-Port the stage-specific prompts from `factory/controllers/platinum_controller.py` (the `build_stage_prompt` function, ~400 lines of prompt templates) into `factory/cloudflare/src/controller.js` (the `advance` endpoint). The prompts already exist and work — they just need to be moved from Python to JS and integrated with the Worker's D1/R2 infrastructure.
+### What's Been Built & Works
 
-Once ported, run the benchmark:
+| Component | Status | Details |
+|-----------|--------|---------|
+| **Cloudflare Worker** (controller.js) | ✅ Deployed | POST /jobs, GET /jobs, GET /jobs/:slug, POST /advance. 225 lines. |
+| **Stage Prompts** | ✅ Ported from Python | All 13 stages have prompt templates. System message + user message with actual content. |
+| **Source Ingestion** | ✅ Fixed | Full essay stored in R2 at job creation. Loaded into prompts from R2. |
+| **API Key Security** | ✅ Fixed | Hardcoded key removed from 3 files. Stored as `wrangler secret put OPENCODE_API_KEY`. |
+| **Model Routing** | ✅ Added | Per-stage model policy: qwen3-30b for cheap stages, llama-3.3-70b for creative, deepseek as fallback. |
+| **Validation** | ⚠️ Basic | Non-empty check before advancing. Stages 11-13 marked as execution (not LLM). |
+| **D1 Database** | ✅ Deployed | 9 tables. Stage history, artifact tracking. |
+| **MCP Server** | ✅ Registered | 11 tools, reads key from .env.local. |
+| **Gold Pack Registry** | ✅ Indexed | 31 gold packs. |
+| **R2 Storage** | ✅ Populated | 1.4GB of renders, exemplars, gold files. |
+
+### Still Needs Work
+
+| Issue | Priority | What's Needed |
+|-------|----------|---------------|
+| Storyboard chapter fan-out | High | Currently one LLM call. Needs per-chapter parallel calls with JSONL output. |
+| Full validation pipeline | High | Need timing, motif score, alignment length gates ported from Python. |
+| Stages 11-13 (render) | Medium | Currently return placeholder. Need VPS/Container dispatch. |
+| Shared stage definitions | Medium | Worker hardcodes stage list instead of reading from stages.json. |
+| Visual QC automation | Medium | Silent-film test needs vision model (llama-3.2-11b-vision). |
+| Dashboard integration | Low | studio.tantrafiles.xyz not wired to Worker API. |
+
+### Architecture
+
+```
+Cloudflare Worker (controller.js) ← THE CORRECT SYSTEM
+  ├── POST /jobs → stores essay in R2, creates D1 record
+  ├── POST /advance → loads R2 artifacts, calls LLM, validates, advances
+  ├── GET /jobs → lists jobs
+  └── GET /jobs/:slug → job status
+
+Python Controller (platinum_controller.py) ← DEV ONLY, will be deprecated
+  └── All the validators live here. Need porting to JS.
+
+MCP Server (mcp-server.py) ← FOR EXTERNAL AGENTS
+  └── 11 tools: create_job, advance, call_llm, list_gold_packs, etc.
+```
+
+### Quick Test
+
 ```bash
 curl -X POST https://platinum-factory.tradesprior.workers.dev/jobs \
   -H "Content-Type: application/json" \
-  -d '{"slug":"benchmark-b2"}'
+  -d '{"slug":"test-1","essay_text":"Light is visible by itself. Consciousness is self-showing."}'
+
 curl -X POST https://platinum-factory.tradesprior.workers.dev/advance \
   -H "Content-Type: application/json" \
-  -d '{"slug":"benchmark-b2"}'
-# ... repeat for each stage
+  -d '{"slug":"test-1"}'
 ```
+
+### The Two Things That Would Unblock Everything
+
+1. **Fix `llmResponse.trim is not a function`** — Workers AI response format varies. Need to handle both string and object responses. (This is the current runtime error.)
+2. **Port Python validators to JavaScript** — The timing gate, motif score threshold, and alignment length checks all exist in `platinum_controller.py` but not in the Worker.

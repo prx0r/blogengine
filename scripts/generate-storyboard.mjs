@@ -25,7 +25,7 @@ const roDir = path.join(root, "content", "research-objects");
 const API_KEY =
   process.env.DEEPSEEK_API_KEY ||
   process.env.VIDEO_LLM_API_KEY ||
-  "sk-SDjjQ8NtTdpM2OmWl3GXDrPlhcQiLvZln60mSVVcJQ3rkg7trYHQoLKshcKSeg0Y";
+  process.env.OPENCODE_API_KEY || "KEY_REMOVED_SECURITY";
 const BASE_URL = process.env.VIDEO_LLM_BASE_URL || "https://opencode.ai/zen/go/v1";
 const MODEL = process.env.VIDEO_LLM_MODEL || "deepseek-v4-flash";
 
