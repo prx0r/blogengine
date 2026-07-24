@@ -170,3 +170,21 @@ CREATE TABLE IF NOT EXISTS render_attempts (
     error_message TEXT,
     UNIQUE(task_id, attempt)
 );
+
+-- ── ARTIFACTS (immutable stage outputs) ────────
+CREATE TABLE IF NOT EXISTS artifacts (
+    artifact_id TEXT PRIMARY KEY,
+    job_id TEXT NOT NULL,
+    artifact_type TEXT NOT NULL,
+    logical_name TEXT NOT NULL,
+    version INTEGER NOT NULL DEFAULT 1,
+    r2_key TEXT NOT NULL,
+    sha256 TEXT,
+    schema_version TEXT,
+    mime_type TEXT,
+    byte_size INTEGER,
+    supersedes_artifact_id TEXT,
+    created_at TEXT NOT NULL DEFAULT (datetime('now'))
+);
+
+CREATE INDEX IF NOT EXISTS idx_artifacts_job ON artifacts(job_id);

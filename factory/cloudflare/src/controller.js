@@ -323,7 +323,24 @@ Output each as a separate JSON string value.`
           },
           'code_review': {
             role: 'user',
-            content: `Write render_pack.py with custom PIL scene functions. NO dispatch table. 15-40 lines per function. Pure PIL + ffmpeg. Use colors from the palette. Output: { render_pack_py: "...", code_review_json: { violations: [] } }`
+            content: `Write a PIL ANIMATION render script. This must produce ANIMATED video, not static images.
+
+EACH SCENE FUNCTION (t, u, idx):
+- t = time in seconds
+- u = 0.0 to 1.0 (animation progress within the shot)
+- idx = scene index
+- Returns a PIL Image
+
+RENDER LOOP to include in the script:
+- 1280x720, 2 fps
+- Each shot: 6 seconds = 12 frames
+- Call each scene function per frame
+- Save frames as PNGs
+- Use ffmpeg to assemble into MP4 clips
+- Concatenate clips into final.mp4
+- Pure PIL + ffmpeg only
+
+Output JSON: { "render_pack_py": "complete python script here...", "code_review_json": { "violations": [] } }`
           }
         };
 
