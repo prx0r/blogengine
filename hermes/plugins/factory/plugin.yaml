@@ -1,0 +1,34 @@
+name: factory
+description: Video production factory — clean narration, generate voiceover, render scenes, validate output
+version: 1.0.0
+author: Factory System
+license: MIT
+
+tools:
+  - name: factory_clean_narration
+    description: Strip markdown from essay, preserve every sentence INCLUDING title
+    entrypoint: tools.clean.clean_narration
+
+  - name: factory_integrity_check
+    description: Compare source vs spoken sentences, detect unauthorized additions
+    entrypoint: tools.clean.integrity_check
+
+  - name: factory_extract_passages
+    description: Split narration into passages and build rhetorical map
+    entrypoint: tools.analyze.extract_passages
+
+  - name: factory_generate_voiceover
+    description: Generate per-shot WAV audio via Edge TTS, measure actual durations
+    entrypoint: tools.audio.generate_voiceover
+
+  - name: factory_measure_durations
+    description: Measure actual WAV durations using ffprobe
+    entrypoint: tools.audio.measure_durations
+
+  - name: factory_search_scenes
+    description: Search 261 existing scene functions by concept
+    entrypoint: tools.render.search_scenes
+
+  - name: factory_analyze_output
+    description: Score rendered output against platinum rubric
+    entrypoint: tools.validate.analyze_output

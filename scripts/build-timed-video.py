@@ -20,7 +20,7 @@ FABLECUT = Path("/root/projects/FableCut")
 SVG_LIB = "library/svg/spanda"
 W = 1920; H = 1080; FPS = 30
 
-CF_TOKEN = "cfat_2c32BYrGAzy4FM4tUYZIyQZqPIc0nyGFiWMp5lBn9e17cd57"
+CF_TOKEN = os.environ.get("CF_API_TOKEN", "")
 CF_ACCOUNT = "954612afb5a97bb15dddcdc70176813d"
 CF_WHISPER = f"https://api.cloudflare.com/client/v4/accounts/{CF_ACCOUNT}/ai/run/@cf/openai/whisper-large-v3-turbo"
 

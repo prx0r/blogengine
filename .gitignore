@@ -34,3 +34,23 @@ content/publishing/tts-test/
 
 # Archive of old pipeline (reference only, not active)
 archive/v1-pipeline/baseline-output/
+
+# Generated media
+media/
+exemplars/
+content/publishing/imports/
+content/publishing/voiceover/
+content/publishing/scripts/
+content/publishing/storyboards/
+content/publishing/conversation-summary-*.md
+content/publishing/tts-test/
+
+# Local factory job state  
+factory/archive-v1/.jobs/
+
+# Generated thumbnails
+public/audio/
+
+# Backup files
+*.pyc
+__pycache__/

@@ -25,7 +25,7 @@ ANALYZE_JS = FABLECUT_DIR / 'analyze.js'
 VISION_API_KEY = os.environ.get("VISION_API_KEY", "AIzaSyA7-ZK5BGBxDwGCGx1Wiro0fB7NfX68KIc")
 VISION_URL = f'https://vision.googleapis.com/v1/images:annotate?key={VISION_API_KEY}'
 
-CF_TOKEN = "cfat_2c32BYrGAzy4FM4tUYZIyQZqPIc0nyGFiWMp5lBn9e17cd57"
+CF_TOKEN = os.environ.get("CF_API_TOKEN", "")
 CF_ACCOUNT = "954612afb5a97bb15dddcdc70176813d"
 CF_WHISPER_URL = f'https://api.cloudflare.com/client/v4/accounts/{CF_ACCOUNT}/ai/run/@cf/openai/whisper-large-v3-turbo'
 

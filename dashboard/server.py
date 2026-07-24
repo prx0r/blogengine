@@ -462,6 +462,166 @@ def api_catalog_concepts():
     sorted_c = sorted(concepts.items(), key=lambda x: -x[1])[:200]
     return jsonify([{"concept": k, "count": v} for k, v in sorted_c])
 
+# ── FINAL PRODUCTION VIDEOS ────────────────────────────────────────────────
+
+FINAL_DIR = ROOT / "data" / "final"
+FINAL_INDEX = FINAL_DIR / "index.json"
+FINAL_COMMENTS = FINAL_DIR / "comments"
+FINAL_SHOTS = FINAL_DIR / "shots"
+FINAL_LOGS = FINAL_DIR / "feedback-logs"
+
+def ensure_final_dirs():
+    FINAL_DIR.mkdir(parents=True, exist_ok=True)
+    FINAL_COMMENTS.mkdir(parents=True, exist_ok=True)
+    FINAL_SHOTS.mkdir(parents=True, exist_ok=True)
+    FINAL_LOGS.mkdir(parents=True, exist_ok=True)
+    if not FINAL_INDEX.exists():
+        FINAL_INDEX.write_text("[]")
+
+def load_final_index():
+    ensure_final_dirs()
+    return json.loads(FINAL_INDEX.read_text())
+
+def save_final_index(index):
+    FINAL_INDEX.write_text(json.dumps(index, indent=2, ensure_ascii=False))
+
+def write_feedback_log(video_id, entry):
+    """Write human-readable markdown feedback log."""
+    ensure_final_dirs()
+    log_path = FINAL_LOGS / f"{video_id}.md"
+    timestamp = time.strftime("%Y-%m-%d %H:%M:%S", time.gmtime())
+    with open(log_path, "a") as f:
+        f.write(f"\n## {timestamp}\n")
+        f.write(f"**Author:** {entry.get('author', 'Thomas')}\n")
+        if entry.get("rating"):
+            f.write(f"**Rating:** {'★' * entry['rating']}{'☆' * (5 - entry['rating'])}\n")
+        f.write(f"**Type:** {entry.get('type', 'episode')}\n")
+        if entry.get("shot_id"):
+            f.write(f"**Shot:** {entry['shot_id']}\n")
+        if entry.get("dimension"):
+            f.write(f"**Dimension:** {entry['dimension']}\n")
+        f.write(f"\n{entry.get('comment', '')}\n")
+        f.write("\n---\n")
+
+@app.route("/api/final/videos", methods=["GET", "POST"])
+def api_final_videos():
+    if request.method == "POST":
+        data = request.json
+        index = load_final_index()
+        video = {
+            "id": data.get("id", f"vid-{int(time.time())}"),
+            "title": data.get("title", "Untitled"),
+            "essay": data.get("essay", ""),
+            "channel": data.get("channel", ""),
+            "mp4_path": data.get("mp4_path", ""),
+            "duration": data.get("duration", 0),
+            "shots": data.get("shots", []),
+            "status": data.get("status", "draft"),
+            "created_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+            "updated_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+            "version": 1,
+        }
+        # Check for existing
+        for i, v in enumerate(index):
+            if v["id"] == video["id"]:
+                video["version"] = v.get("version", 0) + 1
+                video["created_at"] = v["created_at"]
+                index[i] = video
+                break
+        else:
+            index.append(video)
+        save_final_index(index)
+        return jsonify(video)
+    # GET — list all
+    index = load_final_index()
+    return jsonify(index)
+
+@app.route("/api/final/videos/<video_id>")
+def api_final_video(video_id):
+    index = load_final_index()
+    video = next((v for v in index if v["id"] == video_id), None)
+    if not video:
+        return jsonify({"error": "not found"}), 404
+    # Load episode comments
+    comments_path = FINAL_COMMENTS / f"{video_id}.json"
+    video["comments"] = json.loads(comments_path.read_text()) if comments_path.exists() else []
+    # Load per-shot feedback
+    shots_path = FINAL_SHOTS / f"{video_id}.json"
+    shot_feedback = json.loads(shots_path.read_text()) if shots_path.exists() else {}
+    for s in video.get("shots", []):
+        sid = s.get("id", "")
+        s["feedback"] = shot_feedback.get(sid, [])
+    return jsonify(video)
+
+@app.route("/api/final/videos/<video_id>/feedback", methods=["POST"])
+def api_final_video_feedback(video_id):
+    ensure_final_dirs()
+    data = request.json
+    entry = {
+        "id": str(int(time.time() * 1000)),
+        "author": data.get("author", "Thomas"),
+        "type": data.get("type", "episode"),
+        "rating": data.get("rating"),
+        "dimension": data.get("dimension", ""),
+        "comment": data.get("comment", ""),
+        "created_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+    }
+    # Save to episode comments
+    comments_path = FINAL_COMMENTS / f"{video_id}.json"
+    comments = json.loads(comments_path.read_text()) if comments_path.exists() else []
+    comments.insert(0, entry)
+    comments_path.write_text(json.dumps(comments, indent=2, ensure_ascii=False))
+    # Write markdown log
+    write_feedback_log(video_id, entry)
+    # Update avg rating in index
+    if data.get("rating"):
+        index = load_final_index()
+        for v in index:
+            if v["id"] == video_id:
+                all_ratings = [c.get("rating") for c in comments if c.get("rating")]
+                v["avgRating"] = round(sum(all_ratings) / len(all_ratings), 2) if all_ratings else None
+                v["updated_at"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+                break
+        save_final_index(index)
+    return jsonify({"ok": True})
+
+@app.route("/api/final/videos/<video_id>/shots/<shot_id>/feedback", methods=["POST"])
+def api_final_shot_feedback(video_id, shot_id):
+    ensure_final_dirs()
+    data = request.json
+    entry = {
+        "id": str(int(time.time() * 1000)),
+        "author": data.get("author", "Thomas"),
+        "rating": data.get("rating"),
+        "dimension": data.get("dimension", ""),
+        "comment": data.get("comment", ""),
+        "created_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+    }
+    # Save to per-shot feedback
+    shots_path = FINAL_SHOTS / f"{video_id}.json"
+    shot_feedback = json.loads(shots_path.read_text()) if shots_path.exists() else {}
+    if shot_id not in shot_feedback:
+        shot_feedback[shot_id] = []
+    shot_feedback[shot_id].insert(0, entry)
+    shots_path.write_text(json.dumps(shot_feedback, indent=2, ensure_ascii=False))
+    # Write markdown log
+    write_feedback_log(video_id, {**entry, "type": "shot", "shot_id": shot_id})
+    return jsonify({"ok": True})
+
+@app.route("/api/final/videos/<video_id>/shots/<shot_id>", methods=["PUT"])
+def api_final_shot_update(video_id, shot_id):
+    data = request.json
+    index = load_final_index()
+    for v in index:
+        if v["id"] == video_id:
+            for s in v.get("shots", []):
+                if s["id"] == shot_id:
+                    s.update(data)
+                    s["updated_at"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+                    save_final_index(index)
+                    return jsonify(s)
+    return jsonify({"error": "not found"}), 404
+
 # ── STATIC FILES ────────────────────────────────────────────────────────────
 
 @app.route("/")

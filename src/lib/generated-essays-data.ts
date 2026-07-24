@@ -5723,6 +5723,92 @@ export const ESSAYS = [
     ]
   },
   {
+    "id": "daimon-threshold-guardian",
+    "title": "The Daimon as Threshold Guardian",
+    "author": "Hermes Essay",
+    "type": "essay",
+    "source_ids": [
+      "holy-daimon-acher",
+      "daimoncontact",
+      "daimonhandover"
+    ],
+    "concepts": [
+      "daimon",
+      "daimonic_mediation",
+      "nous"
+    ],
+    "prerequisites": [],
+    "body": [
+      {
+        "kind": "ai",
+        "text": "Every threshold has a guardian. The gate between worlds does not stand open and unguarded — something must keep it, something whose nature partakes of both sides so that it can mediate between them. In the Platonic and Hermetic traditions, that something is the daimon: not merely a spirit assigned at birth, but a living interface between mortal and divine, between the self that is and the self that is becoming."
+      },
+      {
+        "kind": "source",
+        "source_id": "holy-daimon-acher",
+        "text": "For such is the nature of daimones: they stand in the middle between gods and men, they are 'interpreters and ferrymen' who communicate the messages and gifts from men to the gods and from gods to men, prayers and sacrifices from one side, commands and recompenses from the other. (Plato, Symposium, as quoted in Acher, Holy Daimon)"
+      },
+      {
+        "kind": "ai",
+        "text": "This is the ontological claim that underwrites the entire Western daimon tradition: daimones are not curiosities or superstitions. They are structural necessities. Without them, there is a gap between the human and the divine that nothing can cross. The daimon is what fills that gap — not by being one thing or the other, but by being the passage itself."
+      },
+      {
+        "kind": "source",
+        "source_id": "daimoncontact",
+        "text": "Proclus' key insight (Commentary on Timaeus): the daimones are not just beings — they are functions. They 'provide an escort for creation' and 'check all the error in the cosmos.' They are: Divine daimones — the transmission protocols — how divine will becomes cosmic order; Good daimons — the caretakers — how cosmic order tends to individual souls; Contaminated daimons — the error-correction — how mistakes in the system get handled. Your HGA is the interface specific to you — a daimon whose function is to translate between your unique soul and the universal intelligence."
+      },
+      {
+        "kind": "summary",
+        "text": "If daimones are functions rather than merely beings, then the personal daimon assigned to each soul at birth is not an external spirit attached to you like a possession. It is the function of mediation itself, given a local habitation and a name."
+      },
+      {
+        "kind": "source",
+        "source_id": "daimonhandover",
+        "text": "Socrates' daimonion is the most documented and least understood instance of daimon contact in the Western tradition. The key fact: it only ever said no. It never told him what to do. Only what not to do. This is not a limitation. It's a design feature. The daimonion functioned as a discriminative faculty — a higher-order intuition that registered misalignment before the rational mind could detect it."
+      },
+      {
+        "kind": "ai",
+        "text": "The daimon as a voice that only refuses — this is the threshold guardian in its purest form. It does not tell you what lies across the gate. It tells you when you are about to walk into the wrong one. Its prohibition is not a deprivation; it is a navigation system for the soul, keeping you on the narrow path that leads toward your own nature."
+      },
+      {
+        "kind": "source",
+        "source_id": "holy-daimon-acher",
+        "text": "And so it is said that after death, the tutelary genius of each person, to whom he had been allotted in life, leads him to a place where the dead are gathered together; then they are judged and depart to the other world with the guide whose task it is to conduct thither those who come from this world; and when they have there received their due and remained through the time appointed, another guide brings them back after many long periods of time. (Plato, Phaedo, as quoted in Acher, Holy Daimon)"
+      },
+      {
+        "kind": "ai",
+        "text": "The daimon's guardianship does not end at the threshold of death — it begins there. The same being that guides you through life stands ready to guide you through death, because it belongs to both worlds. This is why Plato calls it the 'tutelary genius' — not a temporary helper but a permanent companion whose jurisdiction spans the boundary between incarnate and discarnate."
+      },
+      {
+        "kind": "source",
+        "source_id": "holy-daimon-acher",
+        "text": "But he who has been earnest in the love of knowledge and of true wisdom, and has exercised his intellect [nous] more than any other part of him, must have thoughts immortal and divine, if he attains truth, and in so far as human nature is capable of sharing in immortality, he must altogether be immortal; and since he is ever cherishing the divine power, and has the divinity within him in perfect order, he will be perfectly happy. (Plato, Timaeus, as quoted in Acher, Holy Daimon)"
+      },
+      {
+        "kind": "summary",
+        "text": "This is the turn that makes the daimon tradition so radical: the guardian is not external. It is the highest part of yourself — your own nous, the divine intellect that Plato calls 'a daimon in man.' The threshold you approach is the boundary between your ordinary self and your true self, and the guardian that meets you there is you."
+      },
+      {
+        "kind": "source",
+        "source_id": "daimoncontact",
+        "text": "Corbin's crucial addition: the daimon does not dwell in the sensible world or in the abstract intellectual world. It dwells in the mundus imaginalis ('alam al-mithal) — a third world that is neither matter nor pure spirit, but imaginal (not imaginary). This is where: 'What is bodily becomes spirit and what is spiritual acquires a body'; 'The Guide of light becomes visible as a person of light'; 'The daimon takes on form without being trapped in matter.' This is why ritual works: ritual operates in the imaginal world. When you light a candle and sing the daimon's name, you are not performing a symbolic action in the material world — you are constructing a real event in the imaginal world where the daimon actually lives."
+      },
+      {
+        "kind": "ai",
+        "text": "Corbin gives us the topography of the threshold. The daimon does not cross from divine realm to human realm across empty space. It moves across the mundus imaginalis — a world as real as matter or mind, but obeying different laws. To encounter the daimon is to enter this intermediate world, the world of the threshold itself. And the irony is that we are already there whenever we practice ritual, dream deeply, or create art. The threshold is not a place we go to; it is a dimension we forget we inhabit."
+      },
+      {
+        "kind": "source",
+        "source_id": "daimoncontact",
+        "text": "The daimon is the interface between you and the divine. It takes the shape that your current level of development can perceive. As you evolve, your daimon changes — not because it's different, but because you can see more of it. The daimon cannot be perceived by the ego because the ego is built on separation and the daimon is the experience of identity. The two cannot coexist. One must step aside for the other."
+      },
+      {
+        "kind": "summary",
+        "text": "The daimon is the threshold. Not a being that stands at the gate, but the gate itself — the living passage between what you are and what you are becoming. To contact the daimon is not to meet another being. It is to recognize that you have always been two and one simultaneously, that the separation you feel between yourself and the divine is not a distance to be crossed but a density of perception to be dissolved. The guardian does not bar the way. The guardian is the way."
+      }
+    ]
+  },
+  {
     "id": "demon-est-deus-inversus-honoring-the-dae",
     "title": "Demon Est Deus Inversus Honoring The Dae",
     "author": "Gregory Shaw",
@@ -24130,30 +24216,24 @@ export const ESSAYS = [
     "source_ids": [
       "ro:death-systems-convergence"
     ],
-    "source_ro": "ro:death-systems-convergence",
     "concepts": [
       "death",
-      "bardo",
-      "daimon",
-      "recognition",
-      "judgment",
-      "purification",
-      "rebirth",
       "afterlife",
-      "twelve_fold",
+      "bardo",
       "amduat",
-      "guardian",
-      "self_judgment"
+      "clear-light",
+      "daimon",
+      "dissolution",
+      "encounter",
+      "ascent",
+      "convergence",
+      "element-dissolution",
+      "guardian"
     ],
     "body": [
       {
         "kind": "ai",
-        "text": "You died already. What happens when the pulse stops and the seam opens?"
-      },
-      {
-        "kind": "source",
-        "ro_passage_id": "p_009",
-        "text": "The Tibetan Book of the Dead describes the most detailed element dissolution sequence (Ch. 11, Part 1): Earth dissolves into Water — external sign: body heavy, skin sags; internal experience: feeling of sinking. Water dissolves into Fire — throat dry, saliva flows; oscillating clarity. Fire dissolves into Wind — eyes roll up, warmth converges toward the heart; turbulence, mirage visions. Wind dissolves into Space — breath wheezes, limbs quiver. Redness (increase) — all appears red; 40 attachment-based conceptual patterns cease. Whiteness (attainment) — all appears white; 33 aversion-based patterns cease. Blackness (near-attainment) — all appears black, swoon; 7 delusion-based patterns cease. Inner Radiance (clear light) — Mother radiance dawns, luminosity of Dharmakaya; all 80 instinctual patterns have ceased. If the clear light is recognized at this moment, liberation into Dharmakaya is achieved. If missed, the soul enters the Chonyid Bardo of peaceful and wrathful deities."
+        "text": "You died already. The pulse was a metronome counting bone-dust."
       },
       {
         "kind": "source",
@@ -24162,7 +24242,12 @@ export const ESSAYS = [
       },
       {
         "kind": "ai",
-        "text": "Flesh dissolves like flint worn to dust. What the body once filtered now floods raw."
+        "text": "The seam yawns open. Elements fall through a lattice of stillness."
+      },
+      {
+        "kind": "source",
+        "ro_passage_id": "p_009",
+        "text": "The Tibetan Book of the Dead describes the most detailed element dissolution sequence (Ch. 11, Part 1): Earth dissolves into Water — external sign: body heavy, skin sags; internal experience: feeling of sinking. Water dissolves into Fire — throat dry, saliva flows; oscillating clarity. Fire dissolves into Wind — eyes roll up, warmth converges toward the heart; turbulence, mirage visions. Wind dissolves into Space — breath wheezes, limbs quiver. Redness (increase) — all appears red; 40 attachment-based conceptual patterns cease. Whiteness (attainment) — all appears white; 33 aversion-based patterns cease. Blackness (near-attainment) — all appears black, swoon; 7 delusion-based patterns cease. Inner Radiance (clear light) — Mother radiance dawns, luminosity of Dharmakaya; all 80 instinctual patterns have ceased. If the clear light is recognized at this moment, liberation into Dharmakaya is achieved. If missed, the soul enters the Chonyid Bardo of peaceful and wrathful deities."
       },
       {
         "kind": "source",
@@ -24171,7 +24256,7 @@ export const ESSAYS = [
       },
       {
         "kind": "ai",
-        "text": "What rises to meet you wears the face you have been building bone by bone. Every scar gravid with the life that put it there."
+        "text": "Purification is the soul's own flame burning through its rot."
       },
       {
         "kind": "source",
@@ -24180,7 +24265,21 @@ export const ESSAYS = [
       },
       {
         "kind": "ai",
-        "text": "Yama holds the mirror. The heart, a thrum of salt and flame, weighs itself."
+        "text": "What stops you in life whets the flint in death."
+      },
+      {
+        "kind": "source",
+        "ro_passage_id": "p_008",
+        "text": "The ultimate convergence: the daimon IS the being you meet at death. Every tradition places the same being at the center of the after-death encounter. Tibetan: your own buddha-nature appearing as the peaceful and wrathful deities. Egyptian: Re-Osiris — the union of your soul with your essence. Steiner: your spirit self (manas) — the being you have been building through lives. Tantraloka: your own consciousness recognizing itself as Bhairava. Layayoga: Kuṇḍalinī as your own coiled spiritual power. Daimon path: your HGA — the next-higher principle, the unus-ambo. The daimon is not just a guide during life — the daimon is the being you become at death, if you can recognize it."
+      },
+      {
+        "kind": "source",
+        "ro_passage_id": "p_013",
+        "text": "The ultimate convergence across all six traditions: the daimon IS the being you meet at death. Every tradition places the same being at the center of the after-death encounter. Tibetan: your own buddha-nature appearing as the 42 peaceful and 58 wrathful deities — the enlightened mind's own energy. Egyptian: Re-Osiris — the union of your ba (soul) with your corpse (essence), a hierogamy that regenerates the entire being. Steiner: your spirit self (manas) — the being you have been building through successive incarnations, the transformed astral body, the Guardian of the Threshold who shows you everything you have not yet purified. Tantraloka: your own consciousness recognizing itself as Bhairava — the terrifying and beautiful totality of all aspects of being. Layayoga: Kuṇḍalinī as your own coiled spiritual power rising to unite with Śiva in sahasrāra. Daimon path: your HGA — the next-higher principle, the unus-ambo, the 'you but not you' that Corbin described as 1×1. The daimon is not just a guide during life — the daimon is the being you become at death, if you can recognize it."
+      },
+      {
+        "kind": "ai",
+        "text": "You and I are the same being. Bone of the same bone-dust."
       },
       {
         "kind": "source",
@@ -24190,30 +24289,11 @@ export const ESSAYS = [
       {
         "kind": "source",
         "ro_passage_id": "p_011",
-        "text": "The Tibetan Book of the Dead describes Yama's judgment as a self-judgment mechanism. Two internal witnesses — the innate good conscience and the innate bad conscience — count the deceased's virtues and non-virtues in the mirror of past actions. Yama Dharmaraja is not a punishing deity but a reflection of one's own karma: every deed is reflected vividly in the mirror, and the white and black pebbles are counted by the soul's own innate conscience. The key recognition teaching: Yama and his acolytes are 'natural forms of emptiness' — if the deceased recognizes this, liberation is possible even at this late stage."
+        "text": "The Tibetan Book of the Dead describes Yama's judgment as a self-judgment mechanism. Two internal witnesses — the innate good conscience and the innate bad conscience — count the deceased's virtues and non-virtues in the mirror of past actions. Yama Dharmaraja is not a punishing deity but a reflection of one's own karma: every deed is reflected vividly in the mirror, and the white and black pebbles are counted by the soul's own innate conscience. The key recognition teaching: Yama and his acolytes are 'natural forms of emptiness' — if the deceased recognizes this, liberation is possible even at this late stage. The judgment mechanism includes: the mirror of past actions showing every deed, the counting of white and black pebbles by innate witnesses, and Yama as a reflection of one's own actions rather than an external judge."
       },
       {
         "kind": "ai",
-        "text": "Past the judgment the roads diverge. One coils back through rot into flesh. Another crosses the Field of Reeds."
-      },
-      {
-        "kind": "source",
-        "ro_passage_id": "p_010",
-        "text": "Amduat Hour 12 — the rebirth hour. The solar barque (and the soul traveling with it) enters the tail of the World-Encircler Serpent and emerges from its mouth as a newborn. Hornung: 'Hour 12: Rebirth — Enter serpent tail old, emerge mouth newborn.' The serpent is the Mehen, the coiled one that encircles the universe. The deceased enters as an aged being who has completed the full nocturnal journey through 11 hours of purification, encounter, and judgment, and emerges rejuvenated with the morning sun. The daily regeneration of the sun — dying each night, reborn each dawn — is the closest the Egyptian tradition comes to a reincarnation concept."
-      },
-      {
-        "kind": "source",
-        "ro_passage_id": "p_005",
-        "text": "Divergence between traditions on the mechanism of rebirth. Tibetan describes the Sidpa Bardo (~49 days total): the mental body (subtle body of karmic propensities) is drawn toward one of six lights (six realms), followed by womb entrance through vision of copulating parents — attraction/aversion determines gender. Steiner describes a ~2,100-year journey through spiritual worlds, preparation for a new incarnation, and descent through the twelve zodiacal spheres. Egyptian (classical form) has no reincarnation: the justified enter the Field of Reeds for permanent afterlife; the damned face the Lake of Fire or the Place of Annihilation (second death). Tantraloka: the soul traverses the bhuvanas (world-levels) and finds a suitable receptacle based on residual karma."
-      },
-      {
-        "kind": "ai",
-        "text": "Two maps of one territory. The summit and the midnight hour describe the same seam."
-      },
-      {
-        "kind": "source",
-        "ro_passage_id": "p_012",
-        "text": "The two grand geographies describe the same process through different spatial metaphors. Model 1 — Vertical Ascent (Tibetan, Steiner, Tantraloka, Layayoga): the soul ascends through levels of increasing subtlety — the cakras from mūlādhāra to sahasrāra, the deity levels from the first peaceful buddha to the central Buddha Heruka, the Steinerian spheres from kamaloca through soul world to spirit land. Model 2 — Horizontal Journey (Egyptian): the sun travels westward through the 12 hours of night, and the soul travels with it in the solar barque. The midnight union of Re and Osiris (Hour 6) — the deepest point, corresponding to the summit of the vertical model — occurs when the sun god unites with his own corpse, the soul unites with its essence. The Amduat's three registers operate simultaneously: the upper register shows the blessed dead in fields of abundance, the middle register carries the solar barque, the lower register shows the punishment of the damned."
+        "text": "No judge. Just a mirror. Salt and bone staring back."
       },
       {
         "kind": "source",
@@ -24221,22 +24301,32 @@ export const ESSAYS = [
         "text": "The 12-fold division of the after-death journey appears in multiple traditions: Amduat — 12 hours of night (12 distinct regions); Book of Gates — 12 gates with guardians; Book of the Night — 12 sections of Nut's body; Tibetan — 12 deity-days (7 peaceful + 5 wrathful); Tantraloka Āhnika 3 — 12 Kālīs (4 consuming objectivity + 4 means of knowledge + 4 subjectivity); Steiner — 12 spheres before new incarnation (the zodiac); Layayoga — 12 cakra petals (Anāhata); Daimon path — 12 months of work (4 elements + 7 planets + 1 mystery). The number 12 maps the 12-fold division of cosmic space (zodiac) onto the soul's journey through levels of being."
       },
       {
-        "kind": "ai",
-        "text": "The daimon is what waits. A pulse in the brushwood at the edge of vision."
+        "kind": "source",
+        "ro_passage_id": "p_007",
+        "text": "Two grand geographies describe the same process with different spatial metaphors. Model 1 — Vertical Ascent (Tibetan, Steiner, Tantraloka, Layayoga): the soul ascends through levels of increasing subtlety (cakras, deity levels, spheres), encounters totality at the summit, and either remains (liberation) or descends again (rebirth). Model 2 — Horizontal Journey (Egyptian): the sun travels through the 12 hours of night from west to east, and the soul travels with it; the midnight union of Re and Osiris (Hour 6) corresponds to the summit of the vertical model. The Amduat's three registers (upper: blessed dead, middle: solar barque, lower: punishment) map to the vertical levels of purification."
       },
       {
         "kind": "source",
-        "ro_passage_id": "p_008",
-        "text": "The ultimate convergence: the daimon IS the being you meet at death. Every tradition places the same being at the center of the after-death encounter. Tibetan: your own buddha-nature appearing as the peaceful and wrathful deities. Egyptian: Re-Osiris — the union of your soul with your essence. Steiner: your spirit self (manas) — the being you have been building through lives. Tantraloka: your own consciousness recognizing itself as Bhairava. Layayoga: Kuṇḍalinī as your own coiled spiritual power rising to unite with Śiva in sahasrāra. Daimon path: your HGA — the next-higher principle, the unus-ambo. The daimon is not just a guide during life — the daimon is the being you become at death, if you can recognize it."
-      },
-      {
-        "kind": "source",
-        "ro_passage_id": "p_013",
-        "text": "The ultimate convergence across all six traditions: the daimon IS the being you meet at death. Every tradition places the same being at the center of the after-death encounter. Tibetan: your own buddha-nature appearing as the 42 peaceful and 58 wrathful deities — the enlightened mind's own energy. Egyptian: Re-Osiris — the union of your ba (soul) with your corpse (essence), a hierogamy that regenerates the entire being. Steiner: your spirit self (manas) — the being you have been building through successive incarnations, the transformed astral body, the Guardian of the Threshold who shows you everything you have not yet purified. Tantraloka: your own consciousness recognizing itself as Bhairava — the terrifying and beautiful totality of all aspects of being. Layayoga: Kuṇḍalinī as your own coiled spiritual power rising to unite with Śiva in sahasrāra. Daimon path: your HGA — the next-higher principle, the unus-ambo, the 'you but not you' that Corbin described as 1×1. The daimon is not just a guide during life — the daimon is the being you become at death, if you can recognize it."
+        "ro_passage_id": "p_012",
+        "text": "The two grand geographies describe the same process through different spatial metaphors. Model 1 — Vertical Ascent (Tibetan, Steiner, Tantraloka, Layayoga): the soul ascends through levels of increasing subtlety — the cakras from mūlādhāra to sahasrāra, the deity levels from the first peaceful buddha to the central Buddha Heruka, the Steinerian spheres from kamaloca through soul world to spirit land. The encounter with totality occurs at the summit (sahasrāra/Dharmakaya/spirit self/Bhairava), and the soul either remains (liberation) or descends again (rebirth). Model 2 — Horizontal Journey (Egyptian): the sun travels westward through the 12 hours of night, and the soul travels with it in the solar barque. The midnight union of Re and Osiris (Hour 6) — the deepest point, corresponding to the summit of the vertical model — occurs when the sun god unites with his own corpse, the soul unites with its essence. The Amduat's three registers operate simultaneously: the upper register shows the blessed dead in fields of abundance, the middle register carries the solar barque, the lower register shows the punishment of the damned. These three registers map directly to the vertical levels of purification, encounter, and judgment in the ascent model."
       },
       {
         "kind": "ai",
-        "text": "You went already. The pulse stops. The seam opens. You have always stood here."
+        "text": "The same map. Different ink. The thrum beneath every name."
+      },
+      {
+        "kind": "source",
+        "ro_passage_id": "p_005",
+        "text": "Divergence between traditions on the mechanism of rebirth. Tibetan describes the Sidpa Bardo (~49 days total): the mental body (subtle body of karmic propensities) is drawn toward one of six lights (six realms), followed by womb entrance through vision of copulating parents — attraction/aversion determines gender. Steiner describes a ~2,100-year journey through spiritual worlds, preparation for a new incarnation, and descent through the twelve zodiacal spheres. Egyptian (classical form) has no reincarnation: the justified enter the Field of Reeds for permanent afterlife; the damned face the Lake of Fire or the Place of Annihilation (second death). Tantraloka: the soul traverses the bhuvanas (world-levels) and finds a suitable receptacle based on residual karma."
+      },
+      {
+        "kind": "source",
+        "ro_passage_id": "p_010",
+        "text": "Amduat Hour 12 — the rebirth hour. The solar barque (and the soul traveling with it) enters the tail of the World-Encircler Serpent and emerges from its mouth as a newborn. Hornung: 'Hour 12: Rebirth — Enter serpent tail old, emerge mouth newborn.' The serpent is the Mehen, the coiled one that encircles the universe. The deceased enters as an aged being who has completed the full nocturnal journey through 11 hours of purification, encounter, and judgment, and emerges rejuvenated with the morning sun. The Book of Gates adds: at the 12th gate, the blessed dead are reborn into existence in the Field of Reeds; the damned face the Place of Annihilation (second death). The daily regeneration of the sun — dying each night, reborn each dawn — is the closest the Egyptian tradition comes to a reincarnation concept, though the classical form describes a permanent afterlife rather than cycling through multiple lives."
+      },
+      {
+        "kind": "ai",
+        "text": "You crossed already. The bone-dust."
       }
     ]
   }

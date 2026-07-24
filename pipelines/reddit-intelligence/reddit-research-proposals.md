@@ -12,8 +12,8 @@ Each proposal lists specific queries against the Reddit Parquet files in R2 (217
 
 ```bash
 # Credentials (set fresh each session)
-export AWS_ACCESS_KEY_ID="b31c6e90450f740629ac030f6e16eef4"
-export AWS_SECRET_ACCESS_KEY="cce64be980580e166482b2c64c6396d5ea25bdb889ff43f3782c0932a75a9b32"
+export AWS_ACCESS_KEY_ID="<redacted>"
+export AWS_SECRET_ACCESS_KEY="<redacted>"
 export AWS_DEFAULT_REGION="auto"
 export S3_ENDPOINT="https://954612afb5a97bb15dddcdc70176813d.r2.cloudflarestorage.com"
 ```
@@ -29,8 +29,8 @@ S3 = "s3://research-datasets/reddit/full"
 con = duckdb.connect()
 con.execute("INSTALL httpfs; LOAD httpfs;")
 for k, v in [("s3_region","auto"), ("s3_endpoint","954612afb5a97bb15dddcdc70176813d.r2.cloudflarestorage.com"),
-             ("s3_access_key_id","b31c6e90450f740629ac030f6e16eef4"),
-             ("s3_secret_access_key","cce64be980580e166482b2c64c6396d5ea25bdb889ff43f3782c0932a75a9b32"),
+             ("s3_access_key_id","<redacted>"),
+             ("s3_secret_access_key","<redacted>"),
              ("s3_url_style","path")]:
     con.execute(f"SET {k}='{v}'")
 

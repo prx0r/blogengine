@@ -85,8 +85,8 @@ When a result is unclear, here's the process we used:
 
 ```bash
 # Required env vars (set fresh each session):
-export AWS_ACCESS_KEY_ID="b31c6e90450f740629ac030f6e16eef4"
-export AWS_SECRET_ACCESS_KEY="cce64be980580e166482b2c64c6396d5ea25bdb889ff43f3782c0932a75a9b32"
+export AWS_ACCESS_KEY_ID="<redacted>"
+export AWS_SECRET_ACCESS_KEY="<redacted>"
 export AWS_DEFAULT_REGION="auto"
 export S3_ENDPOINT="https://954612afb5a97bb15dddcdc70176813d.r2.cloudflarestorage.com"
 

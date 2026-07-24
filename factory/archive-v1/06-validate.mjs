@@ -1,0 +1,1 @@
+../scripts/validate-video.mjs

@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Studio Dashboard</title>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <style>
 :root{--bg:#0D1117;--surface:#161B22;--border:#30363D;--text:#C9D1D9;--dim:#8B949E;--accent:#58A6FF;--green:#3FB950;--gold:#D29922;--cyan:#00D4FF}
 *{margin:0;padding:0;box-sizing:border-box}
@@ -79,6 +80,8 @@ button.fc{background:#003545;color:var(--cyan);border-color:var(--cyan)}
 
 <div class="nav">
   <a class="fc active" onclick="showPage('fablecut')">⚡ Editor</a>
+  <a onclick="showPage('final')">◆ Final</a>
+  <a onclick="showPage('factory')" style="color:var(--cyan)">🏭 Factory</a>
   <a onclick="showPage('review')">✎ Review</a>
   <a onclick="showPage('feedback')">⚑ Feedback</a>
   <a onclick="showPage('scenes')">◈ Library</a>
@@ -134,6 +137,20 @@ button.fc{background:#003545;color:var(--cyan);border-color:var(--cyan)}
   <div id="val-detail" style="margin-top:12px"></div>
 </div>
 
+<!-- FACTORY -->
+<div id="page-factory" class="page">
+  <div class="stat-row" id="fy-stats"></div>
+  <div class="flex mb-8 wrap">
+    <h2 style="font-size:16px;flex:1">🏭 Factory Pipeline</h2>
+    <span style="font-size:11px;color:var(--dim)" id="fy-worker-url">worker: factory-worker.tradesprior.workers.dev</span>
+  </div>
+  <div style="margin-bottom:12px">
+    <input id="fy-search" placeholder="filter jobs..." onkeyup="fyFilter()" style="width:100%;background:var(--bg);border:1px solid var(--border);padding:6px 10px;border-radius:4px;color:var(--text);font-size:12px">
+  </div>
+  <div id="fy-error" style="display:none;background:rgba(141,44,57,0.15);border:1px solid var(--gold);border-radius:6px;padding:10px;margin-bottom:8px;font-size:12px"></div>
+  <div id="fy-jobs"></div>
+</div>
+
 <!-- REVIEW -->
 <div id="page-review" class="page" style="padding:0;display:flex;overflow:hidden">
   <div style="width:260px;min-width:260px;background:var(--surface);border-right:1px solid var(--border);display:flex;flex-direction:column;overflow:hidden">
@@ -155,6 +172,55 @@ button.fc{background:#003545;color:var(--cyan);border-color:var(--cyan)}
     <div style="flex:1;background:var(--surface);border-top:1px solid var(--border);display:flex;flex-direction:column;overflow:hidden">
       <div style="padding:4px 12px;border-bottom:1px solid var(--border);font-size:10px;color:var(--gold);flex-shrink:0">FEEDBACK</div>
       <div id="rv-comments" style="flex:1;overflow-y:auto;padding:6px 12px;font-size:11px"></div>
+    </div>
+  </div>
+</div>
+
+<!-- FINAL PRODUCTION VIDEOS -->
+<div id="page-final" class="page" style="padding:0;display:flex;overflow:hidden">
+  <div style="width:280px;min-width:280px;background:var(--surface);border-right:1px solid var(--border);display:flex;flex-direction:column;overflow:hidden">
+    <div style="padding:8px 10px;border-bottom:1px solid var(--border);font-size:11px;font-weight:600;color:var(--gold);display:flex;justify-content:space-between;align-items:center">
+      <span>PRODUCTION</span>
+      <span id="fn-count" style="font-size:9px;color:var(--dim);font-weight:400"></span>
+    </div>
+    <div style="padding:4px 8px;border-bottom:1px solid var(--border)">
+      <input id="fn-search" placeholder="filter..." onkeyup="fnFilter()" style="width:100%;background:var(--bg);border:1px solid var(--border);padding:4px 6px;border-radius:3px;color:var(--text);font-size:10px">
+    </div>
+    <div id="fn-list" style="flex:1;overflow-y:auto;padding:4px"></div>
+  </div>
+  <div style="flex:1;display:flex;flex-direction:column;overflow:hidden">
+    <div style="height:45%;min-height:240px;background:#000;display:flex;align-items:center;justify-content:center;position:relative" id="fn-player-area">
+      <div id="fn-placeholder" style="color:var(--dim);text-align:center;font-size:12px">
+        <div style="font-size:24px;margin-bottom:4px">◆</div>
+        select a video
+      </div>
+      <video id="fn-player" controls style="max-width:100%;max-height:100%;display:none" preload="metadata"></video>
+    </div>
+    <div id="fn-info" style="display:none;padding:5px 12px;background:var(--surface);border-top:1px solid var(--border);font-size:11px;flex-shrink:0">
+      <div class="flex wrap gap-4">
+        <span id="fn-title" style="color:var(--text);font-weight:600"></span>
+        <span id="fn-meta" style="color:var(--dim);margin-left:6px"></span>
+        <span id="fn-status-badge" class="badge" style="margin-left:auto"></span>
+        <span id="fn-version" style="font-size:10px;color:var(--dim)"></span>
+      </div>
+    </div>
+    <!-- Shot timeline -->
+    <div id="fn-shots" style="display:none;background:var(--bg);border-top:1px solid var(--border);padding:6px 12px;flex-shrink:0;max-height:120px;overflow-y:auto">
+      <div style="font-size:9px;color:var(--gold);margin-bottom:4px;font-weight:600">SHOTS</div>
+      <div id="fn-shot-list" class="flex wrap gap-4"></div>
+    </div>
+    <!-- Feedback area split: shot feedback + episode feedback -->
+    <div style="flex:1;background:var(--surface);border-top:1px solid var(--border);display:flex;overflow:hidden;min-height:0">
+      <!-- Per-shot feedback (left) -->
+      <div style="flex:1;display:flex;flex-direction:column;overflow:hidden;border-right:1px solid var(--border)">
+        <div style="padding:3px 10px;border-bottom:1px solid var(--border);font-size:9px;color:var(--gold);font-weight:600;flex-shrink:0">SHOT FEEDBACK <span id="fn-shot-label" style="color:var(--dim);font-weight:400"></span></div>
+        <div id="fn-shot-comments" style="flex:1;overflow-y:auto;padding:4px 10px;font-size:10px"></div>
+      </div>
+      <!-- Episode feedback (right) -->
+      <div style="flex:1;display:flex;flex-direction:column;overflow:hidden">
+        <div style="padding:3px 10px;border-bottom:1px solid var(--border);font-size:9px;color:var(--gold);font-weight:600;flex-shrink:0">EPISODE FEEDBACK</div>
+        <div id="fn-ep-comments" style="flex:1;overflow-y:auto;padding:4px 10px;font-size:10px"></div>
+      </div>
     </div>
   </div>
 </div>
@@ -236,6 +302,8 @@ function showPage(id) {
   if (id==='blueprints') bpLoad();
   if (id==='channels') chLoad();
   if (id==='analytics') anLoad();
+  if (id==='final') { fnLoad(); console.log('Final tab loaded'); }
+  if (id==='factory') fyLoad();
   if (id==='review') rvLoad();
   if (id==='feedback') fbLoad();
   if (id==='scenes') scInit();
@@ -356,6 +424,225 @@ async function anLoad(){
   `).join('');
 }
 
+// ── FINAL ──
+let fnVideos = [];
+let fnCurrent = null;
+let fnCurrentShot = null;
+let fnFilter = '';
+
+async function fnLoad() {
+  const d = await api('/api/final/videos');
+  fnVideos = d || [];
+  fnRenderList();
+}
+
+function fnRenderList() {
+  const el = document.getElementById('fn-list');
+  let videos = fnVideos;
+  if (fnFilter) videos = videos.filter(v => JSON.stringify(v).toLowerCase().includes(fnFilter));
+  document.getElementById('fn-count').textContent = `${videos.length} videos`;
+  el.innerHTML = (videos.length ? videos.map(v => {
+    const active = fnCurrent && fnCurrent.id === v.id ? 'style="background:rgba(88,166,255,0.1);border-color:var(--accent)"' : '';
+    const statusColors = {draft:'var(--dim)', review:'var(--gold)', revision:'var(--cyan)', final:'var(--green)'};
+    const sc = statusColors[v.status] || 'var(--dim)';
+    const avg = v.avgRating ? `★${v.avgRating.toFixed(1)}` : '';
+    return `<div ${active} onclick="fnSelect('${v.id}')" style="cursor:pointer;padding:6px 8px;border-radius:3px;border:1px solid transparent;margin-bottom:2px">
+      <div style="font-size:11px;font-weight:500">${v.title}</div>
+      <div class="flex gap-4" style="font-size:9px;color:var(--dim);margin-top:2px">
+        <span style="color:${sc}">● ${v.status}</span>
+        <span>v${v.version}</span>
+        <span>${v.shots?.length||0} shots</span>
+        ${avg ? `<span style="color:var(--gold)">${avg}</span>` : ''}
+      </div>
+    </div>`;
+  }).join('') : '<div style="padding:12px;text-align:center;color:var(--dim);font-size:10px">no videos yet</div>');
+}
+
+function fnFilter() {
+  fnFilter = document.getElementById('fn-search').value.toLowerCase();
+  fnRenderList();
+}
+
+async function fnSelect(id) {
+  const d = await api(`/api/final/videos/${id}`);
+  fnCurrent = d;
+  fnCurrentShot = null;
+  document.getElementById('fn-title').textContent = d.title;
+  const essayLabel = d.essay ? ` · ${d.essay}` : '';
+  document.getElementById('fn-meta').textContent = `${d.duration}s · ${d.channel}${essayLabel}`;
+  const statusColors = {draft:'grey', review:'yellow', revision:'cyan', final:'green'};
+  document.getElementById('fn-status-badge').className = `badge ${statusColors[d.status]||'grey'}`;
+  document.getElementById('fn-status-badge').textContent = d.status;
+  document.getElementById('fn-version').textContent = `v${d.version} · ${d.created_at ? new Date(d.created_at).toLocaleDateString() : ''}`;
+  document.getElementById('fn-info').style.display = '';
+
+  const player = document.getElementById('fn-player');
+  const placeholder = document.getElementById('fn-placeholder');
+  if (d.mp4_path) {
+    player.style.display = '';
+    placeholder.style.display = 'none';
+    player.src = d.mp4_path;
+    player.load();
+  } else {
+    player.style.display = 'none';
+    placeholder.style.display = '';
+  }
+
+  // Shot timeline
+  fnRenderShots(d.shots || []);
+  fnRenderEpisodeFeedback(d.comments || []);
+  fnRenderShotFeedback([]);
+  fnLoad();
+}
+
+function fnRenderShots(shots) {
+  const el = document.getElementById('fn-shot-list');
+  const container = document.getElementById('fn-shots');
+  container.style.display = shots.length ? '' : 'none';
+  el.innerHTML = shots.map((s, i) => {
+    const fbCount = s.feedback?.length || 0;
+    const hasFb = fbCount > 0;
+    const selected = fnCurrentShot && fnCurrentShot === s.id ? 'style="border-color:var(--gold)"' : '';
+    return `<span onclick="fnSelectShot('${s.id}')" ${selected} class="badge ${hasFb ? 'green' : 'grey'}" style="cursor:pointer;border:1px solid transparent;font-size:10px">
+      ${i+1}. ${s.label || s.id}${hasFb ? ` (${fbCount})` : ''}
+    </span>`;
+  }).join('');
+}
+
+async function fnSelectShot(shotId) {
+  fnCurrentShot = shotId;
+  const video = fnCurrent;
+  if (!video) return;
+  // Re-fetch to get latest shot feedback
+  const d = await api(`/api/final/videos/${video.id}`);
+  fnCurrent = d;
+  const shot = (d.shots || []).find(s => s.id === shotId);
+  document.getElementById('fn-shot-label').textContent = shot ? `— ${shot.label || shotId}` : '';
+  fnRenderShots(d.shots || []);
+  fnRenderShotFeedback(shot?.feedback || []);
+}
+
+function fnRenderShotFeedback(feedback) {
+  const el = document.getElementById('fn-shot-comments');
+  const shotId = fnCurrentShot || '';
+  el.innerHTML = `
+    ${feedback.length ? feedback.map(c => `
+      <div style="margin-bottom:4px;padding-bottom:4px;border-bottom:1px solid #1a1a1f">
+        <div><span style="font-size:9px;color:var(--cyan)">${esc(c.author)}</span>
+        ${c.rating ? `<span style="color:var(--gold);font-size:10px">${'★'.repeat(c.rating)}${'☆'.repeat(5-c.rating)}</span>` : ''}
+        ${c.dimension ? `<span class="badge" style="font-size:8px">${c.dimension}</span>` : ''}
+        <span style="font-size:8px;color:var(--dim)">${c.created_at ? new Date(c.created_at).toLocaleDateString() : ''}</span></div>
+        <div style="font-size:10px;margin-top:2px;color:var(--text)">${esc(c.comment)}</div>
+      </div>
+    `).join('') : '<div style="text-align:center;color:var(--dim);padding:8px;font-size:9px">select a shot to give feedback</div>'}
+    <div style="margin-top:4px;border-top:1px solid #1a1a1f;padding-top:4px">
+      <div class="flex gap-4 wrap" style="margin-bottom:4px">
+        <input id="fn-sauthor" placeholder="name" value="Thomas" style="background:var(--bg);border:1px solid var(--border);padding:3px 6px;border-radius:3px;color:var(--text);font-size:9px;width:80px">
+        <select id="fn-sdimension" style="background:var(--bg);border:1px solid var(--border);color:var(--text);font-size:9px;padding:3px">
+          <option value="">dimension</option>
+          <option value="composition">composition</option>
+          <option value="pacing">pacing</option>
+          <option value="clarity">clarity</option>
+          <option value="aesthetic">aesthetic</option>
+          <option value="accuracy">accuracy</option>
+          <option value="other">other</option>
+        </select>
+        <div id="fn-sstars" style="display:flex;gap:1px;cursor:pointer">${[1,2,3,4,5].map(i => `<span data-v="${i}" onclick="fnSetShotStar(${i})" style="font-size:14px;color:#333">☆</span>`).join('')}</div>
+      </div>
+      <textarea id="fn-stext" placeholder="shot feedback..." style="width:100%;background:var(--bg);border:1px solid var(--border);padding:4px 6px;border-radius:3px;color:var(--text);font-size:9px;resize:vertical;min-height:28px;font-family:inherit;box-sizing:border-box"></textarea>
+      <button onclick="fnSubmitShot('${shotId}')" style="margin-top:3px;background:var(--cyan);color:#000;border:none;padding:2px 10px;border-radius:3px;font-size:9px;font-weight:600;cursor:pointer">send</button>
+    </div>
+  `;
+  window._fnShotRating = 0;
+}
+
+function fnSetShotStar(n) {
+  window._fnShotRating = n;
+  document.querySelectorAll('#fn-sstars span').forEach(el => {
+    const v = parseInt(el.dataset.v);
+    el.textContent = v <= n ? '★' : '☆';
+    el.style.color = v <= n ? 'var(--gold)' : '#333';
+  });
+}
+
+async function fnSubmitShot(shotId) {
+  const text = document.getElementById('fn-stext').value.trim();
+  if (!text || !fnCurrent) return;
+  await api(`/api/final/videos/${fnCurrent.id}/shots/${shotId}/feedback`, {
+    method: 'POST',
+    body: JSON.stringify({
+      author: document.getElementById('fn-sauthor').value || 'Thomas',
+      rating: window._fnShotRating || null,
+      dimension: document.getElementById('fn-sdimension').value || '',
+      comment: text,
+    }),
+  });
+  document.getElementById('fn-stext').value = '';
+  window._fnShotRating = 0;
+  fnSelectShot(shotId);
+}
+
+function fnRenderEpisodeFeedback(comments) {
+  const el = document.getElementById('fn-ep-comments');
+  const videoId = fnCurrent ? fnCurrent.id : '';
+  el.innerHTML = `
+    <div style="font-size:9px;color:var(--dim);margin-bottom:4px">${comments.length} entries</div>
+    ${comments.length ? comments.map(c => `
+      <div style="margin-bottom:4px;padding-bottom:4px;border-bottom:1px solid #1a1a1f">
+        <div><span style="font-size:9px;color:var(--gold)">${esc(c.author)}</span>
+        ${c.rating ? `<span style="color:var(--gold);font-size:10px">${'★'.repeat(c.rating)}${'☆'.repeat(5-c.rating)}</span>` : ''}
+        ${c.dimension ? `<span class="badge" style="font-size:8px">${c.dimension}</span>` : ''}
+        <span style="font-size:8px;color:var(--dim)">${c.created_at ? new Date(c.created_at).toLocaleDateString() : ''}</span></div>
+        <div style="font-size:10px;margin-top:2px">${esc(c.comment)}</div>
+      </div>
+    `).join('') : '<div style="text-align:center;color:var(--dim);padding:8px;font-size:9px">no episode feedback yet</div>'}
+    <div style="margin-top:4px;border-top:1px solid #1a1a1f;padding-top:4px">
+      <div class="flex gap-4 wrap" style="margin-bottom:4px">
+        <input id="fn-eauthor" placeholder="name" value="Thomas" style="background:var(--bg);border:1px solid var(--border);padding:3px 6px;border-radius:3px;color:var(--text);font-size:9px;width:80px">
+        <select id="fn-edimension" style="background:var(--bg);border:1px solid var(--border);color:var(--text);font-size:9px;padding:3px">
+          <option value="">dimension</option>
+          <option value="overall">overall</option>
+          <option value="pacing">pacing</option>
+          <option value="narration">narration</option>
+          <option value="visuals">visuals</option>
+          <option value="accuracy">accuracy</option>
+          <option value="other">other</option>
+        </select>
+        <div id="fn-estars" style="display:flex;gap:1px;cursor:pointer">${[1,2,3,4,5].map(i => `<span data-v="${i}" onclick="fnSetEpStar(${i})" style="font-size:14px;color:#333">☆</span>`).join('')}</div>
+      </div>
+      <textarea id="fn-etext" placeholder="episode feedback..." style="width:100%;background:var(--bg);border:1px solid var(--border);padding:4px 6px;border-radius:3px;color:var(--text);font-size:9px;resize:vertical;min-height:28px;font-family:inherit;box-sizing:border-box"></textarea>
+      <button onclick="fnSubmitEp()" style="margin-top:3px;background:var(--gold);color:#000;border:none;padding:2px 10px;border-radius:3px;font-size:9px;font-weight:600;cursor:pointer">send</button>
+    </div>
+  `;
+  window._fnEpRating = 0;
+}
+
+function fnSetEpStar(n) {
+  window._fnEpRating = n;
+  document.querySelectorAll('#fn-estars span').forEach(el => {
+    const v = parseInt(el.dataset.v);
+    el.textContent = v <= n ? '★' : '☆';
+    el.style.color = v <= n ? 'var(--gold)' : '#333';
+  });
+}
+
+async function fnSubmitEp() {
+  const text = document.getElementById('fn-etext').value.trim();
+  if (!text || !fnCurrent) return;
+  await api(`/api/final/videos/${fnCurrent.id}/feedback`, {
+    method: 'POST',
+    body: JSON.stringify({
+      author: document.getElementById('fn-eauthor').value || 'Thomas',
+      rating: window._fnEpRating || null,
+      dimension: document.getElementById('fn-edimension').value || '',
+      comment: text,
+    }),
+  });
+  document.getElementById('fn-etext').value = '';
+  window._fnEpRating = 0;
+  fnSelect(fnCurrent.id);
+}
+
 // ── REVIEW ──
 let rvVideos = [];
 let rvCurrent = null;
@@ -413,10 +700,13 @@ async function rvSelect(id) {
 
   const player = document.getElementById('rv-player');
   const placeholder = document.getElementById('rv-placeholder');
-  if (d.mp4Key) {
+  let src = '';
+  if (d.localPath) src = `/${d.localPath}`;
+  else if (d.mp4Key) src = `${API_BASE}/api/r2/${d.mp4Key}`;
+  if (src) {
     player.style.display = '';
     placeholder.style.display = 'none';
-    player.src = `${API_BASE}/api/r2/${d.mp4Key}`;
+    player.src = src;
     player.load();
   } else {
     player.style.display = 'none';
@@ -737,6 +1027,169 @@ async function runValidation() {
     dt.innerHTML = '<div style="background:rgba(210,153,34,0.1);border:1px solid var(--gold);border-radius:6px;padding:10px">' +
       d.warnings.map(w => `<div style="font-size:12px">⚠ ${w}</div>`).join('') + '</div>';
   }
+}
+
+// ── FACTORY ──
+const FACTORY_API = 'https://factory-worker.tradesprior.workers.dev';
+let fyFilterStr = '';
+
+async function fyLoad() {
+  const jobs = await fyApi('/api/factory/jobs');
+  if (!jobs || jobs.error) {
+    document.getElementById('fy-error').style.display = '';
+    document.getElementById('fy-error').textContent = 'Factory Worker: ' + (jobs?.error || 'no response');
+    return;
+  }
+  document.getElementById('fy-error').style.display = 'none';
+  
+  const counts = {};
+  jobs.forEach(j => { counts[j.status] = (counts[j.status]||0) + 1; });
+  document.getElementById('fy-stats').innerHTML = 
+    ['draft','rendering','review','final','failed'].map(s =>
+      '<div class="stat-card"><div class="lbl">'+s+'</div><div class="val">'+(counts[s]||0)+'</div></div>'
+    ).join('') +
+    '<div class="stat-card"><div class="lbl">total</div><div class="val">'+jobs.length+'</div></div>';
+  
+  fyRenderJobs(jobs);
+}
+
+async function fyApi(path) {
+  try {
+    const r = await fetch(FACTORY_API + path);
+    return await r.json();
+  } catch(e) {
+    return { error: e.message };
+  }
+}
+
+function esc(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+
+function fyFilter() {
+  fyFilterStr = document.getElementById('fy-search').value.toLowerCase();
+  fyLoad();
+}
+
+function fyRenderJobs(jobs) {
+  let filtered = jobs;
+  if (fyFilterStr) filtered = jobs.filter(j => JSON.stringify(j).toLowerCase().includes(fyFilterStr));
+  
+  const el = document.getElementById('fy-jobs');
+  el.innerHTML = filtered.map(j => {
+    const sc = {draft:'grey',rendering:'cyan',review:'yellow',final:'green',failed:'grey'};
+    const hasMp4 = j.mp4_key ? '🎬' : '';
+    return '<div class="card" style="margin-bottom:4px;cursor:pointer" onclick="fyViewJob(\''+j.id+'\')">' +
+      '<div class="flex wrap gap-4">' +
+      '<h3>'+esc(j.title||j.id)+'</h3>' +
+      '<span class="badge '+(sc[j.status]||'grey')+'">'+j.status+'</span>' +
+      '<span class="badge cyan">'+j.channel+'</span>' +
+      '<span class="text-dim text-sm">v'+j.version+'</span>' +
+      (hasMp4 ? '<span class="text-sm">'+hasMp4+'</span>' : '') +
+      '</div>' +
+      '<div class="m">'+j.essay_id+' · '+(j.duration_seconds||'?')+'s · '+j.created_at?.slice(0,10)+'</div>' +
+      '</div>';
+  }).join('');
+  
+  if (!filtered.length) el.innerHTML = '<div class="card text-dim" style="text-align:center;padding:24px">no jobs found</div>';
+}
+
+async function fyViewJob(id) {
+  const d = await fyApi('/api/factory/jobs/'+id);
+  if (!d || d.error) { alert('Error: '+(d?.error||'no response')); return; }
+  
+  const shots = d.shots || [];
+  const feedback = d.feedback || [];
+  
+  let html = '<div class="card">' +
+    '<div class="flex"><button onclick="fyLoad()" style="margin-right:8px">← Back</button>' +
+    '<h3>'+esc(d.title||d.id)+'</h3>' +
+    '<span class="badge '+(d.status==='final'?'green':d.status==='review'?'yellow':'grey')+'">'+d.status+'</span>' +
+    '<span class="badge cyan">'+d.channel+'</span>' +
+    '<span class="text-dim">v'+d.version+'</span></div>' +
+    '<div class="m">'+d.essay_id+' · '+(d.duration_seconds||0)+'s' +
+    (d.mp4_key ? ' · <a href="'+FACTORY_API+'/api/factory/assets/'+d.mp4_key+'" style="color:var(--accent)">▶ MP4</a>' : '') +
+    '</div>' +
+    '<h4 style="margin:12px 0 6px;font-size:12px">Shots ('+shots.length+')</h4>' +
+    shots.map((s,i) =>
+      '<div class="flex" style="padding:4px 0;border-bottom:1px solid var(--border);font-size:12px">' +
+      '<span class="badge grey" style="min-width:60px">'+(s.rhetorical_function||'-')+'</span>' +
+      '<span style="flex:1">'+esc(s.label)+'</span>' +
+      '<span class="text-dim">'+(s.duration_seconds||0)+'s</span>' +
+      '<span class="pdot '+(s.status==='approved'?'done':'wait')+'"></span>' +
+      (s.feedback_count ? '<span class="badge green" style="font-size:9px">'+s.feedback_count+'</span>' : '') +
+      '</div>'
+    ).join('') +
+    '<h4 style="margin:12px 0 6px;font-size:12px">Feedback ('+feedback.length+')</h4>' +
+    (feedback.length ? feedback.map(f =>
+      '<div style="font-size:11px;padding:4px 0;border-bottom:1px solid var(--border)">' +
+      '<span class="badge">'+(f.dimension||'general')+'</span>' +
+      (f.rating ? '<span style="color:var(--gold);margin-left:4px">'+'★'.repeat(f.rating)+'</span>' : '') +
+      ' <span class="text-dim">'+esc(f.author)+' · '+(f.created_at?.slice(0,10)||'')+'</span>' +
+      '<div style="margin-top:2px">'+esc(f.comment)+'</div></div>'
+    ).join('') : '<div class="text-dim text-sm">no feedback yet</div>') +
+    '<div class="flex mt-8 gap-4">' +
+    '<button onclick="fyEnqueue(\''+d.id+'\')" class="primary">Render</button>';
+  
+  if (d.status !== 'final') {
+    html += '<button onclick="fyUpdateStatus(\''+d.id+'\',\'final\')">Approve</button>';
+  }
+  if (d.status === 'review') {
+    html += '<button onclick="fyUpdateStatus(\''+d.id+'\',\'draft\')">Re-open</button>';
+  }
+  
+  html += '</div></div>';
+  
+  // Quick feedback form
+  html += '<div class="card" style="margin-top:8px">' +
+    '<h4 style="font-size:12px;margin-bottom:6px">Quick Feedback</h4>' +
+    '<div class="flex gap-4 wrap" style="margin-bottom:4px">' +
+    '<select id="fy-fb-dim" style="background:var(--bg);border:1px solid var(--border);color:var(--text);font-size:11px;padding:4px 6px;border-radius:3px">' +
+    '<option value="">dimension</option><option value="pacing">pacing</option><option value="composition">composition</option>' +
+    '<option value="clarity">clarity</option><option value="aesthetic">aesthetic</option><option value="accuracy">accuracy</option>' +
+    '<option value="narration">narration</option><option value="overall">overall</option></select>' +
+    '<div id="fy-fb-stars" style="display:flex;gap:1px;cursor:pointer">'+
+      [1,2,3,4,5].map(i => '<span data-v="'+i+'" onclick="fySetStar('+i+')" style="font-size:18px;color:#333;cursor:pointer">☆</span>').join('')+'</div>' +
+    '</div>' +
+    '<textarea id="fy-fb-text" placeholder="feedback..." style="width:100%;background:var(--bg);border:1px solid var(--border);padding:6px;border-radius:3px;color:var(--text);font-size:11px;resize:vertical;min-height:40px;font-family:inherit;box-sizing:border-box"></textarea>' +
+    '<button onclick="fySubmitFb(\''+d.id+'\')" style="margin-top:4px;background:var(--gold);color:#000;border:none;padding:4px 14px;border-radius:3px;font-size:11px;font-weight:600;cursor:pointer">submit feedback</button>' +
+    '</div>';
+  
+  document.getElementById('fy-jobs').innerHTML = html;
+}
+
+let fyStar = 0;
+function fySetStar(n) {
+  fyStar = n;
+  document.querySelectorAll('#fy-fb-stars span').forEach(el => {
+    const v = parseInt(el.dataset.v);
+    el.textContent = v <= n ? '★' : '☆';
+    el.style.color = v <= n ? 'var(--gold)' : '#333';
+  });
+}
+
+async function fySubmitFb(jobId) {
+  const text = document.getElementById('fy-fb-text').value.trim();
+  if (!text) return;
+  const dim = document.getElementById('fy-fb-dim').value;
+  await fyApi('/api/factory/jobs/'+jobId+'/feedback', {
+    method: 'POST',
+    body: JSON.stringify({ author: 'Thomas', rating: fyStar || null, dimension: dim || '', comment: text }),
+  });
+  document.getElementById('fy-fb-text').value = '';
+  fyStar = 0;
+  fyViewJob(jobId);
+}
+
+async function fyEnqueue(id) {
+  await fyApi('/api/factory/jobs/'+id+'/render', { method: 'POST' });
+  fyLoad();
+}
+
+async function fyUpdateStatus(id, status) {
+  await fyApi('/api/factory/jobs/'+id, {
+    method: 'PUT',
+    body: JSON.stringify({ status }),
+  });
+  fyViewJob(id);
 }
 
 // Init

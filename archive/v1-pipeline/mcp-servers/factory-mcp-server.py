@@ -7,44 +7,16 @@ from pathlib import Path
 ROOT = "/root/projects/blog"
 FACTORY_API = "https://factory-worker.tradesprior.workers.dev"
 sys.path.insert(0, f"{ROOT}/scripts/renderer")
+sys.path.insert(0, f"{ROOT}/factory")
 from motif_renderers import render_for_motif, RENDERERS
+from build_threads import (
+    build_visual_thesis, decode_narration_to_shots, generate_narration,
+    get_continuity_rules, SHAPES
+)
 
-# ── CONCRETE MOTIF POOL (all Zeus-approved concrete nouns) ──────────
-MOTIF_POOL = [
-    "stone_eye", "earth_water", "crystal_lattice", "seed_flower", "star_map",
-    "iron_anvil", "copper_bell", "silver_mirror", "gold_scale", "salt_crust",
-    "flame_candle", "river_path", "ocean_wave", "mountain_peak", "valley_floor",
-    "tree_root", "leaf_vein", "flower_petal", "bird_wing", "fish_scale",
-    "serpent_coil", "spider_web", "bee_hive", "ant_tunnel", "eagle_eye",
-    "lion_paw", "wolf_teeth", "bear_claw", "fox_track", "deer_antler",
-    "bishop_codex", "scribe_scroll", "smith_forge", "weaver_loom", "potter_wheel",
-    "mason_block", "carpenter_plane", "farmer_plow", "hunter_bow", "sailor_compass",
-    "chamber_door", "tower_window", "bridge_arch", "garden_wall", "ladder_rung",
-    "threshold_gate", "spiral_stair", "courtyard_well", "market_stall", "temple_column",
-    "heart_drum", "breath_bell", "blood_river", "bone_frame", "skin_map",
-    "eye_lens", "hand_loom", "foot_path", "voice_string", "mind_mirror"
-]
-
-def _pick_motif(idx):
-    return MOTIF_POOL[idx % len(MOTIF_POOL)]
-
-def _chapter_for(idx, total):
-    """Interleave chapters pattern: A,B,C,A,D,B,E,C,A..."""
+def _chapter_for(i, total):
     chapters = ["I","II","III","IV","V","VI","VII"]
-    # Cycle through chapters in interleaved pattern
-    positions = []
-    for i in range(total):
-        positions.append(chapters[i % 3 * 2]) if i % 5 == 0 else positions.append(chapters[(i * 3) % len(chapters)])
-    
-    # Ensure no 3+ consecutive
-    for i in range(2, len(positions)):
-        if positions[i] == positions[i-1] == positions[i-2]:
-            # Swap with next different chapter
-            swap = (i + 3) % len(chapters)
-            if swap < len(positions):
-                positions[i], positions[swap] = positions[swap], positions[i]
-    
-    return positions[idx] if idx < len(positions) else chapters[idx % len(chapters)]
+    return chapters[i % len(chapters)]
 
 # ── CLEAN NARRATION ────────────────────────────────────────────────
 
@@ -98,35 +70,37 @@ def produce_video(essay_path, slug, channel="Tantra Files"):
     clean_narration(essay_path, output_dir)
     L("  Done")
     
-    # 2. Split into shots with timing
-    L("[2/9] Splitting shots...")
-    text = open(f"{output_dir}/narration_script.txt").read()
-    sents = [s.strip() for s in re.split(r'(?<=[.!?])\s+', text) if s.strip() and len(s.split()) > 2]
+    # 2. Build visual thesis from essay (platinum Stage 3)
+    L("[2/9] Building visual thesis...")
+    essay_text = open(f"{output_dir}/source_essay.md").read()
     
-    # Merge very short, split very long
-    merged = []
-    for s in sents:
-        wc = len(s.split())
-        if wc < 4 and merged:
-            merged[-1] += " " + s
-        elif wc > 25:
-            # Split long sentences
-            half = wc // 2
-            words = s.split()
-            merged.append(' '.join(words[:half]))
-            merged.append(' '.join(words[half:]))
-        else:
-            merged.append(s)
-    sents = merged
+    thesis = build_visual_thesis(essay_text)
+    L(f"  Material: {thesis['material_world']}")
+    L(f"  Space: {thesis['spatial_world']}")
+    L(f"  Motions: {', '.join(thesis['motion_verbs'][:4])}")
+    L(f"  Systems: {len(thesis['recurring_systems'])} recurring")
     
-    # Estimate durations from word count (UNCLAMPED — TTS yields real durations)
+    # Estimate shot count
+    est_shots = max(20, min(80, len(essay_text.split()) // 20))
+    
+    # Decode narration into shot sequence using visual thesis
+    shot_data = decode_narration_to_shots(thesis, est_shots)
+    
+    # Generate narration from the shot sequence
+    narration_text = generate_narration(shot_data)
+    open(f"{output_dir}/narration_script.txt", "w").write(narration_text)
+    
+    # Build shots
     shots = []
-    for i, s in enumerate(sents):
-        wc = len(s.split())
-        dur = round(max(1.0, wc / 2.8), 1)
-        shots.append({"id": f"s{i+1:03d}", "text": s, "dur": dur})
+    for i, s in enumerate(shot_data):
+        dur = round(max(3.0, min(8.0, len(s["narration"].split()) / 2.5)), 1)
+        shots.append({
+            "id": f"s{i+1:03d}", "text": s["narration"], "dur": dur,
+            "shape": s["shape"], "motion": s["motion"],
+            "system": s["system"], "color_role": s["color_role"],
+        })
     
-    L(f"  {len(shots)} shots estimated")
+    L(f"  {len(shots)} shots, {len(thesis['recurring_systems'])} visual systems")
     
     # 3. Generate voiceover
     L("[3/9] Generating voiceover...")
@@ -160,104 +134,104 @@ def produce_video(essay_path, slug, channel="Tantra Files"):
     total_dur = round(t, 1)
     L(f"  {len(shots)} WAVs, {total_dur}s (actual durations, clamped)")
     
-    # 4. Build ZEUS-COMPLIANT storyboard
-    L("[4/9] Building Zeus-compliant storyboard...")
+    # 4. Build THESIS-BASED storyboard
+    L("[4/9] Building thesis-based storyboard...")
     
-    continuity_chain = ["seed", "thread", "door", "light", "mirror", "veil", "bridge", "flame"]
+    # Per-motif mechanism descriptions
+    MECH_DESCRIPTIONS = {
+        "stone_eye": "An elliptical eye form with concentric iris rings and a crimson pupil at the center",
+        "eagle_eye": "A wide horizontal elliptical eye form with sharp pupil and teal iris rings",
+        "eye_lens": "An elliptical lens-like form with concentric blue rings focusing inward",
+        "earth_water": "Multiple horizontal flowing wave lines at different amplitudes and phases",
+        "ocean_wave": "Layered sinusoidal wave forms with varying frequency creating a seascape",
+        "river_path": "A winding curved path line tracing through the frame like a river",
+        "blood_river": "Two intertwined flowing crimson lines winding through the frame",
+        "crystal_lattice": "A grid of dots at regular intervals with connecting lines forming a crystalline structure",
+        "fish_scale": "An overlapping pattern of elliptical scale forms across the frame",
+        "polygon_mandala": "Nested regular polygon shapes at increasing sizes forming a geometric mandala",
+        "seed_flower": "Radial lines extending from center with small dots at each endpoint",
+        "flower_petal": "Triangular petal forms arranged in a circle unfolding from a center point",
+        "leaf_vein": "A central vertical line with branching diagonal veins extending from it",
+        "tree_root": "A branching fractal tree structure growing downward with recursive branches",
+        "star_map": "A scatter of dots connected by lines forming a constellation or star map",
+        "spider_web": "Radial spoke lines with concentric connecting rings forming a web pattern",
+        "node_web": "A network of center nodes with connecting lines between them",
+        "skin_map": "A field of scattered dots across the surface with some connected to center",
+        "flame_candle": "A teardrop flame shape above a rectangular candle body with inner glow",
+        "smith_forge": "An anvil shape with rectangular block and arched glowing rings above",
+        "gold_scale": "A vertical post with crossbar and two hanging circular pans in a balance scale",
+        "mountain_peak": "A triangular mountain peak outlined with a glowing summit point",
+        "temple_column": "Vertical column lines with elliptical capitals and a horizontal base",
+        "tower_window": "A rectangular window frame with arched top and cross bars",
+        "bridge_arch": "A curved arched line spanning two points with vertical support rails",
+        "heart_drum": "An elliptical pulsing form with concentric rings expanding and contracting",
+        "breath_bell": "An elliptical bell shape with a clapper dot suspended inside",
+        "bone_frame": "A set of curved rib-like arcs on either side of a vertical spine line",
+        "hand_loom": "Parallel vertical warp threads with horizontal weft threads weaving between them",
+        "silver_mirror": "A circular reflective form with shimmering points across its surface",
+        "iron_anvil": "A flat-topped anvil shape on a rectangular base with a hammer above",
+        "copper_bell": "An inverted bell shape with arched top and concentric sound wave rings",
+        "bishop_codex": "An open rectangular book shape with center crease and page lines",
+        "scribe_scroll": "A tall narrow rectangular scroll form with rolled ends",
+        "weaver_loom": "A dense grid of vertical and horizontal threads in a weaving pattern",
+        "potter_wheel": "A circular wheel with concentric rings and radiating spokes",
+        "carpenter_plane": "A rectangular plane body with blade edge and long handle",
+        "farmer_plow": "A horizontal beam with vertical handle and triangular blade",
+        "hunter_bow": "A curved bow shape with bowstring line and symmetrical limbs",
+        "sailor_compass": "A circular compass face with directional markings and a rotating needle",
+        "chamber_door": "A rectangular door with arched top and circular handle on one side",
+        "threshold_gate": "Two vertical pillars with horizontal lintel and a glowing threshold",
+        "ladder_rung": "Two vertical rails with horizontal rung steps between them",
+        "courtyard_well": "A circular well opening with blue water shimmer visible inside",
+        "spiral_stair": "A spiral form ascending in three dimensions with decreasing radius",
+        "serpent_coil": "A serpentine coiled line winding through the frame in complex curves",
+        "ant_tunnel": "A winding tunnel path with sinusoidal curves through the frame",
+        "fox_track": "A series of small elliptical footprint marks following a winding path",
+        "foot_path": "A series of footprint shapes along a curved walking path",
+        "voice_string": "Multiple string-like wave forms vibrating at different frequencies",
+        "valley_floor": "A scattered field of small dots distributed across the frame",
+        "scatter_field": "A radial scatter of dots around a center point with some connections",
+        "market_stall": "A canopy structure supported by posts with small objects displayed below",
+        "salt_crust": "A dense scatter of white crystalline points in a radial pattern",
+        "bird_wing": "Two symmetrical wing forms with feather line details extending outward",
+        "lion_paw": "A rounded paw form with smaller elliptical toe pads below",
+        "bear_claw": "A broad paw form with extended claw lines emerging from the top",
+        "deer_antler": "Branched antler forms extending upward with recursive branches",
+        "wolf_teeth": "A curved jaw line with triangular teeth points along its edge",
+        "bee_hive": "A field of hexagonal cell shapes forming a honeycomb lattice",
+        "mason_block": "A rectangular block form with chiseled surface texture",
+    }
     
     storyboard = []
     for i, s in enumerate(shots):
-        motif = _pick_motif(i)
-        chapter = _chapter_for(i, len(shots))
+        shape_name = s["shape"]
+        shape_info = SHAPES[shape_name]
+        motion = s["motion"]
+        system = s["system"]
+        color_role = s["color_role"]
         
-        # Visual mechanism describing what the per-motif renderer actually draws
-        motif_family_mechs = {
-            "stone_eye": "An elliptical eye form with concentric iris rings and a crimson pupil at the center",
-            "eagle_eye": "A wide horizontal elliptical eye form with sharp pupil and teal iris rings",
-            "eye_lens": "An elliptical lens-like form with concentric blue rings focusing inward",
-            "earth_water": "Multiple horizontal flowing wave lines at different amplitudes and phases",
-            "ocean_wave": "Layered sinusoidal wave forms with varying frequency creating a seascape",
-            "river_path": "A winding curved path line tracing through the frame like a river",
-            "blood_river": "Two intertwined flowing crimson lines winding through the frame",
-            "crystal_lattice": "A grid of dots at regular intervals with connecting lines forming a crystalline structure",
-            "fish_scale": "An overlapping pattern of elliptical scale forms across the frame",
-            "polygon_mandala": "Nested regular polygon shapes at increasing sizes forming a geometric mandala",
-            "seed_flower": "Radial lines extending from center with small dots at each endpoint",
-            "flower_petal": "Triangular petal forms arranged in a circle unfolding from a center point",
-            "leaf_vein": "A central vertical line with branching diagonal veins extending from it",
-            "tree_root": "A branching fractal tree structure growing downward with recursive branches",
-            "star_map": "A scatter of dots connected by lines forming a constellation or star map",
-            "spider_web": "Radial spoke lines with concentric connecting rings forming a web pattern",
-            "node_web": "A network of center nodes with connecting lines between them",
-            "skin_map": "A field of scattered dots across the surface with some connected to center",
-            "flame_candle": "A teardrop flame shape above a rectangular candle body with inner glow",
-            "smith_forge": "An anvil shape with rectangular block and arched glowing rings above",
-            "gold_scale": "A vertical post with crossbar and two hanging circular pans in a balance scale",
-            "mountain_peak": "A triangular mountain peak outlined with a glowing summit point",
-            "temple_column": "Vertical column lines with elliptical capitals and a horizontal base",
-            "tower_window": "A rectangular window frame with arched top and cross bars",
-            "bridge_arch": "A curved arched line spanning two points with vertical support rails",
-            "heart_drum": "An elliptical pulsing form with concentric rings expanding and contracting",
-            "breath_bell": "An elliptical bell shape with a clapper dot suspended inside",
-            "bone_frame": "A set of curved rib-like arcs on either side of a vertical spine line",
-            "hand_loom": "Parallel vertical warp threads with horizontal weft threads weaving between them",
-            "silver_mirror": "A circular reflective form with shimmering points across its surface",
-            "iron_anvil": "A flat-topped anvil shape on a rectangular base with a hammer above",
-            "copper_bell": "An inverted bell shape with arched top and concentric sound wave rings",
-            "bishop_codex": "An open rectangular book shape with center crease and page lines",
-            "scribe_scroll": "A tall narrow rectangular scroll form with rolled ends",
-            "weaver_loom": "A dense grid of vertical and horizontal threads in a weaving pattern",
-            "potter_wheel": "A circular wheel with concentric rings and radiating spokes",
-            "carpenter_plane": "A rectangular plane body with blade edge and long handle",
-            "farmer_plow": "A horizontal beam with vertical handle and triangular blade",
-            "hunter_bow": "A curved bow shape with bowstring line and symmetrical limbs",
-            "sailor_compass": "A circular compass face with directional markings and a rotating needle",
-            "chamber_door": "A rectangular door with arched top and circular handle on one side",
-            "threshold_gate": "Two vertical pillars with horizontal lintel and a glowing threshold",
-            "ladder_rung": "Two vertical rails with horizontal rung steps between them",
-            "courtyard_well": "A circular well opening with blue water shimmer visible inside",
-            "spiral_stair": "A spiral form ascending in three dimensions with decreasing radius",
-            "serpent_coil": "A serpentine coiled line winding through the frame in complex curves",
-            "ant_tunnel": "A winding tunnel path with sinusoidal curves through the frame",
-            "fox_track": "A series of small elliptical footprint marks following a winding path",
-            "foot_path": "A series of footprint shapes along a curved walking path",
-            "voice_string": "Multiple string-like wave forms vibrating at different frequencies",
-            "valley_floor": "A scattered field of small dots distributed across the frame",
-            "scatter_field": "A radial scatter of dots around a center point with some connections",
-            "market_stall": "A canopy structure supported by posts with small objects displayed below",
-            "salt_crust": "A dense scatter of white crystalline points in a radial pattern",
-            "bird_wing": "Two symmetrical wing forms with feather line details extending outward",
-            "lion_paw": "A rounded paw form with smaller elliptical toe pads below",
-            "bear_claw": "A broad paw form with extended claw lines emerging from the top",
-            "deer_antler": "Branched antler forms extending upward with recursive branches",
-            "wolf_teeth": "A curved jaw line with triangular teeth points along its edge",
-            "bee_hive": "A field of hexagonal cell shapes forming a honeycomb lattice",
-            "mason_block": "A rectangular block form with chiseled surface texture",
-        }
-        mech = motif_family_mechs.get(motif, f"A {' '.join(motif.replace('_', ' ').split())} form reveals itself")
+        # Visual mechanism derived from shape semantics
+        mech_text = f"A {shape_name} form ({shape_info['meaning']}) that {motion}s across the {thesis['spatial_world']} field."
         
-        # Continuity chain
-        prev_obj = continuity_chain[i % len(continuity_chain)]
-        next_obj = continuity_chain[(i + 1) % len(continuity_chain)]
+        chapter = f"Chapter {['I','II','III','IV','V','VI','VII'][i % 7]}"
+        cont_obj = f"{shape_name}_{motion}_{system[:8]}"
         
         storyboard.append({
             "shot_id": i + 1,
-            "start": s['start'],
-            "end": s['end'],
-            "duration": s['dur'],
-            "raw_audio_duration": s['raw_audio'],
+            "start": s['start'], "end": s['end'],
+            "duration": s['dur'], "raw_audio_duration": s['raw_audio'],
             "spoken_passage": s['text'],
-            "chapter": f"Chapter {chapter}",
-            "visual_mode": motif,
-            "visual_mechanism": mech,
-            "continuity_object": f"the {prev_obj} transforms into the {next_obj}",
+            "chapter": chapter,
+            "visual_mode": shape_name,
+            "visual_mechanism": mech_text,
+            "visual_operator": motion,
             "transition": "motif-preserving dissolve or motion handoff",
-            "caption_restriction": "No full narration captions; technical terms only.",
+            "caption_restriction": "No full narration captions; technical terms only when conceptually necessary.",
             "first_in_chapter": i == 0 or _chapter_for(i-1, len(shots)) != chapter
         })
     
     json.dump(storyboard, open(f"{output_dir}/storyboard.json","w"), indent=2)
-    L(f"  {len(storyboard)} shots with concrete motifs, continuity, interleaved chapters")
+    L(f"  {len(storyboard)} shots across {len(set(s['visual_operator'] for s in storyboard))} operation types")
     
     # 5. Generate render script
     L("[5/9] Generating render script...")
@@ -315,26 +289,35 @@ if __name__ == "__main__":
     L("  render script generated")
     
     # 6. Render scenes
-    L("[6/9] Rendering scenes with visual templates...")
+    L("[6/9] Rendering scene geometry...")
     FPS = 6
     
     for i, s in enumerate(storyboard):
         sid = f"s{i+1:03d}"
         dur = s['duration']
-        motif = s.get('visual_mode', 'stone_eye')
+        shape = s.get('visual_mode', 'circle')
+        motion = s.get('visual_operator', 'pulse')
         sd = f"{output_dir}/scenes/{sid}"
         os.makedirs(sd, exist_ok=True)
         frames = int(dur * FPS)
         for fi in range(frames):
-            t = fi / FPS
+            tt = fi / FPS
             u = fi / frames if frames > 1 else 1
-            im = render_for_motif(motif, t, u, i)
+            im = render_for_motif("polygon_mandala" if shape in ["lattice", "mosaic"] else 
+                                  "stone_eye" if shape == "point" else
+                                  "silver_mirror" if shape == "mirror" else
+                                  "threshold_gate" if shape == "aperture" else
+                                  "river_path" if shape == "spiral" else
+                                  "spider_web" if shape == "web" else
+                                  "crystal_lattice" if shape == "lattice" else
+                                  "heart_drum" if motion == "pulse" else
+                                  "breath_bell", tt, u, i)
             im.save(f"{sd}/frame_{fi:05d}.png")
         
         subprocess.run(['ffmpeg','-y','-framerate',str(FPS),'-i',f"{sd}/frame_%05d.png",
             '-c:v','libx264','-pix_fmt','yuv420p','-preset','ultrafast','-crf','28',
             '-t',str(dur),f"{output_dir}/scenes/{sid}.mp4"], capture_output=True)
-        if i % 10 == 0: L(f"  [{i+1}/{len(storyboard)}] {sid}: {motif}")
+        if i % 10 == 0: L(f"  [{i+1}/{len(storyboard)}] {sid}: {shape} / {motion}")
     
     # 7. Assemble with audio
     L("[7/9] Assembling final MP4 with audio...")
@@ -429,43 +412,34 @@ if __name__ == "__main__":
         "animal": "instinct, embodiment, natural power",
     }
     
-    # Track which motifs are in use
-    used_families = set()
+    # Build visual systems from thesis
+    shapes_used = set()
     for s in storyboard:
-        m = s.get('visual_mode', '')
-        for family, members in motif_families.items():
-            if m in members:
-                used_families.add(family)
-                break
-    
-    continuity_rules = [f"'{family}' represents {motif_family_meanings.get(family, 'a visual system')}" for family in sorted(used_families)]
+        shapes_used.add(s.get("visual_mode", "circle"))
+    continuity_rules = get_continuity_rules(thesis)
     
     visual_program = {
         "schema_version": "2.0-experimental",
         "film_id": slug,
         "title": essay_title,
-        "visual_thesis": "A single reality manifests through layered reflections: each form reveals the whole from a unique perspective, and every return is contained within the departure.",
+        "visual_thesis": f"A visual argument unfolding across a {thesis['spatial_world']} of {thesis['material_world']}, moving through {', '.join(thesis['motion_verbs'][:4])}.",
         "style": {
-            "field": "dark void with gold illumination",
-            "materials": ["gold", "crimson", "lapis", "void"],
+            "field": thesis['material_world'],
+            "space": thesis['spatial_world'],
+            "motions": thesis['motion_verbs'][:6],
             "continuity_rules": continuity_rules,
             "caption_policy": "No full narration captions; technical terms only when conceptually necessary."
         },
         "chapters": {ch: shots for ch, shots in chapter_shots.items()},
-        "visual_systems": {f: {"system": f.title(), "meaning": motif_family_meanings.get(f, "")} for f in sorted(used_families)},
-        "palette": {
-            "void": "background, the unmanifest",
-            "gold": "awareness, form, revelation",
-            "crimson": "vitality, pulse, life",
-            "lapis": "depth, mystery, the between"
-        }
+        "visual_systems": {s["name"]: {"shape": s["shape"], "meaning": s["meaning"]} for s in thesis["recurring_systems"]},
+        "palette": thesis["color_semantics"]
     }
     json.dump(visual_program, open(f"{output_dir}/visual_program.json","w"), indent=2)
     
     # 8c. PRODUCTION_BLUEPRINT.md
     chapter_names = list(chapter_shots.keys())
     chapter_lines = "\n".join(f"- **{ch}:** shots {', '.join(str(sid) for sid in chapter_shots[ch][:5])}{'...' if len(chapter_shots[ch]) > 5 else ''}" for ch in chapter_names)
-    sys_lines = "\n".join(f"### {f.title()}\n{motif_family_meanings.get(f, '')}\n" for f in sorted(used_families))
+    sys_lines = "\n".join(f"### {s['name']}\nShape: {s['shape']} — {s['meaning']}\n" for s in thesis["recurring_systems"])
     
     blueprint = f"""# Production Blueprint — {essay_title}
 
@@ -538,7 +512,9 @@ Generated by Factory MCP pipeline.
 - **Duration:** {total_dur:.1f}s
 - **Motifs:** {len(set(s['visual_mode'] for s in storyboard))}
 - **Chapters:** {len(chapter_shots)}
-    - **Visual systems:** {len(used_families)}
+    - **Visual systems:** {len(thesis['recurring_systems'])}
+    - **Material world:** {thesis['material_world']}
+    - **Spatial world:** {thesis['spatial_world']}
 
 ## Files
 

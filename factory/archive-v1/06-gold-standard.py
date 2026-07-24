@@ -1,0 +1,1 @@
+../../scripts/gold-standard.py

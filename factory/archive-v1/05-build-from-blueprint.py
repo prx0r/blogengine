@@ -1,0 +1,1 @@
+../../scripts/pipeline/build-from-blueprint.py

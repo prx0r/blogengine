@@ -1,0 +1,1 @@
+../../content/publishing/scripts/01-k4/beat-map.md

@@ -1,0 +1,1 @@
+../../scripts/renderer/render_spanda.py

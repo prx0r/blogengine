@@ -8,13 +8,13 @@ from PIL import Image, ImageDraw
 W, H = 1280, 720
 VOID = (13, 17, 23); GOLD = (212, 165, 116); CRIMSON = (141, 44, 57)
 LAPIS = (42, 70, 110); INK = (230, 225, 220); MUTED = (145, 141, 132)
-WHITE = (248, 246, 240); CHARCOAL = (40, 40, 40)
+WHITE = (248, 246, 240); CHARCOAL = (40, 40, 40); BLACK = (20, 20, 20)
 PARCHMENT = (235, 227, 203); VERDIGRIS = (72, 130, 109)
-BLOOD = (118, 27, 39); TEAL = (45, 125, 135)
+BLOOD = (118, 27, 39); TEAL = (45, 125, 135); GREY = (214, 212, 207)
 
 S = lambda x: 0.5 + 0.5 * math.sin(x)
 
-def canvas(bg=VOID):
+def canvas(bg=WHITE):
     return Image.new("RGB", (W, H), bg)
 
 # ── 1. EYE / VISION ─────────────────────────────────────────────────
