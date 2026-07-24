@@ -1,0 +1,47 @@
+============================================
+ Platinum Factory Run Log
+============================================
+ Slug:      b1-test
+ Essay:     scripts/expansion-essay33.md
+ Started:   2026-07-24T15:05:12Z
+ Controller: python3 factory/controllers/platinum_controller.py
+ Stages:    13
+============================================
+
+>>> STAGE 0: Create Job
+  Template files copied to content/publishing/renders/b1-test/v1
+Created job 'b1-test'
+  Stage: pack_setup
+  Output: content/publishing/renders/b1-test/v1
+
+Next: python3 /root/projects/blog/factory/controllers/platinum_controller.py advance --slug b1-test
+Duration: 0s
+
+>>> STAGE 1/13: pack_setup
+
+============================================================
+Stage: pack_setup
+  Initialize pack directory with canonical template
+  Attempt: 1/1
+============================================================
+
+  Running stage via direct API call...
+  Running stage pack_setup via direct API call...
+  ──────────────────────────────────────────────────
+  ✓ Response received (488 chars)
+  ──────────────────────────────────────────────────
+  ✓ Saved to storyboard.json
+  Hermes response: ```json
+{
+  "pack_setup_report": {
+    "slug": "b1-test",
+    "pack_path": "content/publishing/renders/b1-test/v1",
+    "status": "initialized",
+    "files_verified": [
+      "README.md",
+      "story...
+  Validating outputs...
+
+✓ Stage pack_setup PASSED
+  Next stage: gold_study
+  Next: python3 /root/projects/blog/factory/controllers/platinum_controller.py advance --slug b1-test

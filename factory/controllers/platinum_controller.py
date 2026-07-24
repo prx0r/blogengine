@@ -617,36 +617,35 @@ Target per-shot: {job.get('target_shot_duration', 6.5)}s
 Audio duration: {job.get('est_audio_duration', 240)}s
 Target shot count: {job.get('recommended_shot_count', 37)} (range {job.get('minimum_shot_count', 20)}-{job.get('maximum_shot_count', 80)})
 
-Your ONLY task: build the per-shot storyboard with CORRECT TIMING.
-Output to {output_dir}/storyboard.json.
+CRITICAL: Output in JSONL format — one JSON object per line, no markdown, no wrapper array.
+This allows partial recovery if the response is long.
 
-CRITICAL: Each shot must be 5-10 seconds. Average must be 5-8s.
-Shots over 15s need exception. Over 20s = rejected.
-You need approximately {job.get('recommended_shot_count', 37)} shots.
+Output to {output_dir}/storyboard.json.
 
 Read rhetorical map at {output_dir}/rhetorical_map.json
 Read visual thesis at {output_dir}/visual_thesis.md
 
-Every shot MUST have:
-- shot_id, spoken_passage, chapter, duration_seconds
-- conceptual_transformation: {{ before, operation, after }}
-- visual_audio_alignment: {{ visual_event, word_or_phrase_trigger, why_it_matches }}
-- concrete_motif: {{ motif_id (short gold-style), display_name, philosophical_role, materials[], drawable_parts[], motion_verbs[], estimated_scene_lines }}
-- composition: {{ layout, dominant_region, camera_behavior, negative_space_ratio }}
-- continuity: {{ inherits[], transforms, hands_off[] }}
-- animation_phases: 3+ per shot, each {{ range [a,b], action, easing }}
-- new_shot_justification: why a new shot (reject: pacing/variety; valid: new subject, reversal, resolution, handoff)
-- bad_first_visual, rejected_because
-- no_narration_test, text_required (bool)
+Split the essay into chapters (natural breaks from the rhetorical map).
+Design ONE CHAPTER AT A TIME. Each chapter: 6-12 shots.
+Each shot 5-10 seconds. Average 5-8s.
+
+For each shot, output ONE LINE of JSONL:
+{{"shot_id": "s001", "spoken_passage": "...", "chapter": "1", "duration_seconds": 6.5,
+  "visual_mode": "interior_flame",
+  "visual_audio_alignment": {{"transformation_asserted": "...", "what_viewer_sees": "...", "why_it_matches": "..."}},
+  "concrete_motif": {{"motif_id": "interior_flame", "display_name": "...", "drawable_parts": ["..."], "motion_verbs": ["..."]}},
+  "continuity": {{"inherits": [], "transforms": "", "hands_off": []}},
+  "bad_first_visual": "...", "rejected_because": "...",
+  "no_narration_test": "PASS", "text_required": false}}
 
 HARD RULES:
-- Average shot duration 5-8s. No shot >20s. Shots >15s need documented exception.
-- concrete_motif.motif_id must be gold-style short (interior_flame, not Flame-Gem First Glimpse)
-- ≥2 drawable_parts, ≥1 motion_verb, estimated_scene_lines 15-40
+- JSONL format: one JSON object per line
+- Average shot duration 5-8s. No shot >20s.
+- motif_id must be gold-style short (interior_flame)
+- ≥2 drawable_parts, ≥1 motion_verb
 - why_it_matches ≥2 sentences
-- 3+ animation_phases per shot with different easings
 - text_required false for ≥80% of shots
-- No conceptual motif names (consciousness, awareness, unity, being)""",
+- No conceptual motif names""",
 
         Stage.STORYBOARD_REVIEW: f"""You are in STORYBOARD_REVIEW stage for slug {slug}.
 
@@ -852,7 +851,7 @@ def cmd_advance(args):
         return
 
     # Call Hermes
-    print("  Calling Hermes...")
+    print("  Running stage via direct API call...")
     result = call_hermes_for_stage(job, stage)
     print(f"  Hermes response: {result[:200]}...")
 

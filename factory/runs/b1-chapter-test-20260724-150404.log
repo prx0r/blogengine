@@ -1,0 +1,50 @@
+============================================
+ Platinum Factory Run Log
+============================================
+ Slug:      b1-chapter-test
+ Essay:     scripts/expansion-essay33.md
+ Started:   2026-07-24T15:04:04Z
+ Controller: python3 factory/controllers/platinum_controller.py
+ Stages:    13
+============================================
+
+>>> STAGE 0: Create Job
+  Template files copied to content/publishing/renders/b1-chapter-test/v1
+  (Worker sync: HTTP Error 403: Forbidden)
+Created job 'b1-chapter-test'
+  Stage: pack_setup
+  Output: content/publishing/renders/b1-chapter-test/v1
+
+Next: python3 /root/projects/blog/factory/controllers/platinum_controller.py advance --slug b1-chapter-test
+Duration: 0s
+
+>>> STAGE 1/13: pack_setup
+
+============================================================
+Stage: pack_setup
+  Initialize pack directory with canonical template
+  Attempt: 1/1
+============================================================
+
+  Calling Hermes...
+  Running stage pack_setup via direct API call...
+  ──────────────────────────────────────────────────
+  ✓ Response received (620 chars)
+  ──────────────────────────────────────────────────
+  ✓ Saved to storyboard.json
+  Hermes response: ```json
+{
+  "pack_slug": "b1-chapter-test",
+  "stage": "PACK_SETUP",
+  "path": "content/publishing/renders/b1-chapter-test/v1",
+  "report": {
+    "id": "pack_setup_report",
+    "template_source": "can...
+  Validating outputs...
+
+✓ Stage pack_setup PASSED
+  Next stage: gold_study
+  Next: python3 /root/projects/blog/factory/controllers/platinum_controller.py advance --slug b1-chapter-test
+Duration: 18s
+
+>>> STAGE 2/13: gold_study

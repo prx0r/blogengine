@@ -275,22 +275,71 @@ curl -X POST https://platinum-factory.tradesprior.workers.dev/jobs \
 # Tools: factory_create_job, factory_advance, factory_call_llm, etc.
 ```
 
-## 9. File Reference
+## 9. Current Build Status
 
-| Path | Purpose | Status |
-|------|---------|--------|
-| `controllers/platinum_controller.py` | 13-stage state machine with validators | ✅ Active |
-| `cloudflare/src/controller.js` | Cloudflare Worker API (CRUD jobs in D1) | ✅ Deployed |
-| `cloudflare/src/mcp-server.py` | MCP server with 11 tools for LLM agents | ✅ Registered |
-| `cloudflare/db/schema.sql` | D1 schema: 9 tables | ✅ Deployed |
-| `stages.json` | Shared stage definition (single source of truth) | ✅ Active |
-| `template/` | Canonical pack format (6 files) | ✅ Active |
-| `registry/gold-pack-registry.json` | 31 gold packs indexed | ✅ Active |
-| `process/THE-PLATINUM-PROCESS.md` | The creative process | 📖 Reference |
-| `process/ZEUS-AMPLIFIER.md` | Zeus review questions | 📖 Reference |
-| `process/trifectavision.md` | Multi-medium studio vision | 📖 Reference |
-| `spec/architecture-review.md` | External architecture review | 📖 Reference |
-| `spec/ECOSYSTEM-VISION.md` | Full agent ecosystem vision | 📖 Reference |
-| `cloudflare/src/controller.py` | Python worker stub | 🗑️ Not used |
-| `cloudflare/src/controller.ts` | Deprecated TypeScript version | 🗑️ Not used |
-| `cloudflare/src/ping.py` | Test file | 🗑️ Not used |
+### ✅ Working (Tested)
+| Component | What it does | Status |
+|-----------|-------------|--------|
+| **Cloudflare Worker API** | POST /jobs, GET /jobs, GET /jobs/:slug, POST /advance | ✅ Deployed at `platinum-factory.tradesprior.workers.dev` |
+| **D1 Database** | 9 tables: jobs, stage_history, shots, assets, gold_signatures, render_outputs, qc_results, production_rules, asset_tags | ✅ Deployed with data |
+| **Stage Prompts** | All 13 stages have prompt templates in the Worker | ✅ Ported from Python, firing correctly |
+| **Job Lifecycle** | Create → advance → LLM call → save → next stage | ✅ Advances through all stages |
+| **Python Controller (dev)** | 13-stage state machine with full validators | ✅ Works for local prototyping |
+| **Gold Pack Registry** | 31 gold packs indexed with paths | ✅ In `registry/gold-pack-registry.json` |
+| **Canonical Pack Template** | 6 files defining output format | ✅ In `template/` |
+| **MCP Server** | 11 tools for external agents | ✅ Registered with Hermes gateway |
+| **R2 Storage** | 1.4GB of renders, exemplars, gold files | ✅ Accessible via S3 API |
+
+### ⚠️ Needs Work (Built But Not Complete)
+| Component | What's missing | Status |
+|-----------|---------------|--------|
+| **Worker Validators** | Storyboard validation (timing, alignment, motif score) not ported from Python | ❌ Worker advances without checking output quality |
+| **LLM Response Quality** | Prompts fire but LLM returns generic text — may need model switch or prompt tuning | ❌ Need to verify Workers AI model vs opencode fallback |
+| **Chapter-Batched Storyboard** | Still one LLM call. Needs fan-out into per-chapter calls with JSONL | ❌ #1 blocker |
+| **Retry Strategy** | No retry logic on Worker side. If advance fails, job just errors | ❌ Need retry matrix |
+| **Stage Definitions Sync** | Worker hardcodes stage list instead of reading from stages.json | ❌ Should share single source |
+| **R2 Artifact Saving** | advance handler tries to save to R2 but may fail silently | ❌ Need to verify |
+
+### ❌ Not Started
+| Feature | Priority | Notes |
+|---------|----------|-------|
+| Medium selection (PIL vs historical vs AI) | Medium | Evidence_role → medium mapping is deterministic, no LLM needed |
+| Visual QC automation | Medium | Silent-film test, repetition check, motion QC |
+| Dashboard integration (studio.tantrafiles.xyz) | Low | Worker API exists, dashboard not wired |
+| YouTube analytics feedback loop | Low | Needs API auth + retention mapping |
+| Parallel chapter design | Medium | Requires Queue infrastructure |
+| Immutable artifact versioning | Low | R2 has storage, versioning not implemented |
+
+### 🗑️ Deprecated (Not Used)
+| File | Why |
+|------|-----|
+| `cloudflare/src/controller.py` | Python worker stub, not used |
+| `cloudflare/src/controller.ts` | TypeScript version, replaced by JS |
+| `cloudflare/src/ping.py` | Test file |
+| `archive-v1/` | Old pipeline files, reference only |
+
+## 10. Validation Tests Needed
+
+### Per-Stage Tests
+| Stage | Test | Expected |
+|-------|------|----------|
+| pack_setup | Create job → check D1 has record | Job in D1 with stage=pack_setup |
+| gold_study | Advance → check LLM response | Mentions at least 2 gold packs by name |
+| rhetorical_map | Advance → check output JSON | Has passage_id, transformation fields |
+| visual_thesis | Advance → check output JSON | Has 3 candidate_worlds with different materials |
+| motif_manufacturability | Advance → check scoring | Each motif scored 0-16, pass/fail at 12 |
+| storyboard | Advance → check JSONL | 35+ lines, each valid JSON, 5-10s each |
+| storyboard_review | Advance → check violations | Catches at least 1 alignment or composition issue |
+| pack_composition | Advance → check output | 3 markdown files with dossier, evolution, blueprint |
+| render_plan | Advance → check output | Each shot has 3+ animation phases |
+| code_review | Advance → check render_pack.py | No dispatch table, 15-40 lines per function |
+| draft_render | Advance → check MP4 | scenes/*.mp4 exists |
+| visual_qc | Advance → check report | pass/fail with specific failures listed |
+| final_render | Advance → check final.mp4 | final.mp4 + alignment_report.json + contact_sheet.jpg |
+
+### Integration Tests
+- Job survives Worker restart (D1 persistence)
+- Multiple jobs advance independently (no state cross-contamination)
+- LLM fallback works when Workers AI is unavailable
+- R2 artifact saves are recoverable
+- MCP server can read job state from Worker API
