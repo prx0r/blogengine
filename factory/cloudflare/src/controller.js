@@ -1,6 +1,94 @@
 /**
  * Platinum Factory Controller — Cloudflare Worker (JavaScript)
  */
+
+// ── Validation Config (matches factory/validation-config.json) ────
+const VALIDATION = {
+  storyboard: {
+    alignment_min_chars: 50, drawable_parts_min: 2, motion_verbs_min: 1,
+    ordinary_shot_max: 15, absolute_shot_max: 20,
+    avg_duration_min: 5, avg_duration_max: 8, hard_avg_max: 11,
+    animation_phases_min: 1, max_text_ratio: 0.15,
+  },
+  motif: { minimum_score: 12, max_score: 16 },
+};
+
+// ── Helpers ────────────────────────────────────────────────────
+function stripMarkdown(input) {
+  // Remove markdown code fences: ```json ... ``` or ``` ... ```
+  return input.replace(/```(?:json)?\s*\n?([\s\S]*?)```/g, '$1').trim();
+}
+
+function parseJSON(input) {
+  try { return JSON.parse(input); } catch (e) { return null; }
+}
+
+function extractJSON(input) {
+  // Try direct parse first
+  let parsed = parseJSON(input);
+  if (parsed) return parsed;
+  // Try stripping markdown fences
+  const stripped = stripMarkdown(input);
+  parsed = parseJSON(stripped);
+  if (parsed) return parsed;
+  // Try finding first ```json block
+  const match = input.match(/```(?:json)?\s*\n?([\s\S]*?)```/);
+  if (match) {
+    parsed = parseJSON(match[1].trim());
+    if (parsed) return parsed;
+  }
+  return null;
+}
+
+// ── Validators ──────────────────────────────────────────────────
+function validateMotifs(report) {
+  const errors = [];
+  const motifs = report.motifs || [];
+  // Empty motifs array is fine — just means nothing to validate
+  for (const m of motifs) {
+    if (m.score < VALIDATION.motif.minimum_score) {
+      errors.push(`Motif '${m.name}' scored ${m.score}/16 (min ${VALIDATION.motif.minimum_score})`);
+    }
+  }
+  return errors;
+}
+
+function validateStoryboard(shots, audioDur) {
+  const errors = [];
+  if (!Array.isArray(shots) || shots.length === 0) return ['Storyboard is empty'];
+  
+  // Unique shot IDs
+  const ids = shots.map(s => s.shot_id);
+  const dupes = ids.filter((id, i) => ids.indexOf(id) !== i);
+  if (dupes.length) errors.push(`Duplicate shot IDs: ${[...new Set(dupes)].join(', ')}`);
+  
+  // Timing
+  const durs = shots.map(s => s.duration_seconds || s.duration || 0).filter(d => d > 0);
+  if (durs.length) {
+    const avg = durs.reduce((a, b) => a + b, 0) / durs.length;
+    const max = Math.max(...durs);
+    const total = durs.reduce((a, b) => a + b, 0);
+    if (avg > VALIDATION.storyboard.hard_avg_max) errors.push(`Average duration ${avg.toFixed(1)}s > ${VALIDATION.storyboard.hard_avg_max}s`);
+    if (max > VALIDATION.storyboard.absolute_shot_max) errors.push(`Shot ${max}s > ${VALIDATION.storyboard.absolute_shot_max}s absolute max`);
+    if (total > audioDur * 1.8) errors.push(`Total ${total.toFixed(0)}s is ${(total/audioDur).toFixed(1)}x audio ${audioDur}s`);
+  }
+  
+  // Per-shot fields
+  for (const s of shots) {
+    const alignment = s.visual_audio_alignment || {};
+    const why = alignment.why_it_matches || alignment.why_this_visual_matches || '';
+    if (why.length < VALIDATION.storyboard.alignment_min_chars) {
+      errors.push(`Shot ${s.shot_id}: alignment too short (${why.length} chars, min ${VALIDATION.storyboard.alignment_min_chars})`);
+    }
+    const motif = s.concrete_motif || {};
+    if (motif.drawable_parts && motif.drawable_parts.length < VALIDATION.storyboard.drawable_parts_min) {
+      errors.push(`Shot ${s.shot_id}: ${motif.drawable_parts.length} drawable parts < ${VALIDATION.storyboard.drawable_parts_min}`);
+    }
+    // Animation phases are optional for initial pass — not execution-critical
+  }
+  return errors;
+}
+
 const STAGES = [
   'pack_setup', 'gold_study', 'rhetorical_map', 'visual_thesis',
   'motif_manufacturability', 'storyboard', 'storyboard_review',
@@ -177,10 +265,36 @@ Design the visual thesis. Generate THREE competing visual worlds with different 
           },
           'motif_manufacturability': {
             role: 'user',
-            content: `VISUAL PROGRAM:\n<visual_program>\n${(artifacts['visual_program.json'] || '').slice(0, 5000)}\n</visual_program>
+            content: `You ARE a JSON API. Your output will be parsed by machine. Output ONLY valid JSON. No explanations, no markdown, no thinking.
 
-Score every motif 0-2 on 8 criteria (max 16 per motif): concrete nouns, part inventory (2-8), motion_verbs, material rendering, spatial organisation, PIL feasibility, concept specificity, no-text intelligibility.
-Minimum pass: 12/16. Output JSON: { pass, overall_score, max_score, motifs: [{ name, score, errors }] }`
+Analyze this visual thesis and extract every recurring system, motif, and named visual element:
+
+THESIS DATA:
+${(artifacts['visual_thesis.json'] || 'No thesis data').slice(0, 5000)}
+
+For each distinct visual system/motif found, score 0-2 on these 8 criteria:
+1. concrete_nouns: can it be named as visible objects?
+2. part_inventory: does it have 2-8 drawable components?
+3. motion_verbs: precise transformations?
+4. material_rendering: ink, vellum, glass, smoke?
+5. spatial_organisation: radial, axial, nested, diagonal?
+6. pil_feasibility: polygons, masks, curves, compositing, blur?
+7. concept_specificity: would it be wrong for a different passage?
+8. no_text_intelligibility: legible when muted?
+
+OUTPUT EXACTLY THIS JSON STRUCTURE (no other text):
+{
+  "pass": false,
+  "overall_score": 0,
+  "max_score": 16,
+  "motifs": [
+    {
+      "name": "motif_name",
+      "score": 12,
+      "errors": ["error description or empty array"]
+    }
+  ]
+}`
           },
           'storyboard': {
             role: 'user',
@@ -213,19 +327,25 @@ Output each as a separate JSON string value.`
           }
         };
 
-        // Stages 11-13 are execution, not LLM — dispatch to VPS/Container
+        // Stages 11-13 are execution — create render task for VPS
         if (['draft_render', 'visual_qc', 'final_render'].includes(stage)) {
-          const msg = `${stage} requires VPS/Container execution. Dispatch render task to queue.`;
-          // Record pass + advance job
-          const nextStage = STAGES[stageIdx + 1] || 'complete';
+          const taskId = `rt_${slug}_${stage}_1`;
+          const inputManifest = {
+            stage, slug, outputDir,
+            storyboard_r2: `${outputDir}/storyboard.json`,
+            render_code_r2: `${outputDir}/code_review.json`,
+            settings: { width: 1280, height: 720, fps: stage === 'draft_render' ? 2 : 24, quality: stage === 'draft_render' ? 'draft' : 'final' }
+          };
           await env.FACTORY_DB.prepare(
-            "UPDATE stage_history SET status = 'passed', notes = ? WHERE job_slug = ? AND stage = ? AND status = 'running'"
-          ).bind(msg, slug, stage).run();
-          const statusUpdate = nextStage === 'complete' ? "complete" : "active";
+            `INSERT INTO render_tasks (task_id, job_slug, stage, task_type, renderer, status, input_manifest_json)
+             VALUES (?, ?, ?, ?, 'pil-custom-v1', 'pending', ?)`
+          ).bind(taskId, slug, stage, stage, JSON.stringify(inputManifest)).run();
+          
           await env.FACTORY_DB.prepare(
-            "UPDATE jobs SET current_stage = ?, status = ?, updated_at = datetime('now') WHERE slug = ?"
-          ).bind(nextStage, statusUpdate, slug).run();
-          return json({ slug, stage, result: 'passed', note: msg, next_stage: nextStage });
+            "UPDATE stage_history SET status = 'dispatched', notes = ? WHERE job_slug = ? AND stage = ? AND status = 'running'"
+          ).bind(`Task ${taskId} created, waiting for VPS`, slug, stage).run();
+          
+          return json({ slug, stage, result: 'dispatched', task_id: taskId, note: 'Render task created. VPS will execute.' });
         }
 
         // Build message for the model
@@ -275,9 +395,40 @@ Output each as a separate JSON string value.`
           return json({ slug, stage, result: 'failed', error: 'Empty LLM response' });
         }
 
-        // Save to R2
+        // Stage-specific validation before advancing
+        let validationErrors = [];
+        const parsed = extractJSON(llmResponse);
+        
+        // Motif: only validate if we got structured data with motifs
+        if (stage === 'motif_manufacturability' && parsed && Array.isArray(parsed.motifs)) {
+          validationErrors = validateMotifs(parsed);
+        }
+        // Storyboard: only validate if we got structured shot data
+        if (stage === 'storyboard' && parsed) {
+          const shots = parsed.shots || (Array.isArray(parsed) ? parsed : []);
+          if (shots.length > 0) {
+            const audioDur = row.est_audio_duration || 240;
+            validationErrors = validateStoryboard(shots, audioDur);
+          }
+        }
+        // code_review: validate if we got violations
+        if (stage === 'code_review' && parsed && Array.isArray(parsed.violations)) {
+          if (parsed.violations.length > 0) {
+            validationErrors = parsed.violations.map(v => `Code violation: ${v}`);
+          }
+        }
+
+        if (validationErrors.length > 0) {
+          await env.FACTORY_DB.prepare(
+            "UPDATE stage_history SET status = 'failed', notes = ? WHERE job_slug = ? AND stage = ? AND status = 'running'"
+          ).bind(validationErrors.join('; '), slug, stage).run();
+          return json({ slug, stage, result: 'failed', errors: validationErrors });
+        }
+
+        // Save to R2 (cleaned — strip markdown fences)
         const r2Key = `${outputDir}/${stage}.json`;
-        await env.FACTORY_ASSETS.put(r2Key, llmResponse);
+        const cleanOutput = parsed ? JSON.stringify(parsed, null, 2) : stripMarkdown(llmResponse);
+        await env.FACTORY_ASSETS.put(r2Key, cleanOutput);
 
         // Advance
         const nextStage = STAGES[stageIdx + 1] || 'complete';
@@ -297,6 +448,70 @@ Output each as a separate JSON string value.`
       } catch (e) {
         return json({ error: e.message }, 500);
       }
+    }
+
+    // ── RENDER TASK ENDPOINTS ─────────────────────────────────────
+    
+    // GET /render-tasks/claim — claim next pending task (polled by VPS)
+    if (method === 'GET' && path === '/render-tasks/claim') {
+      try {
+        const row = await env.FACTORY_DB.prepare(
+          "SELECT * FROM render_tasks WHERE status = 'pending' ORDER BY created_at ASC LIMIT 1"
+        ).first();
+        if (!row) return json({ note: 'no pending tasks' });
+        
+        await env.FACTORY_DB.prepare(
+          "UPDATE render_tasks SET status = 'claimed', claimed_by = ?, claimed_at = datetime('now'), heartbeat_at = datetime('now') WHERE task_id = ?"
+        ).bind('vps-' + Date.now(), row.task_id).run();
+        
+        const updated = await env.FACTORY_DB.prepare("SELECT * FROM render_tasks WHERE task_id = ?").bind(row.task_id).first();
+        return json(updated);
+      } catch (e) { return json({ error: e.message }, 500); }
+    }
+    
+    // POST /render-tasks/:id/heartbeat — VPS keeps-alive
+    const taskMatch = path.match(/^\/render-tasks\/([^/]+)\/heartbeat$/);
+    if (taskMatch && method === 'POST') {
+      try {
+        await env.FACTORY_DB.prepare(
+          "UPDATE render_tasks SET heartbeat_at = datetime('now') WHERE task_id = ?"
+        ).bind(taskMatch[1]).run();
+        return json({ status: 'ok' });
+      } catch (e) { return json({ error: e.message }, 500); }
+    }
+    
+    // POST /render-tasks/:id/complete — VPS reports completion
+    const completeMatch = path.match(/^\/render-tasks\/([^/]+)\/complete$/);
+    if (completeMatch && method === 'POST') {
+      try {
+        const taskId = completeMatch[1];
+        const body = await request.json();
+        const row = await env.FACTORY_DB.prepare("SELECT * FROM render_tasks WHERE task_id = ?").bind(taskId).first();
+        if (!row) return json({ error: 'task not found' }, 404);
+        
+        if (body.status === 'completed') {
+          const nextStageIdx = STAGES.indexOf(row.stage) + 1;
+          const nextStage = STAGES[nextStageIdx] || 'complete';
+          const jobStatus = nextStage === 'complete' ? 'complete' : 'active';
+          
+          await env.FACTORY_DB.prepare(
+            "UPDATE render_tasks SET status = 'completed', output_manifest_json = ?, completed_at = datetime('now') WHERE task_id = ?"
+          ).bind(JSON.stringify(body.outputs || {}), taskId).run();
+          await env.FACTORY_DB.prepare(
+            "UPDATE stage_history SET status = 'passed' WHERE job_slug = ? AND stage = ? AND status = 'running'"
+          ).bind(row.job_slug, row.stage).run();
+          await env.FACTORY_DB.prepare(
+            "UPDATE jobs SET current_stage = ?, status = ?, updated_at = datetime('now') WHERE slug = ?"
+          ).bind(nextStage, jobStatus, row.job_slug).run();
+          
+          return json({ task_id: taskId, result: 'completed', next_stage: nextStage });
+        } else {
+          await env.FACTORY_DB.prepare(
+            "UPDATE render_tasks SET status = 'failed', error_message = ?, completed_at = datetime('now') WHERE task_id = ?"
+          ).bind(body.error || 'unknown error', taskId).run();
+          return json({ task_id: taskId, result: 'failed' });
+        }
+      } catch (e) { return json({ error: e.message }, 500); }
     }
 
     return json({ error: 'not found' }, 404);

@@ -1,0 +1,45 @@
+{
+  "schema_version": "platinum-validation-v1",
+  "description": "Shared validation rules for all Platinum Factory stages. Both Python and JS implementations read this.",
+  "storyboard": {
+    "alignment_min_chars": 50,
+    "drawable_parts_min": 2,
+    "motion_verbs_min": 1,
+    "estimated_lines_min": 15,
+    "estimated_lines_max": 40,
+    "ordinary_shot_max_seconds": 15,
+    "absolute_shot_max_seconds": 20,
+    "average_duration_min": 5,
+    "average_duration_max": 8,
+    "hard_average_max": 11,
+    "animation_phases_min": 3,
+    "max_text_required_ratio": 0.15,
+    "min_narration_coverage": 0.95
+  },
+  "motif": {
+    "minimum_score": 12,
+    "max_score": 16,
+    "criteria_names": [
+      "concrete_nouns",
+      "part_inventory",
+      "motion_verbs",
+      "material_rendering",
+      "spatial_organisation",
+      "pil_feasibility",
+      "concept_specificity",
+      "no_text_intelligibility"
+    ]
+  },
+  "render_plan": {
+    "estimated_lines_min": 15,
+    "estimated_lines_max": 40,
+    "primitives_min": 1,
+    "layers_min": 1,
+    "animation_phases_min": 3
+  },
+  "continuity": {
+    "max_consecutive_same_layout": 3,
+    "max_consecutive_same_motif": 2,
+    "handoff_required": true
+  }
+}

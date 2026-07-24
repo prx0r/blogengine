@@ -138,3 +138,35 @@ CREATE INDEX IF NOT EXISTS idx_assets_tradition ON assets(tradition);
 CREATE INDEX IF NOT EXISTS idx_assets_object_type ON assets(object_type);
 CREATE INDEX IF NOT EXISTS idx_qc_job ON qc_results(job_slug);
 CREATE INDEX IF NOT EXISTS idx_asset_tags_tag ON asset_tags(tag);
+
+-- ── RENDER TASKS ────────────────────────────────
+CREATE TABLE IF NOT EXISTS render_tasks (
+    task_id TEXT PRIMARY KEY,
+    job_slug TEXT NOT NULL,
+    stage TEXT NOT NULL,
+    task_type TEXT NOT NULL,  -- draft_render | visual_qc | final_render
+    renderer TEXT NOT NULL DEFAULT 'pil-custom-v1',
+    status TEXT NOT NULL DEFAULT 'pending',  -- pending | claimed | rendering | completed | failed
+    attempt INTEGER NOT NULL DEFAULT 1,
+    input_manifest_json TEXT,
+    output_manifest_json TEXT,
+    claimed_by TEXT,
+    claimed_at TEXT,
+    heartbeat_at TEXT,
+    completed_at TEXT,
+    error_message TEXT,
+    created_at TEXT NOT NULL DEFAULT (datetime('now'))
+);
+
+CREATE TABLE IF NOT EXISTS render_attempts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    task_id TEXT NOT NULL REFERENCES render_tasks(task_id),
+    attempt INTEGER NOT NULL,
+    status TEXT NOT NULL,
+    worker_id TEXT,
+    started_at TEXT,
+    completed_at TEXT,
+    output_json TEXT,
+    error_message TEXT,
+    UNIQUE(task_id, attempt)
+);

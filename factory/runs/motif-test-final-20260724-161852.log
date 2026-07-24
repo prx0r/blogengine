@@ -1,0 +1,78 @@
+============================================
+ Platinum Factory Run Log
+============================================
+ Slug:      motif-test-final
+ Essay:     scripts/expansion-essay33.md
+ Started:   2026-07-24T16:18:52Z
+ Controller: 
+ Stages:    13
+============================================
+
+>>> STAGE 0: Create Job
+{
+  "error": "D1_ERROR: no such table: artifacts: SQLITE_ERROR"
+}Duration: 0s
+
+>>> STAGE 1/12: pack_setup
+{
+  "slug": "motif-test-final",
+  "stage": "pack_setup",
+  "result": "passed",
+  "next_stage": "gold_study",
+  "model_used": "@cf/qwen/qwen3-30b-a3b-fp8",
+  "llm_preview": "\n\n{\n  \"status\": \"success\",\n  \"message\": \"Canonical pack template verified\",\n  \"files\": [\n    \"manifest.json\",\n    \"README.md\",\n    \"pack.yaml\",\n    \"setup.py\",\n    \"config.yaml\"\n  ]\n}"
+}
+Duration: 7s | Result: passed
+
+>>> STAGE 2/12: gold_study
+{
+  "slug": "motif-test-final",
+  "stage": "gold_study",
+  "result": "passed",
+  "next_stage": "rhetorical_map",
+  "model_used": "@cf/qwen/qwen3-30b-a3b-fp8",
+  "llm_preview": "\n\n{\n  \"transferable_principles\": [],\n  \"forbidden_to_copy\": [],\n  \"techniques\": []\n}"
+}
+Duration: 4s | Result: passed
+
+>>> STAGE 3/12: rhetorical_map
+{
+  "slug": "motif-test-final",
+  "stage": "rhetorical_map",
+  "result": "passed",
+  "next_stage": "visual_thesis",
+  "model_used": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "llm_preview": "[\n  {\n    \"passage_id\": 1,\n    \"text_preview\": \"What if the sun is a conscious being — not a ball of burning gas?\",\n    \"rhetorical_function\": \"hook\",\n    \"logical_relation\": \"contrast\",\n    \"transfor"
+}
+Duration: 47s | Result: passed
+
+>>> STAGE 4/12: visual_thesis
+{
+  "slug": "motif-test-final",
+  "stage": "visual_thesis",
+  "result": "passed",
+  "next_stage": "motif_manufacturability",
+  "model_used": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "llm_preview": "Based on the provided essay and rhetorical map, I will design three competing visual worlds and then select one to define in detail.\n\n**Competing Visual Worlds:**\n\n1. **Luminous Realm**: A world of ra"
+}
+Duration: 30s | Result: passed
+
+>>> STAGE 5/12: motif_manufacturability
+{
+  "slug": "motif-test-final",
+  "stage": "motif_manufacturability",
+  "result": "failed",
+  "errors": [
+    "No motifs found in lint report"
+  ]
+}
+Duration: 4s | Result: failed
+
+✗ Stage motif_manufacturability failed. Aborting.
+============================================
+ Run Complete
+ Finished:  2026-07-24T16:20:24Z
+ Total time: 92s (1m 32s)
+ Log:       factory/runs/motif-test-final-20260724-161852.log
+ Output:    content/publishing/renders/motif-test-final/v1/
+============================================

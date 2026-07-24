@@ -1,0 +1,91 @@
+============================================
+ Platinum Factory Run Log
+============================================
+ Slug:      full-pass
+ Essay:     scripts/expansion-essay33.md
+ Started:   2026-07-24T16:21:24Z
+ Controller: 
+ Stages:    13
+============================================
+
+>>> STAGE 0: Create Job
+{
+  "error": "D1_ERROR: no such table: artifacts: SQLITE_ERROR"
+}Duration: 0s
+
+>>> STAGE 1/12: pack_setup
+{
+  "slug": "full-pass",
+  "stage": "pack_setup",
+  "result": "passed",
+  "next_stage": "gold_study",
+  "model_used": "@cf/qwen/qwen3-30b-a3b-fp8",
+  "llm_preview": "\n\n{\n  \"error\": \"No files or artifacts provided in the message. Cannot verify file existence without source data.\"\n}"
+}
+Duration: 7s | Result: passed
+
+>>> STAGE 2/12: gold_study
+{
+  "slug": "full-pass",
+  "stage": "gold_study",
+  "result": "passed",
+  "next_stage": "rhetorical_map",
+  "model_used": "@cf/qwen/qwen3-30b-a3b-fp8",
+  "llm_preview": "\n\n{\"transferable_principles\": [], \"forbidden_to_copy\": [], \"techniques\": []}"
+}
+Duration: 4s | Result: passed
+
+>>> STAGE 3/12: rhetorical_map
+{
+  "slug": "full-pass",
+  "stage": "rhetorical_map",
+  "result": "passed",
+  "next_stage": "visual_thesis",
+  "model_used": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "llm_preview": "[\n  {\n    \"passage_id\": 1,\n    \"text_preview\": \"What if the sun is a conscious being — not a ball of burning gas?\",\n    \"rhetorical_function\": \"hook\",\n    \"logical_relation\": \"contrast\",\n    \"transfor"
+}
+Duration: 52s | Result: passed
+
+>>> STAGE 4/12: visual_thesis
+{
+  "slug": "full-pass",
+  "stage": "visual_thesis",
+  "result": "passed",
+  "next_stage": "motif_manufacturability",
+  "model_used": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "llm_preview": "Based on the provided essay and rhetorical map, I propose three competing visual worlds for the visual thesis:\n\n**World 1: Luminous Tapestry**\nMaterial: Iridescent fabrics, glowing fibers\nSpatial: Wov"
+}
+Duration: 47s | Result: passed
+
+>>> STAGE 5/12: motif_manufacturability
+{
+  "slug": "full-pass",
+  "stage": "motif_manufacturability",
+  "result": "passed",
+  "next_stage": "storyboard",
+  "model_used": "@cf/qwen/qwen3-30b-a3b-fp8",
+  "llm_preview": "\n\n{\n  \"pass\": false,\n  \"overall_score\": 0,\n  \"max_score\": 16,\n  \"motifs\": []\n}"
+}
+Duration: 5s | Result: passed
+
+>>> STAGE 6/12: storyboard
+{
+  "slug": "full-pass",
+  "stage": "storyboard",
+  "result": "failed",
+  "errors": [
+    "Shot s001: 0 phases < 3",
+    "Shot s002: 0 phases < 3",
+    "Shot s003: 0 phases < 3"
+  ]
+}
+Duration: 18s | Result: failed
+
+✗ Stage storyboard failed. Aborting.
+============================================
+ Run Complete
+ Finished:  2026-07-24T16:23:37Z
+ Total time: 133s (2m 13s)
+ Log:       factory/runs/full-pass-20260724-162124.log
+ Output:    content/publishing/renders/full-pass/v1/
+============================================
