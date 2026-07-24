@@ -1,0 +1,59 @@
+{
+  "schema": "platinum-storyboard-v1",
+  "description": "Per-shot storyboard with visual translation ladder. The why_this_visual field is the most important — if you can't write a compelling answer, don't render.",
+  "title": "Film Title",
+  "source_essay": "scripts/expansion-essayN.md",
+  "visual_thesis_summary": "One sentence: what is this film's complete visual arc?",
+  "shot_count": 0,
+  "runtime_seconds": 0,
+  "shots": [
+    {
+      "shot_id": 1,
+      "start": 0.0,
+      "end": 6.0,
+      "duration": 6.0,
+      "raw_audio_duration": 5.2,
+      "spoken_passage": "The exact sentence or passage spoken during this shot.",
+
+      "chapter": "I. Chapter Title",
+
+      "transformation": {
+        "subject": "X",
+        "operator": "the verb — what happens",
+        "object": "Y",
+        "through": ["intermediate a", "intermediate b"],
+        "the_claim": "One sentence: what is this shot asserting at the level of meaning?"
+      },
+
+      "visual_translation_ladder": {
+        "proposition": "What the sentence means at the level of ideas",
+        "relation": "What logical relation this enacts (causation, identity, correspondence, emanation, contrast, recursion, recognition, etc.)",
+        "process": "The actual transformation in abstract terms (e.g., 'convergence of two distinct forces into one field')",
+        "material_metaphor": "The physical/material process that embodies this transformation (e.g., 'two rivers meeting, their currents interlocking')",
+        "motion": "The specific motion or animation that makes the relationship legible (e.g., 'two streams flow toward each other, their leading edges merge, then the combined stream continues')",
+        "resolved_image": "Exactly what the viewer sees at the end of this shot. Describe the frame."
+      },
+
+      "visual_design": {
+        "motif_name": "concrete_name_here",
+        "what_viewer_sees": "Describe the literal visual in one sentence.",
+        "why_this_visual": "THE KEY FIELD. Explain WHY this visual matches these words. What transformation does the visual enact that corresponds to the transformation the sentence asserts?",
+        "continuity_in": "What visual element enters from the previous shot",
+        "continuity_out": "What visual element persists into the next shot",
+        "primary_operator": "reveal|crystallize|descend|ascend|mirror|dissolve|converge|radiate|hold",
+        "secondary_operator": "optional — only if two motions happen",
+        "required_entities": ["list of visible elements"],
+        "forbidden": ["things NOT to show in this shot"]
+      },
+
+      "self_critique": {
+        "bad_first_visual": "What would a lazy illustrator make for this passage? Be brutally honest.",
+        "rejected_because": "Why that lazy visual fails the transformation test",
+        "no_narration_test": "PASS or FAIL — if muted, would a viewer understand the concept from the visual alone?",
+        "still_frame_test": "PASS or FAIL — would you be embarrassed to show the mature frame as a still?"
+      },
+
+      "scene_function_name": "scene_motif_name"
+    }
+  ]
+}

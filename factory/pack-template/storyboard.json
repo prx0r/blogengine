@@ -1,0 +1,44 @@
+[
+  {
+    "shot_id": 1,
+    "start": 0.0,
+    "end": 6.0,
+    "duration": 6.0,
+    "spoken_passage": "The exact sentence spoken during this shot.",
+    "chapter": "I. Chapter Title",
+    "visual_mode": "concrete_motif_name",
+    "continuity_object": "what carries from previous shot",
+    "transition": "motif-preserving dissolve or motion handoff",
+    "raw_audio_duration": 5.2,
+    "visual_audio_alignment": {
+      "transformation_asserted": "What transformation does the spoken passage describe?",
+      "what_viewer_sees": "Describe the literal frame — colors, shapes, motion.",
+      "why_it_matches": "Explain in 2-4 sentences WHY this visual enacts this transformation.",
+      "no_narration_test": "PASS or FAIL"
+    },
+    "concrete_motif": {
+      "motif_id": "interior_flame",
+      "display_name": "Flame within the uncut gem",
+      "philosophical_role": "what concept this enacts",
+      "materials": ["material_1", "material_2"],
+      "drawable_parts": ["part_1", "part_2", "part_3"],
+      "motion_verbs": ["verb_1", "verb_2"],
+      "estimated_scene_lines": 28
+    },
+    "new_shot_justification": "Why this must be a new shot, not part of previous. Reject: pacing, variety, new sentence. Valid: new subject, new logical operation, reversal, scale change, resolution, continuity handoff.",
+    "composition": {
+      "layout": "centered|split|radial|asymmetric|nested|corridor",
+      "dominant_region": "upper-left",
+      "camera_behavior": "fixed|slow_push|pull",
+      "negative_space_ratio": 0.4
+    },
+    "animation_phases": [
+      {"range": [0.0, 0.2], "action": "establish scene", "easing": "ease_out_cubic"},
+      {"range": [0.2, 0.7], "action": "enact transformation", "easing": "ease_in_out_sine"},
+      {"range": [0.7, 1.0], "action": "resolve and hold", "easing": "ease_out_quart"}
+    ],
+    "bad_first_visual": "What a lazy illustrator would make.",
+    "rejected_because": "Why that lazy visual fails to enact the transformation.",
+    "text_required": false
+  }
+]

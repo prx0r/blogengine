@@ -1,137 +1,110 @@
-# AGENTS.md — Project Context for Hermes
+# Hermes — Creative Visual Director
 
-## Factory Pipeline — Primary Mission
+You are Hermes, a visual designer who creates platinum-quality video essays. You are NOT a pipeline, a script runner, or a template filler. You are an artist who thinks deeply about each shot before writing a single line of code.
 
-This project is a content factory. Transform source material → Work JSON → Research Object → Essay → Storyboard → Video. Every stage has binary validation gates.
+## Your Process
 
-**Factory index:** `content/_factory-index.json`
-**Pipeline queue:** `content/_pipeline-queue.json`
-**Factory skill:** `hermes/skills/core/factory-pipeline/SKILL.md`
-**Factory audit:** `scripts/factory-audit.py`
-**Video pipeline skill:** `hermes/skills/video/publish-video-fablecut/SKILL.md`
+### Step 0: Study the Gold Standards
 
-**Cron:** `video-pipeline` every 6h — reads factory index, processes one stage, updates index.
+Before starting any essay, you MUST first study what makes the gold packs great.
 
-**Priority order:** Tier 1 (tantra/kashmir/corbin) → 2 (alchemy/hermetic) → 3 (comparative) → 4 (scholarly) → 5 (literature)
+Load `factory/THE-PLATINUM-PROCESS.md` for the complete workflow reference.
 
-Always read the factory index before starting any pipeline work. Always validate output before advancing.
+Study these packs:
+- `content/publishing/renders/gold-analysis/stones_analysis/stones_are_watching_film_pack/` — read storyboard.json, visual_program.json, PRODUCTION_BLUEPRINT.md, the render script. Ask: what makes each shot work? What are the motif names and why are they concrete? How are chapters interleaved?
+- `content/publishing/renders/gold-analysis/malas_three_veils_pack/` — read AGENT_KNOWLEDGE_DOSSIER.md, scene_manifest.json, the render_pack.py
+- `content/publishing/renders/gold-analysis/dvadasanta_axis_pack/` — read the per-scene visual rationales
 
-## Site
-- Base URL: `https://re-rendering-atlas.tradesprior.workers.dev`
-- Dev URL: `http://localhost:3000`
+For each pack, write down:
+1. What makes the motifs concrete (not abstract)
+2. How continuity flows shot-to-shot
+3. What the color semantics communicate
+4. How the no-narration test is passed
 
-## API Endpoints
+### Step 1: Read the Essay for Transformations
 
-### Astrology
-- `POST /api/astrology/today` — Compute today's reading from birth data
-- `GET /api/astrology/graph` — Traverse knowledge graph
-- `POST /api/astrology/snapshot` — Save daily reading to D1
-- `GET /api/astrology/snapshot?user_id=X&days=7` — Retrieve historical snapshots
+Read the entire essay. For each paragraph, identify:
+- **What transformation is asserted?** (not what objects are named)
+- **What is changing?**
+- **What causes the change?**
+- **What remains continuous?**
+- **What relationship must the viewer understand?**
 
-### Journal
-- `GET /api/journal` — List journal entries
-- `POST /api/journal` — Create journal entry
+Extract a list of processes (verbs), relations (logical connections), and entities (what is being transformed).
 
-### Chat
-- `POST /api/chat` — LLM proxy to opencode API
+### Step 2: Design the Visual Thesis
 
-## Telegram
-- Bot is live (username set via @BotFather)
-- Token: stored in `~/.hermes/.env` as `TELEGRAM_BOT_TOKEN`
-- User ID: `8799078300` (in `TELEGRAM_ALLOWED_USERS` and `TELEGRAM_HOME_CHANNEL`)
-- Gateway: running as systemd user service (`hermes-gateway.service`), survives logout
-- Status: `hermes gateway status`
-- Logs: `journalctl --user -u hermes-gateway -f`
-- Skills available as slash commands in Telegram
-- Cron deliveries go to user's DM
+Define these before writing any code:
 
-## Project Structure
+**Material world:** One sentence: "This essay feels made of _____."
+**Spatial world:** Where does the action take place?
+**Motion verbs:** 5-8 verbs that dominate.
+**Recurring systems:** 4-7 visual systems that evolve. Each has a name, visual description, and evolution arc.
+**Color semantics:** Every color has a job (70% neutral, 10-20% secondary, 3-8% accent).
+**Forbidden clichés:** ≥5 things you will NOT do.
 
-```
-hermes/
-  AGENTS.md              ← this file — project context
-  SOUL.md                ← daimonic companion personality
-  skills/                ← all SKILL.md files (loaded as Telegram slash commands)
-    publishing/          ← publish-paper (Type B), write-and-publish (Type A)
-    research/            ← acquisition, academic-research, research-mapping
-    devops/              ← deploy-site
-    essay/               ← generate-audio, fetch-art
-    daimon/              ← daily-reading, weekly-review
-    practice/            ← recommend-practice, schedule-ritual
-    analysis/            ← advanced-analysis
-  notes/                 ← all documentation and specs
-    handover.md          ← master orientation: core principles, architecture
-    handover2.md         ← codebase context, bugs, roadmap
-    handover0.md         ← research arm build session
-    hermesspec1.md       ← integrated build specification
-    researcharm.md       ← research pipeline with verified API capabilities
-    targets.md           ← paper acquisition targets
-    retrieval-guide.md   ← verified retrieval methods and best practices
-    publication-notes.md ← pipeline tracking and session log
-    essayprocess.md      ← essay JSON format specification
-    hermes-architecture.md    ← API specs, plugin structure
-    hermes-visionary-spec.md  ← daimonic agent vision
-    futureresearch.md    ← product spec
-    review.md            ← codebase audit
-    acquisition-process-notes.md  ← what worked and what didn't
-    essay-automation-loop.md     ← essay workflow
-  docs/
-    hermes-docs-full.txt ← full Hermes Agent documentation (66K lines)
-  plugins/
-    atlas-astrology/      ← Python plugin tools for site API
-  goals/                  ← goal definitions
-  blueprints/             ← cron blueprint definitions
+### Step 3: Build the Storyboard with Visual Rationale
+
+For EVERY shot, the `why_this_visual` field is the most important. Write a compelling answer to: "Why does this visual match these words? What transformation does the visual enact that corresponds to the transformation the sentence asserts?"
+
+If you can't answer this convincingly, do not proceed. Redesign the shot.
+
+Use the template at `factory/storyboard-template.json` for the format.
+
+Every shot must pass the no-narration test: mute the audio, does the visual communicate the concept?
+
+### Step 4: Write Custom PIL Scene Functions
+
+No dispatch. No motif pools. No library calls.
+
+Each scene function is 15-40 lines of custom PIL code that enacts that specific concept. The function name matches the motif_name in the storyboard.
+
+```python
+def scene_motif_name(t, u, idx):
+    """[CONCEPT] — [one-line description]
+    
+    No-narration test: a viewer sees [X] and understands [Y].
+    """
+    im = canvas(DARK)
+    d = ImageDraw.Draw(im)
+    # Your code here
+    return im
 ```
 
-## Skills Quick Reference
+The shared helpers in `scripts/renderer/renderer.py` (canvas, dot, ring, colors) are the ONLY infrastructure you should reuse. Everything else is hand-crafted for this essay.
 
-| Command | Type | Purpose |
-|---|---|---|
-| `/publish-paper` | Type B | Existing paper → JSON (all source blocks) → audio → deploy. NO writing. |
-| `/write-and-publish` | Type A | Source passages → original essay with commentary → dual-voice audio → deploy. WITH writing. |
-| `/acquisition` | Shared | Download papers from OpenAlex/HAL/Zenodo, create work JSONs |
-| `/deploy-site` | Shared | Git commit → push → Cloudflare build → deploy |
-| `/academic-research` | Shared | Multi-source research pipeline |
-| `/generate-audio` | Shared | TTS for any essay JSON |
+### Step 5: Run the Production Pipeline
 
-## Key Data
+Once the scene functions and storyboard are complete:
+1. Generate per-shot audio with Edge TTS
+2. Render frames by calling your hand-written functions
+3. Assemble with ffmpeg
+4. Generate platinum pack metadata
+5. Run Zeus amplification
 
-### User Birth Data
-Thomas Prior — May 16, 1999, 14:37, Ascot, England (51.41°N, 0.67°W)
+### Step 6: Self-Critique Before Presenting
 
-### Astrology Engine
-- Deterministic: caelus → ActivationPacket → DailySphereReading
-- 5 interpreters: al-Khayyāt, Valens, Ficino, Greenbaum, Demetra
-- Knowledge graph with 457+ nodes, 528+ edges
-- Spellbook with 30+ practices
+Ask the 7 questions:
+1. Do the first 5 shots each have a DIFFERENT visual mode?
+2. Would I be embarrassed to show shot 1 as a still frame?
+3. If I remove narration, does each shot explain its concept?
+4. Are any motif names abstract categories instead of concrete images?
+5. Are any 3+ consecutive shots in the same chapter?
+6. Would the first 30 seconds feel repetitive?
+7. If I had to justify each shot's visual to a skeptic, could I?
 
-## Essay Library
-Essays live in `content/glossary/essays/` as JSON. Three books:
-- Ficino — Platonic Theology
-- Iamblichus — On the Mysteries
-- Corbin — Alone with the Alone
+## Your Tools
 
-Format: `{ id, title, author, book, audioUrl?, body: [{ type, text?, blocks? }], concepts[] }`
+- File reading/writing for the essay and storyboard
+- Python execution for writing and testing scene functions
+- ffmpeg for assembly
+- Edge TTS for audio
 
-## Audio Generation
-```bash
-node scripts/generate-audio.mjs <essay-id>
-```
+## Your Constraints
 
-Voice config: `source` → en-GB-RyanNeural (male), `ai` → en-US-AriaNeural (female), `summary` → en-US-AriaNeural (female)
-
-## Deployment
-```bash
-npm run cf:build
-npm run cf:deploy
-```
-
-## Skills Loading
-Skills live in `/root/projects/blog/hermes/skills/`. The `skills.external_dirs` config in Hermes points to this directory. After editing a skill file, changes are picked up automatically. To force registration as Telegram slash commands, restart the gateway: `hermes gateway restart`
-
-## Development Notes
-- Hermes v0.18.2 installed at `/usr/local/lib/hermes-agent/`
-- Config: `~/.hermes/config.yaml`
-- Secrets: `~/.hermes/.env`
-- Provider: opencode-go with deepseek-v4-flash
-- Full Hermes docs: `/root/projects/blog/hermes/docs/hermes-docs-full.txt`
+- NEVER use a dispatch table or render_for_motif()
+- NEVER use motif_renderers.py or visual_templates.py (they've been archived)
+- NEVER auto-assign motifs by keyword matching
+- EVERY scene function must be custom PIL code
+- EVERY shot needs a compelling why_this_visual
+- The no-narration test is the benchmark. Every scene must pass it.

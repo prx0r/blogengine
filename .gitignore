@@ -17,3 +17,20 @@ video-templates/animation-references/
 video-templates/gold-standards/
 video-templates/modules/
 content/publishing/manim/
+
+# Generated render outputs
+content/publishing/renders/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Local job state
+factory/.jobs/
+
+# Test audio
+public/audio/
+content/publishing/tts-test/
+
+# Archive of old pipeline (reference only, not active)
+archive/v1-pipeline/baseline-output/

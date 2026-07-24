@@ -1,0 +1,38 @@
+{
+  "schema_version": "canonical-v1",
+  "pack_id": "pack-name",
+  "pack_type": "film_pack|animation_pack",
+  "title": "Pack Title",
+  "source_essay": "scripts/expansion-essayN.md",
+  "visual_thesis": "One sentence describing the complete visual arc.",
+  "style": {
+    "field": "the material/spatial world",
+    "materials": ["material_1", "material_2"],
+    "continuity_rules": [
+      "Rule 1: how continuity flows across shots",
+      "Rule 2: what colors/systems carry through"
+    ],
+    "caption_policy": "When text is allowed and when it is not."
+  },
+  "chapters": {
+    "I. Chapter One": [1, 5, 7],
+    "II. Chapter Two": [2, 3, 4]
+  },
+  "visual_systems": [
+    {
+      "name": "System Name",
+      "motif": "primary_motif",
+      "meaning": "what this system represents",
+      "evolution": "how it changes from first to final appearance"
+    }
+  ],
+  "palette": {
+    "void": {"hex": "#1A1D23", "role": "background, unformed matter", "frame_percentage": 60},
+    "gold": {"hex": "#D4A574", "role": "celestial causality", "frame_percentage": 10}
+  },
+  "forbidden_cliches": [
+    "cliche 1",
+    "cliche 2"
+  ],
+  "opening_to_closing": "What motif opens the film and what resolves it at the end."
+}

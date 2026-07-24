@@ -1,40 +1,36 @@
 {
-	"$schema": "node_modules/wrangler/config-schema.json",
-	"name": "re-rendering-atlas",
-	"main": ".open-next/worker.js",
-	"compatibility_date": "2025-07-01",
-	"compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
-	"assets": {
-		"directory": ".open-next/assets",
-		"binding": "ASSETS"
-	},
-	"account_id": "954612afb5a97bb15dddcdc70176813d",
-	"services": [
-		{
-			"binding": "WORKER_SELF_REFERENCE",
-			"service": "re-rendering-atlas"
-		}
-	],
-	"vars": {
-		"ENVIRONMENT": "production"
-	},
-	"d1_databases": [
-		{
-			"binding": "ATLAS_DB",
-			"database_name": "atlas-db",
-			"database_id": "bd6337b3-09d4-4b5b-ad1c-fe62e480386b"
-		}
-	],
-	"r2_buckets": [
-		{
-			"binding": "ATLAS_R2",
-			"bucket_name": "atlas-sources"
-		}
-	],
-	"vectorize_indexes": [
-		{
-			"binding": "ATLAS_VECTORIZE",
-			"index_name": "atlas-global"
-		}
-	]
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "platinum-factory",
+  "main": "factory/workers/controller.py",
+  "compatibility_date": "2025-07-01",
+  "compatibility_flags": ["python_modules"],
+  "account_id": "954612afb5a97bb15dddcdc70176813d",
+  "vars": {
+    "ENVIRONMENT": "production"
+  },
+  "d1_databases": [
+    {
+      "binding": "FACTORY_DB",
+      "database_name": "platinum-factory-db",
+      "database_id": "platinum-factory-db"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "FACTORY_ASSETS",
+      "bucket_name": "factory-assets"
+    }
+  ],
+  "vectorize_indexes": [
+    {
+      "binding": "ASSET_VECTORIZE",
+      "index_name": "atlas-global"
+    }
+  ],
+  "ai": {
+    "binding": "AI"
+  },
+  "triggers": {
+    "crons": ["0 */6 * * *"]
+  }
 }
