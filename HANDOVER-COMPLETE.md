@@ -152,7 +152,26 @@ Job Created → Essay stored in R2
 
 ---
 
-## Platinum Master Feedback (5 Documents)
+## Platinum Master Feedback (7 Documents)
+
+| File | Topic |
+|------|-------|
+| `factory/analysis/platinum-master-response.md` | Chapter batching, JSONL, compact context, retry strategy |
+| `factory/analysis/platinum-master-response-2.md` | Artifact grounding, security, model routing |
+| `factory/analysis/platinum-master-session3.md` | Production pipeline priorities, VPS integration |
+| `factory/analysis/platinum-master-session4.md` | Bridge integration, E2E tests, microfilm benchmark |
+| `factory/analysis/platinum-master-final.md` | Stop building, freeze renderer harness, hand-craft one film |
+| `factory/analysis/platinum-master-autopsy.md` | **Latest** — creative quality diagnosis, 7-step fix, 4-tier passes |
+| `factory/analysis/session-log-to-platinum.md` | Complete 16-hour session log for review |
+
+Key recurring themes:
+1. **Chapter batching** — don't generate all shots in one LLM call
+2. **Artifact grounding** — load actual content into prompts, not file paths
+3. **Fail closed** — validate before advancing, never mark failed stages as passed
+4. **Immutable artifacts** — versioned R2 objects with sha256, never overwrite
+5. **Shot count enforcement** — hard gates from audio duration, not model freedom
+6. **Gold material grammar** — forbid "LED/fog machine/generic glow" language
+7. **Freeze renderer runtime** — LLM generates only scene functions, not animation infrastructure
 
 | File | Topic |
 |------|-------|
