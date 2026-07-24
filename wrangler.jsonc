@@ -1,7 +1,7 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "platinum-factory",
-  "main": "factory/cloudflare/src/controller.ts",
+  "main": "factory/cloudflare/src/controller.js",
   "compatibility_date": "2025-07-01",
   "compatibility_flags": [
     "nodejs_compat"

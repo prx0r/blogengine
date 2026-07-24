@@ -65,11 +65,12 @@ export default {
       const maxShots = Math.round(audioDur / 4.0) + 10;
 
       await env.FACTORY_DB.prepare(
-        `INSERT INTO jobs (slug, output_dir, production_mode, est_audio_duration,
-          recommended_shot_count, minimum_shot_count, maximum_shot_count, current_stage, status)
-         VALUES (?, ?, ?, ?, ?, ?, ?, 'pack_setup', 'active')`
+        `INSERT INTO jobs (slug, essay_path, output_dir, production_mode, target_shot_duration,
+          est_audio_duration, recommended_shot_count, minimum_shot_count, maximum_shot_count,
+          current_stage, status)
+         VALUES (?, ?, ?, ?, 6.5, ?, ?, ?, ?, 'pack_setup', 'active')`
       ).bind(
-        slug, `content/publishing/renders/${slug}/v1`, 'film_pack',
+        slug, essayText.slice(0, 200), `content/publishing/renders/${slug}/v1`, 'film_pack',
         Math.round(audioDur * 10) / 10, Math.round(audioDur / 6.5),
         minShots, maxShots
       ).run();
