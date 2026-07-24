@@ -1,31 +1,55 @@
-# Platinum Master — Session 4: Render Security & Smoke Test
+# Platinum Master — Session 4: Bridge Integration
 
-## Critical: Rotate Exposed R2 Credentials
+## The Diagnosis
 
-R2 access key and secret were hardcoded in the public commit. Now loaded from environment variables. The commit should be purged from Git history.
+> "The reason you still have not made a real film: the integration test was invalid because job creation failed, the run script did not fail fast, and no actual task reached the renderer."
 
-## The Render Worker Has 6 Serious Issues
+Both halves work independently (creative planning → artifacts, known-good code → MP4). The missing step is making one job move cleanly from the first half into the second.
 
-1. **Reports success after failed render** — `subprocess.run()` loop doesn't check return codes. Must fail-closed.
-2. **`code_review.json` is not a reliable executable** — renders from ad-hoc fields. Need a dedicated `render_pack.py` artifact with known R2 key and hash.
-3. **Double-claim vulnerability** — SELECT then UPDATE is not atomic. Use conditional `UPDATE ... WHERE status = 'pending'`.
-4. **No authentication on render endpoints** — anyone can claim/complete tasks. Add `Authorization: Bearer` check.
-5. **No heartbeats during rendering** — `subprocess.run()` blocks for up to 600s. Use `Popen` + periodic heartbeat.
-6. **Arbitrary generated Python runs unsandboxed** — LLM-generated code runs directly on the VPS. Needs container isolation.
+## Architecture Verdict
 
-## The Smoke Test
+**Keep** the current split: Worker (controller) + D1 (state) + R2 (artifacts) + VPS (executor). Do not call VPS directly over SSH.
 
-Before any LLM-generated code: create a known-good fixture, upload to R2, manually create a render task, verify the worker claims and executes it correctly.
+**Remove** complexity that isn't proven yet: Workflows, Queues, mTLS, multi-worker, per-shot tasks. One task type (`assemble_film`) is enough for v1.
 
-## Priority Order
+## Fixes Needed
 
-1. Rotate exposed R2 credentials ✅
-2. Make render success fail-closed
-3. Separate executable script from review JSON
-4. Authenticate render-task endpoints
-5. Sandbox generated Python
-6. Run deterministic three-shot smoke test
-7. Test failure, restart, double claim, and duplicate callback
-8. Render one 60-90 second real PIL film
-9. Implement shot-local repair
-10. Generate one derivative Short
+### 1. Hardened Run Script
+- `set -Eeuo pipefail`
+- Require exact slug match on job creation
+- Fail on any non-passing stage
+- Use `jq` and `--arg`, not shell interpolation
+- Verify job exists after creation
+
+### 2. VPS Auth (urllib works fine)
+```python
+headers={
+    "Authorization": f"Bearer {WORKER_TOKEN}",
+    "Accept": "application/json",
+}
+```
+The earlier 403 was likely a malformed header, not a urllib limitation.
+
+### 3. One Assembly Task
+Not separate TTS, clip render, concat, mux tasks. The VPS receives one manifest and produces:
+- rendered clips
+- narration audio
+- concatenated MP4
+- contact sheet
+- motion strips
+- output manifest
+
+### 4. Microfilm Benchmark
+100-180 words, 5-8 shots, 45-75 seconds. Run twice with fresh slugs.
+
+## Required E2E Tests
+1. Job creation (slug match, R2 artifact, D1 record)
+2. Creative stages (9/9 pass, validators pass, artifacts exist)
+3. Render dispatch (exactly one pending task, correct manifest)
+4. Auth (no token=401, wrong token=401, correct=claim)
+5. Task execution (pending→claimed→rendering→completed)
+6. Media verification (MP4 decodes, correct resolution+duration, audio exists)
+7. Job completion (stage passes, status=complete)
+8. Failure path (intentional error→task failed→job blocked)
+9. Retry (attempt 2 completes, job advances once)
+10. Idempotency (duplicate callback is harmless)
