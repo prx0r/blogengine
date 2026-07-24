@@ -122,18 +122,21 @@ export default {
 
         const outputDir = row.output_dir || `content/publishing/renders/${slug}/v1`;
         
-        // Load actual artifacts from R2 — not file paths
-        let essayText = '';
-        try {
-          const essayObj = await env.FACTORY_ASSETS.get(`${outputDir}/source_essay.md`);
-          essayText = essayObj ? await essayObj.text() : '';
-        } catch (e) { /* essay may not exist yet */ }
-
-        let goldData = '';
-        try {
-          const goldObj = await env.FACTORY_ASSETS.get(`${outputDir}/gold_signatures.json`);
-          goldData = goldObj ? await goldObj.text() : '';
-        } catch (e) { /* gold may not exist yet */ }
+        // Load ALL relevant artifacts from R2
+        const artifacts = {};
+        const artifactKeys = [
+          'source_essay.md', 'gold_signatures.json', 'rhetorical_map.json',
+          'visual_program.json', 'visual_thesis.md', 'storyboard.json',
+          'storyboard_review.json', 'AGENT_KNOWLEDGE_DOSSIER.md',
+          'STYLE_EVOLUTION.md', 'PRODUCTION_BLUEPRINT.md',
+          'render_plan.json', 'render_pack.py', 'code_review.json'
+        ];
+        for (const key of artifactKeys) {
+          try {
+            const obj = await env.FACTORY_ASSETS.get(`${outputDir}/${key}`);
+            artifacts[key] = obj ? await obj.text() : '';
+          } catch (e) { artifacts[key] = ''; }
+        }
 
         // Build system message
         const systemMessage = `You are the ${stage} agent in the Platinum Factory.
@@ -149,34 +152,45 @@ Return only valid JSON. No markdown fences, no shell commands, no placeholders.`
           },
           'gold_study': {
             role: 'user',
-            content: `Extract transferable visual design principles from the gold packs.
-Output JSON with: transferable_principles[], forbidden_to_copy[], techniques[].
-Read the packs at these paths (you have access):
-content/publishing/renders/gold-analysis/stones_analysis/stones_are_watching_film_pack/
-content/publishing/imports/packs/unpacked/kabbalah_tree_of_life/
-content/publishing/renders/gold-analysis/malas_three_veils_pack/
-content/publishing/renders/gold-analysis/dvadasanta_axis_pack/
+            content: `Analyze these gold pack visual programs and extract transferable design principles.
 
-Do NOT include scene sequences, motif names, or shot counts from the packs.`
+GOLD PACK DATA:
+${(artifacts['gold_signatures.json'] || 'No pack data available').slice(0, 6000)}
+
+Output JSON: { transferable_principles: [{ principle, source_pack, description }], forbidden_to_copy: string[], techniques: [{ name, implementation }] }
+Do NOT include scene sequences, motif names, or shot counts.`
           },
           'rhetorical_map': {
             role: 'user',
-            content: `SOURCE ESSAY:\n<essay>\n${essayText.slice(0, 8000)}\n</essay>\n\nExtract rhetorical transformations from every passage.
+            content: `SOURCE ESSAY:\n<essay>\n${(artifacts['source_essay.md'] || '').slice(0, 8000)}\n</essay>\n\nExtract rhetorical transformations from every passage.
 For each passage: passage_id, text_preview, rhetorical_function (hook|definition|mechanism|example|contrast|synthesis|climax), logical_relation (causation|identity|formation|emanation|correspondence|recognition), transformation: { subject, operator (VERB), object, through[] }
 Output JSON array.`
           },
           'visual_thesis': {
             role: 'user',
-            content: `GOLD PRINCIPLES:\n<gold>\n${goldData.slice(0, 3000)}\n</gold>\n\nSOURCE ESSAY:\n<essay>\n${essayText.slice(0, 4000)}\n</essay>\n\nDesign the visual thesis. Generate THREE competing visual worlds with different materials, spatial models, motion verbs. For the selected world define: material_world, spatial_world, 5-8 motion_verbs, 4-7 recurring_systems with evolution arcs, color_semantics with hex codes (70% neutral, 10-20% secondary, 3-8% accent), ≥5 forbidden_cliches, opening_to_closing_resolution.`
+            content: `SOURCE ESSAY:\n<essay>\n${(artifacts['source_essay.md'] || '').slice(0, 4000)}\n</essay>
+
+RHETORICAL MAP:
+${(artifacts['rhetorical_map.json'] || '').slice(0, 3000)}
+
+Design the visual thesis. Generate THREE competing visual worlds with different materials, spatial models, motion verbs. For the selected world define: material_world, spatial_world, 5-8 motion_verbs, 4-7 recurring_systems with evolution arcs, color_semantics with hex codes (70% neutral, 10-20% secondary, 3-8% accent), ≥5 forbidden_cliches, opening_to_closing_resolution.`
           },
           'motif_manufacturability': {
             role: 'user',
-            content: `Score every motif 0-2 on 8 criteria (max 16): concrete nouns, part inventory (2-8), motion_verbs, material rendering, spatial organisation, PIL feasibility, concept specificity, no-text intelligibility.
+            content: `VISUAL PROGRAM:\n<visual_program>\n${(artifacts['visual_program.json'] || '').slice(0, 5000)}\n</visual_program>
+
+Score every motif 0-2 on 8 criteria (max 16 per motif): concrete nouns, part inventory (2-8), motion_verbs, material rendering, spatial organisation, PIL feasibility, concept specificity, no-text intelligibility.
 Minimum pass: 12/16. Output JSON: { pass, overall_score, max_score, motifs: [{ name, score, errors }] }`
           },
           'storyboard': {
             role: 'user',
-            content: `SOURCE ESSAY:\n<essay>\n${essayText.slice(0, 8000)}\n</essay>\n\nDesign shots chapter by chapter. Each chapter: 6-12 shots.
+            content: `SOURCE ESSAY:\n<essay>\n${(artifacts['source_essay.md'] || '').slice(0, 8000)}\n</essay>
+
+RHETORICAL MAP:\n${(artifacts['rhetorical_map.json'] || 'N/A').slice(0, 3000)}
+
+VISUAL PROGRAM:\n${(artifacts['visual_program.json'] || 'N/A').slice(0, 3000)}
+
+Design shots chapter by chapter. Each chapter: 6-12 shots.
 Each shot 5-10 seconds. Average 5-8s. No shot >20s.
 Output a JSON object with chapter_id and shots array:
 {"chapter_id":"ch01","shots":[{"shot_id":"s001","spoken_passage":"...","duration_seconds":6.5,"visual_mode":"interior_flame","visual_audio_alignment":{"transformation_asserted":"...","what_viewer_sees":"...","why_it_matches":"..."},"concrete_motif":{"motif_id":"interior_flame","drawable_parts":["..."],"motion_verbs":["..."]},"continuity":{"inherits":[],"transforms":"","hands_off":[]},"bad_first_visual":"...","rejected_because":"...","text_required":false}]}`
